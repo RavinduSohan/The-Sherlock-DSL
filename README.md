@@ -69,6 +69,24 @@ phases:
 > The following section contains screenshots of the live system — CLI commands, TUI workflow, live preview, scene exports, and terminal output during rendering. All output shown was produced directly by Sherlock from `.sherlock` scene files.
 
 <!-- Add your screenshots here freely — CLI, TUI, live preview, exported frames, terminal output, scene side-by-sides -->
+<img width="984" height="521" alt="tui launch" src="https://github.com/user-attachments/assets/48f06014-8398-4167-8fc3-8d7d489b5d8c" />
+
+<img width="711" height="604" alt="setup command environment check" src="https://github.com/user-attachments/assets/ad770703-bf21-4414-85c6-4efb64b51bd1" />
+
+<img width="1040" height="569" alt="cli-sherlock doctor" src="https://github.com/user-attachments/assets/ff483d22-cf77-42db-a31b-c6edf17d4a81" />
+
+<img width="1366" height="684" alt="live preview- neural network simple" src="https://github.com/user-attachments/assets/45b52f32-eb55-465d-b156-98653450a573" />
+
+<img width="1366" height="768" alt="animation examples" src="https://github.com/user-attachments/assets/9727711d-7d53-4161-be7a-ee0fc542438f" />
+
+<img width="1366" height="768" alt="parametric curves" src="https://github.com/user-attachments/assets/e4534175-632f-42f0-843b-8a2928acea37" />
+
+<img width="1920" height="1080" alt="photo-collage png" src="https://github.com/user-attachments/assets/d4386ee8-65f3-4c60-8db3-51435950a74b" />
+
+<img width="1920" height="1080" alt="photo-collage png (1)" src="https://github.com/user-attachments/assets/16772a73-1a52-4f77-a1e7-0c1d361b8d2e" />
+
+<img width="1920" height="1080" alt="photo-collage png (2)" src="https://github.com/user-attachments/assets/65609ffd-b2b3-438a-b81d-24a152735123" />
+
 
 ---
 
