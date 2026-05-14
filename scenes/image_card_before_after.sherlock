@@ -1,0 +1,163 @@
+# 🎬 Image Card: Before vs After
+# Comparing basic vs enhanced image card features
+
+title: "IMAGE_CARD - Evolution Demo"
+width: 1920
+height: 1080
+fps: 60
+
+phases:
+  
+  # Show the basic version first
+  before:
+    duration: 5
+    elements:
+      
+      title_before:
+        type: text
+        text: "BEFORE - Basic Image Card"
+        position: [0, 480]
+        size: 48
+        color: "#FF6B6B"
+        glow: true
+      
+      # Basic image - no effects
+      basic_image:
+        type: image_card
+        source: "images/icons/spider.jpg"
+        position: [0, 0]
+        size: 600
+        opacity: 1.0
+      
+      subtitle:
+        type: text
+        text: "Just position, size, and opacity"
+        position: [0, -400]
+        size: 24
+        color: "#CCCCCC"
+  
+  # Show the enhanced version
+  after:
+    duration: 10
+    elements:
+      
+      title_after:
+        type: text
+        text: "AFTER - Enhanced Image Card"
+        position: [0, 480]
+        size: 48
+        color: "#51cf66"
+        glow: true
+      
+      # Enhanced image - all features
+      enhanced_image:
+        type: image_card
+        source: "images/icons/spider.jpg"
+        position: [0, 0]
+        size: 600
+        
+        # Ken Burns zoom
+        ken_burns: "zoom_in"
+        kb_duration: 9
+        kb_start_scale: 1.0
+        kb_end_scale: 1.5
+        kb_easing: "ease-in-out"
+        
+        # Glow
+        glow: true
+        glow_color: "#667eea"
+        glow_intensity: 35
+        
+        # Border
+        border_width: 5
+        border_color: "#ffffff"
+        border_radius: 20
+        
+        # Shadow
+        drop_shadow: true
+        shadow_blur: 50
+        
+        # Timing
+        delay: 0.5
+        fade_in: 2
+        
+        # Credit
+        credit: "Enhanced with 7 new features!"
+        credit_position: "bottom-right"
+      
+      # Feature list
+      features:
+        type: text
+        text: "✓ Ken Burns  ✓ Glow  ✓ Borders  ✓ Shadow  ✓ Fade  ✓ Credit  ✓ Fit Modes"
+        position: [0, -400]
+        size: 22
+        color: "#4ECDC4"
+  
+  # Side by side comparison
+  comparison:
+    duration: 8
+    elements:
+      
+      title_compare:
+        type: text
+        text: "SIDE BY SIDE COMPARISON"
+        position: [0, 480]
+        size: 48
+        color: "#FFE66D"
+        glow: true
+      
+      # Left: Basic
+      left_basic:
+        type: image_card
+        source: "images/icons/spider.jpg"
+        position: [-450, 50]
+        size: 450
+        opacity: 1.0
+        delay: 0
+        fade_in: 1
+      
+      # Right: Enhanced
+      right_enhanced:
+        type: image_card
+        source: "images/icons/spider.jpg"
+        position: [450, 50]
+        size: 450
+        ken_burns: "zoom_in"
+        kb_duration: 7
+        kb_start_scale: 1.0
+        kb_end_scale: 1.4
+        glow: true
+        glow_color: "#4a90e2"
+        glow_intensity: 30
+        border_width: 4
+        border_color: "#ffffff"
+        border_radius: 15
+        drop_shadow: true
+        delay: 0.3
+        fade_in: 1
+        credit: "Enhanced"
+        credit_position: "bottom-right"
+      
+      # Labels
+      label_left:
+        type: text
+        text: "BASIC"
+        position: [-450, -320]
+        size: 32
+        color: "#FF6B6B"
+      
+      label_right:
+        type: text
+        text: "ENHANCED"
+        position: [450, -320]
+        size: 32
+        color: "#51cf66"
+      
+      # Arrow
+      arrow:
+        type: text
+        text: "→"
+        position: [0, 50]
+        size: 120
+        color: "#FFE66D"
+        glow: true

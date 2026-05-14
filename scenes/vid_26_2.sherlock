@@ -1,0 +1,643 @@
+concept: "Neural Weights: The Hidden Intelligence"
+emoji: "🧠"
+total_duration: 64
+background: "#0a0a0a"
+
+subtitles:
+  - ""
+  - ""
+  - ""
+  - ""
+  - ""
+  - ""
+  - ""
+  - ""
+  - ""
+
+phases:
+  scene_1:
+    duration: 8
+    description: "Neural Foundation - Simple math creates behavior"
+    elements:
+      neuron_center:
+        type: mathematical_entity
+        position: [0, 20]
+        form: "polygon"
+        data: [6]
+        personality: "wise"
+        size: 70
+        color: "#4ecdc4"
+        glow: true
+        energy: 0.7
+        animation_pattern: "breathe"
+        label: "Neuron"
+      
+      input_1:
+        type: mathematical_entity
+        position: [-150, 80]
+        form: "point"
+        personality: "playful"
+        size: 25
+        color: "#3498db"
+        glow: true
+        energy: 0.6
+        animation_pattern: "pulse"
+        label: "Input 1"
+      
+      input_2:
+        type: mathematical_entity
+        position: [-150, 20]
+        form: "point"
+        personality: "playful"
+        size: 25
+        color: "#3498db"
+        glow: true
+        energy: 0.6
+        animation_pattern: "pulse"
+        label: "Input 2"
+      
+      input_3:
+        type: mathematical_entity
+        position: [-150, -40]
+        form: "point"
+        personality: "playful"
+        size: 25
+        color: "#3498db"
+        glow: true
+        energy: 0.6
+        animation_pattern: "pulse"
+        label: "Input 3"
+      
+      connector_1:
+        type: relationship_connector
+        from: [-150, 80]
+        to: [-30, 30]
+        relationship_type: "mapping"
+        strength: 0.7
+        color: "#e74c3c"
+        animated: true
+        bidirectional: false
+        label: "w₁"
+      
+      connector_2:
+        type: relationship_connector
+        from: [-150, 20]
+        to: [-20, 20]
+        relationship_type: "mapping"
+        strength: 0.5
+        color: "#f39c12"
+        animated: true
+        bidirectional: false
+        label: "w₂"
+      
+      connector_3:
+        type: relationship_connector
+        from: [-150, -40]
+        to: [-30, 10]
+        relationship_type: "mapping"
+        strength: 0.9
+        color: "#2ecc71"
+        animated: true
+        bidirectional: false
+        label: "w₃"
+      
+      threshold_graph:
+        type: xy_graph
+        position: [200, 20]
+        size: 180
+        data_points: [[-2, 0], [-0.1, 0], [0, 1], [2, 1]]
+        x_range: [-2, 2]
+        y_range: [0, 1.5]
+        color: "#9b59b6"
+        line_width: 3
+        show_grid: true
+        show_axes: true
+        show_labels: false
+        show_points: false
+        smooth_curve: false
+        animate_draw: false
+        title: "Step Function"
+        resolution: 100
+      
+      equation_text:
+        type: text
+        text: "f(x) = 1 if Σwᵢxᵢ > θ, else 0"
+        position: [0, -200]
+        size: 16
+        color: "#ffffff"
+        glow: true
+        font: "Arial"
+      
+      title_text:
+        type: text
+        text: "Neural Foundation 🔍"
+        position: [0, 220]
+        size: 20
+        color: "#4ecdc4"
+        glow: true
+        font: "Arial"
+
+  scene_2:
+    duration: 7
+    description: "Weight Investigation - The mystery in the weights"
+    elements:
+      detective_emoji:
+        type: animated_emoji
+        emoji: "🕵️‍♂️"
+        position: [-120, 20]
+        size: 85
+        movement: "none"
+        glowing: "pulsing-glow"
+        rotation: "gentle-rotate"
+        reveal: "zoom-reveal"
+        speed: "slow"
+        delay: "none"
+        color: "#95a5a6"
+      
+      equation_emoji:
+        type: animated_emoji
+        emoji: "Σwᵢxᵢ"
+        position: [0, 20]
+        size: 65
+        movement: "floating-pen"
+        glowing: "matrix-code"
+        rotation: "gentle-rotate"
+        reveal: "spiral-reveal"
+        speed: "normal"
+        delay: "delay-1"
+        color: "#e74c3c"
+      
+      magnify_emoji:
+        type: animated_emoji
+        emoji: "🔍"
+        position: [120, 20]
+        size: 70
+        movement: "bounce"
+        glowing: "pulsing-glow"
+        rotation: "none"
+        reveal: "zoom-reveal"
+        speed: "normal"
+        delay: "delay-2"
+        color: "#f39c12"
+      
+      detective_text:
+        type: text
+        text: "The magic hides in plain sight: w₁, w₂, w₃..."
+        position: [0, -200]
+        size: 16
+        color: "#ffffff"
+        glow: true
+        font: "Arial"
+      
+      title_text:
+        type: text
+        text: "Weight Investigation 🕵️‍♂️"
+        position: [0, 220]
+        size: 20
+        color: "#95a5a6"
+        glow: true
+        font: "Arial"
+
+  scene_3:
+    duration: 9
+    description: "Weighted Decision - Phone notification case"
+    elements:
+      vibration_entity:
+        type: mathematical_entity
+        position: [-150, 80]
+        form: "square"
+        personality: "sharp"
+        size: 50
+        color: "#e74c3c"
+        glow: true
+        energy: 0.8
+        animation_pattern: "pulse"
+        label: "Vibration x₁=1"
+      
+      screen_entity:
+        type: mathematical_entity
+        position: [-150, 0]
+        form: "square"
+        personality: "sharp"
+        size: 50
+        color: "#3498db"
+        glow: true
+        energy: 0.8
+        animation_pattern: "pulse"
+        label: "Screen x₂=1"
+      
+      bored_entity:
+        type: mathematical_entity
+        position: [-150, -80]
+        form: "square"
+        personality: "sharp"
+        size: 50
+        color: "#f39c12"
+        glow: true
+        energy: 0.8
+        animation_pattern: "pulse"
+        label: "Bored x₃=1"
+      
+      calc_grid:
+        type: algorithm_grid
+        position: [50, 40]
+        rows: 3
+        cols: 2
+        cellSize: 45
+        spacing: 4
+        cells: [["x₁·w₁","2"],["x₂·w₂","1"],["x₃·w₃","5"]]
+        highlights: []
+        showValues: true
+        color: "#2ecc71"
+        border_color: "#27ae60"
+        border_width: 2
+        label: ""
+      
+      weight_text_1:
+        type: text
+        text: "w₁ = 2"
+        position: [-100, 80]
+        size: 14
+        color: "#e74c3c"
+        glow: true
+        font: "Arial"
+      
+      weight_text_2:
+        type: text
+        text: "w₂ = 1"
+        position: [-100, 0]
+        size: 14
+        color: "#3498db"
+        glow: true
+        font: "Arial"
+      
+      weight_text_3:
+        type: text
+        text: "w₃ = 5"
+        position: [-100, -80]
+        size: 14
+        color: "#f39c12"
+        glow: true
+        font: "Arial"
+      
+      sum_text:
+        type: text
+        text: "Σ = 2 + 1 + 5 = 8"
+        position: [120, -60]
+        size: 16
+        color: "#2ecc71"
+        glow: true
+        font: "Arial"
+      
+      threshold_text:
+        type: text
+        text: "θ = 6 → 8 > 6 → Output = 1"
+        position: [0, -180]
+        size: 16
+        color: "#ffffff"
+        glow: true
+        font: "Arial"
+      
+      title_text:
+        type: text
+        text: "Weighted Decision ⚖️"
+        position: [0, 220]
+        size: 20
+        color: "#2ecc71"
+        glow: true
+        font: "Arial"
+
+  scene_4:
+    duration: 10
+    description: "Threshold Mechanics - Balance scale visualization"
+    elements:
+      balance_grid:
+        type: algorithm_grid
+        position: [-150, 50]
+        rows: 3
+        cols: 2
+        cellSize: 50
+        spacing: 5
+        cells: [["w₃","5"],["w₁","2"],["w₂","1"]]
+        highlights: [[0,0]]
+        showValues: true
+        color: "#9b59b6"
+        border_color: "#8e44ad"
+        border_width: 3
+        label: "Weights"
+      
+      threshold_grid:
+        type: algorithm_grid
+        position: [-150, -90]
+        rows: 2
+        cols: 2
+        cellSize: 50
+        spacing: 5
+        cells: [["θ","6"],["Σ","8"]]
+        highlights: [[1,1]]
+        showValues: true
+        color: "#e74c3c"
+        border_color: "#c0392b"
+        border_width: 3
+        label: "Compare"
+      
+      scale_emoji:
+        type: animated_emoji
+        emoji: "⚖️"
+        position: [100, 30]
+        size: 90
+        movement: "wobble"
+        glowing: "pulsing-glow"
+        rotation: "gentle-rotate"
+        reveal: "zoom-reveal"
+        speed: "slow"
+        delay: "delay-1"
+        color: "#f39c12"
+      
+      water_chart:
+        type: water_bar_chart
+        data: [2, 3, 8]
+        position: [200, -60]
+        width: 180
+        height: 100
+        water_color: "#3498db"
+        wave_intensity: 1.3
+      
+      explanation_text:
+        type: text
+        text: "Total force Σwᵢxᵢ = 8 > θ = 6 → Neuron fires"
+        position: [0, -200]
+        size: 15
+        color: "#ffffff"
+        glow: true
+        font: "Arial"
+      
+      boredom_text:
+        type: text
+        text: "Boredom (w₃=5) provides 62.5% of force"
+        position: [0, 180]
+        size: 14
+        color: "#f39c12"
+        glow: true
+        font: "Arial"
+      
+      title_text:
+        type: text
+        text: "Threshold Mechanics ⚖️"
+        position: [0, 220]
+        size: 20
+        color: "#9b59b6"
+        glow: true
+        font: "Arial"
+
+  scene_5:
+    duration: 8
+    description: "Pattern Recognition - L pattern detection"
+    elements:
+      pattern_grid:
+        type: algorithm_grid
+        position: [-180, 80]
+        rows: 3
+        cols: 3
+        cellSize: 45
+        spacing: 3
+        cells: [["1","0","0"],["1","0","0"],["1","1","1"]]
+        highlights: [[0,0],[1,0],[2,0],[2,1],[2,2]]
+        showValues: true
+        color: "#3498db"
+        border_color: "#2980b9"
+        border_width: 2
+        label: "L Pattern"
+      
+      weight_matrix:
+        type: matrix
+        position: [50, 80]
+        values: [["3","0","0"],["3","0","0"],["3","2","1"]]
+        highlightCells: [[0,0],[1,0],[2,0],[2,1],[2,2]]
+        cellSize: 45
+        textSize: 14
+        color: "#e74c3c"
+        label: "Weights"
+        highlightRow: -1
+        highlightCol: -1
+      
+      neuron_entity:
+        type: mathematical_entity
+        position: [0, -80]
+        form: "hexagon"
+        personality: "wise"
+        size: 60
+        color: "#2ecc71"
+        glow: true
+        energy: 0.9
+        animation_pattern: "pulse"
+        label: "Neuron"
+      
+      calculation_text:
+        type: text
+        text: "Σ(pattern·weights) = (1×3)+(1×3)+(1×3)+(1×2)+(1×1) = 12"
+        position: [0, -160]
+        size: 14
+        color: "#ffffff"
+        glow: true
+        font: "Arial"
+      
+      result_text:
+        type: text
+        text: "θ = 10 → 12 > 10 → Output = 1 (Recognizes L)"
+        position: [0, -200]
+        size: 16
+        color: "#2ecc71"
+        glow: true
+        font: "Arial"
+      
+      title_text:
+        type: text
+        text: "Pattern Recognition 🧩"
+        position: [0, 220]
+        size: 20
+        color: "#3498db"
+        glow: true
+        font: "Arial"
+
+  scene_6:
+    duration: 6
+    description: "Detective's Insight - Intelligence in connections"
+    elements:
+      detective_octopus:
+        type: wisdom_character
+        character_type: detective_octopus
+        position: [0, 0]
+        size: 140
+        mood: "thinking"
+        expression: "normal"
+        talking: true
+        breathing: true
+        color_scheme: "detective"
+        personality: "wise"
+        speech_bubble: true
+        speech_text: "Intelligence isn't stored in the rules, but in the strength of connections between simple parts."
+        background_aura: "glow"
+      
+      title_text:
+        type: text
+        text: "Detective's Insight 🐙"
+        position: [0, 220]
+        size: 20
+        color: "#4ecdc4"
+        glow: true
+        font: "Arial"
+
+  scene_7:
+    duration: 9
+    description: "Universal Application - Vision and language examples"
+    elements:
+      application_grid:
+        type: algorithm_grid
+        position: [-180, 100]
+        rows: 2
+        cols: 2
+        cellSize: 55
+        spacing: 5
+        cells: [["Vision","Edge"],["Lang","Grammar"]]
+        highlights: []
+        showValues: true
+        color: "#9b59b6"
+        border_color: "#8e44ad"
+        border_width: 3
+        label: "Applications"
+      
+      vision_emoji:
+        type: animated_emoji
+        emoji: "👁️"
+        position: [-180, -50]
+        size: 75
+        movement: "floating-pen"
+        glowing: "pulsing-glow"
+        rotation: "gentle-rotate"
+        reveal: "zoom-reveal"
+        speed: "normal"
+        delay: "none"
+        color: "#3498db"
+      
+      language_emoji:
+        type: animated_emoji
+        emoji: "💬"
+        position: [0, -50]
+        size: 75
+        movement: "bounce"
+        glowing: "pulsing-glow"
+        rotation: "none"
+        reveal: "slide-reveal"
+        speed: "normal"
+        delay: "delay-1"
+        color: "#e74c3c"
+      
+      vision_matrix:
+        type: matrix
+        position: [120, 100]
+        values: [["-1","0","1"],["-2","0","2"],["-1","0","1"]]
+        highlightCells: []
+        cellSize: 35
+        textSize: 12
+        color: "#3498db"
+        label: "Sobel"
+        highlightRow: -1
+        highlightCol: -1
+      
+      universal_text:
+        type: text
+        text: "f(x) = activation(Σwᵢxᵢ)"
+        position: [0, -180]
+        size: 18
+        color: "#ffffff"
+        glow: true
+        font: "Arial"
+      
+      principle_text:
+        type: text
+        text: "Universal principle across all neural systems"
+        position: [0, -210]
+        size: 14
+        color: "#95a5a6"
+        glow: false
+        font: "Arial"
+      
+      title_text:
+        type: text
+        text: "Universal Application 🌐"
+        position: [0, 220]
+        size: 20
+        color: "#9b59b6"
+        glow: true
+        font: "Arial"
+
+  scene_8:
+    duration: 7
+    description: "Emergent Intelligence - From weights to meaning"
+    elements:
+      brain_emoji:
+        type: animated_emoji
+        emoji: "🧠"
+        position: [-80, 40]
+        size: 90
+        movement: "orbit"
+        glowing: "pulsing-glow"
+        rotation: "gentle-rotate"
+        reveal: "zoom-reveal"
+        speed: "slow"
+        delay: "none"
+        color: "#9b59b6"
+      
+      equation_emoji:
+        type: animated_emoji
+        emoji: "Σwᵢxᵢ>θ"
+        position: [0, -20]
+        size: 60
+        movement: "floating-pen"
+        glowing: "matrix-code"
+        rotation: "gentle-rotate"
+        reveal: "spiral-reveal"
+        speed: "normal"
+        delay: "delay-1"
+        color: "#e74c3c"
+      
+      sparkles_emoji:
+        type: animated_emoji
+        emoji: "✨"
+        position: [80, 40]
+        size: 70
+        movement: "bounce"
+        glowing: "flicker"
+        rotation: "none"
+        reveal: "slide-reveal"
+        speed: "fast"
+        delay: "delay-2"
+        color: "#f39c12"
+      
+      closure_text:
+        type: text
+        text: "From weighted sums to meaning: Intelligence emerges in the connections"
+        position: [0, -200]
+        size: 16
+        color: "#ffffff"
+        glow: true
+        font: "Arial"
+      
+      mystery_text:
+        type: text
+        text: "The human-like behavior was always there, hiding in the weights"
+        position: [0, 180]
+        size: 14
+        color: "#4ecdc4"
+        glow: true
+        font: "Arial"
+      
+      title_text:
+        type: text
+        text: "Emergent Intelligence 🌌"
+        position: [0, 220]
+        size: 20
+        color: "#9b59b6"
+        glow: true
+        font: "Arial"

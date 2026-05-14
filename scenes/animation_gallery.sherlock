@@ -1,0 +1,86 @@
+concept: "Animation Gallery"
+emoji: "🎆"
+total_duration: 20
+background: "#0a0a0a"
+
+phases:
+  fireworks_demo:
+    duration: 4
+    description: "Fireworks celebration"
+    elements:
+      celebration:
+        type: fireworks
+        position: [0, -100]
+        intensity: 1.5
+        colors: ["#ff6b6b", "#4ecdc4", "#d4af37", "#9b59b6", "#ffffff"]
+      
+      sparkle_bg:
+        type: sparkles
+        count: 8
+        
+  snow_scene:
+    duration: 4
+    description: "Winter wonderland"
+    elements:
+      snowfall:
+        type: snow
+        density: 1.2
+      
+      christmas_tree:
+        type: christmas_tree
+        position: [0, 50]
+        size: 120
+        
+  neural_demo:
+    duration: 4
+    description: "Neural network visualization"
+    elements:
+      brain_network:
+        type: neural_net
+        position: [0, 0]
+        layers: [4, 6, 4, 2]
+        colors: ["#4ecdc4", "#d4af37"]
+        
+  fire_waves:
+    duration: 4
+    description: "Fire and water elements"
+    elements:
+      flame:
+        type: fire
+        position: [0, 100]
+        intensity: 1.8
+      
+      ocean_waves:
+        type: waves
+        position: [0, 150]
+        amplitude: 40
+        frequency: 0.03
+        
+  star_finale:
+    duration: 4
+    description: "Starfield finale"
+    elements:
+      cosmic_field:
+        type: star_field
+        density: 2
+      
+      final_fireworks:
+        type: fireworks
+        position: [100, -50]
+        intensity: 2
+        colors: ["#d4af37", "#ffffff"]
+
+equations:
+  - id: "animation_title"
+    latex: "\\text{Animation Components Gallery}"
+    position: "top"
+    phase: "fireworks_demo"
+    animation: "fade-in"
+    delay: 1
+
+  - id: "particle_physics"
+    latex: "\\vec{F} = m\\vec{a}"
+    position: "bottom-right"
+    phase: "neural_demo"
+    animation: "slide-in"
+    delay: 2

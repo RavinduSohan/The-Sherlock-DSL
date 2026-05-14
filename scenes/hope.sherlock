@@ -1,0 +1,326 @@
+concept: "The Gradient Descent"
+emoji: "∇"
+total_duration: 75
+background: "#0a0a0a"
+
+subtitles:
+  - "The Rule"
+  - "The Question"
+  - "The Trap"
+  - "The Failure"
+  - "The Escape"
+  - "The Ascent"
+  - "The Void"
+
+phases:
+  scene_1_the_rule:
+    duration: 12
+    description: "The seductive simplicity of the rule"
+    elements:
+      # Left Zone
+      function_curve:
+        type: primitive
+        shape: functionGraph[fn:"(x+6)^2/4 - 2" xStart:-6 xEnd:-2 segments:50 stroke:#6bcbff strokeWidth:2 at:(0,0)] -> fadeIn(2s)
+
+      seeker_circle:
+        type: primitive
+        shape: circle[r:0.3 fill:#ff6b9d at:(-5.5,-1.9)] -> fadeIn(0.5s, 0.5s) -> moveTo((-4.5,-1.4), 1s, linear, 1s) -> moveTo((-3.5,-0.4), 1s, linear) -> moveTo((-2.5,1.1), 1s, ease.out) -> scale(1.2, 0.2s, 4s) -> scale(1.0, 0.2s)
+
+      ghost_1:
+        type: primitive
+        shape: circle[r:0.3 fill:#ff6b9d/0.2 at:(-4.5,-1.4)] -> fadeIn(0.1s, 2s) -> fadeOut(2s, 4s)
+      
+      ghost_2:
+        type: primitive
+        shape: circle[r:0.3 fill:#ff6b9d/0.2 at:(-3.5,-0.4)] -> fadeIn(0.1s, 3s) -> fadeOut(2s, 4s)
+
+      guide_arrow_1:
+        type: primitive
+        shape: rectangle[w:0.4 h:0.05 fill:#6bcbff/0.6 at:(-4.5,-1.5)] -> fadeIn(1s, 1s) -> fadeOut(0.5s, 4s)
+      guide_arrow_2:
+        type: primitive
+        shape: rectangle[w:0.4 h:0.05 fill:#6bcbff/0.6 at:(-3.5,-0.5)] -> fadeIn(1s, 1s) -> fadeOut(0.5s, 4s)
+      guide_arrow_3:
+        type: primitive
+        shape: rectangle[w:0.4 h:0.05 fill:#6bcbff/0.6 at:(-2.5,0.5)] -> fadeIn(1s, 1s) -> fadeOut(0.5s, 4s)
+
+      # Right Zone
+      intro_text:
+        type: primitive
+        shape: text[text:"Most systems follow one rule:" fontSize:28 fill:#ffffff at:(3.5,2.5)] -> fadeIn(1.5s, 1.5s)
+
+      rule_1:
+        type: morph
+        shape: text[text:"If it gets worse, go uphill." fontSize:28 fill:#ffffff at:(3.5,1.0)] -> fadeIn(1s, 3s) ~> text[text:"Sounds inevitable." fontSize:32 fill:#ffffff at:(3.5,-1.0)] (0.8s, ease.inOut, 5s)
+
+      rule_2:
+        type: morph
+        shape: text[text:"If it gets better, keep going." fontSize:28 fill:#ffffff at:(3.5,0.0)] -> fadeIn(1s, 3s) ~> text[text:"Sounds inevitable." fontSize:32 fill:#ffffff/0 at:(3.5,-1.0)] (0.8s, ease.inOut, 5s)
+
+  scene_2_the_question:
+    duration: 10
+    description: "Global complexity reveals the flaw"
+    elements:
+      # Left Zone
+      mountain_1:
+        type: primitive
+        shape: functionGraph[fn:"sin(x*2)*0.5 + cos(x)*1" xStart:-2.5 xEnd:2.5 segments:50 stroke:#999999/0.3 strokeWidth:1 at:(-4,0)] -> fadeIn(1s)
+      mountain_2:
+        type: primitive
+        shape: functionGraph[fn:"sin(x*3)*0.3 - 1" xStart:-2.5 xEnd:2.5 segments:50 stroke:#999999/0.3 strokeWidth:1 at:(-4,0.5)] -> fadeIn(1s)
+      mountain_3:
+        type: primitive
+        shape: functionGraph[fn:"cos(x*1.5)*0.8 + 1" xStart:-2.5 xEnd:2.5 segments:50 stroke:#999999/0.3 strokeWidth:1 at:(-4,-0.5)] -> fadeIn(1s)
+
+      uncertain_circle:
+        type: primitive
+        shape: circle[r:0.3 fill:#ff6b9d/0.8 at:(-2.5,1.1)] -> scale(1.1, 1s, ease.inOut) -> scale(1.0, 1s, ease.inOut, 1s)
+
+      arrow_green:
+        type: primitive
+        shape: rectangle[w:0.2 h:0.02 fill:#6bffb8 at:(-4,1)] -> fadeIn(1s, 1s) -> fadeOut(1s, 4s)
+      arrow_red:
+        type: primitive
+        shape: rectangle[w:0.3 h:0.02 fill:#ff6b6b at:(-3,-1)] -> fadeIn(1s, 1s) -> fadeOut(1s, 4s)
+      arrow_green2:
+        type: primitive
+        shape: rectangle[w:0.2 h:0.02 fill:#6bffb8 at:(-5,0.5)] -> fadeIn(1s, 1s) -> fadeOut(1s, 4s)
+      zero_dot:
+        type: primitive
+        shape: circle[r:0.05 fill:#ff0000 at:(-2.5,1.1)] -> fadeIn(1s, 1s) -> fadeOut(1s, 4s)
+
+      # Right Zone
+      big_question:
+        type: morph
+        shape: text[text:"?" fontSize:80 fill:#ffffff/0.3 at:(4.0,0.0)] -> scale(1.0, 0.5s, 0.5s) ~> text[text:"So why do they stick?" fontSize:28 fill:#ffffff at:(3.5,1.5)] (1s, ease.out, 3s)
+
+      inquiry_1:
+        type: primitive
+        shape: text[text:"Under the surface asks:" fontSize:24 fill:#ffffff at:(2.5,0.5)] -> fadeIn(1s, 5s)
+
+      inquiry_2:
+        type: primitive
+        shape: text[text:"Which direction is fastest?" fontSize:26 fill:#ffffff at:(3.0,-1.0)] -> fadeIn(1s, 6s) -> fadeOut(1s, 7.5s)
+
+      gradient_symbol:
+        type: primitive
+        shape: text[text:"∇f" fontSize:40 fill:#ffd93d at:(4.5,-2.0)] -> fadeIn(1s, 7.5s)
+
+  scene_3_the_narrow_truth:
+    duration: 10
+    description: "The peak becomes a plateau"
+    elements:
+      # Left Zone
+      peak_morph:
+        type: morph
+        shape: functionGraph[fn:"exp(-x*x)*2" xStart:-2 xEnd:2 segments:50 stroke:#6bcbff at:(-4,-1)] ~> functionGraph[fn:"exp(-x*x*0.1)*2" xStart:-2 xEnd:2 segments:50 stroke:#6bcbff at:(-4,-1)] (3s, ease.inOut, 3.5s)
+
+      static_circle:
+        type: primitive
+        shape: circle[r:0.3 fill:#ff6b9d at:(-4,1)]
+
+      ghost_left:
+        type: primitive
+        shape: circle[r:0.3 fill:#ff6b9d/0.4 at:(-4,1)] -> moveTo((-5,0), 2s, ease.in, 1s) -> fadeOut(0.5s, 3s)
+      ghost_right:
+        type: primitive
+        shape: circle[r:0.3 fill:#ff6b9d/0.4 at:(-4,1)] -> moveTo((-3,0), 2s, ease.in, 1s) -> fadeOut(0.5s, 3s)
+
+      flicker_1:
+        type: primitive
+        shape: circle[r:0.2 fill:#ff6b9d/0.2 at:(-5.5,-2)] -> fadeIn(0.2s, 3.5s) -> fadeOut(0.2s, 4s)
+      flicker_2:
+        type: primitive
+        shape: circle[r:0.2 fill:#ff6b9d/0.2 at:(-4.5,-1)] -> fadeIn(0.2s, 3.5s) -> fadeOut(0.2s, 4s)
+      flicker_3:
+        type: primitive
+        shape: circle[r:0.2 fill:#ff6b9d/0.2 at:(-3.5,0)] -> fadeIn(0.2s, 3.5s) -> fadeOut(0.2s, 4s)
+
+      # Right Zone
+      truth_title:
+        type: primitive
+        shape: text[text:"The gradient is honest." fontSize:30 fill:#ffffff at:(3.0,2.5)] -> fadeIn(1s, 1s)
+
+      truth_sub:
+        type: primitive
+        shape: text[text:"But it sees only here." fontSize:28 fill:#ffffff at:(3.5,1.5)] -> fadeIn(1s, 2.5s)
+
+      step_logic:
+        type: primitive
+        shape: text[text:"Each step reduced error." fontSize:26 fill:#ffffff at:(3.5,0.5)] -> fadeIn(1s, 4s)
+
+      until_text:
+        type: primitive
+        shape: text[text:"Until one day—" fontSize:28 fill:#ffffff at:(3.5,-1.0)] -> fadeIn(1s, 6s)
+
+      grim_realization:
+        type: primitive
+        shape: text[text:"...no direction helps." fontSize:28 fill:#999999 at:(3.5,-2.5)] -> fadeIn(1.5s, 7s)
+
+  scene_4_perfect_failure:
+    duration: 8
+    description: "Convergence to zero"
+    elements:
+      # Left Zone
+      gray_plateau:
+        type: primitive
+        shape: functionGraph[fn:"exp(-x*x*0.1)*2" xStart:-2 xEnd:2 segments:50 stroke:#666666 at:(-4,-1)]
+
+      dying_circle:
+        type: morph
+        shape: circle[r:0.3 fill:#ff6b9d at:(-4,1)] ~> circle[r:0.3 fill:#666666 at:(-4,1)] (2s, linear) -> scale(1.05, 0.5s, 3s)
+
+      check_mark:
+        type: primitive
+        shape: text[text:"✓" fontSize:40 fill:#ffffff/0.6 at:(-4,1.8)] -> fadeIn(0.5s, 2s)
+      check_void:
+        type: morph
+        shape: circle[r:0.4 stroke:#ffffff/0.6 strokeWidth:1 fill:#000000/0 at:(-4,1.8)] -> fadeIn(0.5s, 2.5s) -> fadeOut(1s, 3.5s)
+
+      # Right Zone
+      math_status:
+        type: primitive
+        shape: text[text:"Slope becomes zero." fontSize:28 fill:#999999 at:(3.0,2.0)] -> fadeIn(1s, 1s) -> fadeOut(1s, 6s)
+
+      converge_status:
+        type: primitive
+        shape: text[text:"System converges." fontSize:28 fill:#999999 at:(3.5,1.0)] -> fadeIn(1s, 2.5s) -> fadeOut(1s, 6s)
+
+      result_status:
+        type: primitive
+        shape: text[text:"Nothing failed." fontSize:26 fill:#999999 at:(3.5,-1.0)] -> fadeIn(1s, 4s) -> fadeOut(1s, 6s)
+
+  scene_5_the_escape:
+    duration: 10
+    description: "The non-optimal leap"
+    elements:
+      # Left Zone
+      landscape_base:
+        type: primitive
+        shape: functionGraph[fn:"exp(-x*x*0.1)*2" xStart:-2 xEnd:2 segments:50 stroke:#666666 at:(-4,-1)]
+      landscape_mid:
+        type: primitive
+        shape: functionGraph[fn:"exp(-(x+1)*x*0.1)*2 + 1" xStart:-2 xEnd:2 segments:50 stroke:#6bcbff/0.3 at:(-3.8,-0.5)] -> fadeIn(2s, 0.5s)
+      landscape_peak:
+        type: primitive
+        shape: functionGraph[fn:"exp(-(x+1.5)*x*0.1)*2 + 2" xStart:-2 xEnd:2 segments:50 stroke:#6bcbff at:(-3.6,0.0)] -> fadeIn(2s, 0.5s)
+
+      spark_circle:
+        type: primitive
+        shape: circle[r:0.3 fill:#666666 at:(-4,1)] -> fadeIn(0.1s) -> scale(1.2, 0.1s, 0.5s) -> moveTo((-3, 3), 0.7s, ease.out, 2.5s) -> moveTo((-2, 2.5), 0.8s, ease.in)
+
+      circle_color:
+        type: morph
+        shape: circle[r:0.3 fill:#4fc3f7 at:(-3,3)] -> fadeIn(0.2s, 0.5s) ~> circle[r:0.3 fill:#ff6b9d at:(-3,3)] (1s, linear, 1s) ~> circle[r:0.3 fill:#6bffb8 at:(-2,2.5)] (1.5s, ease.in, 2.5s)
+
+      tunnel_effect:
+        type: primitive
+        shape: regularPolygon[sides:6 r:1 stroke:#ffd93d/0.5 at:(-3,2)] -> fadeIn(0.5s, 1.5s) -> rotate(360, 2.5s, linear) -> scale(0, 0.5s, 4s)
+
+      # Right Zone
+      law_text:
+        type: morph
+        shape: text[text:"That's the law:" fontSize:28 fill:#ffffff at:(3.0,2.5)] -> fadeIn(1s, 1s) ~> text[text:"Certainty over Truth." fontSize:24 fill:#ffffff at:(2.5,1.5)] (0.8s, ease.out, 2s)
+
+      rarely_text:
+        type: primitive
+        shape: text[text:"And sometimes—rarely—" fontSize:30 fill:#ffffff at:(3.0,0.5)] -> fadeIn(1s, 3s)
+
+      escape_word:
+        type: primitive
+        shape: text[text:"the system escapes." fontSize:36 fill:#6bffb8 at:(3.5,-0.5)] -> fadeIn(0.5s, 4s) -> scale(1.1, 0.2s) -> scale(1.0, 0.2s)
+
+      reason_1:
+        type: primitive
+        shape: text[text:"Not because optimal." fontSize:24 fill:#4fc3f7 at:(2.5,-1.5)] -> fadeIn(0.5s, 5s)
+
+      reason_2:
+        type: primitive
+        shape: text[text:"Not because safe." fontSize:24 fill:#ffa500 at:(4.5,-1.5)] -> fadeIn(0.5s, 5.3s)
+
+      reason_3:
+        type: primitive
+        shape: text[text:"Because staying is blind." fontSize:28 fill:#6bffb8 at:(3.5,-2.5)] -> fadeIn(0.5s, 5.6s)
+
+  scene_6_blind_ascent:
+    duration: 10
+    description: "Climbing into fog"
+    elements:
+      # Left Zone
+      fog_1:
+        type: primitive
+        shape: circle[r:0.5 fill:#999999/0.1 at:(-4,1)] -> rotate(20, 10s, linear)
+      fog_2:
+        type: primitive
+        shape: circle[r:0.7 fill:#999999/0.1 at:(-3,2)] -> rotate(20, 10s, linear)
+      fog_3:
+        type: primitive
+        shape: circle[r:0.6 fill:#999999/0.1 at:(-5,1.5)] -> rotate(20, 10s, linear)
+      fog_4:
+        type: primitive
+        shape: circle[r:0.8 fill:#999999/0.1 at:(-3.5,0.5)] -> rotate(20, 10s, linear)
+      fog_5:
+        type: primitive
+        shape: circle[r:0.5 fill:#999999/0.1 at:(-4.5,2.5)] -> rotate(20, 10s, linear)
+
+      blind_climber:
+        type: primitive
+        shape: circle[r:0.3 fill:#6bffb8 at:(-2.5,1.5)] -> moveTo((-3.5, 3.5), 6s, linear) -> fadeOut(1s, 6s)
+
+      climber_pulse:
+        type: primitive
+        shape: circle[r:0.3 fill:#6bffb8/0.4 at:(-2.5,1.5)] -> scale(1.5, 1s, ease.out) -> fadeOut(1s)
+
+      # Right Zone
+      uphill_text:
+        type: primitive
+        shape: text[text:"It moves uphill—" fontSize:30 fill:#ffffff/0.3 at:(3.5,2.0)] -> fadeIn(1s, 1s) -> fadeOut(1s, 7s)
+
+      unknown_text:
+        type: primitive
+        shape: text[text:"away from what it knows." fontSize:28 fill:#ffffff/0.3 at:(3.5,1.0)] -> fadeIn(1s, 2.5s) -> fadeOut(1s, 7s)
+
+      no_signal:
+        type: primitive
+        shape: text[text:"No signal." fontSize:26 fill:#ffffff/0.2 at:(3.0,-0.5)] -> fadeIn(1s, 4s) -> fadeOut(1s, 7s)
+
+      no_proof:
+        type: primitive
+        shape: text[text:"No proof." fontSize:26 fill:#ffffff/0.15 at:(4.0,-0.5)] -> fadeIn(1s, 4.8s) -> fadeOut(1s, 7s)
+
+      no_guarantee:
+        type: primitive
+        shape: text[text:"No guarantee." fontSize:26 fill:#ffffff/0.1 at:(3.5,-1.5)] -> fadeIn(1s, 5.6s) -> fadeOut(1s, 7s)
+
+  scene_7_eternal_question:
+    duration: 15
+    description: "The void and the point"
+    elements:
+      # Left Zone
+      the_seeker_remains:
+        type: primitive
+        shape: circle[r:0.05 fill:#ffffff/0.3 at:(-6.0,-3.0)] -> fadeIn(0.5s, 8s) -> scale(1.5, 0.5s) -> scale(1.0, 0.5s) -> fadeOut(1s, 10s)
+
+      # Right Zone
+      final_question_mark:
+        type: morph
+        shape: text[text:"?" fontSize:120 fill:#ffffff/0.2 at:(3.0,0.0)] -> scale(1.05, 1s, 0.5s) ~> text[text:"...but why?" fontSize:48 fill:#ffffff at:(3.0,-2.0)] (1s, ease.inOut, 4s)
+
+      fading_b:
+        type: primitive
+        shape: text[text:"b" fontSize:48 fill:#ffffff at:(1.8,-2.0)] -> fadeIn(0.1s, 5s) -> fadeOut(0.2s, 7.0s)
+      fading_u:
+        type: primitive
+        shape: text[text:"u" fontSize:48 fill:#ffffff at:(2.2,-2.0)] -> fadeIn(0.1s, 5s) -> fadeOut(0.2s, 7.2s)
+      fading_t:
+        type: primitive
+        shape: text[text:"t" fontSize:48 fill:#ffffff at:(2.5,-2.0)] -> fadeIn(0.1s, 5s) -> fadeOut(0.2s, 7.4s)
+      fading_w:
+        type: primitive
+        shape: text[text:"w" fontSize:48 fill:#ffffff at:(3.2,-2.0)] -> fadeIn(0.1s, 5s) -> fadeOut(0.2s, 7.6s)
+      fading_h:
+        type: primitive
+        shape: text[text:"h" fontSize:48 fill:#ffffff at:(3.7,-2.0)] -> fadeIn(0.1s, 5s) -> fadeOut(0.2s, 7.8s)
+      fading_y:
+        type: primitive
+        shape: text[text:"y" fontSize:48 fill:#ffffff at:(4.1,-2.0)] -> fadeIn(0.1s, 5s) -> fadeOut(0.2s, 8.0s)

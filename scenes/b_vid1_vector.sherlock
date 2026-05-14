@@ -1,0 +1,496 @@
+concept: "Vector Fundamentals: Direction & Magnitude"
+emoji: "🧭"
+total_duration: 65
+background: "#0a0a0a"
+
+subtitles:
+  - ""
+  - ""
+  - ""
+  - ""
+  - ""
+  - ""
+  - ""
+  - ""
+  - ""
+
+phases:
+  scene_1:
+    duration: 8
+    description: "Vector addition with perpendicular components"
+    static_hold_time: 3   
+    elements:
+      vector_north:
+        type: vector
+        from: [0, 0]
+        to: [0, 120]
+        color: "#e74c3c"
+        thickness: 4
+        glow: true
+        label: "A(0,3)"
+
+      vector_east:
+        type: vector
+        from: [0, 0]
+        to: [160, 0]
+        color: "#3498db"
+        thickness: 4
+        glow: true
+        label: "B(4,0)"
+
+      vector_resultant:
+        type: vector
+        from: [0, 0]
+        to: [160, 120]
+        color: "#2ecc71"
+        thickness: 6
+        glow: true
+        label: "C(4,3)"
+
+      title_text:
+        type: text
+        text: "Vector Direction & Magnitude"
+        position: [0, -220]
+        size: 20
+        color: "#ffffff"
+        glow: true
+
+      calculation_text:
+        type: text
+        text: "Vector A(0,3) [North] + Vector B(4,0) [East] = Vector C(4,3)"
+        position: [0, -180]
+        size: 14
+        color: "#95a5a6"
+
+      blueprint_grid:
+        type: grid
+        style: "flat"
+        position: [0, 0]
+        width: 800
+        height: 600
+        spacing: 40
+        color: "#1a365d"
+        thickness: 1
+        opacity: 0.5
+        label: "Engineering Blueprint"
+
+      major_lines:
+        type: grid
+        style: "flat"        
+        position: [0, 0]
+        width: 800
+        height: 600
+        spacing: 80
+        color: "#2563eb"
+        thickness: 2
+        opacity: 0.6
+        label: "Major Blueprint Lines"
+
+      x_measurement:
+        type: line
+        from: [-400, 0]
+        to: [400, 0]
+        color: "#1e40af"
+        thickness: 2
+        opacity: 0.7
+        label: "X-measurement"
+
+      y_measurement:
+        type: line
+        from: [0, -300]
+        to: [0, 300]
+        color: "#1e40af"
+        thickness: 2
+        opacity: 0.7
+        label: "Y-measurement"
+
+  scene_2:
+    duration: 7
+    description: "Vector vs scalar comparison"
+    elements:
+      number_line:
+        type: line
+        from: [-200, 80]
+        to: [200, 80]
+        thickness: 3
+        color: "#e74c3c"
+        label: "Scalar"
+
+      scalar_point:
+        type: point
+        position: [0, 80]
+        radius: 10
+        color: "#e74c3c"
+        glow: true
+        label: "5"
+
+      vector_comparison:
+        type: vector
+        from: [0, -100]
+        to: [120, 60]
+        color: "#3498db"
+        thickness: 5
+        glow: true
+        label: "(3,4)"
+
+      magnitude_text:
+        type: text
+        text: "Magnitude: 5 | Direction: 53.13°"
+        position: [0, -180]
+        size: 14
+        color: "#3498db"
+
+      title_text:
+        type: text
+        text: "Vector vs Scalar"
+        position: [0, -220]
+        size: 20
+        color: "#ffffff"
+
+      blueprint_grid:
+        type: grid
+        style: "flat"
+        position: [0, 0]
+        width: 800
+        height: 600
+        spacing: 40
+        color: "#1a365d"
+        thickness: 1
+        opacity: 0.3
+        label: "Engineering Blueprint"
+
+      major_lines:
+        type: grid
+        style: "flat"        
+        position: [0, 0]
+        width: 800
+        height: 600
+        spacing: 80
+        color: "#2563eb"
+        thickness: 2
+        opacity: 0.4
+        label: "Major Blueprint Lines"
+
+      x_measurement:
+        type: line
+        from: [-400, 0]
+        to: [400, 0]
+        color: "#1e40af"
+        thickness: 2
+        opacity: 0.5
+        label: "X-measurement"
+
+      y_measurement:
+        type: line
+        from: [0, -300]
+        to: [0, 300]
+        color: "#1e40af"
+        thickness: 2
+        opacity: 0.5
+        label: "Y-measurement"        
+
+  scene_3:
+    duration: 6
+    description: "Key vector concepts in text points"
+    elements:
+      main_title:
+        type: text
+        text: "🚀 Beyond Ordinary Numbers"
+        position: [0, -50]
+        size: 22
+        color: "#f39c12"
+        glow: true
+
+      point_1:
+        type: text
+        text: "🎯 Direction + Magnitude = Complete Picture"
+        position: [0, 0]
+        size: 16
+        color: "#ffffff"
+
+      point_2:
+        type: text
+        text: "📐 Not Just Position, But Movement"
+        position: [0, 40]
+        size: 16
+        color: "#ffffff"
+
+      perspective_grid:
+        type: grid
+        style: "perspective"
+        spacing: 40
+        density: 1
+        color: "#d4af37"
+        opacity: 0.7
+        glow: true
+        perspective_depth: 0.8
+        label: "Cosmic Perspective Grid"
+
+      horizon_line:
+        type: line
+        from: [-400, 0]
+        to: [400, 0]
+        color: "#f59e0b"
+        thickness: 2
+        opacity: 0.5
+        label: "Horizon"
+
+      center_glow:
+        type: point
+        position: [0, 0]
+        radius: 6
+        color: "#fbbf24"
+        glow: true
+        label: "Vanishing Point"        
+
+  scene_4:
+    duration: 8
+    description: "Vector components and magnitude calculation"
+    elements:
+      main_vector:
+        type: vector
+        from: [0, 0]
+        to: [120, 160]
+        color: "#9b59b6"
+        thickness: 6
+        glow: true
+        label: "V(3,4)"
+
+      x_component:
+        type: line
+        from: [0, 0]
+        to: [120, 0]
+        thickness: 3
+        dashed: true
+        color: "#e74c3c"
+        label: "x=3"
+
+      y_component:
+        type: line
+        from: [120, 0]
+        to: [120, 160]
+        thickness: 3
+        dashed: true
+        color: "#3498db"
+        label: "y=4"
+
+      calculation_text:
+        type: text
+        text: "Length: √(3²+4²)=5 | Direction: tan⁻¹(4/3)≈53.13°"
+        position: [0, -180]
+        size: 14
+        color: "#95a5a6"
+
+      title_text:
+        type: text
+        text: "Vector Components"
+        position: [0, -220]
+        size: 20
+        color: "#ffffff"
+
+  scene_5:
+    duration: 9
+    description: "Head-to-tail vector addition"
+    elements:
+      vector_a:
+        type: vector
+        from: [0, 0]
+        to: [80, 40]
+        color: "#e74c3c"
+        thickness: 4
+        glow: true
+        label: "A(2,1)"
+
+      vector_b:
+        type: vector
+        from: [80, 40]
+        to: [120, 160]
+        color: "#3498db"
+        thickness: 4
+        glow: true
+        label: "B(1,3)"
+
+      vector_resultant:
+        type: vector
+        from: [0, 0]
+        to: [120, 160]
+        color: "#2ecc71"
+        thickness: 6
+        glow: true
+        label: "C(3,4)"
+
+      equation_text:
+        type: text
+        text: "A(2,1) → B(1,3) → Resultant C(3,4) | A + B = C"
+        position: [0, -180]
+        size: 14
+        color: "#95a5a6"
+
+      title_text:
+        type: text
+        text: "Vector Addition"
+        position: [0, -220]
+        size: 20
+        color: "#ffffff"
+
+  scene_6:
+    duration: 6
+    description: "Detective Octopus wisdom about vectors"
+    elements:
+      detective_octopus:
+        type: character
+        position: [0, 0]
+        character: "octopus"
+        size: 60
+        color: "#9b59b6"
+
+      wisdom_text:
+        type: text
+        text: "Just like giving directions: walk 3 blocks east, then 2 blocks north - that's vector addition in your daily life!"
+        position: [0, 100]
+        size: 14
+        color: "#ffffff"
+
+      title_text:
+        type: text
+        text: "Real-World Vector Thinking 🐙"
+        position: [0, -220]
+        size: 20
+        color: "#ffffff"
+
+  scene_7:
+    duration: 8
+    description: "Force vector combination"
+    elements:
+      force_1:
+        type: vector
+        from: [0, 0]
+        to: [120, 0]
+        color: "#e74c3c"
+        thickness: 4
+        glow: true
+        label: "F₁(3,0)"
+
+      force_2:
+        type: vector
+        from: [0, 0]
+        to: [0, 80]
+        color: "#3498db"
+        thickness: 4
+        glow: true
+        label: "F₂(0,2)"
+
+      net_force:
+        type: vector
+        from: [0, 0]
+        to: [120, 80]
+        color: "#2ecc71"
+        thickness: 6
+        glow: true
+        label: "F₃(3,2)"
+
+      force_text:
+        type: text
+        text: "F₁(3,0) [Push Right] + F₂(0,2) [Lift Up] = F₃(3,2) [Net Force]"
+        position: [0, -180]
+        size: 14
+        color: "#95a5a6"
+
+      title_text:
+        type: text
+        text: "Force Combination"
+        position: [0, -220]
+        size: 20
+        color: "#ffffff"
+
+  scene_8:
+    duration: 6
+    description: "Vector applications in different fields"
+    elements:
+      main_title:
+        type: text
+        text: "💡 Vectors Are Everywhere"
+        position: [0, -80]
+        size: 22
+        color: "#f39c12"
+        glow: true
+
+      point_1:
+        type: text
+        text: "🌍 Physics: Forces & Motion"
+        position: [0, -20]
+        size: 16
+        color: "#ffffff"
+
+      point_2:
+        type: text
+        text: "🤖 ML: Data Representations"
+        position: [0, 20]
+        size: 16
+        color: "#ffffff"
+
+      point_3:
+        type: text
+        text: "🗺️ GPS: Navigation"
+        position: [0, 60]
+        size: 16
+        color: "#ffffff"
+
+  scene_9:
+    duration: 7
+    description: "Multiple vector applications"
+    elements:
+      motion_vector:
+        type: vector
+        from: [-180, 80]
+        to: [-80, 80]
+        color: "#e74c3c"
+        thickness: 4
+        glow: true
+        label: "Velocity(5,0)"
+
+      force_vector:
+        type: vector
+        from: [0, 80]
+        to: [80, 140]
+        color: "#3498db"
+        thickness: 4
+        glow: true
+        label: "Force(2,3)"
+
+      data_vector:
+        type: vector
+        from: [160, 80]
+        to: [240, 60]
+        color: "#9b59b6"
+        thickness: 4
+        glow: true
+        label: "[0.7,-0.2,0.4]"
+
+      motion_label:
+        type: text
+        text: "Motion"
+        position: [-130, 40]
+        size: 12
+        color: "#e74c3c"
+
+      force_label:
+        type: text
+        text: "Force"
+        position: [40, 40]
+        size: 12
+        color: "#3498db"
+
+      data_label:
+        type: text
+        text: "Data"
+        position: [200, 40]
+        size: 12
+        color: "#9b59b6"
+
+      title_text:
+        type: text
+        text: "Vector Applications"
+        position: [0, -220]
+        size: 20
+        color: "#ffffff"

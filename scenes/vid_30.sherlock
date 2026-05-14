@@ -1,0 +1,828 @@
+concept: "Gradient Descent: Small Steps to Optimal Solutions"
+emoji: "🏔"
+total_duration: 98
+background: "#0a0a0a"
+
+subtitles:
+  - ""
+  - ""
+  - ""
+  - ""
+  - ""
+  - ""
+  - ""
+  - ""
+  - ""
+
+phases:
+  scene_1:
+    duration: 8
+    description: "Foggy mountains - where is the lowest valley?"
+    elements:
+      mountain_emoji:
+        type: animated_emoji
+        emoji: "🏔"
+        position: [0, -40]
+        size: 100
+        movement: "floating-pen"
+        glowing: "pulsing-glow"
+        rotation: "none"
+        reveal: "zoom-reveal"
+        speed: "slow"
+        delay: "none"
+        color: "#95a5a6"
+        
+      figure_emoji:
+        type: animated_emoji
+        emoji: "🚶"
+        position: [-80, 50]
+        size: 70
+        movement: "wobble"
+        glowing: "none"
+        rotation: "none"
+        reveal: "slide-reveal"
+        speed: "normal"
+        delay: "delay-1"
+        color: "#3498db"
+        
+      fog_emoji:
+        type: animated_emoji
+        emoji: "🌫"
+        position: [80, 30]
+        size: 90
+        movement: "floating-pen"
+        glowing: "flicker"
+        rotation: "gentle-rotate"
+        reveal: "spiral-reveal"
+        speed: "ultra-slow"
+        delay: "delay-2"
+        color: "#ecf0f1"
+        
+      question_text:
+        type: text
+        text: "Where is the lowest valley?"
+        position: [0, 200]
+        size: 18
+        color: "#ffffff"
+        glow: true
+        font: "Arial"
+        
+  scene_2:
+    duration: 7
+    description: "Local slope - gradient as local information"
+    elements:
+      gradient_vector:
+        type: mathematical_entity
+        position: [0, 0]
+        form: "vector"
+        personality: "sharp"
+        size: 80
+        color: "#e74c3c"
+        glow: true
+        energy: 0.9
+        animation_pattern: "pulse"
+        label: "∇f(x)"
+        vector_components: [-3, -4]
+        show_components: true
+        show_magnitude: true
+        show_angle: false
+        vector_style: "force"
+        component_style: "elegant"
+        
+      contour_circle_1:
+        type: circle
+        center: [0, 0]
+        radius: 60
+        fill: false
+        color: "#95a5a6"
+        glow: false
+        opacity: 0.4
+        
+      contour_circle_2:
+        type: circle
+        center: [0, 0]
+        radius: 100
+        fill: false
+        color: "#95a5a6"
+        glow: false
+        opacity: 0.3
+        
+      local_text:
+        type: text
+        text: "Slope beneath your feet is all you can see"
+        position: [0, -200]
+        size: 16
+        color: "#ffffff"
+        glow: true
+        font: "Arial"
+        
+  scene_3:
+    duration: 8
+    description: "Core mechanism - steepest ascent to descent"
+    elements:
+      marble_point:
+        type: mathematical_entity
+        position: [-80, -50]
+        form: "point"
+        personality: "elegant"
+        size: 30
+        color: "#3498db"
+        glow: true
+        energy: 0.9
+        animation_pattern: "pulse"
+        label: "xₜ"
+        
+      gradient_at_marble:
+        type: mathematical_entity
+        position: [-80, -50]
+        form: "vector"
+        personality: "sharp"
+        size: 70
+        color: "#e74c3c"
+        glow: true
+        energy: 0.85
+        animation_pattern: "pulse"
+        label: "∇f(xₜ)"
+        vector_components: [3, 2]
+        show_components: true
+        show_magnitude: true
+        vector_style: "force"
+        component_style: "detailed"
+        
+      next_point:
+        type: mathematical_entity
+        position: [-30, -10]
+        form: "point"
+        personality: "elegant"
+        size: 25
+        color: "#f39c12"
+        glow: true
+        energy: 0.8
+        animation_pattern: "pulse"
+        label: "xₜ₊₁"
+        
+      formula_text:
+        type: text
+        text: "xₜ₊₁ = xₜ - η∇f(xₜ)"
+        position: [0, -200]
+        size: 18
+        color: "#ffffff"
+        glow: true
+        font: "Arial"
+        
+      step_text:
+        type: text
+        text: "Marble moves tiny distance proportional to η"
+        position: [0, 180]
+        size: 14
+        color: "#2ecc71"
+        glow: false
+        font: "Arial"
+        
+  scene_4:
+    duration: 7
+    description: "Learning rate η - invisible variable controlling convergence"
+    elements:
+      step_chart:
+        type: water_bar_chart
+        data: [2, 3, 4, 5, 15, 25, 40, 55]
+        position: [0, 40]
+        width: 320
+        height: 120
+        water_color: "#3498db"
+        wave_intensity: 1.0
+        
+      small_eta_label:
+        type: text
+        text: "η=0.1"
+        position: [-120, -60]
+        size: 16
+        color: "#2ecc71"
+        glow: true
+        font: "Arial"
+        
+      large_eta_label:
+        type: text
+        text: "η=1.1"
+        position: [120, -60]
+        size: 16
+        color: "#e74c3c"
+        glow: true
+        font: "Arial"
+        
+      comparison_text:
+        type: text
+        text: "Size of step changes convergence completely"
+        position: [0, -200]
+        size: 16
+        color: "#ffffff"
+        glow: true
+        font: "Arial"
+        
+      convergence_text:
+        type: text
+        text: "η=0.1 vs η=1.1 → smooth descent vs oscillation"
+        position: [0, 180]
+        size: 14
+        color: "#f39c12"
+        glow: false
+        font: "Arial"
+        
+  scene_5:
+    duration: 9
+    description: "Blind explorer analogy - local slope guiding incremental moves"
+    elements:
+      parabola_surface:
+        type: bell_curve
+        position: [0, 50]
+        amplitude: 120
+        variance: 4000
+        mean: 0
+        startX: -150
+        endX: 150
+        color: "#3498db"
+        thickness: 4
+        glow: true
+        
+      marble_current:
+        type: mathematical_entity
+        position: [-100, -40]
+        form: "point"
+        personality: "elegant"
+        size: 25
+        color: "#f39c12"
+        glow: true
+        energy: 0.9
+        animation_pattern: "pulse"
+        label: "Current"
+        
+      gradient_step1:
+        type: mathematical_entity
+        position: [-100, -40]
+        form: "vector"
+        personality: "sharp"
+        size: 45
+        color: "#e74c3c"
+        glow: true
+        energy: 0.8
+        animation_pattern: "pulse"
+        label: "∇f"
+        vector_components: [2, -1]
+        show_components: true
+        show_magnitude: true
+        vector_style: "force"
+        component_style: "minimal"
+        
+      path_dot1:
+        type: point
+        position: [-100, -40]
+        radius: 5
+        color: "#2ecc71"
+        glow: true
+        
+      path_dot2:
+        type: point
+        position: [-70, -30]
+        radius: 5
+        color: "#2ecc71"
+        glow: true
+        
+      path_dot3:
+        type: point
+        position: [-40, -15]
+        radius: 5
+        color: "#2ecc71"
+        glow: true
+        
+      path_dot4:
+        type: point
+        position: [-10, 0]
+        radius: 5
+        color: "#2ecc71"
+        glow: true
+        
+      recalculate_text:
+        type: text
+        text: "Recalculate after each tiny step"
+        position: [0, -200]
+        size: 16
+        color: "#ffffff"
+        glow: true
+        font: "Arial"
+        
+  scene_6:
+    duration: 8
+    description: "Zigzag path - true path via local corrections"
+    elements:
+      path_line:
+        type: line
+        from: [-120, 80]
+        to: [-90, 60]
+        thickness: 3
+        dashed: false
+        color: "#2ecc71"
+        opacity: 0.8
+        glow: true
+        
+      path_line2:
+        type: line
+        from: [-90, 60]
+        to: [-50, 35]
+        thickness: 3
+        dashed: false
+        color: "#2ecc71"
+        opacity: 0.8
+        glow: true
+        
+      path_line3:
+        type: line
+        from: [-50, 35]
+        to: [-10, 10]
+        thickness: 3
+        dashed: false
+        color: "#2ecc71"
+        opacity: 0.8
+        glow: true
+        
+      path_line4:
+        type: line
+        from: [-10, 10]
+        to: [20, -10]
+        thickness: 3
+        dashed: false
+        color: "#2ecc71"
+        opacity: 0.8
+        glow: true
+        
+      vector_field_hint:
+        type: flow_field
+        position: [0, 0]
+        flow_type: "gradient"
+        density: 0.4
+        intensity: 0.6
+        color: "#95a5a6"
+        animated: true
+        direction: "inward"
+        size: 250
+        
+      zigzag_text:
+        type: text
+        text: "True path = local corrections, not straight line"
+        position: [0, -200]
+        size: 16
+        color: "#ffffff"
+        glow: true
+        font: "Arial"
+        
+      convergence_text:
+        type: text
+        text: "Convergence by cumulative effect of small steps"
+        position: [0, 180]
+        size: 14
+        color: "#2ecc71"
+        glow: false
+        font: "Arial"
+        
+  scene_7:
+    duration: 8
+    description: "Reliable convergence - guaranteed within basin"
+    elements:
+      bowl_curve:
+        type: bell_curve
+        position: [0, 80]
+        amplitude: 100
+        variance: 3500
+        mean: 0
+        startX: -140
+        endX: 140
+        color: "#3498db"
+        thickness: 4
+        glow: true
+        
+      marble_approach:
+        type: mathematical_entity
+        position: [0, 80]
+        form: "point"
+        personality: "elegant"
+        size: 30
+        color: "#f39c12"
+        glow: true
+        energy: 0.9
+        animation_pattern: "pulse"
+        label: "Minimum"
+        
+      gradient_chart:
+        type: water_bar_chart
+        data: [25, 18, 12, 8, 5, 3, 2, 1]
+        position: [180, 0]
+        width: 120
+        height: 100
+        water_color: "#2ecc71"
+        wave_intensity: 0.8
+        
+      contour1:
+        type: circle
+        center: [0, 80]
+        radius: 40
+        fill: false
+        color: "#95a5a6"
+        glow: false
+        opacity: 0.3
+        
+      contour2:
+        type: circle
+        center: [0, 80]
+        radius: 70
+        fill: false
+        color: "#95a5a6"
+        glow: false
+        opacity: 0.25
+        
+      convergence_text:
+        type: text
+        text: "Guaranteed convergence within basin"
+        position: [0, -200]
+        size: 16
+        color: "#ffffff"
+        glow: true
+        font: "Arial"
+        
+  scene_8:
+    duration: 9
+    description: "Parabola example with explicit calculation steps"
+    elements:
+      parabola:
+        type: bell_curve
+        position: [0, 80]
+        amplitude: 80
+        variance: 2800
+        mean: 0
+        startX: -150
+        endX: 150
+        color: "#3498db"
+        thickness: 4
+        glow: true
+        
+      start_point:
+        type: mathematical_entity
+        position: [-125, -30]
+        form: "point"
+        personality: "sharp"
+        size: 20
+        color: "#e74c3c"
+        glow: true
+        energy: 0.8
+        animation_pattern: "pulse"
+        label: "x₀=-5"
+        
+      step1_vector:
+        type: mathematical_entity
+        position: [-125, -30]
+        form: "vector"
+        personality: "sharp"
+        size: 40
+        color: "#f39c12"
+        glow: true
+        energy: 0.8
+        animation_pattern: "pulse"
+        label: "η|∇f|"
+        vector_components: [2, 0]
+        show_magnitude: true
+        vector_style: "force"
+        component_style: "minimal"
+        
+      step_chart:
+        type: water_bar_chart
+        data: [10, 8, 6, 5, 4, 3, 2, 1]
+        position: [0, -120]
+        width: 280
+        height: 80
+        water_color: "#f39c12"
+        wave_intensity: 1.0
+        
+      calculation_text:
+        type: text
+        text: "x₁ = -5 + 0.1×10 = -4  |  x₂ = -4 + 0.1×8 = -3.2"
+        position: [0, 180]
+        size: 13
+        color: "#f39c12"
+        glow: false
+        font: "Arial"
+        
+      title_text:
+        type: text
+        text: "Small steps → -4 → -3.2 → -2.56 → ... → 0"
+        position: [0, -200]
+        size: 16
+        color: "#ffffff"
+        glow: true
+        font: "Arial"
+        
+  scene_9:
+    duration: 8
+    description: "Too big step - overshoot and divergence"
+    elements:
+      parabola_fail:
+        type: bell_curve
+        position: [0, 80]
+        amplitude: 80
+        variance: 2800
+        mean: 0
+        startX: -150
+        endX: 150
+        color: "#3498db"
+        thickness: 4
+        glow: true
+        
+      wild_marble1:
+        type: mathematical_entity
+        position: [-100, -20]
+        form: "point"
+        personality: "playful"
+        size: 22
+        color: "#e74c3c"
+        glow: true
+        energy: 0.9
+        animation_pattern: "bounce"
+        label: "Jump 1"
+        
+      wild_marble2:
+        type: mathematical_entity
+        position: [110, -25]
+        form: "point"
+        personality: "playful"
+        size: 22
+        color: "#e74c3c"
+        glow: true
+        energy: 0.9
+        animation_pattern: "bounce"
+        label: "Jump 2"
+        
+      oscillate_vector1:
+        type: mathematical_entity
+        position: [-100, -20]
+        form: "vector"
+        personality: "sharp"
+        size: 80
+        color: "#f39c12"
+        glow: true
+        energy: 0.9
+        animation_pattern: "wave"
+        label: "Overshoot"
+        vector_components: [5, 0]
+        show_magnitude: true
+        vector_style: "force"
+        component_style: "technical"
+        
+      unstable_chart:
+        type: water_bar_chart
+        data: [50, 55, 60, 58, 62, 59, 61, 57]
+        position: [0, -120]
+        width: 280
+        height: 80
+        water_color: "#e74c3c"
+        wave_intensity: 2.0
+        
+      failure_text:
+        type: text
+        text: "Overshoot → never converges"
+        position: [0, -200]
+        size: 18
+        color: "#e74c3c"
+        glow: true
+        font: "Arial"
+        
+      eta_text:
+        type: text
+        text: "η = 1.1: Step size too large, unstable oscillation"
+        position: [0, 180]
+        size: 14
+        color: "#f39c12"
+        glow: false
+        font: "Arial"
+        
+  scene_10:
+    duration: 7
+    description: "Local terrain guides next step - universal law"
+    elements:
+      minimum_bowl:
+        type: bell_curve
+        position: [0, 80]
+        amplitude: 60
+        variance: 2500
+        mean: 0
+        startX: -120
+        endX: 120
+        color: "#2ecc71"
+        thickness: 4
+        glow: true
+        
+      resting_marble:
+        type: mathematical_entity
+        position: [0, 80]
+        form: "point"
+        personality: "wise"
+        size: 35
+        color: "#f39c12"
+        glow: true
+        energy: 0.5
+        animation_pattern: "breathe"
+        label: "Minimum"
+        
+      zero_vector_field:
+        type: flow_field
+        position: [0, 80]
+        flow_type: "gradient"
+        density: 0.3
+        intensity: 0.2
+        color: "#95a5a6"
+        animated: false
+        direction: "inward"
+        size: 150
+        
+      empty_chart:
+        type: water_bar_chart
+        data: [1, 0, 0, 0, 0, 0, 0, 0]
+        position: [180, 20]
+        width: 100
+        height: 80
+        water_color: "#95a5a6"
+        wave_intensity: 0.3
+        
+      principle_text:
+        type: text
+        text: "Minimal move guided by local slope = universal law"
+        position: [0, -200]
+        size: 17
+        color: "#ffffff"
+        glow: true
+        font: "Arial"
+        
+      gradient_zero:
+        type: text
+        text: "∇f(x*) = 0 → No step required"
+        position: [0, 180]
+        size: 14
+        color: "#2ecc71"
+        glow: false
+        font: "Arial"
+        
+  scene_11:
+    duration: 9
+    description: "Gradient descent everywhere - broader impact"
+    elements:
+      brain_field:
+        type: flow_field
+        position: [-150, -50]
+        flow_type: "data_stream"
+        density: 0.5
+        intensity: 0.7
+        color: "#e74c3c"
+        animated: true
+        direction: "inward"
+        size: 120
+        
+      evolution_field:
+        type: flow_field
+        position: [0, 50]
+        flow_type: "optimization"
+        density: 0.4
+        intensity: 0.6
+        color: "#9b59b6"
+        animated: true
+        direction: "outward"
+        size: 120
+        
+      chess_field:
+        type: flow_field
+        position: [150, -50]
+        flow_type: "gradient"
+        density: 0.5
+        intensity: 0.7
+        color: "#2ecc71"
+        animated: true
+        direction: "inward"
+        size: 120
+        
+      brain_label:
+        type: text
+        text: "Neural Weights"
+        position: [-150, -120]
+        size: 12
+        color: "#e74c3c"
+        glow: true
+        font: "Arial"
+        
+      evolution_label:
+        type: text
+        text: "Fitness Landscape"
+        position: [0, 120]
+        size: 12
+        color: "#9b59b6"
+        glow: true
+        font: "Arial"
+        
+      chess_label:
+        type: text
+        text: "Game Evaluation"
+        position: [150, -120]
+        size: 12
+        color: "#2ecc71"
+        glow: true
+        font: "Arial"
+        
+      universal_text:
+        type: text
+        text: "Gradient Descent Everywhere: Tiny adjustments guided by local slope"
+        position: [0, -210]
+        size: 16
+        color: "#ffffff"
+        glow: true
+        font: "Arial"
+        
+  scene_12:
+    duration: 10
+    description: "Convergent dance - small steps lead to fastest path"
+    elements:
+      mountain_final:
+        type: animated_emoji
+        emoji: "🏔"
+        position: [0, -60]
+        size: 90
+        movement: "floating-pen"
+        glowing: "pulsing-glow"
+        rotation: "none"
+        reveal: "zoom-reveal"
+        speed: "ultra-slow"
+        delay: "none"
+        color: "#95a5a6"
+        
+      figure_walking:
+        type: animated_emoji
+        emoji: "🚶"
+        position: [-100, 40]
+        size: 65
+        movement: "slide-horizontal"
+        glowing: "none"
+        rotation: "none"
+        reveal: "slide-reveal"
+        speed: "slow"
+        delay: "none"
+        color: "#3498db"
+        
+      path_equation:
+        type: animated_emoji
+        emoji: "xₜ₊₁=xₜ-η∇f"
+        position: [100, 30]
+        size: 55
+        movement: "floating-pen"
+        glowing: "matrix-code"
+        rotation: "gentle-rotate"
+        reveal: "slide-reveal"
+        speed: "normal"
+        delay: "delay-1"
+        color: "#2ecc71"
+        
+      path_glow1:
+        type: point
+        position: [-100, 40]
+        radius: 8
+        color: "#f39c12"
+        glow: true
+        
+      path_glow2:
+        type: point
+        position: [-70, 30]
+        radius: 8
+        color: "#f39c12"
+        glow: true
+        
+      path_glow3:
+        type: point
+        position: [-40, 15]
+        radius: 8
+        color: "#f39c12"
+        glow: true
+        
+      path_glow4:
+        type: point
+        position: [-10, 0]
+        radius: 8
+        color: "#f39c12"
+        glow: true
+        
+      path_glow5:
+        type: point
+        position: [20, -15]
+        radius: 8
+        color: "#f39c12"
+        glow: true
+        
+      closure_text:
+        type: text
+        text: "Small steps → fastest path"
+        position: [0, 200]
+        size: 20
+        color: "#ffffff"
+        glow: true
+        font: "Arial"

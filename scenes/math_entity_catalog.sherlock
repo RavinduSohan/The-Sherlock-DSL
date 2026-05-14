@@ -1,0 +1,455 @@
+concept: "Mathematical Entity Complete Catalog"
+emoji: "🔷"
+total_duration: 32
+background: "#0a0a0a"
+
+subtitles:
+  - ""
+  - ""
+  - ""
+  - ""
+  - ""
+  - ""
+  - ""
+  - ""
+  - ""
+
+phases:
+  scene_1:
+    duration: 8
+    description: "Basic geometric forms showcase"
+    elements:
+      entity_point:
+        type: mathematical_entity
+        position: [-270, -100]
+        form: "point"
+        personality: "playful"
+        size: 35
+        color: "#e74c3c"
+        glow: true
+        energy: 0.8
+        animation_pattern: "pulse"
+        label: "Point"
+      
+      entity_triangle:
+        type: mathematical_entity
+        position: [-90, -100]
+        form: "triangle"
+        personality: "elegant"
+        size: 35
+        color: "#3498db"
+        glow: true
+        energy: 0.7
+        animation_pattern: "wave"
+        label: "Triangle"
+      
+      entity_square:
+        type: mathematical_entity
+        position: [90, -100]
+        form: "square"
+        personality: "sharp"
+        size: 35
+        color: "#2ecc71"
+        glow: true
+        energy: 0.9
+        animation_pattern: "breathe"
+        label: "Square"
+      
+      entity_pentagon:
+        type: mathematical_entity
+        position: [270, -100]
+        form: "pentagon"
+        personality: "mysterious"
+        size: 35
+        color: "#f39c12"
+        glow: true
+        energy: 0.6
+        animation_pattern: "bounce"
+        label: "Pentagon"
+      
+      entity_hexagon:
+        type: mathematical_entity
+        position: [-270, 100]
+        form: "hexagon"
+        personality: "wise"
+        size: 35
+        color: "#9b59b6"
+        glow: true
+        energy: 0.8
+        animation_pattern: "spin"
+        label: "Hexagon"
+      
+      entity_octagon:
+        type: mathematical_entity
+        position: [-90, 100]
+        form: "octagon"
+        personality: "playful"
+        size: 35
+        color: "#1abc9c"
+        glow: true
+        energy: 0.7
+        animation_pattern: "wave"
+        label: "Octagon"
+      
+      entity_function:
+        type: mathematical_entity
+        position: [90, 100]
+        form: "function"
+        personality: "elegant"
+        size: 35
+        color: "#e67e22"
+        glow: true
+        energy: 0.8
+        animation_pattern: "pulse"
+        label: "Function"
+      
+      entity_distribution:
+        type: mathematical_entity
+        position: [270, 100]
+        form: "distribution"
+        personality: "sharp"
+        size: 35
+        color: "#34495e"
+        glow: true
+        energy: 0.6
+        animation_pattern: "breathe"
+        label: "Distribution"
+      
+      title_text:
+        type: text
+        text: "Basic Geometric Forms"
+        position: [0, -220]
+        size: 18
+        color: "#ffffff"
+        glow: true
+        font: "Arial"
+  
+  scene_2:
+    duration: 8
+    description: "Advanced and special forms showcase"
+    elements:
+      entity_matrix:
+        type: mathematical_entity
+        position: [-270, -100]
+        form: "matrix"
+        personality: "mysterious"
+        size: 35
+        color: "#c0392b"
+        glow: true
+        energy: 0.7
+        animation_pattern: "bounce"
+        label: "Matrix"
+      
+      entity_cloud:
+        type: mathematical_entity
+        position: [-90, -100]
+        form: "cloud"
+        personality: "wise"
+        size: 35
+        color: "#16a085"
+        glow: true
+        energy: 0.9
+        animation_pattern: "spin"
+        label: "Cloud"
+      
+      entity_wave:
+        type: mathematical_entity
+        position: [90, -100]
+        form: "wave"
+        personality: "playful"
+        size: 35
+        color: "#2980b9"
+        glow: true
+        energy: 0.8
+        animation_pattern: "pulse"
+        label: "Wave"
+      
+      entity_mobius:
+        type: mathematical_entity
+        position: [270, -100]
+        form: "mobius_strip"
+        personality: "elegant"
+        size: 35
+        color: "#8e44ad"
+        glow: true
+        energy: 0.6
+        animation_pattern: "wave"
+        label: "Möbius"
+      
+      entity_xygraph:
+        type: mathematical_entity
+        position: [-270, 100]
+        form: "xy_graph"
+        personality: "sharp"
+        size: 35
+        color: "#27ae60"
+        glow: true
+        energy: 0.7
+        animation_pattern: "breathe"
+        label: "XY Graph"
+      
+      entity_polygon:
+        type: mathematical_entity
+        position: [-90, 100]
+        form: "polygon"
+        personality: "mysterious"
+        size: 35
+        color: "#d35400"
+        glow: true
+        energy: 0.8
+        animation_pattern: "bounce"
+        label: "Polygon-7"
+        data: [7]
+      
+      entity_star:
+        type: mathematical_entity
+        position: [90, 100]
+        form: "star"
+        personality: "wise"
+        size: 35
+        color: "#f1c40f"
+        glow: true
+        energy: 0.9
+        animation_pattern: "spin"
+        label: "Star-5"
+        data: [5]
+      
+      entity_star8:
+        type: mathematical_entity
+        position: [270, 100]
+        form: "star"
+        personality: "playful"
+        size: 35
+        color: "#e91e63"
+        glow: true
+        energy: 0.7
+        animation_pattern: "wave"
+        label: "Star-8"
+        data: [8]
+      
+      title_text:
+        type: text
+        text: "Advanced & Special Forms"
+        position: [0, -220]
+        size: 18
+        color: "#ffffff"
+        glow: true
+        font: "Arial"
+  
+  scene_3:
+    duration: 8
+    description: "Animation pattern variations"
+    elements:
+      anim_wave:
+        type: mathematical_entity
+        position: [-270, -100]
+        form: "hexagon"
+        personality: "elegant"
+        size: 35
+        color: "#3498db"
+        glow: true
+        energy: 0.8
+        animation_pattern: "wave"
+        label: "Wave"
+      
+      anim_pulse:
+        type: mathematical_entity
+        position: [-90, -100]
+        form: "hexagon"
+        personality: "elegant"
+        size: 35
+        color: "#e74c3c"
+        glow: true
+        energy: 0.8
+        animation_pattern: "pulse"
+        label: "Pulse"
+      
+      anim_breathe:
+        type: mathematical_entity
+        position: [90, -100]
+        form: "hexagon"
+        personality: "elegant"
+        size: 35
+        color: "#2ecc71"
+        glow: true
+        energy: 0.8
+        animation_pattern: "breathe"
+        label: "Breathe"
+      
+      anim_bounce:
+        type: mathematical_entity
+        position: [270, -100]
+        form: "hexagon"
+        personality: "elegant"
+        size: 35
+        color: "#f39c12"
+        glow: true
+        energy: 0.8
+        animation_pattern: "bounce"
+        label: "Bounce"
+      
+      anim_spin:
+        type: mathematical_entity
+        position: [-270, 100]
+        form: "hexagon"
+        personality: "elegant"
+        size: 35
+        color: "#9b59b6"
+        glow: true
+        energy: 0.8
+        animation_pattern: "spin"
+        label: "Spin"
+      
+      anim_wave2:
+        type: mathematical_entity
+        position: [-90, 100]
+        form: "pentagon"
+        personality: "elegant"
+        size: 35
+        color: "#1abc9c"
+        glow: true
+        energy: 0.6
+        animation_pattern: "wave"
+        label: "Wave-2"
+      
+      anim_pulse2:
+        type: mathematical_entity
+        position: [90, 100]
+        form: "octagon"
+        personality: "elegant"
+        size: 35
+        color: "#e67e22"
+        glow: true
+        energy: 0.9
+        animation_pattern: "pulse"
+        label: "Pulse-2"
+      
+      anim_breathe2:
+        type: mathematical_entity
+        position: [270, 100]
+        form: "triangle"
+        personality: "elegant"
+        size: 35
+        color: "#95a5a6"
+        glow: true
+        energy: 0.7
+        animation_pattern: "breathe"
+        label: "Breathe-2"
+      
+      title_text:
+        type: text
+        text: "Animation Pattern Variations"
+        position: [0, -220]
+        size: 18
+        color: "#ffffff"
+        glow: true
+        font: "Arial"
+  
+  scene_4:
+    duration: 8
+    description: "Personality variations showcase"
+    elements:
+      pers_playful:
+        type: mathematical_entity
+        position: [-270, -100]
+        form: "triangle"
+        personality: "playful"
+        size: 35
+        color: "#e74c3c"
+        glow: true
+        energy: 0.9
+        animation_pattern: "bounce"
+        label: "Playful"
+      
+      pers_elegant:
+        type: mathematical_entity
+        position: [-90, -100]
+        form: "triangle"
+        personality: "elegant"
+        size: 35
+        color: "#3498db"
+        glow: true
+        energy: 0.7
+        animation_pattern: "wave"
+        label: "Elegant"
+      
+      pers_sharp:
+        type: mathematical_entity
+        position: [90, -100]
+        form: "triangle"
+        personality: "sharp"
+        size: 35
+        color: "#2ecc71"
+        glow: true
+        energy: 0.8
+        animation_pattern: "pulse"
+        label: "Sharp"
+      
+      pers_mysterious:
+        type: mathematical_entity
+        position: [270, -100]
+        form: "triangle"
+        personality: "mysterious"
+        size: 35
+        color: "#9b59b6"
+        glow: true
+        energy: 0.6
+        animation_pattern: "breathe"
+        label: "Mysterious"
+      
+      pers_wise:
+        type: mathematical_entity
+        position: [-180, 100]
+        form: "triangle"
+        personality: "wise"
+        size: 35
+        color: "#f39c12"
+        glow: true
+        energy: 0.7
+        animation_pattern: "spin"
+        label: "Wise"
+      
+      pers_playful2:
+        type: mathematical_entity
+        position: [-60, 100]
+        form: "square"
+        personality: "playful"
+        size: 35
+        color: "#1abc9c"
+        glow: true
+        energy: 0.9
+        animation_pattern: "bounce"
+        label: "Playful-2"
+      
+      pers_elegant2:
+        type: mathematical_entity
+        position: [60, 100]
+        form: "square"
+        personality: "elegant"
+        size: 35
+        color: "#e67e22"
+        glow: true
+        energy: 0.7
+        animation_pattern: "wave"
+        label: "Elegant-2"
+      
+      pers_sharp2:
+        type: mathematical_entity
+        position: [180, 100]
+        form: "square"
+        personality: "sharp"
+        size: 35
+        color: "#34495e"
+        glow: true
+        energy: 0.8
+        animation_pattern: "pulse"
+        label: "Sharp-2"
+      
+      title_text:
+        type: text
+        text: "Personality Variations"
+        position: [0, -220]
+        size: 18
+        color: "#ffffff"
+        glow: true
+        font: "Arial"

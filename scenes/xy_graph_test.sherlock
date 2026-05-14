@@ -1,0 +1,90 @@
+concept: "XY Graph Function Test"
+emoji: "📊"
+total_duration: 8
+background: "#0a0a0a"
+
+subtitles:
+  - "Testing mathematical function plotting"
+  - "Smooth curve generation and animation"
+
+phases:
+  simple_test:
+    duration: 4
+    static_hold_time: 1
+    description: "Simple function test"
+    elements:
+      title:
+        type: text
+        text: "📊 Function Test"
+        position: [0, 300]
+        color: "#f1c40f"
+        size: 28
+        font: "Georgia"
+        glow: true
+
+      # Simple parabola test
+      parabola_test:
+        type: xy_graph
+        position: [-200, 0]
+        size: 200
+        function: "x*x"
+        x_range: [-3, 3]
+        y_range: [0, 9]
+        color: "#e74c3c"
+        line_width: 4
+        show_grid: true
+        show_axes: true
+        show_labels: true
+        smooth_curve: true
+        title: "x²"
+        resolution: 50
+
+      # Simple linear function
+      linear_test:
+        type: xy_graph
+        position: [200, 0]
+        size: 200
+        function: "2*x + 1"
+        x_range: [-3, 3]
+        y_range: [-5, 7]
+        color: "#3498db"
+        line_width: 4
+        show_grid: true
+        show_axes: true
+        show_labels: true
+        smooth_curve: false
+        title: "2x + 1"
+        resolution: 20
+
+  animated_test:
+    duration: 4
+    static_hold_time: 2
+    description: "Animated function drawing"
+    elements:
+      title:
+        type: text
+        text: "✨ Animated Drawing"
+        position: [0, 300]
+        color: "#e67e22"
+        size: 28
+        font: "Georgia"
+        glow: true
+
+      # Animated sine wave
+      sine_animated:
+        type: xy_graph
+        position: [0, 0]
+        size: 250
+        function: "Math.sin(x)"
+        x_range: [-6, 6]
+        y_range: [-1.5, 1.5]
+        color: "#9b59b6"
+        line_width: 4
+        show_grid: true
+        show_axes: true
+        show_labels: true
+        show_points: false
+        smooth_curve: true
+        animate_draw: true
+        title: "sin(x)"
+        resolution: 100

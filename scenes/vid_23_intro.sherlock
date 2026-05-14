@@ -1,0 +1,687 @@
+concept: "The Maze — CS Fundamentals Series Intro"
+emoji: "🏛️"
+total_duration: 120
+background: "#080c14"
+
+subtitles:
+  - ""
+
+phases:
+
+  scene_01_maze:
+    duration: 15
+    description: "A human runner lost in the maze — marked walls, dead ends, no escape."
+    elements:
+
+      wall_h1:
+        type: primitive
+        shape: line[from:(-8.0,5.0) to:(-4.0,5.0) stroke:#ffffff/0.18 strokeWidth:2] -> fadeIn(0.8s, 0.2s)
+
+      wall_h2:
+        type: primitive
+        shape: line[from:(-6.5,3.5) to:(-1.5,3.5) stroke:#ffffff/0.18 strokeWidth:2] -> fadeIn(0.8s, 0.3s)
+
+      wall_h3:
+        type: primitive
+        shape: line[from:(-8.0,2.0) to:(-5.0,2.0) stroke:#ffffff/0.18 strokeWidth:2] -> fadeIn(0.8s, 0.4s)
+
+      wall_h4:
+        type: primitive
+        shape: line[from:(-3.0,2.0) to:(1.0,2.0) stroke:#ffffff/0.18 strokeWidth:2] -> fadeIn(0.8s, 0.5s)
+
+      wall_h5:
+        type: primitive
+        shape: line[from:(2.0,2.0) to:(6.0,2.0) stroke:#ffffff/0.18 strokeWidth:2] -> fadeIn(0.8s, 0.4s)
+
+      wall_h6:
+        type: primitive
+        shape: line[from:(-6.0,0.5) to:(-2.0,0.5) stroke:#ffffff/0.18 strokeWidth:2] -> fadeIn(0.8s, 0.5s)
+
+      wall_h7:
+        type: primitive
+        shape: line[from:(0.0,0.5) to:(4.5,0.5) stroke:#ffffff/0.18 strokeWidth:2] -> fadeIn(0.8s, 0.6s)
+
+      wall_h8:
+        type: primitive
+        shape: line[from:(-8.0,-1.0) to:(-4.5,-1.0) stroke:#ffffff/0.18 strokeWidth:2] -> fadeIn(0.8s, 0.5s)
+
+      wall_h9:
+        type: primitive
+        shape: line[from:(-2.5,-1.0) to:(2.5,-1.0) stroke:#ffffff/0.18 strokeWidth:2] -> fadeIn(0.8s, 0.6s)
+
+      wall_h10:
+        type: primitive
+        shape: line[from:(4.0,-1.0) to:(8.0,-1.0) stroke:#ffffff/0.18 strokeWidth:2] -> fadeIn(0.8s, 0.5s)
+
+      wall_h11:
+        type: primitive
+        shape: line[from:(-7.0,-2.5) to:(-3.5,-2.5) stroke:#ffffff/0.18 strokeWidth:2] -> fadeIn(0.8s, 0.6s)
+
+      wall_h12:
+        type: primitive
+        shape: line[from:(-1.0,-2.5) to:(3.0,-2.5) stroke:#ffffff/0.18 strokeWidth:2] -> fadeIn(0.8s, 0.7s)
+
+      wall_h13:
+        type: primitive
+        shape: line[from:(5.0,-2.5) to:(8.0,-2.5) stroke:#ffffff/0.18 strokeWidth:2] -> fadeIn(0.8s, 0.6s)
+
+      wall_h14:
+        type: primitive
+        shape: line[from:(-8.0,-4.0) to:(-5.0,-4.0) stroke:#ffffff/0.18 strokeWidth:2] -> fadeIn(0.8s, 0.7s)
+
+      wall_h15:
+        type: primitive
+        shape: line[from:(-3.0,-4.0) to:(1.5,-4.0) stroke:#ffffff/0.18 strokeWidth:2] -> fadeIn(0.8s, 0.8s)
+
+      wall_h16:
+        type: primitive
+        shape: line[from:(3.5,-4.0) to:(8.0,-4.0) stroke:#ffffff/0.18 strokeWidth:2] -> fadeIn(0.8s, 0.7s)
+
+      wall_v1:
+        type: primitive
+        shape: line[from:(-8.0,6.0) to:(-8.0,-6.0) stroke:#ffffff/0.22 strokeWidth:2.5] -> fadeIn(0.8s, 0.1s)
+
+      wall_v2:
+        type: primitive
+        shape: line[from:(8.0,6.0) to:(8.0,-6.0) stroke:#ffffff/0.22 strokeWidth:2.5] -> fadeIn(0.8s, 0.1s)
+
+      wall_v3:
+        type: primitive
+        shape: line[from:(-6.5,5.0) to:(-6.5,3.5) stroke:#ffffff/0.18 strokeWidth:2] -> fadeIn(0.8s, 0.3s)
+
+      wall_v4:
+        type: primitive
+        shape: line[from:(-4.0,6.0) to:(-4.0,3.5) stroke:#ffffff/0.18 strokeWidth:2] -> fadeIn(0.8s, 0.4s)
+
+      wall_v5:
+        type: primitive
+        shape: line[from:(-1.5,5.0) to:(-1.5,2.0) stroke:#ffffff/0.18 strokeWidth:2] -> fadeIn(0.8s, 0.5s)
+
+      wall_v6:
+        type: primitive
+        shape: line[from:(1.5,3.5) to:(1.5,0.5) stroke:#ffffff/0.18 strokeWidth:2] -> fadeIn(0.8s, 0.5s)
+
+      wall_v7:
+        type: primitive
+        shape: line[from:(4.5,6.0) to:(4.5,2.0) stroke:#ffffff/0.18 strokeWidth:2] -> fadeIn(0.8s, 0.4s)
+
+      wall_v8:
+        type: primitive
+        shape: line[from:(-5.0,2.0) to:(-5.0,-1.0) stroke:#ffffff/0.18 strokeWidth:2] -> fadeIn(0.8s, 0.5s)
+
+      wall_v9:
+        type: primitive
+        shape: line[from:(-3.0,2.0) to:(-3.0,-1.0) stroke:#ffffff/0.18 strokeWidth:2] -> fadeIn(0.8s, 0.6s)
+
+      wall_v10:
+        type: primitive
+        shape: line[from:(0.0,2.0) to:(0.0,-1.0) stroke:#ffffff/0.18 strokeWidth:2] -> fadeIn(0.8s, 0.5s)
+
+      wall_v11:
+        type: primitive
+        shape: line[from:(6.0,2.0) to:(6.0,-1.0) stroke:#ffffff/0.18 strokeWidth:2] -> fadeIn(0.8s, 0.4s)
+
+      wall_v12:
+        type: primitive
+        shape: line[from:(-7.0,-1.0) to:(-7.0,-4.0) stroke:#ffffff/0.18 strokeWidth:2] -> fadeIn(0.8s, 0.6s)
+
+      wall_v13:
+        type: primitive
+        shape: line[from:(-4.5,-1.0) to:(-4.5,-4.0) stroke:#ffffff/0.18 strokeWidth:2] -> fadeIn(0.8s, 0.7s)
+
+      wall_v14:
+        type: primitive
+        shape: line[from:(-2.5,-1.0) to:(-2.5,-4.0) stroke:#ffffff/0.18 strokeWidth:2] -> fadeIn(0.8s, 0.6s)
+
+      wall_v15:
+        type: primitive
+        shape: line[from:(2.5,-1.0) to:(2.5,-4.0) stroke:#ffffff/0.18 strokeWidth:2] -> fadeIn(0.8s, 0.7s)
+
+      wall_v16:
+        type: primitive
+        shape: line[from:(5.0,-2.5) to:(5.0,-6.0) stroke:#ffffff/0.18 strokeWidth:2] -> fadeIn(0.8s, 0.6s)
+
+      runner:
+        type: morph
+        shape: circle[r:0.28 fill:#4fc3f7/0.9 stroke:#4fc3f7/1.0 strokeWidth:2 at:(-7.0,4.2)] -> fadeIn(0.4s, 1.5s) ~> circle[r:0.28 fill:#4fc3f7/0.9 stroke:#4fc3f7/1.0 strokeWidth:2 at:(-5.5,4.2)] (0.5s, ease.inOut, 2.2s) ~> circle[r:0.28 fill:#4fc3f7/0.9 stroke:#4fc3f7/1.0 strokeWidth:2 at:(-5.5,2.8)] (0.5s, ease.inOut, 2.9s) ~> circle[r:0.28 fill:#4fc3f7/0.9 stroke:#4fc3f7/1.0 strokeWidth:2 at:(-2.5,2.8)] (0.6s, ease.inOut, 3.6s) ~> circle[r:0.28 fill:#4fc3f7/0.9 stroke:#4fc3f7/1.0 strokeWidth:2 at:(-2.5,1.2)] (0.5s, ease.inOut, 4.4s) ~> circle[r:0.28 fill:#4fc3f7/0.9 stroke:#4fc3f7/1.0 strokeWidth:2 at:(-2.5,2.8)] (0.4s, ease.inOut, 5.1s) ~> circle[r:0.28 fill:#4fc3f7/0.9 stroke:#4fc3f7/1.0 strokeWidth:2 at:(-5.5,2.8)] (0.5s, ease.inOut, 5.7s) ~> circle[r:0.28 fill:#4fc3f7/0.9 stroke:#4fc3f7/1.0 strokeWidth:2 at:(-5.5,1.2)] (0.5s, ease.inOut, 6.4s) ~> circle[r:0.28 fill:#4fc3f7/0.9 stroke:#4fc3f7/1.0 strokeWidth:2 at:(-5.5,-0.2)] (0.5s, ease.inOut, 7.1s) ~> circle[r:0.28 fill:#4fc3f7/0.9 stroke:#4fc3f7/1.0 strokeWidth:2 at:(-3.8,-0.2)] (0.5s, ease.inOut, 7.8s) ~> circle[r:0.28 fill:#4fc3f7/0.9 stroke:#4fc3f7/1.0 strokeWidth:2 at:(-3.8,-1.8)] (0.5s, ease.inOut, 8.5s) ~> circle[r:0.28 fill:#4fc3f7/0.9 stroke:#4fc3f7/1.0 strokeWidth:2 at:(-5.5,-1.8)] (0.4s, ease.inOut, 9.2s) ~> circle[r:0.28 fill:#4fc3f7/0.9 stroke:#4fc3f7/1.0 strokeWidth:2 at:(-3.8,-1.8)] (0.4s, ease.inOut, 9.8s)
+
+      mark1:
+        type: morph
+        shape: text[text:"×" fontSize:16 fill:#ff6b9d/0 at:(-5.5,4.2)] ~> text[text:"×" fontSize:16 fill:#ff6b9d/0.6 at:(-5.5,4.2)] (0.3s, ease.out, 3.1s)
+
+      mark2:
+        type: morph
+        shape: text[text:"×" fontSize:16 fill:#ff6b9d/0 at:(-2.5,1.2)] ~> text[text:"×" fontSize:16 fill:#ff6b9d/0.6 at:(-2.5,1.2)] (0.3s, ease.out, 4.6s)
+
+      mark3:
+        type: morph
+        shape: text[text:"×" fontSize:16 fill:#ff6b9d/0 at:(-5.5,1.2)] ~> text[text:"×" fontSize:16 fill:#ff6b9d/0.6 at:(-5.5,1.2)] (0.3s, ease.out, 6.6s)
+
+      mark4:
+        type: morph
+        shape: text[text:"×" fontSize:16 fill:#ff6b9d/0 at:(-3.8,-1.8)] ~> text[text:"×" fontSize:16 fill:#ff6b9d/0.6 at:(-3.8,-1.8)] (0.3s, ease.out, 8.7s)
+
+      runner_freeze_lbl:
+        type: morph
+        shape: text[text:"LOST" fontSize:22 fill:#ff6b9d/0 at:(-4.0,-0.2)] ~> text[text:"LOST" fontSize:22 fill:#ff6b9d/0.8 at:(-4.0,-0.2)] (0.5s, ease.out, 10.5s) ~> text[text:"LOST" fontSize:22 fill:#ff6b9d/0 at:(-4.0,-0.2)] (0.5s, ease.out, 12.0s)
+
+      right_wall_exit:
+        type: morph
+        shape: line[from:(8.0,4.5) to:(8.0,3.0) stroke:#080c14/0 strokeWidth:4] ~> line[from:(8.0,4.5) to:(8.0,3.0) stroke:#080c14/0.9 strokeWidth:4] (0.3s, ease.out, 1.5s)
+
+      exit_lbl:
+        type: morph
+        shape: text[text:"EXIT →" fontSize:18 fill:#6bffb8/0 at:(6.5,3.75)] ~> text[text:"EXIT →" fontSize:18 fill:#6bffb8/0.5 at:(6.5,3.75)] (0.6s, ease.out, 2.0s)
+
+      maze_lbl:
+        type: morph
+        shape: text[text:"THE MAZE" fontSize:36 fill:#ffffff/0 at:(3.5,-3.0)] ~> text[text:"THE MAZE" fontSize:36 fill:#ffffff/0.08 at:(3.5,-3.0)] (1.5s, ease.out, 1.0s)
+
+      cinematic_lost:
+        type: morph
+        shape: text[text:"NOWHERE" fontSize:64 fill:#ffd54f/0 at:(3.5,0.0)] ~> text[text:"NOWHERE" fontSize:64 fill:#ffd54f/0.9 at:(3.5,0.0)] (1.2s, ease.out, 30.0s) ~> text[text:"NOWHERE" fontSize:64 fill:#ffd54f/0.9 at:(3.5,0.0)] (2.5s, ease.inOut, 31.5s) ~> text[text:"NOWHERE" fontSize:22 fill:#ffd54f/0.2 at:(3.5,0.0)] (1.5s, ease.inOut, 34.2s)
+
+      wsp1:
+        type: primitive
+        shape: text[text:"Left" fontSize:13 fill:#ffffff/0.3 at:(-4.5,-5.2)] -> fadeIn(0.6s, 35.2s)
+
+      wsp2:
+        type: primitive
+        shape: text[text:"Right" fontSize:13 fill:#ffffff/0.3 at:(0,-5.2)] -> fadeIn(0.6s, 35.6s)
+
+      wsp3:
+        type: primitive
+        shape: text[text:"Nowhere" fontSize:13 fill:#ffffff/0.3 at:(4.5,-5.2)] -> fadeIn(0.6s, 36.0s)
+
+  scene_02_machine:
+    duration: 14
+    description: "The machine drops in — faster, tireless, reading every wall. The human freezes."
+    elements:
+
+      wall_h1:
+        type: primitive
+        shape: line[from:(-8.0,5.0) to:(-4.0,5.0) stroke:#ffffff/0.14 strokeWidth:1.8] -> fadeIn(0.5s, 0.2s)
+
+      wall_h2:
+        type: primitive
+        shape: line[from:(-6.5,3.5) to:(-1.5,3.5) stroke:#ffffff/0.14 strokeWidth:1.8] -> fadeIn(0.5s, 0.3s)
+
+      wall_h3:
+        type: primitive
+        shape: line[from:(-8.0,2.0) to:(-5.0,2.0) stroke:#ffffff/0.14 strokeWidth:1.8] -> fadeIn(0.5s, 0.3s)
+
+      wall_h4:
+        type: primitive
+        shape: line[from:(-3.0,2.0) to:(1.0,2.0) stroke:#ffffff/0.14 strokeWidth:1.8] -> fadeIn(0.5s, 0.4s)
+
+      wall_h5:
+        type: primitive
+        shape: line[from:(2.0,2.0) to:(6.0,2.0) stroke:#ffffff/0.14 strokeWidth:1.8] -> fadeIn(0.5s, 0.4s)
+
+      wall_h6:
+        type: primitive
+        shape: line[from:(-6.0,0.5) to:(-2.0,0.5) stroke:#ffffff/0.14 strokeWidth:1.8] -> fadeIn(0.5s, 0.5s)
+
+      wall_h7:
+        type: primitive
+        shape: line[from:(0.0,0.5) to:(4.5,0.5) stroke:#ffffff/0.14 strokeWidth:1.8] -> fadeIn(0.5s, 0.5s)
+
+      wall_h8:
+        type: primitive
+        shape: line[from:(-8.0,-1.0) to:(-4.5,-1.0) stroke:#ffffff/0.14 strokeWidth:1.8] -> fadeIn(0.5s, 0.4s)
+
+      wall_h9:
+        type: primitive
+        shape: line[from:(-2.5,-1.0) to:(2.5,-1.0) stroke:#ffffff/0.14 strokeWidth:1.8] -> fadeIn(0.5s, 0.5s)
+
+      wall_h10:
+        type: primitive
+        shape: line[from:(4.0,-1.0) to:(8.0,-1.0) stroke:#ffffff/0.14 strokeWidth:1.8] -> fadeIn(0.5s, 0.4s)
+
+      wall_h11:
+        type: primitive
+        shape: line[from:(-7.0,-2.5) to:(-3.5,-2.5) stroke:#ffffff/0.14 strokeWidth:1.8] -> fadeIn(0.5s, 0.5s)
+
+      wall_h12:
+        type: primitive
+        shape: line[from:(-1.0,-2.5) to:(3.0,-2.5) stroke:#ffffff/0.14 strokeWidth:1.8] -> fadeIn(0.5s, 0.6s)
+
+      wall_v1:
+        type: primitive
+        shape: line[from:(-8.0,6.0) to:(-8.0,-6.0) stroke:#ffffff/0.2 strokeWidth:2.5] -> fadeIn(0.5s, 0.1s)
+
+      wall_v2:
+        type: primitive
+        shape: line[from:(8.0,6.0) to:(8.0,-6.0) stroke:#ffffff/0.2 strokeWidth:2.5] -> fadeIn(0.5s, 0.1s)
+
+      wall_v3:
+        type: primitive
+        shape: line[from:(-6.5,5.0) to:(-6.5,3.5) stroke:#ffffff/0.14 strokeWidth:1.8] -> fadeIn(0.5s, 0.3s)
+
+      wall_v4:
+        type: primitive
+        shape: line[from:(-4.0,6.0) to:(-4.0,3.5) stroke:#ffffff/0.14 strokeWidth:1.8] -> fadeIn(0.5s, 0.3s)
+
+      wall_v5:
+        type: primitive
+        shape: line[from:(-1.5,5.0) to:(-1.5,2.0) stroke:#ffffff/0.14 strokeWidth:1.8] -> fadeIn(0.5s, 0.4s)
+
+      wall_v6:
+        type: primitive
+        shape: line[from:(1.5,3.5) to:(1.5,0.5) stroke:#ffffff/0.14 strokeWidth:1.8] -> fadeIn(0.5s, 0.4s)
+
+      wall_v7:
+        type: primitive
+        shape: line[from:(4.5,6.0) to:(4.5,2.0) stroke:#ffffff/0.14 strokeWidth:1.8] -> fadeIn(0.5s, 0.3s)
+
+      wall_v8:
+        type: primitive
+        shape: line[from:(-5.0,2.0) to:(-5.0,-1.0) stroke:#ffffff/0.14 strokeWidth:1.8] -> fadeIn(0.5s, 0.4s)
+
+      wall_v9:
+        type: primitive
+        shape: line[from:(-3.0,2.0) to:(-3.0,-1.0) stroke:#ffffff/0.14 strokeWidth:1.8] -> fadeIn(0.5s, 0.5s)
+
+      wall_v10:
+        type: primitive
+        shape: line[from:(0.0,2.0) to:(0.0,-1.0) stroke:#ffffff/0.14 strokeWidth:1.8] -> fadeIn(0.5s, 0.4s)
+
+      wall_v11:
+        type: primitive
+        shape: line[from:(6.0,2.0) to:(6.0,-1.0) stroke:#ffffff/0.14 strokeWidth:1.8] -> fadeIn(0.5s, 0.3s)
+
+      runner_stuck:
+        type: primitive
+        shape: circle[r:0.28 fill:#4fc3f7/0.5 stroke:#4fc3f7/0.7 strokeWidth:2 at:(-3.8,-1.8)] -> fadeIn(0.4s, 0.5s)
+
+      machine_drop:
+        type: morph
+        shape: rectangle[w:1.1 h:1.1 fill:#c77aff/0.5 stroke:#c77aff/0.85 strokeWidth:2.5 at:(0,8.0)] ~> rectangle[w:1.1 h:1.1 fill:#c77aff/0.5 stroke:#c77aff/0.85 strokeWidth:2.5 at:(0,4.2)] (1.2s, ease.in, 1.0s) ~> rectangle[w:1.1 h:1.1 fill:#c77aff/0.6 stroke:#ffd54f/0.9 strokeWidth:2.5 at:(0,4.2)] (0.3s, ease.out, 2.3s) ~> rectangle[w:1.1 h:1.1 fill:#c77aff/0.6 stroke:#c77aff/0.85 strokeWidth:2.5 at:(2.8,4.2)] (0.4s, ease.out, 3.2s) ~> rectangle[w:1.1 h:1.1 fill:#c77aff/0.6 stroke:#c77aff/0.85 strokeWidth:2.5 at:(2.8,2.8)] (0.35s, ease.out, 3.7s) ~> rectangle[w:1.1 h:1.1 fill:#c77aff/0.6 stroke:#c77aff/0.85 strokeWidth:2.5 at:(5.5,2.8)] (0.4s, ease.out, 4.2s) ~> rectangle[w:1.1 h:1.1 fill:#c77aff/0.6 stroke:#c77aff/0.85 strokeWidth:2.5 at:(5.5,1.2)] (0.35s, ease.out, 4.7s) ~> rectangle[w:1.1 h:1.1 fill:#c77aff/0.6 stroke:#c77aff/0.85 strokeWidth:2.5 at:(5.5,-0.3)] (0.35s, ease.out, 5.2s) ~> rectangle[w:1.1 h:1.1 fill:#6bffb8/0.7 stroke:#6bffb8/1.0 strokeWidth:3 at:(7.2,-0.3)] (0.5s, ease.out, 5.7s)
+
+      machine_lbl:
+        type: morph
+        shape: text[text:"AI" fontSize:18 fill:#ffd54f/0 at:(0,4.2)] ~> text[text:"AI" fontSize:18 fill:#ffd54f/0.9 at:(0,4.2)] (0.3s, ease.out, 2.4s) ~> text[text:"AI" fontSize:18 fill:#ffd54f/0 at:(0,4.2)] (0.3s, ease.out, 3.0s)
+
+      wall_scan1:
+        type: morph
+        shape: line[from:(2.0,2.0) to:(6.0,2.0) stroke:#ffffff/0.14 strokeWidth:1.8] -> fadeIn(0.3s, 3.8s) ~> line[from:(2.0,2.0) to:(6.0,2.0) stroke:#c77aff/0.7 strokeWidth:2.5] (0.2s, ease.out, 4.3s) ~> line[from:(2.0,2.0) to:(6.0,2.0) stroke:#ffffff/0.14 strokeWidth:1.8] (0.4s, ease.out, 4.6s)
+
+      wall_scan2:
+        type: morph
+        shape: line[from:(4.5,6.0) to:(4.5,2.0) stroke:#ffffff/0.14 strokeWidth:1.8] -> fadeIn(0.3s, 3.8s) ~> line[from:(4.5,6.0) to:(4.5,2.0) stroke:#c77aff/0.7 strokeWidth:2.5] (0.2s, ease.out, 4.8s) ~> line[from:(4.5,6.0) to:(4.5,2.0) stroke:#ffffff/0.14 strokeWidth:1.8] (0.4s, ease.out, 5.1s)
+
+      wall_scan3:
+        type: morph
+        shape: line[from:(0.0,0.5) to:(4.5,0.5) stroke:#ffffff/0.14 strokeWidth:1.8] -> fadeIn(0.3s, 3.8s) ~> line[from:(0.0,0.5) to:(4.5,0.5) stroke:#c77aff/0.7 strokeWidth:2.5] (0.2s, ease.out, 5.3s) ~> line[from:(0.0,0.5) to:(4.5,0.5) stroke:#ffffff/0.14 strokeWidth:1.8] (0.4s, ease.out, 5.6s)
+
+      runner_fade:
+        type: morph
+        shape: circle[r:0.28 fill:#4fc3f7/0.5 stroke:#4fc3f7/0.7 strokeWidth:2 at:(-3.8,-1.8)] -> fadeIn(0.4s, 0.5s) ~> circle[r:0.28 fill:#ff6b9d/0.5 stroke:#ff6b9d/0.7 strokeWidth:2 at:(-3.8,-1.8)] (0.8s, ease.out, 6.5s) ~> circle[r:0.28 fill:#ff6b9d/0 stroke:#ff6b9d/0 strokeWidth:1 at:(-3.8,-1.8)] (1.2s, ease.out, 8.0s)
+
+      machine_won_lbl:
+        type: morph
+        shape: text[text:"FASTER." fontSize:46 fill:#c77aff/0 at:(3.5,0.0)] ~> text[text:"FASTER." fontSize:46 fill:#c77aff/0.85 at:(3.5,0.0)] (0.8s, ease.out, 6.8s) ~> text[text:"FASTER." fontSize:46 fill:#c77aff/0 at:(3.5,0.0)] (0.6s, ease.out, 9.5s)
+
+      starve_lbl:
+        type: morph
+        shape: text[text:"You starve." fontSize:36 fill:#ff6b9d/0 at:(-3.0,0.0)] ~> text[text:"You starve." fontSize:36 fill:#ff6b9d/0.85 at:(-3.0,0.0)] (0.8s, ease.out, 10.5s) ~> text[text:"You starve." fontSize:36 fill:#ff6b9d/0 at:(-3.0,0.0)] (0.7s, ease.out, 13.5s)
+
+      cinematic_machine:
+        type: morph
+        shape: text[text:"MACHINE" fontSize:64 fill:#ffd54f/0 at:(0,0.0)] ~> text[text:"MACHINE" fontSize:64 fill:#ffd54f/0.9 at:(0,0.0)] (1.2s, ease.out, 30.0s) ~> text[text:"MACHINE" fontSize:64 fill:#ffd54f/0.9 at:(0,0.0)] (2.5s, ease.inOut, 31.5s) ~> text[text:"MACHINE" fontSize:22 fill:#ffd54f/0.2 at:(0,0.0)] (1.5s, ease.inOut, 34.2s)
+
+      wsp1:
+        type: primitive
+        shape: text[text:"Tireless" fontSize:13 fill:#ffffff/0.3 at:(-4.5,-5.2)] -> fadeIn(0.6s, 35.2s)
+
+      wsp2:
+        type: primitive
+        shape: text[text:"No sleep" fontSize:13 fill:#ffffff/0.3 at:(0,-5.2)] -> fadeIn(0.6s, 35.6s)
+
+      wsp3:
+        type: primitive
+        shape: text[text:"Pre-trained" fontSize:13 fill:#ffffff/0.3 at:(4.5,-5.2)] -> fadeIn(0.6s, 36.0s)
+
+  scene_03_runners:
+    duration: 14
+    description: "Most people just run faster. More tutorials. More hours. They will die in the maze."
+    elements:
+
+      wall_h1:
+        type: primitive
+        shape: line[from:(-8.0,5.0) to:(-4.0,5.0) stroke:#ffffff/0.12 strokeWidth:1.5] -> fadeIn(0.6s, 0.2s)
+
+      wall_h2:
+        type: primitive
+        shape: line[from:(-6.5,3.5) to:(-1.5,3.5) stroke:#ffffff/0.12 strokeWidth:1.5] -> fadeIn(0.6s, 0.3s)
+
+      wall_h3:
+        type: primitive
+        shape: line[from:(-3.0,2.0) to:(1.0,2.0) stroke:#ffffff/0.12 strokeWidth:1.5] -> fadeIn(0.6s, 0.4s)
+
+      wall_h4:
+        type: primitive
+        shape: line[from:(2.0,2.0) to:(6.0,2.0) stroke:#ffffff/0.12 strokeWidth:1.5] -> fadeIn(0.6s, 0.4s)
+
+      wall_h5:
+        type: primitive
+        shape: line[from:(-6.0,0.5) to:(-2.0,0.5) stroke:#ffffff/0.12 strokeWidth:1.5] -> fadeIn(0.6s, 0.5s)
+
+      wall_h6:
+        type: primitive
+        shape: line[from:(0.0,0.5) to:(4.5,0.5) stroke:#ffffff/0.12 strokeWidth:1.5] -> fadeIn(0.6s, 0.5s)
+
+      wall_h7:
+        type: primitive
+        shape: line[from:(-8.0,-1.0) to:(-4.5,-1.0) stroke:#ffffff/0.12 strokeWidth:1.5] -> fadeIn(0.6s, 0.4s)
+
+      wall_h8:
+        type: primitive
+        shape: line[from:(-2.5,-1.0) to:(2.5,-1.0) stroke:#ffffff/0.12 strokeWidth:1.5] -> fadeIn(0.6s, 0.5s)
+
+      wall_v1:
+        type: primitive
+        shape: line[from:(-8.0,6.0) to:(-8.0,-6.0) stroke:#ffffff/0.18 strokeWidth:2.2] -> fadeIn(0.5s, 0.1s)
+
+      wall_v2:
+        type: primitive
+        shape: line[from:(8.0,6.0) to:(8.0,-6.0) stroke:#ffffff/0.18 strokeWidth:2.2] -> fadeIn(0.5s, 0.1s)
+
+      wall_v3:
+        type: primitive
+        shape: line[from:(-6.5,5.0) to:(-6.5,3.5) stroke:#ffffff/0.12 strokeWidth:1.5] -> fadeIn(0.6s, 0.3s)
+
+      wall_v4:
+        type: primitive
+        shape: line[from:(-4.0,6.0) to:(-4.0,3.5) stroke:#ffffff/0.12 strokeWidth:1.5] -> fadeIn(0.6s, 0.3s)
+
+      wall_v5:
+        type: primitive
+        shape: line[from:(-5.0,2.0) to:(-5.0,-1.0) stroke:#ffffff/0.12 strokeWidth:1.5] -> fadeIn(0.6s, 0.4s)
+
+      wall_v6:
+        type: primitive
+        shape: line[from:(-3.0,2.0) to:(-3.0,-1.0) stroke:#ffffff/0.12 strokeWidth:1.5] -> fadeIn(0.6s, 0.5s)
+
+      wall_v7:
+        type: primitive
+        shape: line[from:(6.0,2.0) to:(6.0,-1.0) stroke:#ffffff/0.12 strokeWidth:1.5] -> fadeIn(0.6s, 0.3s)
+
+      runner_a:
+        type: morph
+        shape: circle[r:0.26 fill:#4fc3f7/0.85 stroke:#4fc3f7/0.95 strokeWidth:2 at:(-7.0,4.2)] -> fadeIn(0.4s, 1.0s) ~> circle[r:0.26 fill:#4fc3f7/0.85 stroke:#4fc3f7/0.95 strokeWidth:2 at:(-5.5,4.2)] (0.35s, ease.in, 1.8s) ~> circle[r:0.26 fill:#4fc3f7/0.85 stroke:#4fc3f7/0.95 strokeWidth:2 at:(-5.5,2.8)] (0.3s, ease.in, 2.3s) ~> circle[r:0.26 fill:#4fc3f7/0.85 stroke:#4fc3f7/0.95 strokeWidth:2 at:(-2.5,2.8)] (0.4s, ease.in, 2.7s) ~> circle[r:0.26 fill:#4fc3f7/0.85 stroke:#4fc3f7/0.95 strokeWidth:2 at:(-2.5,1.2)] (0.3s, ease.in, 3.2s) ~> circle[r:0.26 fill:#4fc3f7/0.85 stroke:#4fc3f7/0.95 strokeWidth:2 at:(-2.5,2.8)] (0.3s, ease.in, 3.6s) ~> circle[r:0.26 fill:#4fc3f7/0.85 stroke:#4fc3f7/0.95 strokeWidth:2 at:(-5.5,2.8)] (0.35s, ease.in, 4.0s) ~> circle[r:0.26 fill:#ff6b9d/0.7 stroke:#ff6b9d/0.9 strokeWidth:2 at:(-5.5,2.8)] (0.5s, ease.out, 5.5s) ~> circle[r:0.26 fill:#ff6b9d/0 stroke:#ff6b9d/0 strokeWidth:1 at:(-5.5,2.8)] (0.8s, ease.out, 7.0s)
+
+      runner_b:
+        type: morph
+        shape: circle[r:0.26 fill:#4fc3f7/0.85 stroke:#4fc3f7/0.95 strokeWidth:2 at:(2.0,4.8)] -> fadeIn(0.4s, 1.2s) ~> circle[r:0.26 fill:#4fc3f7/0.85 stroke:#4fc3f7/0.95 strokeWidth:2 at:(3.5,4.8)] (0.35s, ease.in, 2.0s) ~> circle[r:0.26 fill:#4fc3f7/0.85 stroke:#4fc3f7/0.95 strokeWidth:2 at:(3.5,2.8)] (0.3s, ease.in, 2.5s) ~> circle[r:0.26 fill:#4fc3f7/0.85 stroke:#4fc3f7/0.95 strokeWidth:2 at:(1.5,2.8)] (0.4s, ease.in, 2.9s) ~> circle[r:0.26 fill:#4fc3f7/0.85 stroke:#4fc3f7/0.95 strokeWidth:2 at:(1.5,1.2)] (0.3s, ease.in, 3.4s) ~> circle[r:0.26 fill:#4fc3f7/0.85 stroke:#4fc3f7/0.95 strokeWidth:2 at:(3.5,1.2)] (0.35s, ease.in, 3.8s) ~> circle[r:0.26 fill:#4fc3f7/0.85 stroke:#4fc3f7/0.95 strokeWidth:2 at:(3.5,2.8)] (0.3s, ease.in, 4.3s) ~> circle[r:0.26 fill:#ff6b9d/0.7 stroke:#ff6b9d/0.9 strokeWidth:2 at:(3.5,2.8)] (0.5s, ease.out, 5.8s) ~> circle[r:0.26 fill:#ff6b9d/0 stroke:#ff6b9d/0 strokeWidth:1 at:(3.5,2.8)] (0.8s, ease.out, 7.3s)
+
+      runner_c:
+        type: morph
+        shape: circle[r:0.26 fill:#4fc3f7/0.85 stroke:#4fc3f7/0.95 strokeWidth:2 at:(-1.5,0.2)] -> fadeIn(0.4s, 1.4s) ~> circle[r:0.26 fill:#4fc3f7/0.85 stroke:#4fc3f7/0.95 strokeWidth:2 at:(-1.5,-0.3)] (0.3s, ease.in, 2.2s) ~> circle[r:0.26 fill:#4fc3f7/0.85 stroke:#4fc3f7/0.95 strokeWidth:2 at:(1.2,-0.3)] (0.4s, ease.in, 2.6s) ~> circle[r:0.26 fill:#4fc3f7/0.85 stroke:#4fc3f7/0.95 strokeWidth:2 at:(1.2,-1.8)] (0.35s, ease.in, 3.1s) ~> circle[r:0.26 fill:#4fc3f7/0.85 stroke:#4fc3f7/0.95 strokeWidth:2 at:(-1.5,-1.8)] (0.4s, ease.in, 3.6s) ~> circle[r:0.26 fill:#4fc3f7/0.85 stroke:#4fc3f7/0.95 strokeWidth:2 at:(-1.5,-0.3)] (0.35s, ease.in, 4.1s) ~> circle[r:0.26 fill:#ff6b9d/0.7 stroke:#ff6b9d/0.9 strokeWidth:2 at:(-1.5,-0.3)] (0.5s, ease.out, 6.0s) ~> circle[r:0.26 fill:#ff6b9d/0 stroke:#ff6b9d/0 strokeWidth:1 at:(-1.5,-0.3)] (0.8s, ease.out, 7.5s)
+
+      tutorial_lbl:
+        type: morph
+        shape: text[text:"40hr Tutorial" fontSize:22 fill:#ffffff/0 at:(-4.5,-4.0)] ~> text[text:"40hr Tutorial" fontSize:22 fill:#ffffff/0.5 at:(-4.5,-4.0)] (0.5s, ease.out, 2.5s) ~> text[text:"40hr Tutorial" fontSize:22 fill:#ffffff/0 at:(-4.5,-4.0)] (0.4s, ease.out, 5.5s)
+
+      run_faster_lbl:
+        type: morph
+        shape: text[text:"RUN FASTER." fontSize:46 fill:#4fc3f7/0 at:(0.0,-3.0)] ~> text[text:"RUN FASTER." fontSize:46 fill:#4fc3f7/0.7 at:(0.0,-3.0)] (0.8s, ease.out, 3.0s) ~> text[text:"RUN FASTER." fontSize:46 fill:#4fc3f7/0 at:(0.0,-3.0)] (0.6s, ease.out, 6.0s)
+
+      die_lbl:
+        type: morph
+        shape: text[text:"They will die." fontSize:36 fill:#ff6b9d/0 at:(0.0,0.0)] ~> text[text:"They will die." fontSize:36 fill:#ff6b9d/0.85 at:(0.0,0.0)] (0.8s, ease.out, 8.5s) ~> text[text:"They will die." fontSize:36 fill:#ff6b9d/0 at:(0.0,0.0)] (0.7s, ease.out, 12.0s)
+
+      cinematic_runners:
+        type: morph
+        shape: text[text:"RUNNING" fontSize:64 fill:#ffd54f/0 at:(0,0.0)] ~> text[text:"RUNNING" fontSize:64 fill:#ffd54f/0.9 at:(0,0.0)] (1.2s, ease.out, 30.0s) ~> text[text:"RUNNING" fontSize:64 fill:#ffd54f/0.9 at:(0,0.0)] (2.5s, ease.inOut, 31.5s) ~> text[text:"RUNNING" fontSize:22 fill:#ffd54f/0.2 at:(0,0.0)] (1.5s, ease.inOut, 34.2s)
+
+      wsp1:
+        type: primitive
+        shape: text[text:"Tutorial" fontSize:13 fill:#ffffff/0.3 at:(-4.5,-5.2)] -> fadeIn(0.6s, 35.2s)
+
+      wsp2:
+        type: primitive
+        shape: text[text:"Faster" fontSize:13 fill:#ffffff/0.3 at:(0,-5.2)] -> fadeIn(0.6s, 35.6s)
+
+      wsp3:
+        type: primitive
+        shape: text[text:"Dead end" fontSize:13 fill:#ffffff/0.3 at:(4.5,-5.2)] -> fadeIn(0.6s, 36.0s)
+
+  scene_04_climb:
+    duration: 17
+    description: "One person stops. Looks up. Climbs. The maze shrinks below."
+    elements:
+
+      maze_bg:
+        type: morph
+        shape: rectangle[w:16.0 h:12.0 fill:#080c14/0 stroke:#ffffff/0.08 strokeWidth:1 at:(0,0)] -> fadeIn(0.5s, 0.2s)
+
+      wall_sh1:
+        type: morph
+        shape: line[from:(-8.0,5.0) to:(-4.0,5.0) stroke:#ffffff/0.12 strokeWidth:1.5] -> fadeIn(0.5s, 0.3s) ~> line[from:(-4.8,2.2) to:(-2.4,2.2) stroke:#ffffff/0.06 strokeWidth:0.8] (1.5s, ease.out, 10.0s)
+
+      wall_sh2:
+        type: morph
+        shape: line[from:(-6.5,3.5) to:(-1.5,3.5) stroke:#ffffff/0.12 strokeWidth:1.5] -> fadeIn(0.5s, 0.3s) ~> line[from:(-5.2,1.5) to:(-0.9,1.5) stroke:#ffffff/0.06 strokeWidth:0.8] (1.5s, ease.out, 10.2s)
+
+      wall_sh3:
+        type: morph
+        shape: line[from:(-3.0,2.0) to:(1.0,2.0) stroke:#ffffff/0.12 strokeWidth:1.5] -> fadeIn(0.5s, 0.4s) ~> line[from:(-1.8,0.8) to:(0.6,0.8) stroke:#ffffff/0.06 strokeWidth:0.8] (1.5s, ease.out, 10.4s)
+
+      wall_sh4:
+        type: morph
+        shape: line[from:(2.0,2.0) to:(6.0,2.0) stroke:#ffffff/0.12 strokeWidth:1.5] -> fadeIn(0.5s, 0.4s) ~> line[from:(1.2,0.8) to:(3.6,0.8) stroke:#ffffff/0.06 strokeWidth:0.8] (1.5s, ease.out, 10.6s)
+
+      wall_sh5:
+        type: morph
+        shape: line[from:(-6.0,0.5) to:(-2.0,0.5) stroke:#ffffff/0.12 strokeWidth:1.5] -> fadeIn(0.5s, 0.5s) ~> line[from:(-4.5,-0.1) to:(-1.5,-0.1) stroke:#ffffff/0.06 strokeWidth:0.8] (1.5s, ease.out, 10.8s)
+
+      wall_sh6:
+        type: morph
+        shape: line[from:(0.0,0.5) to:(4.5,0.5) stroke:#ffffff/0.12 strokeWidth:1.5] -> fadeIn(0.5s, 0.5s) ~> line[from:(0.0,-0.1) to:(3.4,-0.1) stroke:#ffffff/0.06 strokeWidth:0.8] (1.5s, ease.out, 11.0s)
+
+      wall_shv1:
+        type: morph
+        shape: line[from:(-8.0,6.0) to:(-8.0,-6.0) stroke:#ffffff/0.18 strokeWidth:2.2] -> fadeIn(0.5s, 0.1s) ~> line[from:(-6.0,4.0) to:(-6.0,-3.5) stroke:#ffffff/0.06 strokeWidth:0.8] (1.5s, ease.out, 9.8s)
+
+      wall_shv2:
+        type: morph
+        shape: line[from:(8.0,6.0) to:(8.0,-6.0) stroke:#ffffff/0.18 strokeWidth:2.2] -> fadeIn(0.5s, 0.1s) ~> line[from:(6.0,4.0) to:(6.0,-3.5) stroke:#ffffff/0.06 strokeWidth:0.8] (1.5s, ease.out, 9.8s)
+
+      wall_shv3:
+        type: morph
+        shape: line[from:(-6.5,5.0) to:(-6.5,3.5) stroke:#ffffff/0.12 strokeWidth:1.5] -> fadeIn(0.5s, 0.3s) ~> line[from:(-4.9,2.5) to:(-4.9,1.5) stroke:#ffffff/0.06 strokeWidth:0.8] (1.5s, ease.out, 10.2s)
+
+      wall_shv4:
+        type: morph
+        shape: line[from:(-5.0,2.0) to:(-5.0,-1.0) stroke:#ffffff/0.12 strokeWidth:1.5] -> fadeIn(0.5s, 0.4s) ~> line[from:(-3.8,0.8) to:(-3.8,-0.5) stroke:#ffffff/0.06 strokeWidth:0.8] (1.5s, ease.out, 10.5s)
+
+      climber:
+        type: morph
+        shape: circle[r:0.32 fill:#4fc3f7/0.9 stroke:#4fc3f7/1.0 strokeWidth:2.5 at:(-3.8,-1.8)] -> fadeIn(0.5s, 0.8s) ~> circle[r:0.32 fill:#4fc3f7/0.9 stroke:#4fc3f7/1.0 strokeWidth:2.5 at:(-3.8,-1.8)] (2.0s, ease.out, 2.5s) ~> circle[r:0.35 fill:#ffd54f/0.95 stroke:#ffd54f/1.0 strokeWidth:3 at:(-3.8,5.5)] (2.5s, ease.out, 5.5s) ~> circle[r:0.35 fill:#ffd54f/0.95 stroke:#ffd54f/1.0 strokeWidth:3 at:(0.0,5.5)] (1.0s, ease.out, 9.0s)
+
+      stop_lbl:
+        type: morph
+        shape: text[text:"STOP." fontSize:52 fill:#ffd54f/0 at:(0.0,0.0)] ~> text[text:"STOP." fontSize:52 fill:#ffd54f/0.9 at:(0.0,0.0)] (0.5s, ease.out, 2.8s) ~> text[text:"STOP." fontSize:52 fill:#ffd54f/0 at:(0.0,0.0)] (0.5s, ease.out, 5.0s)
+
+      climb_trail:
+        type: morph
+        shape: line[from:(-3.8,-1.8) to:(-3.8,-1.8) stroke:#ffd54f/0 strokeWidth:2] ~> line[from:(-3.8,-1.8) to:(-3.8,5.5) stroke:#ffd54f/0.3 strokeWidth:2] (2.5s, ease.out, 5.5s) ~> line[from:(-3.8,-1.8) to:(0.0,5.5) stroke:#ffd54f/0.15 strokeWidth:1.5] (1.0s, ease.out, 9.0s)
+
+      above_lbl:
+        type: morph
+        shape: text[text:"From up here..." fontSize:36 fill:#ffd54f/0 at:(0.0,4.5)] ~> text[text:"From up here..." fontSize:36 fill:#ffd54f/0.8 at:(0.0,4.5)] (0.8s, ease.out, 10.5s) ~> text[text:"From up here..." fontSize:36 fill:#ffd54f/0 at:(0.0,4.5)] (0.6s, ease.out, 13.5s)
+
+      maze_small_lbl:
+        type: morph
+        shape: text[text:"the maze is small." fontSize:30 fill:#ffffff/0 at:(0.0,0.0)] ~> text[text:"the maze is small." fontSize:30 fill:#ffffff/0.6 at:(0.0,0.0)] (0.8s, ease.out, 12.5s) ~> text[text:"the maze is small." fontSize:30 fill:#ffffff/0 at:(0.0,0.0)] (0.6s, ease.out, 16.0s)
+
+      cinematic_climb:
+        type: morph
+        shape: text[text:"CLIMB" fontSize:64 fill:#ffd54f/0 at:(0,0.0)] ~> text[text:"CLIMB" fontSize:64 fill:#ffd54f/0.9 at:(0,0.0)] (1.2s, ease.out, 30.0s) ~> text[text:"CLIMB" fontSize:64 fill:#ffd54f/0.9 at:(0,0.0)] (2.5s, ease.inOut, 31.5s) ~> text[text:"CLIMB" fontSize:22 fill:#ffd54f/0.2 at:(0,0.0)] (1.5s, ease.inOut, 34.2s)
+
+      wsp1:
+        type: primitive
+        shape: text[text:"One decision" fontSize:13 fill:#ffffff/0.3 at:(-4.5,-5.2)] -> fadeIn(0.6s, 35.2s)
+
+      wsp2:
+        type: primitive
+        shape: text[text:"Upward" fontSize:13 fill:#ffffff/0.3 at:(0,-5.2)] -> fadeIn(0.6s, 35.6s)
+
+      wsp3:
+        type: primitive
+        shape: text[text:"The wall" fontSize:13 fill:#ffffff/0.3 at:(4.5,-5.2)] -> fadeIn(0.6s, 36.0s)
+
+  scene_05_architect:
+    duration: 18
+    description: "From above: patterns visible. The machine below. The Architect commands it."
+    elements:
+
+      maze_ghost:
+        type: primitive
+        shape: rectangle[w:16.0 h:7.0 fill:#080c14/0 stroke:#ffffff/0.06 strokeWidth:1 at:(0,-2.5)] -> fadeIn(0.5s, 0.3s)
+
+      pattern_line1:
+        type: primitive
+        shape: line[from:(-7.5,-1.5) to:(7.5,-1.5) stroke:#ffffff/0.07 strokeWidth:1] -> fadeIn(0.5s, 0.5s)
+
+      pattern_line2:
+        type: primitive
+        shape: line[from:(-7.5,-3.0) to:(7.5,-3.0) stroke:#ffffff/0.07 strokeWidth:1] -> fadeIn(0.5s, 0.6s)
+
+      pattern_line3:
+        type: primitive
+        shape: line[from:(-7.5,-4.5) to:(7.5,-4.5) stroke:#ffffff/0.07 strokeWidth:1] -> fadeIn(0.5s, 0.7s)
+
+      pattern_v1:
+        type: primitive
+        shape: line[from:(-5.5,0.0) to:(-5.5,-6.0) stroke:#ffffff/0.07 strokeWidth:1] -> fadeIn(0.5s, 0.5s)
+
+      pattern_v2:
+        type: primitive
+        shape: line[from:(-2.5,0.0) to:(-2.5,-6.0) stroke:#ffffff/0.07 strokeWidth:1] -> fadeIn(0.5s, 0.6s)
+
+      pattern_v3:
+        type: primitive
+        shape: line[from:(0.5,0.0) to:(0.5,-6.0) stroke:#ffffff/0.07 strokeWidth:1] -> fadeIn(0.5s, 0.7s)
+
+      pattern_v4:
+        type: primitive
+        shape: line[from:(3.5,0.0) to:(3.5,-6.0) stroke:#ffffff/0.07 strokeWidth:1] -> fadeIn(0.5s, 0.7s)
+
+      pattern_v5:
+        type: primitive
+        shape: line[from:(6.5,0.0) to:(6.5,-6.0) stroke:#ffffff/0.07 strokeWidth:1] -> fadeIn(0.5s, 0.6s)
+
+      machine_below:
+        type: morph
+        shape: rectangle[w:1.4 h:1.4 fill:#c77aff/0.2 stroke:#c77aff/0.45 strokeWidth:2 at:(5.5,-4.5)] -> fadeIn(0.6s, 0.8s) ~> rectangle[w:1.4 h:1.4 fill:#c77aff/0.35 stroke:#c77aff/0.65 strokeWidth:2.5 at:(5.5,-4.5)] (0.5s, ease.out, 12.5s) ~> rectangle[w:1.4 h:1.4 fill:#c77aff/0.5 stroke:#6bffb8/0.85 strokeWidth:3 at:(5.5,-4.5)] (0.6s, ease.out, 15.5s) ~> rectangle[w:1.4 h:1.4 fill:#c77aff/0.35 stroke:#c77aff/0.65 strokeWidth:2 at:(5.5,-4.5)] (0.5s, ease.out, 17.0s)
+
+      machine_lbl:
+        type: morph
+        shape: text[text:"AI" fontSize:16 fill:#c77aff/0 at:(5.5,-4.5)] ~> text[text:"AI" fontSize:16 fill:#c77aff/0.8 at:(5.5,-4.5)] (0.4s, ease.out, 1.2s)
+
+      architect_dot:
+        type: morph
+        shape: circle[r:0.45 fill:#ffd54f/0.9 stroke:#ffd54f/1.0 strokeWidth:3 at:(0.0,4.5)] -> fadeIn(0.5s, 0.5s) ~> circle[r:0.45 fill:#ffd54f/0.9 stroke:#ffd54f/1.0 strokeWidth:3 at:(0.0,4.5)] (2.0s, ease.out, 1.5s) ~> circle[r:0.45 fill:#ffd54f/0.9 stroke:#ffd54f/1.0 strokeWidth:3 at:(5.5,1.5)] (1.8s, ease.out, 5.5s)
+
+      architect_lbl:
+        type: morph
+        shape: text[text:"ARCHITECT" fontSize:22 fill:#ffd54f/0 at:(0.0,5.2)] ~> text[text:"ARCHITECT" fontSize:22 fill:#ffd54f/0.9 at:(0.0,5.2)] (0.6s, ease.out, 1.0s) ~> text[text:"ARCHITECT" fontSize:22 fill:#ffd54f/0.9 at:(5.5,2.2)] (1.8s, ease.out, 5.5s)
+
+      see_patterns:
+        type: morph
+        shape: text[text:"You see the logic." fontSize:36 fill:#4fc3f7/0 at:(-3.0,2.0)] ~> text[text:"You see the logic." fontSize:36 fill:#4fc3f7/0.8 at:(-3.0,2.0)] (0.8s, ease.out, 2.5s) ~> text[text:"You see the logic." fontSize:36 fill:#4fc3f7/0 at:(-3.0,2.0)] (0.6s, ease.out, 5.5s)
+
+      command_arrow:
+        type: morph
+        shape: line[from:(5.5,1.2) to:(5.5,1.2) stroke:#6bffb8/0 strokeWidth:2.5] ~> line[from:(5.5,1.2) to:(5.5,-3.8) stroke:#6bffb8/0.8 strokeWidth:2.5] (0.7s, ease.out, 7.5s) ~> line[from:(5.5,1.2) to:(5.5,-3.8) stroke:#6bffb8/0.4 strokeWidth:1.5] (0.5s, ease.out, 9.5s)
+
+      command_lbl:
+        type: morph
+        shape: text[text:"COMMAND" fontSize:30 fill:#6bffb8/0 at:(3.0,-1.0)] ~> text[text:"COMMAND" fontSize:30 fill:#6bffb8/0.85 at:(3.0,-1.0)] (0.6s, ease.out, 8.3s) ~> text[text:"COMMAND" fontSize:30 fill:#6bffb8/0 at:(3.0,-1.0)] (0.6s, ease.out, 11.5s)
+
+      machine_executes:
+        type: morph
+        shape: rectangle[w:1.4 h:1.4 fill:#c77aff/0.35 stroke:#c77aff/0.65 strokeWidth:2 at:(5.5,-4.5)] -> fadeIn(0.3s, 0.8s) ~> rectangle[w:1.4 h:1.4 fill:#c77aff/0.35 stroke:#c77aff/0.65 strokeWidth:2 at:(5.5,-4.5)] (5.0s, ease.out, 1.5s) ~> rectangle[w:1.4 h:1.4 fill:#c77aff/0.5 stroke:#6bffb8/0.9 strokeWidth:3 at:(2.5,-4.5)] (1.0s, ease.out, 9.8s) ~> rectangle[w:1.4 h:1.4 fill:#c77aff/0.5 stroke:#6bffb8/0.9 strokeWidth:3 at:(-1.5,-4.5)] (0.8s, ease.out, 11.2s) ~> rectangle[w:1.4 h:1.4 fill:#6bffb8/0.5 stroke:#6bffb8/0.9 strokeWidth:3 at:(-5.5,-4.5)] (0.8s, ease.out, 12.2s)
+
+      not_fear:
+        type: morph
+        shape: text[text:"You don't fear it." fontSize:36 fill:#ffffff/0 at:(-3.0,0.5)] ~> text[text:"You don't fear it." fontSize:36 fill:#ffffff/0.75 at:(-3.0,0.5)] (0.8s, ease.out, 13.5s) ~> text[text:"You don't fear it." fontSize:36 fill:#ffffff/0 at:(-3.0,0.5)] (0.6s, ease.out, 17.0s)
+
+      cinematic_arch:
+        type: morph
+        shape: text[text:"ARCHITECT" fontSize:52 fill:#ffd54f/0 at:(0,0.0)] ~> text[text:"ARCHITECT" fontSize:52 fill:#ffd54f/0.9 at:(0,0.0)] (1.2s, ease.out, 30.0s) ~> text[text:"ARCHITECT" fontSize:52 fill:#ffd54f/0.9 at:(0,0.0)] (2.5s, ease.inOut, 31.5s) ~> text[text:"ARCHITECT" fontSize:22 fill:#ffd54f/0.2 at:(0,0.0)] (1.5s, ease.inOut, 34.2s)
+
+      wsp1:
+        type: primitive
+        shape: text[text:"Above the maze" fontSize:13 fill:#ffffff/0.3 at:(-4.5,-5.2)] -> fadeIn(0.6s, 35.2s)
+
+      wsp2:
+        type: primitive
+        shape: text[text:"See the patterns" fontSize:13 fill:#ffffff/0.3 at:(0,-5.2)] -> fadeIn(0.6s, 35.6s)
+
+      wsp3:
+        type: primitive
+        shape: text[text:"Command the machine" fontSize:13 fill:#ffffff/0.3 at:(4.5,-5.2)] -> fadeIn(0.6s, 36.0s)
+
+  scene_06_thirty_facts:
+    duration: 24
+    description: "Thirty facts. The call to action. Let's go."
+    elements:
+
+      blackout_base:
+        type: primitive
+        shape: rectangle[w:18.0 h:14.0 fill:#080c14/1.0 stroke:#080c14/1.0 strokeWidth:1 at:(0,0)] -> fadeIn(0.1s, 0.0s)
+
+      fact_w1:
+        type: morph
+        shape: text[text:"STORE" fontSize:46 fill:#4fc3f7/0 at:(-5.5,3.5)] ~> text[text:"STORE" fontSize:46 fill:#4fc3f7/0.7 at:(-5.5,3.5)] (0.5s, ease.out, 1.0s) ~> text[text:"STORE" fontSize:46 fill:#4fc3f7/0.15 at:(-5.5,3.5)] (0.8s, ease.out, 8.5s)
+
+      fact_w2:
+        type: morph
+        shape: text[text:"MOVE" fontSize:46 fill:#c77aff/0 at:(5.5,3.5)] ~> text[text:"MOVE" fontSize:46 fill:#c77aff/0.7 at:(5.5,3.5)] (0.5s, ease.out, 1.5s) ~> text[text:"MOVE" fontSize:46 fill:#c77aff/0.15 at:(5.5,3.5)] (0.8s, ease.out, 8.5s)
+
+      fact_w3:
+        type: morph
+        shape: text[text:"TRANSFORM" fontSize:46 fill:#6bffb8/0 at:(0.0,1.5)] ~> text[text:"TRANSFORM" fontSize:46 fill:#6bffb8/0.7 at:(0.0,1.5)] (0.5s, ease.out, 2.0s) ~> text[text:"TRANSFORM" fontSize:46 fill:#6bffb8/0.15 at:(0.0,1.5)] (0.8s, ease.out, 8.5s)
+
+      fact_w4:
+        type: morph
+        shape: text[text:"DECIDE" fontSize:46 fill:#ffd54f/0 at:(-5.0,-0.5)] ~> text[text:"DECIDE" fontSize:46 fill:#ffd54f/0.7 at:(-5.0,-0.5)] (0.5s, ease.out, 2.5s) ~> text[text:"DECIDE" fontSize:46 fill:#ffd54f/0.15 at:(-5.0,-0.5)] (0.8s, ease.out, 8.5s)
+
+      fact_w5:
+        type: morph
+        shape: text[text:"COORDINATE" fontSize:46 fill:#ff6b9d/0 at:(5.0,-0.5)] ~> text[text:"COORDINATE" fontSize:46 fill:#ff6b9d/0.7 at:(5.0,-0.5)] (0.5s, ease.out, 3.0s) ~> text[text:"COORDINATE" fontSize:46 fill:#ff6b9d/0.15 at:(5.0,-0.5)] (0.8s, ease.out, 8.5s)
+
+      thirty_line1:
+        type: morph
+        shape: text[text:"Thirty facts" fontSize:46 fill:#ffd54f/0 at:(0.0,0.5)] ~> text[text:"Thirty facts" fontSize:46 fill:#ffd54f/0.95 at:(0.0,0.5)] (1.0s, ease.out, 10.0s) ~> text[text:"Thirty facts" fontSize:46 fill:#ffd54f/0.95 at:(0.0,0.5)] (3.0s, ease.out, 11.5s) ~> text[text:"Thirty facts" fontSize:46 fill:#ffd54f/0 at:(0.0,0.5)] (0.8s, ease.out, 15.5s)
+
+      thirty_line2:
+        type: morph
+        shape: text[text:"to climb the wall." fontSize:30 fill:#ffffff/0 at:(0.0,-1.2)] ~> text[text:"to climb the wall." fontSize:30 fill:#ffffff/0.8 at:(0.0,-1.2)] (1.0s, ease.out, 11.0s) ~> text[text:"to climb the wall." fontSize:30 fill:#ffffff/0.8 at:(0.0,-1.2)] (2.5s, ease.out, 12.5s) ~> text[text:"to climb the wall." fontSize:30 fill:#ffffff/0 at:(0.0,-1.2)] (0.8s, ease.out, 16.0s)
+
+      one_fact:
+        type: morph
+        shape: text[text:"One fact at a time." fontSize:30 fill:#4fc3f7/0 at:(0.0,-3.0)] ~> text[text:"One fact at a time." fontSize:30 fill:#4fc3f7/0.75 at:(0.0,-3.0)] (0.8s, ease.out, 17.5s) ~> text[text:"One fact at a time." fontSize:30 fill:#4fc3f7/0.75 at:(0.0,-3.0)] (2.0s, ease.out, 18.5s) ~> text[text:"One fact at a time." fontSize:30 fill:#4fc3f7/0 at:(0.0,-3.0)] (0.7s, ease.out, 21.5s)
+
+      lets_go:
+        type: morph
+        shape: text[text:"Let's go." fontSize:52 fill:#ffd54f/0 at:(0.0,0.0)] ~> text[text:"Let's go." fontSize:52 fill:#ffd54f/0.95 at:(0.0,0.0)] (0.8s, ease.out, 23.5s) ~> text[text:"Let's go." fontSize:52 fill:#ffd54f/0.95 at:(0.0,0.0)] (5.0s, ease.out, 24.5s) ~> text[text:"Let's go." fontSize:52 fill:#ffd54f/0 at:(0.0,0.0)] (1.0s, ease.out, 30.5s)
+
+      cinematic_go:
+        type: morph
+        shape: text[text:"LET'S GO" fontSize:64 fill:#ffd54f/0 at:(0,0.0)] ~> text[text:"LET'S GO" fontSize:64 fill:#ffd54f/0.9 at:(0,0.0)] (1.2s, ease.out, 30.0s) ~> text[text:"LET'S GO" fontSize:64 fill:#ffd54f/0.9 at:(0,0.0)] (2.5s, ease.inOut, 31.5s) ~> text[text:"LET'S GO" fontSize:22 fill:#ffd54f/0.2 at:(0,0.0)] (1.5s, ease.inOut, 34.2s)
+
+      wsp1:
+        type: primitive
+        shape: text[text:"The wall" fontSize:13 fill:#ffffff/0.3 at:(-4.5,-5.2)] -> fadeIn(0.6s, 35.2s)
+
+      wsp2:
+        type: primitive
+        shape: text[text:"Thirty facts" fontSize:13 fill:#ffffff/0.3 at:(0,-5.2)] -> fadeIn(0.6s, 35.6s)
+
+      wsp3:
+        type: primitive
+        shape: text[text:"The Architect" fontSize:13 fill:#ffffff/0.3 at:(4.5,-5.2)] -> fadeIn(0.6s, 36.0s)

@@ -1,0 +1,48 @@
+{
+  "_comment": "Sherlock CLI Configuration",
+  "_usage": "Place this file in your project root or home directory as .sherlockrc",
+  
+  "defaultWidth": 1920,
+  "defaultHeight": 1080,
+  "defaultFps": 30,
+  "defaultQuality": 18,
+  "defaultPort": 3000,
+  
+  "scenesDir": "scenes",
+  "outputDir": "output",
+  
+  "_renderPresets": {
+    "_comment": "Use these with --preset flag (coming soon)",
+    "draft": {
+      "width": 1280,
+      "height": 720,
+      "fps": 24,
+      "quality": 28
+    },
+    "standard": {
+      "width": 1920,
+      "height": 1080,
+      "fps": 30,
+      "quality": 18
+    },
+    "high": {
+      "width": 1920,
+      "height": 1080,
+      "fps": 60,
+      "quality": 15
+    },
+    "4k": {
+      "width": 3840,
+      "height": 2160,
+      "fps": 30,
+      "quality": 15
+    }
+  },
+  
+  "_advanced": {
+    "_comment": "Advanced settings (experimental)",
+    "maxConcurrentRenders": 1,
+    "cacheEnabled": true,
+    "verboseLogging": false
+  }
+}

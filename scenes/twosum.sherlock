@@ -1,0 +1,319 @@
+# Two Sum Algorithm - LeetCode #1
+# Given an array of integers and a target sum, find two numbers that add up to target
+# Beautiful visualization of the classic hash map approach vs brute force
+
+concept: "Two Sum Algorithm"
+emoji: "🎯"
+total_duration: 20
+background: "#0a0e1a"
+
+subtitles:
+  - "🎯 Two Sum - LeetCode Problem #1"
+  - "📊 Given: array of integers + target sum"
+  - "🔍 Find: two numbers that add to target"
+  - "⚡ Hash Map Approach: O(n) time complexity"
+  - "🧠 Key insight: store complements as we go"
+  - "✨ Beautiful one-pass solution"
+
+phases:
+  problem_setup:
+    duration: 3
+    description: "Initialize the problem with input array and target"
+    elements:
+      input_array:
+        type: algorithm_array
+        position: [0, -50]
+        items: ["2-1", 7, 11, 15]
+        color: "#3498db"
+        cellSize: 60
+        showIndices: true
+        label: "Input Array"
+      
+      target_display:
+        type: text
+        text: "Target: 9\nFind indices where nums[i] + nums[j] = 9"
+        position: [0, -150]
+        color: "#f39c12"
+        size: 24
+        glow: true
+        font: "Georgia"
+      
+      problem_title:
+        type: text
+        text: "🎯 Two Sum Algorithm"
+        position: [0, -250]
+        color: "#58a6ff"
+        size: 28
+        glow: true
+        font: "Playfair Display"
+      
+      hash_map:
+        type: algorithm_grid
+        position: [0, 100]
+        rows: 2
+        cols: 4
+        cellSize: 50
+        spacing: 2
+        color: "#2c3e50"
+        border_color: "#34495e"
+        cells: [["val", "idx"], ["", ""], ["", ""], ["", ""]]
+        label: "Hash Map"
+      
+      map_label:
+        type: text
+        text: "Hash Map: {value → index}"
+        position: [0, 200]
+        color: "#95a5a6"
+        size: 16
+        font: "Courier New"
+
+  step_one:
+    duration: 4
+    description: "Process first element: check complement, then store"
+    elements:
+      array_step1:
+        type: algorithm_array
+        position: [0, -50]
+        items: [2, 7, 11, 15]
+        highlights: [0]
+        color: "#3498db"
+        cellSize: 60
+        showIndices: true
+      
+      current_element:
+        type: text
+        text: "Current: nums[0] = 2"
+        position: [-200, -50]
+        color: "#f39c12"
+        size: 18
+        glow: true
+        font: "Consolas"
+      
+      complement_calc:
+        type: text
+        text: "Complement: 9 - 2 = 7"
+        position: [-200, 0]
+        color: "#e74c3c"
+        size: 16
+        font: "JetBrains Mono"
+      
+      check_result:
+        type: text
+        text: "7 not in map ❌"
+        position: [-200, 30]
+        color: "#95a5a6"
+        size: 14
+      
+      hash_map_step1:
+        type: algorithm_grid
+        position: [0, 100]
+        rows: 2
+        cols: 4
+        cellSize: 50
+        spacing: 2
+        color: "#2c3e50"
+        border_color: "#34495e"
+        highlights: [2]
+        cells: [["val", "idx"], [2, 0], ["", ""], ["", ""]]
+      
+      store_action:
+        type: text
+        text: "Store: map[2] = 0"
+        position: [200, 100]
+        color: "#2ecc71"
+        size: 16
+        font: "Source Code Pro"
+      
+      sparkle_store:
+        type: sparkles
+        position: [50, 100]
+        density: 10
+        color: "#2ecc71"
+        speed: 0.3
+
+  step_two:
+    duration: 4
+    description: "Process second element: find the complement!"
+    elements:
+      array_step2:
+        type: algorithm_array
+        position: [0, -50]
+        items: [2, 7, 11, 15]
+        highlights: [1]
+        color: "#3498db"
+        cellSize: 60
+        showIndices: true
+      
+      current_element_2:
+        type: text
+        text: "Current: nums[1] = 7"
+        position: [-200, -50]
+        color: "#f39c12"
+        size: 18
+        glow: true
+      
+      complement_calc_2:
+        type: text
+        text: "Complement: 9 - 7 = 2"
+        position: [-200, 0]
+        color: "#e74c3c"
+        size: 16
+      
+      check_result_2:
+        type: text
+        text: "2 found in map! ✅"
+        position: [-200, 30]
+        color: "#2ecc71"
+        size: 16
+        glow: true
+      
+      hash_map_step2:
+        type: algorithm_grid
+        position: [0, 100]
+        rows: 2
+        cols: 4
+        cellSize: 50
+        spacing: 2
+        color: "#2c3e50"
+        border_color: "#34495e"
+        highlights: [2]
+        cells: [["val", "idx"], [2, 0], ["", ""], ["", ""]]
+      
+      found_animation:
+        type: fireworks
+        position: [0, 100]
+        count: 3
+        colors: ["#2ecc71", "#f39c12", "#58a6ff"]
+      
+      solution_arrow:
+        type: line
+        from: [50, 80]
+        to: [-30, -30]
+        color: "#2ecc71"
+        thickness: 3
+        glow: true
+
+  solution_reveal:
+    duration: 4
+    description: "Show the beautiful solution"
+    elements:
+      array_solution:
+        type: algorithm_array
+        position: [0, -50]
+        items: [2, 7, 11, 15]
+        highlights: [0, 1]
+        color: "#2ecc71"
+        cellSize: 60
+        showIndices: true
+      
+      solution_text:
+        type: text
+        text: "Solution: [0, 1]"
+        position: [0, 50]
+        color: "#2ecc71"
+        size: 24
+        glow: true
+        font: "Fira Code"
+      
+      verification:
+        type: text
+        text: "Verify: nums[0] + nums[1] = 2 + 7 = 9 ✅"
+        position: [0, 80]
+        color: "#58a6ff"
+        size: 18
+        font: "IBM Plex Mono"
+      
+      celebration:
+        type: fireworks
+        position: [0, 150]
+        count: 5
+        colors: ["#2ecc71", "#f39c12", "#58a6ff", "#e74c3c"]
+      
+      success_glow:
+        type: circle
+        position: [0, -50]
+        radius: 120
+        color: "#2ecc71"
+        fill: false
+        glow: true
+        opacity: 0.3
+
+  complexity_analysis:
+    duration: 5
+    description: "Algorithm complexity and comparison"
+    elements:
+      complexity_title:
+        type: text
+        text: "📊 Complexity Analysis"
+        position: [0, -200]
+        color: "#f39c12"
+        size: 24
+        glow: true
+      
+      time_complexity:
+        type: text
+        text: "⏰ Time: O(n) - Single pass"
+        position: [-150, -120]
+        color: "#2ecc71"
+        size: 18
+      
+      space_complexity:
+        type: text
+        text: "💾 Space: O(n) - Hash map storage"
+        position: [-150, -90]
+        color: "#58a6ff"
+        size: 18
+      
+      vs_brute_force:
+        type: text
+        text: "🐌 Brute Force: O(n²) time"
+        position: [150, -120]
+        color: "#e74c3c"
+        size: 18
+      
+      improvement:
+        type: text
+        text: "🚀 Improvement: n² → n"
+        position: [150, -90]
+        color: "#f39c12"
+        size: 18
+      
+      key_insight:
+        type: text
+        text: "💡 Key Insight: Trade space for time"
+        position: [0, -40]
+        color: "#9b59b6"
+        size: 20
+        glow: true
+      
+      efficiency_stars:
+        type: sparkles
+        position: [0, 0]
+        density: 25
+        color: "#ffd700"
+        speed: 0.2
+      
+      background_waves:
+        type: waves
+        position: [0, 100]
+        amplitude: 15
+        frequency: 1.5
+        color: "#58a6ff"
+        opacity: 0.3
+
+equations:
+  - id: algorithm_steps
+    latex: "\\text{for each } x \\text{ in nums: if } (target - x) \\text{ in map, return indices}"
+    position: [0, 180]
+    phase: complexity_analysis
+    animation: fade-in
+    glow: true
+    size: 16
+  
+  - id: time_complexity
+    latex: "T(n) = O(n), \\quad S(n) = O(n)"
+    position: [0, 220]
+    phase: complexity_analysis
+    animation: slide-in
+    color: "#2ecc71"
+    size: 18

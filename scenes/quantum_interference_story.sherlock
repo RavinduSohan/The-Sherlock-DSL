@@ -1,0 +1,606 @@
+concept: "Quantum Interference: A New Way to See"
+emoji: "⚛️"
+total_duration: 61
+background: "#0a0a0a"
+
+subtitles:
+  - ""
+  - ""
+  - ""
+  - ""
+  - ""
+  - ""
+  - ""
+  - ""
+  - ""
+
+phases:
+  scene_1:
+    duration: 8
+    description: "The Foundation of Bits - electrons flowing through circuits"
+    elements:
+      classical_bar_chart:
+        type: animated_bar_chart
+        data: [100, 0]
+        position: [0, 0]
+        width: 180
+        height: 120
+        color: "#3498db"
+      
+      bit_array:
+        type: algorithm_array
+        position: [150, 0]
+        items: ["1", "0", "1", "1", "0"]
+        highlights: []
+        cellSize: 45
+        showIndices: false
+        color: "#3498db"
+      
+      vector_entity:
+        type: mathematical_entity
+        position: [-60, -80]
+        form: "vector"
+        personality: "sharp"
+        size: 50
+        color: "#5dade2"
+        glow: true
+        energy: 0.6
+        animation_pattern: "pulse"
+        label: "[1,0]"
+        vector_components: [1, 0]
+        show_components: false
+        show_magnitude: false
+        vector_style: "standard"
+      
+      measurement_connector:
+        type: relationship_connector
+        from: [-40, -60]
+        to: [-20, 10]
+        relationship_type: "transformation"
+        strength: 0.7
+        color: "#5dade2"
+        animated: true
+        bidirectional: false
+        label: "Measurement → Collapse"
+      
+      title_text:
+        type: text
+        text: "The Foundation of Bits 🔌"
+        position: [0, 220]
+        size: 20
+        color: "#3498db"
+        glow: true
+        font: "Arial"
+      
+      info_text:
+        type: text
+        text: "Classical Bit: State = |1⟩ OR |0⟩. Measurement yields definite value."
+        position: [0, -190]
+        size: 14
+        color: "#ffffff"
+        glow: true
+        font: "Arial"
+
+  scene_2:
+    duration: 7
+    description: "The Qubit Sphere - superposition of states"
+    elements:
+      bloch_sphere:
+        type: mathematical_entity
+        position: [0, 20]
+        form: "star"
+        personality: "mysterious"
+        size: 120
+        color: "#5dade2"
+        glow: true
+        energy: 0.8
+        animation_pattern: "pulse"
+        label: "Bloch Sphere"
+        data: [8]
+      
+      north_pole_point:
+        type: mathematical_entity
+        position: [0, -70]
+        form: "point"
+        personality: "sharp"
+        size: 18
+        color: "#3498db"
+        glow: true
+        energy: 0.9
+        animation_pattern: "pulse"
+        label: "|1⟩"
+      
+      south_pole_point:
+        type: mathematical_entity
+        position: [0, 110]
+        form: "point"
+        personality: "sharp"
+        size: 18
+        color: "#95a5a6"
+        glow: true
+        energy: 0.9
+        animation_pattern: "pulse"
+        label: "|0⟩"
+      
+      superposition_point:
+        type: mathematical_entity
+        position: [50, 10]
+        form: "point"
+        personality: "mysterious"
+        size: 22
+        color: "#f39c12"
+        glow: true
+        energy: 1.0
+        animation_pattern: "pulse"
+        label: "α|1⟩+β|0⟩"
+      
+      probability_graph:
+        type: xy_graph
+        position: [200, 100]
+        size: 150
+        function: "sin(x)"
+        data_points: [[-3, 0], [-1.5, 1], [0, 0], [1.5, -1], [3, 0]]
+        x_range: [-3, 3]
+        y_range: [-1.5, 1.5]
+        color: "#f39c12"
+        line_width: 2
+        show_grid: false
+        show_axes: true
+        show_labels: false
+        show_points: false
+        smooth_curve: true
+        animate_draw: false
+        title: "ψ(x)"
+        resolution: 100
+      
+      connector_to_north:
+        type: relationship_connector
+        from: [50, 10]
+        to: [0, -60]
+        relationship_type: "correlation"
+        strength: 0.6
+        color: "#f39c12"
+        animated: true
+        bidirectional: false
+        label: "α"
+      
+      connector_to_south:
+        type: relationship_connector
+        from: [50, 10]
+        to: [0, 100]
+        relationship_type: "correlation"
+        strength: 0.6
+        color: "#f39c12"
+        animated: true
+        bidirectional: false
+        label: "β"
+      
+      title_text:
+        type: text
+        text: "The Qubit Sphere ⚛️"
+        position: [0, 220]
+        size: 20
+        color: "#5dade2"
+        glow: true
+        font: "Arial"
+      
+      info_text:
+        type: text
+        text: "Quantum Bit: State = α|1⟩ + β|0⟩, where |α|² + |β|² = 1"
+        position: [0, -190]
+        size: 14
+        color: "#ffffff"
+        glow: true
+        font: "Arial"
+
+  scene_3:
+    duration: 7
+    description: "The Secret of Phase - destructive interference"
+    elements:
+      note_emoji:
+        type: animated_emoji
+        emoji: "🎵"
+        position: [-90, 30]
+        size: 80
+        movement: "bounce"
+        glowing: "pulsing-glow"
+        rotation: "none"
+        reveal: "zoom-reveal"
+        speed: "normal"
+        delay: "none"
+        color: "#f39c12"
+      
+      wave_emoji:
+        type: animated_emoji
+        emoji: "🌊"
+        position: [90, 30]
+        size: 70
+        movement: "wobble"
+        glowing: "pulsing-glow"
+        rotation: "none"
+        reveal: "zoom-reveal"
+        speed: "slow"
+        delay: "delay-1"
+        color: "#5dade2"
+      
+      equation_emoji:
+        type: animated_emoji
+        emoji: "ψ₁+ψ₂"
+        position: [0, -20]
+        size: 50
+        movement: "floating-pen"
+        glowing: "matrix-code"
+        rotation: "none"
+        reveal: "slide-reveal"
+        speed: "normal"
+        delay: "delay-1"
+        color: "#e74c3c"
+      
+      plus_sign:
+        type: text
+        text: "+"
+        position: [-40, 80]
+        size: 30
+        color: "#2ecc71"
+        glow: true
+        font: "Arial"
+      
+      minus_sign:
+        type: text
+        text: "-"
+        position: [40, 80]
+        size: 30
+        color: "#e74c3c"
+        glow: true
+        font: "Arial"
+      
+      detective_text:
+        type: text
+        text: "Identical states can cancel or amplify—this is the quantum secret."
+        position: [0, -200]
+        size: 15
+        color: "#ffffff"
+        glow: true
+        font: "Arial"
+      
+      title_text:
+        type: text
+        text: "The Secret of Phase 🎵"
+        position: [0, 220]
+        size: 20
+        color: "#f39c12"
+        glow: true
+        font: "Arial"
+      
+      phase_info:
+        type: text
+        text: "Phase Difference: Constructive (+ +) vs. Destructive (+ -)"
+        position: [0, 150]
+        size: 13
+        color: "#95a5a6"
+        glow: false
+        font: "Arial"
+
+  scene_4:
+    duration: 9
+    description: "Interference as a Computational Tool - quantum fog"
+    elements:
+      mountain_water_chart:
+        type: water_bar_chart
+        data: [2, 5, 1, 4, 3, 5, 1]
+        position: [0, 80]
+        width: 350
+        height: 120
+        water_color: "#5dade2"
+        wave_intensity: 1.2
+      
+      phase_grid:
+        type: algorithm_grid
+        position: [-120, -80]
+        rows: 3
+        cols: 3
+        cellSize: 45
+        spacing: 4
+        cells: [["+","+","-"],["+","?","-"],["+","-","+"]]
+        highlights: [[1,1]]
+        showValues: true
+        color: "#9b59b6"
+        border_color: "#8e44ad"
+        border_width: 2
+        label: "Phase Grid"
+      
+      fog_flow:
+        type: flow_field
+        position: [0, 0]
+        flow_type: "gradient"
+        density: 0.4
+        intensity: 0.6
+        color: "#aed6f1"
+        animated: true
+        direction: "outward"
+        size: 300
+      
+      operation_text:
+        type: text
+        text: "Apply phase: Wrong paths (|5⟩,|4⟩,|3⟩) cancel. Correct path (|1⟩) reinforces."
+        position: [0, -170]
+        size: 13
+        color: "#2ecc71"
+        glow: true
+        font: "Arial"
+      
+      title_text:
+        type: text
+        text: "Interference as a Computational Tool 🗻"
+        position: [0, 220]
+        size: 19
+        color: "#9b59b6"
+        glow: true
+        font: "Arial"
+
+  scene_5:
+    duration: 6
+    description: "The Detective's Insight - shaping the landscape"
+    elements:
+      detective_octopus:
+        type: wisdom_character
+        character_type: detective_octopus
+        position: [0, 0]
+        size: 140
+        mood: "thinking"
+        expression: "normal"
+        talking: true
+        breathing: true
+        color_scheme: "ocean"
+        personality: "calm"
+        speech_bubble: true
+        speech_text: "Classical computing is a hiker checking every path. Quantum computing is a fog that fills the forest, then uses wave tricks to make all the wrong paths vanish."
+        background_aura: "glow"
+      
+      title_text:
+        type: text
+        text: "The Detective's Insight 🕵️‍♂️"
+        position: [0, 220]
+        size: 20
+        color: "#4ecdc4"
+        glow: true
+        font: "Arial"
+
+  scene_6:
+    duration: 8
+    description: "The Scaling Problem - exponential growth"
+    elements:
+      classical_small_chart:
+        type: animated_bar_chart
+        data: [1, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1]
+        position: [-150, 30]
+        width: 180
+        height: 120
+        color: "#3498db"
+      
+      classical_large_chart:
+        type: water_bar_chart
+        data: [0.01, 0.01, 0.01, 0.01, 0.01, 0.01, 0.01, 0.01, 0.01, 0.01]
+        position: [150, 30]
+        width: 180
+        height: 120
+        water_color: "#e74c3c"
+        wave_intensity: 0.8
+      
+      complexity_cloud:
+        type: mathematical_entity
+        position: [150, -80]
+        form: "cloud"
+        personality: "wise"
+        size: 80
+        color: "#f39c12"
+        glow: true
+        energy: 0.7
+        animation_pattern: "breathe"
+        label: "~10¹⁵⁰"
+      
+      exponential_connector:
+        type: relationship_connector
+        from: [150, -40]
+        to: [150, 0]
+        relationship_type: "causation"
+        strength: 0.9
+        color: "#e74c3c"
+        animated: true
+        bidirectional: false
+        label: "Exponential Growth"
+      
+      small_title:
+        type: text
+        text: "N=15"
+        position: [-150, -60]
+        size: 16
+        color: "#3498db"
+        glow: true
+        font: "Arial"
+      
+      large_title:
+        type: text
+        text: "N=600 digits"
+        position: [150, -120]
+        size: 16
+        color: "#e74c3c"
+        glow: true
+        font: "Arial"
+      
+      info_text:
+        type: text
+        text: "For 15: √15 ≈ 4 checks. For 600-digit N: √(10⁶⁰⁰) = 10³⁰⁰ checks."
+        position: [0, -190]
+        size: 13
+        color: "#ffffff"
+        glow: true
+        font: "Arial"
+      
+      title_text:
+        type: text
+        text: "The Scaling Problem 📈"
+        position: [0, 220]
+        size: 20
+        color: "#f39c12"
+        glow: true
+        font: "Arial"
+
+  scene_7:
+    duration: 9
+    description: "Shor's Algorithm in Principle - quantum fourier transform"
+    elements:
+      operations_grid:
+        type: algorithm_grid
+        position: [-180, 80]
+        rows: 2
+        cols: 2
+        cellSize: 55
+        spacing: 4
+        cells: [["Super","Trans"],["Inter","Meas"]]
+        highlights: [[0,0],[0,1],[1,0],[1,1]]
+        showValues: true
+        color: "#2ecc71"
+        border_color: "#27ae60"
+        border_width: 2
+        label: "Shor Steps"
+      
+      qft_matrix:
+        type: matrix
+        position: [-180, -60]
+        values: [["1","1"],["1","-1"]]
+        highlightCells: []
+        cellSize: 45
+        textSize: 14
+        color: "#9b59b6"
+        label: "QFT/√2"
+        highlightRow: -1
+        highlightCol: -1
+      
+      superposition_chart:
+        type: water_bar_chart
+        data: [0.5, 0.5, 0.5, 0.5]
+        position: [100, 60]
+        width: 200
+        height: 100
+        water_color: "#3498db"
+        wave_intensity: 1.0
+      
+      result_chart:
+        type: water_bar_chart
+        data: [0, 1, 0, 1]
+        position: [100, -60]
+        width: 200
+        height: 100
+        water_color: "#2ecc71"
+        wave_intensity: 1.5
+      
+      superposition_label:
+        type: text
+        text: "Superposition"
+        position: [100, 120]
+        size: 13
+        color: "#3498db"
+        glow: false
+        font: "Arial"
+      
+      result_label:
+        type: text
+        text: "Periodicity Found"
+        position: [100, -110]
+        size: 13
+        color: "#2ecc71"
+        glow: true
+        font: "Arial"
+      
+      algorithm_text:
+        type: text
+        text: "Shor's: Superposition → QFT → Interference → Measure period → factors"
+        position: [0, -190]
+        size: 13
+        color: "#ffffff"
+        glow: true
+        font: "Arial"
+      
+      title_text:
+        type: text
+        text: "Shor's Algorithm in Principle 🧮"
+        position: [0, 220]
+        size: 20
+        color: "#2ecc71"
+        glow: true
+        font: "Arial"
+
+  scene_8:
+    duration: 7
+    description: "The New Lens - fundamentally new way to see"
+    elements:
+      magnifier_emoji:
+        type: animated_emoji
+        emoji: "🔍"
+        position: [0, 30]
+        size: 85
+        movement: "wobble"
+        glowing: "pulsing-glow"
+        rotation: "none"
+        reveal: "zoom-reveal"
+        speed: "slow"
+        delay: "none"
+        color: "#f39c12"
+      
+      galaxy_emoji:
+        type: animated_emoji
+        emoji: "🌌"
+        position: [-110, 30]
+        size: 70
+        movement: "orbit"
+        glowing: "pulsing-glow"
+        rotation: "gentle-rotate"
+        reveal: "zoom-reveal"
+        speed: "ultra-slow"
+        delay: "delay-1"
+        color: "#9b59b6"
+      
+      dna_emoji:
+        type: animated_emoji
+        emoji: "🧬"
+        position: [110, 30]
+        size: 70
+        movement: "bounce"
+        glowing: "pulsing-glow"
+        rotation: "none"
+        reveal: "zoom-reveal"
+        speed: "slow"
+        delay: "delay-2"
+        color: "#2ecc71"
+      
+      bloch_background:
+        type: mathematical_entity
+        position: [0, 30]
+        form: "star"
+        personality: "mysterious"
+        size: 200
+        color: "#5dade2"
+        glow: false
+        energy: 0.3
+        animation_pattern: "spin"
+        label: ""
+        data: [8]
+      
+      detective_text:
+        type: text
+        text: "Quantum Advantage = Interference Over Enumeration. Not speed—a new way to see."
+        position: [0, -200]
+        size: 15
+        color: "#ffffff"
+        glow: true
+        font: "Arial"
+      
+      title_text:
+        type: text
+        text: "The New Lens 🔍"
+        position: [0, 220]
+        size: 20
+        color: "#f39c12"
+        glow: true
+        font: "Arial"

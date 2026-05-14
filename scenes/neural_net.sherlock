@@ -1,0 +1,56 @@
+concept: "Circles Connected by Vectors"
+emoji: "⭕"
+total_duration: 5
+background: "#222222"
+
+phases:
+  setup:
+    duration: 5
+    description: "Show circles and connecting arrows"
+    elements:
+      node1:
+        type: circle
+        center: [150, 200]
+        radius: 24
+        color: "#1976d2"
+        glow: true
+        label: "A"
+
+      node2:
+        type: circle
+        center: [350, 120]
+        radius: 24
+        color: "#43a047"
+        glow: true
+        label: "B"
+
+      node3:
+        type: circle
+        center: [350, 280]
+        radius: 24
+        color: "#ffd600"
+        glow: true
+        label: "C"
+
+      arrow1:
+        type: vector
+        from: [150, 200]
+        to: [350, 120]
+        color: "#fff"
+        width: 4
+        glow: true
+        label: ""
+
+      arrow2:
+        type: vector
+        from: [150, 200]
+        to: [350, 280]
+        color: "#fff"
+        width: 4
+        glow: true
+        label: ""
+
+subtitles:
+  - "⭕ Circles as nodes."
+  - "🏹 Arrows connect the nodes."
+  - "You can build any network with these primitives."

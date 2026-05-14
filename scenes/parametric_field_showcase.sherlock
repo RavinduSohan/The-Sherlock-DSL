@@ -1,0 +1,534 @@
+# Parametric Field System - Complete Showcase
+# Demonstrates all 20+ transformations and multiple rendering modes
+
+concept: "Parametric Field Complete Feature Set"
+total_duration: 60
+background: "#0a0e27"
+
+phases:
+  rotation:
+    duration: 2
+    static_hold_time: 0
+    description: "Linear Algebra: Rotation transformation with basis vectors"
+    elements:
+      grid_rotation:
+        type: parametric_field
+        geometry: uniform_grid
+        resolution: [12, 12]
+        bounds_x: [-3, 3]
+        bounds_y: [-3, 3]
+        transform: rotation
+        angle: 90
+        render_mode: grid_lines
+        color: "#ff6b6b"
+        thickness: 2
+        glow: true
+        show_basis_vectors: true
+        show_unit_square: true
+        duration: 2
+        position: [-180, 100] 
+  shear:
+    duration: 2
+    static_hold_time: 0
+    description: "Linear Algebra: Shear transformation"
+    elements:
+      grid_shear:
+        type: parametric_field
+        geometry: uniform_grid
+        resolution: [12, 12]
+        bounds_x: [-3, 3]
+        bounds_y: [-3, 3]
+        transform: shear
+        shear_factor: 1.5
+        shear_direction: horizontal
+        render_mode: grid_lines
+        color: "#4ecdc4"
+        thickness: 2
+        glow: true
+        show_basis_vectors: true
+        show_unit_square: true
+        duration: 2
+        position: [-180, 100]
+  
+  scale:
+    duration: 2
+    static_hold_time: 0
+    description: "Linear Algebra: Non-uniform scaling"
+    elements:
+      grid_scale:
+        type: parametric_field
+        geometry: uniform_grid
+        resolution: [12, 12]
+        bounds_x: [-3, 3]
+        bounds_y: [-3, 3]
+        transform: scale
+        scale_x: 2
+        scale_y: 0.5
+        render_mode: grid_lines
+        color: "#95e1d3"
+        thickness: 2
+        glow: true
+        show_basis_vectors: true
+        show_unit_square: true
+        duration: 2
+  
+  projection:
+    duration: 2
+    static_hold_time: 0
+    description: "Linear Algebra: Projection onto line"
+    elements:
+      grid_projection:
+        type: parametric_field
+        geometry: uniform_grid
+        resolution: [12, 12]
+        bounds_x: [-3, 3]
+        bounds_y: [-3, 3]
+        transform: projection
+        proj_angle: 30
+        render_mode: grid_lines
+        color: "#ffd93d"
+        thickness: 2
+        glow: true
+        show_basis_vectors: true
+        duration: 2
+  
+  reflection:
+    duration: 2
+    static_hold_time: 0
+    description: "Linear Algebra: Reflection across line"
+    elements:
+      grid_reflection:
+        type: parametric_field
+        geometry: uniform_grid
+        resolution: [12, 12]
+        bounds_x: [-3, 3]
+        bounds_y: [-3, 3]
+        transform: reflection
+        proj_angle: 45
+        render_mode: grid_lines
+        color: "#ff9a76"
+        thickness: 2
+        glow: true
+        show_basis_vectors: true
+        duration: 2
+  
+  polar_warp:
+    duration: 2
+    static_hold_time: 0
+    description: "Polar: Polar coordinate warping"
+    elements:
+      grid_polar_warp:
+        type: parametric_field
+        geometry: uniform_grid
+        resolution: [15, 15]
+        bounds_x: [-3, 3]
+        bounds_y: [-3, 3]
+        transform: polar_warp
+        r_scale: 1.5
+        theta_shift: 45
+        render_mode: grid_lines
+        color: "#a8e6cf"
+        thickness: 2
+        glow: true
+        duration: 2
+  
+  spiral:
+    duration: 2
+    static_hold_time: 0
+    description: "Polar: Spiral transformation"
+    elements:
+      grid_spiral:
+        type: parametric_field
+        geometry: uniform_grid
+        resolution: [15, 15]
+        bounds_x: [-2, 2]
+        bounds_y: [-2, 2]
+        transform: spiral
+        growth: 0.3
+        rotation: 180
+        render_mode: grid_lines
+        color: "#dcedc1"
+        thickness: 2
+        glow: true
+        duration: 2
+  
+  complex_multiply:
+    duration: 2
+    static_hold_time: 0
+    description: "Complex Analysis: Complex multiplication"
+    elements:
+      grid_complex:
+        type: parametric_field
+        geometry: uniform_grid
+        resolution: [12, 12]
+        bounds_x: [-2, 2]
+        bounds_y: [-2, 2]
+        transform: complex_multiply
+        complex_real: 1.5
+        complex_imag: 0.5
+        render_mode: grid_lines
+        color: "#ff6b9d"
+        thickness: 2
+        glow: true
+        show_basis_vectors: true
+        duration: 2
+  
+  exponential:
+    duration: 2
+    static_hold_time: 0
+    description: "Complex Analysis: Exponential map"
+    elements:
+      grid_exponential:
+        type: parametric_field
+        geometry: uniform_grid
+        resolution: [10, 10]
+        bounds_x: [-1, 1]
+        bounds_y: [-1, 1]
+        transform: exponential
+        exp_scale: 0.5
+        render_mode: grid_lines
+        color: "#c7ceea"
+        thickness: 2
+        glow: true
+        duration: 2
+  
+  logarithmic_spiral:
+    duration: 2
+    static_hold_time: 0
+    description: "Complex Analysis: Logarithmic spiral"
+    elements:
+      grid_log_spiral:
+        type: parametric_field
+        geometry: uniform_grid
+        resolution: [12, 12]
+        bounds_x: [-2, 2]
+        bounds_y: [-2, 2]
+        transform: logarithmic_spiral
+        log_a: 0.15
+        render_mode: grid_lines
+        color: "#b4a7d6"
+        thickness: 2
+        glow: true
+        duration: 2
+  
+  zoom:
+    duration: 2
+    static_hold_time: 0
+    description: "Geometric: Zoom transformation"
+    elements:
+      grid_zoom:
+        type: parametric_field
+        geometry: uniform_grid
+        resolution: [15, 15]
+        bounds_x: [-3, 3]
+        bounds_y: [-3, 3]
+        transform: zoom
+        center_x: 0
+        center_y: 0
+        zoom_factor: 3
+        render_mode: grid_lines
+        color: "#84fab0"
+        thickness: 2
+        glow: true
+        duration: 2
+  
+  squeeze:
+    duration: 2
+    static_hold_time: 0
+    description: "Geometric: Area-preserving squeeze"
+    elements:
+      grid_squeeze:
+        type: parametric_field
+        geometry: uniform_grid
+        resolution: [12, 12]
+        bounds_x: [-2, 2]
+        bounds_y: [-2, 2]
+        transform: squeeze
+        squeeze_factor: 2.5
+        render_mode: grid_lines
+        color: "#8fd3f4"
+        thickness: 2
+        glow: true
+        show_unit_square: true
+        duration: 2
+  
+  ellipse:
+    duration: 2
+    static_hold_time: 0
+    description: "Geometric: Transform to ellipse"
+    elements:
+      grid_ellipse:
+        type: parametric_field
+        geometry: uniform_grid
+        resolution: [12, 12]
+        bounds_x: [-2, 2]
+        bounds_y: [-2, 2]
+        transform: ellipse
+        ellipse_a: 2.5
+        ellipse_b: 1
+        render_mode: grid_lines
+        color: "#d4a5a5"
+        thickness: 2
+        glow: true
+        show_unit_square: true
+        duration: 2
+  
+  wave:
+    duration: 2
+    static_hold_time: 0
+    description: "Geometric: Wave distortion"
+    elements:
+      grid_wave:
+        type: parametric_field
+        geometry: uniform_grid
+        resolution: [15, 15]
+        bounds_x: [-3, 3]
+        bounds_y: [-3, 3]
+        transform: wave
+        wave_amplitude: 0.8
+        wave_frequency: 3
+        render_mode: grid_lines
+        color: "#ffaaa5"
+        thickness: 2
+        glow: true
+        duration: 2
+  
+  matrix_custom:
+    duration: 2
+    static_hold_time: 0
+    description: "Linear Algebra: Custom matrix transformation"
+    elements:
+      grid_matrix:
+        type: parametric_field
+        geometry: uniform_grid
+        resolution: [12, 12]
+        bounds_x: [-3, 3]
+        bounds_y: [-3, 3]
+        transform: matrix_2d
+        matrix_start: "[[1, 0], [0, 1]]"
+        matrix_end: "[[1, 2], [0.5, 1.5]]"
+        easing: smooth_step
+        render_mode: grid_lines
+        color: "#ff6b6b"
+        thickness: 2
+        glow: true
+        show_basis_vectors: true
+        show_unit_square: true
+        duration: 2
+  
+  rotation_field:
+    duration: 3
+    static_hold_time: 0
+    description: "Vector Field: Rotational flow"
+    elements:
+      field_rotation:
+        type: parametric_field
+        geometry: vector_field_grid
+        resolution: [12, 12]
+        bounds_x: [-3, 3]
+        bounds_y: [-3, 3]
+        transform: rotation_field
+        strength: 1
+        render_mode: vector_arrows
+        color: "#4fc3f7"
+        thickness: 2
+        arrow_size: 10
+        vector_scale: 0.4
+        glow: true
+        duration: 3
+  
+  radial_flow_out:
+    duration: 3
+    static_hold_time: 0
+    description: "Vector Field: Outward radial flow"
+    elements:
+      field_radial_out:
+        type: parametric_field
+        geometry: vector_field_grid
+        resolution: [10, 10]
+        bounds_x: [-3, 3]
+        bounds_y: [-3, 3]
+        transform: radial_flow
+        outward: true
+        strength: 1.5
+        render_mode: vector_arrows
+        color: "#ff6b9d"
+        thickness: 2
+        arrow_size: 10
+        vector_scale: 0.3
+        glow: true
+        duration: 3
+  
+  radial_flow_in:
+    duration: 3
+    static_hold_time: 0
+    description: "Vector Field: Inward radial flow"
+    elements:
+      field_radial_in:
+        type: parametric_field
+        geometry: vector_field_grid
+        resolution: [10, 10]
+        bounds_x: [-3, 3]
+        bounds_y: [-3, 3]
+        transform: radial_flow
+        outward: false
+        strength: 1.5
+        render_mode: vector_arrows
+        color: "#a8e6cf"
+        thickness: 2
+        arrow_size: 10
+        vector_scale: 0.3
+        glow: true
+        duration: 3
+  
+  gradient_flow_demo:
+    duration: 3
+    static_hold_time: 0
+    description: "Vector Field: Gradient-based flow"
+    elements:
+      field_gradient:
+        type: parametric_field
+        geometry: vector_field_grid
+        resolution: [10, 10]
+        bounds_x: [-2, 2]
+        bounds_y: [-2, 2]
+        transform: gradient_flow
+        strength: 0.8
+        render_mode: vector_arrows
+        color: "#ffd93d"
+        thickness: 2
+        arrow_size: 10
+        vector_scale: 0.3
+        glow: true
+        duration: 3
+  
+  scatter_rotation:
+    duration: 3
+    static_hold_time: 0
+    description: "Rendering: Scatter dots visualization"
+    elements:
+      scatter_demo:
+        type: parametric_field
+        geometry: uniform_grid
+        resolution: [20, 20]
+        bounds_x: [-3, 3]
+        bounds_y: [-3, 3]
+        transform: rotation
+        angle: 180
+        render_mode: scatter_dots
+        color: "#ff9ff3"
+        dot_size: 4
+        glow: true
+        duration: 3
+  
+  parametric_curve_wave:
+    duration: 3
+    static_hold_time: 0
+    description: "Rendering: Parametric curve visualization"
+    elements:
+      curve_demo:
+        type: parametric_field
+        geometry: parametric_curve
+        point_count: 150
+        t_bounds: [0, 10]
+        transform: wave
+        wave_amplitude: 1
+        wave_frequency: 2
+        render_mode: parametric_curve
+        color: "#54a0ff"
+        thickness: 3
+        glow: true
+        duration: 3
+  
+  radial_grid_demo:
+    duration: 3
+    static_hold_time: 0
+    description: "Geometry: Radial grid with rotation"
+    elements:
+      radial_rotation:
+        type: parametric_field
+        geometry: radial_grid
+        resolution: [8, 24]
+        r_min: 0.5
+        r_max: 3
+        transform: rotation
+        angle: 360
+        render_mode: grid_lines
+        color: "#48dbfb"
+        thickness: 2
+        glow: true
+        duration: 3
+  
+  radial_grid_spiral:
+    duration: 3
+    static_hold_time: 0
+    description: "Geometry: Radial grid with spiral"
+    elements:
+      radial_spiral:
+        type: parametric_field
+        geometry: radial_grid
+        resolution: [10, 32]
+        r_min: 0.2
+        r_max: 2.5
+        transform: spiral
+        growth: 0.2
+        rotation: 90
+        render_mode: grid_lines
+        color: "#00d2d3"
+        thickness: 2
+        glow: true
+        duration: 3
+  
+  finale_composite:
+    duration: 6
+    static_hold_time: 0
+    description: "Grand Finale: Multiple layers composition"
+    elements:
+      background_grid:
+        type: parametric_field
+        geometry: uniform_grid
+        resolution: [15, 15]
+        bounds_x: [-3, 3]
+        bounds_y: [-3, 3]
+        transform: matrix_2d
+        matrix_start: "[[1, 0], [0, 1]]"
+        matrix_end: "[[2, 1], [-0.5, 1.5]]"
+        render_mode: grid_lines
+        color: "#4a5568"
+        thickness: 1
+        opacity: 0.3
+        glow: false
+        duration: 6
+      
+      foreground_radial:
+        type: parametric_field
+        geometry: radial_grid
+        resolution: [6, 16]
+        r_min: 0.5
+        r_max: 2
+        transform: rotation
+        angle: 180
+        render_mode: grid_lines
+        color: "#4fc3f7"
+        thickness: 2
+        opacity: 0.8
+        glow: true
+        duration: 6
+      
+      basis_demo:
+        type: parametric_field
+        geometry: uniform_grid
+        resolution: [8, 8]
+        bounds_x: [-2, 2]
+        bounds_y: [-2, 2]
+        transform: complex_multiply
+        complex_real: 1.2
+        complex_imag: 0.3
+        render_mode: grid_lines
+        color: "#ffd700"
+        thickness: 2
+        opacity: 0.6
+        glow: true
+        show_basis_vectors: true
+        show_unit_square: true
+        duration: 6

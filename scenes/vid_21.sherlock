@@ -1,0 +1,999 @@
+concept: "Quantum Superposition"
+emoji: "⚛️"
+total_duration: 216
+background: "#0a0a0a"
+
+subtitles:
+  - ""
+  - ""
+  - ""
+
+phases:
+  scene_01_the_question_that_splits_reality:
+    duration: 12
+    description: "Doubt made visible—can one thing be many places?"
+    elements:
+
+      # === CORE: bright nucleus slams into existence ===
+      nucleus:
+        type: primitive
+        shape: circle[r:0.08 fill:#F5F5F5 at:(-4,0)] -> fadeIn(0.1s) -> scale(6, 0.25s, ease.out, 0.1s) -> scale(1, 0.4s, spring, 0.35s)
+
+      # === SHOCKWAVE RING: expands and fades from the nucleus ===
+      shockwave_1:
+        type: morph
+        shape: circle[r:0.2 stroke:#F5F5F5/0.8 strokeWidth:3 at:(-4,0)] -> fadeIn(0.1s, 0.1s) ~> circle[r:3.5 stroke:#F5F5F5/0 strokeWidth:1 at:(-4,0)] (1.2s, ease.out, 0.1s)
+
+      # === SECOND SHOCKWAVE: delayed, void blue ===
+      shockwave_2:
+        type: morph
+        shape: circle[r:0.2 stroke:#4A6FA5/0.6 strokeWidth:2 at:(-4,0)] -> fadeIn(0.1s, 1.0s) ~> circle[r:3.5 stroke:#4A6FA5/0 strokeWidth:1 at:(-4,0)] (1.4s, ease.out, 1.0s)
+
+      # === THIRD SHOCKWAVE: late, ember ===
+      shockwave_3:
+        type: morph
+        shape: circle[r:0.2 stroke:#B85C5C/0.5 strokeWidth:2 at:(-4,0)] -> fadeIn(0.1s, 2.2s) ~> circle[r:3.5 stroke:#B85C5C/0 strokeWidth:1 at:(-4,0)] (1.4s, ease.out, 2.2s)
+
+      # === GHOST COPIES: blast outward from center via scale+move ===
+      ghost_a:
+        type: morph
+        shape: circle[r:0.22 fill:#F5F5F5/0.9 at:(-4,0)] -> fadeIn(0.1s, 0.3s) -> moveTo((-5.8,2.0), 0.6s, ease.out, 0.3s) ~> circle[r:0.22 fill:#9AA0A6/0.5 at:(-5.8,2.0)] (1.2s, ease.inOut, 3.5s) ~> circle[r:0.22 fill:#9AA0A6/0.2 at:(-5.8,2.0)] (2.0s, ease.out, 7.0s)
+
+      ghost_b:
+        type: morph
+        shape: circle[r:0.22 fill:#F5F5F5/0.9 at:(-4,0)] -> fadeIn(0.1s, 0.35s) -> moveTo((-2.2,1.8), 0.6s, ease.out, 0.35s) ~> circle[r:0.22 fill:#9AA0A6/0.5 at:(-2.2,1.8)] (1.2s, ease.inOut, 3.5s) ~> circle[r:0.22 fill:#9AA0A6/0.2 at:(-2.2,1.8)] (2.0s, ease.out, 7.0s)
+
+      ghost_c:
+        type: morph
+        shape: circle[r:0.22 fill:#F5F5F5/0.9 at:(-4,0)] -> fadeIn(0.1s, 0.4s) -> moveTo((-6.0,-1.5), 0.6s, ease.out, 0.4s) ~> circle[r:0.22 fill:#9AA0A6/0.5 at:(-6.0,-1.5)] (1.2s, ease.inOut, 3.5s) ~> circle[r:0.22 fill:#9AA0A6/0.2 at:(-6.0,-1.5)] (2.0s, ease.out, 7.0s)
+
+      ghost_d:
+        type: morph
+        shape: circle[r:0.22 fill:#F5F5F5/0.9 at:(-4,0)] -> fadeIn(0.1s, 0.45s) -> moveTo((-2.2,-1.5), 0.65s, ease.out, 0.45s) ~> circle[r:0.22 fill:#9AA0A6/0.5 at:(-2.2,-1.5)] (1.2s, ease.inOut, 3.5s) ~> circle[r:0.22 fill:#9AA0A6/0.2 at:(-2.2,-1.5)] (2.0s, ease.out, 7.0s)
+
+      ghost_e:
+        type: morph
+        shape: circle[r:0.22 fill:#F5F5F5/0.9 at:(-4,0)] -> fadeIn(0.1s, 0.38s) -> moveTo((-4.0,2.8), 0.65s, ease.out, 0.38s) ~> circle[r:0.22 fill:#9AA0A6/0.5 at:(-4.0,2.8)] (1.2s, ease.inOut, 3.5s) ~> circle[r:0.22 fill:#9AA0A6/0.2 at:(-4.0,2.8)] (2.0s, ease.out, 7.0s)
+
+      # === ORBIT RING: thin glowing circle that appears and spins context ===
+      orbit_ring:
+        type: morph
+        shape: circle[r:1.8 stroke:#4A6FA5/0 strokeWidth:1 at:(-4,0)] -> fadeIn(0.1s, 0.8s) ~> circle[r:1.8 stroke:#4A6FA5/0.4 strokeWidth:1 at:(-4,0)] (0.8s, ease.out, 0.8s) ~> circle[r:1.8 stroke:#4A6FA5/0.15 strokeWidth:1 at:(-4,0)] (3.0s, ease.inOut, 5.0s)
+
+      # === ORBITING PARTICLE 1: small dot racing around the nucleus ===
+      orbit_dot_1:
+        type: primitive
+        shape: circle[r:0.1 fill:#4fc3f7/0.8 at:(-2.2,0)] -> fadeIn(0.4s, 1.2s) -> rotate(360, 2.0s, linear, 1.2s) -> rotate(360, 2.0s, linear, 3.2s) -> rotate(360, 2.0s, linear, 5.2s) -> fadeOut(1.0s, 8.0s)
+
+      # === ORBITING PARTICLE 2: offset 180deg, slightly slower ===
+      orbit_dot_2:
+        type: primitive
+        shape: circle[r:0.1 fill:#F5F5F5/0.6 at:(-5.8,0)] -> fadeIn(0.4s, 1.5s) -> rotate(360, 2.4s, linear, 1.5s) -> rotate(360, 2.4s, linear, 3.9s) -> rotate(360, 2.4s, linear, 6.3s) -> fadeOut(1.0s, 8.5s)
+
+      # === CONNECTING LINES: spiderweb between nucleus and ghosts ===
+      connect_a:
+        type: morph
+        shape: line[from:(-4,0) to:(-4,0) stroke:#F5F5F5/0 strokeWidth:1] -> fadeIn(0.1s, 0.9s) ~> line[from:(-4,0) to:(-5.8,2.0) stroke:#F5F5F5/0.25 strokeWidth:1] (0.5s, linear, 0.9s) ~> line[from:(-4,0) to:(-5.8,2.0) stroke:#9AA0A6/0.08 strokeWidth:1] (2.0s, ease.out, 5.0s)
+
+      connect_b:
+        type: morph
+        shape: line[from:(-4,0) to:(-4,0) stroke:#F5F5F5/0 strokeWidth:1] -> fadeIn(0.1s, 0.95s) ~> line[from:(-4,0) to:(-2.2,1.8) stroke:#F5F5F5/0.25 strokeWidth:1] (0.5s, linear, 0.95s) ~> line[from:(-4,0) to:(-2.2,1.8) stroke:#9AA0A6/0.08 strokeWidth:1] (2.0s, ease.out, 5.0s)
+
+      connect_c:
+        type: morph
+        shape: line[from:(-4,0) to:(-4,0) stroke:#F5F5F5/0 strokeWidth:1] -> fadeIn(0.1s, 1.0s) ~> line[from:(-4,0) to:(-6.0,-1.5) stroke:#F5F5F5/0.25 strokeWidth:1] (0.5s, linear, 1.0s) ~> line[from:(-4,0) to:(-6.0,-1.5) stroke:#9AA0A6/0.08 strokeWidth:1] (2.0s, ease.out, 5.0s)
+
+      connect_d:
+        type: morph
+        shape: line[from:(-4,0) to:(-4,0) stroke:#F5F5F5/0 strokeWidth:1] -> fadeIn(0.1s, 1.05s) ~> line[from:(-4,0) to:(-2.2,-1.5) stroke:#F5F5F5/0.25 strokeWidth:1] (0.5s, linear, 1.05s) ~> line[from:(-4,0) to:(-2.2,-1.5) stroke:#9AA0A6/0.08 strokeWidth:1] (2.0s, ease.out, 5.0s)
+
+      connect_e:
+        type: morph
+        shape: line[from:(-4,0) to:(-4,0) stroke:#F5F5F5/0 strokeWidth:1] -> fadeIn(0.1s, 0.92s) ~> line[from:(-4,0) to:(-4.0,2.8) stroke:#F5F5F5/0.25 strokeWidth:1] (0.5s, linear, 0.92s) ~> line[from:(-4,0) to:(-4.0,2.8) stroke:#9AA0A6/0.08 strokeWidth:1] (2.0s, ease.out, 5.0s)
+
+      # === NUCLEUS STEADY PULSE: breathes throughout ===
+      nucleus_pulse:
+        type: primitive
+        shape: circle[r:0.22 fill:#F5F5F5 at:(-4,0)] -> fadeIn(0.3s, 0.8s) -> scale(1.3, 0.5s, ease.inOut, 3.0s) -> scale(1.0, 0.5s, ease.inOut, 3.5s) -> scale(1.3, 0.5s, ease.inOut, 6.0s) -> scale(1.0, 0.5s, ease.inOut, 6.5s) -> scale(1.3, 0.5s, ease.inOut, 9.0s) -> scale(1.0, 0.5s, ease.inOut, 9.5s)
+
+      # === NUCLEUS GLOW HALO ===
+      nucleus_halo:
+        type: morph
+        shape: circle[r:0.35 fill:#F5F5F5/0.15 at:(-4,0)] -> fadeIn(0.5s, 0.8s) ~> circle[r:0.5 fill:#4A6FA5/0.1 at:(-4,0)] (1.5s, ease.inOut, 3.0s) ~> circle[r:0.35 fill:#F5F5F5/0.15 at:(-4,0)] (1.5s, ease.inOut, 4.5s)
+
+      # === TEXT: right zone unchanged ===
+      phrase_1:
+        type: primitive
+        shape: text[text:"can one thing be everywhere" fontSize:22 fill:#7E8A8F at:(3.5,2.8)] -> fadeIn(0.8s, 0.8s)
+
+      keyword_1:
+        type: morph
+        shape: text[text:"one" fontSize:44 fill:#F5F5F5 at:(5.0,0.0)] -> fadeIn(0.5s, 1.8s) ~> text[text:"many" fontSize:44 fill:#4A6FA5 at:(5.0,0.0)] (1.2s, ease.out, 3.2s)
+
+  scene_02_the_hidden_question:
+    duration: 15
+    description: "The real mystery isn't position—it's observation itself."
+    elements:
+      grid_line_1:
+        type: primitive
+        shape: line[from:(-6.5,-3.5) to:(-1.5,-3.5) stroke:#999999/0.3 strokeWidth:1] -> fadeIn(1s)
+
+      grid_line_2:
+        type: primitive
+        shape: line[from:(-6.5,-1.75) to:(-1.5,-1.75) stroke:#999999/0.3 strokeWidth:1] -> fadeIn(1s)
+
+      grid_line_3:
+        type: primitive
+        shape: line[from:(-6.5,0) to:(-1.5,0) stroke:#999999/0.3 strokeWidth:1] -> fadeIn(1s)
+
+      grid_line_4:
+        type: primitive
+        shape: line[from:(-6.5,1.75) to:(-1.5,1.75) stroke:#999999/0.3 strokeWidth:1] -> fadeIn(1s)
+
+      grid_line_5:
+        type: primitive
+        shape: line[from:(-6.5,3.5) to:(-1.5,3.5) stroke:#999999/0.3 strokeWidth:1] -> fadeIn(1s)
+
+      grid_col_1:
+        type: primitive
+        shape: line[from:(-6.5,-3.5) to:(-6.5,3.5) stroke:#999999/0.3 strokeWidth:1] -> fadeIn(1s)
+
+      grid_col_2:
+        type: primitive
+        shape: line[from:(-4.5,-3.5) to:(-4.5,3.5) stroke:#999999/0.3 strokeWidth:1] -> fadeIn(1s)
+
+      grid_col_3:
+        type: primitive
+        shape: line[from:(-2.5,-3.5) to:(-2.5,3.5) stroke:#999999/0.3 strokeWidth:1] -> fadeIn(1s)
+
+      question_mark:
+        type: morph
+        shape: text[text:"?" fontSize:64 fill:#F5F5F5 at:(-4,0)] -> fadeIn(0.8s, 0.8s) -> scale(1.1, 0.5s, ease.out, 2.5s) -> scale(1.0, 0.5s, ease.out, 3.0s) -> scale(1.1, 0.5s, ease.out, 5.5s) -> scale(1.0, 0.5s, ease.out, 6.0s) ~> text[text:"ψ" fontSize:64 fill:#4fc3f7 at:(-4,0)] (1.5s, ease.inOut, 4.5s)
+
+      phrase_1:
+        type: primitive
+        shape: text[text:"the question behind the question" fontSize:22 fill:#9AA0A6 at:(2.8,2.5)] -> fadeIn(0.8s, 1.0s)
+
+      keyword_1:
+        type: morph
+        shape: text[text:"observation" fontSize:42 fill:#4A6FA5 at:(5.0,0.0)] -> fadeIn(0.5s, 2.0s) ~> text[text:"creates" fontSize:42 fill:#F5F5F5 at:(5.0,0.0)] (1.0s, ease.out, 3.5s) ~> text[text:"reality" fontSize:42 fill:#B85C5C at:(5.0,0.0)] (1.0s, ease.out, 5.0s)
+
+  scene_03_the_case_breakdown:
+    duration: 11
+    description: "Particles don't choose until we look."
+    elements:
+      particle_electron:
+        type: primitive
+        shape: circle[r:0.18 fill:#F5F5F5 at:(-6,2)] -> fadeIn(0.8s, 0.5s) -> scale(1.05, 0.6s, ease.out, 2s) -> scale(1.0, 0.6s, ease.out, 2.6s) -> scale(1.05, 0.6s, ease.out, 4.2s) -> scale(1.0, 0.6s, ease.out, 4.8s)
+
+      particle_atom:
+        type: primitive
+        shape: circle[r:0.22 fill:#F5F5F5 at:(-4,0)] -> fadeIn(0.8s, 0.5s) -> scale(1.05, 0.6s, ease.out, 2s) -> scale(1.0, 0.6s, ease.out, 2.6s) -> scale(1.05, 0.6s, ease.out, 4.2s) -> scale(1.0, 0.6s, ease.out, 4.8s)
+
+      particle_photon:
+        type: primitive
+        shape: circle[r:0.14 fill:#F5F5F5 at:(-2,-2)] -> fadeIn(0.8s, 0.5s) -> scale(1.05, 0.6s, ease.out, 2s) -> scale(1.0, 0.6s, ease.out, 2.6s) -> scale(1.05, 0.6s, ease.out, 4.2s) -> scale(1.0, 0.6s, ease.out, 4.8s)
+
+      ghost_electron_1:
+        type: primitive
+        shape: circle[r:0.18 fill:#F5F5F5/0.3 at:(-6.5,2)] -> fadeIn(1s, 1.5s)
+
+      ghost_electron_2:
+        type: primitive
+        shape: circle[r:0.18 fill:#F5F5F5/0.3 at:(-5.5,2)] -> fadeIn(1s, 1.5s)
+
+      ghost_atom_1:
+        type: primitive
+        shape: circle[r:0.22 fill:#F5F5F5/0.3 at:(-4.5,0.5)] -> fadeIn(1s, 1.5s)
+
+      ghost_atom_2:
+        type: primitive
+        shape: circle[r:0.22 fill:#F5F5F5/0.3 at:(-3.5,0.5)] -> fadeIn(1s, 1.5s)
+
+      ghost_atom_3:
+        type: primitive
+        shape: circle[r:0.22 fill:#F5F5F5/0.3 at:(-4,-0.5)] -> fadeIn(1s, 1.5s)
+
+      ghost_photon_1:
+        type: primitive
+        shape: circle[r:0.14 fill:#F5F5F5/0.3 at:(-2,-1.5)] -> fadeIn(1s, 1.5s)
+
+      ghost_photon_2:
+        type: primitive
+        shape: circle[r:0.14 fill:#F5F5F5/0.3 at:(-2,-2.5)] -> fadeIn(1s, 1.5s)
+
+      math_superposition:
+        type: primitive
+        shape: text[text:"|ψ⟩ = α|0⟩ + β|1⟩" fontSize:28 fill:#F5F5F5 at:(-4.5,-1)] -> fadeIn(1s, 2.0s)
+
+      phrase_1:
+        type: primitive
+        shape: text[text:"particles don't choose until we look" fontSize:22 fill:#7E8A8F at:(3.0,2.8)] -> fadeIn(0.8s, 0.8s)
+
+      keyword_1:
+        type: morph
+        shape: text[text:"superposition" fontSize:38 fill:#4A6FA5 at:(5.0,0.0)] -> fadeIn(0.5s, 2.0s) ~> text[text:"all possibilities" fontSize:38 fill:#F5F5F5 at:(5.0,0.0)] (1.2s, ease.out, 3.5s)
+
+  scene_04_invisible_variable:
+    duration: 15
+    description: "Observation forces reality to choose."
+    elements:
+      undecided_circle:
+        type: primitive
+        shape: circle[r:0.3 fill:#ff6b9d at:(-4,1)] -> fadeIn(0.5s)
+
+      ghost_1:
+        type: primitive
+        shape: circle[r:0.3 fill:#ff6b9d/0.2 at:(-5,1.5)] -> fadeIn(0.8s, 0.5s) -> fadeOut(0.5s, 3.0s)
+
+      ghost_2:
+        type: primitive
+        shape: circle[r:0.3 fill:#ff6b9d/0.2 at:(-3,1.5)] -> fadeIn(0.8s, 0.5s) -> fadeOut(0.5s, 3.0s)
+
+      ghost_3:
+        type: primitive
+        shape: circle[r:0.3 fill:#ff6b9d/0.2 at:(-5,0.5)] -> fadeIn(0.8s, 0.5s) -> fadeOut(0.5s, 3.0s)
+
+      ghost_4:
+        type: primitive
+        shape: circle[r:0.3 fill:#ff6b9d/0.2 at:(-3,0.5)] -> fadeIn(0.8s, 0.5s) -> fadeOut(0.5s, 3.0s)
+
+      ghost_5:
+        type: primitive
+        shape: circle[r:0.3 fill:#ff6b9d/0.2 at:(-4,2)] -> fadeIn(0.8s, 0.5s) -> fadeOut(0.5s, 3.0s)
+
+      measurement_beam:
+        type: primitive
+        shape: rectangle[w:5 h:0.08 fill:#F5F5F5/0.15 at:(-4,3.5)] -> fadeIn(0.3s, 1.5s) -> moveTo((-4,-3.5), 2s, linear, 1.8s)
+
+      collapsed_circle:
+        type: primitive
+        shape: circle[r:0.3 fill:#4fc3f7 at:(-4,-1)] -> fadeIn(0.5s, 3.0s)
+
+      math_element:
+        type: morph
+        shape: text[text:"Σ cᵢ|ψᵢ⟩" fontSize:28 fill:#F5F5F5 at:(-4.5,2.5)] -> fadeIn(0.8s, 0.8s) ~> text[text:"|ψₖ⟩" fontSize:28 fill:#F5F5F5 at:(-4.5,2.5)] (1.0s, ease.out, 2.5s)
+
+      phrase_1:
+        type: primitive
+        shape: text[text:"the act of looking changes everything" fontSize:22 fill:#9AA0A6 at:(3.2,2.8)] -> fadeIn(0.8s, 0.8s)
+
+      keyword_1:
+        type: morph
+        shape: text[text:"observation" fontSize:42 fill:#4A6FA5 at:(5.0,0.0)] -> fadeIn(0.5s, 2.0s) ~> text[text:"collapse" fontSize:42 fill:#C06A6A at:(5.0,0.0)] (1.0s, ease.out, 3.0s)
+
+  scene_05_mental_model_the_box:
+    duration: 12
+    description: "A sealed box contains both life and death, undecided."
+    elements:
+      box_outline:
+        type: primitive
+        shape: rectangle[w:3.5 h:3.5 stroke:#F5F5F5 strokeWidth:2 at:(-4,0)] -> fadeIn(1s)
+
+      atom_inside:
+        type: primitive
+        shape: circle[r:0.15 fill:#ff6b9d at:(-4.5,0.5)] -> fadeIn(0.8s, 1.2s) -> scale(1.2, 0.5s, ease.out, 2.5s) -> scale(1.0, 0.5s, ease.out, 3.0s) -> scale(1.2, 0.5s, ease.out, 4.5s) -> scale(1.0, 0.5s, ease.out, 5.0s)
+
+      atom_ghost:
+        type: primitive
+        shape: circle[r:0.15 fill:#ff6b9d/0.5 at:(-4.2,0.8)] -> fadeIn(0.3s, 2.5s) -> fadeOut(0.4s, 3.0s) -> fadeIn(0.3s, 4.5s) -> fadeOut(0.4s, 5.0s)
+
+      detector_inside:
+        type: primitive
+        shape: square[w:0.25 fill:#999999 at:(-4,0)] -> fadeIn(0.8s, 1.2s)
+
+      cat_alive_ghost:
+        type: primitive
+        shape: ellipse[w:0.9 h:0.4 fill:#F5F5F5/0.3 at:(-3.8,-1)] -> fadeIn(1s, 1.5s)
+
+      cat_dead_ghost:
+        type: primitive
+        shape: ellipse[w:0.9 h:0.4 fill:#9AA0A6/0.3 at:(-4.2,-1)] -> fadeIn(1s, 1.5s)
+
+      phrase_1:
+        type: primitive
+        shape: text[text:"inside the box, both truths coexist" fontSize:22 fill:#7E8A8F at:(3.0,2.8)] -> fadeIn(0.8s, 0.8s)
+
+      keyword_1:
+        type: morph
+        shape: text[text:"alive" fontSize:44 fill:#F5F5F5 at:(5.0,0.0)] -> fadeIn(0.5s, 2.0s) ~> text[text:"dead" fontSize:44 fill:#9AA0A6 at:(5.0,0.0)] (0.8s, ease.out, 3.0s) ~> text[text:"alive" fontSize:44 fill:#F5F5F5 at:(5.0,0.0)] (0.8s, ease.out, 4.2s)
+
+      phrase_2:
+        type: primitive
+        shape: text[text:"until someone opens it" fontSize:22 fill:#9AA0A6 at:(2.5,-2.5)] -> fadeIn(0.8s, 4.0s)
+
+  scene_06_mental_model_the_spinning_coin:
+    duration: 24
+    description: "Frozen midair, undecided, until caught."
+    elements:
+      spinning_coin:
+        type: primitive
+        shape: circle[r:0.4 fill:#F5F5F5 stroke:#ffd93d strokeWidth:2 at:(-4,1)] -> fadeIn(0.5s, 0.5s) -> rotate(360, 0.5s, linear, 1s) -> rotate(360, 0.5s, linear, 1.5s) -> rotate(360, 0.5s, linear, 2s) -> rotate(360, 0.5s, linear, 2.5s) -> rotate(360, 0.5s, linear, 3.0s) -> rotate(360, 0.5s, linear, 3.5s) -> rotate(360, 0.8s, linear, 4.0s) -> rotate(360, 1.2s, linear, 4.8s)
+
+      ghost_coin_left:
+        type: primitive
+        shape: circle[r:0.4 fill:#F5F5F5/0.35 stroke:#ffd93d/0.35 strokeWidth:2 at:(-4.4,1)] -> fadeIn(0.6s, 2.0s) -> fadeOut(0.8s, 5.5s)
+
+      ghost_coin_right:
+        type: primitive
+        shape: circle[r:0.4 fill:#9AA0A6/0.35 stroke:#ffd93d/0.35 strokeWidth:2 at:(-3.6,1)] -> fadeIn(0.6s, 2.0s) -> fadeOut(0.8s, 5.5s)
+
+      hand_shape:
+        type: primitive
+        shape: ellipse[w:1.2 h:0.5 fill:#F5F5F5/0.7 at:(-4,-2)] -> fadeIn(0.6s, 2.5s) -> moveTo((-4,0.5), 1.5s, ease.out, 3.5s)
+
+      caught_coin:
+        type: morph
+        shape: circle[r:0.4 fill:#F5F5F5 stroke:#ffd93d strokeWidth:2 at:(-4,0.5)] -> fadeIn(0.4s, 5.5s) ~> circle[r:0.4 fill:#ffd93d stroke:#ffd93d strokeWidth:2 at:(-4,0.5)] (0.8s, ease.out, 6.0s)
+
+      phrase_1:
+        type: primitive
+        shape: text[text:"frozen midair, undecided" fontSize:24 fill:#7E8A8F at:(3.2,2.8)] -> fadeIn(0.8s, 0.8s)
+
+      keyword_1:
+        type: morph
+        shape: text[text:"spinning" fontSize:42 fill:#4A6FA5 at:(5.0,0.0)] -> fadeIn(0.5s, 2.0s) ~> text[text:"caught" fontSize:42 fill:#F5F5F5 at:(5.0,0.0)] (1.0s, ease.out, 3.5s) ~> text[text:"heads" fontSize:42 fill:#B8A27A at:(5.0,0.0)] (1.0s, ease.out, 4.5s)
+
+  scene_07_the_spinning_coin:
+    duration: 7
+    description: "A coin frozen midair holds both possibilities until caught—superposition made tangible."
+    elements:
+
+      # === COIN: gold circle, spins in place ===
+      coin_spin:
+        type: primitive
+        shape: circle[r:0.38 fill:#ffd93d stroke:#ffd93d strokeWidth:2 at:(-4,2)] -> fadeIn(0.4s, 0.5s) -> rotate(1080, 4.0s, ease.inOut, 0.5s)
+
+      # === COIN INNER DETAIL: cross-line giving it a face ===
+      coin_face:
+        type: primitive
+        shape: ellipse[w:0.55 h:0.18 fill:#ffd93d/0.4 at:(-4,2)] -> fadeIn(0.4s, 0.5s) -> rotate(1080, 4.0s, ease.inOut, 0.5s)
+
+      # === GHOST HEADS: left offset, fades in at spin peak ===
+      ghost_heads:
+        type: morph
+        shape: circle[r:0.38 fill:#ffd93d/0 stroke:#ffd93d/0 strokeWidth:1 at:(-4.3,2)] -> fadeIn(0.1s, 2.0s) ~> circle[r:0.38 fill:#ffd93d/0.35 stroke:#ffd93d/0.4 strokeWidth:1 at:(-4.3,2)] (0.6s, ease.out, 2.0s) -> rotate(360, 1.5s, linear, 2.6s) ~> circle[r:0.38 fill:#ffd93d/0 stroke:#ffd93d/0 strokeWidth:1 at:(-4.3,2)] (0.5s, ease.out, 4.5s)
+
+      # === GHOST TAILS: right offset ===
+      ghost_tails:
+        type: morph
+        shape: circle[r:0.38 fill:#9AA0A6/0 stroke:#9AA0A6/0 strokeWidth:1 at:(-3.7,2)] -> fadeIn(0.1s, 2.0s) ~> circle[r:0.38 fill:#9AA0A6/0.35 stroke:#9AA0A6/0.4 strokeWidth:1 at:(-3.7,2)] (0.6s, ease.out, 2.0s) -> rotate(360, 1.8s, linear, 2.6s) ~> circle[r:0.38 fill:#9AA0A6/0 stroke:#9AA0A6/0 strokeWidth:1 at:(-3.7,2)] (0.5s, ease.out, 4.5s)
+
+      # === COIN GLOW: soft halo around spinning coin ===
+      coin_glow:
+        type: morph
+        shape: circle[r:0.55 fill:#ffd93d/0.08 at:(-4,2)] -> fadeIn(0.5s, 0.8s) ~> circle[r:0.65 fill:#ffd93d/0.12 at:(-4,2)] (2.0s, ease.inOut, 2.0s) ~> circle[r:0.45 fill:#ffd93d/0.25 at:(-4,2)] (0.8s, ease.out, 4.5s)
+
+      # === HAND: rises from below, catches coin ===
+      hand_body:
+        type: primitive
+        shape: ellipse[w:0.9 h:0.4 fill:#9AA0A6/0.7 at:(-4,-2.5)] -> fadeIn(0.6s, 2.5s) -> moveTo((-4,1.6), 2.0s, ease.out, 2.5s)
+
+      hand_finger_1:
+        type: primitive
+        shape: rectangle[w:0.15 h:0.35 fill:#9AA0A6/0.6 at:(-4.25,-2.4)] -> fadeIn(0.5s, 2.6s) -> moveTo((-4.25,1.5), 2.0s, ease.out, 2.6s)
+
+      hand_finger_2:
+        type: primitive
+        shape: rectangle[w:0.15 h:0.35 fill:#9AA0A6/0.6 at:(-4.0,-2.4)] -> fadeIn(0.5s, 2.6s) -> moveTo((-4.0,1.5), 2.0s, ease.out, 2.6s)
+
+      hand_finger_3:
+        type: primitive
+        shape: rectangle[w:0.15 h:0.35 fill:#9AA0A6/0.6 at:(-3.75,-2.4)] -> fadeIn(0.5s, 2.6s) -> moveTo((-3.75,1.5), 2.0s, ease.out, 2.6s)
+
+      # === CAUGHT COIN: gold solid, rests in palm ===
+      caught_coin:
+        type: primitive
+        shape: circle[r:0.38 fill:#ffd93d at:(-4,1.7)] -> fadeIn(0.5s, 4.6s)
+
+      # === CATCH FLASH: brief bright ring at moment of catch ===
+      catch_flash:
+        type: morph
+        shape: circle[r:0.4 stroke:#ffd93d/0.9 strokeWidth:3 at:(-4,1.7)] -> fadeIn(0.1s, 4.6s) ~> circle[r:1.2 stroke:#ffd93d/0 strokeWidth:1 at:(-4,1.7)] (0.8s, ease.out, 4.6s)
+
+      # === TEXT ===
+      phrase_1:
+        type: primitive
+        shape: text[text:"imagine a coin frozen midair" fontSize:24 fill:#7E8A8F at:(3.2,2.8)] -> fadeIn(0.8s, 0.8s)
+
+      keyword_1:
+        type: morph
+        shape: text[text:"spinning" fontSize:42 fill:#4A6FA5 at:(5.0,0.0)] -> fadeIn(0.5s, 2.0s) ~> text[text:"undecided" fontSize:42 fill:#7E8A8F at:(5.0,0.0)] (1.0s, ease.out, 3.2s) ~> text[text:"caught" fontSize:42 fill:#B8A27A at:(5.0,0.0)] (1.0s, ease.out, 4.8s)
+
+
+  scene_07_transformation_point:
+    duration: 7
+    description: "It clicks—the paradox is about information, not cats."
+    elements:
+      ghost_cat_alive:
+        type: primitive
+        shape: ellipse[w:1.2 h:0.5 fill:#F5F5F5/0.3 at:(-4.2,0)] -> fadeIn(0.8s, 0.5s) -> fadeOut(0.6s, 2.5s)
+
+      ghost_cat_dead:
+        type: primitive
+        shape: ellipse[w:1.2 h:0.5 fill:#9AA0A6/0.3 at:(-3.8,0)] -> fadeIn(0.8s, 0.5s) -> fadeOut(0.6s, 2.5s)
+
+      entropy_equation:
+        type: morph
+        shape: text[text:"I = -Σ pᵢ log pᵢ" fontSize:30 fill:#F5F5F5 at:(-4.5,0)] -> fadeIn(0.8s, 2.5s) ~> text[text:"what we can know" fontSize:30 fill:#F5F5F5 at:(-4.5,0)] (1.0s, ease.out, 5.0s)
+
+      phrase_1:
+        type: primitive
+        shape: text[text:"the paradox was never about cats" fontSize:22 fill:#9AA0A6 at:(3.0,2.8)] -> fadeIn(0.8s, 1.0s)
+
+      keyword_1:
+        type: morph
+        shape: text[text:"information" fontSize:40 fill:#4A6FA5 at:(5.0,0.0)] -> fadeIn(0.5s, 3.0s) ~> text[text:"what we can know" fontSize:36 fill:#F5F5F5 at:(5.0,0.0)] (1.2s, ease.out, 5.0s)
+
+      phrase_2:
+        type: primitive
+        shape: text[text:"reality is silent until asked" fontSize:22 fill:#7E8A8F at:(2.5,-2.5)] -> fadeIn(0.8s, 5.5s)
+
+  scene_08_consequence_decoherence:
+    duration: 14
+    description: "Decoherence explains why we never see macro superpositions."
+    elements:
+      macro_square:
+        type: primitive
+        shape: rectangle[w:3 h:2 stroke:#F5F5F5 strokeWidth:2 at:(-4,-1)] -> fadeIn(0.8s)
+
+      env_particle_1:
+        type: primitive
+        shape: circle[r:0.06 fill:#999999/0.15 at:(-6,2)] -> fadeIn(0.5s) -> moveTo((-5.5,1.5), 4s, linear) -> moveTo((-6,2), 4s, linear, 4s)
+
+      env_particle_2:
+        type: primitive
+        shape: circle[r:0.06 fill:#999999/0.15 at:(-2,2.5)] -> fadeIn(0.5s) -> moveTo((-2.5,1.8), 3s, linear) -> moveTo((-2,2.5), 3s, linear, 3s)
+
+      env_particle_3:
+        type: primitive
+        shape: circle[r:0.06 fill:#999999/0.15 at:(-5,-2.5)] -> fadeIn(0.5s) -> moveTo((-5.5,-1.8), 5s, linear) -> moveTo((-5,-2.5), 5s, linear, 5s)
+
+      env_particle_4:
+        type: primitive
+        shape: circle[r:0.06 fill:#999999/0.15 at:(-3,2.8)] -> fadeIn(0.5s) -> moveTo((-3.5,2.2), 3.5s, linear) -> moveTo((-3,2.8), 3.5s, linear, 3.5s)
+
+      env_particle_5:
+        type: primitive
+        shape: circle[r:0.06 fill:#999999/0.15 at:(-6,-1)] -> fadeIn(0.5s) -> moveTo((-5.5,-0.5), 4.5s, linear) -> moveTo((-6,-1), 4.5s, linear, 4.5s)
+
+      env_particle_6:
+        type: primitive
+        shape: circle[r:0.06 fill:#999999/0.15 at:(-2,-2)] -> fadeIn(0.5s) -> moveTo((-2.5,-1.5), 3.8s, linear) -> moveTo((-2,-2), 3.8s, linear, 3.8s)
+
+      quantum_circle:
+        type: primitive
+        shape: circle[r:0.25 fill:#F5F5F5 at:(-4,2)] -> fadeIn(0.8s, 1s) -> moveTo((-4,-1), 4s, ease.out, 2s)
+
+      quantum_ghost_1:
+        type: primitive
+        shape: circle[r:0.25 fill:#F5F5F5/0.3 at:(-4.5,2.2)] -> fadeIn(0.8s, 1s) -> fadeOut(0.6s, 3.0s)
+
+      quantum_ghost_2:
+        type: primitive
+        shape: circle[r:0.25 fill:#F5F5F5/0.3 at:(-3.5,2.2)] -> fadeIn(0.8s, 1s) -> fadeOut(0.6s, 3.8s)
+
+      quantum_ghost_3:
+        type: primitive
+        shape: circle[r:0.25 fill:#F5F5F5/0.3 at:(-4,1.5)] -> fadeIn(0.8s, 1s) -> fadeOut(0.6s, 4.5s)
+
+      quantum_ghost_4:
+        type: primitive
+        shape: circle[r:0.25 fill:#F5F5F5/0.3 at:(-4.8,1.8)] -> fadeIn(0.8s, 1s) -> fadeOut(0.6s, 5.2s)
+
+      quantum_ghost_5:
+        type: primitive
+        shape: circle[r:0.25 fill:#F5F5F5/0.3 at:(-3.2,1.8)] -> fadeIn(0.8s, 1s) -> fadeOut(0.6s, 5.8s)
+
+      math_element:
+        type: morph
+        shape: text[text:"ρ_s ⊗ ρ_env" fontSize:26 fill:#F5F5F5 at:(-5,2.5)] -> fadeIn(0.8s, 0.8s) ~> text[text:"ρ_mixed" fontSize:26 fill:#F5F5F5 at:(-5,2.5)] (1.5s, ease.out, 3s)
+
+      phrase_1:
+        type: primitive
+        shape: text[text:"the world is always watching" fontSize:24 fill:#7E8A8F at:(3.2,2.8)] -> fadeIn(0.8s, 0.8s)
+
+      keyword_1:
+        type: morph
+        shape: text[text:"decoherence" fontSize:40 fill:#4A6FA5 at:(5.0,0.0)] -> fadeIn(0.5s, 2.0s) ~> text[text:"collapse before we look" fontSize:30 fill:#F5F5F5 at:(5.0,0.0)] (1.2s, ease.out, 4.0s)
+
+  scene_09_the_example_photon_and_filter:
+    duration: 21
+    description: "A single photon, until detected, is both passing and blocked."
+    elements:
+      polarizing_filter:
+        type: primitive
+        shape: rectangle[w:0.25 h:3.5 stroke:#999999 strokeWidth:2 at:(-4,0)] -> fadeIn(0.8s)
+
+      filter_line_1:
+        type: primitive
+        shape: line[from:(-4.12,1.5) to:(-3.88,1.5) stroke:#999999 strokeWidth:1] -> fadeIn(0.5s, 0.3s)
+
+      filter_line_2:
+        type: primitive
+        shape: line[from:(-4.12,0.75) to:(-3.88,0.75) stroke:#999999 strokeWidth:1] -> fadeIn(0.5s, 0.3s)
+
+      filter_line_3:
+        type: primitive
+        shape: line[from:(-4.12,0) to:(-3.88,0) stroke:#999999 strokeWidth:1] -> fadeIn(0.5s, 0.3s)
+
+      filter_line_4:
+        type: primitive
+        shape: line[from:(-4.12,-0.75) to:(-3.88,-0.75) stroke:#999999 strokeWidth:1] -> fadeIn(0.5s, 0.3s)
+
+      filter_line_5:
+        type: primitive
+        shape: line[from:(-4.12,-1.5) to:(-3.88,-1.5) stroke:#999999 strokeWidth:1] -> fadeIn(0.5s, 0.3s)
+
+      photon_main:
+        type: primitive
+        shape: circle[r:0.15 fill:#F5F5F5 at:(-6.5,0)] -> fadeIn(0.5s, 0.8s) -> moveTo((-5,0), 1.5s, linear, 0.8s)
+
+      ghost_photon_vertical:
+        type: primitive
+        shape: circle[r:0.15 fill:#F5F5F5/0.35 at:(-5,0)] -> fadeIn(0.5s, 2.3s) -> moveTo((-2.5,0), 2s, linear, 2.3s) -> fadeOut(0.5s, 3.5s)
+
+      ghost_photon_horizontal:
+        type: primitive
+        shape: circle[r:0.15 fill:#9AA0A6/0.35 at:(-5,0)] -> fadeIn(0.5s, 2.3s) -> moveTo((-5.5,0.5), 1.5s, linear, 2.3s) -> fadeOut(0.5s, 3.8s)
+
+      detector:
+        type: primitive
+        shape: square[w:0.4 fill:#ffd93d/0.2 stroke:#ffd93d strokeWidth:1 at:(-2.5,0)] -> fadeIn(0.5s, 1.0s) -> scale(1.8, 0.3s, ease.out, 4.0s) -> scale(1.0, 0.3s, ease.out, 4.3s)
+
+      final_photon:
+        type: primitive
+        shape: circle[r:0.15 fill:#F5F5F5 at:(-2.5,0)] -> fadeIn(0.4s, 4.2s) -> moveTo((-1.6,0), 1.5s, linear, 4.2s)
+
+      math_element:
+        type: morph
+        shape: text[text:"|↔⟩ + |↕⟩" fontSize:28 fill:#F5F5F5 at:(-5,2)] -> fadeIn(0.8s, 1.0s) ~> text[text:"|↕⟩" fontSize:28 fill:#F5F5F5 at:(-5,2)] (1.0s, ease.out, 3.5s)
+
+      phrase_1:
+        type: primitive
+        shape: text[text:"until detected, both paths are real" fontSize:22 fill:#7E8A8F at:(3.2,2.8)] -> fadeIn(0.8s, 0.8s)
+
+      keyword_1:
+        type: morph
+        shape: text[text:"photon" fontSize:42 fill:#F5F5F5 at:(5.0,0.0)] -> fadeIn(0.5s, 2.0s) ~> text[text:"both" fontSize:42 fill:#4A6FA5 at:(5.0,0.0)] (1.0s, ease.out, 3.0s) ~> text[text:"one" fontSize:42 fill:#C06A6A at:(5.0,0.0)] (1.0s, ease.out, 4.5s)
+
+  scene_11_the_macro_scale_illustration:
+    duration: 10
+    description: "Schrödinger's thought experiment scales mathematically—the cat is just a very large photon."
+    elements:
+
+      # === LEFT SIDE: CAT-IN-BOX miniature ===
+      cat_box:
+        type: primitive
+        shape: rectangle[w:2.2 h:2.2 stroke:#F5F5F5/0.5 strokeWidth:1 at:(-5.2,0)] -> fadeIn(0.8s, 0.5s)
+
+      cat_alive_ghost:
+        type: primitive
+        shape: ellipse[w:0.8 h:0.35 fill:#F5F5F5/0.3 at:(-5.4,-0.5)] -> fadeIn(0.8s, 0.8s) -> scale(1.08, 0.8s, ease.inOut, 5.0s) -> scale(1.0, 0.8s, ease.inOut, 5.8s)
+
+      cat_dead_ghost:
+        type: primitive
+        shape: ellipse[w:0.8 h:0.35 fill:#9AA0A6/0.3 at:(-5.0,-0.5)] -> fadeIn(0.8s, 0.8s) -> scale(1.08, 0.8s, ease.inOut, 5.0s) -> scale(1.0, 0.8s, ease.inOut, 5.8s)
+
+      atom_in_box:
+        type: primitive
+        shape: circle[r:0.12 fill:#ff6b9d at:(-5.2,0.5)] -> fadeIn(0.6s, 1.0s) -> scale(1.2, 0.5s, ease.out, 2.5s) -> scale(1.0, 0.5s, ease.out, 3.0s) -> scale(1.2, 0.5s, ease.out, 4.5s) -> scale(1.0, 0.5s, ease.out, 5.0s)
+
+      # === RIGHT SIDE: PHOTON + FILTER miniature ===
+      photon_filter:
+        type: primitive
+        shape: rectangle[w:0.18 h:2.2 stroke:#999999/0.6 strokeWidth:1 at:(-2.8,0)] -> fadeIn(0.8s, 0.5s)
+
+      photon_dot:
+        type: primitive
+        shape: circle[r:0.12 fill:#F5F5F5 at:(-4.2,0)] -> fadeIn(0.5s, 1.0s) -> moveTo((-3.1,0), 1.5s, linear, 1.0s)
+
+      photon_ghost_a:
+        type: primitive
+        shape: circle[r:0.12 fill:#F5F5F5/0.4 at:(-2.8,0)] -> fadeIn(0.4s, 2.5s) -> moveTo((-2.0,0.5), 1.5s, linear, 2.5s) -> scale(1.08, 0.8s, ease.inOut, 5.0s) -> scale(1.0, 0.8s, ease.inOut, 5.8s)
+
+      photon_ghost_b:
+        type: primitive
+        shape: circle[r:0.12 fill:#9AA0A6/0.4 at:(-2.8,0)] -> fadeIn(0.4s, 2.5s) -> moveTo((-3.4,0.5), 1.2s, linear, 2.5s) -> scale(1.08, 0.8s, ease.inOut, 5.0s) -> scale(1.0, 0.8s, ease.inOut, 5.8s)
+
+      # === MATHEMATICAL BRIDGE: equation flows left to right ===
+      eq_stage_1:
+        type: morph
+        shape: text[text:"|alive⟩ + |dead⟩" fontSize:22 fill:#F5F5F5 at:(-5.2,1.5)] -> fadeIn(0.6s, 1.5s) ~> text[text:"∑ cᵢ|ψᵢ⟩" fontSize:22 fill:#F5F5F5 at:(-4.2,1.5)] (0.8s, ease.out, 2.5s) ~> text[text:"α|0⟩ + β|1⟩" fontSize:22 fill:#F5F5F5 at:(-3.4,1.5)] (0.8s, ease.out, 3.5s) ~> text[text:"|↔⟩ + |↕⟩" fontSize:22 fill:#4fc3f7 at:(-2.8,1.5)] (0.8s, ease.out, 4.5s)
+
+      # === BRIDGE UNDERLINE: draws across as equation travels ===
+      bridge_line:
+        type: morph
+        shape: line[from:(-5.8,1.2) to:(-5.8,1.2) stroke:#F5F5F5/0.2 strokeWidth:1] ~> line[from:(-5.8,1.2) to:(-2.2,1.2) stroke:#F5F5F5/0.2 strokeWidth:1] (3.5s, linear, 1.5s)
+
+      # === SYNC PULSE GLOW: both sides brighten together at 5s ===
+      sync_glow_left:
+        type: morph
+        shape: rectangle[w:2.2 h:2.2 stroke:#F5F5F5/0 strokeWidth:2 at:(-5.2,0)] -> fadeIn(0.1s, 5.0s) ~> rectangle[w:2.2 h:2.2 stroke:#4fc3f7/0.5 strokeWidth:2 at:(-5.2,0)] (0.5s, ease.out, 5.0s) ~> rectangle[w:2.2 h:2.2 stroke:#F5F5F5/0.15 strokeWidth:1 at:(-5.2,0)] (1.0s, ease.out, 5.5s)
+
+      sync_glow_right:
+        type: morph
+        shape: rectangle[w:0.18 h:2.2 stroke:#F5F5F5/0 strokeWidth:2 at:(-2.8,0)] -> fadeIn(0.1s, 5.0s) ~> rectangle[w:0.18 h:2.2 stroke:#4fc3f7/0.5 strokeWidth:2 at:(-2.8,0)] (0.5s, ease.out, 5.0s) ~> rectangle[w:0.18 h:2.2 stroke:#F5F5F5/0.15 strokeWidth:1 at:(-2.8,0)] (1.0s, ease.out, 5.5s)
+
+      # === TEXT ===
+      phrase_1:
+        type: primitive
+        shape: text[text:"the cat is just a very large photon" fontSize:22 fill:#9AA0A6 at:(3.0,2.8)] -> fadeIn(0.8s, 1.0s)
+
+      keyword_1:
+        type: morph
+        shape: text[text:"scale invariant" fontSize:38 fill:#4A6FA5 at:(5.0,0.0)] -> fadeIn(0.5s, 3.0s) ~> text[text:"mathematically identical" fontSize:32 fill:#F5F5F5 at:(5.0,0.0)] (1.2s, ease.out, 5.2s)
+
+
+  scene_10_the_principle:
+    duration: 13
+    description: "Observation defines reality."
+    elements:
+      spectrum_1:
+        type: primitive
+        shape: circle[r:0.18 fill:#F5F5F5/0.3 at:(-4,-3)] -> fadeIn(0.8s, 0.5s) -> scale(1.0, 0.3s, ease.out, 3.5s) -> fadeOut(0.5s, 4.5s)
+
+      spectrum_2:
+        type: primitive
+        shape: circle[r:0.18 fill:#F5F5F5/0.3 at:(-4,-2.25)] -> fadeIn(0.8s, 0.5s) -> fadeOut(0.5s, 4.0s)
+
+      spectrum_3:
+        type: primitive
+        shape: circle[r:0.18 fill:#F5F5F5/0.3 at:(-4,-1.5)] -> fadeIn(0.8s, 0.5s) -> fadeOut(0.5s, 3.5s)
+
+      spectrum_4:
+        type: primitive
+        shape: circle[r:0.18 fill:#F5F5F5/0.3 at:(-4,-0.75)] -> fadeIn(0.8s, 0.5s) -> fadeOut(0.5s, 3.0s)
+
+      spectrum_5:
+        type: morph
+        shape: circle[r:0.18 fill:#F5F5F5/0.3 at:(-4,0)] -> fadeIn(0.8s, 0.5s) ~> circle[r:0.18 fill:#4fc3f7 at:(-4,0)] (0.5s, ease.out, 2.8s)
+
+      spectrum_6:
+        type: primitive
+        shape: circle[r:0.18 fill:#F5F5F5/0.3 at:(-4,0.75)] -> fadeIn(0.8s, 0.5s) -> fadeOut(0.5s, 3.0s)
+
+      spectrum_7:
+        type: primitive
+        shape: circle[r:0.18 fill:#F5F5F5/0.3 at:(-4,1.5)] -> fadeIn(0.8s, 0.5s) -> fadeOut(0.5s, 3.5s)
+
+      spectrum_8:
+        type: primitive
+        shape: circle[r:0.18 fill:#F5F5F5/0.3 at:(-4,2.25)] -> fadeIn(0.8s, 0.5s) -> fadeOut(0.5s, 4.0s)
+
+      spectrum_9:
+        type: primitive
+        shape: circle[r:0.18 fill:#F5F5F5/0.3 at:(-4,3)] -> fadeIn(0.8s, 0.5s) -> fadeOut(0.5s, 4.5s)
+
+      info_sweep:
+        type: morph
+        shape: line[from:(-2,-3.5) to:(-2,3.5) stroke:#F5F5F5/0.2 strokeWidth:2] -> fadeIn(0.3s, 1.0s) ~> line[from:(-6,-3.5) to:(-6,3.5) stroke:#F5F5F5/0.2 strokeWidth:2] (3s, linear, 1.0s)
+
+      math_element:
+        type: morph
+        shape: text[text:"Σ cᵢ|ψᵢ⟩" fontSize:30 fill:#F5F5F5 at:(-5,2.5)] -> fadeIn(0.8s, 0.8s) ~> text[text:"|ψₖ⟩" fontSize:30 fill:#F5F5F5 at:(-5,2.5)] (1.2s, ease.out, 2.5s)
+
+      phrase_1:
+        type: primitive
+        shape: text[text:"the universe waits for the question" fontSize:22 fill:#7E8A8F at:(3.2,2.8)] -> fadeIn(0.8s, 0.8s)
+
+      keyword_1:
+        type: morph
+        shape: text[text:"observation" fontSize:42 fill:#4A6FA5 at:(5.0,0.0)] -> fadeIn(0.5s, 2.0s) ~> text[text:"defines" fontSize:42 fill:#F5F5F5 at:(5.0,0.0)] (1.0s, ease.out, 3.2s) ~> text[text:"reality" fontSize:42 fill:#B85C5C at:(5.0,0.0)] (1.0s, ease.out, 4.5s)
+
+  scene_13_the_technology_tree:
+    duration: 16
+    description: "Superposition and collapse power quantum computing, cryptography, and precision measurement."
+    elements:
+
+      # === SEED: superposition root at bottom ===
+      seed_glow:
+        type: morph
+        shape: circle[r:0.18 fill:#F5F5F5/0.2 at:(-4,-2)] -> fadeIn(0.5s, 0.5s) ~> circle[r:0.28 fill:#F5F5F5/0.1 at:(-4,-2)] (1.5s, ease.inOut, 2.0s) ~> circle[r:0.18 fill:#F5F5F5/0.2 at:(-4,-2)] (1.5s, ease.inOut, 3.5s)
+
+      seed_label:
+        type: primitive
+        shape: text[text:"superposition" fontSize:18 fill:#F5F5F5/0.7 at:(-4,-2)] -> fadeIn(0.8s, 0.5s)
+
+      # === TRUNK LINE: rises from seed ===
+      trunk:
+        type: morph
+        shape: line[from:(-4,-1.8) to:(-4,-1.8) stroke:#F5F5F5/0.3 strokeWidth:1] ~> line[from:(-4,-1.8) to:(-4,-0.5) stroke:#F5F5F5/0.3 strokeWidth:1] (0.8s, linear, 1.0s)
+
+      # === BRANCH LINES to each domain ===
+      branch_left:
+        type: morph
+        shape: line[from:(-4,-0.5) to:(-4,-0.5) stroke:#ffd93d/0.4 strokeWidth:1] ~> line[from:(-4,-0.5) to:(-5.8,0.5) stroke:#ffd93d/0.4 strokeWidth:1] (0.7s, ease.out, 1.8s)
+
+      branch_center:
+        type: morph
+        shape: line[from:(-4,-0.5) to:(-4,-0.5) stroke:#F5F5F5/0.3 strokeWidth:1] ~> line[from:(-4,-0.5) to:(-4,0.5) stroke:#F5F5F5/0.3 strokeWidth:1] (0.7s, ease.out, 2.0s)
+
+      branch_right:
+        type: morph
+        shape: line[from:(-4,-0.5) to:(-4,-0.5) stroke:#B85C5C/0.4 strokeWidth:1] ~> line[from:(-4,-0.5) to:(-2.2,0.5) stroke:#B85C5C/0.4 strokeWidth:1] (0.7s, ease.out, 2.2s)
+
+      # === LEFT BRANCH: QUANTUM COMPUTING ===
+      qubit_1:
+        type: primitive
+        shape: circle[r:0.22 stroke:#ffd93d strokeWidth:2 fill:#ffd93d/0.15 at:(-6,1)] -> fadeIn(0.6s, 2.0s) -> scale(1.1, 0.6s, ease.inOut, 4.0s) -> scale(1.0, 0.6s, ease.inOut, 4.6s)
+
+      qubit_1_inner:
+        type: primitive
+        shape: ellipse[w:0.28 h:0.12 fill:#ffd93d/0.5 at:(-6,1)] -> fadeIn(0.5s, 2.2s)
+
+      qubit_2:
+        type: primitive
+        shape: circle[r:0.22 stroke:#ffd93d strokeWidth:2 fill:#F5F5F5/0.12 at:(-5.4,1.8)] -> fadeIn(0.6s, 2.4s) -> scale(1.1, 0.6s, ease.inOut, 4.2s) -> scale(1.0, 0.6s, ease.inOut, 4.8s)
+
+      qubit_2_inner:
+        type: primitive
+        shape: ellipse[w:0.28 h:0.12 fill:#F5F5F5/0.4 at:(-5.4,1.8)] -> fadeIn(0.5s, 2.6s)
+
+      qubit_3:
+        type: primitive
+        shape: circle[r:0.22 stroke:#ffd93d strokeWidth:2 fill:#ffd93d/0.15 at:(-6,2.6)] -> fadeIn(0.6s, 2.8s) -> scale(1.1, 0.6s, ease.inOut, 4.4s) -> scale(1.0, 0.6s, ease.inOut, 5.0s)
+
+      circuit_line_1:
+        type: morph
+        shape: line[from:(-6,1.2) to:(-6,1.2) stroke:#ffd93d/0.3 strokeWidth:1] ~> line[from:(-6,1.2) to:(-5.4,1.8) stroke:#ffd93d/0.3 strokeWidth:1] (0.5s, linear, 3.2s)
+
+      circuit_line_2:
+        type: morph
+        shape: line[from:(-5.4,2.0) to:(-5.4,2.0) stroke:#ffd93d/0.3 strokeWidth:1] ~> line[from:(-5.4,2.0) to:(-6,2.6) stroke:#ffd93d/0.3 strokeWidth:1] (0.5s, linear, 3.6s)
+
+      math_computing:
+        type: primitive
+        shape: text[text:"|ψ⟩ = α|0⟩ + β|1⟩" fontSize:16 fill:#ffd93d/0.6 at:(-5.5,-0.2)] -> fadeIn(0.6s, 4.0s)
+
+      # === CENTER BRANCH: CRYPTOGRAPHY ===
+      alice:
+        type: primitive
+        shape: circle[r:0.2 fill:#F5F5F5/0.8 at:(-4.8,1.5)] -> fadeIn(0.6s, 2.2s)
+
+      bob:
+        type: primitive
+        shape: circle[r:0.2 fill:#F5F5F5/0.8 at:(-3.2,1.5)] -> fadeIn(0.6s, 2.2s)
+
+      crypto_link:
+        type: morph
+        shape: line[from:(-4.6,1.5) to:(-4.6,1.5) stroke:#4fc3f7/0.5 strokeWidth:1] ~> line[from:(-4.6,1.5) to:(-3.4,1.5) stroke:#4fc3f7/0.5 strokeWidth:1] (0.6s, linear, 2.8s) ~> line[from:(-4.6,1.3) to:(-3.4,1.7) stroke:#4fc3f7/0.5 strokeWidth:1] (0.4s, ease.inOut, 3.5s) ~> line[from:(-4.6,1.5) to:(-3.4,1.5) stroke:#4fc3f7/0.5 strokeWidth:1] (0.4s, ease.inOut, 3.9s)
+
+      eavesdropper:
+        type: primitive
+        shape: circle[r:0.12 fill:#C06A6A/0.7 at:(-4,-0.2)] -> fadeIn(0.5s, 3.0s) -> moveTo((-4,1.3), 0.8s, ease.out, 3.0s) -> moveTo((-4,-0.2), 0.8s, ease.out, 3.8s) -> fadeOut(0.5s, 4.6s)
+
+      math_crypto:
+        type: primitive
+        shape: text[text:"BB84" fontSize:16 fill:#F5F5F5/0.6 at:(-4.0,-0.2)] -> fadeIn(0.6s, 4.0s)
+
+      # === RIGHT BRANCH: ATOMIC CLOCKS / PRECISION ===
+      clock_circle:
+        type: primitive
+        shape: circle[r:0.28 stroke:#B85C5C strokeWidth:2 fill:#B85C5C/0.1 at:(-2.2,1.5)] -> fadeIn(0.6s, 2.5s) -> scale(1.12, 0.5s, ease.out, 3.5s) -> scale(1.0, 0.5s, ease.out, 4.0s) -> scale(1.12, 0.5s, ease.out, 5.5s) -> scale(1.0, 0.5s, ease.out, 6.0s) -> scale(1.12, 0.5s, ease.out, 7.5s) -> scale(1.0, 0.5s, ease.out, 8.0s)
+
+      clock_pulse_1:
+        type: morph
+        shape: circle[r:0.3 stroke:#B85C5C/0.6 strokeWidth:1 at:(-2.2,1.5)] -> fadeIn(0.1s, 3.5s) ~> circle[r:0.7 stroke:#B85C5C/0 strokeWidth:1 at:(-2.2,1.5)] (0.8s, ease.out, 3.5s)
+
+      clock_pulse_2:
+        type: morph
+        shape: circle[r:0.3 stroke:#B85C5C/0.6 strokeWidth:1 at:(-2.2,1.5)] -> fadeIn(0.1s, 5.5s) ~> circle[r:0.7 stroke:#B85C5C/0 strokeWidth:1 at:(-2.2,1.5)] (0.8s, ease.out, 5.5s)
+
+      clock_pulse_3:
+        type: morph
+        shape: circle[r:0.3 stroke:#B85C5C/0.6 strokeWidth:1 at:(-2.2,1.5)] -> fadeIn(0.1s, 7.5s) ~> circle[r:0.7 stroke:#B85C5C/0 strokeWidth:1 at:(-2.2,1.5)] (0.8s, ease.out, 7.5s)
+
+      math_clocks:
+        type: primitive
+        shape: text[text:"ΔE·Δt ≥ ħ/2" fontSize:16 fill:#B85C5C/0.6 at:(-2.5,-0.2)] -> fadeIn(0.6s, 4.0s)
+
+      # === TEXT ===
+      phrase_1:
+        type: primitive
+        shape: text[text:"the paradox became the engine" fontSize:24 fill:#9AA0A6 at:(3.0,2.8)] -> fadeIn(0.8s, 0.8s)
+
+      keyword_1:
+        type: morph
+        shape: text[text:"quantum computing" fontSize:34 fill:#4A6FA5 at:(5.0,1.5)] -> fadeIn(0.5s, 2.0s) ~> text[text:"superposition" fontSize:34 fill:#F5F5F5 at:(5.0,1.5)] (1.0s, ease.out, 4.5s)
+
+      keyword_2:
+        type: morph
+        shape: text[text:"cryptography" fontSize:34 fill:#4A6FA5 at:(5.0,0.0)] -> fadeIn(0.5s, 2.5s) ~> text[text:"secrets" fontSize:34 fill:#C06A6A at:(5.0,0.0)] (1.0s, ease.out, 5.0s)
+
+      keyword_3:
+        type: morph
+        shape: text[text:"atomic clocks" fontSize:34 fill:#4A6FA5 at:(5.0,-1.5)] -> fadeIn(0.5s, 3.0s) ~> text[text:"precision" fontSize:34 fill:#B85C5C at:(5.0,-1.5)] (1.0s, ease.out, 5.5s)
+
+  scene_14_the_cornerstone:
+    duration: 7
+    description: "Schrödinger's insight wasn't a paradox—it's the foundation of modern quantum technology."
+    elements:
+
+      # === CORNERSTONE BLOCK ===
+      stone_base:
+        type: primitive
+        shape: rectangle[w:4.0 h:1.2 fill:#555555/0.6 stroke:#9AA0A6 strokeWidth:2 at:(-4,-1.5)] -> fadeIn(0.8s, 0.5s)
+
+      stone_equation:
+        type: primitive
+        shape: text[text:"|alive⟩ + |dead⟩" fontSize:20 fill:#F5F5F5/0.7 at:(-4,-1.5)] -> fadeIn(0.8s, 0.8s)
+
+      # === LEFT PILLAR: COMPUTING, gold ===
+      pillar_left:
+        type: morph
+        shape: line[from:(-5.5,-0.9) to:(-5.5,-0.9) stroke:#ffd93d/0.5 strokeWidth:6] ~> line[from:(-5.5,-0.9) to:(-5.5,2.2) stroke:#ffd93d/0.5 strokeWidth:6] (1.2s, ease.out, 1.2s)
+
+      pillar_left_glow:
+        type: primitive
+        shape: rectangle[w:0.5 h:3.1 fill:#ffd93d/0.06 at:(-5.5,0.65)] -> fadeIn(0.8s, 2.0s)
+
+      qubit_inside_left:
+        type: primitive
+        shape: circle[r:0.18 stroke:#ffd93d strokeWidth:1 fill:#ffd93d/0.2 at:(-5.5,0.5)] -> fadeIn(0.6s, 2.4s) -> scale(1.15, 0.7s, ease.inOut, 3.5s) -> scale(1.0, 0.7s, ease.inOut, 4.2s)
+
+      qubit_inside_left_2:
+        type: primitive
+        shape: circle[r:0.18 stroke:#ffd93d strokeWidth:1 fill:#ffd93d/0.2 at:(-5.5,1.5)] -> fadeIn(0.6s, 2.8s) -> scale(1.15, 0.7s, ease.inOut, 4.0s) -> scale(1.0, 0.7s, ease.inOut, 4.7s)
+
+      # === CENTER PILLAR: CRYPTOGRAPHY, bone white / guilty red base ===
+      pillar_center:
+        type: morph
+        shape: line[from:(-4,-0.9) to:(-4,-0.9) stroke:#C06A6A/0.6 strokeWidth:6] ~> line[from:(-4,-0.9) to:(-4,-0.2) stroke:#C06A6A/0.6 strokeWidth:6] (0.3s, ease.out, 1.5s) ~> line[from:(-4,-0.9) to:(-4,2.2) stroke:#F5F5F5/0.4 strokeWidth:6] (1.0s, ease.out, 1.8s)
+
+      pillar_center_glow:
+        type: primitive
+        shape: rectangle[w:0.5 h:3.1 fill:#F5F5F5/0.04 at:(-4,0.65)] -> fadeIn(0.8s, 2.2s)
+
+      alice_inside:
+        type: primitive
+        shape: circle[r:0.14 fill:#F5F5F5/0.7 at:(-4.25,1.2)] -> fadeIn(0.5s, 2.6s)
+
+      bob_inside:
+        type: primitive
+        shape: circle[r:0.14 fill:#F5F5F5/0.7 at:(-3.75,1.2)] -> fadeIn(0.5s, 2.6s)
+
+      key_inside:
+        type: primitive
+        shape: text[text:"🔐" fontSize:18 fill:#ffd93d at:(-4,0.3)] -> fadeIn(0.6s, 3.2s)
+
+      # === RIGHT PILLAR: PRECISION, ember ===
+      pillar_right:
+        type: morph
+        shape: line[from:(-2.5,-0.9) to:(-2.5,-0.9) stroke:#B85C5C/0.5 strokeWidth:6] ~> line[from:(-2.5,-0.9) to:(-2.5,2.2) stroke:#B85C5C/0.5 strokeWidth:6] (1.2s, ease.out, 1.8s)
+
+      pillar_right_glow:
+        type: primitive
+        shape: rectangle[w:0.5 h:3.1 fill:#B85C5C/0.06 at:(-2.5,0.65)] -> fadeIn(0.8s, 2.4s)
+
+      clock_inside:
+        type: primitive
+        shape: circle[r:0.18 stroke:#B85C5C strokeWidth:1 fill:#B85C5C/0.15 at:(-2.5,1.0)] -> fadeIn(0.6s, 2.8s) -> scale(1.15, 0.6s, ease.out, 4.0s) -> scale(1.0, 0.6s, ease.out, 4.6s)
+
+      clock_ring_inside:
+        type: morph
+        shape: circle[r:0.2 stroke:#B85C5C/0.5 strokeWidth:1 at:(-2.5,1.0)] -> fadeIn(0.1s, 4.0s) ~> circle[r:0.45 stroke:#B85C5C/0 strokeWidth:1 at:(-2.5,1.0)] (0.7s, ease.out, 4.0s)
+
+      # === ARCH: forms above pillars connecting all three ===
+      arch_left_arm:
+        type: morph
+        shape: line[from:(-5.5,2.2) to:(-5.5,2.2) stroke:#F5F5F5/0.3 strokeWidth:2] ~> line[from:(-5.5,2.2) to:(-4,2.6) stroke:#F5F5F5/0.3 strokeWidth:2] (0.6s, ease.out, 3.5s)
+
+      arch_right_arm:
+        type: morph
+        shape: line[from:(-2.5,2.2) to:(-2.5,2.2) stroke:#F5F5F5/0.3 strokeWidth:2] ~> line[from:(-2.5,2.2) to:(-4,2.6) stroke:#F5F5F5/0.3 strokeWidth:2] (0.6s, ease.out, 3.5s)
+
+      arch_label:
+        type: primitive
+        shape: text[text:"SCHRÖDINGER'S INSIGHT" fontSize:16 fill:#F5F5F5/0.7 at:(-4,2.9)] -> fadeIn(0.8s, 4.2s)
+
+      # === CORNERSTONE GLOW: pulses as arch completes ===
+      stone_pulse:
+        type: morph
+        shape: rectangle[w:4.0 h:1.2 stroke:#F5F5F5/0 strokeWidth:2 at:(-4,-1.5)] -> fadeIn(0.1s, 4.0s) ~> rectangle[w:4.0 h:1.2 stroke:#F5F5F5/0.5 strokeWidth:2 at:(-4,-1.5)] (0.6s, ease.out, 4.0s) ~> rectangle[w:4.0 h:1.2 stroke:#F5F5F5/0.15 strokeWidth:1 at:(-4,-1.5)] (1.0s, ease.out, 4.6s)
+
+      # === TEXT ===
+      phrase_1:
+        type: primitive
+        shape: text[text:"not a paradox—a foundation" fontSize:24 fill:#F5F5F5 at:(3.2,2.8)] -> fadeIn(0.8s, 1.0s)
+
+      keyword_1:
+        type: morph
+        shape: text[text:"cornerstone" fontSize:42 fill:#4A6FA5 at:(5.0,0.0)] -> fadeIn(0.5s, 2.5s) ~> text[text:"modern quantum technology" fontSize:28 fill:#B8A27A at:(5.0,0.0)] (1.2s, ease.out, 5.0s)
+
+
+  scene_11_the_broader_impact:
+    duration: 10
+    description: "This principle powers modern quantum technology."
+    elements:
+      qubit_circle:
+        type: primitive
+        shape: circle[r:0.4 stroke:#ffd93d strokeWidth:2 fill:#F5F5F5/0.15 at:(-6,1)] -> fadeIn(0.8s, 0.5s) -> scale(1.05, 0.8s, ease.out, 2s) -> scale(1.0, 0.8s, ease.out, 2.8s)
+
+      qubit_inner:
+        type: primitive
+        shape: ellipse[w:0.5 h:0.25 fill:#ffd93d/0.6 at:(-6,1)] -> fadeIn(0.8s, 0.7s)
+
+      alice_circle:
+        type: primitive
+        shape: circle[r:0.25 fill:#4A6FA5 at:(-5.5,-1)] -> fadeIn(0.8s, 0.8s)
+
+      bob_circle:
+        type: primitive
+        shape: circle[r:0.25 fill:#4A6FA5 at:(-3.5,-1)] -> fadeIn(0.8s, 0.8s)
+
+      crypto_wave:
+        type: morph
+        shape: line[from:(-5.5,-1) to:(-3.5,-1) stroke:#4fc3f7/0.6 strokeWidth:2] -> fadeIn(0.5s, 1.2s) ~> line[from:(-5.5,-0.8) to:(-3.5,-1.2) stroke:#4fc3f7/0.6 strokeWidth:2] (0.4s, ease.inOut, 2.0s) ~> line[from:(-5.5,-1) to:(-3.5,-1) stroke:#4fc3f7/0.6 strokeWidth:2] (0.4s, ease.inOut, 2.4s)
+
+      clock_circle:
+        type: primitive
+        shape: circle[r:0.3 stroke:#F5F5F5 strokeWidth:2 fill:#F5F5F5/0.1 at:(-3,1)] -> fadeIn(0.8s, 1.0s) -> scale(1.1, 0.4s, ease.out, 2.5s) -> scale(1.0, 0.4s, ease.out, 2.9s) -> scale(1.1, 0.4s, ease.out, 4.0s) -> scale(1.0, 0.4s, ease.out, 4.4s)
+
+      precision_device:
+        type: primitive
+        shape: circle[r:0.25 stroke:#ff6b9d strokeWidth:2 fill:#ff6b9d/0.1 at:(-1.8,-1)] -> fadeIn(0.8s, 1.2s) -> scale(1.15, 0.6s, ease.out, 3.0s) -> scale(1.0, 0.6s, ease.out, 3.6s)
+
+      connecting_eq:
+        type: primitive
+        shape: text[text:"|ψ⟩ = α|0⟩ + β|1⟩" fontSize:20 fill:#F5F5F5/0.3 at:(-4,-2.8)] -> fadeIn(1s, 1.5s)
+
+      phrase_1:
+        type: primitive
+        shape: text[text:"the paradox became the engine" fontSize:24 fill:#9AA0A6 at:(3.0,2.8)] -> fadeIn(0.8s, 0.8s)
+
+      keyword_1:
+        type: morph
+        shape: text[text:"quantum computing" fontSize:34 fill:#4A6FA5 at:(5.0,1.0)] -> fadeIn(0.5s, 2.0s) ~> text[text:"superposition" fontSize:34 fill:#F5F5F5 at:(5.0,1.0)] (1.2s, ease.out, 4.0s)
+
+      keyword_2:
+        type: morph
+        shape: text[text:"cryptography" fontSize:34 fill:#4A6FA5 at:(5.0,-1.5)] -> fadeIn(0.5s, 2.5s) ~> text[text:"secrets" fontSize:34 fill:#C06A6A at:(5.0,-1.5)] (1.0s, ease.out, 4.5s)
+
+  scene_12_the_closure:
+    duration: 12
+    description: "Reality commits when we ask. The universe is silent until questioned."
+    elements:
+      ghost_cat_alive_recall:
+        type: primitive
+        shape: ellipse[w:1.0 h:0.45 fill:#F5F5F5/0.3 at:(-5.2,1.5)] -> fadeIn(0.8s, 0.5s) -> fadeOut(0.8s, 4.5s)
+
+      ghost_cat_dead_recall:
+        type: primitive
+        shape: ellipse[w:1.0 h:0.45 fill:#9AA0A6/0.3 at:(-4.8,1.5)] -> fadeIn(0.8s, 0.5s) -> fadeOut(0.8s, 4.5s)
+
+      ghost_coin_recall:
+        type: primitive
+        shape: circle[r:0.3 fill:#F5F5F5/0.3 stroke:#ffd93d/0.3 strokeWidth:2 at:(-4,-1)] -> fadeIn(0.8s, 0.5s) -> rotate(360, 1.5s, linear, 1.0s) -> fadeOut(0.8s, 4.5s)
+
+      ghost_photon_a:
+        type: primitive
+        shape: circle[r:0.12 fill:#F5F5F5/0.3 at:(-3.3,1)] -> fadeIn(0.8s, 0.5s) -> fadeOut(0.8s, 4.5s)
+
+      ghost_photon_b:
+        type: primitive
+        shape: circle[r:0.12 fill:#9AA0A6/0.3 at:(-2.7,1)] -> fadeIn(0.8s, 0.5s) -> fadeOut(0.8s, 4.5s)
+
+      the_question_pulse:
+        type: primitive
+        shape: circle[r:0.12 fill:#F5F5F5 at:(-4,0)] -> fadeIn(0.4s, 2.5s) -> scale(1.5, 0.5s, elastic, 2.5s) -> scale(1.0, 0.5s, ease.out, 3.0s)
+
+      collapsed_cat:
+        type: primitive
+        shape: ellipse[w:1.0 h:0.45 fill:#F5F5F5 at:(-5,1.5)] -> fadeIn(0.6s, 3.2s) -> fadeOut(1.0s, 6.5s)
+
+      collapsed_coin:
+        type: primitive
+        shape: circle[r:0.3 fill:#ffd93d at:(-4,-1)] -> fadeIn(0.6s, 3.2s) -> fadeOut(1.0s, 6.5s)
+
+      collapsed_photon:
+        type: primitive
+        shape: circle[r:0.12 fill:#F5F5F5 at:(-3,1)] -> fadeIn(0.6s, 3.2s) -> fadeOut(1.0s, 6.5s)
+
+      phrase_1:
+        type: primitive
+        shape: text[text:"the universe is silent until asked" fontSize:24 fill:#7E8A8F at:(3.2,2.8)] -> fadeIn(0.8s, 1.0s)
+
+      keyword_1:
+        type: morph
+        shape: text[text:"ask" fontSize:44 fill:#4A6FA5 at:(5.0,0.0)] -> fadeIn(0.5s, 2.0s) ~> text[text:"snaps into focus" fontSize:36 fill:#F5F5F5 at:(5.0,0.0)] (1.2s, ease.out, 3.5s)

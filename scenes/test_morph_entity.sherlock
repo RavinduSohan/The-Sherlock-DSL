@@ -1,0 +1,279 @@
+concept: "MorphEntity Feature Test"
+emoji: "🔷"
+total_duration: 25
+background: "#0a0a1a"
+
+subtitles:
+  - "Movement Test"
+  - "Rotation Test"
+  - "Morphing Test"
+  - "All Features"
+
+phases:
+  movement_test:
+    duration: 5
+    description: "Testing movement"
+    elements:
+      move_left_right:
+        type: morph_entity
+        position: [-300, 100]
+        move_to: [300, 100]
+        move_duration: 5
+        move_style: ease_in_out
+        form: circle
+        size: 60
+        color: "#ff6b9d"
+        glow: true
+        energy: 0.9
+        motion_profile: fluid_organic
+        label: "Ease In/Out"
+      
+      move_bounce:
+        type: morph_entity
+        position: [-300, 0]
+        move_to: [300, 0]
+        move_duration: 5
+        move_style: elastic_bounce
+        form: square
+        size: 60
+        color: "#00ff88"
+        glow: true
+        energy: 0.9
+        motion_profile: high_energy
+        label: "Bounce"
+      
+      move_spring:
+        type: morph_entity
+        position: [-300, -100]
+        move_to: [300, -100]
+        move_duration: 5
+        move_style: spring_physics
+        form: star
+        size: 60
+        color: "#00d4ff"
+        glow: true
+        energy: 0.9
+        motion_profile: kinetic_dynamic
+        label: "Spring"
+  
+  rotation_test:
+    duration: 5
+    description: "Testing rotation"
+    elements:
+      rotate_circle:
+        type: morph_entity
+        position: [-150, 0]
+        form: square
+        size: 70
+        color: "#ffeaa7"
+        glow: true
+        energy: 0.9
+        motion_profile: stable_balanced
+        rotate_to: 360
+        rotate_duration: 5
+        rotate_style: ease_in_out
+        label: "360°"
+      
+      rotate_star:
+        type: morph_entity
+        position: [150, 0]
+        form: star
+        size: 70
+        color: "#a29bfe"
+        glow: true
+        energy: 0.9
+        motion_profile: kinetic_dynamic
+        rotate_to: 720
+        rotate_duration: 5
+        rotate_style: ease_in_out
+        label: "720°"
+  
+  morphing_test:
+    duration: 5
+    description: "Testing morphing"
+    elements:
+      morph_1:
+        type: morph_entity
+        position: [-200, 100]
+        form: circle
+        morph_to: square
+        morph_at: 1
+        morph_duration: 2
+        size: 70
+        color: "#e17055"
+        glow: true
+        energy: 0.9
+        motion_profile: fluid_organic
+        label: "Circle→Square"
+      
+      morph_2:
+        type: morph_entity
+        position: [0, 100]
+        form: square
+        morph_to: hexagon
+        morph_at: 1
+        morph_duration: 2
+        size: 70
+        color: "#00b894"
+        glow: true
+        energy: 0.9
+        motion_profile: stable_balanced
+        label: "Square→Hex"
+      
+      morph_3:
+        type: morph_entity
+        position: [200, 100]
+        form: triangle
+        morph_to: star
+        morph_at: 1
+        morph_duration: 2
+        size: 70
+        color: "#6c5ce7"
+        glow: true
+        energy: 0.9
+        motion_profile: kinetic_dynamic
+        label: "Triangle→Star"
+      
+      morph_rotate:
+        type: morph_entity
+        position: [-150, -80]
+        form: pentagon
+        morph_to: octagon
+        morph_at: 1
+        morph_duration: 2
+        size: 65
+        color: "#fdcb6e"
+        glow: true
+        energy: 0.9
+        motion_profile: high_energy
+        rotate_to: 360
+        rotate_duration: 5
+        rotate_style: ease_in_out
+        label: "Morph+Rotate"
+      
+      morph_move:
+        type: morph_entity
+        position: [150, -80]
+        move_to: [150, -80]
+        form: hexagon
+        morph_to: circle
+        morph_at: 1
+        morph_duration: 2
+        size: 65
+        color: "#ff6b9d"
+        glow: true
+        energy: 0.9
+        motion_profile: fluid_organic
+        label: "Hex→Circle"
+  
+  combined_test:
+    duration: 5
+    description: "All features together"
+    elements:
+      combo_1:
+        type: morph_entity
+        position: [-250, 0]
+        move_to: [250, 0]
+        move_duration: 5
+        move_style: ease_in_out
+        form: circle
+        morph_to: star
+        morph_at: 2
+        morph_duration: 1.5
+        size: 80
+        color: "#ff6b9d"
+        glow: true
+        energy: 1.0
+        motion_profile: high_energy
+        rotate_to: 720
+        rotate_duration: 5
+        rotate_style: ease_in_out
+        label: "Move+Morph+Rotate"
+      
+      combo_2:
+        type: morph_entity
+        position: [0, -150]
+        move_to: [0, 150]
+        move_duration: 5
+        move_style: spring_physics
+        form: square
+        morph_to: hexagon
+        morph_at: 2
+        morph_duration: 1.5
+        size: 70
+        color: "#00ff88"
+        glow: true
+        energy: 0.95
+        motion_profile: fluid_organic
+        rotate_to: 360
+        rotate_duration: 5
+        label: "Full Combo"
+  
+  finale:
+    duration: 5
+    description: "Grand finale"
+    elements:
+      center_star:
+        type: morph_entity
+        position: [0, 0]
+        form: star
+        morph_to: circle
+        morph_at: 2
+        morph_duration: 2
+        size: 120
+        color: "#ff6b9d"
+        glow: true
+        energy: 1.0
+        motion_profile: high_energy
+        rotate_to: 1080
+        rotate_duration: 5
+        rotate_style: ease_in_out
+        label: "✨ Success ✨"
+      
+      orbit_1:
+        type: morph_entity
+        position: [-180, 0]
+        form: hexagon
+        size: 55
+        color: "#00ff88"
+        glow: true
+        energy: 0.9
+        motion_profile: fluid_organic
+        rotate_to: 360
+        rotate_duration: 5
+      
+      orbit_2:
+        type: morph_entity
+        position: [180, 0]
+        form: circle
+        size: 55
+        color: "#00d4ff"
+        glow: true
+        energy: 0.9
+        motion_profile: kinetic_dynamic
+        rotate_to: -360
+        rotate_duration: 5
+      
+      orbit_3:
+        type: morph_entity
+        position: [0, -180]
+        form: triangle
+        size: 50
+        color: "#ffeaa7"
+        glow: true
+        energy: 0.85
+        motion_profile: fluid_organic
+        rotate_to: 720
+        rotate_duration: 5
+      
+      orbit_4:
+        type: morph_entity
+        position: [0, 180]
+        form: square
+        size: 50
+        color: "#a29bfe"
+        glow: true
+        energy: 0.85
+        motion_profile: stable_balanced
+        rotate_to: -720
+        rotate_duration: 5

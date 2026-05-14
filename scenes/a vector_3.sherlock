@@ -1,0 +1,540 @@
+concept: "Dot Product - Measuring Alignment"
+emoji: "⚫"
+total_duration: 30
+background: "#0a0a0a"
+autoplay: true
+loop: false
+
+subtitles:
+  - ""
+  - ""
+  - ""
+  - ""
+  - ""
+  - ""
+
+phases:
+  uphill_hike_question:
+    duration: 5
+    description: "Hook - Hiking and alignment concept"
+    elements:
+      title_label:
+        type: text
+        text: "🥾 The Uphill Hike Question"
+        position: [0, 240]
+        color: "#8b7355"
+        size: 28
+        font: "Georgia"
+        glow: true
+
+      explanation_text:
+        type: text
+        text: "Picture yourself hiking uphill. You take a step forward — but how much of that step\nactually gets you higher? That's not just distance. It's alignment."
+        position: [0, -180]
+        color: "#d4af37"
+        size: 18
+        font: "Cinzel Decorative"
+
+      hill_slope:
+        type: line
+        from: [0, 0]
+        to: [200, 100]
+        color: "#8b7355"
+        width: 8
+        label: "Hill"
+
+      hiker_step:
+        type: vector
+        from: [50, 25]
+        to: [150, 25]
+        color: "#2ecc71"
+        width: 4
+        arrowhead: true
+        glow: true
+        label: "Step Forward"
+
+      elevation_gain:
+        type: vector
+        from: [150, 25]
+        to: [150, 75]
+        color: "#f39c12"
+        width: 3
+        arrowhead: true
+        glow: true
+        label: "Height Gained"
+
+      projection_line:
+        type: line
+        from: [150, 25]
+        to: [150, 75]
+        color: "#f39c12"
+        width: 2
+        dashed: true
+
+      background_grid:
+        type: grid
+        style: "flat"
+        spacing: 25
+        density: 0.8
+        color: "#2c3e50"
+        opacity: 0.3
+
+      hill_direction:
+        type: vector
+        from: [0, 0]
+        to: [100, 50]
+        color: "#27ae60"
+        width: 2
+        arrowhead: true
+        label: "Hill Direction"
+
+
+  multiplication_confusion:
+    duration: 5
+    description: "Problem - Why multiplication doesn't work"
+    elements:
+      title_label:
+        type: text
+        text: "❓ The Multiplication Confusion"
+        position: [0, 240]
+        color: "#e74c3c"
+        size: 28
+        font: "Georgia"
+        glow: true
+
+      explanation_text:
+        type: text
+        text: "At first, multiplying two vectors sounds absurd. You can't multiply arrows like numbers.\nThat's the wrong lens."
+        position: [0, -180]
+        color: "#d4af37"
+        size: 18
+        font: "Cinzel Decorative"
+
+      confusion_text:
+        type: text
+        text: "Arrow × Arrow = ???"
+        position: [0, 0]
+        color: "#e74c3c"
+        size: 24
+        glow: true
+
+      wrong_1:
+        type: text
+        text: "Length × Length = ?"
+        position: [-100, 50]
+        color: "#e74c3c"
+        size: 16
+
+      wrong_2:
+        type: text
+        text: "Direction × Direction = ?"
+        position: [0, 50]
+        color: "#e74c3c"
+        size: 16
+
+      wrong_3:
+        type: text
+        text: "Arrow × Arrow = Nonsense"
+        position: [100, 50]
+        color: "#e74c3c"
+        size: 16
+
+      question_mark_1:
+        type: text
+        text: "❓"
+        position: [-150, -50]
+        color: "#f39c12"
+        size: 30
+
+      x_mark:
+        type: text
+        text: "❌"
+        position: [0, -50]
+        color: "#e74c3c"
+        size: 30
+
+      thinking_face:
+        type: text
+        text: "🤔"
+        position: [150, -50]
+        color: "#f39c12"
+        size: 30
+
+  alignment_revelation:
+    duration: 5
+    description: "Insight - Alignment is the key"
+    elements:
+      title_label:
+        type: text
+        text: "💡 The Alignment Revelation"
+        position: [0, 240]
+        color: "#2ecc71"
+        size: 28
+        font: "Georgia"
+        glow: true
+
+      explanation_text:
+        type: text
+        text: "The dot product is precisely that measure. If two arrows line up perfectly,\ntheir overlap is maximized."
+        position: [0, -180]
+        color: "#d4af37"
+        size: 16
+        font: "Cinzel Decorative"
+
+      vector_a:
+        type: vector
+        from: [0, 0]
+        to: [100, 0]
+        color: "#3498db"
+        width: 4
+        arrowhead: true
+        glow: true
+        label: "Vector A"
+
+      vector_b:
+        type: vector
+        from: [0, 0]
+        to: [70, 70]
+        color: "#e74c3c"
+        width: 4
+        arrowhead: true
+        glow: true
+        label: "Vector B"
+
+      angle_arc:
+        type: circle
+        center: [0, 0]
+        radius: 30
+        color: "#f39c12"
+        fill: false
+        glow: true
+
+      projection_line:
+        type: line
+        from: [70, 70]
+        to: [70, 0]
+        color: "#9b59b6"
+        width: 2
+        dashed: true
+        label: "Projection"
+
+      eureka_sparkles:
+        type: sparkles
+        count: 20
+        density: 15
+        color: "#f1c40f"
+
+      angle_label:
+        type: text
+        text: "θ = 45°"
+        position: [35, 20]
+        color: "#f39c12"
+        size: 14
+
+
+  mathematical_truth:
+    duration: 5
+    description: "Breakdown - The formal definition"
+    elements:
+      title_label:
+        type: text
+        text: "📐 The Mathematical Truth"
+        position: [0, 240]
+        color: "#58a6ff"
+        size: 26
+        font: "Georgia"
+        glow: true
+
+      explanation_text:
+        type: text
+        text: "Mathematically, it's written: a⋅b = |a||b|cos θ where θ is the angle between them.\nThe cosine captures the alignment."
+        position: [0, -180]
+        color: "#d4af37"
+        size: 16
+        font: "Cinzel Decorative"
+
+      math_vector_a:
+        type: vector
+        from: [0, 0]
+        to: [100, 0]
+        color: "#3498db"
+        width: 3
+        arrowhead: true
+        label: "a"
+
+      math_vector_b:
+        type: vector
+        from: [0, 0]
+        to: [70, 70]
+        color: "#e74c3c"
+        width: 3
+        arrowhead: true
+        label: "b"
+
+      magnitude_a:
+        type: text
+        text: "|a|"
+        position: [50, -15]
+        color: "#3498db"
+        size: 16
+
+      magnitude_b:
+        type: text
+        text: "|b|"
+        position: [25, 45]
+        color: "#e74c3c"
+        size: 16
+
+      angle_theta:
+        type: text
+        text: "θ = 45°"
+        position: [30, 15]
+        color: "#f39c12"
+        size: 14
+
+      cos_values:
+        type: text
+        text: "cos(0°) = 1    cos(90°) = 0    cos(180°) = -1"
+        position: [0, 120]
+        color: "#ffffff"
+        size: 12
+
+  projection_perspective:
+    duration: 5
+    description: "Alternative view - Vector projection"
+    elements:
+      title_label:
+        type: text
+        text: "📏 Projection Perspective"
+        position: [0, 240]
+        color: "#58a6ff"
+        size: 26
+        font: "Georgia"
+        glow: true
+
+      explanation_text:
+        type: text
+        text: "Another way to see it: project one arrow onto the other,\nthen measure how much of it remains."
+        position: [0, -180]
+        color: "#d4af37"
+        size: 16
+        font: "Cinzel Decorative"
+
+      base_vector:
+        type: vector
+        from: [0, 0]
+        to: [120, 0]
+        color: "#3498db"
+        width: 4
+        arrowhead: true
+        label: "Base Vector"
+
+      project_vector:
+        type: vector
+        from: [0, 0]
+        to: [80, 100]
+        color: "#e74c3c"
+        width: 4
+        arrowhead: true
+        label: "Vector to Project"
+
+      projection_result:
+        type: vector
+        from: [0, 0]
+        to: [64, 0]
+        color: "#27ae60"
+        width: 3
+        arrowhead: true
+        label: "Projection"
+
+      proj_line:
+        type: line
+        from: [80, 100]
+        to: [64, 0]
+        color: "#9b59b6"
+        width: 2
+        dashed: true
+
+      original_label:
+        type: text
+        text: "Original Length"
+        position: [40, 70]
+        color: "#e74c3c"
+        size: 12
+
+      projected_label:
+        type: text
+        text: "Projected Length"
+        position: [32, -20]
+        color: "#27ae60"
+        size: 12
+
+      alignment_factor:
+        type: text
+        text: "Alignment Factor = cos θ"
+        position: [0, 150]
+        color: "#f39c12"
+        size: 14
+
+
+  universal_alignment:
+    duration: 5
+    description: "Connection - Applications everywhere"
+    elements:
+      title_label:
+        type: text
+        text: "🌌 Universal Alignment"
+        position: [0, 240]
+        color: "#58a6ff"
+        size: 26
+        font: "Georgia"
+        glow: true
+
+      explanation_text:
+        type: text
+        text: "This principle appears everywhere: neurons firing together, light reflecting off surfaces,\neconomic trends correlating. Alignment measured as one number."
+        position: [0, -200]
+        color: "#d4af37"
+        size: 16
+        font: "Cinzel Decorative"
+
+      application_network:
+        type: neural_net
+        position: [0, 0]
+        layers: [3, 5, 3]
+        colors: ["#3498db", "#e74c3c", "#f39c12"]
+        animation_speed: 1.0
+
+      physics_example:
+        type: text
+        text: "Physics: Work = Force · Displacement"
+        position: [-200, 150]
+        color: "#3498db"
+        size: 14
+        glow: true
+
+      ml_example:
+        type: text
+        text: "ML: Similarity = Word₁ · Word₂"
+        position: [0, 150]
+        color: "#e74c3c"
+        size: 14
+        glow: true
+
+      graphics_example:
+        type: text
+        text: "Graphics: Lighting = Normal · Light"
+        position: [200, 150]
+        color: "#f39c12"
+        size: 14
+        glow: true
+
+      force_vector:
+        type: vector
+        from: [-250, 100]
+        to: [-200, 120]
+        color: "#3498db"
+        width: 2
+        arrowhead: true
+        label: "Force"
+
+      displacement_vector:
+        type: vector
+        from: [-250, 100]
+        to: [-230, 130]
+        color: "#27ae60"
+        width: 2
+        arrowhead: true
+        label: "Displacement"
+
+      word1_vector:
+        type: vector
+        from: [-50, 100]
+        to: [0, 120]
+        color: "#e74c3c"
+        width: 2
+        arrowhead: true
+        label: "Word₁"
+
+      word2_vector:
+        type: vector
+        from: [-50, 100]
+        to: [-20, 130]
+        color: "#9b59b6"
+        width: 2
+        arrowhead: true
+        label: "Word₂"
+
+      normal_vector:
+        type: vector
+        from: [150, 100]
+        to: [200, 120]
+        color: "#f39c12"
+        width: 2
+        arrowhead: true
+        label: "Normal"
+
+      light_vector:
+        type: vector
+        from: [150, 100]
+        to: [170, 130]
+        color: "#ffffff"
+        width: 2
+        arrowhead: true
+        label: "Light"
+
+
+      universal_sparkles:
+        type: sparkles
+        count: 12
+        density: 8
+        color: "#f1c40f"
+
+equations:
+  - id: initial_question
+    latex: "\\text{Step} \\cdot \\text{Hill Direction} = \\text{Height Gained}"
+    position: [400, 150]
+    phase: uphill_hike_question
+    animation: fade-in
+    glow: true
+    size: 18
+
+  - id: wrong_multiplication
+    latex: "\\text{Traditional multiplication doesn't work: } \\vec{a} \\times \\vec{b} \\neq \\text{number}"
+    position: [400, 300]
+    phase: multiplication_confusion
+    animation: slide-in
+    glow: true
+    size: 16
+
+  - id: alignment_concept
+    latex: "\\text{Alignment} = \\text{how much they point the same way}"
+    position: [400, 150]
+    phase: alignment_revelation
+    animation: fade-in
+    glow: true
+    size: 18
+
+  - id: dot_product_formula
+    latex: "\\vec{a} \\cdot \\vec{b} = |\\vec{a}||\\vec{b}|\\cos\\theta"
+    position: [400, 300]
+    phase: mathematical_truth
+    animation: fade-in
+    glow: true
+    size: 20
+
+  - id: projection_formula
+    latex: "\\text{proj}_{\\vec{b}}\\vec{a} = \\frac{\\vec{a} \\cdot \\vec{b}}{|\\vec{b}|^2}\\vec{b}"
+    position: [400, 450]
+    phase: projection_perspective
+    animation: slide-in
+    glow: true
+    size: 16
+
+  - id: universal_applications
+    latex: "\\text{Physics + ML + Graphics} = \\text{Dot Product Everywhere}"
+    position: [400, 450]
+    phase: universal_alignment
+    animation: fade-in
+    glow: true
+    size: 18

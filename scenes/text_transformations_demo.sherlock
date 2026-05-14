@@ -1,0 +1,99 @@
+# Beautiful Text Transformations Demo
+# Showcasing smooth, elegant text morphing
+
+concept: "Text Transformation Magic"
+emoji: "✨"
+total_duration: 30
+background: "#0f1419"
+
+subtitles:
+  - "✨ Text Transformation Magic"
+  - "Words Flow"
+  - "Numbers Dance"
+  - "Equations Transform"
+  - "Stories Unfold"
+
+phases:
+  intro:
+    duration: 5
+    description: "Introduction"
+    elements:
+      title:
+        type: primitive
+        shape: text[text:"Text Transformation Magic" fontSize:36 fill:#58a6ff at:(0,2.5)] -> fadeIn(1s)
+
+      subtitle:
+        type: primitive
+        shape: text[text:"Smooth. Beautiful. Effortless." fontSize:24 fill:#ffffff/0.7 at:(0,1.5)] -> fadeIn(1s, 1s)
+
+      demo:
+        type: morph
+        shape: text[text:"Watch" fontSize:48 fill:#ffd93d at:(0,-0.5)] ~> text[text:"Words" fontSize:48 fill:#ff6b9d at:(0,-0.5)] (0.5s, ease.out, 0.5s)
+
+  words_flow:
+    duration: 6
+    description: "Words Flow Beautifully"
+    elements:
+      title:
+        type: primitive
+        shape: text[text:"Words Flow" fontSize:28 fill:#58a6ff at:(0,3)]
+
+      transformation1:
+        type: morph
+        shape: text[text:"Simple" fontSize:44 fill:#6bcbff at:(0,0.5)] ~> text[text:"Elegant" fontSize:44 fill:#c77aff at:(0,0.5)] (1.2s, ease.out) ~> text[text:"Beautiful" fontSize:44 fill:#ffd93d at:(0,0.5)] (1.2s, ease.out, 2s)
+
+      transformation2:
+        type: morph
+        shape: text[text:"Transform" fontSize:36 fill:#ff6b9d at:(0,-1.5)] ~> text[text:"Morph" fontSize:36 fill:#6bffb8 at:(0,-1.5)] (2.5s, ease.out, 3s)
+
+  numbers_dance:
+    duration: 6
+    description: "Numbers Dance"
+    elements:
+      title:
+        type: primitive
+        shape: text[text:"Numbers Dance" fontSize:28 fill:#58a6ff at:(0,3)]
+
+      counting:
+        type: morph
+        shape: text[text:"1" fontSize:56 fill:#ff6b9d at:(-3,0)] ~> text[text:"2" fontSize:56 fill:#ffd93d at:(-3,0)] (1s, ease.out) ~> text[text:"3" fontSize:56 fill:#6bcbff at:(-3,0)] (1s, ease.out, 1s) ~> text[text:"4" fontSize:56 fill:#c77aff at:(-3,0)] (1s, ease.out, 1s) ~> text[text:"5" fontSize:56 fill:#6bffb8 at:(-3,0)] (1s, ease.out, 1s)
+
+      calculation:
+        type: morph
+        shape: text[text:"10 × 5" fontSize:40 fill:#ffffff at:(3,0.8)] ~> text[text:"= 50" fontSize:40 fill:#6bffb8 at:(3,0.8)] (2s, ease.out, 2s)
+
+      fraction:
+        type: morph
+        shape: text[text:"1/2" fontSize:40 fill:#ffd93d at:(3,-1)] ~> text[text:"0.5" fontSize:40 fill:#ff6b9d at:(3,-1)] (2s, ease.out, 3s)
+
+  equations_transform:
+    duration: 7
+    description: "Equations Transform"
+    elements:
+      title:
+        type: primitive
+        shape: text[text:"Equations Transform" fontSize:28 fill:#58a6ff at:(0,3)]
+
+      pythagorean:
+        type: morph
+        shape: text[text:"a² + b²" fontSize:44 fill:#6bcbff at:(0,1)] ~> text[text:"= c²" fontSize:44 fill:#c77aff at:(0,1)] (2.5s, ease.out) ~> text[text:"a² + b² = c²" fontSize:44 fill:#ffd93d at:(0,1)] (2.5s, ease.out, 2.5s)
+
+      energy:
+        type: morph
+        shape: text[text:"Energy" fontSize:36 fill:#ff6b9d at:(0,-1)] ~> text[text:"E = mc²" fontSize:36 fill:#6bffb8 at:(0,-1)] (3s, ease.out, 3.5s)
+
+  stories_unfold:
+    duration: 6
+    description: "Stories Unfold"
+    elements:
+      title:
+        type: primitive
+        shape: text[text:"Stories Unfold" fontSize:28 fill:#58a6ff at:(0,3)]
+
+      narrative:
+        type: morph
+        shape: text[text:"Once upon" fontSize:40 fill:#ffd93d at:(0,0.8)] ~> text[text:"a time" fontSize:40 fill:#ff6b9d at:(0,0.8)] (2s, ease.out) ~> text[text:"there was" fontSize:40 fill:#c77aff at:(0,0.8)] (2s, ease.out, 2s)
+
+      message:
+        type: morph
+        shape: text[text:"Hello" fontSize:48 fill:#6bcbff at:(0,-1.2)] ~> text[text:"World!" fontSize:48 fill:#6bffb8 at:(0,-1.2)] (2s, ease.out, 4s)

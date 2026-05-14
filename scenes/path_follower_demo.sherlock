@@ -1,0 +1,264 @@
+# Path Follower Options Demo
+# Showcase of all available path types for path_follower elements
+
+concept: "Path Following Demonstrations"
+emoji: "🛤️"
+total_duration: 15
+background: "#0f0f23"
+
+subtitles:
+  - "🌊 Sine Wave Paths"
+  - "⭕ Circular Orbits"
+  - "🌙 Semi-Circle Arcs"
+  - "➡️ Linear Paths"
+  - "♾️ Figure-8 Paths"
+  - "🌀 Spiral Paths"
+  - "🥚 Elliptical Paths"
+
+phases:
+  sine_paths:
+    duration: 2
+    description: "Objects following sine wave paths"
+    elements:
+      sine_path_particle:
+        type: path_follower
+        position: [-300, -200]
+        radius: 8
+        color: "#3498db"
+        glow: true
+        pathId: "sine"
+        amplitude: 60
+        frequency: 0.02
+        phaseShift: 0
+        startX: -350
+        endX: 350
+        pathSpeed: 1
+        pathOffset: 0
+        label: "Sine Wave"
+      
+      sine_title:
+        type: text
+        text: "🌊 Sine Wave Path"
+        position: [0, -100]
+        color: "#3498db"
+        size: 18
+        glow: true
+
+  circular_paths:
+    duration: 2
+    description: "Objects following circular paths"
+    elements:
+      circle_particle_1:
+        type: path_follower
+        position: [0, 0]
+        radius: 6
+        color: "#e74c3c"
+        glow: true
+        pathId: "circle"
+        orbitCenter: [-200, 0]
+        orbitRadius: 80
+        pathSpeed: 1
+        pathOffset: 0
+        clockwise: true
+        label: "Circle CW"
+      
+      circle_particle_2:
+        type: path_follower
+        position: [0, 0]
+        radius: 6
+        color: "#2ecc71"
+        glow: true
+        pathId: "orbit"
+        orbitCenter: [200, 0]
+        orbitRadius: 80
+        pathSpeed: 1
+        pathOffset: 0
+        clockwise: false
+        label: "Circle CCW"
+      
+      circle_title:
+        type: text
+        text: "⭕ Circular Paths"
+        position: [0, -100]
+        color: "#e74c3c"
+        size: 18
+        glow: true
+
+  semicircle_paths:
+    duration: 2
+    description: "Objects following semi-circle paths"
+    elements:
+      semicircle_particle:
+        type: path_follower
+        position: [0, 0]
+        radius: 7
+        color: "#f39c12"
+        glow: true
+        pathId: "semicircle"
+        orbitCenter: [0, 100]
+        orbitRadius: 120
+        pathSpeed: 1
+        pathOffset: 0
+        startAngle: 0
+        label: "Semi-Circle"
+      
+      semicircle_title:
+        type: text
+        text: "🌙 Semi-Circle Path"
+        position: [0, -100]
+        color: "#f39c12"
+        size: 18
+        glow: true
+
+  linear_paths:
+    duration: 2
+    description: "Objects following linear paths"
+    elements:
+      linear_particle_1:
+        type: path_follower
+        position: [0, 0]
+        radius: 8
+        color: "#9b59b6"
+        glow: true
+        pathId: "linear"
+        startX: -300
+        startY: -50
+        endX: 300
+        endY: 50
+        pathSpeed: 1
+        pathOffset: 0
+        label: "Linear Diagonal"
+      
+      linear_particle_2:
+        type: path_follower
+        position: [0, 0]
+        radius: 6
+        color: "#1abc9c"
+        glow: true
+        pathId: "linear"
+        startX: -250
+        startY: 100
+        endX: 250
+        endY: 100
+        pathSpeed: 1
+        pathOffset: 0.3
+        label: "Linear Horizontal"
+      
+      linear_title:
+        type: text
+        text: "➡️ Linear Paths"
+        position: [0, -100]
+        color: "#9b59b6"
+        size: 18
+        glow: true
+
+  figure8_paths:
+    duration: 2
+    description: "Objects following figure-8 paths"
+    elements:
+      figure8_particle:
+        type: path_follower
+        position: [0, 0]
+        radius: 7
+        color: "#e67e22"
+        glow: true
+        pathId: "figure8"
+        orbitCenter: [0, 50]
+        scale: 150
+        pathSpeed: 1
+        pathOffset: 0
+        label: "Figure-8"
+      
+      figure8_title:
+        type: text
+        text: "♾️ Figure-8 Path (Lemniscate)"
+        position: [0, -100]
+        color: "#e67e22"
+        size: 18
+        glow: true
+
+  spiral_paths:
+    duration: 2
+    description: "Objects following spiral paths"
+    elements:
+      spiral_particle:
+        type: path_follower
+        position: [0, 0]
+        radius: 8
+        color: "#8e44ad"
+        glow: true
+        pathId: "spiral"
+        orbitCenter: [0, 50]
+        maxRadius: 200
+        pathSpeed: 1
+        pathOffset: 0
+        label: "Spiral"
+      
+      spiral_title:
+        type: text
+        text: "🌀 Spiral Path"
+        position: [0, -200]
+        color: "#8e44ad"
+        size: 18
+        glow: true
+
+  ellipse_paths:
+    duration: 2
+    description: "Objects following elliptical paths"
+    elements:
+      ellipse_particle_1:
+        type: path_follower
+        position: [0, 0]
+        radius: 7
+        color: "#d35400"
+        glow: true
+        pathId: "ellipse"
+        orbitCenter: [-150, 0]
+        radiusX: 100
+        radiusY: 60
+        rotation: 0
+        pathSpeed: 1
+        pathOffset: 0
+        label: "Ellipse Normal"
+      
+      ellipse_particle_2:
+        type: path_follower
+        position: [0, 0]
+        radius: 6
+        color: "#27ae60"
+        glow: true
+        pathId: "ellipse"
+        orbitCenter: [150, 0]
+        radiusX: 80
+        radiusY: 50
+        rotation: 0.785398  # 45 degrees in radians
+        pathSpeed: 1
+        pathOffset: 0.5
+        label: "Ellipse Rotated"
+      
+      ellipse_title:
+        type: text
+        text: "🥚 Elliptical Paths"
+        position: [0, -150]
+        color: "#d35400"
+        size: 18
+        glow: true
+
+  all_paths_showcase:
+    duration: 1
+    description: "All paths together"
+    elements:
+      showcase_title:
+        type: text
+        text: "🛤️ All Path Types Available"
+        position: [0, -250]
+        color: "#f1c40f"
+        size: 20
+        glow: true
+      
+      path_summary:
+        type: text
+        text: "sine • circle/orbit • semicircle • linear • figure8 • spiral • ellipse"
+        position: [0, 200]
+        color: "#95a5a6"
+        size: 14

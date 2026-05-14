@@ -1,0 +1,116 @@
+# 🧪 Visual Effects Test - Single Image
+# Testing each visual effect individually to verify they work
+
+title: "Visual Effects Verification"
+width: 1920
+height: 1080
+fps: 60
+
+phases:
+  
+  # Test 1: Glow only
+  glow_only:
+    duration: 3
+    elements:
+      title:
+        type: text
+        text: "Test 1: GLOW Effect"
+        position: [0, 400]
+        size: 40
+        color: "#FFFFFF"
+      
+      image_glow:
+        type: image_card
+        source: "images/icons/spider.jpg"
+        position: [0, 0]
+        size: 300
+        glow: true
+        glow_color: "#ff0000"
+        glow_intensity: 40
+  
+  # Test 2: Border only
+  border_only:
+    duration: 3
+    elements:
+      title:
+        type: text
+        text: "Test 2: BORDER Effect"
+        position: [0, 400]
+        size: 40
+        color: "#FFFFFF"
+      
+      image_border:
+        type: image_card
+        source: "images/icons/spider.jpg"
+        position: [0, 0]
+        size: 300
+        border_width: 8
+        border_color: "#00ff00"
+        border_radius: 15
+  
+  # Test 3: Shadow only
+  shadow_only:
+    duration: 3
+    elements:
+      title:
+        type: text
+        text: "Test 3: DROP SHADOW Effect"
+        position: [0, 400]
+        size: 40
+        color: "#FFFFFF"
+      
+      image_shadow:
+        type: image_card
+        source: "images/icons/spider.jpg"
+        position: [0, 0]
+        size: 300
+        drop_shadow: true
+        shadow_blur: 30
+  
+  # Test 4: Credit only
+  credit_only:
+    duration: 3
+    elements:
+      title:
+        type: text
+        text: "Test 4: CREDIT Text"
+        position: [0, 400]
+        size: 40
+        color: "#FFFFFF"
+      
+      image_credit:
+        type: image_card
+        source: "images/icons/spider.jpg"
+        position: [0, 0]
+        size: 300
+        credit: "This is the credit text!"
+        credit_position: "bottom-right"
+  
+  # Test 5: All together
+  all_together:
+    duration: 5
+    elements:
+      title:
+        type: text
+        text: "Test 5: ALL EFFECTS COMBINED"
+        position: [0, 400]
+        size: 40
+        color: "#FFFFFF"
+        glow: true
+      
+      image_all:
+        type: image_card
+        source: "images/icons/spider.jpg"
+        position: [0, 0]
+        size: 350
+        glow: true
+        glow_color: "#667eea"
+        glow_intensity: 35
+        border_width: 6
+        border_color: "#ffffff"
+        border_radius: 20
+        drop_shadow: true
+        shadow_blur: 40
+        credit: "Photo Credit Here"
+        credit_position: "bottom-left"
+        fade_in: 1

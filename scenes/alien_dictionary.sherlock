@@ -1,0 +1,1175 @@
+concept: "Realistic Solar System"
+emoji: "🌌"
+total_duration: 140
+background: "#020511"
+
+subtitles:
+  - ""
+  - ""
+  - ""
+  - ""
+  - ""
+  - ""
+
+phases:
+  solar_system_introduction:
+    duration: 6
+    description: "Initialize the solar system with the Sun"
+    elements:
+      elevation_grid:
+        type: algorithm_grid
+        position: [-150, 180]
+        rows: 5
+        cols: 5
+        cellSize: 60
+        spacing: 6
+        color: "#ffffffc4"
+        border_color: "#34495e"
+        border_width: 3
+        cells: [["ᚠ", "ᚢ", "ᚦ", "ᚨ", "ᚱ"], ["ᚠ", "ᚢ", "ᚦ", "ᚨ", "ᚱ"], ["ᚠ", "ᚢ", "ᚦ", "ᚨ", "ᚱ"], ["ᚠ", "ᚢ", "ᚦ", "ᚨ", "ᚱ"], ["ᚠ", "ᚢ", "ᚦ", "ᚨ", "ᚱ"]]
+        showValues: true
+        label: "Elevation Grid"       
+     
+      perspective_grid:
+        type: grid
+        style: "perspective"
+        spacing: 40
+        density: 1
+        color: "#d4af37"
+        opacity: 0.7
+        glow: true
+        perspective_depth: 0.8
+               
+
+      pacific_label:
+        type: text
+        text: "🪐 Alien Dictionary 🌙  ☀️"
+        position: [0, 240]
+        color: "#3498db"
+        size: 24
+        font: "Georgia"        
+
+      pacific_not_label:
+        type: text
+        text: "An alien civilization… a strange language… and a dictionary you just found. \nThe words are already sorted in THEIR order.Your mission:\n decipher the exact order of their alphabet… or we’ll never read their texts."
+        position: [0, -230]
+        color: "#d4af37"
+        size: 20
+        font: "Cinzel Decorative"      
+
+  scene1:
+    duration: 12
+    description: "Initialize the solar system with the Sun"
+    elements:
+      pacific_label:
+        type: text
+        text: "🛸 Let's Make Aliens Proud 👽"
+        position: [0, 240]
+        color: "#2ecc71"
+        size: 24
+        font: "Georgia"     
+
+      circle2:
+        type: circle
+        center: [0, 0]
+        radius: 20
+        color: "#f39c12"
+        glow: true        
+        fill: true
+        label: "☀️ Sun"        
+
+      circle3:
+        type: circle
+        position: [0, 0]
+        radius: 25
+        color: "#FFA500"
+        opacity: 0.3
+        glow: true
+
+      mercury:
+        type: path_follower
+        position: [50, 0]
+        pathId: "orbit"
+        orbitCenter: [0, 0]
+        orbitRadius: 40
+        pathSpeed: 8.0
+        pathOffset: 0
+        startAngle: 0
+        radius: 3
+        color: "#8C7853"
+        clockwise: true
+        glow: false
+        label: "Mercury"
+      
+      # Venus - Second planet, retrograde rotation
+      venus:
+        type: path_follower
+        position: [70, 0]
+        pathId: "orbit"
+        orbitCenter: [0, 0]
+        orbitRadius: 50
+        pathSpeed: 6.2
+        pathOffset: 0
+        startAngle: 1.8
+        radius: 4
+        color: "#FFC649"
+        clockwise: true
+        glow: true
+        label: "Venus"
+      
+      # Earth - Our home planet
+      earth:
+        type: path_follower
+        position: [100, 0]
+        pathId: "orbit"
+        orbitCenter: [0, 0]
+        orbitRadius: 70
+        pathSpeed: 5.0
+        pathOffset: 0
+        startAngle: 3.14
+        radius: 5
+        color: "#6B93D6"
+        clockwise: true
+        glow: true
+        label: "Earth"
+      
+      # Mars - The red planet
+      mars:
+        type: path_follower
+        position: [130, 0]
+        pathId: "orbit"
+        orbitCenter: [0, 0]
+        orbitRadius: 85
+        pathSpeed: 3.8
+        pathOffset: 0
+        startAngle: 0.5
+        radius: 4
+        color: "#CD5C5C"
+        clockwise: true
+        glow: false
+        label: "Mars"
+
+
+      jupiter:
+        type: path_follower
+        position: [180, 0]
+        pathId: "orbit"
+        orbitCenter: [0, 0]
+        orbitRadius: 180
+        pathSpeed: 2.2
+        pathOffset: 0
+        startAngle: 4.5
+        radius: 12
+        color: "#D8CA9D"
+        clockwise: true
+        glow: true
+        label: "Jupiter"
+      
+      # Saturn - Ringed planet
+      saturn:
+        type: path_follower
+        position: [220, 0]
+        pathId: "orbit"
+        orbitCenter: [0, 0]
+        orbitRadius: 220
+        pathSpeed: 1.8
+        pathOffset: 0
+        startAngle: 2.1
+        radius: 10
+        color: "#FAD5A5"
+        clockwise: true
+        glow: true
+        label: "Saturn"
+      
+      # Saturn's rings (simplified)
+      saturn_rings:
+        type: path_follower
+        position: [220, 0]
+        pathId: "orbit"
+        orbitCenter: [0, 0]
+        orbitRadius: 220
+        pathSpeed: 1.8
+        pathOffset: 0
+        startAngle: 2.1
+        radius: 15
+        color: "#FAD5A5"
+        opacity: 0.3
+        clockwise: true
+        fill: false
+        label: "Saturn Rings"
+      
+      # Uranus - Ice giant, tilted
+      uranus:
+        type: path_follower
+        position: [260, 0]
+        pathId: "orbit"
+        orbitCenter: [0, 0]
+        orbitRadius: 260
+        pathSpeed: 1.4
+        pathOffset: 0
+        startAngle: 5.8
+        radius: 7
+        color: "#4FD0E4"
+        clockwise: true
+        glow: true
+        label: "Uranus"
+      
+      # Neptune - Farthest planet, deep blue
+      neptune:
+        type: path_follower
+        position: [300, 0]
+        pathId: "orbit"
+        orbitCenter: [0, 0]
+        orbitRadius: 300
+        pathSpeed: 1.0
+        pathOffset: 0
+        startAngle: 1.2
+        radius: 7
+        color: "#4169E1"
+        clockwise: true
+        glow: true
+        label: "Neptune"
+
+      asteroid_1:
+        type: path_follower
+        position: [155, 0]
+        pathId: "orbit"
+        orbitCenter: [0, 0]
+        orbitRadius: 155
+        pathSpeed: 3.0
+        pathOffset: 0
+        startAngle: 0.2
+        radius: 1
+        color: "#A0A0A0"
+        clockwise: true
+        label: "Asteroid"
+      
+      asteroid_2:
+        type: path_follower
+        position: [160, 0]
+        pathId: "orbit"
+        orbitCenter: [0, 0]
+        orbitRadius: 160
+        pathSpeed: 2.9
+        pathOffset: 0
+        startAngle: 2.8
+        radius: 1
+        color: "#A0A0A0"
+        clockwise: true
+        label: "Asteroid"
+      
+      asteroid_3:
+        type: path_follower
+        position: [165, 0]
+        pathId: "orbit"
+        orbitCenter: [0, 0]
+        orbitRadius: 165
+        pathSpeed: 2.8
+        pathOffset: 0
+        startAngle: 4.1
+        radius: 1
+        color: "#A0A0A0"
+        clockwise: true
+        label: "Asteroid"
+      
+      asteroid_belt_label:
+        type: text
+        text: "🪨 Asteroid Belt"
+        position: [0, 180]
+        color: "#A0A0A0"
+        size: 14              
+
+      data_flow:
+        type: sparkles
+        count: 10
+
+  scene2:
+    duration: 10
+    description: "Initialize the solar system with the Sun"
+    elements:
+      array_step1:
+        type: algorithm_array
+        position: [-150, 220]
+        items: ["wrt", "wrf", "er", "ett", "rftt"]
+        highlights: [1,2]
+        color: "#3498db"
+        cellSize: 60
+        showIndices: true      
+
+      array_step2:
+        type: algorithm_array
+        position: [-230, 120]
+        items: ["w", "r", "f"]
+        highlights: [0]
+        color: "#3498db"
+        cellSize: 60
+        showIndices: true      
+
+      array_step3:
+        type: algorithm_array
+        position: [190, 120]
+        items: ["e", "r"]
+        highlights: [0]
+        color: "#3498db"
+        cellSize: 60
+        showIndices: true    
+
+
+      pacific_not_label_1:
+        type: text
+        text: "The first character where they differ?"
+        position: [0, -30]
+        color: "#1976d2"
+        size: 24
+        font: "Georgia"            
+
+      node_a:
+        type: algorithm_node
+        position: [-180, -150]
+        color: "#238636"
+        value: "w"
+        visited: true
+        glow: true
+        label: "Visited!"                   # Root value
+         
+
+      node_b:
+        type: algorithm_node
+        position: [60, -150]
+        color: "#238636"
+        value: "e"
+        visited: true
+        glow: true
+        label: "Visited!"            
+
+      edge_bd:
+        type: algorithm_edge
+        from: "node_a"
+        to: "node_b"
+        color: "#30363d"
+        label: "Connection"    
+
+   scene3:
+    duration: 10
+    description: "Initialize the solar system with the Sun"
+    elements:
+      array_step1:
+        type: algorithm_array
+        position: [-150, 220]
+        items: ["wrt", "wrf", "er", "ett", "rftt"]
+        highlights: [1,2]
+        color: "#3498db"
+        cellSize: 40
+        showIndices: true                
+
+      node_a:
+        type: algorithm_node
+        position: [-160, 120]
+        color: "#238636"
+        value: "w"
+        visited: true
+        glow: true
+        label: "Visited!"                   # Root value
+         
+      node_b:
+        type: algorithm_node
+        position: [60, 60]
+        color: "#238636"
+        value: "e"
+        visited: true
+        glow: true
+        label: "Visited!"    
+
+      node_c:
+        type: algorithm_node
+        position: [-160, 0]
+        color: "#238636"
+        value: "r"
+        visited: true
+        glow: true
+        label: "Visited!"                   # Root value
+         
+      node_d:
+        type: algorithm_node
+        position: [60, -60]
+        color: "#238636"
+        value: "t"
+        visited: true
+        glow: true
+        label: "Visited!"     
+
+      node_e:
+        type: algorithm_node
+        position: [-160, -120]
+        color: "#238636"
+        value: "f"
+        visited: true
+        glow: true
+        label: "Visited!"              
+
+      edge_bd_1:
+        type: algorithm_edge
+        from: "node_a"
+        to: "node_b"
+        color: "#30363d"
+        label: "Connection"       
+
+      edge_bd_2:
+        type: algorithm_edge
+        from: "node_b"
+        to: "node_c"
+        color: "#30363d"
+        label: "Connection"             
+
+      edge_bd_3:
+        type: algorithm_edge
+        from: "node_c"
+        to: "node_d"
+        color: "#30363d"
+        label: "Connection"  
+
+      edge_bd_4:
+        type: algorithm_edge
+        from: "node_d"
+        to: "node_e"
+        color: "#30363d"
+        label: "Connection"         
+
+   scene4:
+    duration: 10
+    description: "Initialize the solar system with the Sun"
+    elements:
+      array_step3:
+        type: algorithm_array
+        position: [-100, 200]
+        items: ["e", "", "", "", ""]
+        highlights: [0]
+        color: "#3498db"
+        cellSize: 40
+        showIndices: true    
+
+      array_step4:
+        type: algorithm_array
+        position: [-100, 120]
+        items: ["r", "", "", "", ""]
+        highlights: [0]
+        color: "#3498db"
+        cellSize: 40
+        showIndices: true    
+
+      array_step5:
+        type: algorithm_array
+        position: [-100, 40]
+        items: ["t", "", "", "", ""]
+        highlights: [0]
+        color: "#3498db"
+        cellSize: 40
+        showIndices: true    
+      
+      array_step6:
+        type: algorithm_array
+        position: [-100, -40]
+        items: ["f", "", "", "", ""]
+        highlights: [0]
+        color: "#3498db"
+        cellSize: 40
+        showIndices: true          
+
+      array_step7:
+        type: algorithm_array
+        position: [-100, -120]
+        items: ["", "", "", "", ""]
+        color: "#3498db"
+        cellSize: 40
+        showIndices: true     
+
+      pacific_not_label_1:
+        type: text
+        text: "w:"
+        position: [-120, 180]
+        color: "#1976d2"
+        size: 24
+        font: "Georgia"            
+
+      pacific_not_label_2:
+        type: text
+        text: "e:"
+        position: [-120, 100]
+        color: "#1976d2"
+        size: 24
+        font: "Georgia"     
+
+      pacific_not_label_3:
+        type: text
+        text: "r:"
+        position: [-120, 20]
+        color: "#1976d2"
+        size: 24
+        font: "Georgia"          
+
+      pacific_not_label_4:
+        type: text
+        text: "t:"
+        position: [-120, -60]
+        color: "#1976d2"
+        size: 24
+        font: "Georgia"            
+
+      pacific_not_label_5:
+        type: text
+        text: "f:"
+        position: [-120, -140]
+        color: "#1976d2"
+        size: 24
+        font: "Georgia"             
+
+      pacific_not_label_6:
+        type: text
+        text: "Adjacency List 🏅"
+        position: [0, 220]
+        color: "#238636"
+        size: 26
+        font: "Georgia"             
+
+      pacific_not_label_7:
+        type: text
+        text: "🕵️Conclusion: no edges points toward letter w. In that case letter w must be \nthe first letter of alien alphabet…"
+        position: [0, -190]
+        color: "#9c27b0"
+        size: 22
+        font: "Georgia"     
+
+
+   scene6:
+    duration: 10
+    description: "Initialize the solar system with the Sun"
+    elements:        
+      node_a:
+        type: algorithm_node
+        position: [-160, 120]
+        color: "#238636"
+        value: "w"
+        visited: true
+        glow: true
+        label: "Visited!"                   # Root value
+         
+      node_b:
+        type: algorithm_node
+        position: [60, 60]
+        color: "#238636"
+        value: "e"
+        visited: true
+        glow: true
+        label: "Visited!"    
+
+      node_c:
+        type: algorithm_node
+        position: [-160, 0]
+        color: "#238636"
+        value: "r"
+        visited: true
+        glow: true
+        label: "Visited!"                   # Root value
+         
+      node_d:
+        type: algorithm_node
+        position: [60, -60]
+        color: "#238636"
+        value: "t"
+        visited: true
+        glow: true
+        label: "Visited!"     
+
+      node_e:
+        type: algorithm_node
+        position: [-160, -120]
+        color: "#238636"
+        value: "f"
+        visited: true
+        glow: true
+        label: "Visited!"              
+
+      edge_bd_1:
+        type: algorithm_edge
+        from: "node_a"
+        to: "node_b"
+        color: "#30363d"
+        label: "Connection"       
+
+      edge_bd_2:
+        type: algorithm_edge
+        from: "node_b"
+        to: "node_c"
+        color: "#30363d"
+        label: "Connection"             
+
+      edge_bd_3:
+        type: algorithm_edge
+        from: "node_c"
+        to: "node_d"
+        color: "#30363d"
+        label: "Connection"  
+
+      edge_bd_4:
+        type: algorithm_edge
+        from: "node_d"
+        to: "node_e"
+        color: "#30363d"
+        label: "Connection"         
+
+   scene7:
+    duration: 10
+    description: "Dictionary Word Order"
+    elements:
+      array_step3:
+        type: algorithm_array
+        position: [-150, 100]
+        items: ["w", "e", "r", "t", "f"]
+        highlights: [0]
+        color: "#3498db"
+        cellSize: 40
+        showIndices: true    
+
+      pacific_not_label_1:
+        type: text
+        text: "Dictionary Word Order:"
+        position: [-190, 180]
+        color: "#1976d2"
+        size: 24
+        font: "Georgia"
+
+  building_cosmic_graph:
+    duration: 12
+    description: "Building the Cosmic Graph 🔭"
+    elements:
+      word_array:
+        type: algorithm_array
+        position: [-175, 150]
+        items: ["wrt", "wrf", "er", "ett", "rftt"]
+        highlights: [1, 2]
+        color: "#3498db"
+        cellSize: 50
+        showIndices: true
+
+      title_text:
+        type: text
+        text: "🔭 Building the Cosmic Graph"
+        position: [0, 250]
+        color: "#58a6ff"
+        size: 26
+        font: "Georgia"
+        glow: true
+
+      explanation_text:
+        type: text
+        text: "Compare adjacent words to find ordering relationships.\nThe first differing character reveals the alien alphabetical order."
+        position: [0, -150]
+        color: "#d4af37"
+        size: 18
+        font: "Cinzel Decorative"
+
+      # Orbiting planets metaphor
+      planet_1:
+        type: path_follower
+        position: [100, 0]
+        pathId: "orbit"
+        orbitCenter: [150, 0]
+        orbitRadius: 40
+        pathSpeed: 2.0
+        radius: 6
+        color: "#e74c3c"
+        glow: true
+        clockwise: true
+
+      planet_2:
+        type: path_follower
+        position: [200, 0]
+        pathId: "orbit"
+        orbitCenter: [150, 0]
+        orbitRadius: 70
+        pathSpeed: 1.5
+        radius: 8
+        color: "#2ecc71"
+        glow: true
+        clockwise: true
+
+  constructing_character_graph:
+    duration: 12
+    description: "Constructing the Character Graph 🕸️"
+    elements:
+      title_text:
+        type: text
+        text: "🕸️ Constructing the Character Graph"
+        position: [0, 250]
+        color: "#58a6ff"
+        size: 26
+        font: "Georgia"
+        glow: true
+
+      node_w:
+        type: algorithm_node
+        position: [-175, 125]
+        color: "#238636"
+        value: "w"
+        visited: true
+        glow: true
+        radius: 25
+
+      node_e:
+        type: algorithm_node
+        position: [175, 125]
+        color: "#238636"
+        value: "e"
+        visited: true
+        glow: true
+        radius: 25
+
+      node_r:
+        type: algorithm_node
+        position: [-175, -125]
+        color: "#238636"
+        value: "r"
+        visited: true
+        glow: true
+        radius: 25
+
+      node_t:
+        type: algorithm_node
+        position: [175, -125]
+        color: "#238636"
+        value: "t"
+        visited: true
+        glow: true
+        radius: 25
+
+      node_f:
+        type: algorithm_node
+        position: [0, 0]
+        color: "#238636"
+        value: "f"
+        visited: true
+        glow: true
+        radius: 25
+
+      edge_we:
+        type: algorithm_edge
+        from: "node_w"
+        to: "node_e"
+        color: "#d4af37"
+        width: 3
+        highlighted: true
+
+      edge_er:
+        type: algorithm_edge
+        from: "node_e"
+        to: "node_r"
+        color: "#d4af37"
+        width: 3
+        highlighted: true
+
+      edge_rt:
+        type: algorithm_edge
+        from: "node_r"
+        to: "node_t"
+        color: "#d4af37"
+        width: 3
+        highlighted: true
+
+      edge_tf:
+        type: algorithm_edge
+        from: "node_t"
+        to: "node_f"
+        color: "#d4af37"
+        width: 3
+        highlighted: true
+
+      explanation_text:
+        type: text
+        text: "Each character comparison creates an edge in our graph:\nw→e from 'wrt' vs 'wrf', e→r from 'wrf' vs 'er', etc."
+        position: [0, -200]
+        color: "#d4af37"
+        size: 16
+        font: "Cinzel Decorative"
+
+      # Sparkling connections
+      sparkles:
+        type: sparkles
+        count: 15
+        density: 20
+        color: "#ffd700"
+
+  topological_sorting:
+    duration: 12
+    description: "Topological Sorting: Finding Order 🧭"
+    elements:
+      title_text:
+        type: text
+        text: "🧭 Topological Sorting: Finding Order"
+        position: [0, 250]
+        color: "#58a6ff"
+        size: 26
+        font: "Georgia"
+        glow: true
+
+      adjacency_label_w:
+        type: text
+        text: "w:"
+        position: [-200, 150]
+        color: "#1976d2"
+        size: 20
+        font: "Georgia"
+
+      adjacency_array_w:
+        type: algorithm_array
+        position: [-150, 150]
+        items: ["e", "", "", "", ""]
+        highlights: [0]
+        color: "#3498db"
+        cellSize: 30
+        showIndices: false
+
+      adjacency_label_e:
+        type: text
+        text: "e:"
+        position: [-200, 100]
+        color: "#1976d2"
+        size: 20
+        font: "Georgia"
+
+      adjacency_array_e:
+        type: algorithm_array
+        position: [-150, 100]
+        items: ["r", "", "", "", ""]
+        highlights: [0]
+        color: "#3498db"
+        cellSize: 30
+        showIndices: false
+
+      adjacency_label_r:
+        type: text
+        text: "r:"
+        position: [-200, 50]
+        color: "#1976d2"
+        size: 20
+        font: "Georgia"
+
+      adjacency_array_r:
+        type: algorithm_array
+        position: [-150, 50]
+        items: ["t", "", "", "", ""]
+        highlights: [0]
+        color: "#3498db"
+        cellSize: 30
+        showIndices: false
+
+      adjacency_label_t:
+        type: text
+        text: "t:"
+        position: [-200, 0]
+        color: "#1976d2"
+        size: 20
+        font: "Georgia"
+
+      adjacency_array_t:
+        type: algorithm_array
+        position: [-150, 0]
+        items: ["f", "", "", "", ""]
+        highlights: [0]
+        color: "#3498db"
+        cellSize: 30
+        showIndices: false
+
+      adjacency_label_f:
+        type: text
+        text: "f:"
+        position: [-200, -50]
+        color: "#1976d2"
+        size: 20
+        font: "Georgia"
+
+      adjacency_array_f:
+        type: algorithm_array
+        position: [-150, -50]
+        items: ["", "", "", "", ""]
+        color: "#3498db"
+        cellSize: 30
+        showIndices: false
+
+      explanation_text:
+        type: text
+        text: "Letters with no incoming edges must come first in the alphabet.\nWe remove them and update the graph recursively."
+        position: [0, -150]
+        color: "#d4af37"
+        size: 16
+        font: "Cinzel Decorative"
+
+      adjacency_title:
+        type: text
+        text: "Adjacency List 📊"
+        position: [0, 200]
+        color: "#238636"
+        size: 22
+        font: "Georgia"
+
+  kahns_algorithm:
+    duration: 12
+    description: "Kahn's Algorithm in Action ⚡"
+    elements:
+      title_text:
+        type: text
+        text: "⚡ Kahn's Algorithm in Action"
+        position: [0, 250]
+        color: "#58a6ff"
+        size: 26
+        font: "Georgia"
+        glow: true
+
+      # Show current processing node
+      current_node_w:
+        type: algorithm_node
+        position: [-175, 125]
+        color: "#f39c12"
+        value: "w"
+        visited: true
+        glow: true
+        radius: 30
+        highlighted: true
+
+      node_e_waiting:
+        type: algorithm_node
+        position: [175, 125]
+        color: "#95a5a6"
+        value: "e"
+        visited: false
+        radius: 25
+
+      node_r_waiting:
+        type: algorithm_node
+        position: [-175, -125]
+        color: "#95a5a6"
+        value: "r"
+        visited: false
+        radius: 25
+
+      node_t_waiting:
+        type: algorithm_node
+        position: [175, -125]
+        color: "#95a5a6"
+        value: "t"
+        visited: false
+        radius: 25
+
+      node_f_waiting:
+        type: algorithm_node
+        position: [0, 0]
+        color: "#95a5a6"
+        value: "f"
+        visited: false
+        radius: 25
+
+      # Processing queue
+      queue_label:
+        type: text
+        text: "Processing Queue:"
+        position: [-50, -180]
+        color: "#1976d2"
+        size: 18
+        font: "Georgia"
+
+      processing_queue:
+        type: algorithm_array
+        position: [100, -180]
+        items: ["w"]
+        highlights: [0]
+        color: "#f39c12"
+        cellSize: 35
+        showIndices: false
+
+      explanation_text:
+        type: text
+        text: "Start with 'w' (no incoming edges), remove it and its outgoing connections,\nthen find the next character with zero dependencies."
+        position: [0, -230]
+        color: "#d4af37"
+        size: 16
+        font: "Cinzel Decorative"
+
+  final_alien_alphabet:
+    duration: 10
+    description: "The Final Alien Alphabet 🔤"
+    elements:
+      title_text:
+        type: text
+        text: "🔤 The Final Alien Alphabet"
+        position: [0, 250]
+        color: "#58a6ff"
+        size: 26
+        font: "Georgia"
+        glow: true
+
+      final_order:
+        type: algorithm_array
+        position: [-175, 125]
+        items: ["w", "e", "r", "t", "f"]
+        highlights: [0, 1, 2, 3, 4]
+        color: "#2ecc71"
+        cellSize: 50
+        showIndices: true
+
+      success_text:
+        type: text
+        text: "The topological sort gives us the complete ordering:\nw < e < r < t < f"
+        position: [0, 0]
+        color: "#2ecc71"
+        size: 20
+        font: "Georgia"
+        glow: true
+
+      celebration_text:
+        type: text
+        text: "🎉 We've deciphered the alien alphabet! 🎉"
+        position: [0, -100]
+        color: "#ffd700"
+        size: 22
+        font: "Georgia"
+        glow: true
+
+      # Celebration effects
+      fireworks:
+        type: fireworks
+        position: [0, 180]
+        count: 8
+        colors: ["#2ecc71", "#f39c12", "#58a6ff", "#e74c3c"]
+
+      sparkles_celebration:
+        type: sparkles
+        count: 25
+        density: 30
+        color: "#ffd700"
+
+  mission_accomplished:
+    duration: 8
+    description: "Mission Accomplished: Universal Understanding 🌟"
+    elements:
+      title_text:
+        type: text
+        text: "🌟 Mission Accomplished: Universal Understanding"
+        position: [0, 250]
+        color: "#58a6ff"
+        size: 24
+        font: "Georgia"
+        glow: true
+
+      star_celebration:
+        type: star_field
+        density: 1.8
+
+      success_message:
+        type: text
+        text: "With the alien alphabet deciphered, we can now read their texts\nand establish communication. Another cosmic mystery solved\nthrough graph theory!"
+        position: [0, 0]
+        color: "#d4af37"
+        size: 18
+        font: "Cinzel Decorative"
+        glow: true
+
+      # Harmonious solar system representation
+      harmony_sun:
+        type: circle
+        center: [0, -100]
+        radius: 15
+        color: "#f39c12"
+        glow: true
+        fill: true
+
+      harmony_planet_1:
+        type: path_follower
+        position: [40, -100]
+        pathId: "orbit"
+        orbitCenter: [0, -100]
+        orbitRadius: 40
+        pathSpeed: 3.0
+        radius: 4
+        color: "#3498db"
+        glow: true
+        clockwise: true
+
+      harmony_planet_2:
+        type: path_follower
+        position: [60, -100]
+        pathId: "orbit"
+        orbitCenter: [0, -100]
+        orbitRadius: 60
+        pathSpeed: 2.0
+        radius: 5
+        color: "#2ecc71"
+        glow: true
+        clockwise: true
+
+      harmony_planet_3:
+        type: path_follower
+        position: [80, -100]
+        pathId: "orbit"
+        orbitCenter: [0, -100]
+        orbitRadius: 80
+        pathSpeed: 1.5
+        radius: 6
+        color: "#e74c3c"
+        glow: true
+        clockwise: true
+
+equations:
+  - id: alien_alphabet_definition
+    latex: "\\text{Alien Alphabet} = \\{a_1, a_2, a_3, \\dots, a_n\\} \\text{ where } a_1 < a_2 < a_3 < \\dots < a_n"
+    position: [400, 150]
+    phase: solar_system_introduction
+    animation: fade-in
+    glow: true
+    size: 14
+
+  - id: word_comparison
+    latex: "\\text{For words } w_i, w_{i+1}: \\text{ find first } j \\text{ where } w_i[j] \\neq w_{i+1}[j] \\Rightarrow w_i[j] < w_{i+1}[j]"
+    position: [500, 400]
+    phase: building_cosmic_graph
+    animation: slide-in
+    glow: true
+    size: 12
+
+  - id: graph_definition
+    latex: "G = (V, E) \\text{ where } V = \\{\\text{unique characters}\\}, E = \\{(c_i, c_j) \\mid c_i < c_j\\}"
+    position: [400, 150]
+    phase: constructing_character_graph
+    animation: fade-in
+    glow: true
+    size: 14
+
+  - id: topological_order
+    latex: "\\text{Topological Order: } \\text{while } V \\neq \\emptyset \\text{ remove } v \\text{ with } \\text{in-degree}(v) = 0"
+    position: [400, 300]
+    phase: topological_sorting
+    animation: slide-in
+    glow: true
+    size: 12
+
+  - id: kahns_algorithm
+    latex: "S \\leftarrow \\{v \\in V \\mid \\text{in-degree}(v) = 0\\}, \\quad L \\leftarrow [] \\\\ \\text{while } S \\neq \\emptyset \\text{ remove } n \\text{ from } S, \\text{ add to } L, \\text{ update neighbors}"
+    position: [400, 450]
+    phase: kahns_algorithm
+    animation: fade-in
+    glow: true
+    size: 10
+
+  - id: final_order
+    latex: "\\text{Alien Order} = [w, e, r, t, f] \\\\ \\text{where } w < e < r < t < f"
+    position: [400, 150]
+    phase: final_alien_alphabet
+    animation: fade-in
+    glow: true
+    size: 16
+
+  - id: success_formula
+    latex: "\\text{Success} = \\text{TopologicalSort}(\\text{CharacterGraph}(\\text{Dictionary}))"
+    position: [400, 300]
+    phase: mission_accomplished
+    animation: slide-in
+    glow: true
+    size: 14

@@ -1,0 +1,1311 @@
+concept: "Schrödinger's Cat: Quantum Superposition and Observation"
+emoji: "⚛️"
+total_duration: 214
+background: "#0a0a0a"
+
+subtitles:
+  - ""
+  - ""
+  - ""
+  - ""
+  - ""
+  - ""
+  - ""
+  - ""
+  - ""
+
+phases:
+  scene_1:
+    duration: 7
+    static_hold_time: 5
+    description: "Opening transformation: particle splitting into dual quantum states with probability visualization"
+    elements:
+      # Hook Primary - Center top
+      hook_primary:
+        type: text
+        text: "Single particle existing in multiple places simultaneously"
+        position: [0, 180]
+        size: 14
+        color: "#ffffff"
+        glow: true
+        font: "Arial"
+        
+      # Hook Secondary - Center below primary
+      hook_secondary:
+        type: text
+        text: "Not a metaphor — literal quantum reality"
+        position: [0, 220]
+        size: 13
+        color: "#95a5a6"
+        glow: false
+        font: "Arial"
+        
+      # LEFT SIDE: Central particle splitting
+      quantum_particle:
+        type: morph_entity
+        position: [-180, -60]
+        form: circle
+        size: 65
+        color: "#00ffff"
+        motion_profile: high_energy
+        glow: true
+        energy: 1.0
+        split_at: 1.5
+        split_into: 8
+        split_pattern: radial_burst
+        split_spacing: 140
+        rotate_to: 720
+        rotate_style: ease_in_out
+        rotate_duration: 6
+        label: "Quantum"
+      
+      # LEFT SIDE: Superposition state representation
+      superposition_states:
+        type: morph_entity
+        position: [-180, 140]
+        form: hexagon
+        size: 55
+        color: "#9b59b6"
+        motion_profile: fluid_organic
+        glow: true
+        energy: 0.85
+        split_at: 2.0
+        split_into: 6
+        split_pattern: circular_formation
+        split_spacing: 110
+        rotate_to: 360
+        rotate_style: ease_in_out
+        rotate_duration: 6
+        label: "States"
+        
+      # RIGHT SIDE: Evidence text (centered around y=0)
+      evidence_point_1:
+        type: text
+        text: "Particle exists in multiple locations"
+        position: [220, 80]
+        size: 16
+        color: "#9AA0A6"
+        font: "Courier Prime"
+        
+      evidence_point_2:
+        type: text
+        text: "All states coexist: |Ψ⟩ = Σ cᵢ|i⟩"
+        position: [220, 0]
+        size: 16
+        color: "#C06A6A"
+        font: "Courier Prime"
+        
+      evidence_point_3:
+        type: text
+        text: "Not metaphor—literal quantum reality"
+        position: [220, -80]
+        size: 16
+        color: "#9AA0A6"
+        font: "Courier Prime"
+
+  scene_2:
+    duration: 15
+    static_hold_time: 0
+    description: "Evidence image: Schrödinger with quantum mechanics context"
+    elements:
+      # Title with emoji
+      title_text:
+        type: text
+        text: "🕵️ Schrödinger's Investigation"
+        position: [0, 240]
+        size: 18
+        color: "#ffffff"
+        glow: true
+        font: "Arial"
+        
+      # Schrödinger portrait
+      schrodinger_portrait:
+        type: image_card
+        source: "images/icons/640px-Erwin_Schrodinger2.jpg"
+        position: [-210, 10]
+        size: 400
+        border_width: 4
+        border_color: "#d4a373"
+        glow: true
+        glow_color: "#ff6b6b"
+        glow_intensity: 35
+        border_radius: 15
+        ken_burns: zoom_in
+        kb_duration: 10
+        kb_scale_start: 1.0
+        kb_scale_end: 1.5
+        kb_easing: ease-in-out
+        fade_in: 1.0
+        credit: "Erwin Schrödinger (1887-1961)"
+        credit_position: bottom-right
+        
+      # Evidence points (right side, centered around y=0)
+      point_1:
+        type: text
+        text: "The 1930s: Quantum equations emerge"
+        position: [220, 100]
+        size: 16
+        color: "#9AA0A6"
+        font: "Courier Prime"
+        
+      point_2:
+        type: text
+        text: "Particles without fixed properties"
+        position: [220, 33]
+        size: 16
+        color: "#9AA0A6"
+        font: "Courier Prime"
+        
+      point_3:
+        type: text
+        text: "Superposition: |Ψ⟩ = α|↑⟩ + β|↓⟩"
+        position: [220, -33]
+        size: 16
+        color: "#C06A6A"
+        font: "Courier Prime"
+        
+      point_4:
+        type: text
+        text: "Redefining the nature of existence"
+        position: [220, -100]
+        size: 16
+        color: "#9AA0A6"
+        font: "Courier Prime"
+
+  scene_3:
+    duration: 11
+    static_hold_time: 0
+    description: "Emoji story: The mystery of observation-dependent reality"
+    elements:
+      # Title with emoji at top
+      title_emoji:
+        type: text
+        text: "🔍 The Observer's Mystery"
+        position: [0, 240]
+        size: 18
+        color: "#ffffff"
+        glow: true
+        font: "Arial"
+        
+      # Magnifying glass (moved up 30px)
+      magnifier_emoji:
+        type: animated_emoji
+        emoji: "🔍"
+        position: [0, 10]
+        size: 85
+        movement: orbit
+        glowing: pulsing-glow
+        rotation: gentle-rotate
+        reveal: zoom-reveal
+        speed: normal
+        delay: none
+        color: "#3498db"
+        
+      # Orbiting question mark (moved up 30px)
+      question_emoji:
+        type: animated_emoji
+        emoji: "❓"
+        position: [-85, 100]
+        size: 70
+        movement: bounce
+        glowing: flicker
+        rotation: none
+        reveal: slide-reveal
+        speed: normal
+        delay: none
+        color: "#e74c3c"
+        
+      # Wave function (moved up 30px)
+      wave_equation:
+        type: animated_emoji
+        emoji: "Ψ(x,t)"
+        position: [85, 120]
+        size: 60
+        movement: floating-pen
+        glowing: matrix-code
+        rotation: none
+        reveal: slide-reveal
+        speed: normal
+        delay: delay-1
+        color: "#7FD6D3"
+        
+      # Noir subtitle - Bottom center (required for emoji story)
+      noir_subtitle:
+        type: text
+        text: "Reality's state exists only when we dare to look"
+        position: [0, -220]
+        size: 18
+        color: "#d4a373"
+        font: "Courier New"
+
+  scene_4:
+    duration: 15
+    static_hold_time: 0
+    description: "Math components: Three quantum entities in superposition"
+    elements:
+
+        
+      # LEFT SIDE: Electron entity
+      electron_entity:
+        type: mathematical_entity
+        position: [-200, 30]
+        form: wave
+        personality: elegant
+        size: 50
+        color: "#00ffff"
+        glow: true
+        energy: 0.8
+        animation_pattern: wave
+        label: "e⁻"
+        
+      # LEFT SIDE: Atom entity
+      atom_entity:
+        type: mathematical_entity
+        position: [-100, 30]
+        form: cloud
+        personality: mysterious
+        size: 53
+        color: "#9b59b6"
+        glow: true
+        energy: 0.7
+        animation_pattern: pulse
+        label: "Atom"
+        
+      # LEFT SIDE: Photon entity
+      photon_entity:
+        type: mathematical_entity
+        position: [-150, -50]
+        form: point
+        personality: energetic
+        size: 45
+        color: "#f1c40f"
+        glow: true
+        energy: 0.9
+        animation_pattern: bounce
+        label: "γ"
+        
+      # RIGHT SIDE: Evidence text (centered around y=0)
+      evidence_point_1:
+        type: text
+        text: "Wave function: |Ψ⟩ = α|0⟩ + β|1⟩"
+        position: [220, 80]
+        size: 16
+        color: "#C06A6A"
+        font: "Courier Prime"
+        
+      evidence_point_2:
+        type: text
+        text: "States coexist until measurement"
+        position: [220, 0]
+        size: 16
+        color: "#9AA0A6"
+        font: "Courier Prime"
+        
+      evidence_point_3:
+        type: text
+        text: "Observation forces single outcome"
+        position: [220, -80]
+        size: 16
+        color: "#9AA0A6"
+        font: "Courier Prime"
+
+  scene_5:
+    duration: 12
+    static_hold_time: 0
+    description: "Observation collapse: bell curve to single point"
+    elements:
+
+        
+      # LEFT SIDE: Bell curve (superposition state)
+      superposition_curve:
+        type: bell_curve
+        position: [-180, 0]
+        amplitude: 75
+        variance: 1400
+        mean: 0
+        startX: -90
+        endX: 90
+        color: "#3498db"
+        thickness: 3
+        glow: true
+        
+      # LEFT SIDE: Eye entity (observation)
+      eye_entity:
+        type: mathematical_entity
+        position: [-180, 90]
+        form: circle
+        personality: wise
+        size: 60
+        color: "#ffffff"
+        glow: true
+        energy: 0.7
+        animation_pattern: pulse
+        label: "👁️"
+        
+      # RIGHT SIDE: Evidence text (centered around y=0)
+      evidence_point_1:
+        type: text
+        text: "Before observation: Ψ(x) = Σ cₙ|n⟩"
+        position: [220, 80]
+        size: 16
+        color: "#C06A6A"
+        font: "Courier Prime"
+        
+      evidence_point_2:
+        type: text
+        text: "Looking becomes measuring"
+        position: [220, 0]
+        size: 16
+        color: "#9AA0A6"
+        font: "Courier Prime"
+        
+      evidence_point_3:
+        type: text
+        text: "After collapse: |ψ⟩ → |n⟩"
+        position: [220, -80]
+        size: 16
+        color: "#C06A6A"
+        font: "Courier Prime"
+
+      # Collapsed state point
+      collapsed_point:
+        type: mathematical_entity
+        position: [-180, 180]
+        form: point
+        personality: sharp
+        size: 40
+        color: "#e74c3c"
+        glow: true
+        energy: 0.9
+        animation_pattern: pulse
+        label: "Collapsed"
+  scene_6:
+    duration: 16
+    static_hold_time: 8
+    description: "Hero image: Schrödinger's cat experiment box"
+    elements:
+      # Title with emoji
+      # Box illustration
+      cat_box_image:
+        type: image_card
+        source: "images/icons/Schroedingers_cat_film.svg.png"
+        position: [0, 0]
+        size: 750
+        border_width: 6
+        border_color: "#2ecc71"
+        border_radius: 12
+        glow_intensity: 35
+        glow_color: "#00ff88"
+        ken_burns: zoom_in
+        kb_duration: 12
+        kb_scale_start: 1.0
+        kb_scale_end: 1.5
+        kb_easing: ease-in-out
+        fade_in: 1.0
+        credit: "Quantum Superposition Experiment"
+        credit_position: bottom-right
+        
+      # Equation
+      superposition_equation:
+        type: text
+        text: "Until observation: |alive⟩ + |dead⟩"
+        position: [0, 200]
+        size: 14
+        color: "#2ecc71"
+        glow: true
+        font: "Arial"
+
+  scene_7:
+    duration: 7
+    static_hold_time: 0
+    description: "Emoji story: Spinning coin metaphor for superposition"
+    elements:       
+      # Spinning coin (moved up 30px)
+      coin_emoji:
+        type: animated_emoji
+        emoji: "🟡"
+        position: [0, -25]
+        size: 90
+        movement: wobble
+        glowing: pulsing-glow
+        rotation: spin-clockwise
+        reveal: zoom-reveal
+        speed: fast
+        delay: none
+        color: "#f1c40f"
+        
+      # Left hand (moved up 30px)
+      left_hand:
+        type: animated_emoji
+        emoji: "🤚"
+        position: [-120, 55]
+        size: 65
+        movement: floating-pen
+        glowing: pulsing-glow
+        rotation: none
+        reveal: slide-reveal
+        speed: slow
+        delay: delay-1
+        color: "#ffffff"
+        
+      # Right hand (moved up 30px)
+      right_hand:
+        type: animated_emoji
+        emoji: "🤚"
+        position: [120, 55]
+        size: 65
+        movement: floating-pen
+        glowing: pulsing-glow
+        rotation: none
+        reveal: slide-reveal
+        speed: slow
+        delay: delay-2
+        color: "#ffffff"
+        
+      # Question mark (moved up 30px)
+      question_emoji:
+        type: animated_emoji
+        emoji: "❓"
+        position: [0, -105]
+        size: 50
+        movement: bounce
+        glowing: pulsing-glow
+        rotation: none
+        reveal: zoom-reveal
+        speed: slow
+        delay: none
+        color: "#e74c3c"
+        
+      # Noir subtitle - Bottom center (required for emoji story)
+      noir_subtitle:
+        type: text
+        text: "Frozen in possibility—heads and tails dance as one"
+        position: [0, -220]
+        size: 18
+        color: "#d4a373"
+        font: "Courier New"
+
+  scene_8:
+    duration: 14
+    static_hold_time: 0
+    description: "Emoji scene replacing character wisdom: The insight about information and knowledge"
+    elements:
+      # Title with emoji at top
+      title_emoji:
+        type: text
+        text: "🧠 Quantum Paradox of Knowledge"
+        position: [0, 240]
+        size: 18
+        color: "#ffffff"
+        glow: true
+        font: "Arial"
+        
+      # Large brain emoji (moved up 30px)
+      brain_emoji:
+        type: animated_emoji
+        emoji: "🧠"
+        position: [0, -95]
+        size: 95
+        movement: floating-pen
+        glowing: pulsing-glow
+        rotation: none
+        reveal: zoom-reveal
+        speed: slow
+        delay: none
+        color: "#00d4ff"
+        
+      # Cat emoji (moved up 30px)
+      cat_small:
+        type: animated_emoji
+        emoji: "🐱"
+        position: [-140, -5]
+        size: 60
+        movement: bounce
+        glowing: pulsing-glow
+        rotation: none
+        reveal: slide-reveal
+        speed: normal
+        delay: delay-1
+        color: "#ff6b9d"
+        
+      # Information emoji (moved up 30px)
+      info_emoji:
+        type: animated_emoji
+        emoji: "ℹ️"
+        position: [140, -5]
+        size: 60
+        movement: floating-pen
+        glowing: matrix-code
+        rotation: none
+        reveal: slide-reveal
+        speed: normal
+        delay: delay-2
+        color: "#2ecc71"
+        
+      # Lightbulb emoji (moved up 30px)
+      lightbulb_emoji:
+        type: animated_emoji
+        emoji: "💡"
+        position: [0, 25]
+        size: 55
+        movement: bounce
+        glowing: flicker
+        rotation: none
+        reveal: zoom-reveal
+        speed: fast
+        delay: delay-3
+        color: "#f39c12"
+        
+      # Noir subtitle - Bottom center (required for emoji story)
+      noir_subtitle:
+        type: text
+        text: "The paradox: what we can know versus what exists"
+        position: [0, -220]
+        size: 18
+        color: "#d4a373"
+        font: "Courier New"
+
+  scene_9:
+    duration: 16
+    static_hold_time: 5
+    description: "Decoherence: Environment interactions collapse quantum states"
+    elements:
+        
+      # LEFT SIDE: Central quantum system
+      quantum_system:
+        type: mathematical_entity
+        position: [-180, 0]
+        form: cloud
+        personality: mysterious
+        size: 70
+        color: "#9b59b6"
+        glow: true
+        energy: 0.8
+        animation_pattern: breathe
+        label: "System"
+        
+      # LEFT SIDE: Environment particles (surrounding)
+      env_particle_1:
+        type: mathematical_entity
+        position: [-180, -100]
+        form: point
+        personality: sharp
+        size: 18
+        color: "#3498db"
+        glow: true
+        energy: 0.6
+        animation_pattern: pulse
+        
+      env_particle_2:
+        type: mathematical_entity
+        position: [-110, -70]
+        form: point
+        personality: sharp
+        size: 18
+        color: "#3498db"
+        glow: true
+        energy: 0.6
+        animation_pattern: pulse
+        
+      env_particle_3:
+        type: mathematical_entity
+        position: [-80, 0]
+        form: point
+        personality: sharp
+        size: 18
+        color: "#3498db"
+        glow: true
+        energy: 0.6
+        animation_pattern: pulse
+        
+      env_particle_4:
+        type: mathematical_entity
+        position: [-110, 70]
+        form: point
+        personality: sharp
+        size: 18
+        color: "#3498db"
+        glow: true
+        energy: 0.6
+        animation_pattern: pulse
+        
+      env_particle_5:
+        type: mathematical_entity
+        position: [-180, 100]
+        form: point
+        personality: sharp
+        size: 18
+        color: "#3498db"
+        glow: true
+        energy: 0.6
+        animation_pattern: pulse
+        
+      env_particle_6:
+        type: mathematical_entity
+        position: [-250, 70]
+        form: point
+        personality: sharp
+        size: 18
+        color: "#3498db"
+        glow: true
+        energy: 0.6
+        animation_pattern: pulse
+        
+      env_particle_7:
+        type: mathematical_entity
+        position: [-280, 0]
+        form: point
+        personality: sharp
+        size: 18
+        color: "#3498db"
+        glow: true
+        energy: 0.6
+        animation_pattern: pulse
+        
+      env_particle_8:
+        type: mathematical_entity
+        position: [-250, -70]
+        form: point
+        personality: sharp
+        size: 18
+        color: "#3498db"
+        glow: true
+        energy: 0.6
+        animation_pattern: pulse
+        
+      # RIGHT SIDE: Evidence text (centered around y=0)
+      evidence_point_1:
+        type: text
+        text: "Environment measures continuously"
+        position: [220, 80]
+        size: 16
+        color: "#9AA0A6"
+        font: "Courier Prime"
+        
+      evidence_point_2:
+        type: text
+        text: "Decoherence time: τ ∝ 1/N"
+        position: [220, 0]
+        size: 16
+        color: "#C06A6A"
+        font: "Courier Prime"
+        
+      evidence_point_3:
+        type: text
+        text: "From quantum to classical reality"
+        position: [220, -80]
+        size: 16
+        color: "#9AA0A6"
+        font: "Courier Prime"
+
+  scene_10:
+    duration: 13
+    static_hold_time: 0
+    description: "Photon polarization: superposition and measurement"
+    elements:
+
+      # LEFT SIDE: Incoming photon wave
+      incoming_photon:
+        type: mathematical_entity
+        position: [-220, 0]
+        form: wave
+        personality: playful
+        size: 45
+        color: "#f1c40f"
+        glow: true
+        energy: 0.8
+        animation_pattern: wave
+        label: "γ"
+        
+      # LEFT SIDE: Polarizing filter
+      filter_rect:
+        type: rectangle
+        position: [-130, 0]
+        width: 14
+        height: 110
+        color: "#95a5a6"
+        fill: true
+        glow: false
+        
+      # LEFT SIDE: Passed photon
+      passed_photon:
+        type: mathematical_entity
+        position: [-70, -50]
+        form: point
+        personality: energetic
+        size: 32
+        color: "#2ecc71"
+        glow: true
+        energy: 0.9
+        animation_pattern: pulse
+        label: "Pass"
+        
+      # LEFT SIDE: Blocked photon
+      blocked_photon:
+        type: mathematical_entity
+        position: [-70, 50]
+        form: point
+        personality: elegant
+        size: 32
+        color: "#e74c3c"
+        glow: true
+        energy: 0.3
+        animation_pattern: pulse
+        label: "Block"
+        
+      # RIGHT SIDE: Evidence text (centered around y=0)
+      evidence_point_1:
+        type: text
+        text: "Before detection: |pass⟩ + |block⟩"
+        position: [220, 80]
+        size: 16
+        color: "#C06A6A"
+        font: "Courier Prime"
+        
+      evidence_point_2:
+        type: text
+        text: "Probability: P = cos²θ and sin²θ"
+        position: [220, 0]
+        size: 16
+        color: "#C06A6A"
+        font: "Courier Prime"
+        
+      evidence_point_3:
+        type: text
+        text: "Measurement collapses the state"
+        position: [220, -80]
+        size: 16
+        color: "#9AA0A6"
+        font: "Courier Prime"
+
+  scene_11:
+    duration: 10
+    static_hold_time: 0
+    description: "Evidence image: From thought experiment to quantum technology"
+    elements:
+      # Title with emoji
+      title_text:
+        type: text
+        text: "🔬 From Thought to Technology"
+        position: [0, 240]
+        size: 18
+        color: "#ffffff"
+        glow: true
+        font: "Arial"
+        
+      # Quantum computer chip
+      quantum_chip:
+        type: image_card
+        source: "images/icons/Quantum_images_(5941061148).jpg"
+        position: [-230, 0]
+        size: 380
+        border_width: 5
+        border_color: "#00ffff"
+        border_radius: 10
+        glow_intensity: 35
+        glow_color: "#00ffff"
+        ken_burns: pan_right
+        kb_duration: 10
+        kb_scale_start: 1.0
+        kb_scale_end: 1.5
+        kb_easing: ease-in-out
+        fade_in: 1.2
+        credit: "Quantum Computing Technology"
+        credit_position: bottom-right
+        
+      # Evidence points (right side, centered around y=0)
+      point_1:
+        type: text
+        text: " Macro thought experiment (1935)"
+        position: [220, 100]
+        size: 16
+        color: "#9AA0A6"
+        font: "Courier Prime"
+        
+      point_2:
+        type: text
+        text: " Microscopic reality (photons)"
+        position: [220, 50]
+        size: 16
+        color: "#9AA0A6"
+        font: "Courier Prime"
+        
+      point_3:
+        type: text
+        text: " Quantum computing: n qubits = 2ⁿ states"
+        position: [220, 0]
+        size: 16
+        color: "#C06A6A"
+        font: "Courier Prime"
+        
+      point_4:
+        type: text
+        text: " Cryptography systems"
+        position: [220, -50]
+        size: 16
+        color: "#9AA0A6"
+        font: "Courier Prime"
+        
+      point_5:
+        type: text
+        text: " Mathematical equivalence"
+        position: [220, -100]
+        size: 16
+        color: "#9AA0A6"
+        font: "Courier Prime"
+
+  scene_12:
+    duration: 12
+    static_hold_time: 0
+    description: "Emoji story: Collapse from spectrum to certainty"
+    elements:
+      # Title with emoji at top
+      title_emoji:
+        type: text
+        text: "🌈 From Possibility to Certainty"
+        position: [0, 240]
+        size: 18
+        color: "#ffffff"
+        glow: true
+        font: "Arial"
+        
+      # Rainbow spectrum (moved up 30px)
+      spectrum_emoji:
+        type: animated_emoji
+        emoji: "🌈"
+        position: [-80, 0]
+        size: 95
+        movement: wobble
+        glowing: pulsing-glow
+        rotation: none
+        reveal: zoom-reveal
+        speed: slow
+        delay: none
+        color: "#ffffff"
+        
+      # Lightning bolt (moved up 30px)
+      lightning_emoji:
+        type: animated_emoji
+        emoji: "⚡"
+        position: [0, 0]
+        size: 75
+        movement: bounce
+        glowing: flicker
+        rotation: none
+        reveal: zoom-reveal
+        speed: fast
+        delay: delay-1
+        color: "#f1c40f"
+        
+      # Star (collapsed state, moved up 30px)
+      star_emoji:
+        type: animated_emoji
+        emoji: "✨"
+        position: [100, 0]
+        size: 65
+        movement: floating-pen
+        glowing: pulsing-glow
+        rotation: gentle-rotate
+        reveal: zoom-reveal
+        speed: slow
+        delay: delay-2
+        color: "#ffffff"
+        
+      # Noir subtitle - Bottom center (required for emoji story)
+      noir_subtitle:
+        type: text
+        text: "From infinite possibility to singular truth—observation is the key"
+        position: [0, -220]
+        size: 18
+        color: "#d4a373"
+        font: "Courier New"
+
+  scene_13:
+    duration: 16
+    static_hold_time: 1
+    description: "Quantum technology applications: computing, cryptography, precision"
+    elements:
+        
+      # LEFT SIDE: Qubit matrix
+      qubit_matrix:
+        type: matrix
+        position: [-230,-170]
+        values: [["|0⟩", "|1⟩"]]
+        cellSize: 45
+        textSize: 14
+        color: "#3498db"
+        highlightCells: [[0, 0], [0, 1]]
+        label: "Qubits"
+        
+      # LEFT SIDE: Cryptography lock
+      crypto_entity:
+        type: mathematical_entity
+        position: [-180, 20]
+        form: hexagon
+        personality: wise
+        size: 55
+        color: "#e74c3c"
+        glow: true
+        energy: 0.7
+        animation_pattern: pulse
+        label: "🔒Crypto"
+        
+      # LEFT SIDE: Atomic clock chart
+      precision_chart:
+        type: animated_bar_chart
+        data: [95, 98, 99]
+        position: [-150, 100]
+        width: 140
+        height: 75
+        color: "#2ecc71"
+        
+      # RIGHT SIDE: Evidence text (centered around y=0)
+      evidence_point_1:
+        type: text
+        text: "Superposition: |ψ⟩ = Σ αᵢ|i⟩ enables parallel"
+        position: [220, 80]
+        size: 16
+        color: "#C06A6A"
+        font: "Courier Prime"
+        
+      evidence_point_2:
+        type: text
+        text: "Quantum key distribution: BB84 protocol"
+        position: [220, 0]
+        size: 16
+        color: "#C06A6A"
+        font: "Courier Prime"
+        
+      evidence_point_3:
+        type: text
+        text: "Precision atomic timekeeping"
+        position: [220, -80]
+        size: 16
+        color: "#9AA0A6"
+        font: "Courier Prime"
+
+  scene_14:
+    duration: 7
+    static_hold_time: 0
+    description: "Montage: Historical to modern quantum technology progression"
+    elements:
+      # Title with emoji
+      title_text:
+        type: text
+        text: "🏛️ The Cornerstone of Quantum Tech"
+        position: [0, 240]
+        size: 18
+        color: "#ffffff"
+        glow: true
+        font: "Arial"
+        
+      # Historical paper (left)
+      historical_image:
+        type: image_card
+        source: "images/icons/640px-Erwin_Schrodinger2.jpg"
+        position: [-280, 0]
+        size: 280
+        border_width: 4
+        border_color: "#d4a373"
+        border_radius: 8
+        glow_intensity: 30
+        glow_color: "#d4a373"
+        fade_in: 0.5
+        delay: 0
+        credit: "1935: Theory"
+        credit_position: bottom-right
+        
+      # Modern quantum lab (center)
+      modern_image:
+        type: image_card
+        source: "images/icons/Quantum_Computing;_Ion_Trapping_(5941055642).jpg"
+        position: [0, 0]
+        size: 300
+        border_width: 5
+        border_color: "#3498db"
+        border_radius: 10
+        glow_intensity: 35
+        glow_color: "#3498db"
+        ken_burns: zoom_in
+        kb_duration: 12
+        kb_scale_start: 1.0
+        kb_scale_end: 1.5
+        kb_easing: ease-in-out
+        fade_in: 1.0
+        delay: 0.3
+        credit: "2025: Lab Reality"
+        credit_position: bottom-right
+        
+      # Cryptography network (right)
+      crypto_image:
+        type: image_card
+        source: "images/icons/Qubits_(5940500587).jpg"
+        position: [280, 0]
+        size: 280
+        border_width: 4
+        border_color: "#9b59b6"
+        border_radius: 8
+        glow_intensity: 30
+        glow_color: "#9b59b6"
+        fade_in: 0.8
+        delay: 0.6
+        credit: "Future: Network"
+        credit_position: bottom-right
+        
+      # Timeline text
+      timeline_text:
+        type: text
+        text: "Foundation → Innovation"
+        position: [0, 190]
+        size: 14
+        color: "#95a5a6"
+        font: "Arial"
+
+  scene_15:
+    duration: 14
+    static_hold_time: 0
+    description: "Emoji story: The silent universe waiting for inquiry"
+    elements:
+      # Title with emoji at top
+        
+      # Shushing face (moved up 30px)
+      shush_emoji:
+        type: animated_emoji
+        emoji: "🤫"
+        position: [0, -35]
+        size: 90
+        movement: floating-pen
+        glowing: pulsing-glow
+        rotation: none
+        reveal: zoom-reveal
+        speed: ultra-slow
+        delay: none
+        color: "#9b59b6"
+        
+      # Cat (orbiting, moved up 30px)
+      cat_orbit:
+        type: animated_emoji
+        emoji: "🐱"
+        position: [0, -175]
+        size: 55
+        movement: orbit
+        glowing: pulsing-glow
+        rotation: none
+        reveal: slide-reveal
+        speed: slow
+        delay: delay-1
+        color: "#ff6b9d"
+        
+      # Coin (orbiting, moved up 30px)
+      coin_orbit:
+        type: animated_emoji
+        emoji: "🪙"
+        position: [121, 80]
+        size: 55
+        movement: orbit
+        glowing: pulsing-glow
+        rotation: spin-clockwise
+        reveal: slide-reveal
+        speed: slow
+        delay: delay-2
+        color: "#f1c40f"
+        
+      # Light bulb (orbiting, moved up 30px)
+      bulb_orbit:
+        type: animated_emoji
+        emoji: "💡"
+        position: [-121, 80]
+        size: 55
+        movement: orbit
+        glowing: flicker
+        rotation: none
+        reveal: slide-reveal
+        speed: slow
+        delay: delay-3
+        color: "#f39c12"
+        
+      # Question mark (moved up 30px)
+      question_top:
+        type: animated_emoji
+        emoji: "❓"
+        position: [0, -155]
+        size: 50
+        movement: bounce
+        glowing: pulsing-glow
+        rotation: none
+        reveal: zoom-reveal
+        speed: normal
+        delay: none
+        color: "#e74c3c"
+        
+      # Noir subtitle - Bottom center (required for emoji story)
+      noir_subtitle:
+        type: text
+        text: "The cosmos waits in quantum silence for our inquiry"
+        position: [0, -220]
+        size: 18
+        color: "#d4a373"
+        font: "Courier New"
+
+  scene_16:
+    duration: 4
+    static_hold_time: 0
+    description: "Transformation finale: Multiple entities converging and morphing into unified hexagon"
+    elements:
+        
+      # LEFT SIDE: Entity 1 - Triangle converging to center
+      entity_1:
+        type: morph_entity
+        position: [-280, -180]
+        form: triangle
+        size: 38
+        color: "#e74c3c"
+        glow: true
+        energy: 0.9
+        motion_profile: kinetic_dynamic
+        move_to: [-180, 0]
+        move_duration: 5
+        move_style: elastic_bounce
+        move_path: bezier
+        control_points: [[-230, -90]]
+        morph_to: hexagon
+        morph_at: 4
+        morph_duration: 1
+        morph_style: fluid_transition
+        
+      # LEFT SIDE: Entity 2 - Circle converging
+      entity_2:
+        type: morph_entity
+        position: [-80, -180]
+        form: circle
+        size: 42
+        color: "#3498db"
+        glow: true
+        energy: 0.9
+        motion_profile: kinetic_dynamic
+        move_to: [-180, 0]
+        move_duration: 5
+        move_style: elastic_bounce
+        move_path: bezier
+        control_points: [[-130, -90]]
+        morph_to: hexagon
+        morph_at: 4
+        morph_duration: 1
+        morph_style: fluid_transition
+        
+      # LEFT SIDE: Entity 3 - Square converging
+      entity_3:
+        type: morph_entity
+        position: [-50, 0]
+        form: square
+        size: 40
+        color: "#2ecc71"
+        glow: true
+        energy: 0.9
+        motion_profile: kinetic_dynamic
+        move_to: [-180, 0]
+        move_duration: 5
+        move_style: elastic_bounce
+        move_path: arc
+        morph_to: hexagon
+        morph_at: 4
+        morph_duration: 1
+        morph_style: fluid_transition
+        
+      # LEFT SIDE: Entity 4 - Pentagon converging
+      entity_4:
+        type: morph_entity
+        position: [-80, 180]
+        form: pentagon
+        size: 41
+        color: "#f1c40f"
+        glow: true
+        energy: 0.9
+        motion_profile: kinetic_dynamic
+        move_to: [-180, 0]
+        move_duration: 5
+        move_style: elastic_bounce
+        move_path: bezier
+        control_points: [[-130, 90]]
+        morph_to: hexagon
+        morph_at: 4
+        morph_duration: 1
+        morph_style: fluid_transition
+        
+      # LEFT SIDE: Entity 5 - Star converging
+      entity_5:
+        type: morph_entity
+        position: [-280, 180]
+        form: star
+        size: 42
+        color: "#9b59b6"
+        glow: true
+        energy: 0.9
+        motion_profile: kinetic_dynamic
+        move_to: [-180, 0]
+        move_duration: 5
+        move_style: elastic_bounce
+        move_path: bezier
+        control_points: [[-230, 90]]
+        morph_to: hexagon
+        morph_at: 4
+        morph_duration: 1
+        morph_style: fluid_transition
+        data: [5]
+        
+      # LEFT SIDE: Entity 6 - Octagon converging
+      entity_6:
+        type: morph_entity
+        position: [-350, 0]
+        form: octagon
+        size: 39
+        color: "#e67e22"
+        glow: true
+        energy: 0.9
+        motion_profile: kinetic_dynamic
+        move_to: [-180, 0]
+        move_duration: 5
+        move_style: elastic_bounce
+        move_path: arc
+        morph_to: hexagon
+        morph_at: 4
+        morph_duration: 1
+        morph_style: fluid_transition
+        
+      # LEFT SIDE: Final unified entity (appears after convergence)
+      unified_hexagon:
+        type: mathematical_entity
+        position: [-180, 0]
+        form: hexagon
+        personality: wise
+        size: 100
+        color: "#ffffff"
+        glow: true
+        energy: 1.0
+        animation_pattern: pulse
+        label: "Unity"
+        
+      # RIGHT SIDE: Evidence text (centered around y=0)
+      evidence_point_1:
+        type: text
+        text: "Infinite possibilities collapse to one"
+        position: [220, 80]
+        size: 16
+        color: "#9AA0A6"
+        font: "Courier Prime"
+        
+      evidence_point_2:
+        type: text
+        text: "Wave collapse: |Ψ⟩ → |λ⟩"
+        position: [220, 0]
+        size: 16
+        color: "#C06A6A"
+        font: "Courier Prime"
+        
+      evidence_point_3:
+        type: text
+        text: "Quantum clarity achieved"
+        position: [220, -80]
+        size: 16
+        color: "#9AA0A6"
+        font: "Courier Prime"

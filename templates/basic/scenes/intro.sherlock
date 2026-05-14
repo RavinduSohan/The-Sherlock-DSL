@@ -1,0 +1,25 @@
+# My First Sherlock Animation
+concept: "Welcome to Sherlock"
+emoji: "🎬"
+total_duration: 6
+background: "#0a0e1a"
+
+subtitles:
+  - "Welcome to Sherlock"
+
+phases:
+  intro:
+    duration: 6
+    description: "Starter scene"
+    elements:
+      title:
+        type: primitive
+        shape: text[text:"Welcome to Sherlock!" fontSize:56 fill:#3B82F6 at:(0,1)]
+
+      subtitle:
+        type: primitive
+        shape: text[text:"Create animations with code" fontSize:24 fill:#8B5CF6 at:(0,-0.5)]
+
+      dot:
+        type: primitive
+        shape: circle[r:0.8 fill:#10B981 at:(0,-2)]

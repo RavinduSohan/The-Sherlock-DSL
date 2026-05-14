@@ -1,0 +1,774 @@
+concept: "Gradient Descent and the Local Optimum Trap"
+emoji: "⛰️"
+total_duration: 50
+background: "#0a0a0a"
+
+subtitles:
+  - ""
+  - ""
+  - ""
+  - ""
+  - ""
+  - ""
+  - ""
+  - ""
+  - ""
+
+phases:
+  scene_1:
+    duration: 6
+    description: "A system appears on an optimization landscape with visible peaks"
+    elements:
+      # LEFT: Landscape with two peaks
+      optimization_landscape:
+        type: xy_graph
+        position: [-150, 0]
+        size: 250
+        data_points: [
+          [0, 2.4], [0.5, 3.1], [1, 3.6], [1.2, 3.8], [1.5, 3.9],
+          [2, 4], [2.5, 3.9], [3, 3.6], [3.5, 3.7],
+          [4, 4.7], [4.5, 4.925], [5, 5], [5.5, 4.925], [6, 4.7]
+        ]
+        x_range: [0, 6]
+        y_range: [0, 6]
+        color: "#ffffff"
+        line_width: 2
+        show_grid: true
+        show_axes: true
+        show_points: false
+        smooth_curve: true
+        opacity: 0.3
+        
+      # System node on upward slope
+      system_node:
+        type: algorithm_node
+        position: [-225, -8]
+        value: "S"
+        radius: 18
+        color: "#ffaa00"
+        glow: true
+        label: "System"
+        
+      # Global optimum marker
+      global_peak:
+        type: point
+        position: [-67, 83]
+        radius: 8
+        color: "#00ffff"
+        glow: true
+        
+      # CENTER: Hook texts
+      hook_primary:
+        type: text
+        text: "A system appears on a landscape"
+        position: [0, 180]
+        size: 14
+        color: "#ffffff"
+        glow: true
+        font: "Arial"
+        
+      hook_secondary:
+        type: text
+        text: "Its simple rule: follow the slope"
+        position: [0, 220]
+        size: 13
+        color: "#95a5a6"
+        glow: false
+        font: "Arial"
+        
+      # RIGHT: Evidence text
+      evidence_1:
+        type: text
+        text: "Position: x = 1.2, y = 2.8"
+        position: [220, 50]
+        size: 16
+        color: "#9AA0A6"
+        font: "Courier Prime"
+        
+      evidence_2:
+        type: text
+        text: "Global peak visible at x = 5, y = 5.0"
+        position: [220, -50]
+        size: 16
+        color: "#9AA0A6"
+        font: "Courier Prime"
+
+  scene_2:
+    duration: 7
+    description: "The gradient vector reveals the direction of steepest ascent"
+    elements:
+      # LEFT: Landscape (faded)
+      landscape_faded:
+        type: xy_graph
+        position: [-150, 0]
+        size: 250
+        data_points: [
+          [0, 2.4], [0.5, 3.1], [1, 3.6], [1.2, 3.8], [1.5, 3.9],
+          [2, 4], [2.5, 3.9], [3, 3.6], [3.5, 3.7],
+          [4, 4.7], [4.5, 4.925], [5, 5], [5.5, 4.925], [6, 4.7]
+        ]
+        x_range: [0, 6]
+        y_range: [0, 6]
+        color: "#ffffff"
+        line_width: 2
+        show_grid: true
+        show_axes: true
+        show_points: false
+        smooth_curve: true
+        opacity: 0.15
+        
+      # System node (same position)
+      system_node_2:
+        type: algorithm_node
+        position: [-225, -8]
+        value: "S"
+        radius: 18
+        color: "#ffaa00"
+        glow: true
+        
+      # Gradient vector pointing uphill
+      gradient_vector:
+        type: vector
+        from: [-225, -8]
+        to: [-192, 17]
+        color: "#ffaa00"
+        thickness: 4
+        glow: true
+        label: "∇"
+        
+      # Relationship connector (the question)
+      gradient_question:
+        type: relationship_connector
+        from: [-225, -8]
+        to: [-192, 17]
+        relationship_type: "dependency"
+        strength: 0.6
+        color: "#ffffff"
+        animated: true
+        label: "Which direction?"
+        
+      # CENTER: Hook texts
+      hook_primary_2:
+        type: text
+        text: "The hidden force reveals itself"
+        position: [0, 180]
+        size: 14
+        color: "#ffffff"
+        glow: true
+        font: "Arial"
+        
+      hook_secondary_2:
+        type: text
+        text: "Gradient = direction of steepest ascent"
+        position: [0, 220]
+        size: 13
+        color: "#95a5a6"
+        glow: false
+        font: "Arial"
+        
+      # RIGHT: Evidence text
+      evidence_2_1:
+        type: text
+        text: "Gradient vector = [0.4, 0.6]"
+        position: [220, 80]
+        size: 16
+        color: "#C06A6A"
+        font: "Courier Prime"
+        
+      evidence_2_2:
+        type: text
+        text: "Slope magnitude: 0.72"
+        position: [220, 0]
+        size: 16
+        color: "#9AA0A6"
+        font: "Courier Prime"
+        
+      evidence_2_3:
+        type: text
+        text: "Points to steepest ascent"
+        position: [220, -80]
+        size: 16
+        color: "#9AA0A6"
+        font: "Courier Prime"
+
+  scene_3:
+    duration: 8
+    description: "The gradient's narrow vision limits perception to local region"
+    elements:
+      # LEFT: Landscape (very faded)
+      landscape_background:
+        type: xy_graph
+        position: [-150, 0]
+        size: 250
+        data_points: [
+          [0, 2.4], [0.5, 3.1], [1, 3.6], [1.2, 3.8], [1.5, 3.9],
+          [2, 4], [2.5, 3.9], [3, 3.6], [3.5, 3.7],
+          [4, 4.7], [4.5, 4.925], [5, 5], [5.5, 4.925], [6, 4.7]
+        ]
+        x_range: [0, 6]
+        y_range: [0, 6]
+        color: "#ffffff"
+        line_width: 2
+        show_grid: true
+        show_axes: false
+        show_points: false
+        smooth_curve: true
+        opacity: 0.1
+        
+      # Spotlight showing limited visibility
+      visibility_spotlight:
+        type: mathematical_entity
+        position: [-200, 8]
+        form: "circle"
+        personality: "sharp"
+        size: 65
+        color: "#ffffff"
+        glow: true
+        energy: 0.6
+        animation_pattern: "pulse"
+        label: "Visible region"
+        
+      # System node at final stepped position (approaching peak)
+      system_stepped:
+        type: algorithm_node
+        position: [-192, 25]
+        value: "S"
+        radius: 18
+        color: "#ffaa00"
+        glow: true
+        
+      # Path indicators (previous positions as faded points)
+      step_1:
+        type: point
+        position: [-225, -8]
+        radius: 6
+        color: "#ffaa00"
+        opacity: 0.3
+        
+      step_2:
+        type: point
+        position: [-208, 8]
+        radius: 6
+        color: "#ffaa00"
+        opacity: 0.5
+        
+      # Global peak remains outside spotlight
+      global_peak_distant:
+        type: point
+        position: [-67, 83]
+        radius: 8
+        color: "#00ffff"
+        glow: true
+        
+      # CENTER: Hook texts
+      hook_primary_3:
+        type: text
+        text: "The gradient's narrow vision"
+        position: [0, 180]
+        size: 14
+        color: "#ffffff"
+        glow: true
+        font: "Arial"
+        
+      hook_secondary_3:
+        type: text
+        text: "Local information cannot see beyond the hill"
+        position: [0, 220]
+        size: 13
+        color: "#95a5a6"
+        glow: false
+        font: "Arial"
+        
+      # RIGHT: Evidence text
+      evidence_3_1:
+        type: text
+        text: "Step 1: error reduced 18%"
+        position: [220, 100]
+        size: 16
+        color: "#9AA0A6"
+        font: "Courier Prime"
+        
+      evidence_3_2:
+        type: text
+        text: "Step 2: error reduced 12%"
+        position: [220, 33]
+        size: 16
+        color: "#9AA0A6"
+        font: "Courier Prime"
+        
+      evidence_3_3:
+        type: text
+        text: "Step 3: error reduced 5%"
+        position: [220, -33]
+        size: 16
+        color: "#9AA0A6"
+        font: "Courier Prime"
+        
+      evidence_3_4:
+        type: text
+        text: "Global peak at x=5: outside visible region"
+        position: [220, -100]
+        size: 16
+        color: "#C06A6A"
+        font: "Courier Prime"
+
+  scene_4:
+    duration: 6
+    description: "The system converges to stillness at the local maximum"
+    elements:
+      # LEFT: Landscape
+      landscape_convergence:
+        type: xy_graph
+        position: [-150, 0]
+        size: 250
+        data_points: [
+          [0, 2.4], [0.5, 3.1], [1, 3.6], [1.2, 3.8], [1.5, 3.9],
+          [2, 4], [2.5, 3.9], [3, 3.6], [3.5, 3.7],
+          [4, 4.7], [4.5, 4.925], [5, 5], [5.5, 4.925], [6, 4.7]
+        ]
+        x_range: [0, 6]
+        y_range: [0, 6]
+        color: "#ffffff"
+        line_width: 2
+        show_grid: true
+        show_axes: true
+        show_points: false
+        smooth_curve: true
+        opacity: 0.2
+        
+      # System at local peak (converged)
+      system_converged:
+        type: algorithm_node
+        position: [-192, 33]
+        value: "S"
+        radius: 20
+        color: "#ffaa00"
+        glow: true
+        label: "System (converged)"
+        
+      # Horizontal tangent line (zero slope)
+      tangent_line:
+        type: line
+        from: [-213, 33]
+        to: [-171, 33]
+        thickness: 2
+        dashed: true
+        color: "#ffffff"
+        opacity: 0.6
+        
+      # Zero derivative indicator
+      zero_derivative:
+        type: point
+        position: [-192, 33]
+        radius: 5
+        color: "#ffffff"
+        label: "dy/dx = 0"
+        
+      # Global peak (unreached)
+      global_peak_unreached:
+        type: point
+        position: [-67, 83]
+        radius: 8
+        color: "#00ffff"
+        glow: true
+        
+      # CENTER: Hook texts
+      hook_primary_4:
+        type: text
+        text: "The system converges to stillness"
+        position: [0, 180]
+        size: 14
+        color: "#ffffff"
+        glow: true
+        font: "Arial"
+        
+      hook_secondary_4:
+        type: text
+        text: "Zero slope = trapped"
+        position: [0, 220]
+        size: 13
+        color: "#95a5a6"
+        glow: false
+        font: "Arial"
+        
+      # RIGHT: Evidence text
+      evidence_4_1:
+        type: text
+        text: "Position: local maximum (x=2.0, y=4.0)"
+        position: [220, 50]
+        size: 16
+        color: "#9AA0A6"
+        font: "Courier Prime"
+        
+      evidence_4_2:
+        type: text
+        text: "Derivative: dy/dx = 0"
+        position: [220, -50]
+        size: 16
+        color: "#C06A6A"
+        font: "Courier Prime"
+
+  scene_5:
+    duration: 9
+    description: "The path of certainty vs the leap of faith - escape orchestration"
+    elements:
+      # LEFT: Landscape (background)
+      landscape_paths:
+        type: xy_graph
+        position: [-150, 0]
+        size: 250
+        data_points: [
+          [0, 2.4], [0.5, 3.1], [1, 3.6], [1.2, 3.8], [1.5, 3.9],
+          [2, 4], [2.5, 3.9], [3, 3.6], [3.5, 3.7],
+          [4, 4.7], [4.5, 4.925], [5, 5], [5.5, 4.925], [6, 4.7]
+        ]
+        x_range: [0, 6]
+        y_range: [0, 6]
+        color: "#ffffff"
+        line_width: 2
+        show_grid: false
+        show_axes: true
+        show_points: false
+        smooth_curve: true
+        opacity: 0.1
+        
+      # MORPH ENTITY 1: Optimization path trail
+      path_trail:
+        type: morph_entity
+        position: [-225, 8]
+        form: "circle"
+        size: 35
+        color: "#ffaa00"
+        glow: true
+        energy: 0.6
+        motion_profile: "precision_linear"
+        label: "Optimization Path"
+        move_to: [-192, -33]
+        move_duration: 3
+        move_style: "ease_in_out"
+        move_path: "linear"
+        
+      # MORPH ENTITY 2: Wall of blindness (left boundary)
+      blindness_wall_left:
+        type: morph_entity
+        position: [-225, -50]
+        form: "line"
+        size: 40
+        color: "#e74c3c"
+        glow: false
+        energy: 0.5
+        motion_profile: "stable_balanced"
+        label: "blindness"
+        line_length: 120
+        line_angle: 1.571
+        line_style: "dashed"
+        line_thickness: 3
+        
+      # MORPH ENTITY 3: Wall of blindness (right boundary)
+      blindness_wall_right:
+        type: morph_entity
+        position: [-158, -50]
+        form: "line"
+        size: 40
+        color: "#e74c3c"
+        glow: false
+        energy: 0.5
+        motion_profile: "stable_balanced"
+        line_length: 120
+        line_angle: 1.571
+        line_style: "dashed"
+        line_thickness: 3
+        
+      # MORPH ENTITY 4: Escape fragment (breaks through)
+      escape_fragment:
+        type: morph_entity
+        position: [-200, -25]
+        form: "star"
+        size: 35
+        color: "#ffaa00"
+        glow: true
+        energy: 0.9
+        motion_profile: "kinetic_dynamic"
+        label: "Escape fragment"
+        move_to: [-100, -50]
+        move_duration: 7
+        move_style: "ease_in_out"
+        move_path: "arc"
+        rotate_to: 180
+        rotate_duration: 7
+        
+      # MORPH ENTITY 5: Original stuck system (fades)
+      stuck_system:
+        type: morph_entity
+        position: [-192, -33]
+        form: "circle"
+        size: 45
+        color: "#ffaa00"
+        glow: true
+        energy: 0.3
+        motion_profile: "stable_balanced"
+        label: "Stuck system"
+        
+      # Relationship connector (questioning escape)
+      escape_question:
+        type: relationship_connector
+        from: [-192, -33]
+        to: [-100, -50]
+        relationship_type: "dependency"
+        strength: 0.4
+        color: "#e74c3c"
+        animated: true
+        bidirectional: false
+        label: "irrational?"
+        
+      # CENTER: Hook texts
+      hook_primary_5:
+        type: text
+        text: "The path of certainty vs. the leap of faith"
+        position: [0, 180]
+        size: 14
+        color: "#ffffff"
+        glow: true
+        font: "Arial"
+        
+      hook_secondary_5:
+        type: text
+        text: "Local knowledge converges. Escape requires blindness."
+        position: [0, 220]
+        size: 13
+        color: "#95a5a6"
+        glow: false
+        font: "Arial"
+        
+      # RIGHT: Evidence text
+      evidence_5_1:
+        type: text
+        text: "Local optimum: (2.0, 4.0)"
+        position: [220, 100]
+        size: 16
+        color: "#9AA0A6"
+        font: "Courier Prime"
+        
+      evidence_5_2:
+        type: text
+        text: "Global optimum: (5.0, 5.0)"
+        position: [220, 33]
+        size: 16
+        color: "#9AA0A6"
+        font: "Courier Prime"
+        
+      evidence_5_3:
+        type: text
+        text: "Escape at x=1.9 → breaks local rule"
+        position: [220, -33]
+        size: 16
+        color: "#C06A6A"
+        font: "Courier Prime"
+        
+      evidence_5_4:
+        type: text
+        text: "No gradient guarantees success"
+        position: [220, -100]
+        size: 16
+        color: "#9AA0A6"
+        font: "Courier Prime"
+
+  scene_6:
+    duration: 7
+    description: "The leap into uncertainty - moving without proof"
+    elements:
+      # LEFT: Very faded landscape
+      landscape_uncertainty:
+        type: xy_graph
+        position: [-150, 0]
+        size: 250
+        data_points: [
+          [0, 2.4], [0.5, 3.1], [1, 3.6], [1.2, 3.8], [1.5, 3.9],
+          [2, 4], [2.5, 3.9], [3, 3.6], [3.5, 3.7],
+          [4, 4.7], [4.5, 4.925], [5, 5], [5.5, 4.925], [6, 4.7]
+        ]
+        x_range: [0, 6]
+        y_range: [0, 6]
+        color: "#ffffff"
+        line_width: 1
+        show_grid: false
+        show_axes: false
+        show_points: false
+        smooth_curve: true
+        opacity: 0.05
+        
+      # MORPH ENTITY 1: The uncertain journey
+      uncertain_journey:
+        type: morph_entity
+        position: [-100, -50]
+        form: "circle"
+        size: 40
+        color: "#ffaa00"
+        glow: true
+        energy: 0.8
+        motion_profile: "fluid_organic"
+        label: "The Escape"
+        move_to: [-71, -79]
+        move_duration: 6.5
+        move_style: "elastic_bounce"
+        move_path: "arc"
+        rotate_to: 360
+        rotate_duration: 6.5
+        rotate_style: "ease_in_out"
+        
+      # MORPH ENTITY 2: Breaking connection A (fades)
+      breaking_connection_a:
+        type: morph_entity
+        position: [-146, -16]
+        form: "line"
+        size: 30
+        color: "#e74c3c"
+        glow: false
+        energy: 0.4
+        motion_profile: "precision_linear"
+        line_length: 80
+        line_angle: 0.785
+        line_style: "dashed"
+        line_thickness: 2
+        
+      # MORPH ENTITY 3: Breaking connection B (disperses)
+      breaking_connection_b:
+        type: morph_entity
+        position: [-146, -16]
+        form: "line"
+        size: 30
+        color: "#e74c3c"
+        glow: false
+        energy: 0.3
+        motion_profile: "precision_linear"
+        line_length: 60
+        line_angle: 2.356
+        line_style: "dashed"
+        line_thickness: 2
+        
+      # Faint uphill guide vector
+      uphill_guide:
+        type: vector
+        from: [-85, -65]
+        to: [-71, -79]
+        color: "#00ffff"
+        thickness: 2
+        opacity: 0.3
+        glow: true
+        
+      # CENTER: Hook texts
+      hook_primary_6:
+        type: text
+        text: "The leap into uncertainty"
+        position: [0, 180]
+        size: 14
+        color: "#ffffff"
+        glow: true
+        font: "Arial"
+        
+      hook_secondary_6:
+        type: text
+        text: "Moving without proof"
+        position: [0, 220]
+        size: 13
+        color: "#95a5a6"
+        glow: false
+        font: "Arial"
+        
+      # RIGHT: Evidence text
+      evidence_6_1:
+        type: text
+        text: "Position: approaching x=5.0"
+        position: [220, 80]
+        size: 16
+        color: "#9AA0A6"
+        font: "Courier Prime"
+        
+      evidence_6_2:
+        type: text
+        text: "Gradient says 'uphill' but cannot see peak"
+        position: [220, 0]
+        size: 16
+        color: "#C06A6A"
+        font: "Courier Prime"
+        
+      evidence_6_3:
+        type: text
+        text: "No proof of arrival"
+        position: [220, -80]
+        size: 16
+        color: "#9AA0A6"
+        font: "Courier Prime"
+
+  scene_7:
+    duration: 7
+    description: "The detective octopus contemplates the fundamental question"
+    elements:
+      # FULL CANVAS: Character-wisdom scene
+      detective_guide:
+        type: wisdom_character
+        character_type: detective_octopus
+        position: [0, -20]
+        size: 140
+        mood: "mysterious"
+        expression: "normal"
+        talking: false
+        breathing: true
+        color_scheme: "detective"
+        personality: "mysterious"
+        speech_bubble: true
+        speech_text: "…but why?"
+        background_aura: "glow"
+        
+      # Distant cyan peak
+      distant_truth:
+        type: point
+        position: [200, -100]
+        radius: 15
+        color: "#00ffff"
+        glow: true
+        
+      # Atmospheric mathematical entities
+      atmosphere_1:
+        type: mathematical_entity
+        position: [50, -30]
+        form: "point"
+        personality: "mysterious"
+        size: 8
+        color: "#00ffff"
+        glow: true
+        energy: 0.5
+        animation_pattern: "wave"
+        
+      atmosphere_2:
+        type: mathematical_entity
+        position: [100, -60]
+        form: "point"
+        personality: "elegant"
+        size: 8
+        color: "#ffffff"
+        glow: true
+        energy: 0.6
+        animation_pattern: "pulse"
+        
+      atmosphere_3:
+        type: mathematical_entity
+        position: [150, -80]
+        form: "point"
+        personality: "playful"
+        size: 8
+        color: "#ffaa00"
+        glow: true
+        energy: 0.7
+        animation_pattern: "breathe"
+        
+      # Conceptual bridge from character to truth
+      philosophical_bridge:
+        type: relationship_connector
+        from: [70, -20]
+        to: [200, -100]
+        relationship_type: "dependency"
+        strength: 0.2
+        color: "#00ffff"
+        animated: true
+        bidirectional: false

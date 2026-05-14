@@ -1,0 +1,40 @@
+concept: "Detective Octopus Static Hold Test"
+background_color: #001122
+
+# Test scene to demonstrate static hold system
+# Phases will hold at completion for specified time before advancing
+
+phase intro:
+  duration: 2
+  static_hold_time: 3
+  
+  detective at (400, 300):
+    mood: wise
+    message: "Welcome to the static hold test! This phase will hold for 3 seconds after animation completes."
+    size: 80
+
+phase demonstration:
+  duration: 1.5
+  static_hold_time: 2
+  
+  detective at (400, 300):
+    mood: excited
+    message: "Notice how I stay visible at full animation before the next phase!"
+    size: 80
+
+phase conclusion:
+  duration: 2
+  static_hold_time: 1
+  
+  detective at (400, 300):
+    mood: thoughtful  
+    message: "This enables better educational pacing - students can absorb information!"
+    size: 80
+
+phase final:
+  duration: 1
+  
+  detective at (400, 300):
+    mood: happy
+    message: "Perfect for learning!"
+    size: 80

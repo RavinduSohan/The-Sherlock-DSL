@@ -1,0 +1,227 @@
+# Bell Curve Demo
+# Visualization of a normal distribution with the new bell_curve component
+
+concept: "Normal Distribution Visualization"
+emoji: "📊"
+total_duration: 15
+background: "#0a0e1a"
+
+subtitles:
+  - "📊 Bell Curve Visualization"
+  - "🧮 Standard Normal Distribution N(0,1)"
+  - "🎲 Probability Density Function"
+  - "🔍 Mean, Median, and Mode"
+  - "📈 Statistical Properties"
+
+phases:
+  introduction:
+    duration: 3
+    description: "Introduction to the bell curve"
+    elements:
+      title:
+        type: text
+        text: "Bell Curve Distribution"
+        position: [0, -200]
+        color: "#ffffff"
+        size: 28
+        glow: true
+      
+      subtitle:
+        type: text
+        text: "Normal/Gaussian Distribution Visualization"
+        position: [0, -160]
+        color: "#3498db"
+        size: 18
+        glow: false
+
+  bell_curve_intro:
+    duration: 5
+    description: "Display the bell curve"
+    elements:
+      # Main bell curve using our new component
+      bell_curve:
+        type: bell_curve
+        position: [0, 0]
+        amplitude: 150
+        variance: 3000
+        mean: 0
+        startX: -200
+        endX: 200
+        color: "#3498db"
+        thickness: 3
+        glow: true
+      
+      # Grid for reference
+      grid:
+        type: grid
+        style: "flat"
+        spacing: 40
+        color: "#1a365d"
+        density: 0.8
+        opacity: 0.3
+      
+      # Bell curve formula
+      formula:
+        type: text
+        text: "f(x) = (1/√(2πσ²)) · e^(-(x-μ)²/2σ²)"
+        position: [0, 120]
+        color: "#ffffff"
+        size: 18
+        glow: true
+      
+      # Standard normal distribution text
+      distribution_text:
+        type: text
+        text: "Standard Normal: μ = 0, σ = 1"
+        position: [0, 160]
+        color: "#3498db"
+        size: 16
+        glow: false
+
+  statistical_properties:
+    duration: 7
+    description: "Show statistical properties"
+    elements:
+      # Continue showing the bell curve
+      bell_curve:
+        type: bell_curve
+        position: [0, 0]
+        amplitude: 150
+        variance: 3000
+        mean: 0
+        startX: -200
+        endX: 200
+        color: "#3498db"
+        thickness: 2
+        glow: true
+      
+      # Keep grid for reference
+      grid:
+        type: grid
+        style: "flat"
+        spacing: 40
+        color: "#1a365d"
+        density: 0.8
+        opacity: 0.3
+      
+      # Axis labels
+      x_axis:
+        type: text
+        text: "x"
+        position: [220, 10]
+        color: "#ffffff"
+        size: 16
+        glow: false
+      
+      y_axis:
+        type: text
+        text: "f(x)"
+        position: [10, -180]
+        color: "#ffffff"
+        size: 16
+        glow: false
+      
+      # Standard deviation markers
+      sd_minus_2:
+        type: text
+        text: "-2σ"
+        position: [-120, 30]
+        color: "#e74c3c"
+        size: 14
+        glow: false
+      
+      sd_minus_1:
+        type: text
+        text: "-1σ"
+        position: [-60, 30]
+        color: "#e74c3c"
+        size: 14
+        glow: false
+      
+      sd_0:
+        type: text
+        text: "μ (0)"
+        position: [0, 30]
+        color: "#e74c3c"
+        size: 14
+        glow: false
+      
+      sd_plus_1:
+        type: text
+        text: "+1σ"
+        position: [60, 30]
+        color: "#e74c3c"
+        size: 14
+        glow: false
+      
+      sd_plus_2:
+        type: text
+        text: "+2σ"
+        position: [120, 30]
+        color: "#e74c3c"
+        size: 14
+        glow: false
+      
+      # Standard deviation vertical lines
+      sd_minus_2_line:
+        type: line
+        from: [-120, -150]
+        to: [-120, 20]
+        color: "#e74c3c"
+        width: 1
+        dashed: true
+        glow: false
+      
+      sd_minus_1_line:
+        type: line
+        from: [-60, -150]
+        to: [-60, 20]
+        color: "#e74c3c"
+        width: 1
+        dashed: true
+        glow: false
+      
+      sd_0_line:
+        type: line
+        from: [0, -150]
+        to: [0, 20]
+        color: "#e74c3c"
+        width: 1
+        dashed: true
+        glow: false
+      
+      sd_plus_1_line:
+        type: line
+        from: [60, -150]
+        to: [60, 20]
+        color: "#e74c3c"
+        width: 1
+        dashed: true
+        glow: false
+      
+      sd_plus_2_line:
+        type: line
+        from: [120, -150]
+        to: [120, 20]
+        color: "#e74c3c"
+        width: 1
+        dashed: true
+        glow: false
+      
+      # Statistical info
+      statistics:
+        type: text
+        text: "68% of data falls within 1σ, 95% within 2σ, 99.7% within 3σ"
+        position: [0, -220]
+        color: "#2ecc71"
+        size: 16
+        glow: true
+
+equations:
+  - id: normal_distribution
+    latex: "f(x) = \\frac{1}{\\sigma\\sqrt{2\\pi}} e^{-\\frac{1}{2}\\left(\\frac{x-\\mu}{\\sigma}\\right)^2}"
+    position: [0, 200]
+    phase: bell_curve_intro
+    animation: fade-in
+    glow: true
+    size: 16

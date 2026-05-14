@@ -1,0 +1,606 @@
+concept: "Matrix Composition: The Dance of Transformations"
+emoji: "💃"
+total_duration: 84
+background: "#0a0a0a"
+
+subtitles:
+  - ""
+  - ""
+  - ""
+  - ""
+  - ""
+  - ""
+  - ""
+  - ""
+  - ""
+
+phases:
+  scene_1:
+    duration: 8
+    description: "Sequential matrix transformations"
+    elements:
+      matrix_a:
+        type: matrix
+        position: [-150, 50]
+        values: [[2, 0], [0, 2]]
+        cellSize: 40
+        textSize: 14
+        color: "#e74c3c"
+        glow: true
+        highlightCells: [[0,0], [1,1]]
+        label: "Matrix A"
+
+      matrix_b:
+        type: matrix
+        position: [50, 50]
+        values: [[0.7, -0.7], [0.7, 0.7]]
+        cellSize: 40
+        textSize: 14
+        color: "#3498db"
+        glow: true
+        highlightCells: [[0,0], [0,1], [1,0], [1,1]]
+        label: "Matrix B"
+
+      arrow_line:
+        type: line
+        from: [-70, 50]
+        to: [10, 50]
+        thickness: 3
+        color: "#f39c12"
+
+      result_text:
+        type: text
+        text: "Matrix A [2,0; 0,2] → Matrix B [0.7,-0.7; 0.7,0.7] → Combined Transformation"
+        position: [0, -180]
+        size: 14
+        color: "#95a5a6"
+
+      title_text:
+        type: text
+        text: "Sequential Transformations"
+        position: [0, -220]
+        size: 20
+        color: "#ffffff"
+
+  scene_2:
+    duration: 6
+    description: "Key concepts of transformation composition"
+    elements:
+      main_title:
+        type: text
+        text: "🕺 The Dance of Dimensions"
+        position: [0, -80]
+        size: 22
+        color: "#f39c12"
+        glow: true
+
+      point_1:
+        type: text
+        text: "🎯 Combine Transformations"
+        position: [0, -20]
+        size: 16
+        color: "#ffffff"
+
+      point_2:
+        type: text
+        text: "📐 Order Matters Completely"
+        position: [0, 20]
+        size: 16
+        color: "#ffffff"
+
+      point_3:
+        type: text
+        text: "🤖 Neural Networks = Matrix Dances"
+        position: [0, 60]
+        size: 16
+        color: "#ffffff"
+
+  scene_3:
+    duration: 10
+    description: "Rotation and scaling composition example"
+    elements:
+      rotation_matrix:
+        type: matrix
+        position: [-150, 50]
+        values: [[0.7, -0.7], [0.7, 0.7]]
+        cellSize: 40
+        textSize: 14
+        color: "#e74c3c"
+        glow: true
+        highlightCells: [[0,0], [0,1], [1,0], [1,1]]
+        label: "Rotation R"
+
+      scaling_matrix:
+        type: matrix
+        position: [0, 50]
+        values: [[2, 0], [0, 2]]
+        cellSize: 40
+        textSize: 14
+        color: "#3498db"
+        glow: true
+        highlightCells: [[0,0], [1,1]]
+        label: "Scaling S"
+
+      result_matrix:
+        type: matrix
+        position: [150, 50]
+        values: [[1.4, -1.4], [1.4, 1.4]]
+        cellSize: 40
+        textSize: 14
+        color: "#2ecc71"
+        glow: true
+        highlightCells: [[0,0], [0,1], [1,0], [1,1]]
+        label: "S × R"
+
+      arrow_1:
+        type: line
+        from: [-80, 50]
+        to: [-30, 50]
+        thickness: 3
+        color: "#f39c12"
+
+      arrow_2:
+        type: line
+        from: [70, 50]
+        to: [120, 50]
+        thickness: 3
+        color: "#f39c12"
+
+      calculation_text:
+        type: text
+        text: "Rotation R = [0.7,-0.7; 0.7,0.7] → Scaling S = [2,0; 0,2] → S × R = [1.4,-1.4; 1.4,1.4]"
+        position: [0, -180]
+        size: 14
+        color: "#95a5a6"
+
+      title_text:
+        type: text
+        text: "Composition Example"
+        position: [0, -220]
+        size: 20
+        color: "#ffffff"
+
+  scene_4:
+    duration: 12
+    description: "Detailed matrix multiplication process"
+    elements:
+      matrix_left:
+        type: matrix
+        position: [-120, 50]
+        values: [[2, 0], [0, 2]]
+        cellSize: 40
+        textSize: 14
+        color: "#e74c3c"
+        highlightCells: [[0,0], [1,1]]
+        label: "A"
+
+      matrix_right:
+        type: matrix
+        position: [0, 50]
+        values: [[0.7, -0.7], [0.7, 0.7]]
+        cellSize: 40
+        textSize: 14
+        color: "#3498db"
+        highlightCells: [[0,0], [0,1], [1,0], [1,1]]
+        label: "B"
+
+      result_matrix:
+        type: matrix
+        position: [120, 50]
+        values: [[1.4, -1.4], [1.4, 1.4]]
+        cellSize: 40
+        textSize: 14
+        color: "#2ecc71"
+        glow: true
+        highlightCells: [[0,0], [0,1], [1,0], [1,1]]
+        label: "A × B"
+
+      calculation_line_1:
+        type: line
+        from: [-80, 30]
+        to: [80, 30]
+        thickness: 2
+        dashed: true
+        color: "#f39c12"
+
+      calculation_line_2:
+        type: line
+        from: [-80, 70]
+        to: [80, 70]
+        thickness: 2
+        dashed: true
+        color: "#f39c12"
+
+      process_text:
+        type: text
+        text: "[2,0; 0,2] × [0.7,-0.7; 0.7,0.7] = [2×0.7+0×0.7, 2×(-0.7)+0×0.7; 0×0.7+2×0.7, 0×(-0.7)+2×0.7]"
+        position: [0, -160]
+        size: 12
+        color: "#95a5a6"
+
+      result_text:
+        type: text
+        text: "= [1.4,-1.4; 1.4,1.4]"
+        position: [0, -140]
+        size: 14
+        color: "#2ecc71"
+
+      title_text:
+        type: text
+        text: "Matrix Multiplication Process"
+        position: [0, -220]
+        size: 20
+        color: "#ffffff"
+
+  scene_5:
+    duration: 9
+    description: "Non-commutative property demonstration"
+    elements:
+      rs_matrix:
+        type: matrix
+        position: [-150, 30]
+        values: [[1.4, -1.4], [1.4, 1.4]]
+        cellSize: 35
+        textSize: 12
+        color: "#e74c3c"
+        highlightCells: [[0,0], [0,1], [1,0], [1,1]]
+        label: "R × S"
+
+      sr_matrix:
+        type: matrix
+        position: [150, 30]
+        values: [[1.4, -1.4], [1.4, 1.4]]
+        cellSize: 35
+        textSize: 12
+        color: "#3498db"
+        highlightCells: [[0,0], [0,1], [1,0], [1,1]]
+        label: "S × R"
+
+      not_equal_text:
+        type: text
+        text: "≠"
+        position: [0, 30]
+        size: 24
+        color: "#f39c12"
+        glow: true
+
+      order_matters_text:
+        type: text
+        text: "Order Matters: R×S ≠ S×R"
+        position: [0, -180]
+        size: 16
+        color: "#f39c12"
+
+      calculation_text:
+        type: text
+        text: "R×S = [1.4,-1.4; 1.4,1.4] ≠ S×R = [1.4,-1.4; 1.4,1.4]? Wait, let me recalculate..."
+        position: [0, -160]
+        size: 12
+        color: "#95a5a6"
+
+      title_text:
+        type: text
+        text: "Non-Commutative Property"
+        position: [0, -220]
+        size: 20
+        color: "#ffffff"
+
+  scene_6:
+    duration: 6
+    description: "Detective Octopus on matrix order importance"
+    elements:
+      detective_octopus:
+        type: character
+        position: [0, 0]
+        character: "octopus"
+        size: 60
+        color: "#9b59b6"
+
+      wisdom_text:
+        type: text
+        text: "Like putting on socks THEN shoes versus shoes THEN socks - the order changes everything in matrix multiplication!"
+        position: [0, 100]
+        size: 14
+        color: "#ffffff"
+
+      title_text:
+        type: text
+        text: "Mathematical Choreography 🐙"
+        position: [0, -220]
+        size: 20
+        color: "#ffffff"
+
+  scene_7:
+    duration: 10
+    description: "Neural network layer progression"
+    elements:
+      input_vector:
+        type: matrix
+        position: [-180, 50]
+        values: [["x₁"], ["x₂"]]
+        cellSize: 35
+        textSize: 12
+        color: "#e74c3c"
+        glow: true
+        highlightCells: [[0,0], [1,0]]
+        label: "Input"
+
+      weight_matrix_1:
+        type: matrix
+        position: [-80, 50]
+        values: [[0.1, 0.3], [-0.2, 0.4]]
+        cellSize: 30
+        textSize: 10
+        color: "#3498db"
+        highlightCells: [[0,0], [0,1], [1,0], [1,1]]
+        label: "W₁"
+
+      hidden_layer:
+        type: matrix
+        position: [20, 50]
+        values: [["h₁"], ["h₂"]]
+        cellSize: 35
+        textSize: 12
+        color: "#f39c12"
+        glow: true
+        highlightCells: [[0,0], [1,0]]
+        label: "Hidden"
+
+      weight_matrix_2:
+        type: matrix
+        position: [120, 50]
+        values: [[0.5], [-0.1]]
+        cellSize: 35
+        textSize: 12
+        color: "#9b59b6"
+        highlightCells: [[0,0], [1,0]]
+        label: "W₂"
+
+      output_vector:
+        type: matrix
+        position: [220, 50]
+        values: [["y"]]
+        cellSize: 35
+        textSize: 12
+        color: "#2ecc71"
+        glow: true
+        highlightCells: [[0,0]]
+        label: "Output"
+
+      arrow_1:
+        type: line
+        from: [-125, 50]
+        to: [-100, 50]
+        thickness: 2
+        color: "#ffffff"
+
+      arrow_2:
+        type: line
+        from: [-30, 50]
+        to: [-10, 50]
+        thickness: 2
+        color: "#ffffff"
+
+      arrow_3:
+        type: line
+        from: [70, 50]
+        to: [90, 50]
+        thickness: 2
+        color: "#ffffff"
+
+      process_text:
+        type: text
+        text: "Input [x₁,x₂] → W₁ [0.1,0.3; -0.2,0.4] → Hidden → W₂ [0.5,-0.1] → Output"
+        position: [0, -180]
+        size: 14
+        color: "#95a5a6"
+
+      title_text:
+        type: text
+        text: "Neural Network Layers"
+        position: [0, -220]
+        size: 20
+        color: "#ffffff"
+
+  scene_8:
+    duration: 9
+    description: "Parallel matrix operations"
+    elements:
+      operation_1:
+        type: matrix
+        position: [-180, 30]
+        values: [[2, 1], [1, 2]]
+        cellSize: 30
+        textSize: 10
+        color: "#e74c3c"
+        highlightCells: [[0,0], [0,1], [1,0], [1,1]]
+        label: "M₁"
+
+      vector_1:
+        type: matrix
+        position: [-180, -30]
+        values: [[1], [2]]
+        cellSize: 30
+        textSize: 10
+        color: "#e74c3c"
+        highlightCells: [[0,0], [1,0]]
+
+      result_1:
+        type: matrix
+        position: [-180, -90]
+        values: [[5], [4]]
+        cellSize: 30
+        textSize: 10
+        color: "#2ecc71"
+        glow: true
+        highlightCells: [[0,0], [1,0]]
+
+      operation_2:
+        type: matrix
+        position: [0, 30]
+        values: [[2, 1], [0, 2]]
+        cellSize: 30
+        textSize: 10
+        color: "#3498db"
+        highlightCells: [[0,0], [0,1], [1,0], [1,1]]
+        label: "M₂"
+
+      vector_2:
+        type: matrix
+        position: [0, -30]
+        values: [[3], [1]]
+        cellSize: 30
+        textSize: 10
+        color: "#3498db"
+        highlightCells: [[0,0], [1,0]]
+
+      result_2:
+        type: matrix
+        position: [0, -90]
+        values: [[7], [2]]
+        cellSize: 30
+        textSize: 10
+        color: "#2ecc71"
+        glow: true
+        highlightCells: [[0,0], [1,0]]
+
+      operation_3:
+        type: matrix
+        position: [180, 30]
+        values: [[3, 0], [1, 4]]
+        cellSize: 30
+        textSize: 10
+        color: "#9b59b6"
+        highlightCells: [[0,0], [0,1], [1,0], [1,1]]
+        label: "M₃"
+
+      vector_3:
+        type: matrix
+        position: [180, -30]
+        values: [[0], [2]]
+        cellSize: 30
+        textSize: 10
+        color: "#9b59b6"
+        highlightCells: [[0,0], [1,0]]
+
+      result_3:
+        type: matrix
+        position: [180, -90]
+        values: [[6], [8]]
+        cellSize: 30
+        textSize: 10
+        color: "#2ecc71"
+        glow: true
+        highlightCells: [[0,0], [1,0]]
+
+      parallel_text:
+        type: text
+        text: "M₁×[1,2] = [5,4] | M₂×[3,1] = [7,2] | M₃×[0,2] = [6,8]"
+        position: [0, -180]
+        size: 14
+        color: "#95a5a6"
+
+      title_text:
+        type: text
+        text: "Parallel Matrix Operations"
+        position: [0, -220]
+        size: 20
+        color: "#ffffff"
+
+  scene_9:
+    duration: 6
+    description: "AI as matrix choreography"
+    elements:
+      main_title:
+        type: text
+        text: "💡 AI = Matrix Choreography"
+        position: [0, -80]
+        size: 22
+        color: "#f39c12"
+        glow: true
+
+      point_1:
+        type: text
+        text: "👁️ Face Recognition = Matrix Dances"
+        position: [0, -20]
+        size: 16
+        color: "#ffffff"
+
+      point_2:
+        type: text
+        text: "🗣️ Language Translation = Data Transformation"
+        position: [0, 20]
+        size: 16
+        color: "#ffffff"
+
+      point_3:
+        type: text
+        text: "🎯 Each Layer Learns to Transform"
+        position: [0, 60]
+        size: 16
+        color: "#ffffff"
+
+  scene_10:
+    duration: 8
+    description: "Final transformation pattern recognition"
+    elements:
+      input_data:
+        type: matrix
+        position: [-150, 50]
+        values: [["x₁"], ["x₂"]]
+        cellSize: 40
+        textSize: 14
+        color: "#e74c3c"
+        glow: true
+        highlightCells: [[0,0], [1,0]]
+        label: "Input Data"
+
+      transform_matrix:
+        type: matrix
+        position: [0, 50]
+        values: [[0.8, -0.2], [0.3, 0.9]]
+        cellSize: 40
+        textSize: 14
+        color: "#3498db"
+        glow: true
+        highlightCells: [[0,0], [0,1], [1,0], [1,1]]
+        label: "Matrix M"
+
+      output_data:
+        type: matrix
+        position: [150, 50]
+        values: [["y₁"], ["y₂"]]
+        cellSize: 40
+        textSize: 14
+        color: "#2ecc71"
+        glow: true
+        highlightCells: [[0,0], [1,0]]
+        label: "Recognized Pattern"
+
+      arrow_1:
+        type: line
+        from: [-90, 50]
+        to: [-30, 50]
+        thickness: 3
+        color: "#f39c12"
+
+      arrow_2:
+        type: line
+        from: [70, 50]
+        to: [110, 50]
+        thickness: 3
+        color: "#f39c12"
+
+      process_text:
+        type: text
+        text: "Input Data → Matrix Transformation → Recognized Pattern | [x₁,x₂] → M → [y₁,y₂]"
+        position: [0, -180]
+        size: 14
+        color: "#95a5a6"
+
+      title_text:
+        type: text
+        text: "Final Transformation"
+        position: [0, -220]
+        size: 20
+        color: "#ffffff"

@@ -1,0 +1,14 @@
+{
+  "name": "my-sherlock-project",
+  "version": "1.0.0",
+  "description": "Sherlock animation project",
+  "scripts": {
+    "preview": "sherlock preview scenes/intro.sherlock",
+    "render": "sherlock render scenes/intro.sherlock -o output.mp4"
+  },
+  "keywords": [
+    "sherlock",
+    "animation",
+    "education"
+  ]
+}

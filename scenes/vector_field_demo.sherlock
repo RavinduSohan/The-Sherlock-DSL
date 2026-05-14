@@ -1,0 +1,70 @@
+concept: "Vector Field Visualization"
+emoji: "🌀"
+total_duration: 15
+background: "#0a0e27"
+
+phases:
+  rotation_field:
+    duration: 5
+    static_hold_time: 0
+    description: "Rotation field - vortex pattern showing rotational flow"
+    elements:
+      rotation_field_grid:
+        type: parametric_field
+        geometry: vector_field_grid
+        resolution: [15, 15]
+        bounds_x: [-3, 3]
+        bounds_y: [-3, 3]
+        transform: rotation_field
+        strength: 1
+        render_mode: vector_arrows
+        color: "#4fc3f7"
+        thickness: 2
+        arrow_size: 10
+        vector_scale: 0.4
+        opacity: 0.9
+        glow: true
+  
+  source_field:
+    duration: 5
+    static_hold_time: 0
+    description: "Source field - radial outward flow from center"
+    elements:
+      source_field_grid:
+        type: parametric_field
+        geometry: vector_field_grid
+        resolution: [12, 12]
+        bounds_x: [-3, 3]
+        bounds_y: [-3, 3]
+        transform: radial_flow
+        outward: true
+        strength: 1
+        render_mode: vector_arrows
+        color: "#ff6b6b"
+        thickness: 2
+        arrow_size: 10
+        vector_scale: 0.3
+        opacity: 0.9
+        glow: true
+  
+  sink_field:
+    duration: 5
+    static_hold_time: 0
+    description: "Sink field - radial inward flow toward center"
+    elements:
+      sink_field_grid:
+        type: parametric_field
+        geometry: vector_field_grid
+        resolution: [12, 12]
+        bounds_x: [-3, 3]
+        bounds_y: [-3, 3]
+        transform: radial_flow
+        outward: false
+        strength: 1
+        render_mode: vector_arrows
+        color: "#a8e6cf"
+        thickness: 2
+        arrow_size: 10
+        vector_scale: 0.3
+        opacity: 0.9
+        glow: true

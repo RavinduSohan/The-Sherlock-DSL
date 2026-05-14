@@ -1,0 +1,28 @@
+concept: "Debug Component Issues"
+emoji: "🔧"
+total_duration: 6
+background: "#1a1a1a"
+
+phases:
+  debug_particles:
+    duration: 3
+    description: "Debug magic particles"
+    elements:
+      center_particles:
+        type: magic_sparkles
+        position: [0, 0]
+        particle_count: 20
+        color: "#FF6B6B"
+        spread: 80
+
+  debug_chart:
+    duration: 3
+    description: "Debug bar chart with specific data"
+    elements:
+      test_chart:
+        type: animated_bar_chart
+        position: [0, -50]
+        data: [10, 20, 15, 25, 30]
+        width: 250
+        height: 100
+        color: "#4ECDC4"

@@ -1,0 +1,58 @@
+concept: "Component Package System Test"
+emoji: "🔌"
+total_duration: 10
+background: "#1a1a1a"
+
+phases:
+  emoji_test:
+    duration: 3
+    description: "Test emoji animation components"
+    elements:
+      blinking_face:
+        type: blinking_emoji
+        emoji: "😀"
+        position: [-150, 100]
+        size: 80
+        blink_speed: 2
+        color: "#FFD700"
+        glow: true
+      
+      rotating_star:
+        type: rotating_emoji
+        emoji: "⭐"
+        position: [150, 100]
+        size: 70
+        rotation_speed: 0.5
+        color: "#FF6B6B"
+
+  particle_test:
+    duration: 3
+    description: "Test particle effects"
+    elements:
+      magic_effect:
+        type: magic_sparkles
+        position: [0, 0]
+        particle_count: 30
+        color: "#4ECDC4"
+        spread: 120
+
+  data_test:
+    duration: 4
+    description: "Test data visualization"
+    elements:
+      sample_chart:
+        type: animated_bar_chart
+        position: [0, -100]
+        data: [25, 45, 30, 60, 35, 50]
+        width: 300
+        height: 120
+        color: "#2ECC71"
+      
+      water_chart:
+        type: water_bar_chart
+        position: [0, 100]
+        data: [20, 35, 25, 50, 30, 40]
+        width: 280
+        height: 100
+        water_color: "#29B6F6"
+        wave_intensity: 1.2

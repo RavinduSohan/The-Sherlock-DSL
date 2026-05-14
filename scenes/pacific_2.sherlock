@@ -1,0 +1,576 @@
+# Scene 1: Pacific Atlantic Water Flow - Problem Introduction & World Setup (Phased)
+
+concept: "Pacific Atlantic Water Flow"
+emoji: "🌊"
+total_duration: 55
+background: "#0a0e1a"
+
+subtitles:
+  - ""
+  - "🏔️ Water flows from high to low elevation"
+  - "🌊 Pacific Ocean borders the top and left"
+  - "🌊 Atlantic Ocean borders the bottom and right"
+  - "🎯 Find cells that can reach BOTH oceans"
+
+phases:
+  setup:
+    duration: 4
+    description: "Tranquil oceanic background, title and subtitle fade in"
+    elements:
+      main_sine_curve:
+        type: sine_curve
+        position: [0, 0]
+        amplitude: 80
+        frequency: 0.015
+        phaseShift: 0
+        startX: -400
+        endX: 400
+        color: "#3498db"
+        thickness: 3
+        glow: true
+        label: "Primary Sine Wave"
+      
+      secondary_sine_curve:
+        type: sine_curve
+        position: [0, 50]
+        amplitude: 50
+        frequency: 0.025
+        phaseShift: 1.57
+        startX: -400
+        endX: 400
+        color: "#2ecc71"
+        thickness: 2
+        glow: true
+        label: "Secondary Sine Wave"
+
+      beautiful_waves:
+        type: waves
+        amplitude: 40
+        frequency: 0.04
+        layers: 4
+        colors: ["#4ecdc4", "#ff6b6b", "#d4af37", "#9b59b6"]
+        position: [0, 0]
+        opacity: 0.5
+        animated: true
+      elevation_grid:
+        type: algorithm_grid
+        position: [-100, 150]
+        rows: 5
+        cols: 5
+        cellSize: 60
+        spacing: 6
+        color: "#2c3e50"
+        border_color: "#34495e"
+        border_width: 3
+        cells: [[1, 2, 2, 3, 5], [3, 2, 3, 4, 4], [2, 4, 5, 3, 1], [6, 7, 1, 4, 5], [5, 1, 1, 2, 4]]
+        showValues: true
+        label: "Elevation Grid"
+        
+      pacific_label:
+        type: text
+        text: "🌊 Pacific Ocean"
+        position: [-180, -200]
+        color: "#3498db"
+        size: 24
+        font: "Arial"
+      
+      atlantic_label:
+        type: text
+        text: "🌊 Atlantic Ocean"
+        position: [180, 200]
+        color: "#e74c3c"
+        size: 24
+        font: "Arial"
+      
+      pacific_not_label:
+        type: text
+        text: "WATER FLOWS from a cell to any neighbor of lower or equal height. Our goal...\n find all mountains where rain can drain to both oceans."
+        position: [0, -230]
+        color: "#d4af37"
+        size: 20
+        font: "Cinzel Decorative"       
+
+  scene2_phase_1:
+    duration: 4
+    description: "Tranquil oceanic background, title and subtitle fade in"
+    elements:
+      pacific_top_border:
+        type: line
+        from: [-150, -150]
+        to: [150, -150]
+        color: "#3498db"
+        thickness: 4
+        glow: true
+        label: "Pacific Top Border"
+      
+      pacific_left_border:
+        type: line
+        from: [-150, -150]
+        to: [-150, 150]
+        color: "#3498db"
+        thickness: 4
+        glow: true
+        label: "Pacific Left Border"
+      
+      pacific_flow_text:
+        type: text
+        text: "🌊 Water can flow to Pacific from these edges"
+        position: [0, -220]
+        color: "#3498db"
+        size: 16
+
+
+
+  atlantic_borders:
+    duration: 4
+    description: "Highlight Atlantic Ocean borders (bottom and right edges)"
+    elements:
+      atlantic_bottom_border:
+        type: line
+        from: [-150, 150]
+        to: [150, 150]
+        color: "#e74c3c"
+        thickness: 4
+        glow: true
+        label: "Atlantic Bottom Border"
+      
+      atlantic_right_border:
+        type: line
+        from: [150, -150]
+        to: [150, 150]
+        color: "#e74c3c"
+        thickness: 4
+        glow: true
+        label: "Atlantic Right Border"
+      
+      atlantic_flow_text:
+        type: text
+        text: "🌊 Water can flow to Atlantic from these edges"
+        position: [0, 220]
+        color: "#e74c3c"
+        size: 16      
+
+
+
+  scene2_phase_2:
+    duration: 3
+    description: "what ever"
+    elements: 
+      pacific_matrix:
+        type: matrix
+        position: [-100, 150]
+        values: [[1, 2, 2, 3, 5], [3, 2, 3, 4, 4], [2, 4, 5, 3, 1], [6, 7, 1, 4, 5], [5, 1, 1, 2, 4]]
+        color: "#4ecdc4"
+        cellSize: 20                   
+        textSize: 14 
+        label: "🌊 Pacific Ocean"
+        highlightCells: [[0, 0], [1, 1], [2, 2], [3, 3], [4, 4], [0, 4], [1, 3], [3, 1], [4, 0]]
+
+      celebration:
+        type: fireworks
+        position: [0, 150]                 
+        count: 5                            
+        colors: ["#2ecc71", "#f39c12", "#58a6ff", "#e74c3c"]   
+
+  scene2_phase_3:
+    duration: 3
+    description: "what ever"
+    elements: 
+      elevation_grid:
+        type: algorithm_grid
+        position: [-100, 150]
+        rows: 15
+        cols: 15
+        cellSize: 20
+        spacing: 6
+        color: "#2c3e50"
+        border_color: "#34495e"
+        border_width: 3
+        cells: [[1, 2, 2, 3, 5], [3, 2, 3, 4, 4], [2, 4, 5, 3, 1], [6, 7, 1, 4, 5], [5, 1, 1, 2, 4]]
+        showValues: false
+        label: "Elevation Grid"
+
+      problem_title:
+        type: text
+        text: "Too Slow ❌🗺️"         
+        position: [0, 220]                 
+        color: "#58a6ff"                    
+        size: 28                            
+        glow: true                          
+        font: "Georgia"                      
+
+      beautiful_waves:
+        type: waves
+        amplitude: 40
+        frequency: 0.04
+        layers: 4
+        colors: ["#4ecdc4", "#ff6b6b", "#d4af37", "#9b59b6"]
+        position: [0, 0]
+        opacity: 0.5
+        animated: true
+
+  scene3_phase_1:
+    duration: 3
+    description: "what ever"
+    elements: 
+      problem_title:
+        type: text
+        text: "Reverse The Problem 🔁🧠"         
+        position: [0, 50]                 
+        color: "#d4af37"                    
+        size: 40                           
+        glow: true                          
+        font: "Georgia"        
+      
+      problem_title_2:
+        type: text
+        text: "🕵️"         
+        position: [250, 150]                 
+        color: "#d4af37"                    
+        size: 80                           
+        glow: true                          
+        font: "Georgia"   
+
+      flame:
+        type: fire
+        position: [0, -200]                  # Fire position
+        intensity: 1.8     
+
+  scene3_phase_2:
+    duration: 3
+    description: "what ever"
+    elements:    
+      pacific_top_border:
+        type: line
+        from: [-150, -150]
+        to: [150, -150]
+        color: "#3498db"
+        thickness: 4
+        glow: true
+        label: "Pacific Top Border"
+      
+      pacific_left_border:
+        type: line
+        from: [-150, -150]
+        to: [-150, 150]
+        color: "#3498db"
+        thickness: 4
+        glow: true
+        label: "Pacific Left Border"
+
+      vector_b:
+        type: vector
+        from: [-150, -150]                       
+        to: [0, 0]                       
+        color: "#4ecdc4"                    
+        width: 3                            
+        glow: true                          
+        label: "Vector B"  
+
+      atlantic_bottom_border:
+        type: line
+        from: [-150, 150]
+        to: [150, 150]
+        color: "#e74c3c"
+        thickness: 4
+        glow: true
+        label: "Atlantic Bottom Border"
+      
+      atlantic_right_border:
+        type: line
+        from: [150, -150]
+        to: [150, 150]
+        color: "#e74c3c"
+        thickness: 4
+        glow: true
+        label: "Atlantic Right Border"
+
+      vector_c:
+        type: vector
+        from: [150, 150]                       
+        to: [0, 0]                       
+        color: "#e74c3c"                    
+        width: 3                            
+        glow: true                          
+        label: "Vector B"    
+
+ 
+    
+  scene4_phase_1:
+    duration: 3
+    description: "what ever"
+    elements:     
+      pacific_matrix:
+        type: matrix
+        position: [-100, 150]
+        values: [[1, 2, 2, 3, 5], [3, 2, 3, 4, 4], [2, 4, 5, 3, 1], [6, 7, 1, 4, 5], [5, 1, 1, 2, 4]]
+        color: "#4ecdc4"
+        cellSize: 20                   # Individual cell size
+        textSize: 14 
+        label: "🌊 Pacific Ocean"
+        highlightRow: 4
+        highlightCol: 0
+
+      pacific_label:
+        type: text
+        text: "🌊 Pacific Ocean"
+        position: [-230, -200]
+        color: "#3498db"
+        size: 24
+        font: "Arial"       
+
+      problem_title:
+        type: text
+        text: "matrix[x][y] > matrix[i][j]"         
+        position: [0, -220]                 
+        color: "#64dd64ff"                    
+        size: 28                           
+        glow: true                          
+        font: "Consolas"  
+
+  scene4_phase_2:
+    duration: 2
+    description: "what ever"
+    elements: 
+      pacific_matrix:
+        type: matrix
+        position: [-100, 150]
+        values: [[1, 2, 2, 3, 5], [3, 2, 3, 4, 4], [2, 4, 5, 3, 1], [6, 7, 1, 4, 5], [5, 1, 1, 2, 4]]
+        color: "#4ecdc4"
+        cellSize: 20                   # Individual cell size
+        textSize: 14 
+        label: "🌊 Pacific Ocean"      
+        highlightRow: 0
+        highlightCol: 4
+
+      problem_title:
+        type: text
+        text: "neighbor cell hight >= current looping i cell"         
+        position: [0, -220]                 
+        color: "#2ecc71"                    
+        size: 28                           
+        glow: true                          
+        font: "Georgia"  
+
+  scene4_phase_3:
+    duration: 2
+    description: "what ever"
+    elements: 
+      pacific_matrix:
+        type: matrix
+        position: [-100, 150]
+        values: [[1, 2, 2, 3, 5], [3, 2, 3, 4, 4], [2, 4, 5, 3, 1], [6, 7, 1, 4, 5], [5, 1, 1, 2, 4]]
+        color: "#4ecdc4"
+        cellSize: 20                   # Individual cell size
+        textSize: 14 
+        label: "🌊 Pacific Ocean"      
+        highlightCells: [[0,0], [0,1]]   
+
+      problem_title:
+        type: text
+        text: "neighbor cell hight >= current looping i cell"         
+        position: [0, -220]                 
+        color: "#2ecc71"                    
+        size: 28                           
+        glow: true                          
+        font: "Georgia"  
+
+
+  scene4_phase_5:
+    duration: 2
+    description: "what ever"
+    elements: 
+       pacific_matrix_1:
+        type: matrix
+        position: [-100, 150]
+        values: [[1, 2, 2, 3, 5], [3, 2, 3, 4, 4], [2, 4, 5, 3, 1], [6, 7, 1, 4, 5], [5, 1, 1, 2, 4]]
+        color: "#e74c3c"
+        cellSize: 20                   # Individual cell size
+        textSize: 14 
+        label: "🌊 Atlantic Ocean"
+        highlightRow: 0
+        highlightCol: 4
+
+       atlantic_label:
+        type: text
+        text: "🌊 Atlantic Ocean"
+        position: [180, 200]
+        color: "#e74c3c"
+        size: 24
+        font: "Arial"
+
+  scene5_phase_1:
+    duration: 2
+    description: "what ever"
+    elements: 
+      pacific_matrix:
+        type: matrix
+        position: [-340, 150]
+        values: [[1, 2, 2, 3, 5], [3, 2, 3, 4, 4], [2, 4, 5, 3, 1], [6, 7, 1, 4, 5], [5, 1, 1, 2, 4]]
+        color: "#4ecdc4"
+        cellSize: 15                   # Individual cell size
+        textSize: 14 
+        label: "🌊 Pacific Ocean"      
+        highlightCells: [[0,0], [0,1], [0,2], [0,3], [0,4], [1,0], [1,1], [1,2], [1,3], [1,4], [2,0], [2,1], [2,2], [2,3], [3,0], [3,1]] 
+
+       pacific_label:
+        type: text
+        text: "🌊 Pacific Ocean"
+        position: [-200, -180]
+        color: "#4ecdc4"
+        size: 24
+        glow: true
+        font: "Arial"
+
+      atlantic_matrix:
+        type: matrix
+        position: [30, 150]
+        values: [[1, 2, 2, 3, 5], [3, 2, 3, 4, 4], [2, 4, 5, 3, 1], [6, 7, 1, 4, 5], [5, 1, 1, 2, 4]]
+        color: "#e74c3c"
+        cellSize: 15                   # Individual cell size
+        textSize: 14 
+        label: "🌊 Atlantic Ocean"      
+        highlightCells: [[0,4], [1,3], [1,4], [2,0], [2,1], [2,2], [2,4], [3,3], [3,4], [4,0], [4,4]] 
+
+      atlantic_label:
+        type: text
+        text: "🌊 Atlantic Ocean"
+        position: [120, -180]
+        color: "#e74c3c"
+        size: 24
+        glow: true
+        font: "Arial"
+
+  scene5_phase_2_1:
+    duration: 6
+    description: "Find intersection of Pacific and Atlantic reachable cells"
+    elements:
+      problem_title:
+        type: text
+        text: "IF next_cell_height > current_cell_height THEN skip\nif (matrix[x][y] > matrix[i][j]) continue;"         
+        position: [0, 220]                 
+        color: "#58a6ff"                    
+        size: 20                           
+        glow: true                          
+        font: "Georgia"  
+
+      problem_title_2:
+        type: text
+        text: "DFS_FROM_EDGE(matrix, ocean_mask, row, column)\ndfs(matrix, pacific, i, 0);"         
+        position: [0, 160]                 
+        color: "#ffe058ff"                    
+        size: 20                           
+        glow: true                          
+        font: "Georgia"  
+
+      problem_title_3:
+        type: text
+        text: "MARK_VISITED\nvisited[i][j] = true;"         
+        position: [0, 100]                 
+        color: "#58ff6eff"                    
+        size: 20                           
+        glow: true                          
+        font: "Georgia"  
+
+      problem_title_4:
+        type: text
+        text: "Finds intersection of cells reachable from both oceans\nif (pacific[i][j] && atlantic[i][j]) result.push([i, j]);"         
+        position: [0, -60]                 
+        color: "#58a6ff"                    
+        size: 20                           
+        glow: true                          
+        font: "Georgia"    
+
+      sparkle_store:
+        type: sparkles
+        position: [50, 100]                 # Sparkle center position
+        density: 10                         # Number of sparkle particles
+        color: "#2ecc71"                    # Green sparkles
+        speed: 0.3                          # Sparkle animation speed
+  
+
+  scene5_phase_2:
+    duration: 4
+    description: "Find intersection of Pacific and Atlantic reachable cells"
+    elements:
+      result_grid:
+        type: algorithm_grid
+        position: [-100, 150]
+        rows: 5
+        cols: 5
+        cellSize: 60
+        spacing: 6
+        color: "#f39c12"
+        border_color: "#e67e22"
+        border_width: 4
+        cells: [[false, false, false, false, true], [false, false, false, true, true], [true, false, true, false, false], [true, true, false, false, false], [true, false, false, false, false]]
+        showValues: true
+        highlights: [8]
+        label: "Both Oceans Reachable"
+        glow: true
+
+      efficiency_stars:
+        type: sparkles
+        position: [0, 0]
+        density: 25
+        color: "#ffd700"
+        speed: 0.2
+      
+      background_waves:
+        type: waves
+        position: [0, 100]
+        amplitude: 15
+        frequency: 1.5
+        color: "#58a6ff"
+        opacity: 0.3
+
+      celebration:
+        type: fireworks
+        position: [0, 150]                 
+        count: 5                            
+        colors: ["#2ecc71", "#f39c12", "#58a6ff", "#e74c3c"]         
+
+      complexity_title:
+        type: text
+        text: "📊 Output: [[0,4], [1,3], [1,4], [2,2], [3,0], [3,1], [4,0]]"
+        position: [0, -220]
+        color: "#f39c12"
+        size: 24
+        glow: true
+      
+     
+
+
+equations:
+  - id: water_flow_rule
+    latex: "\\text{Result} = \\text{Pacific} \\cap \\text{Atlantic}"
+    position: "bottom"
+    glow: true
+    glowColor: "#58a6ff"
+    phase: setup
+    animation: fade-in        
+
+  - id: water_flow_rule_2
+    latex: "\\text{flow} = P_\\text{climb}"
+    position: "top"
+    phase: scene3_phase_1
+    animation: fade-in     
+
+  - id: water_flow_rule_3
+    latex: "\\text{Complexity} = O(n \\times m)"
+    position: "top"
+    phase: scene5_phase_2
+    animation: fade-in         
+
+  - id: water_flow_rule_4
+    latex: "\\text{Result} = \\text{Pacific} \\cap \\text{Atlantic}"
+    position: "bottom"
+    phase: scene5_phase_2_1
+    animation: fade-in    
+
+
+  - id: pacific_flow_comparison
+    latex: "\\text{height}[0][1]=2 > \\text{height}[0][0]=1"
+    position: "top"
+    phase: scene4_phase_2
+    animation: slide-in

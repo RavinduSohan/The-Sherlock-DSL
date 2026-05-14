@@ -1,0 +1,73 @@
+# Primitive Language Test - Simple Demo
+# Testing the new genius primitive language system
+
+concept: "Primitive Language Test"
+emoji: "🎨"
+total_duration: 8
+background: "#0a0e1a"
+
+subtitles:
+  - "🎨 Testing New Primitive Language"
+  - "⭕ Simple Shapes with Inline Properties"
+  - "🔲 Circle, Square, Line, Text"
+  - "✨ Clean and Concise Syntax"
+
+# ------------------------------------------------------------------------------
+# Phase 1: Show basic primitives
+# ------------------------------------------------------------------------------
+phases:
+  test_primitives:
+    duration: 4
+    description: "Test basic primitive shapes with inline properties"
+    elements:
+      # Test circle primitive
+      red_circle:
+        type: primitive
+        shape: circle[r:1 fill:#ff0000/0.5 at:(-3,2)]
+      
+      # Test square primitive
+      blue_square:
+        type: primitive  
+        shape: square[w:1.5 fill:#0000ff/0.7 at:(0,2)]
+      
+      # Test line primitive
+      white_line:
+        type: primitive
+        shape: line[from:(-3,0) to:(3,0) stroke:#ffffff strokeWidth:2]
+      
+      # Test text primitive
+      hello_text:
+        type: primitive
+        shape: text[text:"Hello Primitives!" fontSize:24 fill:#00ff00 at:(0,-2)]
+      
+      # Test another circle
+      green_circle:
+        type: primitive
+        shape: circle[r:0.8 fill:#00ff00/0.6 at:(3,2)]
+
+  test_more_shapes:
+    duration: 4
+    description: "Test more complex primitive configurations"
+    elements:
+      # Rectangle
+      purple_rect:
+        type: primitive
+        shape: rectangle[w:2 h:1 fill:#9b59b6/0.8 at:(-2,-1)]
+      
+      # Small circles in a pattern
+      dot1:
+        type: primitive
+        shape: circle[r:0.2 fill:#e74c3c at:(-1,1)]
+      
+      dot2:
+        type: primitive
+        shape: circle[r:0.2 fill:#e74c3c at:(0,1)]
+      
+      dot3:
+        type: primitive
+        shape: circle[r:0.2 fill:#e74c3c at:(1,1)]
+      
+      # Info text
+      info_text:
+        type: primitive
+        shape: text[text:"Primitives are composable!" fontSize:18 fill:#ffffff at:(0,0)]

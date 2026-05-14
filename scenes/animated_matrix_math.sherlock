@@ -1,0 +1,376 @@
+concept: "Animated Matrix Mathematics"
+emoji: "🧮"
+total_duration: 15
+background: "#0f0f23"
+autoplay: true
+loop: false
+
+subtitles:
+  - "🧮 Animated Matrix Mathematics"
+  - "🔢 Step-by-Step Calculations"
+  - "✨ KaTeX Highlighting"
+  - "🎯 Interactive Learning"
+
+equations:
+  - id: "matrix_intro"
+    latex: "\\text{Matrix Multiplication: } A \\times B = C"
+    position: [50, 50]
+    phase: "introduction"
+  - id: "matrices_display"
+    latex: "A = \\begin{bmatrix} 2 & 3 \\\\ 1 & 4 \\end{bmatrix}, \\quad B = \\begin{bmatrix} 5 & 1 \\\\ 2 & 3 \\end{bmatrix}"
+    position: [50, 120]
+    phase: "setup"
+  - id: "calculation_formula"
+    latex: "C_{ij} = \\sum_{k=1}^{n} A_{ik} \\times B_{kj}"
+    position: [50, 200]
+    phase: "formula"
+
+phases:
+  introduction:
+    duration: 2
+    description: "Introduction to animated matrix math"
+    elements:
+      title_text:
+        type: text
+        content: "Animated Matrix Mathematics with KaTeX"
+        position: [400, 100]
+        color: "#d4af37"
+        size: 28
+        glow: true
+
+  setup:
+    duration: 3
+    description: "Display matrices A and B"
+    elements:
+      matrix_a:
+        type: matrix
+        position: [-260, 0]
+        values: [[2, 3], [1, 4]]
+        color: "#ff6b6b"
+        label: "A"
+        highlight_mode: "none"
+      matrix_b:
+        type: matrix
+        position: [-60, 0]
+        values: [[5, 1], [2, 3]]
+        color: "#4ecdc4"
+        label: "B"
+        highlight_mode: "none"
+      multiply_symbol:
+        type: text
+        content: "×"
+        position: [-150, 0]
+        color: "#ffffff"
+        size: 32
+
+  formula:
+    duration: 2
+    description: "Show the general formula"
+    elements:
+      matrix_a:
+        type: matrix
+        position: [-260, 0]
+        values: [[2, 3], [1, 4]]
+        color: "#ff6b6b"
+        label: "A"
+        highlight_mode: "none"
+      matrix_b:
+        type: matrix
+        position: [-60, 0]
+        values: [[5, 1], [2, 3]]
+        color: "#4ecdc4"
+        label: "B"
+        highlight_mode: "none"
+      multiply_symbol:
+        type: text
+        content: "×"
+        position: [-150, 0]
+        color: "#ffffff"
+        size: 32
+
+  calculation_c11:
+    duration: 3
+    description: "Calculate C₁₁ element"
+    elements:
+      matrix_a:
+        type: matrix
+        position: [-260, 0]
+        values: [[2, 3], [1, 4]]
+        color: "#ff6b6b"
+        label: "A"
+        highlight_mode: "row"
+        highlight_index: 0
+      matrix_b:
+        type: matrix
+        position: [-60, 0]
+        values: [[5, 1], [2, 3]]
+        color: "#4ecdc4"
+        label: "B"
+        highlight_mode: "column"
+        highlight_index: 0
+      multiply_symbol:
+        type: text
+        content: "×"
+        position: [-150, 0]
+        color: "#ffffff"
+        size: 32
+      equals_symbol:
+        type: text
+        content: "="
+        position: [80, 0]
+        color: "#ffffff"
+        size: 32
+      result_matrix:
+        type: matrix
+        position: [160, 0]
+        values: [[16, "?"], ["?", "?"]]
+        color: "#ffd93d"
+        label: "C"
+        highlight_mode: "cell"
+        highlight_cell: [0, 0]
+
+  calculation_c12:
+    duration: 3
+    description: "Calculate C₁₂ element"
+    elements:
+      matrix_a:
+        type: matrix
+        position: [-260, 0]
+        values: [[2, 3], [1, 4]]
+        color: "#ff6b6b"
+        label: "A"
+        highlight_mode: "row"
+        highlight_index: 0
+      matrix_b:
+        type: matrix
+        position: [-60, 0]
+        values: [[5, 1], [2, 3]]
+        color: "#4ecdc4"
+        label: "B"
+        highlight_mode: "column"
+        highlight_index: 1
+      multiply_symbol:
+        type: text
+        content: "×"
+        position: [-150, 0]
+        color: "#ffffff"
+        size: 32
+      equals_symbol:
+        type: text
+        content: "="
+        position: [80, 0]
+        color: "#ffffff"
+        size: 32
+      result_matrix:
+        type: matrix
+        position: [160, 0]
+        values: [[16, 11], ["?", "?"]]
+        color: "#ffd93d"
+        label: "C"
+        highlight_mode: "cell"
+        highlight_cell: [0, 1]
+
+  calculation_c21:
+    duration: 3
+    description: "Calculate C₂₁ element"
+    elements:
+      matrix_a:
+        type: matrix
+        position: [-260, 0]
+        values: [[2, 3], [1, 4]]
+        color: "#ff6b6b"
+        label: "A"
+        highlight_mode: "row"
+        highlight_index: 1
+      matrix_b:
+        type: matrix
+        position: [-60, 0]
+        values: [[5, 1], [2, 3]]
+        color: "#4ecdc4"
+        label: "B"
+        highlight_mode: "column"
+        highlight_index: 0
+      multiply_symbol:
+        type: text
+        content: "×"
+        position: [-150, 0]
+        color: "#ffffff"
+        size: 32
+      equals_symbol:
+        type: text
+        content: "="
+        position: [80, 0]
+        color: "#ffffff"
+        size: 32
+      result_matrix:
+        type: matrix
+        position: [160, 0]
+        values: [[16, 11], [13, "?"]]
+        color: "#ffd93d"
+        label: "C"
+        highlight_mode: "cell"
+        highlight_cell: [1, 0]
+
+  calculation_c22:
+    duration: 3
+    description: "Calculate C₂₂ element"
+    elements:
+      matrix_a:
+        type: matrix
+        position: [-260, 0]
+        values: [[2, 3], [1, 4]]
+        color: "#ff6b6b"
+        label: "A"
+        highlight_mode: "row"
+        highlight_index: 1
+      matrix_b:
+        type: matrix
+        position: [-60, 0]
+        values: [[5, 1], [2, 3]]
+        color: "#4ecdc4"
+        label: "B"
+        highlight_mode: "column"
+        highlight_index: 1
+      multiply_symbol:
+        type: text
+        content: "×"
+        position: [-150, 0]
+        color: "#ffffff"
+        size: 32
+      equals_symbol:
+        type: text
+        content: "="
+        position: [80, 0]
+        color: "#ffffff"
+        size: 32
+      result_matrix:
+        type: matrix
+        position: [160, 0]
+        values: [[16, 11], [13, 13]]
+        color: "#ffd93d"
+        label: "C"
+        highlight_mode: "cell"
+        highlight_cell: [1, 1]
+
+  final_result:
+    duration: 2
+    description: "Show final result"
+    elements:
+      final_equation:
+        type: text
+        content: "Final Result:"
+        position: [0, 150]
+        color: "#d4af37"
+        size: 24
+        glow: true
+      result_matrix:
+        type: matrix
+        position: [0, 0]
+        values: [[16, 11], [13, 13]]
+        color: "#ffd93d"
+        label: "C = A × B"
+        highlight_mode: "glow"
+        glow_intensity: 2.0
+      success_text:
+        type: text
+        content: "✨ Matrix multiplication complete! ✨"
+        position: [0, -150]
+        color: "#4ecdc4"
+        size: 18
+        glow: true
+
+# Animation definitions for KaTeX-enhanced calculations
+animation_phases:
+  - phase: "introduction"
+    duration: 2
+    name: "Introduction"
+    katex_animations:
+      - id: "intro_fade"
+        type: "fade_in"
+        equation: "matrix_intro"
+        timing: [0, 1]
+  
+  - phase: "setup"
+    duration: 3
+    name: "Matrix Setup"
+    katex_animations:
+      - id: "matrices_show"
+        type: "slide_in"
+        equation: "matrices_display"
+        timing: [0.5, 2]
+        
+  - phase: "formula"
+    duration: 2
+    name: "General Formula"
+    katex_animations:
+      - id: "formula_highlight"
+        type: "highlight_bounce"
+        equation: "calculation_formula"
+        timing: [0, 1.5]
+        highlight_elements: [".mord", ".mrel"]
+        
+  - phase: "calculation_c11"
+    duration: 3
+    name: "Calculate C₁₁"
+    katex_animations:
+      - id: "c11_calc"
+        type: "matrix_multiplication_step"
+        matrices: 
+          A: [[2, 3], [1, 4]]
+          B: [[5, 1], [2, 3]]
+        row: 0
+        col: 0
+        steps: [0, 1, 2, 3]
+        timing: [0, 3]
+        
+  - phase: "calculation_c12"
+    duration: 3
+    name: "Calculate C₁₂"
+    katex_animations:
+      - id: "c12_calc"
+        type: "matrix_multiplication_step"
+        matrices:
+          A: [[2, 3], [1, 4]]
+          B: [[5, 1], [2, 3]]
+        row: 0
+        col: 1
+        steps: [0, 1, 2, 3]
+        timing: [0, 3]
+        
+  - phase: "calculation_c21"
+    duration: 3
+    name: "Calculate C₂₁"
+    katex_animations:
+      - id: "c21_calc"
+        type: "matrix_multiplication_step"
+        matrices:
+          A: [[2, 3], [1, 4]]
+          B: [[5, 1], [2, 3]]
+        row: 1
+        col: 0
+        steps: [0, 1, 2, 3]
+        timing: [0, 3]
+        
+  - phase: "calculation_c22"
+    duration: 3
+    name: "Calculate C₂₂"
+    katex_animations:
+      - id: "c22_calc"
+        type: "matrix_multiplication_step"
+        matrices:
+          A: [[2, 3], [1, 4]]
+          B: [[5, 1], [2, 3]]
+        row: 1
+        col: 1
+        steps: [0, 1, 2, 3]
+        timing: [0, 3]
+        
+  - phase: "final_result"
+    duration: 2
+    name: "Final Result"
+    katex_animations:
+      - id: "result_glow"
+        type: "glow_pulse"
+        equation: "final_matrix"
+        timing: [0, 2]
+        glow_color: "#ffd93d"

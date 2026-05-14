@@ -1,0 +1,182 @@
+# Queue Container Demo
+# Demonstrates the queue_container component with various ways to mark/highlight cell coordinates like (2,1), (2,2)
+
+concept: "Queue Visualization"
+emoji: "🧩"
+total_duration: 10
+background: "#121212"
+
+subtitles:
+  - "🧩 Queue Container Visualization"
+  - "📊 Highlighting Cell Coordinates in Queues"
+  - "🔍 Different Ways to Mark Queue Elements"
+  - "💡 Perfect for BFS Algorithm Visualizations"
+
+phases:
+  queue_basics:
+    duration: 5
+    description: "Demonstrating basic queue_container features"
+    elements:
+      title:
+        type: text
+        text: "Queue Container Component"
+        position: [0, -280]
+        color: "#AF7AC5"
+        size: 28
+        font: "Arial"
+        glow: true
+      
+      description:
+        type: text
+        text: "The queue_container component visualizes FIFO data structures with enqueue/dequeue operations."
+        position: [0, -240]
+        color: "#FFFFFF"
+        size: 16
+        font: "Arial"
+      
+      # Basic queue visualization
+      queue_basic:
+        type: queue_container
+        position: [0, -100]
+        items: ["10", "15", "20", "25", "30"]
+        containerColor: "#21262d"
+        cellColor: "#AF7AC5"
+        borderColor: "#9B59B6"
+        cellWidth: 60
+        cellHeight: 40
+        cellSpacing: 4
+        textColor: "#FFFFFF"
+        textSize: 16
+        front: 0
+        rear: 4
+      
+      queue_basic_label:
+        type: text
+        text: "Standard queue_container visualization"
+        position: [0, -30]
+        color: "#AF7AC5"
+        size: 14
+        font: "Arial"
+
+  queue_with_coordinates:
+    duration: 5
+    description: "Demonstrating queue_container with cell coordinates and highlighting"
+    elements:
+      title:
+        type: text
+        text: "Queue with Cell Coordinates"
+        position: [0, -280]
+        color: "#AF7AC5"
+        size: 28
+        font: "Arial"
+        glow: true
+      
+      # Queue with highlighted cell coordinates - Method 1
+      queue_highlight1:
+        type: queue_container
+        position: [-200, -100]
+        items: ["(0,1)", "(1,2)", "(2,2)", "(2,3)", "(3,3)"]
+        containerColor: "#21262d"
+        cellColor: "#AF7AC5"
+        borderColor: "#9B59B6"
+        textColor: "#FFFFFF"
+        cellWidth: 60
+        cellHeight: 40
+        cellSpacing: 4
+        front: 0
+        rear: 4
+        highlightIndices: [2, 4]  # Highlight specific items
+      
+      queue_highlight_label1:
+        type: text
+        text: "highlightIndices: [2, 4]\n(highlights '(2,2)' and '(3,3)')"
+        position: [-200, -30]
+        color: "#AF7AC5"
+        size: 14
+        font: "Arial"
+      
+      # Queue with front/rear highlights - Method 2
+      queue_highlight2:
+        type: queue_container
+        position: [200, -100]
+        items: ["(1,1)", "(2,1)", "(2,2)", "(3,2)", "(3,3)"]
+        containerColor: "#21262d"
+        cellColor: "#AF7AC5"
+        borderColor: "#9B59B6"
+        textColor: "#FFFFFF"
+        cellWidth: 60
+        cellHeight: 40
+        cellSpacing: 4
+        front: 0
+        rear: 4
+        highlightFront: true
+        highlightRear: true
+        frontColor: "#4ecdc4"
+        rearColor: "#e74c3c"
+      
+      queue_highlight_label2:
+        type: text
+        text: "highlightFront: true, highlightRear: true\n(highlights '(1,1)' and '(3,3)')"
+        position: [200, -30]
+        color: "#AF7AC5"
+        size: 14
+        font: "Arial"
+      
+      # Queue for BFS algorithm with coordinates
+      bfs_queue:
+        type: queue_container
+        position: [0, 100]
+        items: ["(0,0)", "(1,0)", "(1,1)", "(2,0)", "(2,1)", "(2,2)"]
+        containerColor: "#21262d"
+        cellColor: "#3498DB"
+        borderColor: "#2980B9"
+        textColor: "#FFFFFF"
+        cellWidth: 60
+        cellHeight: 40
+        cellSpacing: 4
+        front: 0
+        rear: 5
+        operation: "enqueue"  # Show enqueue operation
+        operationItem: "(2,2)"
+        highlightIndices: [2, 5]  # Highlight specific items
+      
+      bfs_explanation:
+        type: text
+        text: "Queue tracking BFS traversal with cell coordinates.\nhighlightIndices: [2, 5] highlights '(1,1)' and '(2,2)'"
+        position: [0, 170]
+        color: "#3498DB"
+        size: 14
+        font: "Arial"
+      
+      # Adding a supporting grid to show the cell coordinates
+      reference_grid:
+        type: algorithm_grid
+        position: [0, 0]
+        rows: 3
+        cols: 3
+        cellSize: 40
+        spacing: 4
+        color: "#2C3E50"
+        border_color: "#34495E"
+        border_width: 2
+        cells: [
+          [1, 2, 3],
+          [4, 5, 6],
+          [7, 8, 9]
+        ]
+        showValues: true
+        label: "Reference Grid"
+        highlightCells: [[1, 1], [2, 2]]
+
+equations:
+  - id: bfs_explanation
+    latex: "\\text{BFS uses a queue: First In, First Out (FIFO)}"
+    position: [0, 220]
+    phase: queue_with_coordinates
+    animation: fade-in
+  
+  - id: grid_notation
+    latex: "\\text{Queue element (i,j) refers to cell at row i, column j}"
+    position: [0, 250]
+    phase: queue_with_coordinates
+    animation: slide-in

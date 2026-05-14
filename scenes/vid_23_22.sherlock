@@ -1,0 +1,238 @@
+concept: "Neural Network Forward Pass"
+emoji: "⚡"
+total_duration: 38
+background: "#000000"
+
+subtitles:
+  - ""
+
+phases:
+
+  scene_01_forward_pass:
+    duration: 38
+    description: "Neural network wakes, signal flows from inputs through 4 hidden nodes to output, weights reveal as packets travel, o0 fires amber cinematic"
+    elements:
+
+      scene_tag:
+        type: primitive
+        shape: text[text:"① FORWARD PASS" fontSize:15 fill:#ffffff/0.3 at:(-6.5,5.5)] -> fadeIn(0.6s, 0.2s)
+
+      layer_label_input:
+        type: primitive
+        shape: text[text:"Input Layer  L₀" fontSize:18 fill:#ffffff/0.35 at:(-5.8,4.8)] -> fadeIn(0.6s, 0.4s)
+
+      layer_label_hidden:
+        type: primitive
+        shape: text[text:"Hidden Layer  L₁" fontSize:18 fill:#ffffff/0.35 at:(0.0,4.8)] -> fadeIn(0.6s, 0.7s)
+
+      layer_label_output:
+        type: primitive
+        shape: text[text:"Output Layer  L₂" fontSize:18 fill:#ffffff/0.35 at:(5.8,4.8)] -> fadeIn(0.6s, 1.0s)
+
+      i0_box:
+        type: morph
+        shape: rectangle[w:1.5 h:1.5 fill:#6bffb8/0.10 stroke:#6bffb8/0.30 strokeWidth:1.5 at:(-6.0,1.8)] -> fadeIn(0.8s, 1.2s) ~> rectangle[w:1.5 h:1.5 fill:#6bffb8/0.40 stroke:#6bffb8/0.80 strokeWidth:2.0 at:(-6.0,1.8)] (0.5s, ease.out, 4.0s) ~> rectangle[w:1.5 h:1.5 fill:#6bffb8/0.18 stroke:#6bffb8/0.40 strokeWidth:1.5 at:(-6.0,1.8)] (0.6s, ease.inOut, 4.6s)
+
+      i0_label:
+        type: primitive
+        shape: text[text:"i₀" fontSize:22 fill:#ffffff/0.90 at:(-6.0,1.8)] -> fadeIn(0.5s, 2.0s)
+
+      i1_box:
+        type: morph
+        shape: rectangle[w:1.5 h:1.5 fill:#6bffb8/0.10 stroke:#6bffb8/0.30 strokeWidth:1.5 at:(-6.0,-0.6)] -> fadeIn(0.8s, 1.5s) ~> rectangle[w:1.5 h:1.5 fill:#6bffb8/0.40 stroke:#6bffb8/0.80 strokeWidth:2.0 at:(-6.0,-0.6)] (0.5s, ease.out, 4.4s) ~> rectangle[w:1.5 h:1.5 fill:#6bffb8/0.18 stroke:#6bffb8/0.40 strokeWidth:1.5 at:(-6.0,-0.6)] (0.6s, ease.inOut, 5.0s)
+
+      i1_label:
+        type: primitive
+        shape: text[text:"i₁" fontSize:22 fill:#ffffff/0.90 at:(-6.0,-0.6)] -> fadeIn(0.5s, 2.2s)
+
+      bias_in:
+        type: morph
+        shape: circle[r:0.60 fill:#ff6b9d/0.15 stroke:#ff6b9d/0.35 strokeWidth:1.5 at:(-6.0,-2.8)] -> fadeIn(0.8s, 1.8s) ~> circle[r:0.65 fill:#ff6b9d/0.45 stroke:#ff6b9d/0.80 strokeWidth:2.0 at:(-6.0,-2.8)] (0.4s, ease.out, 4.8s) ~> circle[r:0.60 fill:#ff6b9d/0.18 stroke:#ff6b9d/0.38 strokeWidth:1.5 at:(-6.0,-2.8)] (0.5s, ease.inOut, 5.3s)
+
+      bias_in_label:
+        type: primitive
+        shape: text[text:"b" fontSize:20 fill:#ffffff/0.90 at:(-6.0,-2.8)] -> fadeIn(0.5s, 2.4s)
+
+      h0:
+        type: morph
+        shape: circle[r:0.75 fill:#4fc3f7/0.12 stroke:#4fc3f7/0.25 strokeWidth:1.5 at:(0.0,3.2)] -> fadeIn(0.8s, 1.5s) ~> circle[r:0.80 fill:#4fc3f7/0.50 stroke:#4fc3f7/0.85 strokeWidth:2.2 at:(0.0,3.2)] (0.45s, ease.out, 8.5s) ~> circle[r:0.82 fill:#ffd54f/0.55 stroke:#ffd54f/0.80 strokeWidth:2.5 at:(0.0,3.2)] (0.35s, ease.out, 9.0s) ~> circle[r:0.75 fill:#4fc3f7/0.32 stroke:#4fc3f7/0.55 strokeWidth:1.8 at:(0.0,3.2)] (0.7s, ease.inOut, 9.4s)
+
+      h0_label:
+        type: primitive
+        shape: text[text:"h₀" fontSize:20 fill:#ffffff/0.88 at:(0.0,3.2)] -> fadeIn(0.5s, 2.2s)
+
+      h1:
+        type: morph
+        shape: circle[r:0.75 fill:#4fc3f7/0.12 stroke:#4fc3f7/0.25 strokeWidth:1.5 at:(0.0,1.1)] -> fadeIn(0.8s, 1.7s) ~> circle[r:0.80 fill:#4fc3f7/0.50 stroke:#4fc3f7/0.85 strokeWidth:2.2 at:(0.0,1.1)] (0.45s, ease.out, 9.2s) ~> circle[r:0.82 fill:#ffd54f/0.55 stroke:#ffd54f/0.80 strokeWidth:2.5 at:(0.0,1.1)] (0.35s, ease.out, 9.7s) ~> circle[r:0.75 fill:#4fc3f7/0.32 stroke:#4fc3f7/0.55 strokeWidth:1.8 at:(0.0,1.1)] (0.7s, ease.inOut, 10.1s)
+
+      h1_label:
+        type: primitive
+        shape: text[text:"h₁" fontSize:20 fill:#ffffff/0.88 at:(0.0,1.1)] -> fadeIn(0.5s, 2.4s)
+
+      h2:
+        type: morph
+        shape: circle[r:0.75 fill:#4fc3f7/0.12 stroke:#4fc3f7/0.25 strokeWidth:1.5 at:(0.0,-1.0)] -> fadeIn(0.8s, 1.9s) ~> circle[r:0.80 fill:#4fc3f7/0.50 stroke:#4fc3f7/0.85 strokeWidth:2.2 at:(0.0,-1.0)] (0.45s, ease.out, 9.9s) ~> circle[r:0.82 fill:#ffd54f/0.55 stroke:#ffd54f/0.80 strokeWidth:2.5 at:(0.0,-1.0)] (0.35s, ease.out, 10.4s) ~> circle[r:0.75 fill:#4fc3f7/0.32 stroke:#4fc3f7/0.55 strokeWidth:1.8 at:(0.0,-1.0)] (0.7s, ease.inOut, 10.8s)
+
+      h2_label:
+        type: primitive
+        shape: text[text:"h₂" fontSize:20 fill:#ffffff/0.88 at:(0.0,-1.0)] -> fadeIn(0.5s, 2.6s)
+
+      h3:
+        type: morph
+        shape: circle[r:0.75 fill:#4fc3f7/0.12 stroke:#4fc3f7/0.25 strokeWidth:1.5 at:(0.0,-3.0)] -> fadeIn(0.8s, 2.1s) ~> circle[r:0.80 fill:#4fc3f7/0.50 stroke:#4fc3f7/0.85 strokeWidth:2.2 at:(0.0,-3.0)] (0.45s, ease.out, 10.6s) ~> circle[r:0.82 fill:#ffd54f/0.55 stroke:#ffd54f/0.80 strokeWidth:2.5 at:(0.0,-3.0)] (0.35s, ease.out, 11.1s) ~> circle[r:0.75 fill:#4fc3f7/0.32 stroke:#4fc3f7/0.55 strokeWidth:1.8 at:(0.0,-3.0)] (0.7s, ease.inOut, 11.5s)
+
+      h3_label:
+        type: primitive
+        shape: text[text:"h₃" fontSize:20 fill:#ffffff/0.88 at:(0.0,-3.0)] -> fadeIn(0.5s, 2.8s)
+
+      bias_hidden:
+        type: morph
+        shape: circle[r:0.50 fill:#ff6b9d/0.12 stroke:#ff6b9d/0.28 strokeWidth:1.2 at:(0.0,-4.6)] -> fadeIn(0.8s, 2.2s) ~> circle[r:0.55 fill:#ff6b9d/0.40 stroke:#ff6b9d/0.70 strokeWidth:1.8 at:(0.0,-4.6)] (0.4s, ease.out, 10.8s) ~> circle[r:0.50 fill:#ff6b9d/0.15 stroke:#ff6b9d/0.32 strokeWidth:1.2 at:(0.0,-4.6)] (0.5s, ease.inOut, 11.4s)
+
+      bias_hidden_label:
+        type: primitive
+        shape: text[text:"b" fontSize:17 fill:#ffffff/0.88 at:(0.0,-4.6)] -> fadeIn(0.5s, 2.8s)
+
+      o0:
+        type: morph
+        shape: circle[r:0.85 fill:#c77aff/0.12 stroke:#c77aff/0.28 strokeWidth:1.5 at:(6.0,0.0)] -> fadeIn(0.8s, 2.0s) ~> circle[r:0.90 fill:#c77aff/0.38 stroke:#c77aff/0.65 strokeWidth:2.0 at:(6.0,0.0)] (0.5s, ease.out, 14.5s) ~> circle[r:0.95 fill:#ffd54f/0.70 stroke:#ffd54f/0.90 strokeWidth:2.8 at:(6.0,0.0)] (0.6s, ease.out, 15.2s) ~> circle[r:0.88 fill:#6bffb8/0.50 stroke:#6bffb8/0.80 strokeWidth:2.2 at:(6.0,0.0)] (0.8s, ease.inOut, 16.0s)
+
+      o0_label:
+        type: primitive
+        shape: text[text:"o₀" fontSize:24 fill:#ffffff/0.90 at:(6.0,0.0)] -> fadeIn(0.5s, 2.5s)
+
+      e_i0_h0:
+        type: morph
+        shape: line[from:(-5.25,1.8) to:(0.0,1.8) stroke:#4fc3f7/0.08 strokeWidth:0.8] -> fadeIn(0.5s, 2.5s) ~> line[from:(-5.25,1.8) to:(0.0,1.8) stroke:#4fc3f7/0.0 strokeWidth:0.8] (0.1s, ease.out, 2.59s) ~> line[from:(-5.25,1.8) to:(-5.25,1.8) stroke:#4fc3f7/0.75 strokeWidth:1.8] (0.1s, linear, 6.5s) ~> line[from:(-5.25,1.8) to:(0.0,3.2) stroke:#4fc3f7/0.75 strokeWidth:1.8] (1.0s, linear, 6.6s) ~> line[from:(-5.25,1.8) to:(0.0,3.2) stroke:#4fc3f7/0.12 strokeWidth:0.9] (0.5s, ease.out, 7.7s)
+
+      e_i0_h1:
+        type: morph
+        shape: line[from:(-5.25,1.8) to:(0.0,1.1) stroke:#4fc3f7/0.08 strokeWidth:0.8] -> fadeIn(0.5s, 2.5s) ~> line[from:(-5.25,1.8) to:(0.0,1.1) stroke:#4fc3f7/0.0 strokeWidth:0.8] (0.1s, ease.out, 2.59s) ~> line[from:(-5.25,1.8) to:(-5.25,1.8) stroke:#4fc3f7/0.75 strokeWidth:1.8] (0.1s, linear, 6.9s) ~> line[from:(-5.25,1.8) to:(0.0,1.1) stroke:#4fc3f7/0.75 strokeWidth:1.8] (1.0s, linear, 7.0s) ~> line[from:(-5.25,1.8) to:(0.0,1.1) stroke:#4fc3f7/0.12 strokeWidth:0.9] (0.5s, ease.out, 8.1s)
+
+      e_i0_h2:
+        type: morph
+        shape: line[from:(-5.25,1.8) to:(0.0,-1.0) stroke:#4fc3f7/0.08 strokeWidth:0.8] -> fadeIn(0.5s, 2.5s) ~> line[from:(-5.25,1.8) to:(0.0,-1.0) stroke:#4fc3f7/0.0 strokeWidth:0.8] (0.1s, ease.out, 2.59s) ~> line[from:(-5.25,1.8) to:(-5.25,1.8) stroke:#4fc3f7/0.75 strokeWidth:1.8] (0.1s, linear, 7.2s) ~> line[from:(-5.25,1.8) to:(0.0,-1.0) stroke:#4fc3f7/0.75 strokeWidth:1.8] (1.1s, linear, 7.3s) ~> line[from:(-5.25,1.8) to:(0.0,-1.0) stroke:#4fc3f7/0.12 strokeWidth:0.9] (0.5s, ease.out, 8.5s)
+
+      e_i0_h3:
+        type: morph
+        shape: line[from:(-5.25,1.8) to:(0.0,-3.0) stroke:#4fc3f7/0.08 strokeWidth:0.8] -> fadeIn(0.5s, 2.5s) ~> line[from:(-5.25,1.8) to:(0.0,-3.0) stroke:#4fc3f7/0.0 strokeWidth:0.8] (0.1s, ease.out, 2.59s) ~> line[from:(-5.25,1.8) to:(-5.25,1.8) stroke:#4fc3f7/0.75 strokeWidth:1.8] (0.1s, linear, 7.5s) ~> line[from:(-5.25,1.8) to:(0.0,-3.0) stroke:#4fc3f7/0.75 strokeWidth:1.8] (1.2s, linear, 7.6s) ~> line[from:(-5.25,1.8) to:(0.0,-3.0) stroke:#4fc3f7/0.12 strokeWidth:0.9] (0.5s, ease.out, 8.9s)
+
+      e_i1_h0:
+        type: morph
+        shape: line[from:(-5.25,-0.6) to:(0.0,3.2) stroke:#4fc3f7/0.08 strokeWidth:0.8] -> fadeIn(0.5s, 2.5s) ~> line[from:(-5.25,-0.6) to:(0.0,3.2) stroke:#4fc3f7/0.0 strokeWidth:0.8] (0.1s, ease.out, 2.59s) ~> line[from:(-5.25,-0.6) to:(-5.25,-0.6) stroke:#4fc3f7/0.75 strokeWidth:1.8] (0.1s, linear, 7.0s) ~> line[from:(-5.25,-0.6) to:(0.0,3.2) stroke:#4fc3f7/0.75 strokeWidth:1.8] (1.2s, linear, 7.1s) ~> line[from:(-5.25,-0.6) to:(0.0,3.2) stroke:#4fc3f7/0.12 strokeWidth:0.9] (0.5s, ease.out, 8.4s)
+
+      e_i1_h1:
+        type: morph
+        shape: line[from:(-5.25,-0.6) to:(0.0,1.1) stroke:#4fc3f7/0.08 strokeWidth:0.8] -> fadeIn(0.5s, 2.5s) ~> line[from:(-5.25,-0.6) to:(0.0,1.1) stroke:#4fc3f7/0.0 strokeWidth:0.8] (0.1s, ease.out, 2.59s) ~> line[from:(-5.25,-0.6) to:(-5.25,-0.6) stroke:#4fc3f7/0.75 strokeWidth:1.8] (0.1s, linear, 7.3s) ~> line[from:(-5.25,-0.6) to:(0.0,1.1) stroke:#4fc3f7/0.75 strokeWidth:1.8] (1.0s, linear, 7.4s) ~> line[from:(-5.25,-0.6) to:(0.0,1.1) stroke:#4fc3f7/0.12 strokeWidth:0.9] (0.5s, ease.out, 8.5s)
+
+      e_i1_h2:
+        type: morph
+        shape: line[from:(-5.25,-0.6) to:(0.0,-1.0) stroke:#4fc3f7/0.08 strokeWidth:0.8] -> fadeIn(0.5s, 2.5s) ~> line[from:(-5.25,-0.6) to:(0.0,-1.0) stroke:#4fc3f7/0.0 strokeWidth:0.8] (0.1s, ease.out, 2.59s) ~> line[from:(-5.25,-0.6) to:(-5.25,-0.6) stroke:#4fc3f7/0.75 strokeWidth:1.8] (0.1s, linear, 7.6s) ~> line[from:(-5.25,-0.6) to:(0.0,-1.0) stroke:#4fc3f7/0.75 strokeWidth:1.8] (0.9s, linear, 7.7s) ~> line[from:(-5.25,-0.6) to:(0.0,-1.0) stroke:#4fc3f7/0.12 strokeWidth:0.9] (0.5s, ease.out, 8.7s)
+
+      e_i1_h3:
+        type: morph
+        shape: line[from:(-5.25,-0.6) to:(0.0,-3.0) stroke:#4fc3f7/0.08 strokeWidth:0.8] -> fadeIn(0.5s, 2.5s) ~> line[from:(-5.25,-0.6) to:(0.0,-3.0) stroke:#4fc3f7/0.0 strokeWidth:0.8] (0.1s, ease.out, 2.59s) ~> line[from:(-5.25,-0.6) to:(-5.25,-0.6) stroke:#4fc3f7/0.75 strokeWidth:1.8] (0.1s, linear, 7.9s) ~> line[from:(-5.25,-0.6) to:(0.0,-3.0) stroke:#4fc3f7/0.75 strokeWidth:1.8] (1.1s, linear, 8.0s) ~> line[from:(-5.25,-0.6) to:(0.0,-3.0) stroke:#4fc3f7/0.12 strokeWidth:0.9] (0.5s, ease.out, 9.2s)
+
+      e_b_h0:
+        type: morph
+        shape: line[from:(-5.45,-2.8) to:(0.0,3.2) stroke:#ff6b9d/0.06 strokeWidth:0.7] -> fadeIn(0.5s, 2.5s) ~> line[from:(-5.45,-2.8) to:(0.0,3.2) stroke:#ff6b9d/0.0 strokeWidth:0.7] (0.1s, ease.out, 2.59s) ~> line[from:(-5.45,-2.8) to:(-5.45,-2.8) stroke:#ff6b9d/0.65 strokeWidth:1.5] (0.1s, linear, 7.8s) ~> line[from:(-5.45,-2.8) to:(0.0,3.2) stroke:#ff6b9d/0.65 strokeWidth:1.5] (1.3s, linear, 7.9s) ~> line[from:(-5.45,-2.8) to:(0.0,3.2) stroke:#ff6b9d/0.10 strokeWidth:0.7] (0.5s, ease.out, 9.3s)
+
+      e_b_h1:
+        type: morph
+        shape: line[from:(-5.45,-2.8) to:(0.0,1.1) stroke:#ff6b9d/0.06 strokeWidth:0.7] -> fadeIn(0.5s, 2.5s) ~> line[from:(-5.45,-2.8) to:(0.0,1.1) stroke:#ff6b9d/0.0 strokeWidth:0.7] (0.1s, ease.out, 2.59s) ~> line[from:(-5.45,-2.8) to:(-5.45,-2.8) stroke:#ff6b9d/0.65 strokeWidth:1.5] (0.1s, linear, 8.1s) ~> line[from:(-5.45,-2.8) to:(0.0,1.1) stroke:#ff6b9d/0.65 strokeWidth:1.5] (1.2s, linear, 8.2s) ~> line[from:(-5.45,-2.8) to:(0.0,1.1) stroke:#ff6b9d/0.10 strokeWidth:0.7] (0.5s, ease.out, 9.5s)
+
+      e_b_h2:
+        type: morph
+        shape: line[from:(-5.45,-2.8) to:(0.0,-1.0) stroke:#ff6b9d/0.06 strokeWidth:0.7] -> fadeIn(0.5s, 2.5s) ~> line[from:(-5.45,-2.8) to:(0.0,-1.0) stroke:#ff6b9d/0.0 strokeWidth:0.7] (0.1s, ease.out, 2.59s) ~> line[from:(-5.45,-2.8) to:(-5.45,-2.8) stroke:#ff6b9d/0.65 strokeWidth:1.5] (0.1s, linear, 8.4s) ~> line[from:(-5.45,-2.8) to:(0.0,-1.0) stroke:#ff6b9d/0.65 strokeWidth:1.5] (1.0s, linear, 8.5s) ~> line[from:(-5.45,-2.8) to:(0.0,-1.0) stroke:#ff6b9d/0.10 strokeWidth:0.7] (0.5s, ease.out, 9.6s)
+
+      e_b_h3:
+        type: morph
+        shape: line[from:(-5.45,-2.8) to:(0.0,-3.0) stroke:#ff6b9d/0.06 strokeWidth:0.7] -> fadeIn(0.5s, 2.5s) ~> line[from:(-5.45,-2.8) to:(0.0,-3.0) stroke:#ff6b9d/0.0 strokeWidth:0.7] (0.1s, ease.out, 2.59s) ~> line[from:(-5.45,-2.8) to:(-5.45,-2.8) stroke:#ff6b9d/0.65 strokeWidth:1.5] (0.1s, linear, 8.7s) ~> line[from:(-5.45,-2.8) to:(0.0,-3.0) stroke:#ff6b9d/0.65 strokeWidth:1.5] (0.7s, linear, 8.8s) ~> line[from:(-5.45,-2.8) to:(0.0,-3.0) stroke:#ff6b9d/0.10 strokeWidth:0.7] (0.5s, ease.out, 9.6s)
+
+      e_h0_o0:
+        type: morph
+        shape: line[from:(0.75,3.2) to:(5.15,0.0) stroke:#c77aff/0.06 strokeWidth:0.8] -> fadeIn(0.5s, 2.5s) ~> line[from:(0.75,3.2) to:(5.15,0.0) stroke:#c77aff/0.0 strokeWidth:0.8] (0.1s, ease.out, 2.59s) ~> line[from:(0.75,3.2) to:(0.75,3.2) stroke:#ffd54f/0.85 strokeWidth:2.0] (0.1s, linear, 12.0s) ~> line[from:(0.75,3.2) to:(5.15,0.0) stroke:#ffd54f/0.85 strokeWidth:2.0] (1.2s, linear, 12.1s) ~> line[from:(0.75,3.2) to:(5.15,0.0) stroke:#c77aff/0.12 strokeWidth:0.9] (0.5s, ease.out, 13.4s)
+
+      e_h1_o0:
+        type: morph
+        shape: line[from:(0.75,1.1) to:(5.15,0.0) stroke:#c77aff/0.06 strokeWidth:0.8] -> fadeIn(0.5s, 2.5s) ~> line[from:(0.75,1.1) to:(5.15,0.0) stroke:#c77aff/0.0 strokeWidth:0.8] (0.1s, ease.out, 2.59s) ~> line[from:(0.75,1.1) to:(0.75,1.1) stroke:#ffd54f/0.85 strokeWidth:2.0] (0.1s, linear, 12.5s) ~> line[from:(0.75,1.1) to:(5.15,0.0) stroke:#ffd54f/0.85 strokeWidth:2.0] (1.0s, linear, 12.6s) ~> line[from:(0.75,1.1) to:(5.15,0.0) stroke:#c77aff/0.12 strokeWidth:0.9] (0.5s, ease.out, 13.7s)
+
+      e_h2_o0:
+        type: morph
+        shape: line[from:(0.75,-1.0) to:(5.15,0.0) stroke:#c77aff/0.06 strokeWidth:0.8] -> fadeIn(0.5s, 2.5s) ~> line[from:(0.75,-1.0) to:(5.15,0.0) stroke:#c77aff/0.0 strokeWidth:0.8] (0.1s, ease.out, 2.59s) ~> line[from:(0.75,-1.0) to:(0.75,-1.0) stroke:#ffd54f/0.85 strokeWidth:2.0] (0.1s, linear, 13.0s) ~> line[from:(0.75,-1.0) to:(5.15,0.0) stroke:#ffd54f/0.85 strokeWidth:2.0] (1.0s, linear, 13.1s) ~> line[from:(0.75,-1.0) to:(5.15,0.0) stroke:#c77aff/0.12 strokeWidth:0.9] (0.5s, ease.out, 14.2s)
+
+      e_h3_o0:
+        type: morph
+        shape: line[from:(0.75,-3.0) to:(5.15,0.0) stroke:#c77aff/0.06 strokeWidth:0.8] -> fadeIn(0.5s, 2.5s) ~> line[from:(0.75,-3.0) to:(5.15,0.0) stroke:#c77aff/0.0 strokeWidth:0.8] (0.1s, ease.out, 2.59s) ~> line[from:(0.75,-3.0) to:(0.75,-3.0) stroke:#ffd54f/0.85 strokeWidth:2.0] (0.1s, linear, 13.5s) ~> line[from:(0.75,-3.0) to:(5.15,0.0) stroke:#ffd54f/0.85 strokeWidth:2.0] (1.1s, linear, 13.6s) ~> line[from:(0.75,-3.0) to:(5.15,0.0) stroke:#c77aff/0.12 strokeWidth:0.9] (0.5s, ease.out, 14.8s)
+
+      e_bh_o0:
+        type: morph
+        shape: line[from:(0.50,-4.6) to:(5.15,0.0) stroke:#ff6b9d/0.05 strokeWidth:0.7] -> fadeIn(0.5s, 2.5s) ~> line[from:(0.50,-4.6) to:(5.15,0.0) stroke:#ff6b9d/0.0 strokeWidth:0.7] (0.1s, ease.out, 2.59s) ~> line[from:(0.50,-4.6) to:(0.50,-4.6) stroke:#ff6b9d/0.70 strokeWidth:1.5] (0.1s, linear, 13.8s) ~> line[from:(0.50,-4.6) to:(5.15,0.0) stroke:#ff6b9d/0.70 strokeWidth:1.5] (1.2s, linear, 13.9s) ~> line[from:(0.50,-4.6) to:(5.15,0.0) stroke:#ff6b9d/0.08 strokeWidth:0.7] (0.5s, ease.out, 15.2s)
+
+      w_i0_h0:
+        type: morph
+        shape: text[text:"0.24" fontSize:13 fill:#ffffff/0.0 at:(-3.2,2.7)] ~> text[text:"0.24" fontSize:13 fill:#ffd54f/0.80 at:(-3.2,2.7)] (0.3s, ease.out, 7.1s) ~> text[text:"0.24" fontSize:13 fill:#ffffff/0.22 at:(-3.2,2.7)] (0.5s, ease.out, 8.2s)
+
+      w_i0_h1:
+        type: morph
+        shape: text[text:"0.49" fontSize:13 fill:#ffffff/0.0 at:(-3.2,1.5)] ~> text[text:"0.49" fontSize:13 fill:#ffd54f/0.80 at:(-3.2,1.5)] (0.3s, ease.out, 7.5s) ~> text[text:"0.49" fontSize:13 fill:#ffffff/0.22 at:(-3.2,1.5)] (0.5s, ease.out, 8.6s)
+
+      w_i0_h2:
+        type: morph
+        shape: text[text:"-0.04" fontSize:13 fill:#ffffff/0.0 at:(-3.0,0.4)] ~> text[text:"-0.04" fontSize:13 fill:#ffd54f/0.80 at:(-3.0,0.4)] (0.3s, ease.out, 7.8s) ~> text[text:"-0.04" fontSize:13 fill:#ffffff/0.22 at:(-3.0,0.4)] (0.5s, ease.out, 9.0s)
+
+      w_i0_h3:
+        type: morph
+        shape: text[text:"0.14" fontSize:13 fill:#ffffff/0.0 at:(-3.0,-0.9)] ~> text[text:"0.14" fontSize:13 fill:#ffd54f/0.80 at:(-3.0,-0.9)] (0.3s, ease.out, 8.1s) ~> text[text:"0.14" fontSize:13 fill:#ffffff/0.22 at:(-3.0,-0.9)] (0.5s, ease.out, 9.4s)
+
+      w_i1_h0:
+        type: morph
+        shape: text[text:"0.54" fontSize:13 fill:#ffffff/0.0 at:(-2.2,2.0)] ~> text[text:"0.54" fontSize:13 fill:#ffd54f/0.80 at:(-2.2,2.0)] (0.3s, ease.out, 7.6s) ~> text[text:"0.54" fontSize:13 fill:#ffffff/0.22 at:(-2.2,2.0)] (0.5s, ease.out, 8.8s)
+
+      w_i1_h1:
+        type: morph
+        shape: text[text:"0.57" fontSize:13 fill:#ffffff/0.0 at:(-2.2,0.3)] ~> text[text:"0.57" fontSize:13 fill:#ffd54f/0.80 at:(-2.2,0.3)] (0.3s, ease.out, 7.9s) ~> text[text:"0.57" fontSize:13 fill:#ffffff/0.22 at:(-2.2,0.3)] (0.5s, ease.out, 9.1s)
+
+      w_i1_h2:
+        type: morph
+        shape: text[text:"-0.21" fontSize:13 fill:#ffffff/0.0 at:(-2.2,-1.0)] ~> text[text:"-0.21" fontSize:13 fill:#ffd54f/0.80 at:(-2.2,-1.0)] (0.3s, ease.out, 8.2s) ~> text[text:"-0.21" fontSize:13 fill:#ffffff/0.22 at:(-2.2,-1.0)] (0.5s, ease.out, 9.4s)
+
+      w_i1_h3:
+        type: morph
+        shape: text[text:"-0.08" fontSize:13 fill:#ffffff/0.0 at:(-2.2,-2.0)] ~> text[text:"-0.08" fontSize:13 fill:#ffd54f/0.80 at:(-2.2,-2.0)] (0.3s, ease.out, 8.5s) ~> text[text:"-0.08" fontSize:13 fill:#ffffff/0.22 at:(-2.2,-2.0)] (0.5s, ease.out, 9.7s)
+
+      w_h0_o0:
+        type: morph
+        shape: text[text:"-0.37" fontSize:13 fill:#ffffff/0.0 at:(3.2,2.2)] ~> text[text:"-0.37" fontSize:13 fill:#ffd54f/0.85 at:(3.2,2.2)] (0.3s, ease.out, 12.7s) ~> text[text:"-0.37" fontSize:13 fill:#ffffff/0.22 at:(3.2,2.2)] (0.5s, ease.out, 13.8s)
+
+      w_h1_o0:
+        type: morph
+        shape: text[text:"-0.32" fontSize:13 fill:#ffffff/0.0 at:(3.2,0.7)] ~> text[text:"-0.32" fontSize:13 fill:#ffd54f/0.85 at:(3.2,0.7)] (0.3s, ease.out, 13.2s) ~> text[text:"-0.32" fontSize:13 fill:#ffffff/0.22 at:(3.2,0.7)] (0.5s, ease.out, 14.2s)
+
+      w_h2_o0:
+        type: morph
+        shape: text[text:"-0.39" fontSize:13 fill:#ffffff/0.0 at:(3.2,-0.8)] ~> text[text:"-0.39" fontSize:13 fill:#ffd54f/0.85 at:(3.2,-0.8)] (0.3s, ease.out, 13.7s) ~> text[text:"-0.39" fontSize:13 fill:#ffffff/0.22 at:(3.2,-0.8)] (0.5s, ease.out, 14.7s)
+
+      w_h3_o0:
+        type: morph
+        shape: text[text:"-0.45" fontSize:13 fill:#ffffff/0.0 at:(3.2,-2.3)] ~> text[text:"-0.45" fontSize:13 fill:#ffd54f/0.85 at:(3.2,-2.3)] (0.3s, ease.out, 14.2s) ~> text[text:"-0.45" fontSize:13 fill:#ffffff/0.22 at:(3.2,-2.3)] (0.5s, ease.out, 15.2s)
+
+      bolt:
+        type: morph
+        shape: text[text:"⚡" fontSize:38 fill:#ffd54f/0.0 at:(-6.5,0.6)] ~> text[text:"⚡" fontSize:38 fill:#ffd54f/0.90 at:(-6.5,0.6)] (0.2s, ease.out, 5.8s) ~> text[text:"⚡" fontSize:38 fill:#ffd54f/0.90 at:(6.5,0.6)] (1.8s, linear, 6.1s) ~> text[text:"⚡" fontSize:38 fill:#ffd54f/0.0 at:(6.5,0.6)] (0.3s, ease.out, 8.0s)
+
+      cinematic:
+        type: morph
+        shape: text[text:"OUTPUT" fontSize:64 fill:#ffd54f/0.0 at:(0.0,0.0)] ~> text[text:"OUTPUT" fontSize:64 fill:#ffd54f/0.92 at:(0.0,0.0)] (1.2s, ease.out, 17.0s) ~> text[text:"OUTPUT" fontSize:64 fill:#ffd54f/0.92 at:(0.0,0.0)] (2.5s, ease.inOut, 18.3s) ~> text[text:"OUTPUT" fontSize:18 fill:#ffd54f/0.28 at:(0.0,0.0)] (1.5s, ease.inOut, 20.9s)
+
+      lbl_1:
+        type: primitive
+        shape: text[text:"weighted sum" fontSize:13 fill:#ffffff/0.0 at:(-4.5,-5.3)] -> fadeIn(0.6s, 22.5s)
+
+      lbl_2:
+        type: primitive
+        shape: text[text:"activation σ(z)" fontSize:13 fill:#ffffff/0.0 at:(0.0,-5.3)] -> fadeIn(0.6s, 23.0s)
+
+      lbl_3:
+        type: primitive
+        shape: text[text:"forward pass" fontSize:13 fill:#ffffff/0.0 at:(4.5,-5.3)] -> fadeIn(0.6s, 23.5s)

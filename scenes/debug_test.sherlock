@@ -1,0 +1,34 @@
+# Debug Test - Just a few shapes
+concept: "Debug Test"
+emoji: "🔍"
+total_duration: 4
+background: "#0a0e1a"
+
+subtitles:
+  - "🔍 Debug Test"
+
+phases:
+  test:
+    duration: 4
+    description: "Simple test"
+    elements:
+      # Test each shape type one by one
+      test_circle:
+        type: primitive
+        shape: circle[r:1 fill:#ff0000 at:(-3,0)]
+      
+      test_square:
+        type: primitive
+        shape: square[w:1 fill:#00ff00 at:(-1,0)]
+      
+      test_triangle:
+        type: primitive
+        shape: triangle[size:1 fill:#0000ff at:(1,0)]
+      
+      test_star:
+        type: primitive
+        shape: star[points:5 outerRadius:0.8 fill:#ffff00 at:(3,0)]
+      
+      test_text:
+        type: primitive
+        shape: text[text:"All shapes visible?" fontSize:20 fill:#ffffff at:(0,-2)]

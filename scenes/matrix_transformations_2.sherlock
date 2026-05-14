@@ -1,0 +1,1032 @@
+concept: "Matrix Transformations: Reality Becomes Programmable"
+emoji: "🔢"
+total_duration: 62
+background: "#0a0a0a"
+
+subtitles:
+  - ""
+  - ""
+  - ""
+  - ""
+  - ""
+  - ""
+  - ""
+  - ""
+  - ""
+
+phases:
+  scene_1:
+    duration: 7
+    description: "Every pixel on your screen right now. Not a picture. A calculation."
+    elements:
+      # LEFT: Algorithm grid with RGB calculations
+      pixel_grid:
+        type: algorithm_grid
+        position: [-230, 20]
+        rows: 3
+        cols: 3
+        cellSize: 65
+        spacing: 8
+        cells: [["255,128,64", "32,178,255", "200,45,180"], ["100,255,100", "64,64,255", "255,200,0"], ["180,100,255", "50,200,180", "255,80,120"]]
+        highlights: [[0,0], [0,1], [0,2], [1,0], [1,1], [1,2], [2,0], [2,1], [2,2]]
+        showValues: true
+        color: "#4ecdc4"
+        border_color: "#34495e"
+        border_width: 3
+      
+      # Small morph particles around grid perimeter
+      particle_1:
+        type: morph_entity
+        position: [-290, 20]
+        form: circle
+        size: 12
+        color: "#4ecdc4"
+        personality: playful
+        animation_pattern: breathe
+        energy: 0.3
+        glow: true
+      
+      particle_2:
+        type: morph_entity
+        position: [-230, -80]
+        form: circle
+        size: 14
+        color: "#3498db"
+        personality: elegant
+        animation_pattern: breathe
+        energy: 0.3
+        glow: true
+      
+      particle_3:
+        type: morph_entity
+        position: [-170, 20]
+        form: circle
+        size: 13
+        color: "#4ecdc4"
+        personality: playful
+        animation_pattern: breathe
+        energy: 0.3
+        glow: true
+      
+      particle_4:
+        type: morph_entity
+        position: [-290, 80]
+        form: circle
+        size: 15
+        color: "#3498db"
+        personality: elegant
+        animation_pattern: breathe
+        energy: 0.3
+        glow: true
+      
+      particle_5:
+        type: morph_entity
+        position: [-230, 120]
+        form: circle
+        size: 12
+        color: "#4ecdc4"
+        personality: playful
+        animation_pattern: breathe
+        energy: 0.3
+        glow: true
+      
+      particle_6:
+        type: morph_entity
+        position: [-200, -50]
+        form: circle
+        size: 14
+        color: "#3498db"
+        personality: elegant
+        animation_pattern: breathe
+        energy: 0.3
+        glow: true
+      
+      # CENTER: Hook texts
+      hook_primary:
+        type: text
+        text: "Pixels computing themselves into existence"
+        position: [0, 180]
+        size: 14
+        color: "#ffffff"
+        glow: true
+        font: "Arial"
+      
+      hook_secondary:
+        type: text
+        text: "Your screen is a live calculation engine"
+        position: [0, 220]
+        size: 13
+        color: "#95a5a6"
+        font: "Arial"
+      
+      # RIGHT: Evidence text
+      evidence_1:
+        type: text
+        text: "RGB = [R, G, B]"
+        position: [220, 80]
+        size: 16
+        color: "#9AA0A6"
+        font: "Courier Prime"
+      
+      evidence_2:
+        type: text
+        text: "3×3 = 9 calculations"
+        position: [220, 0]
+        size: 16
+        color: "#C06A6A"
+        font: "Courier Prime"
+      
+      evidence_3:
+        type: text
+        text: "Per pixel, per frame"
+        position: [220, -80]
+        size: 16
+        color: "#9AA0A6"
+        font: "Courier Prime"
+  
+  scene_2:
+    duration: 6
+    description: "These aren't tricks. They're space itself being rewritten."
+    elements:
+      # Background flow field
+      space_flow:
+        type: flow_field
+        position: [0, 40]
+        flow_type: data_stream
+        density: 0.15
+        intensity: 0.3
+        color: "#4a90e2"
+        animated: true
+        direction: outward
+        size: 200
+      
+      # Wisdom character
+      detective_guide:
+        type: wisdom_character
+        character_type: detective_octopus
+        position: [0, 0]
+        size: 140
+        mood: "thinking"
+        expression: "normal"
+        talking: true
+        breathing: true
+        color_scheme: "detective"
+        personality: "mysterious"
+        speech_bubble: true
+        speech_text: "Like updating the coordinates of existence itself—space isn't fixed, it's code we can edit."
+        background_aura: "glow"
+  
+  scene_3:
+    duration: 8
+    description: "A matrix is a machine that eats coordinates and spits out new ones."
+    elements:
+      # LEFT: Input point
+      input_point:
+        type: point
+        position: [-280, 0]
+        radius: 8
+        color: "#3498db"
+        glow: true
+      
+      input_label:
+        type: text
+        text: "IN: (x,y)"
+        position: [-280, -30]
+        size: 14
+        color: "#3498db"
+        font: "Arial"
+      
+      # Transformation matrix
+      transform_matrix:
+        type: matrix
+        position: [-150, 0]
+        values: [["2", "0"], ["0", "2"]]
+        cellSize: 60
+        spacing: 6
+        textSize: 22
+        color: "#e74c3c"
+        highlightCells: [[0,0], [0,1], [1,0], [1,1]]
+      
+      # Output point
+      output_point:
+        type: point
+        position: [-20, 0]
+        radius: 8
+        color: "#2ecc71"
+        glow: true
+      
+      output_label:
+        type: text
+        text: "OUT: (2x,2y)"
+        position: [-20, -30]
+        size: 14
+        color: "#2ecc71"
+        font: "Arial"
+      
+      # Relationship connectors
+      connector_1:
+        type: relationship_connector
+        from: [-272, 0]
+        to: [-210, 0]
+        relationship_type: "transformation"
+        strength: 0.8
+        color: "#3498db"
+        animated: true
+        bidirectional: false
+      
+      connector_2:
+        type: relationship_connector
+        from: [-90, 0]
+        to: [-28, 0]
+        relationship_type: "transformation"
+        strength: 0.8
+        color: "#2ecc71"
+        animated: true
+        bidirectional: false
+      
+      # Small data flow particles
+      data_particle_1:
+        type: mathematical_entity
+        position: [-260, 0]
+        form: "point"
+        size: 8
+        color: "#3498db"
+        personality: "playful"
+        animation_pattern: "pulse"
+        energy: 0.6
+        glow: true
+      
+      data_particle_2:
+        type: mathematical_entity
+        position: [-40, 0]
+        form: "point"
+        size: 8
+        color: "#2ecc71"
+        personality: "playful"
+        animation_pattern: "pulse"
+        energy: 0.6
+        glow: true
+      
+      data_particle_3:
+        type: mathematical_entity
+        position: [-150, 0]
+        form: "point"
+        size: 8
+        color: "#e74c3c"
+        personality: "playful"
+        animation_pattern: "pulse"
+        energy: 0.7
+        glow: true
+      
+      # CENTER: Hook texts
+      hook_primary:
+        type: text
+        text: "Input flows through transformation engine"
+        position: [0, 180]
+        size: 14
+        color: "#ffffff"
+        glow: true
+        font: "Arial"
+      
+      hook_secondary:
+        type: text
+        text: "The matrix machine in action"
+        position: [0, 220]
+        size: 13
+        color: "#95a5a6"
+        font: "Arial"
+      
+      # RIGHT: Evidence text
+      evidence_1:
+        type: text
+        text: "[[2,0],[0,2]]"
+        position: [220, 80]
+        size: 16
+        color: "#C06A6A"
+        font: "Courier Prime"
+      
+      evidence_2:
+        type: text
+        text: "Scaling matrix"
+        position: [220, 0]
+        size: 16
+        color: "#9AA0A6"
+        font: "Courier Prime"
+      
+      evidence_3:
+        type: text
+        text: "(x,y) → (2x,2y)"
+        position: [220, -80]
+        size: 16
+        color: "#C06A6A"
+        font: "Courier Prime"
+  
+  scene_4:
+    duration: 9
+    description: "Feed it the point (3, 2). It might rotate it. Stretch it. Flip it inside out."
+    elements:
+      # LEFT: Main transforming morph entity (Y-AXIS FLIPPED)
+      transforming_point:
+        type: morph_entity
+        position: [-210, -60]
+        form: circle
+        size: 18
+        color: "#e67e22"
+        glow: true
+        energy: 0.7
+        motion_profile: precision_linear
+        move_to: [-30, -60]
+        move_duration: 9
+        move_style: ease_in_out
+        move_path: bezier
+        control_points: [[-150, 90], [-90, 90]]
+        rotate_to: 180
+        rotate_duration: 9
+        rotate_style: ease_in_out
+        morph_to: circle
+        morph_at: 3
+        morph_duration: 3
+        morph_style: elastic_deform
+      
+      # Trail entities marking waypoints
+      trail_1:
+        type: mathematical_entity
+        position: [-210, -60]
+        form: "triangle"
+        size: 6
+        color: "#e67e22"
+        personality: "elegant"
+        animation_pattern: "pulse"
+        energy: 0.5
+        glow: true
+      
+      trail_2:
+        type: mathematical_entity
+        position: [-150, 90]
+        form: "triangle"
+        size: 6
+        color: "#e67e22"
+        personality: "elegant"
+        animation_pattern: "pulse"
+        energy: 0.5
+        glow: true
+      
+      trail_3:
+        type: mathematical_entity
+        position: [-90, 90]
+        form: "triangle"
+        size: 6
+        color: "#e67e22"
+        personality: "elegant"
+        animation_pattern: "pulse"
+        energy: 0.5
+        glow: true
+      
+      # Faint transformation axis vectors
+      rotation_axis:
+        type: vector
+        from: [-150, 60]
+        to: [-150, 120]
+        color: "#95a5a6"
+        thickness: 2
+        opacity: 0.4
+      
+      stretch_axis:
+        type: vector
+        from: [-120, 90]
+        to: [-60, 90]
+        color: "#95a5a6"
+        thickness: 2
+        opacity: 0.4
+      
+      # CENTER: Hook texts
+      hook_primary:
+        type: text
+        text: "One point, three transformations"
+        position: [0, 180]
+        size: 14
+        color: "#ffffff"
+        glow: true
+        font: "Arial"
+      
+      hook_secondary:
+        type: text
+        text: "Rotation, stretch, reflection in sequence"
+        position: [0, 220]
+        size: 13
+        color: "#95a5a6"
+        font: "Arial"
+      
+      # RIGHT: Evidence text (4 points)
+      evidence_1:
+        type: text
+        text: "Start: (3, 2)"
+        position: [220, 100]
+        size: 16
+        color: "#C06A6A"
+        font: "Courier Prime"
+      
+      evidence_2:
+        type: text
+        text: "Rotate: 90°"
+        position: [220, 33]
+        size: 16
+        color: "#9AA0A6"
+        font: "Courier Prime"
+      
+      evidence_3:
+        type: text
+        text: "Stretch: ×2"
+        position: [220, -33]
+        size: 16
+        color: "#9AA0A6"
+        font: "Courier Prime"
+      
+      evidence_4:
+        type: text
+        text: "Reflect: axis flip"
+        position: [220, -100]
+        size: 16
+        color: "#9AA0A6"
+        font: "Courier Prime"
+  
+  scene_5:
+    duration: 9
+    description: "Apply that same machine to every point in existence, and you've transformed the entire universe."
+    elements:
+      # LEFT: Flow field representing universal transformation
+      universal_field:
+        type: flow_field
+        position: [-150, 0]
+        flow_type: "gradient"
+        density: 0.4
+        intensity: 0.7
+        color: "#9b59b6"
+        animated: true
+        direction: "outward"
+        size: 280
+      
+      # Grid of morph entities transforming (Y-AXIS FLIPPED)
+      point_1:
+        type: morph_entity
+        position: [-230, -80]
+        form: circle
+        size: 10
+        color: "#3498db"
+        glow: true
+        energy: 0.7
+        motion_profile: fluid_organic
+        rotate_to: 90
+        rotate_duration: 9
+        rotate_style: ease_in_out
+      
+      point_2:
+        type: morph_entity
+        position: [-190, -80]
+        form: circle
+        size: 10
+        color: "#3498db"
+        glow: true
+        energy: 0.7
+        motion_profile: fluid_organic
+        rotate_to: 90
+        rotate_duration: 9
+        rotate_style: ease_in_out
+      
+      point_3:
+        type: morph_entity
+        position: [-150, -80]
+        form: circle
+        size: 10
+        color: "#3498db"
+        glow: true
+        energy: 0.7
+        motion_profile: fluid_organic
+        rotate_to: 90
+        rotate_duration: 9
+        rotate_style: ease_in_out
+      
+      point_4:
+        type: morph_entity
+        position: [-110, -80]
+        form: circle
+        size: 10
+        color: "#3498db"
+        glow: true
+        energy: 0.7
+        motion_profile: fluid_organic
+        rotate_to: 90
+        rotate_duration: 9
+        rotate_style: ease_in_out
+      
+      point_5:
+        type: morph_entity
+        position: [-70, -80]
+        form: circle
+        size: 10
+        color: "#3498db"
+        glow: true
+        energy: 0.7
+        motion_profile: fluid_organic
+        rotate_to: 90
+        rotate_duration: 9
+        rotate_style: ease_in_out
+      
+      point_6:
+        type: morph_entity
+        position: [-230, 80]
+        form: circle
+        size: 10
+        color: "#3498db"
+        glow: true
+        energy: 0.7
+        motion_profile: fluid_organic
+        rotate_to: 90
+        rotate_duration: 9
+        rotate_style: ease_in_out
+      
+      point_7:
+        type: morph_entity
+        position: [-190, 80]
+        form: circle
+        size: 10
+        color: "#3498db"
+        glow: true
+        energy: 0.7
+        motion_profile: fluid_organic
+        rotate_to: 90
+        rotate_duration: 9
+        rotate_style: ease_in_out
+      
+      point_8:
+        type: morph_entity
+        position: [-150, 80]
+        form: circle
+        size: 10
+        color: "#3498db"
+        glow: true
+        energy: 0.7
+        motion_profile: fluid_organic
+        rotate_to: 90
+        rotate_duration: 9
+        rotate_style: ease_in_out
+      
+      point_9:
+        type: morph_entity
+        position: [-110, 80]
+        form: circle
+        size: 10
+        color: "#3498db"
+        glow: true
+        energy: 0.7
+        motion_profile: fluid_organic
+        rotate_to: 90
+        rotate_duration: 9
+        rotate_style: ease_in_out
+      
+      point_10:
+        type: morph_entity
+        position: [-70, 80]
+        form: circle
+        size: 10
+        color: "#3498db"
+        glow: true
+        energy: 0.7
+        motion_profile: fluid_organic
+        rotate_to: 90
+        rotate_duration: 9
+        rotate_style: ease_in_out
+      
+      # Small xy_graph showing coordinate warping
+      coord_graph:
+        type: xy_graph
+        position: [-270, -140]
+        size: 100
+        x_range: [-5, 5]
+        y_range: [-5, 5]
+        show_grid: true
+        show_axes: true
+        color: "#3498db"
+        line_width: 2
+        show_points: true
+        opacity: 0.3
+      
+      # CENTER: Hook texts
+      hook_primary:
+        type: text
+        text: "Every point transforms simultaneously"
+        position: [0, 180]
+        size: 14
+        color: "#ffffff"
+        glow: true
+        font: "Arial"
+      
+      hook_secondary:
+        type: text
+        text: "Individual becomes universal"
+        position: [0, 220]
+        size: 13
+        color: "#95a5a6"
+        font: "Arial"
+      
+      # RIGHT: Evidence text
+      evidence_1:
+        type: text
+        text: "∞ points × 1 matrix"
+        position: [220, 80]
+        size: 16
+        color: "#C06A6A"
+        font: "Courier Prime"
+      
+      evidence_2:
+        type: text
+        text: "= Space reshaped"
+        position: [220, 0]
+        size: 16
+        color: "#9AA0A6"
+        font: "Courier Prime"
+      
+      evidence_3:
+        type: text
+        text: "Rotation: θ = 90°"
+        position: [220, -80]
+        size: 16
+        color: "#C06A6A"
+        font: "Courier Prime"
+  
+  scene_6:
+    duration: 8
+    description: "Computer graphics? Matrix transformations at 60 frames per second. Neural networks? Matrix operations on scales humans can't visualize."
+    elements:
+      # LEFT: Animated bar chart showing 60 fps
+      fps_chart:
+        type: animated_bar_chart
+        data: [60, 60, 60, 60, 60, 60]
+        position: [-220, 0]
+        width: 180
+        height: 120
+        color: "#e74c3c"
+      
+      fps_label:
+        type: text
+        text: "FPS"
+        position: [-220, -80]
+        size: 16
+        color: "#e74c3c"
+        font: "Arial"
+      
+      # Neural network
+      neural_network:
+        type: neural_net
+        position: [-60, 0]
+        layers: [4, 6, 4]
+        colors: ["#3498db", "#e74c3c", "#2ecc71"]
+        animation_speed: 0.7
+      
+      # Data stream entities flowing between components
+      stream_1:
+        type: mathematical_entity
+        position: [-130, 0]
+        form: "wave"
+        size: 6
+        color: "#f39c12"
+        personality: "sharp"
+        animation_pattern: "wave"
+        energy: 0.8
+        glow: true
+      
+      stream_2:
+        type: mathematical_entity
+        position: [-120, 0]
+        form: "wave"
+        size: 7
+        color: "#f39c12"
+        personality: "sharp"
+        animation_pattern: "wave"
+        energy: 0.8
+        glow: true
+      
+      stream_3:
+        type: mathematical_entity
+        position: [-110, 0]
+        form: "wave"
+        size: 8
+        color: "#f39c12"
+        personality: "sharp"
+        animation_pattern: "wave"
+        energy: 0.8
+        glow: true
+      
+      stream_4:
+        type: mathematical_entity
+        position: [-100, 0]
+        form: "wave"
+        size: 7
+        color: "#f39c12"
+        personality: "sharp"
+        animation_pattern: "wave"
+        energy: 0.8
+        glow: true
+      
+      stream_5:
+        type: mathematical_entity
+        position: [-90, 0]
+        form: "wave"
+        size: 6
+        color: "#f39c12"
+        personality: "sharp"
+        animation_pattern: "wave"
+        energy: 0.8
+        glow: true
+      
+      # CENTER: Hook texts
+      hook_primary:
+        type: text
+        text: "60 calculations every second"
+        position: [0, 180]
+        size: 14
+        color: "#ffffff"
+        glow: true
+        font: "Arial"
+      
+      hook_secondary:
+        type: text
+        text: "Speed beyond human perception"
+        position: [0, 220]
+        size: 13
+        color: "#95a5a6"
+        font: "Arial"
+      
+      # RIGHT: Evidence text (4 points)
+      evidence_1:
+        type: text
+        text: "Graphics: 60 fps"
+        position: [220, 100]
+        size: 16
+        color: "#9AA0A6"
+        font: "Courier Prime"
+      
+      evidence_2:
+        type: text
+        text: "= 60 matrix ops/sec"
+        position: [220, 33]
+        size: 16
+        color: "#C06A6A"
+        font: "Courier Prime"
+      
+      evidence_3:
+        type: text
+        text: "Neural nets: millions"
+        position: [220, -33]
+        size: 16
+        color: "#9AA0A6"
+        font: "Courier Prime"
+      
+      evidence_4:
+        type: text
+        text: "Beyond visualization"
+        position: [220, -100]
+        size: 16
+        color: "#C06A6A"
+        font: "Courier Prime"
+  
+  scene_7:
+    duration: 8
+    description: "Before matrices, we could describe spaces. After matrices, we could morph them."
+    elements:
+      # LEFT: BEFORE state
+      before_entity:
+        type: mathematical_entity
+        position: [-240, 0]
+        form: "cloud"
+        size: 50
+        color: "#95a5a6"
+        personality: "wise"
+        animation_pattern: "breathe"
+        energy: 0.3
+        glow: false
+      
+      before_label:
+        type: text
+        text: "DESCRIBE"
+        position: [-240, -60]
+        size: 16
+        color: "#95a5a6"
+        font: "Arial"
+      
+      # AFTER state
+      after_entity:
+        type: mathematical_entity
+        position: [-80, 0]
+        form: "cloud"
+        size: 55
+        color: "#2ecc71"
+        personality: "playful"
+        animation_pattern: "breathe"
+        energy: 0.6
+        glow: true
+      
+      after_label:
+        type: text
+        text: "MORPH"
+        position: [-80, -60]
+        size: 16
+        color: "#2ecc71"
+        font: "Arial"
+      
+      # Dashed lines in right half pointing to morph capability
+      morph_line_1:
+        type: line
+        from: [-110, -30]
+        to: [-50, -30]
+        thickness: 1
+        dashed: true
+        color: "#27ae60"
+        opacity: 0.4
+      
+      morph_line_2:
+        type: line
+        from: [-110, 0]
+        to: [-50, 0]
+        thickness: 1
+        dashed: true
+        color: "#27ae60"
+        opacity: 0.4
+      
+      morph_line_3:
+        type: line
+        from: [-110, 30]
+        to: [-50, 30]
+        thickness: 1
+        dashed: true
+        color: "#27ae60"
+        opacity: 0.4
+      
+      morph_line_4:
+        type: line
+        from: [-110, 60]
+        to: [-50, 60]
+        thickness: 1
+        dashed: true
+        color: "#27ae60"
+        opacity: 0.4
+      
+      # Relationship connector showing causation
+      capability_connector:
+        type: relationship_connector
+        from: [-190, 0]
+        to: [-130, 0]
+        relationship_type: "causation"
+        strength: 0.9
+        color: "#2ecc71"
+        animated: true
+        bidirectional: false
+      
+      # CENTER: Hook texts
+      hook_primary:
+        type: text
+        text: "From description to transformation"
+        position: [0, 180]
+        size: 14
+        color: "#ffffff"
+        glow: true
+        font: "Arial"
+      
+      hook_secondary:
+        type: text
+        text: "The capability leap matrices gave humanity"
+        position: [0, 220]
+        size: 13
+        color: "#95a5a6"
+        font: "Arial"
+      
+      # RIGHT: Evidence text
+      evidence_1:
+        type: text
+        text: "BEFORE: Fixed shapes"
+        position: [220, 80]
+        size: 16
+        color: "#9AA0A6"
+        font: "Courier Prime"
+      
+      evidence_2:
+        type: text
+        text: "AFTER: Dynamic forms"
+        position: [220, 0]
+        size: 16
+        color: "#9AA0A6"
+        font: "Courier Prime"
+      
+      evidence_3:
+        type: text
+        text: "Matrices = Morphing"
+        position: [220, -80]
+        size: 16
+        color: "#C06A6A"
+        font: "Courier Prime"
+  
+  scene_8:
+    duration: 8
+    description: "Reality became programmable. That's the translation matrices gave us."
+    elements:
+      # Central equation emoji (Y-AXIS NOT FLIPPED - regular text component)
+      rotation_matrix_equation:
+        type: animated_emoji
+        emoji: "[[cos θ, -sin θ], [sin θ,  cos θ]]"
+        position: [0, 20]
+        size: 55
+        movement: "floating-pen"
+        glowing: "pulsing-glow"
+        rotation: "none"
+        reveal: "slide-reveal"
+        speed: "normal"
+        delay: "none"
+        color: "#ffffff"
+      
+      # Six morph entities converging toward equation (Y-AXIS FLIPPED)
+      converge_1:
+        type: morph_entity
+        position: [-60, -80]
+        form: circle
+        size: 12
+        color: "#3498db"
+        glow: true
+        energy: 0.7
+        motion_profile: kinetic_dynamic
+        move_to: [0, 20]
+        move_duration: 8
+        move_style: ease_in_out
+      
+      converge_2:
+        type: morph_entity
+        position: [60, -80]
+        form: triangle
+        size: 12
+        color: "#e67e22"
+        glow: true
+        energy: 0.7
+        motion_profile: kinetic_dynamic
+        move_to: [0, 20]
+        move_duration: 8
+        move_style: ease_in_out
+      
+      converge_3:
+        type: morph_entity
+        position: [-90, 50]
+        form: square
+        size: 12
+        color: "#2ecc71"
+        glow: true
+        energy: 0.7
+        motion_profile: kinetic_dynamic
+        move_to: [0, 20]
+        move_duration: 8
+        move_style: ease_in_out
+      
+      converge_4:
+        type: morph_entity
+        position: [90, 50]
+        form: circle
+        size: 12
+        color: "#3498db"
+        glow: true
+        energy: 0.7
+        motion_profile: kinetic_dynamic
+        move_to: [0, 20]
+        move_duration: 8
+        move_style: ease_in_out
+      
+      converge_5:
+        type: morph_entity
+        position: [-30, 100]
+        form: triangle
+        size: 12
+        color: "#e67e22"
+        glow: true
+        energy: 0.7
+        motion_profile: kinetic_dynamic
+        move_to: [0, 20]
+        move_duration: 8
+        move_style: ease_in_out
+      
+      converge_6:
+        type: morph_entity
+        position: [30, 100]
+        form: square
+        size: 12
+        color: "#2ecc71"
+        glow: true
+        energy: 0.7
+        motion_profile: kinetic_dynamic
+        move_to: [0, 20]
+        move_duration: 8
+        move_style: ease_in_out
+      
+      # Noir subtitle at bottom
+      noir_subtitle:
+        type: text
+        text: "The code that rewrote existence itself"
+        position: [0, -220]
+        size: 18
+        color: "#d4a373"
+        font: "Courier New"

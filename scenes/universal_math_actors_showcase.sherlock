@@ -1,0 +1,341 @@
+concept: "Universal Mathematical Actors Showcase"
+emoji: "🌌"
+total_duration: 24
+background: "#0a0a0a"
+
+subtitles:
+  - "Mathematical Entities - Shape-shifting mathematical storytellers"
+  - "Relationship Connectors - Visual links between mathematical concepts"
+  - "Dimensional Spaces - Mathematical canvases from 1D to n-dimensional"
+  - "Flow Fields - Universal movement patterns in mathematical space"
+
+phases:
+  mathematical_entities:
+    duration: 6
+    static_hold_time: 2
+    description: "Showcase shape-shifting mathematical entities"
+    elements:
+      title_label:
+        type: text
+        text: "🎭 Mathematical Entities"
+        position: [0, 220]
+        color: "#f1c40f"
+        size: 24
+        font: "Georgia"
+        glow: true
+
+      # Different mathematical forms with personalities
+      playful_point:
+        type: mathematical_entity
+        position: [-200, 0]
+        form: point
+        personality: playful
+        size: 30
+        color: "#e74c3c"
+        energy: 0.8
+        label: "Playful Point"
+
+      elegant_vector:
+        type: mathematical_entity
+        position: [-100, 0]
+        form: vector
+        personality: elegant
+        size: 40
+        color: "#3498db"
+        energy: 0.6
+        label: "Elegant Vector"
+
+      wise_function:
+        type: mathematical_entity
+        position: [0, 0]
+        form: function
+        personality: wise
+        size: 50
+        color: "#27ae60"
+        energy: 0.4
+        label: "Wise Function"
+
+      mysterious_distribution:
+        type: mathematical_entity
+        position: [100, 0]
+        form: distribution
+        personality: mysterious
+        size: 45
+        color: "#9b59b6"
+        energy: 0.7
+        label: "Mysterious Distribution"
+
+      sharp_matrix:
+        type: mathematical_entity
+        position: [240, 0]
+        form: matrix
+        personality: sharp
+        size: 120
+        color: "#f39c12"
+        energy: 0.9
+        label: "Sharp Matrix"
+
+  relationship_connectors:
+    duration: 6
+    static_hold_time: 2
+    description: "Showcase relationship connectors between entities"
+    elements:
+      title_label:
+        type: text
+        text: "🔗 Relationship Connectors"
+        position: [0, 220]
+        color: "#f1c40f"
+        size: 24
+        font: "Georgia"
+        glow: true
+
+      # Entities to connect
+      entity_a:
+        type: mathematical_entity
+        position: [-150, -50]
+        form: point
+        personality: playful
+        size: 25
+        color: "#e74c3c"
+        label: "A"
+
+      entity_b:
+        type: mathematical_entity
+        position: [150, -50]
+        form: point
+        personality: elegant
+        size: 25
+        color: "#3498db"
+        label: "B"
+
+      entity_c:
+        type: mathematical_entity
+        position: [-150, 100]
+        form: vector
+        personality: wise
+        size: 30
+        color: "#27ae60"
+        label: "C"
+
+      entity_d:
+        type: mathematical_entity
+        position: [150, 100]
+        form: distribution
+        personality: mysterious
+        size: 30
+        color: "#9b59b6"
+        label: "D"
+
+      # Different types of relationships
+      correlation_link:
+        type: relationship_connector
+        from: [-150, -50]
+        to: [150, -50]
+        relationship_type: correlation
+        strength: 0.7
+        color: "#e74c3c"
+        animated: true
+        label: "Correlation"
+
+      causation_link:
+        type: relationship_connector
+        from: [-150, -50]
+        to: [-150, 100]
+        relationship_type: causation
+        strength: 0.9
+        color: "#f39c12"
+        bidirectional: false
+        label: "Causation"
+
+      transformation_link:
+        type: relationship_connector
+        from: [-150, 100]
+        to: [150, 100]
+        relationship_type: transformation
+        strength: 0.8
+        color: "#27ae60"
+        animated: true
+        label: "Transformation"
+
+      flow_link:
+        type: relationship_connector
+        from: [150, -50]
+        to: [150, 100]
+        relationship_type: flow
+        strength: 0.6
+        color: "#9b59b6"
+        animated: true
+        bidirectional: true
+        label: "Flow"
+
+  dimensional_spaces:
+    duration: 6
+    static_hold_time: 2
+    description: "Showcase different dimensional spaces"
+    elements:
+      title_label:
+        type: text
+        text: "📐 Dimensional Spaces"
+        position: [0, 220]
+        color: "#f1c40f"
+        size: 24
+        font: "Georgia"
+        glow: true
+
+      # 1D Number line
+      space_1d:
+        type: dimensional_space
+        position: [-200, -100]
+        dimensions: 1D
+        style: grid
+        size: 150
+        color: "#e74c3c"
+        opacity: 0.6
+
+      # 2D Grid
+      space_2d_grid:
+        type: dimensional_space
+        position: [0, -100]
+        dimensions: 2D
+        style: grid
+        size: 120
+        color: "#3498db"
+        opacity: 0.4
+
+      # 2D Axes
+      space_2d_axes:
+        type: dimensional_space
+        position: [200, -100]
+        dimensions: 2D
+        style: axes
+        size: 120
+        color: "#27ae60"
+        opacity: 0.7
+
+      # 3D Space
+      space_3d:
+        type: dimensional_space
+        position: [-100, 80]
+        dimensions: 3D
+        style: grid
+        size: 100
+        color: "#9b59b6"
+        opacity: 0.5
+        perspective: true
+        animated: true
+
+      # n-Dimensional abstract space
+      space_nd:
+        type: dimensional_space
+        position: [100, 80]
+        dimensions: nD
+        style: abstract
+        size: 100
+        color: "#f39c12"
+        opacity: 0.6
+        animated: true
+
+  flow_fields:
+    duration: 6
+    static_hold_time: 2
+    description: "Showcase universal flow fields"
+    elements:
+      title_label:
+        type: text
+        text: "🌊 Flow Fields"
+        position: [0, 220]
+        color: "#f1c40f"
+        size: 24
+        font: "Georgia"
+        glow: true
+
+      # Gradient descent flow
+      gradient_flow:
+        type: flow_field
+        position: [-150, -50]
+        flow_type: gradient
+        density: 0.3
+        intensity: 0.7
+        color: "#e74c3c"
+        animated: true
+        direction: inward
+        size: 120
+
+      # Probability flow (Brownian motion)
+      probability_flow:
+        type: flow_field
+        position: [150, -50]
+        flow_type: probability
+        density: 0.4
+        intensity: 0.6
+        color: "#3498db"
+        animated: true
+        size: 120
+
+      # Force field
+      force_flow:
+        type: flow_field
+        position: [-150, 100]
+        flow_type: force
+        density: 0.5
+        intensity: 0.8
+        color: "#27ae60"
+        animated: true
+        direction: outward
+        size: 120
+
+      # Optimization swirl
+      optimization_flow:
+        type: flow_field
+        position: [150, 100]
+        flow_type: optimization
+        density: 0.6
+        intensity: 0.9
+        color: "#9b59b6"
+        animated: true
+        size: 120
+
+      # Data stream
+      data_stream_flow:
+        type: flow_field
+        position: [0, 0]
+        flow_type: data_stream
+        density: 0.4
+        intensity: 0.7
+        color: "#f39c12"
+        animated: true
+        direction: outward
+        size: 150
+
+equations:
+  - id: entity_formula
+    latex: "\\text{Entity} = \\text{Form} \\times \\text{Personality} \\times \\text{Energy}"
+    position: [400, 150]
+    phase: mathematical_entities
+    animation: fade-in
+    glow: true
+    size: 14
+
+  - id: relationship_formula
+    latex: "\\text{Relationship}(A, B) = \\text{Type} \\times \\text{Strength} \\times \\text{Direction}"
+    position: [400, 200]
+    phase: relationship_connectors
+    animation: slide-in
+    glow: true
+    size: 12
+
+  - id: dimension_formula
+    latex: "\\text{Space} \\in \\{\\mathbb{R}^1, \\mathbb{R}^2, \\mathbb{R}^3, \\ldots, \\mathbb{R}^n\\}"
+    position: [400, 250]
+    phase: dimensional_spaces
+    animation: fade-in
+    glow: true
+    size: 14
+
+  - id: flow_formula
+    latex: "\\vec{F}(\\vec{x}) = \\text{FlowType}(\\vec{x}, t, \\text{intensity})"
+    position: [400, 300]
+    phase: flow_fields
+    animation: slide-in
+    glow: true
+    size: 14

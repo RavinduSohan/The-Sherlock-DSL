@@ -1,0 +1,115 @@
+{
+  "name": "sherlock-lang",
+  "version": "1.0.0",
+  "description": "Beautiful STEM animation framework with CLI - create stunning educational videos with simple .sherlock files",
+  "bin": {
+    "sherlock": "./bin/sherlock.js"
+  },
+  "main": "lib/core/index.js",
+  "types": "lib/core/index.d.ts",
+  "files": [
+    "bin/",
+    "lib/",
+    "app/",
+    "components/",
+    "scenes/",
+    "guides/",
+    "templates/",
+    "types/"
+  ],
+  "scripts": {
+    "dev": "next dev --turbopack",
+    "build": "tsc -p tsconfig.lib.json && next build",
+    "build:lib": "tsc -p tsconfig.lib.json",
+    "start": "next start",
+    "lint": "next lint",
+    "setup:prereqs:win": "powershell -ExecutionPolicy Bypass -File scripts/setup-prereqs.ps1",
+    "setup:prereqs:win:choco": "powershell -ExecutionPolicy Bypass -File scripts/setup-prereqs.ps1 -InstallChocolatey",
+    "setup:prereqs:unix": "bash scripts/setup-prereqs.sh",
+    "smoke:cli": "node scripts/cli-smoke.js",
+    "prepublishOnly": "npm run build:lib",
+    "test": "node bin/sherlock.js --version",
+    "postinstall": "node -e \"console.log('\\n🎬 \\x1b[36mSherlock installed successfully!\\x1b[0m Run \\x1b[32msherlock --help\\x1b[0m to get started.\\n')\""
+  },
+  "keywords": [
+    "animation",
+    "stem",
+    "education",
+    "video",
+    "manim",
+    "math",
+    "visualization",
+    "dsl",
+    "cli",
+    "educational",
+    "physics",
+    "neural-network",
+    "algorithm",
+    "teaching",
+    "content-creation",
+    "video-export",
+    "ffmpeg",
+    "canvas",
+    "graphics",
+    "mathematics"
+  ],
+  "author": {
+    "name": "Sherlock Team",
+    "email": "hello@sherlocklang.com",
+    "url": "https://github.com/yourusername/sherlock-lang"
+  },
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/yourusername/sherlock-lang.git"
+  },
+  "bugs": {
+    "url": "https://github.com/yourusername/sherlock-lang/issues"
+  },
+  "homepage": "https://github.com/yourusername/sherlock-lang#readme",
+  "engines": {
+    "node": ">=18.0.0",
+    "npm": ">=9.0.0"
+  },
+  "dependencies": {
+    "@types/js-yaml": "^4.0.9",
+    "@types/katex": "^0.16.7",
+    "blessed": "^0.1.81",
+    "blessed-contrib": "^4.11.0",
+    "boxen": "^5.1.2",
+    "canvas": "^3.2.0",
+    "chalk": "^4.1.2",
+    "chokidar": "^3.6.0",
+    "cli-table3": "^0.6.3",
+    "commander": "^12.0.0",
+    "figlet": "^1.7.0",
+    "fluent-ffmpeg": "^2.1.3",
+    "fs-extra": "^11.3.3",
+    "gifuct-js": "^2.1.2",
+    "gradient-string": "^2.0.2",
+    "inquirer": "^8.2.5",
+    "js-yaml": "^4.1.0",
+    "katex": "^0.16.22",
+    "next": "15.4.4",
+    "node-notifier": "^10.0.1",
+    "open": "^8.4.2",
+    "ora": "^5.4.1",
+    "puppeteer": "^24.34.0",
+    "react": "19.1.0",
+    "react-dom": "19.1.0",
+    "tmp": "^0.2.5"
+  },
+  "devDependencies": {
+    "@eslint/eslintrc": "^3",
+    "@types/fluent-ffmpeg": "^2.1.28",
+    "@types/fs-extra": "^11.0.4",
+    "@types/node": "^20",
+    "@types/react": "^19",
+    "@types/react-dom": "^19",
+    "@types/tmp": "^0.2.6",
+    "eslint": "^9",
+    "eslint-config-next": "15.4.4",
+    "tsx": "^4.21.0",
+    "typescript": "^5"
+  }
+}

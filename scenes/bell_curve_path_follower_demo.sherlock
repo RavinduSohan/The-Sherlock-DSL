@@ -1,0 +1,251 @@
+# Bell Curve Path Follower
+# Demonstration of path followers moving along a bell curve distribution
+
+concept: "Bell Curve Path Following"
+emoji: "📊"
+total_duration: 15
+background: "#0a0e1a"
+
+subtitles:
+  - "📊 Bell Curve Path Following"
+  - "🔄 Moving Particles on Distribution"
+  - "🎲 Probability Visualization"
+  - "📈 Dynamic Data Points"
+
+phases:
+  introduction:
+    duration: 3
+    description: "Introduction to the bell curve path follower concept"
+    elements:
+      title:
+        type: text
+        text: "Bell Curve Path Following"
+        position: [0, -200]
+        color: "#ffffff"
+        size: 28
+        glow: true
+      
+      subtitle:
+        type: text
+        text: "Visualization of Normal Distribution with Dynamic Elements"
+        position: [0, -160]
+        color: "#3498db"
+        size: 18
+        glow: false
+
+  bell_curve_display:
+    duration: 4
+    description: "Display the bell curve with grid reference"
+    elements:
+      # Main bell curve
+      bell_curve:
+        type: bell_curve
+        position: [0, 0]
+        amplitude: 150
+        variance: 3000
+        mean: 0
+        startX: -200
+        endX: 200
+        color: "#3498db"
+        thickness: 3
+        glow: true
+      
+      # Grid for reference
+      grid:
+        type: grid
+        style: "flat"
+        spacing: 40
+        color: "#1a365d"
+        density: 0.8
+        opacity: 0.3
+      
+      # Axis labels
+      x_axis:
+        type: text
+        text: "x"
+        position: [220, 10]
+        color: "#ffffff"
+        size: 16
+        glow: false
+      
+      y_axis:
+        type: text
+        text: "f(x)"
+        position: [10, -180]
+        color: "#ffffff"
+        size: 16
+        glow: false
+      
+      # Standard deviation markers
+      sd_minus_2:
+        type: text
+        text: "-2σ"
+        position: [-120, 30]
+        color: "#e74c3c"
+        size: 14
+        glow: false
+      
+      sd_minus_1:
+        type: text
+        text: "-1σ"
+        position: [-60, 30]
+        color: "#e74c3c"
+        size: 14
+        glow: false
+      
+      sd_0:
+        type: text
+        text: "μ (0)"
+        position: [0, 30]
+        color: "#e74c3c"
+        size: 14
+        glow: false
+      
+      sd_plus_1:
+        type: text
+        text: "+1σ"
+        position: [60, 30]
+        color: "#e74c3c"
+        size: 14
+        glow: false
+      
+      sd_plus_2:
+        type: text
+        text: "+2σ"
+        position: [120, 30]
+        color: "#e74c3c"
+        size: 14
+        glow: false
+
+  path_followers:
+    duration: 8
+    description: "Add path followers moving along the bell curve"
+    elements:
+      # Continue showing the bell curve
+      bell_curve:
+        type: bell_curve
+        position: [0, 0]
+        amplitude: 150
+        variance: 3000
+        mean: 0
+        startX: -200
+        endX: 200
+        color: "#3498db"
+        thickness: 2
+        glow: true
+      
+      # Keep grid for reference
+      grid:
+        type: grid
+        style: "flat"
+        spacing: 40
+        color: "#1a365d"
+        density: 0.8
+        opacity: 0.3
+      
+      # Add a path follower at the center (peak) of the bell curve
+      center_follower:
+        type: path_follower
+        position: [0, -150]  # Starting position
+        radius: 8
+        color: "#2ecc71"
+        glow: true
+        pathId: "custom"  # We'll use custom path calculation in the follower
+        pathSpeed: 0.5
+        pathOffset: 0
+        customPath: "bellCurve"
+        startX: -10
+        endX: 10
+        label: "Peak Point"
+        mean: 0
+        variance: 3000
+        amplitude: 150
+      
+      # Add a path follower at -1 standard deviation
+      left_follower:
+        type: path_follower
+        position: [-60, -60]  # Starting position
+        radius: 6
+        color: "#f39c12"
+        glow: true
+        pathId: "custom"
+        pathSpeed: 0.5
+        pathOffset: 0.2
+        customPath: "bellCurve"
+        startX: -80
+        endX: -40
+        label: "-1σ Point"
+        mean: 0
+        variance: 3000
+        amplitude: 150
+      
+      # Add a path follower at +1 standard deviation
+      right_follower:
+        type: path_follower
+        position: [60, -60]  # Starting position
+        radius: 6
+        color: "#f39c12"
+        glow: true
+        pathId: "custom"
+        pathSpeed: 0.5
+        pathOffset: 0.4
+        customPath: "bellCurve"
+        startX: 40
+        endX: 80
+        label: "+1σ Point"
+        mean: 0
+        variance: 3000
+        amplitude: 150
+      
+      # Add path followers at the tails (-2 and +2 standard deviations)
+      far_left_follower:
+        type: path_follower
+        position: [-120, -30]  # Starting position
+        radius: 5
+        color: "#e74c3c"
+        glow: true
+        pathId: "custom"
+        pathSpeed: 0.5
+        pathOffset: 0.6
+        customPath: "bellCurve"
+        startX: -140
+        endX: -100
+        label: "-2σ Point"
+        mean: 0
+        variance: 3000
+        amplitude: 150
+      
+      far_right_follower:
+        type: path_follower
+        position: [120, -30]  # Starting position
+        radius: 5
+        color: "#e74c3c"
+        glow: true
+        pathId: "custom"
+        pathSpeed: 0.5
+        pathOffset: 0.8
+        customPath: "bellCurve"
+        startX: 100
+        endX: 140
+        label: "+2σ Point"
+        mean: 0
+        variance: 3000
+        amplitude: 150
+      
+      # Statistical info
+      statistics:
+        type: text
+        text: "Particles follow paths along the normal distribution curve"
+        position: [0, -220]
+        color: "#2ecc71"
+        size: 16
+        glow: true
+
+equations:
+  - id: normal_distribution
+    latex: "f(x) = \\frac{1}{\\sigma\\sqrt{2\\pi}} e^{-\\frac{1}{2}\\left(\\frac{x-\\mu}{\\sigma}\\right)^2}"
+    position: [0, 200]
+    phase: bell_curve_display
+    animation: fade-in
+    glow: true
+    size: 16

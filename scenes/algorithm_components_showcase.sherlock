@@ -1,0 +1,105 @@
+concept: "Animationfsf Gallery"
+emoji: "🎆"
+total_duration: 20
+background: "#0a0a0a"
+
+phases:
+  fireworks_demo:
+    duration: 4
+    description: "Fireworks celebration"
+    elements:
+      curve_equation:
+        type: text
+        text: "y = A × sin(ωx + φ)"
+        position: [0, -200]
+        color: "#f39c12"
+        size: 24
+        font: "Arial"
+        glow: true
+
+      test:
+        type: circle
+        center: [100, 100]
+        radius: 30
+        color: "#1976d2"
+        glow: true
+        label: "Circle"
+
+  graph_demo:
+    duration: 8
+    description: "Simple Node and Edge Graph"
+    elements:
+      # Nodes
+      node1:
+        type: circle
+        center: [-150, 0]
+        radius: 25
+        color: "#e74c3c"
+        label: "A"
+        font_size: 20
+        
+      node2:
+        type: circle
+        center: [0, -100]
+        radius: 25
+        color: "#2ecc71"
+        label: "B"
+        font_size: 20
+        
+      node3:
+        type: circle
+        center: [150, 0]
+        radius: 25
+        color: "#3498db"
+        label: "C"
+        font_size: 20
+        
+      node4:
+        type: circle
+        center: [0, 100]
+        radius: 25
+        color: "#9b59b6"
+        label: "D"
+        font_size: 20
+        
+      # Edges
+      edge1:
+        type: line
+        from: [-150, 0]
+        to: [0, -100]
+        color: "#7f8c8d"
+        thickness: 3
+        arrow: true
+        
+      edge2:
+        type: line
+        from: [0, -100]
+        to: [150, 0]
+        color: "#7f8c8d"
+        thickness: 3
+        arrow: true
+        
+      edge3:
+        type: line
+        from: [150, 0]
+        to: [0, 100]
+        color: "#7f8c8d"
+        thickness: 3
+        arrow: true
+        
+      edge4:
+        type: line
+        from: [0, 100]
+        to: [-150, 0]
+        color: "#7f8c8d"
+        thickness: 3
+        arrow: true
+        
+      graph_title:
+        type: text
+        text: "Simple Directed Graph"
+        position: [0, -200]
+        color: "#ffffff"
+        size: 28
+        font: "Arial"
+

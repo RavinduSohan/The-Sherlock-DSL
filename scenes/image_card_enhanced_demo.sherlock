@@ -1,0 +1,403 @@
+# 🖼️ Enhanced Image Card Feature Demo
+# Demonstrating all the improved IMAGE_CARD features
+
+title: "Image Card - Full Feature Demo"
+width: 1920
+height: 1080
+fps: 60
+
+phases:
+  
+  # Phase 1: Ken Burns Effect Demo
+  ken_burns_demo:
+    duration: 12
+    elements:
+      
+      # Title for this section
+      title_kb:
+        type: text
+        text: "Ken Burns Cinematic Effect"
+        position: [0, 400]
+        size: 48
+        color: "#FFFFFF"
+        glow: true
+      
+      # Zoom in effect
+      spider_zoom:
+        type: image_card
+        source: "images/icons/Euler.gif"
+        position: [-250, 0]
+        size: 280
+        ken_burns: "zoom_in"
+        kb_duration: 10
+        kb_start_scale: 1.0
+        kb_end_scale: 1.5
+        kb_easing: "ease-in-out"
+        border_width: 3
+        border_color: "#4ECDC4"
+        border_radius: 10
+        delay: 0.2
+        fade_in: 1
+      
+      # Pan effect with different timing
+      spider_pan:
+        type: image_card
+        source: "images/icons/spider.jpg"
+        position: [200, 0]
+        size: 280
+        ken_burns: "zoom_out"
+        kb_duration: 10
+        kb_start_scale: 1.5
+        kb_end_scale: 1.0
+        kb_easing: "ease-out"
+        border_width: 3
+        border_color: "#FFE66D"
+        border_radius: 10
+        delay: 0.4
+        fade_in: 1.5
+      
+      # Labels
+      label_zoom:
+        type: text
+        text: "Zoom In"
+        position: [-250, -180]
+        size: 20
+        color: "#4ECDC4"
+      
+      label_pan:
+        type: text
+        text: "Zoom Out"
+        position: [250, -180]
+        size: 20
+        color: "#FFE66D"
+  
+  # Phase 2: Glow Effects Demo
+  glow_demo:
+    duration: 8
+    elements:
+      
+      title_glow:
+        type: text
+        text: "Gradient Glow Effects"
+        position: [0, 400]
+        size: 48
+        color: "#FFFFFF"
+        glow: true
+      
+      # Blue glow
+      spider_glow_blue:
+        type: image_card
+        source: "images/icons/gwen.png"
+        position: [-250, 20]
+        size: 220
+        glow: true
+        glow_color: "#4a90e2"
+        glow_intensity: 30
+        border_radius: 15
+        delay: 0
+        fade_in: 1
+        credit: "Blue Glow"
+        credit_position: "bottom-right"
+      
+      # Red glow
+      spider_glow_red:
+        type: image_card
+        source: "images/icons/yanet2.jpg"
+        position: [0, 20]
+        size: 220
+        glow: true
+        glow_color: "#ff6b6b"
+        glow_intensity: 35
+        border_radius: 15
+        delay: 0.3
+        fade_in: 1
+        credit: "Red Glow"
+        credit_position: "bottom-right"
+      
+      # Green glow
+      spider_glow_green:
+        type: image_card
+        source: "images/icons/yanet3.jpg"
+        position: [250, 20]
+        size: 220
+        glow: true
+        glow_color: "#51cf66"
+        glow_intensity: 40
+        border_radius: 15
+        delay: 0.5
+        fade_in: 1
+        credit: "Green Glow"
+        credit_position: "bottom-right"
+  
+  # Phase 3: Border Styles Demo
+  border_demo:
+    duration: 8
+    elements:
+      
+      title_border:
+        type: text
+        text: "Border & Frame Styles"
+        position: [0, 400]
+        size: 48
+        color: "#FFFFFF"
+        glow: true
+      
+      # Thin border with shadow
+      spider_thin:
+        type: image_card
+        source: "images/icons/spider.jpg"
+        position: [-250, 0]
+        size: 220
+        border_width: 2
+        border_color: "#ffffff"
+        border_radius: 5
+        drop_shadow: true
+        shadow_blur: 20
+        delay: 0
+        fade_in: 0.8
+        credit: "Thin Border + Shadow"
+      
+      # Thick colored border
+      spider_thick:
+        type: image_card
+        source: "images/icons/spider.jpg"
+        position: [0, 0]
+        size: 220
+        border_width: 8
+        border_color: "#ff6b6b"
+        border_radius: 20
+        delay: 0.5
+        fade_in: 0.8
+        credit: "Thick Colored Border"
+      
+      # Rounded with glow
+      spider_rounded:
+        type: image_card
+        source: "images/icons/spider.jpg"
+        position: [250, 0]
+        size: 220
+        border_width: 4
+        border_color: "#4ECDC4"
+        border_radius: 40
+        glow: true
+        glow_color: "#4ECDC4"
+        glow_intensity: 25
+        delay: 1
+        fade_in: 0.8
+        credit: "Rounded + Glow"
+  
+  # Phase 4: Cinematic Composition
+  cinematic:
+    duration: 10
+    elements:
+      
+      title_cinema:
+        type: text
+        text: "Cinematic Image Composition"
+        position: [0, 380]
+        size: 42
+        color: "#FFFFFF"
+        glow: true
+      
+      # Large hero image with Ken Burns
+      hero_image:
+        type: image_card
+        source: "images/icons/spider.jpg"
+        position: [0, -30]
+        size: 450
+        ken_burns: "zoom_in"
+        kb_duration: 9
+        kb_start_scale: 1.0
+        kb_end_scale: 1.4
+        kb_easing: "ease-in-out"
+        glow: true
+        glow_color: "#667eea"
+        glow_intensity: 40
+        border_width: 5
+        border_color: "#ffffff"
+        border_radius: 20
+        drop_shadow: true
+        shadow_blur: 50
+        delay: 0.5
+        fade_in: 2
+        credit: "Photo: Spider Hero Shot"
+        credit_position: "bottom-left"
+      
+      # Decorative text overlay
+      overlay_text:
+        type: text
+        text: "CINEMATIC PRESENTATION"
+        position: [0, -300]
+        size: 32
+        color: "#FFFFFF"
+        glow: true
+      
+      # Detail caption
+      caption:
+        type: text
+        text: "Ken Burns • Glow • Borders • Shadow • Credits"
+        position: [0, 260]
+        size: 18
+        color: "#CCCCCC"
+  
+  # Phase 5: Multiple Images with Sequential Timing
+  gallery:
+    duration: 12
+    elements:
+      
+      title_gallery:
+        type: text
+        text: "Photo Gallery with Sequential Reveal"
+        position: [0, 400]
+        size: 40
+        color: "#FFFFFF"
+        glow: true
+      
+      # Image 1 - appears first
+      gallery_1:
+        type: image_card
+        source: "images/icons/spider.jpg"
+        position: [-270, -10]
+        size: 200
+        border_width: 4
+        border_color: "#f5f5f5"
+        border_radius: 12
+        drop_shadow: true
+        shadow_blur: 25
+        delay: 0
+        fade_in: 1
+        credit: "Image 1"
+        credit_position: "bottom-right"
+      
+      # Image 2 - appears second
+      gallery_2:
+        type: image_card
+        source: "images/icons/spider.jpg"
+        position: [-90, -10]
+        size: 200
+        border_width: 4
+        border_color: "#f5f5f5"
+        border_radius: 12
+        drop_shadow: true
+        shadow_blur: 25
+        delay: 1.5
+        fade_in: 1
+        credit: "Image 2"
+        credit_position: "bottom-right"
+      
+      # Image 3 - appears third
+      gallery_3:
+        type: image_card
+        source: "images/icons/spider.jpg"
+        position: [90, -10]
+        size: 200
+        border_width: 4
+        border_color: "#f5f5f5"
+        border_radius: 12
+        drop_shadow: true
+        shadow_blur: 25
+        delay: 3
+        fade_in: 1
+        credit: "Image 3"
+        credit_position: "bottom-right"
+      
+      # Image 4 - appears last
+      gallery_4:
+        type: image_card
+        source: "images/icons/spider.jpg"
+        position: [270, -10]
+        size: 200
+        border_width: 4
+        border_color: "#f5f5f5"
+        border_radius: 12
+        drop_shadow: true
+        shadow_blur: 25
+        delay: 4.5
+        fade_in: 1
+        credit: "Image 4"
+        credit_position: "bottom-right"
+      
+      # Timeline indicator
+      timeline_text:
+        type: text
+        text: "→ Sequential Fade-In Timeline →"
+        position: [0, -200]
+        size: 22
+        color: "#4ECDC4"
+  
+  # Phase 6: Fit Modes Demo
+  fit_modes:
+    duration: 8
+    elements:
+      
+      title_fit:
+        type: text
+        text: "Image Fit Modes"
+        position: [0, 400]
+        size: 48
+        color: "#FFFFFF"
+        glow: true
+      
+      # Contain mode
+      fit_contain:
+        type: image_card
+        source: "images/icons/spider.jpg"
+        position: [-250, -20]
+        width: 180
+        height: 240
+        fit_mode: "contain"
+        border_width: 2
+        border_color: "#4ECDC4"
+        delay: 0
+        fade_in: 0.8
+        credit: "Contain"
+      
+      # Cover mode
+      fit_cover:
+        type: image_card
+        source: "images/icons/spider.jpg"
+        position: [0, -20]
+        width: 180
+        height: 240
+        fit_mode: "cover"
+        border_width: 2
+        border_color: "#FFE66D"
+        delay: 0.5
+        fade_in: 0.8
+        credit: "Cover"
+      
+      # Fill mode
+      fit_fill:
+        type: image_card
+        source: "images/icons/spider.jpg"
+        position: [250, -20]
+        width: 180
+        height: 240
+        fit_mode: "fill"
+        border_width: 2
+        border_color: "#FF6B6B"
+        delay: 1
+        fade_in: 0.8
+        credit: "Fill"
+      
+      # Descriptions
+      desc_1:
+        type: text
+        text: "Fits entire image"
+        position: [-250, -180]
+        size: 16
+        color: "#4ECDC4"
+      
+      desc_2:
+        type: text
+        text: "Fills area, crops edges"
+        position: [0, -180]
+        size: 16
+        color: "#FFE66D"
+      
+      desc_3:
+        type: text
+        text: "Stretches to fill"
+        position: [250, -180]
+        size: 16
+        color: "#FF6B6B"

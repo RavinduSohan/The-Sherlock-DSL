@@ -1,0 +1,503 @@
+concept: "The Law of Local Certainty"
+emoji: "⛰️"
+total_duration: 82
+background: "#0a0a0a"
+
+subtitles:
+  - ""
+  - ""
+  - ""
+  - ""
+  - ""
+  - ""
+  - ""
+  - ""
+  - ""
+
+phases:
+  scene_1:
+    duration: 7
+    description: "Triangle entity follows gradient uphill through flow field"
+    elements:
+      uphill_path:
+        type: morph_entity
+        position: [-220, 50]
+        form: triangle
+        size: 45
+        color: "#3498db"
+        glow: true
+        energy: 0.85
+        motion_profile: kinetic_dynamic
+        waypoints: [[-220, 50], [-120, 10], [-50, -30], [0, -50]]
+        move_duration: 7
+        move_style: ease_in_out
+        label: "Optimizer"
+      
+      gradient_landscape:
+        type: flow_field
+        position: [-100, 0]
+        flow_type: "gradient"
+        density: 0.3
+        intensity: 0.8
+        color: "#4a90e2"
+        animated: true
+        direction: "outward"
+        size: 300
+      
+      target_peak:
+        type: mathematical_entity
+        position: [50, -80]
+        form: "triangle"
+        personality: "wise"
+        size: 35
+        color: "#f39c12"
+        glow: true
+        energy: 0.4
+        animation_pattern: "pulse"
+        label: "Better"
+      
+      hook_primary:
+        type: text
+        text: "Follow the gradient uphill"
+        position: [0, 180]
+        size: 14
+        color: "#ffffff"
+        glow: true
+        font: "Arial"
+      
+      hook_secondary:
+        type: text
+        text: "The basic rule of improvement"
+        position: [0, 220]
+        size: 13
+        color: "#95a5a6"
+        glow: false
+        font: "Arial"
+      
+      evidence_1:
+        type: text
+        text: "Rule: Go uphill if worse"
+        position: [220, 50]
+        size: 16
+        color: "#9AA0A6"
+        font: "Courier Prime"
+      
+      evidence_2:
+        type: text
+        text: "Keep going if better"
+        position: [220, -50]
+        size: 16
+        color: "#9AA0A6"
+        font: "Courier Prime"
+      
+      evidence_3:
+        type: text
+        text: "Δposition ∝ gradient"
+        position: [220, -100]
+        size: 16
+        color: "#C06A6A"
+        font: "Courier Prime"
+  
+  scene_2:
+    duration: 8
+    description: "Grid decomposes function into gradient components"
+    elements:
+      function_grid:
+        type: algorithm_grid
+        position: [-230, 70]
+        rows: 3
+        cols: 2
+        cellSize: 60
+        spacing: 6
+        cells: [["f(x,y)", ""], ["∂f/∂x = 2x", "3"], ["∂f/∂y = -y", "-2"]]
+        highlights: [[0, 0], [1, 1], [2, 1]]
+        showValues: true
+        color: "#4ecdc4"
+        border_color: "#34495e"
+        border_width: 3
+        label: "Decomposition"
+      
+      gradient_vector:
+        type: vector
+        from: [-150, 0]
+        to: [-80, 40]
+        color: "#e74c3c"
+        thickness: 4
+        glow: true
+        label: "∇f = [3, -2]"
+      
+      calculation_cloud:
+        type: mathematical_entity
+        position: [-180, -30]
+        form: "cloud"
+        personality: "mysterious"
+        size: 40
+        color: "#95a5a6"
+        glow: false
+        energy: 0.2
+        animation_pattern: "pulse"
+      
+      hook_primary:
+        type: text
+        text: "Calculate the steepest direction"
+        position: [0, 180]
+        size: 14
+        color: "#ffffff"
+        glow: true
+        font: "Arial"
+      
+      hook_secondary:
+        type: text
+        text: "The gradient as optimal local choice"
+        position: [0, 220]
+        size: 13
+        color: "#95a5a6"
+        glow: false
+        font: "Arial"
+      
+      evidence_1:
+        type: text
+        text: "Question: fastest improvement?"
+        position: [220, 80]
+        size: 16
+        color: "#9AA0A6"
+        font: "Courier Prime"
+      
+      evidence_2:
+        type: text
+        text: "∇f = [∂f/∂x, ∂f/∂y]"
+        position: [220, 0]
+        size: 16
+        color: "#C06A6A"
+        font: "Courier Prime"
+      
+      evidence_3:
+        type: text
+        text: "At (1.5, 2): [3, -2]"
+        position: [220, -80]
+        size: 16
+        color: "#C06A6A"
+        font: "Courier Prime"
+  
+  scene_3:
+    duration: 7
+    description: "Vector shows local gradient honesty and limitation"
+    elements:
+      local_gradient:
+        type: mathematical_entity
+        position: [-150, 0]
+        form: "vector"
+        personality: "sharp"
+        size: 60
+        color: "#95a5a6"
+        glow: true
+        energy: 0.8
+        animation_pattern: "wave"
+        vector_components: [4, 1]
+        vector_magnitude: 4.1
+        show_components: true
+        show_magnitude: true
+        vector_style: "gradient"
+        label: "∇f"
+      
+      global_landscape:
+        type: bell_curve
+        position: [-150, 0]
+        amplitude: 40
+        variance: 150
+        mean: 0
+        startX: -250
+        endX: -50
+        color: "#444444"
+        thickness: 2
+        glow: false
+      
+      limitation_connector:
+        type: relationship_connector
+        from: [-150, 0]
+        to: [-150, 80]
+        relationship_type: "causation"
+        strength: 0.9
+        color: "#f39c12"
+        animated: true
+        bidirectional: false
+        label: "only here"
+      
+      hook_primary:
+        type: text
+        text: "The gradient's local honesty"
+        position: [0, 180]
+        size: 14
+        color: "#ffffff"
+        glow: true
+        font: "Arial"
+      
+      hook_secondary:
+        type: text
+        text: "Perfect locally, blind globally"
+        position: [0, 220]
+        size: 13
+        color: "#95a5a6"
+        glow: false
+        font: "Arial"
+      
+      evidence_1:
+        type: text
+        text: "Honest: points uphill"
+        position: [220, 50]
+        size: 16
+        color: "#9AA0A6"
+        font: "Courier Prime"
+      
+      evidence_2:
+        type: text
+        text: "Narrow: sees only here"
+        position: [220, -50]
+        size: 16
+        color: "#9AA0A6"
+        font: "Courier Prime"
+      
+      evidence_3:
+        type: text
+        text: "Local view radius → 0"
+        position: [220, -100]
+        size: 16
+        color: "#C06A6A"
+        font: "Courier Prime"
+  
+  scene_4:
+    duration: 8
+    description: "Manual parabola graph shows convergence at local maximum with zero slope"
+    elements:
+      parabola_curve:
+        type: bell_curve
+        position: [0, 0]
+        amplitude: 80
+        variance: 1250
+        mean: -50
+        startX: -300
+        endX: 200
+        color: "#2ecc71"
+        thickness: 3
+        glow: true
+      
+      x_axis:
+        type: line
+        from: [-300, 0]
+        to: [100, 0]
+        color: "#444444"
+        thickness: 2
+        glow: false
+      
+      y_axis:
+        type: line
+        from: [-70, -100]
+        to: [-70, 100]
+        color: "#444444"
+        thickness: 2
+        glow: false
+      
+      peak_point:
+        type: point
+        position: [-70, 50]
+        radius: 8
+        color: "#e74c3c"
+        glow: true
+        label: "slope = 0"
+      
+      title_label:
+        type: text
+        text: "f(x)"
+        position: [-35, 75]
+        size: 18
+        color: "#2ecc71"
+        glow: true
+        font: "Arial"
+      
+      tracer_entity:
+        type: morph_entity
+        position: [-220, -60]
+        form: circle
+        size: 20
+        color: "#9b59b6"
+        glow: true
+        energy: 0.5
+        motion_profile: precision_linear
+        waypoints: [[-220, -60], [-170, -10], [-120, 30], [-70, 50]]
+        move_duration: 8
+        move_style: ease_in_out
+        label: "x"
+      
+      convergence_curve:
+        type: bell_curve
+        position: [-150, 0]
+        amplitude: 30
+        variance: 1000
+        mean: 0
+        startX: -250
+        endX: -50
+        color: "#664488"
+        thickness: 2
+        glow: false
+      
+      hook_primary:
+        type: text
+        text: "Slope reaches zero"
+        position: [0, 180]
+        size: 14
+        color: "#ffffff"
+        glow: true
+        font: "Arial"
+      
+      hook_secondary:
+        type: text
+        text: "Convergence at local maximum"
+        position: [0, 220]
+        size: 13
+        color: "#95a5a6"
+        glow: false
+        font: "Arial"
+      
+      evidence_1:
+        type: text
+        text: "At peak: f'(x) = 0"
+        position: [220, 80]
+        size: 16
+        color: "#C06A6A"
+        font: "Courier Prime"
+      
+      evidence_2:
+        type: text
+        text: "System converges"
+        position: [220, 0]
+        size: 16
+        color: "#9AA0A6"
+        font: "Courier Prime"
+      
+      evidence_3:
+        type: text
+        text: "No better local direction"
+        position: [220, -80]
+        size: 16
+        color: "#9AA0A6"
+        font: "Courier Prime"
+  
+  scene_5:
+    duration: 6
+    description: "Detective octopus explains the law of local certainty"
+    elements:
+      detective_guide:
+        type: wisdom_character
+        character_type: detective_octopus
+        position: [0, 0]
+        size: 140
+        mood: "mysterious"
+        expression: "normal"
+        talking: true
+        breathing: true
+        color_scheme: "detective"
+        personality: "calm"
+        speech_bubble: true
+        speech_text: "Like following a flashlight in a dark forest—you see the next step clearly, but never the mountain just beyond the trees."
+        background_aura: "glow"
+  
+  scene_6:
+    duration: 20
+    description: "Penguin leaves local optimum and journeys uphill toward mountain"
+    elements:
+      starting_optimum:
+        type: circle
+        center: [0, 30]
+        radius: 40
+        fill: true
+        color: "#666666"
+        glow: false
+      
+      penguin_traveler:
+        type: animated_emoji
+        emoji: "🐧"
+        position: [0, 30]
+        size: 80
+        movement: "floating-pen"
+        glowing: "none"
+        rotation: "gentle-rotate"
+        reveal: "slide-reveal"
+        speed: "ultra-slow"
+        delay: "delay-2"
+        color: "#ffffff"
+      
+      distant_mountain:
+        type: animated_emoji
+        emoji: "🗻"
+        position: [220, -80]
+        size: 70
+        movement: "none"
+        glowing: "pulsing-glow"
+        rotation: "none"
+        reveal: "zoom-reveal"
+        speed: "slow"
+        delay: "delay-3"
+        color: "#4a90e2"
+      
+      uncertain_field:
+        type: flow_field
+        position: [0, 0]
+        flow_type: "probability"
+        density: 0.15
+        intensity: 0.6
+        color: "#95a5a6"
+        animated: true
+        direction: "outward"
+        size: 350
+      
+      noir_subtitle:
+        type: text
+        text: "The nihilistic gradient"
+        position: [0, -220]
+        size: 18
+        color: "#d4a373"
+        glow: false
+        font: "Courier New"
+  
+  scene_7:
+    duration: 6
+    description: "Penguin gazes up at mountain through falling snow"
+    elements:
+      penguin_below:
+        type: animated_emoji
+        emoji: "🐧"
+        position: [0, 50]
+        size: 70
+        movement: "wobble"
+        glowing: "none"
+        rotation: "none"
+        reveal: "none"
+        speed: "ultra-slow"
+        delay: "none"
+        color: "#ffffff"
+      
+      mountain_above:
+        type: animated_emoji
+        emoji: "🗻"
+        position: [0, -80]
+        size: 90
+        movement: "none"
+        glowing: "pulsing-glow"
+        rotation: "none"
+        reveal: "none"
+        speed: "slow"
+        delay: "none"
+        color: "#FFD700"
+      
+      falling_snow:
+        type: snow
+        density: 0.7
+      
+      noir_subtitle:
+        type: text
+        text: "Uphill into the unknown"
+        position: [0, -220]
+        size: 18
+        color: "#d4a373"
+        glow: false
+        font: "Courier New"

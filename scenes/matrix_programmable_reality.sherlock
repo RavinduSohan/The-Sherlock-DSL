@@ -1,0 +1,631 @@
+concept: "Matrix Transformations: Programming Reality"
+emoji: "🌌"
+total_duration: 70
+background: "#0a0a0a"
+
+subtitles:
+  - ""
+  - ""
+  - ""
+  - ""
+  - ""
+  - ""
+  - ""
+  - ""
+  - ""
+
+phases:
+  scene_1:
+    duration: 9
+    description: "Perceive: Space as computational field"
+    elements:
+      # LEFT SIDE - Flow field atmosphere
+      pervasive_field:
+        type: flow_field
+        position: [-150, 0]
+        flow_type: data_stream
+        density: 0.8
+        intensity: 0.7
+        color: "#4FC3F7"
+        animated: true
+        direction: outward
+        size: 300
+      
+      computational_cloud:
+        type: mathematical_entity
+        position: [-180, 40]
+        form: cloud
+        personality: mysterious
+        size: 50
+        color: "#9b59b6"
+        glow: true
+        energy: 0.6
+        animation_pattern: breathe
+        label: "Calculation"
+      
+      coordinate_point:
+        type: point
+        position: [-120, -30]
+        radius: 6
+        color: "#4FC3F7"
+        glow: true
+        label: "(3,2)"
+      
+      # CENTER - Hook texts
+      hook_primary:
+        type: text
+        text: "Space as a Field of Calculations"
+        position: [0, 180]
+        size: 14
+        color: "#ffffff"
+        glow: true
+        font: "Arial"
+      
+      hook_secondary:
+        type: text
+        text: "Your screen is a grid of mathematical transformations"
+        position: [0, 220]
+        size: 13
+        color: "#95a5a6"
+        glow: false
+        font: "Arial"
+      
+      # RIGHT SIDE - Evidence text
+      evidence_1:
+        type: text
+        text: "Each pixel = f(x, y)"
+        position: [220, 80]
+        size: 16
+        color: "#C06A6A"
+        font: "Courier Prime"
+      
+      evidence_2:
+        type: text
+        text: "Space: from static to dynamic"
+        position: [220, 0]
+        size: 16
+        color: "#9AA0A6"
+        font: "Courier Prime"
+      
+      evidence_3:
+        type: text
+        text: "Rewriting, not displaying"
+        position: [220, -80]
+        size: 16
+        color: "#9AA0A6"
+        font: "Courier Prime"
+  
+  scene_2:
+    duration: 8
+    description: "Decompose: Matrix as machine"
+    elements:
+      # LEFT SIDE - Machine structure
+      machine_housing:
+        type: rectangle
+        position: [-180, 0]
+        width: 120
+        height: 80
+        color: "#64B5F6"
+        fill: false
+        glow: true
+        label: "Machine"
+      
+      transformation_matrix:
+        type: matrix
+        position: [-230, 30]
+        values: [["a", "b"], ["c", "d"]]
+        cellSize: 35
+        textSize: 14
+        color: "#64B5F6"
+        highlightCells: [[0,0], [1,1]]
+      
+      input_connector:
+        type: relationship_connector
+        from: [-300, 0]
+        to: [-240, 0]
+        relationship_type: causation
+        strength: 0.9
+        color: "#f39c12"
+        animated: true
+        label: "feed"
+      
+      output_point:
+        type: point
+        position: [-60, 0]
+        radius: 7
+        color: "#e74c3c"
+        glow: true
+        label: "?"
+      
+      output_connector:
+        type: relationship_connector
+        from: [-120, 0]
+        to: [-60, 0]
+        relationship_type: causation
+        strength: 0.9
+        color: "#e74c3c"
+        animated: true
+        label: "spit out"
+      
+      # CENTER - Hook texts
+      hook_primary:
+        type: text
+        text: "The Matrix Machine"
+        position: [0, 180]
+        size: 14
+        color: "#ffffff"
+        glow: true
+        font: "Arial"
+      
+      hook_secondary:
+        type: text
+        text: "Input coordinates → Transformation → Output coordinates"
+        position: [0, 220]
+        size: 13
+        color: "#95a5a6"
+        glow: false
+        font: "Arial"
+      
+      # RIGHT SIDE - Evidence text
+      evidence_1:
+        type: text
+        text: "Machine = [[a,b],[c,d]]"
+        position: [220, 50]
+        size: 16
+        color: "#C06A6A"
+        font: "Courier Prime"
+      
+      evidence_2:
+        type: text
+        text: "Input: (3, 2) → Output: ?"
+        position: [220, -50]
+        size: 16
+        color: "#9AA0A6"
+        font: "Courier Prime"
+  
+  scene_3:
+    duration: 10
+    description: "Decompose: Multiple transformations"
+    elements:
+      # LEFT SIDE - Point transformation journey
+      transform_path:
+        type: line
+        from: [-220, 0]
+        to: [-80, 0]
+        thickness: 2
+        dashed: true
+        color: "#95a5a6"
+        opacity: 0.6
+      
+      moving_point:
+        type: morph_entity
+        position: [-220, 0]
+        form: star
+        size: 35
+        color: "#f39c12"
+        glow: true
+        energy: 0.8
+        motion_profile: precision_linear
+        move_to: [-80, 0]
+        move_duration: 8
+        move_style: ease_in_out
+        move_path: linear
+        label: "(3,2)"
+      
+      rotated_output:
+        type: point
+        position: [-60, 40]
+        radius: 5
+        color: "#e74c3c"
+        glow: true
+        label: "rotated"
+      
+      stretched_output:
+        type: point
+        position: [-60, -40]
+        radius: 5
+        color: "#3498db"
+        glow: true
+        label: "stretched"
+      
+      flipped_output:
+        type: point
+        position: [-60, 0]
+        radius: 5
+        color: "#2ecc71"
+        glow: true
+        label: "flipped"
+      
+      # CENTER - Hook texts
+      hook_primary:
+        type: text
+        text: "One Point, Multiple Transformations"
+        position: [0, 180]
+        size: 14
+        color: "#ffffff"
+        glow: true
+        font: "Arial"
+      
+      hook_secondary:
+        type: text
+        text: "See the same input become rotated, scaled, and reflected outputs"
+        position: [0, 220]
+        size: 13
+        color: "#95a5a6"
+        glow: false
+        font: "Arial"
+      
+      # RIGHT SIDE - Evidence text
+      evidence_1:
+        type: text
+        text: "Rotate: θ = 45°"
+        position: [220, 80]
+        size: 16
+        color: "#C06A6A"
+        font: "Courier Prime"
+      
+      evidence_2:
+        type: text
+        text: "Stretch: scale_x = 2"
+        position: [220, 33]
+        size: 16
+        color: "#C06A6A"
+        font: "Courier Prime"
+      
+      evidence_3:
+        type: text
+        text: "Flip: reflect_y"
+        position: [220, -33]
+        size: 16
+        color: "#C06A6A"
+        font: "Courier Prime"
+      
+      evidence_4:
+        type: text
+        text: "Same input, different M"
+        position: [220, -100]
+        size: 16
+        color: "#9AA0A6"
+        font: "Courier Prime"
+  
+  scene_4:
+    duration: 12
+    description: "Quantify: From one to infinity"
+    elements:
+      # LEFT SIDE - Divergence visualization
+      background_gradient:
+        type: flow_field
+        position: [-150, 0]
+        flow_type: gradient
+        density: 0.5
+        intensity: 0.6
+        color: "#9b59b6"
+        animated: true
+        direction: outward
+        size: 350
+      
+      matrix_source:
+        type: circle
+        center: [-150, 0]
+        radius: 30
+        fill: true
+        color: "#e74c3c"
+        glow: true
+        label: "[[M]]"
+      
+      diverging_entity:
+        type: morph_entity
+        position: [-150, 0]
+        form: plus
+        size: 25
+        color: "#f39c12"
+        glow: true
+        energy: 1.0
+        motion_profile: high_energy
+        split_at: 1.5
+        split_into: 8
+        split_pattern: radial_burst
+        split_spacing: 120
+      
+      # CENTER - Hook texts
+      hook_primary:
+        type: text
+        text: "From One to Infinity"
+        position: [0, 180]
+        size: 14
+        color: "#ffffff"
+        glow: true
+        font: "Arial"
+      
+      hook_secondary:
+        type: text
+        text: "The same rule propagates to transform all space"
+        position: [0, 220]
+        size: 13
+        color: "#95a5a6"
+        glow: false
+        font: "Arial"
+      
+      # RIGHT SIDE - Evidence text
+      evidence_1:
+        type: text
+        text: "Rule: f(x) = M • x"
+        position: [220, 100]
+        size: 16
+        color: "#C06A6A"
+        font: "Courier Prime"
+      
+      evidence_2:
+        type: text
+        text: "Domain: all (x, y)"
+        position: [220, 33]
+        size: 16
+        color: "#9AA0A6"
+        font: "Courier Prime"
+      
+      evidence_3:
+        type: text
+        text: "Output: transformed space"
+        position: [220, -33]
+        size: 16
+        color: "#9AA0A6"
+        font: "Courier Prime"
+      
+      evidence_4:
+        type: text
+        text: "One function → entire universe"
+        position: [220, -100]
+        size: 16
+        color: "#9AA0A6"
+        font: "Courier Prime"
+  
+  scene_5:
+    duration: 11
+    description: "Compare: Graphics and AI unified by matrices"
+    elements:
+      # LEFT SIDE - Neural network and graphics grid
+      ai_network:
+        type: neural_net
+        position: [-200, -50]
+        layers: [4, 6, 4, 2]
+        colors: ["#e74c3c", "#3498db", "#f39c12"]
+        animation_speed: 1.5
+        label: "Neural Net"
+      
+      graphics_grid:
+        type: algorithm_grid
+        position: [-140, 140]
+        rows: 3
+        cols: 3
+        cellSize: 25
+        spacing: 3
+        cells: [["2", "1", "8"], ["5", "1", "9"], ["6", "4", "3"]]
+        showValues: true
+        color: "#2ecc71"
+        border_color: "#34495e"
+        border_width: 2
+        label: "Pixels"
+      
+      unity_symbol:
+        type: mathematical_entity
+        position: [-150, 180]
+        form: mobius_strip
+        personality: wise
+        size: 45
+        color: "#9b59b6"
+        glow: true
+        energy: 0.7
+        animation_pattern: pulse
+        label: "Matrix Core"
+      
+      connector_to_ai:
+        type: line
+        from: [-150, 0]
+        to: [-200, -50]
+        thickness: 2
+        dashed: true
+        color: "#9b59b6"
+        opacity: 0.7
+      
+      connector_to_graphics:
+        type: line
+        from: [-150, 0]
+        to: [-140, 70]
+        thickness: 2
+        dashed: true
+        color: "#9b59b6"
+        opacity: 0.7
+      
+      # CENTER - Hook texts
+      hook_primary:
+        type: text
+        text: "Two Worlds, One Engine"
+        position: [0, 180]
+        size: 14
+        color: "#ffffff"
+        glow: true
+        font: "Arial"
+      
+      hook_secondary:
+        type: text
+        text: "Graphics and AI both run on matrix mathematics"
+        position: [0, 220]
+        size: 13
+        color: "#95a5a6"
+        glow: false
+        font: "Arial"
+      
+      # RIGHT SIDE - Evidence text
+      evidence_1:
+        type: text
+        text: "Graphics: 60 × M • vertices"
+        position: [220, 80]
+        size: 16
+        color: "#C06A6A"
+        font: "Courier Prime"
+      
+      evidence_2:
+        type: text
+        text: "AI: M₁ • M₂ • ... • Mₙ"
+        position: [220, 0]
+        size: 16
+        color: "#C06A6A"
+        font: "Courier Prime"
+      
+      evidence_3:
+        type: text
+        text: "Same engine, different scales"
+        position: [220, -80]
+        size: 16
+        color: "#9AA0A6"
+        font: "Courier Prime"
+  
+  scene_6:
+    duration: 9
+    description: "Synthesize: Before and after matrices"
+    elements:
+      # FULL CANVAS - Emoji story
+      before_emoji:
+        type: animated_emoji
+        emoji: "🗺️"
+        position: [-150, 20]
+        size: 70
+        movement: orbit
+        glowing: pulsing-glow
+        rotation: none
+        reveal: zoom-reveal
+        speed: slow
+        delay: none
+        color: "#3498db"
+      
+      pivot_emoji:
+        type: animated_emoji
+        emoji: "⚡"
+        position: [0, 0]
+        size: 55
+        movement: floating-pen
+        glowing: matrix-code
+        rotation: none
+        reveal: slide-reveal
+        speed: normal
+        delay: delay-1
+        color: "#f39c12"
+      
+      after_emoji:
+        type: animated_emoji
+        emoji: "🌀"
+        position: [150, 20]
+        size: 70
+        movement: wobble
+        glowing: pulsing-glow
+        rotation: spin-clockwise
+        reveal: zoom-reveal
+        speed: slow
+        delay: delay-2
+        color: "#e74c3c"
+      
+      # Title at top
+      title_text:
+        type: text
+        text: "The Historical Pivot"
+        position: [0, -200]
+        size: 20
+        color: "#ffffff"
+        glow: true
+        font: "Arial"
+      
+      # Noir subtitle at bottom
+      noir_subtitle:
+        type: text
+        text: "The pivot point in mathematical history"
+        position: [0, -220]
+        size: 18
+        color: "#d4a373"
+        glow: false
+        font: "Courier New"
+  
+  scene_7:
+    duration: 11
+    description: "Synthesize: Reality becomes programmable"
+    elements:
+      # FULL CANVAS - Grand transformation
+      transforming_reality:
+        type: animated_emoji
+        emoji: "⚡"
+        position: [0, 0]
+        size: 90
+        movement: none
+        glowing: pulsing-glow
+        rotation: gentle-rotate
+        reveal: spiral-reveal
+        speed: ultra-slow
+        delay: none
+        color: "#9b59b6"
+      
+      orbit_coordinate:
+        type: text
+        text: "(3,2)"
+        position: [-80, -80]
+        size: 14
+        color: "#4FC3F7"
+        glow: true
+        font: "Courier Prime"
+      
+      orbit_matrix:
+        type: text
+        text: "[[M]]"
+        position: [80, -80]
+        size: 14
+        color: "#e74c3c"
+        glow: true
+        font: "Courier Prime"
+      
+      orbit_neural:
+        type: text
+        text: "∑"
+        position: [80, 80]
+        size: 14
+        color: "#f39c12"
+        glow: true
+        font: "Courier Prime"
+      
+      orbit_pixel:
+        type: text
+        text: "█"
+        position: [-80, 80]
+        size: 14
+        color: "#2ecc71"
+        glow: true
+        font: "Courier Prime"
+      
+      perspective_grid:
+        type: grid
+        position: [0, 0]
+        width: 800
+        height: 600
+        spacing: 50
+        color: "#1a365d"
+        thickness: 1
+        opacity: 0.3
+        style: perspective
+        perspective_depth: 0.7
+      
+      # Title at top
+      title_text:
+        type: text
+        text: "Reality → Programmable"
+        position: [0, -200]
+        size: 22
+        color: "#ffffff"
+        glow: true
+        font: "Arial"
+      
+      # Noir subtitle at bottom
+      noir_subtitle:
+        type: text
+        text: "The universe compiled from linear algebra"
+        position: [0, -220]
+        size: 18
+        color: "#d4a373"
+        glow: false
+        font: "Courier New"

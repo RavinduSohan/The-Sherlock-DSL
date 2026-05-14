@@ -1,0 +1,928 @@
+concept: "The Knot That Can't Be Solved (Divide & Conquer)"
+emoji: "🧵"
+total_duration: 90
+background: "#0a0a0a"
+
+subtitles:
+  - ""
+  - ""
+  - ""
+  - ""
+  - ""
+  - ""
+  - ""
+  - ""
+  - ""
+
+phases:
+  scene_1:
+    duration: 8
+    description: "Dense tangled graph representing the unsolvable knot"
+    elements:
+      node_1:
+        type: point
+        position: [-80, -60]
+        radius: 6
+        color: "#3498db"
+        glow: true
+        
+      node_2:
+        type: point
+        position: [-40, -80]
+        radius: 6
+        color: "#3498db"
+        glow: true
+        
+      node_3:
+        type: point
+        position: [0, -70]
+        radius: 6
+        color: "#3498db"
+        glow: true
+        
+      node_4:
+        type: point
+        position: [40, -90]
+        radius: 6
+        color: "#3498db"
+        glow: true
+        
+      node_5:
+        type: point
+        position: [80, -60]
+        radius: 6
+        color: "#3498db"
+        glow: true
+        
+      node_6:
+        type: point
+        position: [-100, -20]
+        radius: 6
+        color: "#3498db"
+        glow: true
+        
+      node_7:
+        type: point
+        position: [-60, -30]
+        radius: 6
+        color: "#3498db"
+        glow: true
+        
+      node_8:
+        type: point
+        position: [-20, -40]
+        radius: 6
+        color: "#3498db"
+        glow: true
+        
+      node_9:
+        type: point
+        position: [20, -30]
+        radius: 6
+        color: "#3498db"
+        glow: true
+        
+      node_10:
+        type: point
+        position: [60, -20]
+        radius: 6
+        color: "#3498db"
+        glow: true
+        
+      node_11:
+        type: point
+        position: [100, -40]
+        radius: 6
+        color: "#3498db"
+        glow: true
+        
+      node_12:
+        type: point
+        position: [-90, 20]
+        radius: 6
+        color: "#3498db"
+        glow: true
+        
+      node_13:
+        type: point
+        position: [-50, 10]
+        radius: 6
+        color: "#3498db"
+        glow: true
+        
+      node_14:
+        type: point
+        position: [-10, 0]
+        radius: 6
+        color: "#3498db"
+        glow: true
+        
+      node_15:
+        type: point
+        position: [30, 10]
+        radius: 6
+        color: "#3498db"
+        glow: true
+        
+      node_16:
+        type: point
+        position: [70, 20]
+        radius: 6
+        color: "#3498db"
+        glow: true
+        
+      node_17:
+        type: point
+        position: [110, 0]
+        radius: 6
+        color: "#3498db"
+        glow: true
+        
+      node_18:
+        type: point
+        position: [-80, 60]
+        radius: 6
+        color: "#3498db"
+        glow: true
+        
+      node_19:
+        type: point
+        position: [-40, 50]
+        radius: 6
+        color: "#3498db"
+        glow: true
+        
+      node_20:
+        type: point
+        position: [0, 60]
+        radius: 6
+        color: "#3498db"
+        glow: true
+        
+      node_21:
+        type: point
+        position: [40, 50]
+        radius: 6
+        color: "#3498db"
+        glow: true
+        
+      node_22:
+        type: point
+        position: [80, 70]
+        radius: 6
+        color: "#3498db"
+        glow: true
+        
+      edge_1:
+        type: line
+        from: [-80, -60]
+        to: [-40, -80]
+        thickness: 1
+        dashed: false
+        color: "#95a5a6"
+        opacity: 0.6
+        
+      edge_2:
+        type: line
+        from: [-40, -80]
+        to: [0, -70]
+        thickness: 1
+        dashed: false
+        color: "#95a5a6"
+        opacity: 0.6
+        
+      edge_3:
+        type: line
+        from: [0, -70]
+        to: [40, -90]
+        thickness: 1
+        dashed: false
+        color: "#95a5a6"
+        opacity: 0.6
+        
+      edge_4:
+        type: line
+        from: [-80, -60]
+        to: [-60, -30]
+        thickness: 1
+        dashed: false
+        color: "#95a5a6"
+        opacity: 0.6
+        
+      edge_5:
+        type: line
+        from: [-60, -30]
+        to: [-20, -40]
+        thickness: 1
+        dashed: false
+        color: "#95a5a6"
+        opacity: 0.6
+        
+      edge_6:
+        type: line
+        from: [-20, -40]
+        to: [20, -30]
+        thickness: 1
+        dashed: false
+        color: "#95a5a6"
+        opacity: 0.6
+        
+      edge_7:
+        type: line
+        from: [20, -30]
+        to: [60, -20]
+        thickness: 1
+        dashed: false
+        color: "#95a5a6"
+        opacity: 0.6
+        
+      edge_8:
+        type: line
+        from: [-100, -20]
+        to: [-50, 10]
+        thickness: 1
+        dashed: false
+        color: "#95a5a6"
+        opacity: 0.6
+        
+      edge_9:
+        type: line
+        from: [-50, 10]
+        to: [-10, 0]
+        thickness: 1
+        dashed: false
+        color: "#95a5a6"
+        opacity: 0.6
+        
+      edge_10:
+        type: line
+        from: [-10, 0]
+        to: [30, 10]
+        thickness: 1
+        dashed: false
+        color: "#95a5a6"
+        opacity: 0.6
+        
+      edge_11:
+        type: line
+        from: [30, 10]
+        to: [70, 20]
+        thickness: 1
+        dashed: false
+        color: "#95a5a6"
+        opacity: 0.6
+        
+      edge_12:
+        type: line
+        from: [-80, 60]
+        to: [-40, 50]
+        thickness: 1
+        dashed: false
+        color: "#95a5a6"
+        opacity: 0.6
+        
+      edge_13:
+        type: line
+        from: [-40, 50]
+        to: [0, 60]
+        thickness: 1
+        dashed: false
+        color: "#95a5a6"
+        opacity: 0.6
+        
+      edge_14:
+        type: line
+        from: [0, 60]
+        to: [40, 50]
+        thickness: 1
+        dashed: false
+        color: "#95a5a6"
+        opacity: 0.6
+        
+      title_text:
+        type: text
+        text: "Some problems refuse to yield - a giant tangled knot"
+        position: [0, -180]
+        size: 16
+        color: "#ffffff"
+        glow: true
+        font: "Arial"
+        
+  scene_2:
+    duration: 7
+    description: "Pulling isn't working - tension but no separation"
+    elements:
+      tension_circle:
+        type: circle
+        center: [0, 0]
+        radius: 120
+        fill: false
+        color: "#e74c3c"
+        glow: true
+        
+      center_point:
+        type: point
+        position: [0, 0]
+        radius: 10
+        color: "#f39c12"
+        glow: true
+        label: "Stuck"
+        
+      pull_vector_1:
+        type: vector
+        from: [0, 0]
+        to: [-80, -60]
+        color: "#e74c3c"
+        thickness: 3
+        glow: true
+        
+      pull_vector_2:
+        type: vector
+        from: [0, 0]
+        to: [80, 60]
+        color: "#e74c3c"
+        thickness: 3
+        glow: true
+        
+      struggle_text:
+        type: text
+        text: "Pull harder? It fights back. Pull differently? It tightens."
+        position: [0, -180]
+        size: 16
+        color: "#ffffff"
+        glow: true
+        font: "Arial"
+        
+  scene_3:
+    duration: 6
+    description: "Maybe division is the answer"
+    elements:
+      thread_emoji:
+        type: animated_emoji
+        emoji: "🧵"
+        position: [-100, 30]
+        size: 80
+        movement: "orbit"
+        glowing: "pulsing-glow"
+        rotation: "none"
+        reveal: "zoom-reveal"
+        speed: "normal"
+        delay: "none"
+        color: "#3498db"
+        
+      scissors_emoji:
+        type: animated_emoji
+        emoji: "✂️"
+        position: [100, 30]
+        size: 80
+        movement: "bounce"
+        glowing: "pulsing-glow"
+        rotation: "none"
+        reveal: "slide-reveal"
+        speed: "normal"
+        delay: "delay-1"
+        color: "#e74c3c"
+        
+      division_equation:
+        type: animated_emoji
+        emoji: "f(problem)→f(subproblems)"
+        position: [0, -60]
+        size: 30
+        movement: "floating-pen"
+        glowing: "matrix-code"
+        rotation: "none"
+        reveal: "slide-reveal"
+        speed: "normal"
+        delay: "delay-2"
+        color: "#f39c12"
+        
+      insight_text:
+        type: text
+        text: "Maybe the way forward isn't force... it's division"
+        position: [0, 200]
+        size: 16
+        color: "#ffffff"
+        glow: true
+        font: "Arial"
+        
+  scene_4:
+    duration: 8
+    description: "Recursion notices patterns - four smaller clusters"
+    elements:
+      subknot_1:
+        type: mathematical_entity
+        position: [-100, -70]
+        form: "cloud"
+        personality: "playful"
+        size: 70
+        color: "#3498db"
+        glow: true
+        energy: 0.6
+        animation_pattern: "breathe"
+        label: "Sub 1"
+        
+      subknot_2:
+        type: mathematical_entity
+        position: [100, -70]
+        form: "cloud"
+        personality: "playful"
+        size: 70
+        color: "#3498db"
+        glow: true
+        energy: 0.6
+        animation_pattern: "breathe"
+        label: "Sub 2"
+        
+      subknot_3:
+        type: mathematical_entity
+        position: [-100, 70]
+        form: "cloud"
+        personality: "playful"
+        size: 70
+        color: "#3498db"
+        glow: true
+        energy: 0.6
+        animation_pattern: "breathe"
+        label: "Sub 3"
+        
+      subknot_4:
+        type: mathematical_entity
+        position: [100, 70]
+        form: "cloud"
+        personality: "playful"
+        size: 70
+        color: "#3498db"
+        glow: true
+        energy: 0.6
+        animation_pattern: "breathe"
+        label: "Sub 4"
+        
+      pattern_text:
+        type: text
+        text: "A recursive mind sees four smaller knots hiding inside"
+        position: [0, -180]
+        size: 16
+        color: "#ffffff"
+        glow: true
+        font: "Arial"
+        
+  scene_5:
+    duration: 9
+    description: "Divide - four sub-clusters with conceptual split"
+    elements:
+      sub_node_1:
+        type: point
+        position: [-100, -70]
+        radius: 12
+        color: "#3498db"
+        glow: true
+        label: "SubKnot 1"
+        
+      sub_node_2:
+        type: point
+        position: [100, -70]
+        radius: 12
+        color: "#3498db"
+        glow: true
+        label: "SubKnot 2"
+        
+      sub_node_3:
+        type: point
+        position: [-100, 70]
+        radius: 12
+        color: "#3498db"
+        glow: true
+        label: "SubKnot 3"
+        
+      sub_node_4:
+        type: point
+        position: [100, 70]
+        radius: 12
+        color: "#3498db"
+        glow: true
+        label: "SubKnot 4"
+        
+      split_line_1:
+        type: line
+        from: [0, 0]
+        to: [-100, -70]
+        thickness: 2
+        dashed: true
+        color: "#95a5a6"
+        opacity: 0.7
+        
+      split_line_2:
+        type: line
+        from: [0, 0]
+        to: [100, -70]
+        thickness: 2
+        dashed: true
+        color: "#95a5a6"
+        opacity: 0.7
+        
+      split_line_3:
+        type: line
+        from: [0, 0]
+        to: [-100, 70]
+        thickness: 2
+        dashed: true
+        color: "#95a5a6"
+        opacity: 0.7
+        
+      split_line_4:
+        type: line
+        from: [0, 0]
+        to: [100, 70]
+        thickness: 2
+        dashed: true
+        color: "#95a5a6"
+        opacity: 0.7
+        
+      divide_text:
+        type: text
+        text: "Divide into smaller knots - still messy, but no longer overwhelming"
+        position: [0, -180]
+        size: 16
+        color: "#ffffff"
+        glow: true
+        font: "Arial"
+        
+  scene_6:
+    duration: 7
+    description: "Detective octopus wisdom about problem size"
+    elements:
+      detective_wisdom:
+        type: wisdom_character
+        character_type: detective_octopus
+        position: [0, 0]
+        size: 140
+        mood: "thinking"
+        expression: "normal"
+        talking: true
+        breathing: true
+        color_scheme: "ocean"
+        personality: "calm"
+        speech_bubble: true
+        speech_text: "A problem becomes solvable the moment it fits inside your mind. Shrink it until it does."
+        background_aura: "glow"
+        
+  scene_7:
+    duration: 8
+    description: "Divide again - one subknot splits into three smaller pieces"
+    elements:
+      main_cluster:
+        type: mathematical_entity
+        position: [0, 0]
+        form: "distribution"
+        personality: "wise"
+        size: 120
+        color: "#3498db"
+        glow: true
+        energy: 0.7
+        animation_pattern: "pulse"
+        label: "SubKnot 1"
+        
+      mini_cluster_1:
+        type: mathematical_entity
+        position: [0, -100]
+        form: "triangle"
+        personality: "sharp"
+        size: 50
+        color: "#2ecc71"
+        glow: true
+        energy: 0.8
+        animation_pattern: "breathe"
+        label: "Mini 1"
+        
+      mini_cluster_2:
+        type: mathematical_entity
+        position: [-90, 50]
+        form: "triangle"
+        personality: "sharp"
+        size: 50
+        color: "#2ecc71"
+        glow: true
+        energy: 0.8
+        animation_pattern: "breathe"
+        label: "Mini 2"
+        
+      mini_cluster_3:
+        type: mathematical_entity
+        position: [90, 50]
+        form: "triangle"
+        personality: "sharp"
+        size: 50
+        color: "#2ecc71"
+        glow: true
+        energy: 0.8
+        animation_pattern: "breathe"
+        label: "Mini 3"
+        
+      division_line_1:
+        type: line
+        from: [0, -30]
+        to: [0, -70]
+        thickness: 2
+        dashed: true
+        color: "#95a5a6"
+        opacity: 0.7
+        
+      division_line_2:
+        type: line
+        from: [-40, 30]
+        to: [-70, 40]
+        thickness: 2
+        dashed: true
+        color: "#95a5a6"
+        opacity: 0.7
+        
+      division_line_3:
+        type: line
+        from: [40, 30]
+        to: [70, 40]
+        thickness: 2
+        dashed: true
+        color: "#95a5a6"
+        opacity: 0.7
+        
+      recursive_text:
+        type: text
+        text: "Recursion keeps going - every knot hides smaller knots"
+        position: [0, -180]
+        size: 16
+        color: "#ffffff"
+        glow: true
+        font: "Arial"
+        
+  scene_8:
+    duration: 7
+    description: "Base case - single node simplest structure"
+    elements:
+      atom_node:
+        type: point
+        position: [0, 0]
+        radius: 15
+        color: "#2ecc71"
+        glow: true
+        label: "Base Case"
+        
+      atom_circle:
+        type: circle
+        center: [0, 0]
+        radius: 50
+        fill: false
+        color: "#2ecc71"
+        glow: true
+        
+      base_text:
+        type: text
+        text: "Until no knot is left - just a single unit. The base case."
+        position: [0, -180]
+        size: 16
+        color: "#ffffff"
+        glow: true
+        font: "Arial"
+        
+  scene_9:
+    duration: 8
+    description: "Conquer - three tiny clusters being processed"
+    elements:
+      small_cluster_1:
+        type: mathematical_entity
+        position: [-100, 0]
+        form: "hexagon"
+        personality: "elegant"
+        size: 40
+        color: "#2ecc71"
+        glow: true
+        energy: 0.9
+        animation_pattern: "pulse"
+        label: "Small 1"
+        
+      small_cluster_2:
+        type: mathematical_entity
+        position: [0, 0]
+        form: "hexagon"
+        personality: "elegant"
+        size: 40
+        color: "#2ecc71"
+        glow: true
+        energy: 0.9
+        animation_pattern: "pulse"
+        label: "Small 2"
+        
+      small_cluster_3:
+        type: mathematical_entity
+        position: [100, 0]
+        form: "hexagon"
+        personality: "elegant"
+        size: 40
+        color: "#2ecc71"
+        glow: true
+        energy: 0.9
+        animation_pattern: "pulse"
+        label: "Small 3"
+        
+      process_connector_1:
+        type: relationship_connector
+        from: [-100, 0]
+        to: [0, 0]
+        relationship_type: "transformation"
+        strength: 0.9
+        color: "#f39c12"
+        animated: true
+        bidirectional: false
+        label: "Solve"
+        
+      process_connector_2:
+        type: relationship_connector
+        from: [0, 0]
+        to: [100, 0]
+        relationship_type: "transformation"
+        strength: 0.9
+        color: "#f39c12"
+        animated: true
+        bidirectional: false
+        label: "Merge"
+        
+      conquer_text:
+        type: text
+        text: "Solve each small knot - these mini problems are trivial, even elegant"
+        position: [0, -180]
+        size: 16
+        color: "#ffffff"
+        glow: true
+        font: "Arial"
+        
+  scene_10:
+    duration: 8
+    description: "Merge builds clarity - fusion into tidy structure"
+    elements:
+      merged_cluster:
+        type: circle
+        center: [0, 0]
+        radius: 100
+        fill: false
+        color: "#2ecc71"
+        glow: true
+        label: "Merged Solution"
+        
+      inner_node_1:
+        type: mathematical_entity
+        position: [-50, 0]
+        form: "pentagon"
+        personality: "elegant"
+        size: 30
+        color: "#2ecc71"
+        glow: true
+        energy: 0.8
+        animation_pattern: "wave"
+        
+      inner_node_2:
+        type: mathematical_entity
+        position: [0, -40]
+        form: "pentagon"
+        personality: "elegant"
+        size: 30
+        color: "#2ecc71"
+        glow: true
+        energy: 0.8
+        animation_pattern: "wave"
+        
+      inner_node_3:
+        type: mathematical_entity
+        position: [50, 0]
+        form: "pentagon"
+        personality: "elegant"
+        size: 30
+        color: "#2ecc71"
+        glow: true
+        energy: 0.8
+        animation_pattern: "wave"
+        
+      inner_node_4:
+        type: mathematical_entity
+        position: [0, 40]
+        form: "pentagon"
+        personality: "elegant"
+        size: 30
+        color: "#2ecc71"
+        glow: true
+        energy: 0.8
+        animation_pattern: "wave"
+        
+      clean_edge_1:
+        type: line
+        from: [-50, 0]
+        to: [0, -40]
+        thickness: 2
+        dashed: false
+        color: "#2ecc71"
+        opacity: 0.8
+        
+      clean_edge_2:
+        type: line
+        from: [0, -40]
+        to: [50, 0]
+        thickness: 2
+        dashed: false
+        color: "#2ecc71"
+        opacity: 0.8
+        
+      clean_edge_3:
+        type: line
+        from: [50, 0]
+        to: [0, 40]
+        thickness: 2
+        dashed: false
+        color: "#2ecc71"
+        opacity: 0.8
+        
+      clean_edge_4:
+        type: line
+        from: [0, 40]
+        to: [-50, 0]
+        thickness: 2
+        dashed: false
+        color: "#2ecc71"
+        opacity: 0.8
+        
+      clarity_text:
+        type: text
+        text: "When merged, structure becomes clearer than before"
+        position: [0, -180]
+        size: 16
+        color: "#ffffff"
+        glow: true
+        font: "Arial"
+        
+  scene_11:
+    duration: 7
+    description: "Detective octopus wisdom about divide and conquer"
+    elements:
+      detective_teacher:
+        type: wisdom_character
+        character_type: detective_octopus
+        position: [0, 0]
+        size: 140
+        mood: "mysterious"
+        expression: "normal"
+        talking: true
+        breathing: true
+        color_scheme: "detective"
+        personality: "calm"
+        speech_bubble: true
+        speech_text: "Divide & Conquer isn't speed. It's clarity. It's how you face problems bigger than you."
+        background_aura: "glow"
+        
+  scene_12:
+    duration: 7
+    description: "Finale - the principle of dissolving complexity"
+    elements:
+      brain_emoji:
+        type: animated_emoji
+        emoji: "🧠"
+        position: [-100, 30]
+        size: 85
+        movement: "orbit"
+        glowing: "pulsing-glow"
+        rotation: "none"
+        reveal: "zoom-reveal"
+        speed: "normal"
+        delay: "none"
+        color: "#9b59b6"
+        
+      magnify_emoji:
+        type: animated_emoji
+        emoji: "🔍"
+        position: [100, 30]
+        size: 85
+        movement: "bounce"
+        glowing: "pulsing-glow"
+        rotation: "gentle-rotate"
+        reveal: "slide-reveal"
+        speed: "slow"
+        delay: "delay-1"
+        color: "#3498db"
+        
+      complexity_equation:
+        type: animated_emoji
+        emoji: "f(n)=2f(n/2)+n"
+        position: [0, -60]
+        size: 30
+        movement: "floating-pen"
+        glowing: "matrix-code"
+        rotation: "none"
+        reveal: "slide-reveal"
+        speed: "normal"
+        delay: "delay-2"
+        color: "#e74c3c"
+        
+      finale_text:
+        type: text
+        text: "You don't untangle the big knot. You dissolve it into smaller ones."
+        position: [0, 200]
+        size: 16
+        color: "#ffffff"
+        glow: true
+        font: "Arial"

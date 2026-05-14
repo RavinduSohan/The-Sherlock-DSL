@@ -1,0 +1,65 @@
+# Normal Distribution (Bell Curve) Visualization
+# Using sine curve to create a visualization of a bell curve
+
+
+concept: "Pacific Atlantic Water Flow"
+emoji: "🌊"
+total_duration: 45
+background: "#0a0e1a"
+
+subtitles:
+  - "🌊 Pacific Atlantic Water Flow Problem"
+  - "🏔️ Water flows from high to low elevation"
+  - "🌊 Pacific Ocean borders the top and left"
+  - "🌊 Atlantic Ocean borders the bottom and right"
+  - "🎯 Find cells that can reach BOTH oceans"
+  - "🔄 Use reverse DFS: start from ocean edges"
+  - "✨ Elegant solution with dual exploration"
+
+
+phases:
+  problem_setup:
+    duration: 3
+    description: "Initialize the problem with input array and target"
+    elements:
+      black_hole: 
+        type: blackhole
+        position: [0, 0]     # Center position
+        intensity: 1.5       # Gravitational strength (0.5-3.0)
+        colors: ["#4a0080", "#8e44ad", "#ffffff"] # Spiral colors
+        spiral_arms: 3       # Number of arms
+        rotation_speed: 1.0  # Rotation rate
+        event_horizon: 30    # Central black region size
+        accretion_disk: 150  # Outer disk radius
+        particle_count: 100 
+
+  inner_planets:
+    duration: 8
+    description: "Inner rocky planets"
+    elements:
+      # Mercury - Fastest orbit, closest to sun
+      mercury:
+        short_pendulum:
+        type: path_follower
+        position: [-150, -200]
+        pathId: "ellipse"
+        orbitCenter: [0, 0]  # Center point
+        radiusX: 100         # Horizontal radius
+        radiusY: 60          # Vertical radius
+        rotation: 0          # Ellipse rotation in radians
+        clockwise: true 
+      # Venus - Second planet, retrograde rotation
+
+      
+     
+      
+
+equations:
+  - id: algorithm_steps
+    latex: "\\text{for each } x \\text{ in nums: if } (target - x) \\text{ in map, return indices}"
+    position: [0, 180]
+    phase: problem_setup
+    animation: fade-in
+    glow: true
+    size: 16
+     

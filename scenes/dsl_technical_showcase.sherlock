@@ -1,0 +1,215 @@
+concept: "The Craft Behind the Animations"
+emoji: "⚡"
+total_duration: 40
+background: "#0a0a0a"
+
+subtitles:
+  - ""
+  - ""
+  - ""
+  - ""
+  - ""
+  - ""
+  - ""
+  - ""
+  - ""
+
+phases:
+  scene_1:
+    duration: 8
+    description: "EVIDENCE_IMAGE_SCENE - Export Interface: Large readable image showing DSL export panel with technical grid background"
+    elements:
+      # Background: Perspective Grid
+      tech_grid:
+        type: grid
+        position: [0, 0]
+        width: 800
+        height: 600
+        style: "perspective"
+        spacing: 40
+        density: 1.0
+        color: "#8B7CFF"
+        opacity: 0.2
+        glow: true
+        perspective_depth: 0.7
+        thickness: 1
+      
+      # LEFT SIDE: Large Export Interface Image
+      export_interface:
+        type: image_card
+        source: "images/icons/Animation Exporting.png"
+        position: [0, 0]
+        size: 550
+        fit_mode: contain
+        ken_burns: zoom_in
+        kb_duration: 6
+        kb_start_scale: 1.0
+        kb_end_scale: 1.5
+        kb_easing: ease-in-out
+        glow: true
+        glow_color: "#9333ea"
+        glow_intensity: 35
+        border_width: 3
+        border_color: "#ffffff"
+        border_radius: 10
+        drop_shadow: true
+        delay: 0
+        fade_in: 1.0
+        credit: "Sherlock DSL Export"
+        credit_position: bottom-right
+      
+      # CENTER: Hook texts
+      hook_primary:
+        type: text
+        text: "From DSL to Animation"
+        position: [0, 180]
+        size: 14
+        color: "#ffffff"
+        glow: true
+        font: "Arial"
+      
+  
+  scene_2:
+    duration: 8
+    description: "EVIDENCE_IMAGE_SCENE - DSL Syntax: Large readable code snippet showing syntax highlighting and structure"
+    elements:
+      # LEFT SIDE: Large Code Syntax Image
+      code_display:
+        type: image_card
+        source: "images/icons/sherlock dsl code 2.png"
+        position: [-80, 0]
+        size: 550
+        fit_mode: contain
+        ken_burns: pan_right
+        kb_duration: 8
+        kb_start_scale: 1.0
+        kb_end_scale: 1.0
+        kb_easing: ease-in-out
+        glow: true
+        glow_color: "#f59e0b"
+        glow_intensity: 32
+        border_width: 3
+        border_color: "#ffffff"
+        border_radius: 10
+        drop_shadow: true
+        delay: 0
+        fade_in: 1.0
+        credit: "DSL Syntax Highlighted"
+        credit_position: bottom-right
+      
+      # CENTER: Hook texts
+      hook_primary:
+        type: text
+        text: "Readable Mathematical DSL"
+        position: [0, 180]
+        size: 14
+        color: "#ffffff"
+        glow: true
+        font: "Arial"
+      
+      hook_secondary:
+        type: text
+        text: "Human-friendly syntax for complex animations"
+        position: [0, 220]
+        size: 13
+        color: "#95a5a6"
+        glow: false
+        font: "Arial"
+      
+      # RIGHT SIDE: Evidence text points
+      evidence_1:
+        type: text
+        text: "• YAML-based: Easy to write and read"
+        position: [220, 60]
+        size: 16
+        color: "#9AA0A6"
+        font: "Courier Prime"
+      
+      evidence_2:
+        type: text
+        text: "• Components: Vectors, matrices, graphs"
+        position: [220, 0]
+        size: 16
+        color: "#9AA0A6"
+        font: "Courier Prime"
+      
+      evidence_3:
+        type: text
+        text: "• Properties: Position, color, animation"
+        position: [220, -60]
+        size: 16
+        color: "#C06A6A"
+        font: "Courier Prime"
+
+  
+  scene_3:
+    duration: 8
+    description: "EVIDENCE_IMAGE_SCENE - Full Scene Structure: Complete .sherlock file showing nested phase organization"
+    elements:
+      # LEFT SIDE: Large Full Scene Code Image
+      full_structure:
+        type: image_card
+        source: "images/icons/sherlock dsl code full scene.png"
+        position: [-80, 0]
+        size: 550
+        fit_mode: contain
+        ken_burns: zoom_in
+        kb_duration: 8
+        kb_start_scale: 1.0
+        kb_end_scale: 1.2
+        kb_easing: ease-in-out
+        glow: true
+        glow_color: "#06b6d4"
+        glow_intensity: 35
+        border_width: 3
+        border_color: "#ffffff"
+        border_radius: 10
+        drop_shadow: true
+        delay: 0
+        fade_in: 2
+        fade_out: 1
+        credit: "Complete Scene File"
+        credit_position: bottom-right
+      
+      # CENTER: Hook texts
+      hook_primary:
+        type: text
+        text: "Complete Scene Architecture"
+        position: [0, 180]
+        size: 14
+        color: "#ffffff"
+        glow: true
+        font: "Arial"
+      
+      hook_secondary:
+        type: text
+        text: "Phases, durations, elements - all in code"
+        position: [0, 220]
+        size: 13
+        color: "#95a5a6"
+        glow: false
+        font: "Arial"
+      
+      # Enhancement: Sparkles
+      structure_sparkles:
+        type: sparkles
+        count: 12
+        position: [-200, 0]
+        color: "#06b6d4"
+        speed: 0.4
+      
+      # BOTTOM-CENTER: Wisdom character
+      octopus_closing:
+        type: wisdom_character
+        character_type: detective_octopus
+        position: [0, 200]
+        size: 60
+        mood: "surprised"
+        expression: "normal"
+        talking: true
+        breathing: true
+        color_scheme: "cosmic"
+        personality: "energetic"
+        speech_bubble: true
+        speech_text: "subscribe"
+        background_aura: "glow"

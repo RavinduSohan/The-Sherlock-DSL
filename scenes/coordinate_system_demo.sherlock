@@ -1,0 +1,1322 @@
+# Coordinate System Visualization
+# This demonstrates the different coordinate systems in Sherlock
+# Objects: [0,0] is the center of the screen
+# Equations: [0,0] is the top-left corner
+
+concept: "Sherlock Coordinate Systems"
+emoji: "📐"
+total_duration: 50
+background: "#121212"
+
+subtitles:
+  - "📏 Sherlock Positioning System Demonstration"
+  - "🎯 Objects: [0,0] is at the center of the screen"
+  - "📊 Equations: [0,0] is at the top-left corner"
+  - "🔍 Notice the difference in coordinate systems"
+  - "⚡ Use this as a reference for positioning"
+
+phases:
+  object_coordinates:
+    duration: 30
+    description: "Demonstrate object coordinate system where [0,0] is at the center"
+    elements:
+      # Background grid to show the coordinate system
+      coordinate_grid:
+        type: grid
+        position: [0, 0]
+        spacing: 50
+        color: "#333333"
+        opacity: 0.5
+        
+      # Center point marker
+      center_point:
+        type: circle
+        center: [0, 0]
+        radius: 10
+        color: "#ff6b6b"
+        fill: true
+        glow: true
+        
+      # Center label
+      center_label:
+        type: text
+        text: "[0,0] CENTER"
+        position: [0, -20]
+        color: "#ffffff"
+        size: 16
+        glow: true
+        
+      # X and Y axes
+      x_axis:
+        type: line
+        from: [-400, 0]
+        to: [400, 0]
+        color: "#4ecdc4"
+        thickness: 2
+        
+      y_axis:
+        type: line
+        from: [0, -300]
+        to: [0, 300]
+        color: "#d4af37"
+        thickness: 2
+        
+      # Axis labels
+      x_label:
+        type: text
+        text: "X-axis"
+        position: [350, 20]
+        color: "#4ecdc4"
+        size: 14
+        
+      y_label:
+        type: text
+        text: "Y-axis"
+        position: [20, 280]
+        color: "#d4af37"
+        size: 14
+      
+      # Quadrant Labels
+      q1_label:
+        type: text
+        text: "Quadrant 1 [+X, +Y]"
+        position: [200, 200]
+        color: "#ffffff"
+        size: 14
+        
+      q2_label:
+        type: text
+        text: "Quadrant 2 [-X, +Y]"
+        position: [-200, 200]
+        color: "#ffffff"
+        size: 14
+        
+      q3_label:
+        type: text
+        text: "Quadrant 3 [-X, -Y]"
+        position: [-200, -200]
+        color: "#ffffff"
+        size: 14
+        
+      q4_label:
+        type: text
+        text: "Quadrant 4 [+X, -Y]"
+        position: [200, -200]
+        color: "#ffffff"
+        size: 14
+      
+      # Points across the screen with labels
+      # Top Row (y=250)
+      point_1:
+        type: circle
+        center: [-350, 250]
+        radius: 5
+        color: "#ff6b6b"
+        fill: true
+        
+      point_1_label:
+        type: text
+        text: "[-350,250]"
+        position: [-350, 270]
+        color: "#ffffff"
+        size: 10
+        
+      point_2:
+        type: circle
+        center: [-250, 250]
+        radius: 5
+        color: "#ff6b6b"
+        fill: true
+        
+      point_2_label:
+        type: text
+        text: "[-250,250]"
+        position: [-250, 270]
+        color: "#ffffff"
+        size: 10
+        
+      point_3:
+        type: circle
+        center: [-150, 250]
+        radius: 5
+        color: "#ff6b6b"
+        fill: true
+        
+      point_3_label:
+        type: text
+        text: "[-150,250]"
+        position: [-150, 270]
+        color: "#ffffff"
+        size: 10
+        
+      point_4:
+        type: circle
+        center: [-50, 250]
+        radius: 5
+        color: "#ff6b6b"
+        fill: true
+        
+      point_4_label:
+        type: text
+        text: "[-50,250]"
+        position: [-50, 270]
+        color: "#ffffff"
+        size: 10
+        
+      point_5:
+        type: circle
+        center: [50, 250]
+        radius: 5
+        color: "#ff6b6b"
+        fill: true
+        
+      point_5_label:
+        type: text
+        text: "[50,250]"
+        position: [50, 270]
+        color: "#ffffff"
+        size: 10
+        
+      point_6:
+        type: circle
+        center: [150, 250]
+        radius: 5
+        color: "#ff6b6b"
+        fill: true
+        
+      point_6_label:
+        type: text
+        text: "[150,250]"
+        position: [150, 270]
+        color: "#ffffff"
+        size: 10
+        
+      point_7:
+        type: circle
+        center: [250, 250]
+        radius: 5
+        color: "#ff6b6b"
+        fill: true
+        
+      point_7_label:
+        type: text
+        text: "[250,250]"
+        position: [250, 270]
+        color: "#ffffff"
+        size: 10
+        
+      point_8:
+        type: circle
+        center: [350, 250]
+        radius: 5
+        color: "#ff6b6b"
+        fill: true
+        
+      point_8_label:
+        type: text
+        text: "[350,250]"
+        position: [350, 270]
+        color: "#ffffff"
+        size: 10
+        
+      # Row 2 (y=150)
+      point_9:
+        type: circle
+        center: [-350, 150]
+        radius: 5
+        color: "#4ecdc4"
+        fill: true
+        
+      point_9_label:
+        type: text
+        text: "[-350,150]"
+        position: [-350, 170]
+        color: "#ffffff"
+        size: 10
+        
+      point_10:
+        type: circle
+        center: [-250, 150]
+        radius: 5
+        color: "#4ecdc4"
+        fill: true
+        
+      point_10_label:
+        type: text
+        text: "[-250,150]"
+        position: [-250, 170]
+        color: "#ffffff"
+        size: 10
+        
+      point_11:
+        type: circle
+        center: [-150, 150]
+        radius: 5
+        color: "#4ecdc4"
+        fill: true
+        
+      point_11_label:
+        type: text
+        text: "[-150,150]"
+        position: [-150, 170]
+        color: "#ffffff"
+        size: 10
+        
+      point_12:
+        type: circle
+        center: [-50, 150]
+        radius: 5
+        color: "#4ecdc4"
+        fill: true
+        
+      point_12_label:
+        type: text
+        text: "[-50,150]"
+        position: [-50, 170]
+        color: "#ffffff"
+        size: 10
+        
+      point_13:
+        type: circle
+        center: [50, 150]
+        radius: 5
+        color: "#4ecdc4"
+        fill: true
+        
+      point_13_label:
+        type: text
+        text: "[50,150]"
+        position: [50, 170]
+        color: "#ffffff"
+        size: 10
+        
+      point_14:
+        type: circle
+        center: [150, 150]
+        radius: 5
+        color: "#4ecdc4"
+        fill: true
+        
+      point_14_label:
+        type: text
+        text: "[150,150]"
+        position: [150, 170]
+        color: "#ffffff"
+        size: 10
+        
+      point_15:
+        type: circle
+        center: [250, 150]
+        radius: 5
+        color: "#4ecdc4"
+        fill: true
+        
+      point_15_label:
+        type: text
+        text: "[250,150]"
+        position: [250, 170]
+        color: "#ffffff"
+        size: 10
+        
+      point_16:
+        type: circle
+        center: [350, 150]
+        radius: 5
+        color: "#4ecdc4"
+        fill: true
+        
+      point_16_label:
+        type: text
+        text: "[350,150]"
+        position: [350, 170]
+        color: "#ffffff"
+        size: 10
+        
+      # Row 3 (y=50)
+      point_17:
+        type: circle
+        center: [-350, 50]
+        radius: 5
+        color: "#d4af37"
+        fill: true
+        
+      point_17_label:
+        type: text
+        text: "[-350,50]"
+        position: [-350, 70]
+        color: "#ffffff"
+        size: 10
+        
+      point_18:
+        type: circle
+        center: [-250, 50]
+        radius: 5
+        color: "#d4af37"
+        fill: true
+        
+      point_18_label:
+        type: text
+        text: "[-250,50]"
+        position: [-250, 70]
+        color: "#ffffff"
+        size: 10
+        
+      point_19:
+        type: circle
+        center: [-150, 50]
+        radius: 5
+        color: "#d4af37"
+        fill: true
+        
+      point_19_label:
+        type: text
+        text: "[-150,50]"
+        position: [-150, 70]
+        color: "#ffffff"
+        size: 10
+        
+      point_20:
+        type: circle
+        center: [-50, 50]
+        radius: 5
+        color: "#d4af37"
+        fill: true
+        
+      point_20_label:
+        type: text
+        text: "[-50,50]"
+        position: [-50, 70]
+        color: "#ffffff"
+        size: 10
+        
+      point_21:
+        type: circle
+        center: [50, 50]
+        radius: 5
+        color: "#d4af37"
+        fill: true
+        
+      point_21_label:
+        type: text
+        text: "[50,50]"
+        position: [50, 70]
+        color: "#ffffff"
+        size: 10
+        
+      point_22:
+        type: circle
+        center: [150, 50]
+        radius: 5
+        color: "#d4af37"
+        fill: true
+        
+      point_22_label:
+        type: text
+        text: "[150,50]"
+        position: [150, 70]
+        color: "#ffffff"
+        size: 10
+        
+      point_23:
+        type: circle
+        center: [250, 50]
+        radius: 5
+        color: "#d4af37"
+        fill: true
+        
+      point_23_label:
+        type: text
+        text: "[250,50]"
+        position: [250, 70]
+        color: "#ffffff"
+        size: 10
+        
+      point_24:
+        type: circle
+        center: [350, 50]
+        radius: 5
+        color: "#d4af37"
+        fill: true
+        
+      point_24_label:
+        type: text
+        text: "[350,50]"
+        position: [350, 70]
+        color: "#ffffff"
+        size: 10
+      
+      # Row 4 (y=-50)
+      point_25:
+        type: circle
+        center: [-350, -50]
+        radius: 5
+        color: "#ff6b6b"
+        fill: true
+        
+      point_25_label:
+        type: text
+        text: "[-350,-50]"
+        position: [-350, -30]
+        color: "#ffffff"
+        size: 10
+        
+      point_26:
+        type: circle
+        center: [-250, -50]
+        radius: 5
+        color: "#ff6b6b"
+        fill: true
+        
+      point_26_label:
+        type: text
+        text: "[-250,-50]"
+        position: [-250, -30]
+        color: "#ffffff"
+        size: 10
+        
+      point_27:
+        type: circle
+        center: [-150, -50]
+        radius: 5
+        color: "#ff6b6b"
+        fill: true
+        
+      point_27_label:
+        type: text
+        text: "[-150,-50]"
+        position: [-150, -30]
+        color: "#ffffff"
+        size: 10
+        
+      point_28:
+        type: circle
+        center: [-50, -50]
+        radius: 5
+        color: "#ff6b6b"
+        fill: true
+        
+      point_28_label:
+        type: text
+        text: "[-50,-50]"
+        position: [-50, -30]
+        color: "#ffffff"
+        size: 10
+        
+      point_29:
+        type: circle
+        center: [50, -50]
+        radius: 5
+        color: "#ff6b6b"
+        fill: true
+        
+      point_29_label:
+        type: text
+        text: "[50,-50]"
+        position: [50, -30]
+        color: "#ffffff"
+        size: 10
+        
+      point_30:
+        type: circle
+        center: [150, -50]
+        radius: 5
+        color: "#ff6b6b"
+        fill: true
+        
+      point_30_label:
+        type: text
+        text: "[150,-50]"
+        position: [150, -30]
+        color: "#ffffff"
+        size: 10
+        
+      point_31:
+        type: circle
+        center: [250, -50]
+        radius: 5
+        color: "#ff6b6b"
+        fill: true
+        
+      point_31_label:
+        type: text
+        text: "[250,-50]"
+        position: [250, -30]
+        color: "#ffffff"
+        size: 10
+        
+      point_32:
+        type: circle
+        center: [350, -50]
+        radius: 5
+        color: "#ff6b6b"
+        fill: true
+        
+      point_32_label:
+        type: text
+        text: "[350,-50]"
+        position: [350, -30]
+        color: "#ffffff"
+        size: 10
+      
+      # Row 5 (y=-150)
+      point_33:
+        type: circle
+        center: [-350, -150]
+        radius: 5
+        color: "#4ecdc4"
+        fill: true
+        
+      point_33_label:
+        type: text
+        text: "[-350,-150]"
+        position: [-350, -130]
+        color: "#ffffff"
+        size: 10
+        
+      point_34:
+        type: circle
+        center: [-250, -150]
+        radius: 5
+        color: "#4ecdc4"
+        fill: true
+        
+      point_34_label:
+        type: text
+        text: "[-250,-150]"
+        position: [-250, -130]
+        color: "#ffffff"
+        size: 10
+        
+      point_35:
+        type: circle
+        center: [-150, -150]
+        radius: 5
+        color: "#4ecdc4"
+        fill: true
+        
+      point_35_label:
+        type: text
+        text: "[-150,-150]"
+        position: [-150, -130]
+        color: "#ffffff"
+        size: 10
+        
+      point_36:
+        type: circle
+        center: [-50, -150]
+        radius: 5
+        color: "#4ecdc4"
+        fill: true
+        
+      point_36_label:
+        type: text
+        text: "[-50,-150]"
+        position: [-50, -130]
+        color: "#ffffff"
+        size: 10
+        
+      point_37:
+        type: circle
+        center: [50, -150]
+        radius: 5
+        color: "#4ecdc4"
+        fill: true
+        
+      point_37_label:
+        type: text
+        text: "[50,-150]"
+        position: [50, -130]
+        color: "#ffffff"
+        size: 10
+        
+      point_38:
+        type: circle
+        center: [150, -150]
+        radius: 5
+        color: "#4ecdc4"
+        fill: true
+        
+      point_38_label:
+        type: text
+        text: "[150,-150]"
+        position: [150, -130]
+        color: "#ffffff"
+        size: 10
+        
+      point_39:
+        type: circle
+        center: [250, -150]
+        radius: 5
+        color: "#4ecdc4"
+        fill: true
+        
+      point_39_label:
+        type: text
+        text: "[250,-150]"
+        position: [250, -130]
+        color: "#ffffff"
+        size: 10
+        
+      point_40:
+        type: circle
+        center: [350, -150]
+        radius: 5
+        color: "#4ecdc4"
+        fill: true
+        
+      point_40_label:
+        type: text
+        text: "[350,-150]"
+        position: [350, -130]
+        color: "#ffffff"
+        size: 10
+      
+      # Row 6 (y=-250)
+      point_41:
+        type: circle
+        center: [-350, -250]
+        radius: 5
+        color: "#d4af37"
+        fill: true
+        
+      point_41_label:
+        type: text
+        text: "[-350,-250]"
+        position: [-350, -230]
+        color: "#ffffff"
+        size: 10
+        
+      point_42:
+        type: circle
+        center: [-250, -250]
+        radius: 5
+        color: "#d4af37"
+        fill: true
+        
+      point_42_label:
+        type: text
+        text: "[-250,-250]"
+        position: [-250, -230]
+        color: "#ffffff"
+        size: 10
+        
+      point_43:
+        type: circle
+        center: [-150, -250]
+        radius: 5
+        color: "#d4af37"
+        fill: true
+        
+      point_43_label:
+        type: text
+        text: "[-150,-250]"
+        position: [-150, -230]
+        color: "#ffffff"
+        size: 10
+        
+      point_44:
+        type: circle
+        center: [-50, -250]
+        radius: 5
+        color: "#d4af37"
+        fill: true
+        
+      point_44_label:
+        type: text
+        text: "[-50,-250]"
+        position: [-50, -230]
+        color: "#ffffff"
+        size: 10
+        
+      point_45:
+        type: circle
+        center: [50, -250]
+        radius: 5
+        color: "#d4af37"
+        fill: true
+        
+      point_45_label:
+        type: text
+        text: "[50,-250]"
+        position: [50, -230]
+        color: "#ffffff"
+        size: 10
+        
+      point_46:
+        type: circle
+        center: [150, -250]
+        radius: 5
+        color: "#d4af37"
+        fill: true
+        
+      point_46_label:
+        type: text
+        text: "[150,-250]"
+        position: [150, -230]
+        color: "#ffffff"
+        size: 10
+        
+      point_47:
+        type: circle
+        center: [250, -250]
+        radius: 5
+        color: "#d4af37"
+        fill: true
+        
+      point_47_label:
+        type: text
+        text: "[250,-250]"
+        position: [250, -230]
+        color: "#ffffff"
+        size: 10
+        
+      point_48:
+        type: circle
+        center: [350, -250]
+        radius: 5
+        color: "#d4af37"
+        fill: true
+        
+      point_48_label:
+        type: text
+        text: "[350,-250]"
+        position: [350, -230]
+        color: "#ffffff"
+        size: 10
+      
+      # Add a phase title
+      phase_title:
+        type: text
+        text: "🎯 Object Coordinate System: [0,0] at CENTER"
+        position: [0, 280]
+        color: "#ff6b6b"
+        size: 22
+        glow: true
+        
+      instruction:
+        type: text
+        text: "Standard Sherlock objects use center-origin coordinates"
+        position: [0, -280]
+        color: "#ffffff"
+        size: 18
+
+  equation_coordinates:
+    duration: 20
+    description: "Demonstrate equation coordinate system where [0,0] is at the top-left"
+    elements:
+      # Background grid to show the coordinate system
+      coordinate_grid:
+        type: grid
+        position: [0, 0]
+        spacing: 50
+        color: "#333333"
+        opacity: 0.5
+        
+      # Standard center point marker
+      center_point:
+        type: circle
+        center: [0, 0]
+        radius: 10
+        color: "#ff6b6b"
+        fill: true
+        glow: true
+        
+      # Center label
+      center_label:
+        type: text
+        text: "Object [0,0] CENTER"
+        position: [0, -20]
+        color: "#ffffff"
+        size: 16
+        glow: true
+        
+      # X and Y axes
+      x_axis:
+        type: line
+        from: [-400, 0]
+        to: [400, 0]
+        color: "#4ecdc4"
+        thickness: 2
+        
+      y_axis:
+        type: line
+        from: [0, -300]
+        to: [0, 300]
+        color: "#d4af37"
+        thickness: 2
+      
+      # Phase title
+      phase_title:
+        type: text
+        text: "📊 Equation Coordinate System: [0,0] at TOP-LEFT"
+        position: [0, 280]
+        color: "#e74c3c"
+        size: 22
+        glow: true
+        
+      instruction:
+        type: text
+        text: "For equations, [0,0] is at the top-left corner of the screen"
+        position: [0, -280]
+        color: "#ffffff"
+        size: 18
+        
+      # Visual for top-left origin (this is equation coordinate [0,0])
+      topleft_marker:
+        type: circle
+        center: [-400, 300]
+        radius: 15
+        color: "#e74c3c"
+        fill: true
+        glow: true
+        
+      topleft_label:
+        type: text
+        text: "Equation [0,0]"
+        position: [-350, 300]
+        color: "#e74c3c"
+        size: 16
+        glow: true
+        
+      # Equation coordinates as visual points
+      # Row 1 - Represent equation coordinates with visual markers
+      eq_point_1:
+        type: circle
+        center: [-400, 300]
+        radius: 5
+        color: "#e74c3c"
+        fill: true
+        
+      eq_point_1_label:
+        type: text
+        text: "Eq[0,0]"
+        position: [-400, 280]
+        color: "#e74c3c"
+        size: 10
+        
+      eq_point_2:
+        type: circle
+        center: [-300, 300]
+        radius: 5
+        color: "#e74c3c"
+        fill: true
+        
+      eq_point_2_label:
+        type: text
+        text: "Eq[100,0]"
+        position: [-300, 280]
+        color: "#e74c3c"
+        size: 10
+        
+      eq_point_3:
+        type: circle
+        center: [-200, 300]
+        radius: 5
+        color: "#e74c3c"
+        fill: true
+        
+      eq_point_3_label:
+        type: text
+        text: "Eq[200,0]"
+        position: [-200, 280]
+        color: "#e74c3c"
+        size: 10
+        
+      eq_point_4:
+        type: circle
+        center: [-100, 300]
+        radius: 5
+        color: "#e74c3c"
+        fill: true
+        
+      eq_point_4_label:
+        type: text
+        text: "Eq[300,0]"
+        position: [-100, 280]
+        color: "#e74c3c"
+        size: 10
+        
+      eq_point_5:
+        type: circle
+        center: [0, 300]
+        radius: 5
+        color: "#e74c3c"
+        fill: true
+        
+      eq_point_5_label:
+        type: text
+        text: "Eq[400,0]"
+        position: [0, 280]
+        color: "#e74c3c"
+        size: 10
+        
+      eq_point_6:
+        type: circle
+        center: [100, 300]
+        radius: 5
+        color: "#e74c3c"
+        fill: true
+        
+      eq_point_6_label:
+        type: text
+        text: "Eq[500,0]"
+        position: [100, 280]
+        color: "#e74c3c"
+        size: 10
+        
+      eq_point_7:
+        type: circle
+        center: [200, 300]
+        radius: 5
+        color: "#e74c3c"
+        fill: true
+        
+      eq_point_7_label:
+        type: text
+        text: "Eq[600,0]"
+        position: [200, 280]
+        color: "#e74c3c"
+        size: 10
+        
+      eq_point_8:
+        type: circle
+        center: [300, 300]
+        radius: 5
+        color: "#e74c3c"
+        fill: true
+        
+      eq_point_8_label:
+        type: text
+        text: "Eq[700,0]"
+        position: [300, 280]
+        color: "#e74c3c"
+        size: 10
+        
+      eq_point_9:
+        type: circle
+        center: [400, 300]
+        radius: 5
+        color: "#e74c3c"
+        fill: true
+        
+      eq_point_9_label:
+        type: text
+        text: "Eq[800,0]"
+        position: [400, 280]
+        color: "#e74c3c"
+        size: 10
+        
+      # Row 2
+      eq_point_10:
+        type: circle
+        center: [-400, 200]
+        radius: 5
+        color: "#e67e22"
+        fill: true
+        
+      eq_point_10_label:
+        type: text
+        text: "Eq[0,100]"
+        position: [-400, 180]
+        color: "#e67e22"
+        size: 10
+        
+      eq_point_11:
+        type: circle
+        center: [-300, 200]
+        radius: 5
+        color: "#e67e22"
+        fill: true
+        
+      eq_point_11_label:
+        type: text
+        text: "Eq[100,100]"
+        position: [-300, 180]
+        color: "#e67e22"
+        size: 10
+        
+      eq_point_12:
+        type: circle
+        center: [0, 200]
+        radius: 5
+        color: "#e67e22"
+        fill: true
+        
+      eq_point_12_label:
+        type: text
+        text: "Eq[400,100]"
+        position: [0, 180]
+        color: "#e67e22"
+        size: 10
+        
+      eq_point_13:
+        type: circle
+        center: [400, 200]
+        radius: 5
+        color: "#e67e22"
+        fill: true
+        
+      eq_point_13_label:
+        type: text
+        text: "Eq[800,100]"
+        position: [400, 180]
+        color: "#e67e22"
+        size: 10
+        
+      # Row 3
+      eq_point_14:
+        type: circle
+        center: [-400, 100]
+        radius: 5
+        color: "#3498db"
+        fill: true
+        
+      eq_point_14_label:
+        type: text
+        text: "Eq[0,200]"
+        position: [-400, 80]
+        color: "#3498db"
+        size: 10
+        
+      eq_point_15:
+        type: circle
+        center: [0, 100]
+        radius: 5
+        color: "#3498db"
+        fill: true
+        
+      eq_point_15_label:
+        type: text
+        text: "Eq[400,200]"
+        position: [0, 80]
+        color: "#3498db"
+        size: 10
+        
+      eq_point_16:
+        type: circle
+        center: [400, 100]
+        radius: 5
+        color: "#3498db"
+        fill: true
+        
+      eq_point_16_label:
+        type: text
+        text: "Eq[800,200]"
+        position: [400, 80]
+        color: "#3498db"
+        size: 10
+        
+      # Row 4 (center of screen)
+      eq_point_17:
+        type: circle
+        center: [-400, 0]
+        radius: 5
+        color: "#9b59b6"
+        fill: true
+        
+      eq_point_17_label:
+        type: text
+        text: "Eq[0,300]"
+        position: [-400, -20]
+        color: "#9b59b6"
+        size: 10
+        
+      eq_point_18:
+        type: circle
+        center: [0, 0]
+        radius: 5
+        color: "#9b59b6"
+        fill: true
+        
+      eq_point_18_label:
+        type: text
+        text: "Eq[400,300]"
+        position: [0, -20]
+        color: "#9b59b6"
+        size: 10
+        
+      eq_point_19:
+        type: circle
+        center: [400, 0]
+        radius: 5
+        color: "#9b59b6"
+        fill: true
+        
+      eq_point_19_label:
+        type: text
+        text: "Eq[800,300]"
+        position: [400, -20]
+        color: "#9b59b6"
+        size: 10
+        
+      # Row 5
+      eq_point_20:
+        type: circle
+        center: [-400, -100]
+        radius: 5
+        color: "#e74c3c"
+        fill: true
+        
+      eq_point_20_label:
+        type: text
+        text: "Eq[0,400]"
+        position: [-400, -120]
+        color: "#e74c3c"
+        size: 10
+        
+      eq_point_21:
+        type: circle
+        center: [0, -100]
+        radius: 5
+        color: "#e74c3c"
+        fill: true
+        
+      eq_point_21_label:
+        type: text
+        text: "Eq[400,400]"
+        position: [0, -120]
+        color: "#e74c3c"
+        size: 10
+        
+      eq_point_22:
+        type: circle
+        center: [400, -100]
+        radius: 5
+        color: "#e74c3c"
+        fill: true
+        
+      eq_point_22_label:
+        type: text
+        text: "Eq[800,400]"
+        position: [400, -120]
+        color: "#e74c3c"
+        size: 10
+        
+      # Row 6
+      eq_point_23:
+        type: circle
+        center: [-400, -200]
+        radius: 5
+        color: "#e67e22"
+        fill: true
+        
+      eq_point_23_label:
+        type: text
+        text: "Eq[0,500]"
+        position: [-400, -220]
+        color: "#e67e22"
+        size: 10
+        
+      eq_point_24:
+        type: circle
+        center: [0, -200]
+        radius: 5
+        color: "#e67e22"
+        fill: true
+        
+      eq_point_24_label:
+        type: text
+        text: "Eq[400,500]"
+        position: [0, -220]
+        color: "#e67e22"
+        size: 10
+        
+      eq_point_25:
+        type: circle
+        center: [400, -200]
+        radius: 5
+        color: "#e67e22"
+        fill: true
+        
+      eq_point_25_label:
+        type: text
+        text: "Eq[800,500]"
+        position: [400, -220]
+        color: "#e67e22"
+        size: 10
+        
+      # Row 7 (bottom of screen)
+      eq_point_26:
+        type: circle
+        center: [-400, -300]
+        radius: 5
+        color: "#3498db"
+        fill: true
+        
+      eq_point_26_label:
+        type: text
+        text: "Eq[0,600]"
+        position: [-400, -320]
+        color: "#3498db"
+        size: 10
+        
+      eq_point_27:
+        type: circle
+        center: [0, -300]
+        radius: 5
+        color: "#3498db"
+        fill: true
+        
+      eq_point_27_label:
+        type: text
+        text: "Eq[400,600]"
+        position: [0, -320]
+        color: "#3498db"
+        size: 10
+        
+      eq_point_28:
+        type: circle
+        center: [400, -300]
+        radius: 5
+        color: "#3498db"
+        fill: true
+        
+      eq_point_28_label:
+        type: text
+        text: "Eq[800,600]"
+        position: [400, -320]
+        color: "#3498db"
+        size: 10
+        
+      # Draw lines to connect object center to equation center
+      eq_center_line:
+        type: line
+        from: [0, 0]
+        to: [0, 0]
+        color: "#ffffff"
+        thickness: 2
+        dashed: true
+        
+      eq_center_label:
+        type: text
+        text: "Equation Center [400,300]"
+        position: [20, 0]
+        color: "#ffffff"
+        size: 14
+
+equations:
+  # Equations for Phase 1 (just a title, no coordinates demo yet)
+  - id: "phase1_title"
+    latex: "\\text{Standard Object Coordinates}"
+    position: "top"
+    phase: "object_coordinates"
+    animation: "fade-in"
+  
+  # For Phase 2, only show some example named positions
+  - id: "named_position_center"
+    latex: "\\text{Named position: center}"
+    position: "center"
+    phase: "equation_coordinates"
+    animation: "fade-in"
+    
+  - id: "named_position_top"
+    latex: "\\text{Named position: top}"
+    position: "top"
+    phase: "equation_coordinates"
+    animation: "fade-in"
+    
+  - id: "named_position_bottom"
+    latex: "\\text{Named position: bottom}"
+    position: "bottom"
+    phase: "equation_coordinates"
+    animation: "fade-in"

@@ -1,0 +1,169 @@
+# 🖼️ Image Card Integration Test
+# Testing IMAGE_CARD component working together with other components
+# Spider-themed scene with multiple component types
+
+title: "Image Card + Components"
+width: 1920
+height: 1080
+fps: 60
+
+phases:
+  intro:
+    duration: 3
+    elements:
+      
+      # Background spider image - large and semi-transparent (render first)
+      spider_background:
+        type: image_card
+        source: "images/icons/spider.jpg"
+        position: [0, 0]
+        size: 900
+        opacity: 0.3
+        z_index: 0
+      
+      # Title text (render on top)
+      title_text:
+        type: text
+        text: "SPIDER SENSE"
+        position: [0, 350]
+        size: 72
+        color: "#FF0000"
+        glow: true
+      
+      # Subtitle (render on top)
+      subtitle:
+        type: text
+        text: "Image Card + MorphEntity + Animations"
+        position: [0, 280]
+        size: 32
+        color: "#FFFFFF"
+  
+  action:
+    duration: 5
+    elements:
+      
+      # Spider image - smaller, positioned left
+      spider_hero:
+        type: image_card
+        source: "images/icons/spider.jpg"
+        position: [-500, 100]
+        size: 400
+        opacity: 1.0
+      
+      # MorphEntity animation - morphing circle
+      web_orb:
+        type: morph_entity
+        position: [200, 150]
+        size: 60
+        color: "#FF4444"
+        shape: circle
+        pulse: true
+        pulse_speed: 2
+      
+      # Rotating emoji
+      spider_emoji:
+        type: rotating_emoji
+        emoji: "🕷️"
+        position: [200, -100]
+        size: 80
+        rotation_speed: 1.5
+      
+      # Blinking emoji
+      eye_emoji:
+        type: blinking_emoji
+        emoji: "👁️"
+        position: [500, 200]
+        size: 60
+        blink_speed: 2
+        glow: true
+      
+      # Vector arrow pointing at spider
+      arrow_vector:
+        type: vector
+        position: [-200, 100]
+        components: [150, 0]
+        color: "#00FF00"
+        label: "Target"
+      
+      # Text labels
+      label_1:
+        type: text
+        text: "IMAGE_CARD"
+        position: [-500, -150]
+        size: 24
+        color: "#4ECDC4"
+      
+      label_2:
+        type: text
+        text: "MORPH_ENTITY"
+        position: [200, 250]
+        size: 24
+        color: "#FF6B6B"
+      
+      label_3:
+        type: text
+        text: "VECTORS + EMOJIS"
+        position: [500, -50]
+        size: 24
+        color: "#FFE66D"
+
+      title_text:
+        type: text
+        content: "SPIDER SENSE"
+        position: [0, 350]
+        font_size: 72
+        color: "#FF0000"
+        font_weight: bold  
+
+  finale:
+    duration: 3
+    elements:
+      
+      # Center spider image - large
+      spider_center:
+        type: image_card
+        source: "images/icons/spider.jpg"
+        position: [0, 50]
+        size: 600
+      
+      # Multiple morphing entities around spider
+      orb_1:
+        type: morph_entity
+        position: [-300, 250]
+        size: 40
+        color: "#FF0000"
+        shape: circle
+        pulse: true
+      
+      orb_2:
+        type: morph_entity
+        position: [300, 250]
+        size: 40
+        color: "#00FF00"
+        shape: circle
+        pulse: true
+      
+      orb_3:
+        type: morph_entity
+        position: [-300, -150]
+        size: 40
+        color: "#0000FF"
+        shape: circle
+        pulse: true
+      
+      orb_4:
+        type: morph_entity
+        position: [300, -150]
+        size: 40
+        color: "#FFFF00"
+        shape: circle
+        pulse: true
+      
+      # Final text
+      success_text:
+        type: text
+        text: "All Components Working Together! ✨"
+        position: [0, -350]
+        size: 48
+        color: "#FFFFFF"
+        glow: true

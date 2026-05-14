@@ -1,0 +1,341 @@
+concept: "Direction Changed Everything"
+emoji: "➡️"
+total_duration: 64
+background: "#0a0a0a"
+
+subtitles:
+  - ""
+  - ""
+  - ""
+
+phases:
+  scene_1_almost_perfect_world:
+    duration: 8
+    description: "A system that works flawlessly yet harbors an invisible flaw"
+    elements:
+      grid_h3:
+        type: morph
+        shape: line[from:(-4,0) to:(-4,0) stroke:#4A6FA5/0.3 strokeWidth:1] ~> line[from:(-6.5,0) to:(-1.5,0) stroke:#4A6FA5/0.3 strokeWidth:1] (0.8s, ease.out)
+      grid_h2:
+        type: morph
+        shape: line[from:(-4,-1.5) to:(-4,-1.5) stroke:#4A6FA5/0.3 strokeWidth:1] ~> line[from:(-6.5,-1.5) to:(-1.5,-1.5) stroke:#4A6FA5/0.3 strokeWidth:1] (0.8s, ease.out, 0.15s)
+      grid_h4:
+        type: morph
+        shape: line[from:(-4,1.5) to:(-4,1.5) stroke:#4A6FA5/0.3 strokeWidth:1] ~> line[from:(-6.5,1.5) to:(-1.5,1.5) stroke:#4A6FA5/0.3 strokeWidth:1] (0.8s, ease.out, 0.15s)
+      grid_h1:
+        type: morph
+        shape: line[from:(-4,-3) to:(-4,-3) stroke:#4A6FA5/0.3 strokeWidth:1] ~> line[from:(-6.5,-3) to:(-1.5,-3) stroke:#4A6FA5/0.3 strokeWidth:1] (0.8s, ease.out, 0.3s)
+      grid_h5:
+        type: morph
+        shape: line[from:(-4,3) to:(-4,3) stroke:#4A6FA5/0.3 strokeWidth:1] ~> line[from:(-6.5,3) to:(-1.5,3) stroke:#4A6FA5/0.3 strokeWidth:1] (0.8s, ease.out, 0.3s)
+      grid_v3:
+        type: morph
+        shape: line[from:(-4,0) to:(-4,0) stroke:#4A6FA5/0.3 strokeWidth:1] ~> line[from:(-4,-3.5) to:(-4,3.5) stroke:#4A6FA5/0.3 strokeWidth:1] (0.8s, ease.out, 0.1s)
+      grid_v2:
+        type: morph
+        shape: line[from:(-5.5,0) to:(-5.5,0) stroke:#4A6FA5/0.3 strokeWidth:1] ~> line[from:(-5.5,-3.5) to:(-5.5,3.5) stroke:#4A6FA5/0.3 strokeWidth:1] (0.8s, ease.out, 0.25s)
+      grid_v4:
+        type: morph
+        shape: line[from:(-2.5,0) to:(-2.5,0) stroke:#4A6FA5/0.3 strokeWidth:1] ~> line[from:(-2.5,-3.5) to:(-2.5,3.5) stroke:#4A6FA5/0.3 strokeWidth:1] (0.8s, ease.out, 0.25s)
+      grid_v1:
+        type: morph
+        shape: line[from:(-6,0) to:(-6,0) stroke:#4A6FA5/0.3 strokeWidth:1] ~> line[from:(-6,-3.5) to:(-6,3.5) stroke:#4A6FA5/0.3 strokeWidth:1] (0.8s, ease.out, 0.4s)
+      number_3:
+        type: primitive
+        shape: text[text:"3" fontSize:36 fill:#F5F5F5 at:(-5.5,1.5)] -> fadeIn(0.8s, 1.0s) -> scale(1.08, 0.8s, ease.inOut, 2.5s) -> scale(1.0, 0.8s, ease.inOut, 3.3s) -> scale(1.05, 0.6s, ease.inOut, 5.5s) -> scale(1.0, 0.6s, ease.inOut, 6.1s)
+      number_5:
+        type: primitive
+        shape: text[text:"5" fontSize:36 fill:#F5F5F5 at:(-4,0)] -> fadeIn(0.8s, 1.3s) -> scale(1.08, 0.8s, ease.inOut, 2.8s) -> scale(1.0, 0.8s, ease.inOut, 3.6s) -> scale(1.05, 0.6s, ease.inOut, 5.8s) -> scale(1.0, 0.6s, ease.inOut, 6.4s)
+      number_7:
+        type: primitive
+        shape: text[text:"7" fontSize:36 fill:#F5F5F5 at:(-2.5,-1.5)] -> fadeIn(0.8s, 1.6s) -> scale(1.08, 0.8s, ease.inOut, 3.1s) -> scale(1.0, 0.8s, ease.inOut, 3.9s) -> scale(1.05, 0.6s, ease.inOut, 6.1s) -> scale(1.0, 0.6s, ease.inOut, 6.7s)
+      ghost_question:
+        type: primitive
+        shape: text[text:"?" fontSize:48 fill:#F5F5F5/0.15 at:(-6,2.5)] -> fadeIn(1s, 2.5s) -> scale(1.2, 1.5s, ease.inOut, 3.5s) -> scale(0.9, 1.5s, ease.inOut, 5.0s) -> moveTo((-2,-2.5), 5s, linear, 2.5s)
+      phrase_perfect:
+        type: primitive
+        shape: text[text:"perfect numbers" fontSize:24 fill:#F5F5F5 at:(4.0,2.8)] -> fadeIn(0.8s, 1.0s) -> fadeOut(1s, 6.0s)
+      keyword_almost:
+        type: morph
+        shape: text[text:"almost" fontSize:40 fill:#7E8A8F at:(5.0,-2.5)] -> fadeIn(0.8s, 1.5s) ~> text[text:"almost" fontSize:40 fill:#C06A6A at:(5.0,-2.5)] (1.5s, ease.inOut, 4.5s)
+
+  scene_2_number_that_didnt_care:
+    duration: 7
+    description: "The discovery of absence—a system's indifference to orientation"
+    elements:
+      grid_h1_faded:
+        type: primitive
+        shape: line[from:(-6.5,-3) to:(-1.5,-3) stroke:#4A6FA5/0.1 strokeWidth:1] -> fadeIn(0.5s)
+      grid_h2_faded:
+        type: primitive
+        shape: line[from:(-6.5,-1.5) to:(-1.5,-1.5) stroke:#4A6FA5/0.1 strokeWidth:1] -> fadeIn(0.5s)
+      grid_h3_faded:
+        type: primitive
+        shape: line[from:(-6.5,0) to:(-1.5,0) stroke:#4A6FA5/0.1 strokeWidth:1] -> fadeIn(0.5s)
+      grid_h4_faded:
+        type: primitive
+        shape: line[from:(-6.5,1.5) to:(-1.5,1.5) stroke:#4A6FA5/0.1 strokeWidth:1] -> fadeIn(0.5s)
+      grid_h5_faded:
+        type: primitive
+        shape: line[from:(-6.5,3) to:(-1.5,3) stroke:#4A6FA5/0.1 strokeWidth:1] -> fadeIn(0.5s)
+      number_5_center:
+        type: primitive
+        shape: text[text:"5" fontSize:48 fill:#F5F5F5 at:(-4,0)] -> scale(1.03, 2s, ease.inOut) -> scale(1.0, 2s, ease.inOut, 2s) -> scale(1.06, 0.2s, ease.in, 2.6s) -> scale(1.0, 0.5s, ease.out, 2.8s)
+      arrow_east_shaft:
+        type: morph
+        shape: line[from:(-2.5,0) to:(-2.5,0) stroke:#6bcbff strokeWidth:2] -> fadeIn(0.3s, 1.0s) ~> line[from:(-2.5,0) to:(-4.2,0) stroke:#6bcbff strokeWidth:2] (1.2s, ease.out, 1.0s) -> fadeOut(0.6s, 2.5s)
+      arrow_east_head:
+        type: primitive
+        shape: triangle[size:0.25 fill:#6bcbff at:(-2.4,0)] -> fadeIn(0.3s, 1.0s) -> moveTo((-4.1,0), 1.2s, ease.out, 1.0s) -> fadeOut(0.6s, 2.5s)
+      arrow_west_shaft:
+        type: morph
+        shape: line[from:(-5.5,0) to:(-5.5,0) stroke:#6bcbff strokeWidth:2] -> fadeIn(0.3s, 1.0s) ~> line[from:(-5.5,0) to:(-3.8,0) stroke:#6bcbff strokeWidth:2] (1.2s, ease.out, 1.0s) -> fadeOut(0.6s, 2.5s)
+      arrow_west_head:
+        type: primitive
+        shape: triangle[size:0.25 fill:#6bcbff at:(-5.6,0)] -> fadeIn(0.3s, 1.0s) -> moveTo((-3.9,0), 1.2s, ease.out, 1.0s) -> fadeOut(0.6s, 2.5s)
+      impact_ripple:
+        type: primitive
+        shape: circle[r:0.1 stroke:#6bcbff/0.6 strokeWidth:1.5 at:(-4,0)] -> fadeIn(0.1s, 2.5s) -> scale(6, 1.2s, ease.out, 2.5s) -> fadeOut(0.8s, 3.0s)
+      phrase_didnt_care:
+        type: primitive
+        shape: text[text:"the number didn't care" fontSize:22 fill:#9AA0A6 at:(3.5,2.5)] -> fadeIn(0.8s, 1.0s)
+      keyword_direction:
+        type: morph
+        shape: text[text:"missing" fontSize:44 fill:#F5F5F5 at:(5.0,-2.0)] -> fadeIn(0.8s, 1.8s) ~> text[text:"direction?" fontSize:44 fill:#4A6FA5 at:(5.0,-2.0)] (1.2s, ease.out, 3.5s)
+
+  scene_3_strange_idea:
+    duration: 8
+    description: "A radical thought takes form—the birth of directed number"
+    elements:
+      number_5_dissolve:
+        type: morph
+        shape: text[text:"5" fontSize:48 fill:#F5F5F5 at:(-4,0)] -> fadeIn(0.8s) ~> text[text:"↗" fontSize:56 fill:#ffd93d at:(-4,1.5)] (2.4s, ease.inOut, 1.5s)
+      particle_orbit_a:
+        type: primitive
+        shape: circle[r:0.08 fill:#F5F5F5/0.7 at:(-3,0)] -> fadeIn(0.3s, 1.2s) -> rotate(360, 1.0s, linear, 1.2s) -> rotate(360, 1.0s, linear, 2.2s) -> rotate(360, 1.0s, linear, 3.2s) -> fadeOut(0.5s, 3.9s)
+      particle_orbit_b:
+        type: primitive
+        shape: circle[r:0.06 fill:#ffd93d/0.6 at:(-5,0.5)] -> fadeIn(0.3s, 1.4s) -> rotate(360, 0.8s, linear, 1.4s) -> rotate(360, 0.8s, linear, 2.2s) -> rotate(360, 0.8s, linear, 3.0s) -> fadeOut(0.5s, 3.9s)
+      particle_orbit_c:
+        type: primitive
+        shape: circle[r:0.07 fill:#F5F5F5/0.5 at:(-4,-1)] -> fadeIn(0.3s, 1.6s) -> rotate(360, 1.2s, linear, 1.6s) -> rotate(360, 1.2s, linear, 2.8s) -> fadeOut(0.5s, 3.9s)
+      particle_orbit_d:
+        type: primitive
+        shape: circle[r:0.05 fill:#ffd93d/0.5 at:(-2.5,0.8)] -> fadeIn(0.3s, 1.8s) -> rotate(360, 0.9s, linear, 1.8s) -> rotate(360, 0.9s, linear, 2.7s) -> rotate(360, 0.9s, linear, 3.6s) -> fadeOut(0.5s, 3.9s)
+      formation_halo:
+        type: primitive
+        shape: circle[r:0.3 stroke:#ffd93d/0.0 strokeWidth:1.5 at:(-4,1.5)] -> fadeIn(0.1s, 3.8s) -> scale(5, 1.2s, ease.out, 3.8s) -> fadeOut(0.8s, 4.2s)
+      arrow_glow:
+        type: primitive
+        shape: text[text:"↗" fontSize:56 fill:#ffd93d/0.0 at:(-4,1.5)] -> fadeIn(0s, 3.9s) -> scale(1.05, 2s, ease.inOut, 4.0s) -> scale(1.0, 2s, ease.inOut, 6.0s)
+      phrase_strange:
+        type: primitive
+        shape: text[text:"a strange idea" fontSize:24 fill:#7E8A8F at:(3.0,2.8)] -> fadeIn(0.8s, 1.0s)
+      keyword_how_where:
+        type: morph
+        shape: text[text:"how much?" fontSize:42 fill:#4A6FA5 at:(5.0,-1.5)] -> fadeIn(0.8s, 2.0s) ~> text[text:"where to?" fontSize:42 fill:#ffd93d at:(5.0,-1.5)] (1.2s, ease.out, 3.8s)
+
+  scene_4_magnitude_with_intent:
+    duration: 9
+    description: "The definition made flesh—vector as fused identity"
+    elements:
+      gold_arrow:
+        type: primitive
+        shape: text[text:"↗" fontSize:56 fill:#ffd93d at:(-4,1.5)] -> scale(1.04, 2s, ease.inOut) -> scale(1.0, 2s, ease.inOut, 2s) -> scale(1.15, 0.3s, ease.in, 3.0s) -> scale(1.0, 0.4s, elastic, 3.3s)
+      magnitude_line:
+        type: morph
+        shape: line[from:(-4,1.5) to:(-4,1.5) stroke:#F5F5F5/0.6 strokeWidth:2] -> fadeIn(0.3s, 0.5s) ~> line[from:(-4,1.5) to:(-2,1.5) stroke:#F5F5F5/0.6 strokeWidth:2] (1.0s, linear, 0.5s) -> fadeOut(0.6s, 2.2s)
+      magnitude_label:
+        type: primitive
+        shape: text[text:"5" fontSize:24 fill:#F5F5F5/0.6 at:(-3,1.85)] -> fadeIn(0.6s, 0.8s) -> fadeOut(0.6s, 2.2s)
+      direction_ray:
+        type: morph
+        shape: line[from:(-4,1.5) to:(-4,1.5) stroke:#F5F5F5/0.5 strokeWidth:1.5] -> fadeIn(0.3s, 0.7s) ~> line[from:(-4,1.5) to:(-2.5,3.0) stroke:#F5F5F5/0.5 strokeWidth:1.5] (1.0s, linear, 0.7s) -> fadeOut(0.6s, 2.4s)
+      direction_label:
+        type: primitive
+        shape: text[text:"45°" fontSize:24 fill:#F5F5F5/0.6 at:(-3.2,2.8)] -> fadeIn(0.6s, 1.0s) -> fadeOut(0.6s, 2.4s)
+      merge_burst:
+        type: primitive
+        shape: circle[r:0.2 stroke:#ffd93d/0.5 strokeWidth:2 at:(-4,1.5)] -> fadeIn(0.1s, 2.8s) -> scale(5, 0.8s, ease.out, 2.8s) -> fadeOut(0.5s, 3.2s)
+      label_magnitude:
+        type: primitive
+        shape: text[text:"magnitude" fontSize:20 fill:#F5F5F5/0.7 at:(-5,0.5)] -> fadeIn(0.8s, 3.5s)
+      label_direction:
+        type: primitive
+        shape: text[text:"direction" fontSize:20 fill:#F5F5F5/0.7 at:(-3,2.2)] -> fadeIn(0.8s, 3.7s)
+      phrase_intent:
+        type: primitive
+        shape: text[text:"magnitude with intent" fontSize:24 fill:#F5F5F5 at:(3.5,2.5)] -> fadeIn(0.8s, 1.2s)
+      keyword_vector:
+        type: morph
+        shape: text[text:"vector" fontSize:44 fill:#F5F5F5 at:(5.0,-1.5)] -> fadeIn(0.8s, 1.5s) ~> text[text:"vector" fontSize:44 fill:#ffd93d at:(5.0,-1.5)] (1.0s, ease.inOut, 3.5s)
+
+  scene_5_arrow_is_the_object:
+    duration: 8
+    description: "The symbol and the thing become one"
+    elements:
+      arrow_outline:
+        type: morph
+        shape: text[text:"↗" fontSize:48 fill:#F5F5F5/0.3 at:(-4.5,0)] -> fadeIn(0.8s) ~> text[text:"↗" fontSize:56 fill:#F5F5F5 at:(-4.5,0)] (2.5s, ease.inOut, 1.5s) ~> text[text:"↗" fontSize:60 fill:#ffd93d at:(-4.5,0)] (1.0s, ease.out, 5.5s)
+      arrow_rotate:
+        type: primitive
+        shape: text[text:"↗" fontSize:56 fill:#F5F5F5/0.0 at:(-4.5,0)] -> fadeIn(0s, 2.0s) -> rotate(8, 2s, ease.inOut, 2.0s) -> rotate(-8, 2s, ease.inOut, 4.0s) -> rotate(0, 1s, ease.inOut, 6.0s)
+      presence_ring_inner:
+        type: primitive
+        shape: circle[r:0.8 stroke:#F5F5F5/0.0 strokeWidth:1 at:(-4.5,0)] -> fadeIn(0.8s, 3.0s) -> scale(1.05, 2s, ease.inOut, 3.5s) -> scale(1.0, 2s, ease.inOut, 5.5s)
+      presence_ring_outer:
+        type: primitive
+        shape: circle[r:1.4 stroke:#ffd93d/0.0 strokeWidth:0.5 at:(-4.5,0)] -> fadeIn(0.6s, 4.0s) -> scale(1.04, 2s, ease.inOut, 4.5s) -> scale(1.0, 2s, ease.inOut, 6.5s)
+      solidify_burst:
+        type: primitive
+        shape: circle[r:0.2 stroke:#F5F5F5/0.4 strokeWidth:2 at:(-4.5,0)] -> fadeIn(0.1s, 4.0s) -> scale(7, 1.0s, ease.out, 4.0s) -> fadeOut(0.8s, 4.5s)
+      keyword_symbol_object:
+        type: morph
+        shape: text[text:"symbol" fontSize:48 fill:#9AA0A6 at:(5.0,-1.5)] -> fadeIn(0.8s, 1.0s) ~> text[text:"object" fontSize:48 fill:#F5F5F5 at:(5.0,-1.5)] (1.0s, ease.out, 2.2s) ~> text[text:"seen" fontSize:48 fill:#ffd93d at:(5.0,-1.5)] (1.0s, ease.out, 3.8s)
+      phrase_made_visible:
+        type: primitive
+        shape: text[text:"made visible" fontSize:22 fill:#7E8A8F at:(3.0,2.8)] -> fadeIn(0.8s, 2.5s)
+
+  scene_6_consequence_appears:
+    duration: 7
+    description: "Addition becomes creation—the diagonal as inevitable truth"
+    elements:
+      arrow_gold:
+        type: primitive
+        shape: text[text:"↗" fontSize:48 fill:#ffd93d at:(-6.5,-2.5)] -> fadeIn(0.5s) -> moveTo((-5,-1), 0.8s, ease.out, 0.3s)
+      arrow_cyan:
+        type: primitive
+        shape: text[text:"→" fontSize:48 fill:#6bcbff at:(-1.5,2.0)] -> fadeIn(0.5s, 0.4s) -> moveTo((-3.5,0.5), 0.8s, ease.out, 0.6s)
+      connector_hint:
+        type: morph
+        shape: line[from:(-5,-1) to:(-5,-1) stroke:#F5F5F5/0.15 strokeWidth:1.5] ~> line[from:(-5,-1) to:(-1.5,0.5) stroke:#F5F5F5/0.5 strokeWidth:1.5] (1.2s, ease.out, 1.8s)
+      resultant_arrow:
+        type: morph
+        shape: line[from:(-5,-1) to:(-5,-1) stroke:#F5F5F5/0.0 strokeWidth:3] ~> line[from:(-5,-1) to:(-1.5,0.5) stroke:#F5F5F5 strokeWidth:3] (1.2s, ease.out, 2.5s) ~> line[from:(-5,-1) to:(-1.5,0.5) stroke:#ffd93d strokeWidth:3] (0.5s, ease.out, 3.7s)
+      resultant_pulse:
+        type: primitive
+        shape: circle[r:0.15 stroke:#ffd93d/0.5 strokeWidth:2 at:(-1.5,0.5)] -> fadeIn(0.1s, 3.7s) -> scale(6, 0.8s, ease.out, 3.7s) -> fadeOut(0.6s, 4.1s)
+      arrow_gold_fade:
+        type: primitive
+        shape: text[text:"↗" fontSize:48 fill:#ffd93d/0.0 at:(-5,-1)] -> fadeIn(0s, 3.0s) -> fadeOut(1.0s, 3.0s)
+      arrow_cyan_fade:
+        type: primitive
+        shape: text[text:"→" fontSize:48 fill:#6bcbff/0.0 at:(-3.5,0.5)] -> fadeIn(0s, 3.0s) -> fadeOut(1.0s, 3.0s)
+      phrase_one_after:
+        type: primitive
+        shape: text[text:"one after another" fontSize:22 fill:#7E8A8F at:(3.0,2.5)] -> fadeIn(0.8s, 0.8s) -> fadeOut(1.0s, 4.0s)
+      keyword_consequence:
+        type: morph
+        shape: text[text:"geometry" fontSize:44 fill:#4A6FA5 at:(5.0,-2.5)] -> fadeIn(0.8s, 2.0s) ~> text[text:"consequence" fontSize:38 fill:#ffd93d at:(5.0,-2.5)] (1.2s, ease.out, 3.5s)
+
+  scene_7_world_becomes_calculable:
+    duration: 8
+    description: "The rule transforms chaos into order—motion captured by mathematics"
+    elements:
+      initial_vector:
+        type: primitive
+        shape: text[text:"↗" fontSize:48 fill:#ffd93d at:(-5,-1)] -> fadeIn(0.8s) -> scale(1.06, 0.5s, ease.out, 0.8s) -> scale(1.0, 0.5s, ease.inOut, 1.3s)
+      ghost_arc_1:
+        type: primitive
+        shape: text[text:"↗" fontSize:28 fill:#F5F5F5/0.2 at:(-5.3,-0.3)] -> fadeIn(0.35s, 1.0s) -> fadeOut(0.5s, 3.8s)
+      ghost_arc_2:
+        type: primitive
+        shape: text[text:"↗" fontSize:28 fill:#F5F5F5/0.3 at:(-4.9,0.4)] -> fadeIn(0.35s, 1.15s) -> fadeOut(0.5s, 3.8s)
+      ghost_arc_3:
+        type: primitive
+        shape: text[text:"↑" fontSize:28 fill:#F5F5F5/0.38 at:(-4.3,0.9)] -> fadeIn(0.35s, 1.3s) -> fadeOut(0.5s, 3.8s)
+      ghost_arc_4:
+        type: primitive
+        shape: text[text:"↑" fontSize:28 fill:#F5F5F5/0.42 at:(-3.7,1.25)] -> fadeIn(0.35s, 1.45s) -> fadeOut(0.5s, 3.8s)
+      ghost_arc_5:
+        type: primitive
+        shape: text[text:"↑" fontSize:28 fill:#F5F5F5/0.42 at:(-3.1,1.35)] -> fadeIn(0.35s, 1.6s) -> fadeOut(0.5s, 3.8s)
+      ghost_arc_6:
+        type: primitive
+        shape: text[text:"↗" fontSize:28 fill:#F5F5F5/0.35 at:(-2.6,1.1)] -> fadeIn(0.35s, 1.75s) -> fadeOut(0.5s, 3.8s)
+      ghost_arc_7:
+        type: primitive
+        shape: text[text:"→" fontSize:28 fill:#F5F5F5/0.28 at:(-2.1,0.6)] -> fadeIn(0.35s, 1.9s) -> fadeOut(0.5s, 3.8s)
+      ghost_arc_8:
+        type: primitive
+        shape: text[text:"↘" fontSize:28 fill:#F5F5F5/0.22 at:(-1.8,0.0)] -> fadeIn(0.35s, 2.05s) -> fadeOut(0.5s, 3.8s)
+      ghost_arc_9:
+        type: primitive
+        shape: text[text:"↘" fontSize:28 fill:#F5F5F5/0.18 at:(-1.6,-0.6)] -> fadeIn(0.35s, 2.2s) -> fadeOut(0.5s, 3.8s)
+      trajectory_rise:
+        type: morph
+        shape: line[from:(-5,-1) to:(-5,-1) stroke:#F5F5F5/0.7 strokeWidth:1.5] ~> line[from:(-5,-1) to:(-3.2,1.35) stroke:#F5F5F5/0.7 strokeWidth:1.5] (0.8s, ease.out, 2.0s)
+      trajectory_fall:
+        type: morph
+        shape: line[from:(-3.2,1.35) to:(-3.2,1.35) stroke:#F5F5F5/0.7 strokeWidth:1.5] ~> line[from:(-3.2,1.35) to:(-1.5,-0.7) stroke:#F5F5F5/0.5 strokeWidth:1.5] (0.7s, ease.in, 2.8s)
+      eq_v0:
+        type: primitive
+        shape: text[text:"v₀ = 5" fontSize:24 fill:#F5F5F5 at:(-6.5,-2.2)] -> fadeIn(0.5s, 2.5s) -> moveTo((-5.2,-2.2), 0.6s, ease.out, 2.5s)
+      eq_theta:
+        type: primitive
+        shape: text[text:"θ = 45°" fontSize:24 fill:#F5F5F5 at:(-6.5,-2.8)] -> fadeIn(0.5s, 2.9s) -> moveTo((-5.0,-2.8), 0.6s, ease.out, 2.9s)
+      eq_full:
+        type: primitive
+        shape: text[text:"y = x·tanθ - gx²/2v₀²cos²θ" fontSize:18 fill:#F5F5F5/0.8 at:(-6.5,-3.3)] -> fadeIn(0.5s, 3.3s) -> moveTo((-4.2,-3.3), 0.7s, ease.out, 3.3s)
+      phrase_rule_real:
+        type: primitive
+        shape: text[text:"the rule made real" fontSize:24 fill:#F5F5F5 at:(3.5,2.8)] -> fadeIn(0.8s, 1.2s)
+      keyword_calculable:
+        type: morph
+        shape: text[text:"motion" fontSize:44 fill:#4A6FA5 at:(5.0,-1.5)] -> fadeIn(0.8s, 2.0s) ~> text[text:"calculable" fontSize:36 fill:#ffd93d at:(5.0,-1.5)] (1.2s, ease.out, 3.5s)
+
+  scene_8_direction_changed_everything:
+    duration: 9
+    description: "The final truth—a new dimension of meaning, the world reimagined"
+    elements:
+      grid_evolved_h1:
+        type: morph
+        shape: line[from:(-4,-2.5) to:(-4,-2.5) stroke:#4A6FA5/0.4 strokeWidth:1] ~> line[from:(-6.5,-2.5) to:(-1.5,-2.5) stroke:#4A6FA5/0.4 strokeWidth:1] (1.2s, ease.out, 3.5s)
+      grid_evolved_h2:
+        type: morph
+        shape: line[from:(-4,0) to:(-4,0) stroke:#4A6FA5/0.4 strokeWidth:1] ~> line[from:(-6.5,0) to:(-1.5,0) stroke:#4A6FA5/0.4 strokeWidth:1] (1.2s, ease.out, 3.6s)
+      grid_evolved_h3:
+        type: morph
+        shape: line[from:(-4,2.5) to:(-4,2.5) stroke:#4A6FA5/0.4 strokeWidth:1] ~> line[from:(-6.5,2.5) to:(-1.5,2.5) stroke:#4A6FA5/0.4 strokeWidth:1] (1.2s, ease.out, 3.7s)
+      axis_x_pos:
+        type: morph
+        shape: line[from:(-4,0) to:(-4,0) stroke:#4A6FA5/0.7 strokeWidth:2] ~> line[from:(-4,0) to:(-1.6,0) stroke:#4A6FA5/0.7 strokeWidth:2] (0.5s, ease.out, 4.8s)
+      axis_x_neg:
+        type: morph
+        shape: line[from:(-4,0) to:(-4,0) stroke:#4A6FA5/0.7 strokeWidth:2] ~> line[from:(-4,0) to:(-6.4,0) stroke:#4A6FA5/0.7 strokeWidth:2] (0.5s, ease.out, 4.8s)
+      axis_y_pos:
+        type: morph
+        shape: line[from:(-4,0) to:(-4,0) stroke:#4A6FA5/0.7 strokeWidth:2] ~> line[from:(-4,0) to:(-4,3.4) stroke:#4A6FA5/0.7 strokeWidth:2] (0.5s, ease.out, 5.0s)
+      axis_y_neg:
+        type: morph
+        shape: line[from:(-4,0) to:(-4,0) stroke:#4A6FA5/0.7 strokeWidth:2] ~> line[from:(-4,0) to:(-4,-3.4) stroke:#4A6FA5/0.7 strokeWidth:2] (0.5s, ease.out, 5.0s)
+      number_5_transform:
+        type: morph
+        shape: text[text:"5" fontSize:40 fill:#F5F5F5 at:(-5,1)] -> fadeIn(0.8s) -> scale(1.15, 0.4s, ease.in, 1.1s) ~> text[text:"↗" fontSize:40 fill:#ffd93d at:(-5,1)] (1.5s, ease.inOut, 1.5s)
+      number_3_transform:
+        type: morph
+        shape: text[text:"3" fontSize:36 fill:#F5F5F5 at:(-4,-1)] -> fadeIn(0.6s, 1.0s) -> scale(1.12, 0.35s, ease.in, 1.65s) ~> text[text:"→" fontSize:36 fill:#6bcbff at:(-4,-1)] (1.2s, ease.inOut, 2.0s)
+      number_7_transform:
+        type: morph
+        shape: text[text:"7" fontSize:36 fill:#F5F5F5 at:(-2.5,2)] -> fadeIn(0.6s, 1.5s) -> scale(1.12, 0.35s, ease.in, 2.15s) ~> text[text:"↑" fontSize:36 fill:#ffd93d at:(-2.5,2)] (1.2s, ease.inOut, 2.5s)
+      number_2_transform:
+        type: morph
+        shape: text[text:"2" fontSize:36 fill:#F5F5F5 at:(-3,-2)] -> fadeIn(0.6s, 2.0s) -> scale(1.12, 0.35s, ease.in, 2.65s) ~> text[text:"↙" fontSize:36 fill:#ff6b9d at:(-3,-2)] (1.2s, ease.inOut, 3.0s)
+      vec5_move:
+        type: primitive
+        shape: text[text:"↗" fontSize:40 fill:#ffd93d/0.0 at:(-5,1)] -> fadeIn(0s, 3.2s) -> moveTo((-3,2.5), 2.0s, spring, 3.2s)
+      vec3_move:
+        type: primitive
+        shape: text[text:"→" fontSize:36 fill:#6bcbff/0.0 at:(-4,-1)] -> fadeIn(0s, 3.4s) -> moveTo((-2.2,-0.8), 1.8s, spring, 3.4s)
+      vec7_move:
+        type: primitive
+        shape: text[text:"↑" fontSize:36 fill:#ffd93d/0.0 at:(-2.5,2)] -> fadeIn(0s, 3.8s) -> moveTo((-2.5,3.2), 1.5s, spring, 3.8s)
+      vec2_move:
+        type: primitive
+        shape: text[text:"↙" fontSize:36 fill:#ff6b9d/0.0 at:(-3,-2)] -> fadeIn(0s, 4.2s) -> moveTo((-5,-3.0), 1.8s, spring, 4.2s)
+      keyword_everything:
+        type: morph
+        shape: text[text:"numbers" fontSize:48 fill:#9AA0A6 at:(4.5,2.5)] -> fadeIn(0.8s, 1.0s) ~> text[text:"direction" fontSize:48 fill:#F5F5F5 at:(4.5,2.5)] (1.2s, ease.out, 2.8s) ~> text[text:"everything" fontSize:48 fill:#ffd93d at:(4.5,2.5)] (1.2s, ease.out, 4.0s)
+      phrase_final:
+        type: primitive
+        shape: text[text:"and direction changed everything" fontSize:26 fill:#F5F5F5 at:(4.0,-2.8)] -> fadeIn(1.0s, 4.5s)

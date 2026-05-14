@@ -1,0 +1,1750 @@
+# Two Sum Algorithm - LeetCode #1
+# Given an array of integers and a target sum, find two numbers that add up to target
+# Beautiful visualization of the classic hash map approach vs brute force
+
+concept: "Two Sum Algorithm"
+emoji: "🎯"
+total_duration: 20
+background: "#0a0e1a"
+
+subtitles:
+  - "🎯 Two Sum - LeetCode Problem #1"
+  - "📊 Given: array of integers + target sum"
+  - "🔍 Find: two numbers that add to target"
+  - "⚡ Hash Map Approach: O(n) time complexity"
+  - "🧠 Key insight: store complements as we go"
+  - "✨ Beautiful one-pass solution"
+
+# ------------------------------------------------------------------------------
+# algorithm array- string, cell highlight, text,  fonts
+# ------------------------------------------------------------------------------
+phases:
+  problem_setup:
+    duration: 3
+    description: "Initialize the problem with input array and target"
+    elements:
+      input_array:
+        type: algorithm_array
+        position: [0, -50]
+        items: ["2-1", 7, 11, 15]
+        color: "#3498db"
+        cellSize: 60
+        showIndices: true
+        label: "Input Array"
+      
+      target_display:
+        type: text
+        text: "Target: 9"
+        position: [0, -150]
+        color: "#f39c12"
+        size: 24
+        glow: true
+        font: "Arial"
+      
+      problem_title:
+        type: text
+        text: "🎯 Two Sum Algorithm"
+        position: [0, -250]
+        color: "#58a6ff"
+        size: 28
+        glow: true
+        font: "Arial"
+      
+      
+      
+      map_label:
+        type: text
+        text: "Hash Map: {value → index}"
+        position: [0, 200]
+        color: "#95a5a6"
+        size: 16
+        font: "Arial"
+
+# ------------------------------------------------------------------------------
+# array cell highlighting
+# ------------------------------------------------------------------------------
+  step_one:
+    duration: 4
+    description: "Process first element: check complement, then store"
+    elements:
+      array_step1:
+        type: algorithm_array
+        position: [0, -50]
+        items: [2, 7, 11, 15]
+        highlights: [0]
+        color: "#3498db"
+        cellSize: 60
+        showIndices: true
+      
+      current_element:
+        type: text
+        text: "Current: nums[0] = 2"
+        position: [-200, -50]
+        color: "#f39c12"
+        size: 18
+        glow: true
+      
+      complement_calc:
+        type: text
+        text: "Complement: 9 - 2 = 7"
+        position: [-200, 0]
+        color: "#e74c3c"
+        size: 16
+      
+      check_result:
+        type: text
+        text: "7 not in map ❌"
+        position: [-200, 30]
+        color: "#95a5a6"
+        size: 14
+      
+# ------------------------------------------------------------------------------
+# sparkles
+# ------------------------------------------------------------------------------      
+      
+      sparkle_store:
+        type: sparkles
+        position: [50, 100]
+        density: 10
+        color: "#2ecc71"
+        speed: 0.3
+
+  step_two:
+    duration: 4
+    description: "Process second element: find the complement!"
+    elements:
+
+      
+      complement_calc_2:
+        type: text
+        text: "Complement: 9 - 7 = 2"
+        position: [-200, 0]
+        color: "#e74c3c"
+        size: 16
+      
+      
+      found_animation:
+        type: fireworks
+        position: [0, 100]
+        count: 3
+        colors: ["#2ecc71", "#f39c12", "#58a6ff"]
+      
+      solution_arrow:
+        type: line
+        from: [50, 80]
+        to: [-30, -30]
+        color: "#2ecc71"
+        thickness: 3
+        glow: true
+
+  solution_reveal:
+    duration: 4
+    description: "Show the beautiful solution"
+    elements:
+
+      
+
+      
+      celebration:
+        type: fireworks
+        position: [0, 150]
+        count: 5
+        colors: ["#2ecc71", "#f39c12", "#58a6ff", "#e74c3c"]
+      
+      success_glow:
+        type: circle
+        position: [0, -50]
+        radius: 120
+        color: "#2ecc71"
+        fill: false
+        glow: true
+        opacity: 0.3
+
+  complexity_analysis:
+    duration: 5
+    description: "Algorithm complexity and comparison"
+    elements:
+
+ 
+      efficiency_stars:
+        type: sparkles
+        position: [0, 0]
+        density: 25
+        color: "#ffd700"
+        speed: 0.2
+      
+      background_waves:
+        type: waves
+        position: [0, 100]
+        amplitude: 15
+        frequency: 1.5
+        color: "#58a6ff"
+        opacity: 0.3
+
+  setups:
+    duration: 6
+    description: "Show all available shapes"
+    elements:
+      circle1:
+        type: circle
+        center: [100, 100]
+        radius: 30
+        color: "#1976d2"
+        glow: true
+        label: "Circle"
+
+      circle2:
+        type: circle
+        center: [100, 0]
+        radius: 20
+        color: "#43a047"
+        fill: true
+        label: "Filled"
+
+      line1:
+        type: line
+        from: [0, -100]
+        to: [200, -100]
+        color: "#ffd600"
+        thickness: 3
+        glow: true
+        label: "Line"
+
+      line2:
+        type: line
+        from: [-100, -50]
+        to: [300, 50]
+        color: "#ff6b6b"
+        thickness: 2
+        dashed: true
+        label: "Dashed"
+
+      rect1:
+        type: rectangle
+        position: [-100, 100]
+        width: 60
+        height: 40
+        color: "#9c27b0"
+        glow: true
+        label: "Rectangle"
+
+      rect2:
+        type: rectangle
+        position: [-100, 0]
+        width: 50
+        height: 50
+        color: "#ff9800"
+        fill: true
+        label: "Square"
+
+      point1:
+        type: point
+        position: [0, 100]
+        radius: 8
+        color: "#e91e63"
+        glow: true
+        label: "Point"
+
+      point2:
+        type: point
+        position: [200, 100]
+        radius: 5
+        color: "#00bcd4"
+        label: "Dot"
+
+      # Connect some shapes
+      connector1:
+        type: vector
+        from: [100, 100]
+        to: [-100, 100]
+        color: "#666666"
+        width: 2
+        label: ""
+
+      connector2:
+        type: vector
+        from: [0, 100]
+        to: [100, 0]
+        color: "#666666"
+        width: 2
+        label: ""     
+
+  inner_planets:
+    duration: 8
+    description: "Inner rocky planets"
+    elements:
+      # Mercury - Fastest orbit, closest to sun
+      mercury:
+        type: path_follower
+        position: [50, 0]
+        pathId: "orbit"
+        orbitCenter: [0, 0]
+        orbitRadius: 50
+        pathSpeed: 8.0
+        pathOffset: 0
+        startAngle: 0
+        radius: 3
+        color: "#8C7853"
+        clockwise: true
+        glow: false
+        label: "Mercury"
+      
+      # Venus - Second planet, retrograde rotation
+      venus:
+        type: path_follower
+        position: [70, 0]
+        pathId: "orbit"
+        orbitCenter: [0, 0]
+        orbitRadius: 70
+        pathSpeed: 6.2
+        pathOffset: 0
+        startAngle: 1.8
+        radius: 4
+        color: "#FFC649"
+        clockwise: true
+        glow: true
+        label: "Venus"
+      
+      # Earth - Our home planet
+      earth:
+        type: path_follower
+        position: [100, 0]
+        pathId: "orbit"
+        orbitCenter: [0, 0]
+        orbitRadius: 100
+        pathSpeed: 5.0
+        pathOffset: 0
+        startAngle: 3.14
+        radius: 5
+        color: "#6B93D6"
+        clockwise: true
+        glow: true
+        label: "Earth"
+      
+      # Mars - The red planet
+      mars:
+        type: path_follower
+        position: [130, 0]
+        pathId: "orbit"
+        orbitCenter: [0, 0]
+        orbitRadius: 130
+        pathSpeed: 3.8
+        pathOffset: 0
+        startAngle: 0.5
+        radius: 4
+        color: "#CD5C5C"
+        clockwise: true
+        glow: false
+        label: "Mars"
+
+  complete_solar_system:
+    duration: 4
+    description: "Complete solar system view with information"
+    elements:
+      # Planet information
+      planet_count:
+        type: text
+        text: "🪐 8 Planets • 🌙 1 Moon • ☀️ 1 Star • 🪨 Asteroid Belt"
+        position: [0, 340]
+        color: "#FDB813"
+        size: 16
+        glow: true
+      
+  grid_background:
+    duration: 0.5
+    description: "Setup grid background"
+    elements:
+      # Grid background for physics lab feel
+      background_grid:
+        type: grid
+        position: [0, 0]
+        width: 800
+        height: 600
+        spacing: 25
+        color: "#2c3e50"
+        thickness: 1
+        opacity: 0.3
+        label: "Physics Grid"
+      
+      # Major grid lines every 100 pixels
+      major_grid:
+        type: grid
+        position: [0, 0]
+        width: 800
+        height: 600
+        spacing: 100
+        color: "#34495e"
+        thickness: 2
+        opacity: 0.5
+        label: "Major Grid"
+      
+      # Coordinate axes
+      x_axis:
+        type: line
+        from: [-400, 0]
+        to: [400, 0]
+        color: "#5d6d7e"
+        thickness: 2
+        opacity: 0.6
+        label: "X-axis"
+      
+      y_axis:
+        type: line
+        from: [0, -350]
+        to: [0, 350]
+        color: "#5d6d7e"
+        thickness: 2
+        opacity: 0.6
+        label: "Y-axis"
+      
+      # Axis labels
+      origin_label:
+        type: text
+        text: "(0,0)"
+        position: [15, 15]
+        color: "#7f8c8d"
+        size: 10
+      
+      x_label:
+        type: text
+        text: "X"
+        position: [380, -20]
+        color: "#7f8c8d"
+        size: 12
+      
+      y_label:
+        type: text
+        text: "Y"
+        position: [20, -330]
+        color: "#7f8c8d"
+        size: 12
+
+
+      pendulum_bob:
+        type: path_follower
+        position: [87, -120]  # Starting position (60° from vertical)
+        pathId: "pendulum"
+        orbitCenter: [0, -270]
+        orbitRadius: 150
+        maxAngle: 1.047  # 60 degrees in radians
+        damping: 0.98
+        pathSpeed: 1.5
+        pathOffset: 0
+        radius: 12
+        color: "#e74c3c"
+        glow: true
+        label: "Pendulum Bob"
+
+      right_anchor:
+        type: circle
+        position: [150, -272]
+        radius: 4
+        color: "#2c3e50"
+        label: "Right Pivot"
+      
+      right_pendulum:
+        type: path_follower
+        position: [250, -90]
+        pathId: "pendulum"
+        orbitCenter: [150, -272]
+        orbitRadius: 180
+        maxAngle: 0.349  # 20 degrees
+        damping: 0.99
+        pathSpeed: 1.2
+        pathOffset: 0.6
+        radius: 12
+        color: "#9b59b6"
+        glow: true
+
+
+      # Create 9 pendulums with slightly different lengths
+      # This creates a beautiful wave pattern as they go in and out of sync
+      p1:
+        type: path_follower
+        position: [-200, -170]
+        pathId: "pendulum"
+        orbitCenter: [-200, -274]
+        orbitRadius: 110
+        maxAngle: 0.524
+        damping: 0.995
+        pathSpeed: 1.8
+        pathOffset: 0
+        radius: 5
+        color: "#e74c3c"
+        glow: true
+        label: "P1"
+      
+      p2:
+        type: path_follower
+        position: [-150, -165]
+        pathId: "pendulum"
+        orbitCenter: [-150, -274]
+        orbitRadius: 115
+        maxAngle: 0.524
+        damping: 0.995
+        pathSpeed: 1.75
+        pathOffset: 0
+        radius: 5
+        color: "#f39c12"
+        glow: true
+        label: "P2"
+      
+      p3:
+        type: path_follower
+        position: [-100, -160]
+        pathId: "pendulum"
+        orbitCenter: [-100, -274]
+        orbitRadius: 120
+        maxAngle: 0.524
+        damping: 0.995
+        pathSpeed: 1.7
+        pathOffset: 0
+        radius: 5
+        color: "#f1c40f"
+        glow: true
+        label: "P3"
+      
+      p4:
+        type: path_follower
+        position: [-50, -155]
+        pathId: "pendulum"
+        orbitCenter: [-50, -274]
+        orbitRadius: 125
+        maxAngle: 0.524
+        damping: 0.995
+        pathSpeed: 1.65
+        pathOffset: 0
+        radius: 5
+        color: "#2ecc71"
+        glow: true
+        label: "P4"
+      
+      p5:
+        type: path_follower
+        position: [0, -150]
+        pathId: "pendulum"
+        orbitCenter: [0, -274]
+        orbitRadius: 130
+        maxAngle: 0.524
+        damping: 0.995
+        pathSpeed: 1.6
+        pathOffset: 0
+        radius: 5
+        color: "#3498db"
+        glow: true
+        label: "P5"
+      
+      p6:
+        type: path_follower
+        position: [50, -145]
+        pathId: "pendulum"
+        orbitCenter: [50, -274]
+        orbitRadius: 135
+        maxAngle: 0.524
+        damping: 0.995
+        pathSpeed: 1.55
+        pathOffset: 0
+        radius: 5
+        color: "#9b59b6"
+        glow: true
+        label: "P6"
+      
+      p7:
+        type: path_follower
+        position: [100, -140]
+        pathId: "pendulum"
+        orbitCenter: [100, -274]
+        orbitRadius: 140
+        maxAngle: 0.524
+        damping: 0.995
+        pathSpeed: 1.5
+        pathOffset: 0
+        radius: 5
+        color: "#e67e22"
+        glow: true
+        label: "P7"
+      
+      p8:
+        type: path_follower
+        position: [150, -135]
+        pathId: "pendulum"
+        orbitCenter: [150, -274]
+        orbitRadius: 145
+        maxAngle: 0.524
+        damping: 0.995
+        pathSpeed: 1.45
+        pathOffset: 0
+        radius: 5
+        color: "#1abc9c"
+        glow: true
+        label: "P8"
+      
+      p9:
+        type: path_follower
+        position: [200, -130]
+        pathId: "pendulum"
+        orbitCenter: [200, -274]
+        orbitRadius: 150
+        maxAngle: 0.524
+        damping: 0.995
+        pathSpeed: 1.4
+        pathOffset: 0
+        radius: 5
+        color: "#8e44ad"
+        glow: true
+        label: "P9"
+      
+      wave_explanation:
+        type: text
+        text: "Pendulums with slightly different periods create mesmerizing wave patterns"
+        position: [0, 180]
+        color: "#95a5a6"
+        size: 12
+
+      pendulum_bob:
+        type: path_follower
+        position: [100, -100]
+        pathId: "semicircle"
+        orbitCenter: [0, -250]
+        orbitRadius: 150
+        pathSpeed: 2.0
+        pathOffset: 0
+        startAngle: -1.0  # Start from right side, about 60 degrees
+        radius: 8
+        color: "#e74c3c"
+        glow: true
+        clockwise: false  # Swing back and forth
+        label: "Pendulum Bob"
+
+
+  sine_paths:
+    duration: 2
+    description: "Objects following sine wave paths"
+    elements:
+      sine_path_particle:
+        type: path_follower
+        position: [-300, -200]
+        radius: 8
+        color: "#3498db"
+        glow: true
+        pathId: "sine"
+        amplitude: 60
+        frequency: 0.02
+        phaseShift: 0
+        startX: -350
+        endX: 350
+        pathSpeed: 1
+        pathOffset: 0
+        label: "Sine Wave"
+      
+      sine_title:
+        type: text
+        text: "🌊 Sine Wave Path"
+        position: [0, -100]
+        color: "#3498db"
+        size: 18
+        glow: true
+
+  circular_paths:
+    duration: 2
+    description: "Objects following circular paths"
+    elements:
+      circle_particle_1:
+        type: path_follower
+        position: [0, 0]
+        radius: 6
+        color: "#e74c3c"
+        glow: true
+        pathId: "circle"
+        orbitCenter: [-200, 0]
+        orbitRadius: 80
+        pathSpeed: 1
+        pathOffset: 0
+        clockwise: true
+        label: "Circle CW"
+      
+      circle_particle_2:
+        type: path_follower
+        position: [0, 0]
+        radius: 6
+        color: "#2ecc71"
+        glow: true
+        pathId: "orbit"
+        orbitCenter: [200, 0]
+        orbitRadius: 80
+        pathSpeed: 1
+        pathOffset: 0
+        clockwise: false
+        label: "Circle CCW"
+      
+      circle_title:
+        type: text
+        text: "⭕ Circular Paths"
+        position: [0, -100]
+        color: "#e74c3c"
+        size: 18
+        glow: true
+
+  semicircle_paths:
+    duration: 2
+    description: "Objects following semi-circle paths"
+    elements:
+      semicircle_particle:
+        type: path_follower
+        position: [0, 0]
+        radius: 7
+        color: "#f39c12"
+        glow: true
+        pathId: "semicircle"
+        orbitCenter: [0, 100]
+        orbitRadius: 120
+        pathSpeed: 1
+        pathOffset: 0
+        startAngle: 0
+        label: "Semi-Circle"
+      
+      semicircle_title:
+        type: text
+        text: "🌙 Semi-Circle Path"
+        position: [0, -100]
+        color: "#f39c12"
+        size: 18
+        glow: true
+
+  linear_paths:
+    duration: 2
+    description: "Objects following linear paths"
+    elements:
+      linear_particle_1:
+        type: path_follower
+        position: [0, 0]
+        radius: 8
+        color: "#9b59b6"
+        glow: true
+        pathId: "linear"
+        startX: -300
+        startY: -50
+        endX: 300
+        endY: 50
+        pathSpeed: 1
+        pathOffset: 0
+        label: "Linear Diagonal"
+      
+      linear_particle_2:
+        type: path_follower
+        position: [0, 0]
+        radius: 6
+        color: "#1abc9c"
+        glow: true
+        pathId: "linear"
+        startX: -250
+        startY: 100
+        endX: 250
+        endY: 100
+        pathSpeed: 1
+        pathOffset: 0.3
+        label: "Linear Horizontal"
+      
+      linear_title:
+        type: text
+        text: "➡️ Linear Paths"
+        position: [0, -100]
+        color: "#9b59b6"
+        size: 18
+        glow: true
+
+  figure8_paths:
+    duration: 2
+    description: "Objects following figure-8 paths"
+    elements:
+      figure8_particle:
+        type: path_follower
+        position: [0, 0]
+        radius: 7
+        color: "#e67e22"
+        glow: true
+        pathId: "figure8"
+        orbitCenter: [0, 50]
+        scale: 150
+        pathSpeed: 1
+        pathOffset: 0
+        label: "Figure-8"
+      
+      figure8_title:
+        type: text
+        text: "♾️ Figure-8 Path (Lemniscate)"
+        position: [0, -100]
+        color: "#e67e22"
+        size: 18
+        glow: true
+
+  spiral_paths:
+    duration: 2
+    description: "Objects following spiral paths"
+    elements:
+      spiral_particle:
+        type: path_follower
+        position: [0, 0]
+        radius: 8
+        color: "#8e44ad"
+        glow: true
+        pathId: "spiral"
+        orbitCenter: [0, 50]
+        maxRadius: 200
+        pathSpeed: 1
+        pathOffset: 0
+        label: "Spiral"
+      
+      spiral_title:
+        type: text
+        text: "🌀 Spiral Path"
+        position: [0, -200]
+        color: "#8e44ad"
+        size: 18
+        glow: true
+
+  ellipse_paths:
+    duration: 2
+    description: "Objects following elliptical paths"
+    elements:
+      ellipse_particle_1:
+        type: path_follower
+        position: [0, 0]
+        radius: 7
+        color: "#d35400"
+        glow: true
+        pathId: "ellipse"
+        orbitCenter: [-150, 0]
+        radiusX: 100
+        radiusY: 60
+        rotation: 0
+        pathSpeed: 1
+        pathOffset: 0
+        label: "Ellipse Normal"
+      
+      ellipse_particle_2:
+        type: path_follower
+        position: [0, 0]
+        radius: 6
+        color: "#27ae60"
+        glow: true
+        pathId: "ellipse"
+        orbitCenter: [150, 0]
+        radiusX: 80
+        radiusY: 50
+        rotation: 0.785398  # 45 degrees in radians
+        pathSpeed: 1
+        pathOffset: 0.5
+        label: "Ellipse Rotated"
+      
+      ellipse_title:
+        type: text
+        text: "🥚 Elliptical Paths"
+        position: [0, -150]
+        color: "#d35400"
+        size: 18
+        glow: true
+
+
+  setuup:
+    duration: 5
+    description: "Initialize the elevation grid and ocean boundaries"
+    elements:
+      main_sine_curve:
+        type: sine_curve
+        position: [0, 0]
+        amplitude: 80
+        frequency: 0.015
+        phaseShift: 0
+        startX: -400
+        endX: 400
+        color: "#3498db"
+        thickness: 3
+        glow: true
+        label: "Primary Sine Wave"
+      
+      # Secondary sine curve with different properties
+      secondary_sine_curve:
+        type: sine_curve
+        position: [0, 50]
+        amplitude: 50
+        frequency: 0.025
+        phaseShift: 1.57
+        startX: -400
+        endX: 400
+        color: "#2ecc71"
+        thickness: 2
+        glow: true
+        label: "Secondary Sine Wave"    
+
+      beautiful_waves:
+        type: waves
+        amplitude: 40
+        frequency: 0.04
+        layers: 4
+        colors: ["#4ecdc4", "#ff6b6b", "#d4af37", "#9b59b6"]
+        position: [0, 0]
+        opacity: 0.5
+         animated: true
+
+      elevation_grid:
+        type: algorithm_grid
+        position: [-100, 150]
+        rows: 5
+        cols: 5
+        cellSize: 60
+        spacing: 6
+        color: "#2c3e50"
+        border_color: "#34495e"
+        border_width: 3
+        cells: [[1, 2, 2, 3, 5], [3, 2, 3, 4, 4], [2, 4, 5, 3, 1], [6, 7, 1, 4, 5], [5, 1, 1, 2, 4]]
+        showValues: true
+        label: "Elevation Grid"
+
+  pacific_matrix_show:
+    duration:2
+    description:
+    elements:
+      pacific_matrix:
+        type: matrix
+        position: [-100, 150]
+        values: [[1, 2, 2, 3, 5], [3, 2, 3, 4, 4], [2, 4, 5, 3, 1], [6, 7, 1, 4, 5], [5, 1, 1, 2, 4]]
+        color: "#4ecdc4"
+        cellSize: 20                   # Individual cell size
+        textSize: 14 
+        label: "🌊 Pacific Ocean"
+
+
+  pacific_matrix_highlight:
+    duration:2
+    description:
+    elements:
+      pacific_matrix:
+        type: matrix
+        position: [-100, 150]
+        values: [[1, 2, 2, 3, 5], [3, 2, 3, 4, 4], [2, 4, 5, 3, 1], [6, 7, 1, 4, 5], [5, 1, 1, 2, 4]]
+        color: "#4ecdc4"
+        cellSize: 20                   # Individual cell size
+        textSize: 14 
+        label: "🌊 Pacific Ocean"
+        highlightRow: 4
+        highlightCol: 0
+
+      neural_background:
+        type: neural_net
+        position: [0, 0]
+        width: 600
+        height: 400
+        nodeColor: "#3498db"
+        edgeColor: "#2ecc71"
+        opacity: 0.2
+        animated: true
+
+  final_result:
+    duration: 5
+    description: "Show the final result of cells that can reach both oceans"
+    elements:
+      result_grid:
+        type: algorithm_grid
+        position: [0, 0]
+        rows: 5
+        cols: 5
+        cellSize: 60
+        spacing: 6
+        color: "#f39c12"
+        border_color: "#e67e22"
+        border_width: 4
+        cells: [[false, false, false, false, true], [false, false, false, true, true], [false, false, true, false, false], [true, true, false, false, false], [true, false, false, false, false]]
+        showValues: true
+        highlightCells: [[0, 4], [1, 3], [1, 4], [2, 2], [3, 0], [3, 1], [4, 0]]
+        label: "Both Oceans Reachable"
+        glow: true
+
+
+      fireworks:
+        type: fireworks
+        position: [0, 0]
+        count: 5
+        colors: ["#f1c40f", "#2ecc71", "#3498db", "#9b59b6", "#e74c3c"]
+        animated: true
+
+      star_field:
+        type: star_field
+        position: [0, 0]
+        width: 800
+        height: 600
+        count: 100
+        color: "#ffffff"
+        opacity: 0.5
+        animated: true
+
+  basic_matrix:
+    duration: 3
+    description: "Basic 5x5 matrix"
+    elements:
+      my_matrix:
+        type: matrix
+        position: [0, 0]
+        values: [[1, 2, 3, 4, 5], [6, 7, 8, 9, 10], [11, 12, 13, 14, 15], [16, 17, 18, 19, 20], [21, 22, 23, 24, 25]]
+        color: "#4ecdc4"
+        label: "Matrix A"
+        
+      title:
+        type: text
+        text: "Basic 5x5 Matrix"
+        position: [0, -150]
+        color: "#ffffff"
+        size: 18
+
+  highlight_row:
+    duration: 3
+    description: "Highlighting a row"
+    elements:
+      my_matrix:
+        type: matrix
+        position: [0, 0]
+        values: [[1, 2, 3, 4, 5], [6, 7, 8, 9, 10], [11, 12, 13, 14, 15], [16, 17, 18, 19, 20], [21, 22, 23, 24, 25]]
+        color: "#4ecdc4"
+        label: "Matrix A"
+        highlight_mode: "row"
+        highlight_index: 2
+        
+      title:
+        type: text
+        text: "Row Highlighting"
+        position: [0, -150]
+        color: "#ffffff"
+        size: 18
+  
+  highlight_column:
+    duration: 2
+    description: "Highlighting a column"
+    elements:
+      my_matrix:
+        type: matrix
+        position: [0, 0]
+        values: [[1, 2, 3, 4, 5], [6, 7, 8, 9, 10], [11, 12, 13, 14, 15], [16, 17, 18, 19, 20], [21, 22, 23, 24, 25]]
+        color: "#4ecdc4"
+        label: "Matrix A"
+        highlight_mode: "column"
+        highlight_index: 3
+        
+      title:
+        type: text
+        text: "Column Highlighting"
+        position: [0, -150]
+        color: "#ffffff"
+        size: 18
+
+  highlight_multiple_cells:
+    duration: 3
+    description: "Highlighting multiple cells"
+    elements:
+      my_matrix:
+        type: matrix
+        position: [0, 0]
+        values: [[1, 2, 3, 4, 5], [6, 7, 8, 9, 10], [11, 12, 13, 14, 15], [16, 17, 18, 19, 20], [21, 22, 23, 24, 25]]
+        color: "#4ecdc4"
+        label: "Matrix A"
+        highlightCells: [[0, 0], [1, 1], [2, 2], [3, 3], [4, 4], [0, 4], [1, 3], [3, 1], [4, 0]]
+
+
+  setup_neural:
+    duration: 3
+    description: "Initialize neural network"
+    elements:
+      network:
+        type: neural_net
+        position: [0, 0]
+        layers: [3, 5, 3, 1]
+        colors: ["#4ecdc4", "#d4af37"]
+      
+      input_sparkles:
+        type: sparkles
+        count: 3
+        
+  training:
+    duration: 4
+    description: "Training process"
+    elements:
+      active_network:
+        type: neural_net
+        position: [0, 0]
+        layers: [3, 5, 3, 1]
+        colors: ["#ff6b6b", "#4ecdc4", "#d4af37"]
+        animation_speed: 1.5
+      
+      data_flow:
+        type: sparkles
+        count: 10
+        
+  convergence:
+    duration: 3
+    description: "Model convergence"
+    elements:
+      trained_network:
+        type: neural_net
+        position: [0, 0]
+        layers: [3, 5, 3, 1]
+        colors: ["#d4af37", "#ffffff"]
+      
+      success_fireworks:
+        type: fireworks
+        position: [150, -100]
+        intensity: 1
+        colors: ["#4ecdc4", "#d4af37"]
+        
+  celebration:
+    duration: 2
+    description: "Training complete"
+    elements:
+      final_network:
+        type: neural_net
+        position: [0, 0]
+        layers: [3, 5, 3, 1]
+        colors: ["#d4af37"]
+      
+      star_celebration:
+        type: star_field
+        density: 1.5                                     
+
+
+  setup_simple_neural:
+    duration: 5
+    description: "Show circles and connecting arrows"
+    elements:
+      node1:
+        type: circle
+        center: [150, 200]
+        radius: 24
+        color: "#1976d2"
+        glow: true
+        label: "A"
+
+      node2:
+        type: circle
+        center: [350, 120]
+        radius: 24
+        color: "#43a047"
+        glow: true
+        label: "B"
+
+      node3:
+        type: circle
+        center: [350, 280]
+        radius: 24
+        color: "#ffd600"
+        glow: true
+        label: "C"
+
+      arrow1:
+        type: vector
+        from: [150, 200]
+        to: [350, 120]
+        color: "#fff"
+        width: 4
+        glow: true
+        label: ""
+
+      arrow2:
+        type: vector
+        from: [150, 200]
+        to: [350, 280]
+        color: "#fff"
+        width: 4
+        glow: true
+        label: ""
+
+
+  setup_grids:
+    duration: 3
+    description: "Show initial grid space"
+    elements:
+      base_grid:
+        type: grid
+        style: "3d"
+        spacing: 50
+        density: 1.2
+        color: "#333"
+        opacity: 0.8
+        glow: false
+      
+      vector_a:
+        type: vector
+        from: [0, 0]
+        to: [150, 100]
+        color: "#ff6b6b"
+        width: 3
+        glow: true
+        label: "Vector A"
+      
+      vector_b:
+        type: vector
+        from: [0, 0]  
+        to: [80, 180]
+        color: "#4ecdc4"
+        width: 3
+        glow: true
+        label: "Vector B"
+
+  transform:
+    duration: 4
+    description: "Apply transformation to space"
+    elements:
+      transformed_grid:
+        type: grid
+        style: "3d"
+        spacing: 50
+        density: 1.2
+        color: "#666"
+        opacity: 0.9
+        glow: true
+      
+      transformed_vector_a:
+        type: vector
+        from: [0, 0]
+        to: [220, 160]
+        color: "#ff6b6b"
+        width: 4
+        glow: true
+        label: "A'"
+      
+      transformed_vector_b:
+        type: vector
+        from: [0, 0]
+        to: [120, 250]
+        color: "#4ecdc4"
+        width: 4
+        glow: true
+        label: "B'"
+
+  perspective:
+    duration: 3
+    description: "Show perspective grid view"
+    elements:
+      perspective_grid:
+        type: grid
+        style: "perspective"
+        spacing: 40
+        density: 1
+        color: "#d4af37"
+        opacity: 0.7
+        glow: true
+        perspective_depth: 0.8
+      
+      point_a:
+        type: point
+        position: [100, 120]
+        color: "#ff6b6b"
+        radius: 8
+        glow: true
+      
+      point_b:
+        type: point
+        position: [-80, 150]
+        color: "#4ecdc4"
+        radius: 8
+        glow: true
+
+  flat_view:
+    duration: 2
+    description: "Show flat grid overlay"
+    elements:
+      flat_grid:
+        type: grid
+        style: "flat"
+        spacing: 30
+        density: 0.8
+        color: "#444"
+        opacity: 0.5
+        glow: false
+      
+      result_text:
+        type: text
+        text: "Space Transformed"
+        position: [100, -200]
+        color: "#d4af37"
+        size: 24
+        glow: true
+
+
+
+
+  planetary_orbits:
+    duration: 8
+    description: "Planets orbiting the sun with realistic features"
+    elements:
+      # Sun stays stationary at center
+      sun_center:
+        type: circle
+        position: [0, 0]
+        radius: 25
+        color: "#f39c12"
+        glow: true
+        label: "Sun"
+      
+      # Orbital path guides (subtle)
+      mercury_path:
+        type: circle
+        position: [0, 0]
+        radius: 60
+        color: "#333333"
+        fill: false
+        thickness: 1
+        opacity: 0.3
+        label: "Mercury Path"
+      
+      venus_path:
+        type: circle
+        position: [0, 0]
+        radius: 85
+        color: "#333333"
+        fill: false
+        thickness: 1
+        opacity: 0.3
+        label: "Venus Path"
+      
+      earth_path:
+        type: circle
+        position: [0, 0]
+        radius: 120
+        color: "#3498db"
+        fill: false
+        thickness: 2
+        opacity: 0.4
+        label: "Earth Path"
+      
+      mars_path:
+        type: circle
+        position: [0, 0]
+        radius: 160
+        color: "#333333"
+        fill: false
+        thickness: 1
+        opacity: 0.3
+        label: "Mars Path"
+      
+      jupiter_path:
+        type: circle
+        position: [0, 0]
+        radius: 220
+        color: "#333333"
+        fill: false
+        thickness: 1
+        opacity: 0.3
+        label: "Jupiter Path"
+      
+      saturn_path:
+        type: circle
+        position: [0, 0]
+        radius: 280
+        color: "#333333"
+        fill: false
+        thickness: 1
+        opacity: 0.3
+        label: "Saturn Path"
+      
+      # Mercury - Fastest orbit, closest to sun
+      mercury:
+        type: path_follower
+        position: [60, 0]
+        pathId: "orbit"
+        orbitCenter: [0, 0]
+        orbitRadius: 60
+        pathSpeed: 4.0
+        pathOffset: 0
+        startAngle: 0
+        radius: 4
+        color: "#95a5a6"
+        clockwise: true
+        label: "Mercury"
+      
+      # Venus - Second fastest
+      venus:
+        type: path_follower
+        position: [85, 0]
+        pathId: "orbit"
+        orbitCenter: [0, 0]
+        orbitRadius: 85
+        pathSpeed: 3.2
+        pathOffset: 0
+        startAngle: 1.2
+        radius: 6
+        color: "#e67e22"
+        clockwise: true
+        glow: true
+        label: "Venus"
+      
+      # Earth - Our home planet
+      earth:
+        type: path_follower
+        position: [120, 0]
+        pathId: "orbit"
+        orbitCenter: [0, 0]
+        orbitRadius: 120
+        pathSpeed: 2.5
+        pathOffset: 0
+        startAngle: 2.4
+        radius: 7
+        color: "#3498db"
+        glow: true
+        clockwise: true
+        label: "Earth"
+      
+      # Moon - Simulated lunar orbit (simplified - orbits around Earth's path)
+      moon:
+        type: path_follower
+        position: [135, 0]
+        pathId: "orbit"
+        orbitCenter: [0, 0]
+        orbitRadius: 135
+        pathSpeed: 30.0
+        pathOffset: 0
+        startAngle: 2.4
+        radius: 2
+        color: "#ecf0f1"
+        clockwise: true
+        label: "Moon"
+      
+      # Mars - The red planet
+      mars:
+        type: path_follower
+        position: [160, 0]
+        pathId: "orbit"
+        orbitCenter: [0, 0]
+        orbitRadius: 160
+        pathSpeed: 2.0
+        pathOffset: 0
+        startAngle: 3.8
+        radius: 5
+        color: "#c0392b"
+        clockwise: true
+        label: "Mars"
+      
+      # Jupiter - Gas giant
+      jupiter:
+        type: path_follower
+        position: [220, 0]
+        pathId: "orbit"
+        orbitCenter: [0, 0]
+        orbitRadius: 220
+        pathSpeed: 1.5
+        pathOffset: 0
+        startAngle: 5.2
+        radius: 15
+        color: "#d35400"
+        glow: true
+        clockwise: true
+        label: "Jupiter"
+      
+      # Saturn - Ringed planet
+      saturn:
+        type: path_follower
+        position: [280, 0]
+        pathId: "orbit"
+        orbitCenter: [0, 0]
+        orbitRadius: 280
+        pathSpeed: 1.2
+        pathOffset: 0
+        startAngle: 0.8
+        radius: 12
+        color: "#f4d03f"
+        clockwise: true
+        label: "Saturn"
+      
+      # Uranus - Ice giant
+      uranus:
+        type: path_follower
+        position: [320, 0]
+        pathId: "orbit"
+        orbitCenter: [0, 0]
+        orbitRadius: 320
+        pathSpeed: 0.9
+        pathOffset: 0
+        startAngle: 4.1
+        radius: 8
+        color: "#1abc9c"
+        glow: true
+        clockwise: true
+        label: "Uranus"
+      
+      # Neptune - Farthest planet
+      neptune:
+        type: path_follower
+        position: [360, 0]
+        pathId: "orbit"
+        orbitCenter: [0, 0]
+        orbitRadius: 360
+        pathSpeed: 0.7
+        pathOffset: 0
+        startAngle: 6.0
+        radius: 8
+        color: "#3b82f6"
+        glow: true
+        clockwise: true
+        label: "Neptune"
+      
+      # Planet labels
+      planet_info:
+        type: text
+        text: "🪐 8 Planets • 🌙 1 Moon • ⭐ 1 Star"
+        position: [0, 250]
+        color: "#f39c12"
+        size: 16
+      
+      inner_planets:
+        type: text
+        text: "Inner: Mercury • Venus • Earth • Mars"
+        position: [-150, 220]
+        color: "#e74c3c"
+        size: 12
+      
+      outer_planets:
+        type: text
+        text: "Outer: Jupiter • Saturn • Uranus • Neptune"
+        position: [150, 220]
+        color: "#3498db"
+        size: 12
+
+
+
+  winter_scene:
+    duration: 4
+    description: "Setting the winter scene"
+    elements:
+      gentle_snow:
+        type: snow
+        density: 0.8
+      
+      stars:
+        type: star_field
+        density: 1.2
+        
+  tree_appears:
+    duration: 3
+    description: "Christmas tree grows"
+    elements:
+      growing_tree:
+        type: christmas_tree
+        position: [0, 80]
+        size: 150
+      
+      more_snow:
+        type: snow
+        density: 1
+        
+  celebration:
+    duration: 4
+    description: "Christmas celebration"
+    elements:
+      full_tree:
+        type: christmas_tree
+        position: [0, 80]
+        size: 150
+      
+      celebration_fireworks:
+        type: fireworks
+        position: [0, -150]
+        intensity: 1.2
+        colors: ["#ff6b6b", "#4ecdc4", "#d4af37", "#ffffff"]
+      
+      heavy_snow:
+        type: snow
+        density: 1.5
+        
+  magical_finale:
+    duration: 4
+    description: "Magical winter finale"
+    elements:
+      magic_tree:
+        type: christmas_tree
+        position: [0, 80]
+        size: 150
+      
+      sparkle_magic:
+        type: sparkles
+        count: 15
+      
+      soft_snow:
+        type: snow
+        density: 0.6
+      
+      night_stars:
+        type: star_field
+        density: 2
+
+
+  statistical_properties:
+    duration: 7
+    description: "Show statistical properties"
+    elements:
+      # Continue showing the bell curve
+      bell_curve:
+        type: bell_curve
+        position: [0, 0]
+        amplitude: 150
+        variance: 3000
+        mean: 0
+        startX: -200
+        endX: 200
+        color: "#3498db"
+        thickness: 2
+        glow: true
+
+
+  setup_algorithm_tree:
+    duration: 3
+    description: "Show the BST structure and search target"
+    elements:
+      root_node:
+        type: algorithm_tree
+        position: [0, -100]
+        color: "#3498db"
+        value: 50
+        label: "Root (50)"
+      
+      left_child:
+        type: algorithm_tree
+        position: [-150, 50]
+        color: "#3498db"
+        value: 30
+        label: "Left (30)"
+      
+      right_child:
+        type: algorithm_tree
+        position: [150, 50]
+        color: "#3498db"
+        value: 70
+        label: "Right (70)"
+      
+      left_left:
+        type: algorithm_tree
+        position: [-200, 200]
+        color: "#3498db"
+        value: 20
+        label: "20"
+      
+      left_right:
+        type: algorithm_tree
+        position: [-100, 200]
+        color: "#3498db"
+        value: 40
+        label: "40"
+      
+      right_left:
+        type: algorithm_tree
+        position: [100, 200]
+        color: "#3498db"
+        value: 60
+        label: "60"
+      
+      right_right:
+        type: algorithm_tree
+        position: [200, 200]
+        color: "#3498db"
+        value: 80
+        label: "80"
+      
+      search_target:
+        type: text
+        text: "🎯 Searching for: 60"
+        position: [0, -250]
+        color: "#f39c12"
+        size: 20
+        glow: true
+      
+      title:
+        type: text
+        text: "BST Search Algorithm"
+        position: [0, -300]
+        color: "#f0f6fc"
+        size: 24
+        glow: true
+
+
+
+  fireworks_demo:
+    duration: 4
+    description: "Fireworks celebration"
+    elements:
+      celebration:
+        type: fireworks
+        position: [0, -100]
+        intensity: 1.5
+        colors: ["#ff6b6b", "#4ecdc4", "#d4af37", "#9b59b6", "#ffffff"]
+      
+      sparkle_bg:
+        type: sparkles
+        count: 8
+        
+  snow_scene:
+    duration: 4
+    description: "Winter wonderland"
+    elements:
+      snowfall:
+        type: snow
+        density: 1.2
+      
+      christmas_tree:
+        type: christmas_tree
+        position: [0, 50]
+        size: 120
+        
+  neural_demo:
+    duration: 4
+    description: "Neural network visualization"
+    elements:
+      brain_network:
+        type: neural_net
+        position: [0, 0]
+        layers: [4, 6, 4, 2]
+        colors: ["#4ecdc4", "#d4af37"]
+        
+  fire_waves:
+    duration: 4
+    description: "Fire and water elements"
+    elements:
+      flame:
+        type: fire
+        position: [0, 100]
+        intensity: 1.8
+      
+      ocean_waves:
+        type: waves
+        position: [0, 150]
+        amplitude: 40
+        frequency: 0.03
+        
+  star_finale:
+    duration: 4
+    description: "Starfield finale"
+    elements:
+      cosmic_field:
+        type: star_field
+        density: 2
+      
+      final_fireworks:
+        type: fireworks
+        position: [100, -50]
+        intensity: 2
+        colors: ["#d4af37", "#ffffff"]
+
+
+
+
+equations:
+  - id: algorithm_steps
+    latex: "\\text{for each } x \\text{ in nums: if } (target - x) \\text{ in map, return indices}"
+    position: [0, 180]
+    phase: complexity_analysis
+    animation: fade-in
+    glow: true
+    size: 16
+  
+  - id: time_complexity
+    latex: "T(n) = O(n), \\quad S(n) = O(n)"
+    position: [0, 220]
+    phase: complexity_analysis
+    animation: slide-in
+    color: "#2ecc71"
+    size: 18

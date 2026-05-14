@@ -1,0 +1,705 @@
+# Realistic Pendulum Simulation
+# True pendulum physics with proper oscillation patterns
+
+concept: "Pendulum Physics"
+emoji: "⚖️"
+total_duration: 12
+background: "#16213e"
+
+subtitles:
+  - "⚖️ Simple harmonic motion"
+  - "🔗 Pendulum mechanics"
+  - "📐 Arc oscillation"
+  - "⚖️ Physics in motion"
+
+phases:
+  grid_background:
+    duration: 0.5
+    description: "Setup grid background"
+    elements:
+      # Grid background for physics lab feel
+      background_grid:
+        type: grid
+        position: [0, 0]
+        width: 800
+        height: 600
+        spacing: 25
+        color: "#2c3e50"
+        thickness: 1
+        opacity: 0.3
+        label: "Physics Grid"
+      
+      # Major grid lines every 100 pixels
+      major_grid:
+        type: grid
+        position: [0, 0]
+        width: 800
+        height: 600
+        spacing: 100
+        color: "#34495e"
+        thickness: 2
+        opacity: 0.5
+        label: "Major Grid"
+      
+      # Coordinate axes
+      x_axis:
+        type: line
+        from: [-400, 0]
+        to: [400, 0]
+        color: "#5d6d7e"
+        thickness: 2
+        opacity: 0.6
+        label: "X-axis"
+      
+      y_axis:
+        type: line
+        from: [0, -350]
+        to: [0, 350]
+        color: "#5d6d7e"
+        thickness: 2
+        opacity: 0.6
+        label: "Y-axis"
+      
+      # Axis labels
+      origin_label:
+        type: text
+        text: "(0,0)"
+        position: [15, 15]
+        color: "#7f8c8d"
+        size: 10
+      
+      x_label:
+        type: text
+        text: "X"
+        position: [380, -20]
+        color: "#7f8c8d"
+        size: 12
+      
+      y_label:
+        type: text
+        text: "Y"
+        position: [20, -330]
+        color: "#7f8c8d"
+        size: 12
+
+  simple_pendulum:
+    duration: 4
+    description: "Single pendulum with realistic motion"
+    elements:
+      # Grid background for physics lab feel
+      background_grid:
+        type: grid
+        position: [0, 0]
+        width: 800
+        height: 600
+        spacing: 25
+        color: "#2c3e50"
+        thickness: 1
+        opacity: 0.3
+        label: "Physics Grid"
+      
+      # Major grid lines every 100 pixels
+      major_grid:
+        type: grid
+        position: [0, 0]
+        width: 800
+        height: 600
+        spacing: 100
+        color: "#34495e"
+        thickness: 2
+        opacity: 0.5
+        label: "Major Grid"
+      
+      # Coordinate axes
+      x_axis:
+        type: line
+        from: [-400, 0]
+        to: [400, 0]
+        color: "#5d6d7e"
+        thickness: 2
+        opacity: 0.6
+        label: "X-axis"
+      
+      y_axis:
+        type: line
+        from: [0, -350]
+        to: [0, 350]
+        color: "#5d6d7e"
+        thickness: 2
+        opacity: 0.6
+        label: "Y-axis"
+      
+      # Axis labels
+      origin_label:
+        type: text
+        text: "(0,0)"
+        position: [15, 15]
+        color: "#7f8c8d"
+        size: 10
+      
+      x_label:
+        type: text
+        text: "X"
+        position: [380, -20]
+        color: "#7f8c8d"
+        size: 12
+      
+      y_label:
+        type: text
+        text: "Y"
+        position: [20, -330]
+        color: "#7f8c8d"
+        size: 12
+      
+      # Vertical reference line
+      vertical_reference:
+        type: line
+        from: [0, -270]
+        to: [0, -50]
+        color: "#7f8c8d"
+        thickness: 1
+        opacity: 0.4
+        label: "Vertical Reference"
+      
+      # Angle reference lines (45° markers)
+      left_angle_ref:
+        type: line
+        from: [0, -270]
+        to: [-106, -164]
+        color: "#95a5a6"
+        thickness: 1
+        opacity: 0.3
+        label: "45° Left"
+      
+      right_angle_ref:
+        type: line
+        from: [0, -270]
+        to: [106, -164]
+        color: "#95a5a6"
+        thickness: 1
+        opacity: 0.3
+        label: "45° Right"
+      
+      # Pendulum support beam
+      support_beam:
+        type: rectangle
+        position: [0, -280]
+        width: 200
+        height: 20
+        color: "#34495e"
+        label: "Support"
+      
+      # Pendulum anchor point
+      anchor:
+        type: circle
+        position: [0, -270]
+        radius: 6
+        color: "#2c3e50"
+        glow: true
+        label: "Pivot"
+      
+      # Pendulum bob with realistic swing
+      pendulum_bob:
+        type: path_follower
+        position: [87, -120]  # Starting position (60° from vertical)
+        pathId: "pendulum"
+        orbitCenter: [0, -270]
+        orbitRadius: 150
+        maxAngle: 1.047  # 60 degrees in radians
+        damping: 0.98
+        pathSpeed: 1.5
+        pathOffset: 0
+        radius: 12
+        color: "#e74c3c"
+        glow: true
+        label: "Pendulum Bob"
+      
+      # Pendulum string - will appear to connect anchor to bob
+      pendulum_string:
+        type: line
+        from: [0, -270]
+        to: [87, -120]
+        color: "#95a5a6"
+        thickness: 3
+        label: "String"
+      
+      title:
+        type: text
+        text: "⚖️ Simple Pendulum"
+        position: [0, -350]
+        color: "#e74c3c"
+        size: 24
+        glow: true
+      
+      length_info:
+        type: text
+        text: "Length = 150px"
+        position: [-200, -200]
+        color: "#95a5a6"
+        size: 12
+      
+      angle_info:
+        type: text
+        text: "Max Angle = 60°"
+        position: [200, -200]
+        color: "#95a5a6"
+        size: 12
+      
+      # Grid scale indicators
+      scale_x:
+        type: text
+        text: "← 25px grid →"
+        position: [-300, -300]
+        color: "#7f8c8d"
+        size: 10
+      
+      scale_y:
+        type: text
+        text: "↑ 25px ↓"
+        position: [350, -200]
+        color: "#7f8c8d"
+        size: 10
+        rotation: 1.5708  # 90 degrees
+      
+      # Physics lab label
+      lab_title:
+        type: text
+        text: "Physics Laboratory - Pendulum Analysis"
+        position: [0, 300]
+        color: "#7f8c8d"
+        size: 12
+
+  multiple_pendulums:
+    duration: 5
+    description: "Multiple pendulums with different properties"
+    elements:
+      # Grid background for physics lab feel
+      background_grid:
+        type: grid
+        position: [0, 0]
+        width: 800
+        height: 600
+        spacing: 25
+        color: "#2c3e50"
+        thickness: 1
+        opacity: 0.3
+        label: "Physics Grid"
+      
+      # Major grid lines every 100 pixels
+      major_grid:
+        type: grid
+        position: [0, 0]
+        width: 800
+        height: 600
+        spacing: 100
+        color: "#34495e"
+        thickness: 2
+        opacity: 0.5
+        label: "Major Grid"
+      
+      # Coordinate axes
+      x_axis:
+        type: line
+        from: [-400, 0]
+        to: [400, 0]
+        color: "#5d6d7e"
+        thickness: 2
+        opacity: 0.6
+        label: "X-axis"
+      
+      y_axis:
+        type: line
+        from: [0, -350]
+        to: [0, 350]
+        color: "#5d6d7e"
+        thickness: 2
+        opacity: 0.6
+        label: "Y-axis"
+      
+      # Axis labels
+      origin_label:
+        type: text
+        text: "(0,0)"
+        position: [15, 15]
+        color: "#7f8c8d"
+        size: 10
+      
+      x_label:
+        type: text
+        text: "X"
+        position: [380, -20]
+        color: "#7f8c8d"
+        size: 12
+      
+      y_label:
+        type: text
+        text: "Y"
+        position: [20, -330]
+        color: "#7f8c8d"
+        size: 12
+      
+      # Support structure
+      main_support:
+        type: rectangle
+        position: [0, -280]
+        width: 400
+        height: 15
+        color: "#34495e"
+        label: "Main Support"
+      
+      # Left pendulum - short and fast
+      left_anchor:
+        type: circle
+        position: [-150, -272]
+        radius: 4
+        color: "#2c3e50"
+        label: "Left Pivot"
+      
+      left_pendulum:
+        type: path_follower
+        position: [-100, -180]
+        pathId: "pendulum"
+        orbitCenter: [-150, -272]
+        orbitRadius: 100
+        maxAngle: 0.785  # 45 degrees
+        damping: 0.97
+        pathSpeed: 2.0
+        pathOffset: 0
+        radius: 8
+        color: "#f39c12"
+        glow: true
+        label: "Short Pendulum"
+      
+      left_string:
+        type: line
+        from: [-150, -272]
+        to: [-100, -180]
+        color: "#95a5a6"
+        thickness: 2
+        label: "Short String"
+      
+      # Center pendulum - medium
+      center_anchor:
+        type: circle
+        position: [0, -272]
+        radius: 4
+        color: "#2c3e50"
+        label: "Center Pivot"
+      
+      center_pendulum:
+        type: path_follower
+        position: [75, -130]
+        pathId: "pendulum"
+        orbitCenter: [0, -272]
+        orbitRadius: 140
+        maxAngle: 0.524  # 30 degrees
+        damping: 0.98
+        pathSpeed: 1.6
+        pathOffset: 0.3
+        radius: 10
+        color: "#2ecc71"
+        glow: true
+        label: "Medium Pendulum"
+      
+      center_string:
+        type: line
+        from: [0, -272]
+        to: [75, -130]
+        color: "#95a5a6"
+        thickness: 2
+        label: "Medium String"
+      
+      # Right pendulum - long and slow
+      right_anchor:
+        type: circle
+        position: [150, -272]
+        radius: 4
+        color: "#2c3e50"
+        label: "Right Pivot"
+      
+      right_pendulum:
+        type: path_follower
+        position: [250, -90]
+        pathId: "pendulum"
+        orbitCenter: [150, -272]
+        orbitRadius: 180
+        maxAngle: 0.349  # 20 degrees
+        damping: 0.99
+        pathSpeed: 1.2
+        pathOffset: 0.6
+        radius: 12
+        color: "#9b59b6"
+        glow: true
+        label: "Long Pendulum"
+      
+      right_string:
+        type: line
+        from: [150, -272]
+        to: [250, -90]
+        color: "#95a5a6"
+        thickness: 2
+        label: "Long String"
+      
+      multi_title:
+        type: text
+        text: "⚖️ Multiple Pendulum Systems"
+        position: [0, -350]
+        color: "#2ecc71"
+        size: 20
+        glow: true
+      
+      physics_explanation:
+        type: text
+        text: "Shorter pendulums swing faster • Longer pendulums swing slower"
+        position: [0, 200]
+        color: "#95a5a6"
+        size: 14
+
+  pendulum_wave:
+    duration: 3
+    description: "Pendulum wave demonstration"
+    elements:
+      # Grid background for physics lab feel
+      background_grid:
+        type: grid
+        position: [0, 0]
+        width: 800
+        height: 600
+        spacing: 25
+        color: "#2c3e50"
+        thickness: 1
+        opacity: 0.3
+        label: "Physics Grid"
+      
+      # Major grid lines every 100 pixels
+      major_grid:
+        type: grid
+        position: [0, 0]
+        width: 800
+        height: 600
+        spacing: 100
+        color: "#34495e"
+        thickness: 2
+        opacity: 0.5
+        label: "Major Grid"
+      
+      # Coordinate axes
+      x_axis:
+        type: line
+        from: [-400, 0]
+        to: [400, 0]
+        color: "#5d6d7e"
+        thickness: 2
+        opacity: 0.6
+        label: "X-axis"
+      
+      y_axis:
+        type: line
+        from: [0, -350]
+        to: [0, 350]
+        color: "#5d6d7e"
+        thickness: 2
+        opacity: 0.6
+        label: "Y-axis"
+      
+      # Axis labels
+      origin_label:
+        type: text
+        text: "(0,0)"
+        position: [15, 15]
+        color: "#7f8c8d"
+        size: 10
+      
+      x_label:
+        type: text
+        text: "X"
+        position: [380, -20]
+        color: "#7f8c8d"
+        size: 12
+      
+      y_label:
+        type: text
+        text: "Y"
+        position: [20, -330]
+        color: "#7f8c8d"
+        size: 12
+      
+      # Support for pendulum array
+      wave_support:
+        type: rectangle
+        position: [0, -280]
+        width: 500
+        height: 12
+        color: "#34495e"
+        label: "Wave Support"
+      
+      wave_title:
+        type: text
+        text: "🌊 Pendulum Wave Pattern"
+        position: [0, -350]
+        color: "#3498db"
+        size: 20
+        glow: true
+      
+      # Create 9 pendulums with slightly different lengths
+      # This creates a beautiful wave pattern as they go in and out of sync
+      p1:
+        type: path_follower
+        position: [-200, -170]
+        pathId: "pendulum"
+        orbitCenter: [-200, -274]
+        orbitRadius: 110
+        maxAngle: 0.524
+        damping: 0.995
+        pathSpeed: 1.8
+        pathOffset: 0
+        radius: 5
+        color: "#e74c3c"
+        glow: true
+        label: "P1"
+      
+      p2:
+        type: path_follower
+        position: [-150, -165]
+        pathId: "pendulum"
+        orbitCenter: [-150, -274]
+        orbitRadius: 115
+        maxAngle: 0.524
+        damping: 0.995
+        pathSpeed: 1.75
+        pathOffset: 0
+        radius: 5
+        color: "#f39c12"
+        glow: true
+        label: "P2"
+      
+      p3:
+        type: path_follower
+        position: [-100, -160]
+        pathId: "pendulum"
+        orbitCenter: [-100, -274]
+        orbitRadius: 120
+        maxAngle: 0.524
+        damping: 0.995
+        pathSpeed: 1.7
+        pathOffset: 0
+        radius: 5
+        color: "#f1c40f"
+        glow: true
+        label: "P3"
+      
+      p4:
+        type: path_follower
+        position: [-50, -155]
+        pathId: "pendulum"
+        orbitCenter: [-50, -274]
+        orbitRadius: 125
+        maxAngle: 0.524
+        damping: 0.995
+        pathSpeed: 1.65
+        pathOffset: 0
+        radius: 5
+        color: "#2ecc71"
+        glow: true
+        label: "P4"
+      
+      p5:
+        type: path_follower
+        position: [0, -150]
+        pathId: "pendulum"
+        orbitCenter: [0, -274]
+        orbitRadius: 130
+        maxAngle: 0.524
+        damping: 0.995
+        pathSpeed: 1.6
+        pathOffset: 0
+        radius: 5
+        color: "#3498db"
+        glow: true
+        label: "P5"
+      
+      p6:
+        type: path_follower
+        position: [50, -145]
+        pathId: "pendulum"
+        orbitCenter: [50, -274]
+        orbitRadius: 135
+        maxAngle: 0.524
+        damping: 0.995
+        pathSpeed: 1.55
+        pathOffset: 0
+        radius: 5
+        color: "#9b59b6"
+        glow: true
+        label: "P6"
+      
+      p7:
+        type: path_follower
+        position: [100, -140]
+        pathId: "pendulum"
+        orbitCenter: [100, -274]
+        orbitRadius: 140
+        maxAngle: 0.524
+        damping: 0.995
+        pathSpeed: 1.5
+        pathOffset: 0
+        radius: 5
+        color: "#e67e22"
+        glow: true
+        label: "P7"
+      
+      p8:
+        type: path_follower
+        position: [150, -135]
+        pathId: "pendulum"
+        orbitCenter: [150, -274]
+        orbitRadius: 145
+        maxAngle: 0.524
+        damping: 0.995
+        pathSpeed: 1.45
+        pathOffset: 0
+        radius: 5
+        color: "#1abc9c"
+        glow: true
+        label: "P8"
+      
+      p9:
+        type: path_follower
+        position: [200, -130]
+        pathId: "pendulum"
+        orbitCenter: [200, -274]
+        orbitRadius: 150
+        maxAngle: 0.524
+        damping: 0.995
+        pathSpeed: 1.4
+        pathOffset: 0
+        radius: 5
+        color: "#8e44ad"
+        glow: true
+        label: "P9"
+      
+      wave_explanation:
+        type: text
+        text: "Pendulums with slightly different periods create mesmerizing wave patterns"
+        position: [0, 180]
+        color: "#95a5a6"
+        size: 12
+
+equations:
+  - id: pendulum_period
+    latex: "T = 2\\pi\\sqrt{\\frac{L}{g}}"
+    position: [-300, -50]
+    phase: simple_pendulum
+    animation: fade-in
+
+  - id: angular_frequency
+    latex: "\\omega = \\sqrt{\\frac{g}{L}}"
+    position: [300, -50]
+    phase: multiple_pendulums
+    animation: slide-in
+
+  - id: small_angle_approximation
+    latex: "\\sin\\theta \\approx \\theta"
+    position: [0, 250]
+    phase: pendulum_wave
+    animation: bounce

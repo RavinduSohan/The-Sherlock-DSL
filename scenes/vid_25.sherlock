@@ -1,0 +1,695 @@
+concept: "Entropy: The Math of Surprise"
+emoji: "🎭"
+total_duration: 62
+background: "#0a0a0a"
+
+subtitles:
+  - ""
+  - ""
+  - ""
+  - ""
+  - ""
+  - ""
+  - ""
+  - ""
+  - ""
+
+phases:
+  scene_1:
+    duration: 8
+    description: "How much information is in a coin flip? What about a weather forecast? Or your Netflix password?"
+    elements:
+      title_text:
+        type: text
+        text: "The Spectrum of Surprise 🎭"
+        position: [0, -220]
+        size: 20
+        color: "#ffffff"
+        glow: true
+        font: "Arial"
+      
+      certain_point:
+        type: mathematical_entity
+        position: [-200, 0]
+        form: "point"
+        personality: "mysterious"
+        size: 40
+        color: "#e74c3c"
+        glow: true
+        energy: 0.3
+        animation_pattern: "breathe"
+        label: "Certain Event"
+      
+      fair_coin:
+        type: mathematical_entity
+        position: [0, 0]
+        form: "wave"
+        personality: "mysterious"
+        size: 70
+        color: "#3498db"
+        glow: true
+        energy: 0.6
+        animation_pattern: "pulse"
+        label: "Fair Coin"
+      
+      uniform_die:
+        type: mathematical_entity
+        position: [200, 0]
+        form: "wave"
+        personality: "mysterious"
+        size: 90
+        color: "#f39c12"
+        glow: true
+        energy: 0.9
+        animation_pattern: "wave"
+        label: "8-sided Die"
+      
+      certain_entropy:
+        type: water_bar_chart
+        data: [1]
+        position: [-200, 100]
+        width: 60
+        height: 40
+        water_color: #e74c3c
+        wave_intensity: 0.5
+      
+      coin_entropy:
+        type: water_bar_chart
+        data: [10]
+        position: [0, 100]
+        width: 60
+        height: 40
+        water_color: #3498db
+        wave_intensity: 1.0
+      
+      die_entropy:
+        type: water_bar_chart
+        data: [30]
+        position: [200, 100]
+        width: 60
+        height: 40
+        water_color: #f39c12
+        wave_intensity: 1.5
+      
+      certain_label:
+        type: text
+        text: "H = 0"
+        position: [-200, 140]
+        size: 14
+        color: "#e74c3c"
+        glow: true
+        font: "Arial"
+      
+      coin_label:
+        type: text
+        text: "H = 1.0"
+        position: [0, 140]
+        size: 14
+        color: "#3498db"
+        glow: true
+        font: "Arial"
+      
+      die_label:
+        type: text
+        text: "H = 3.0"
+        position: [200, 140]
+        size: 14
+        color: "#f39c12"
+        glow: true
+        font: "Arial"
+      
+      spectrum_text:
+        type: text
+        text: "From absolute certainty to maximum uncertainty"
+        position: [0, 180]
+        size: 16
+        color: "#95a5a6"
+        glow: true
+        font: "Arial"
+
+  scene_2:
+    duration: 9
+    description: "Meet entropy: the mathematical measure of surprise"
+    elements:
+      title_text:
+        type: text
+        text: "Defining Entropy 📊"
+        position: [0, -220]
+        size: 20
+        color: "#ffffff"
+        glow: true
+        font: "Arial"
+      
+      entropy_grid:
+        type: algorithm_grid
+        position: [-160, 50]
+        rows: 3
+        cols: 3
+        cellSize: 50
+        spacing: 4
+        cells: [["Event", "p", "H"], ["Certain", "1.0", "0"], ["Coin", "0.5", "1.0"]]
+        highlights: [[1,2], [2,2]]
+        showValues: true
+        color: "#3498db"
+        border_color: "#34495e"
+        border_width: 2
+        label: "Probability vs Entropy"
+      
+      entropy_node:
+        type: algorithm_node
+        position: [150, -40]
+        value: "H(X)"
+        visited: true
+        radius: 30
+        color: "#9b59b6"
+        glow: true
+        label: "Entropy Calculator"
+      
+      formula_text:
+        type: text
+        text: "H(X) = -Σ pᵢ log₂(pᵢ)"
+        position: [0, -160]
+        size: 16
+        color: "#f39c12"
+        glow: true
+        font: "Arial"
+      
+      processing_connector:
+        type: relationship_connector
+        from: [-60, 80]
+        to: [70, 80]
+        relationship_type: "transformation"
+        strength: 0.8
+        color: "#f39c12"
+        animated: true
+        bidirectional: false
+        label: "Calculate"
+      
+      certainty_text:
+        type: text
+        text: "Certainty: H = 0 (no surprise)"
+        position: [-120, 150]
+        size: 14
+        color: "#e74c3c"
+        glow: true
+        font: "Arial"
+      
+      maximum_text:
+        type: text
+        text: "Maximum Uncertainty: H = log₂(n)"
+        position: [120, 150]
+        size: 14
+        color: "#2ecc71"
+        glow: true
+        font: "Arial"
+
+  scene_3:
+    duration: 10
+    description: "Information is inversely related to probability"
+    elements:
+      title_text:
+        type: text
+        text: "The Entropy Equation ⚖️"
+        position: [0, -220]
+        size: 20
+        color: "#ffffff"
+        glow: true
+        font: "Arial"
+      
+      entropy_formula:
+        type: text
+        text: "H(X) = -Σ pᵢ log₂(pᵢ)"
+        position: [0, -160]
+        size: 18
+        color: "#f39c12"
+        glow: true
+        font: "Arial"
+      
+      probability_array:
+        type: algorithm_array
+        position: [-160, 50]
+        items: ["p₁=0.9", "p₂=0.1"]
+        highlights: []
+        cellSize: 50
+        showIndices: false
+        color: "#3498db"
+      
+      calculation_node_1:
+        type: algorithm_node
+        position: [-80, 100]
+        value: "-p₁log₂p₁"
+        visited: true
+        radius: 25
+        color: "#e74c3c"
+        glow: true
+        label: "0.13 bits"
+      
+      calculation_node_2:
+        type: algorithm_node
+        position: [80, 100]
+        value: "-p₂log₂p₂"
+        visited: true
+        radius: 25
+        color: "#2ecc71"
+        glow: true
+        label: "0.33 bits"
+      
+      contribution_chart:
+        type: animated_bar_chart
+        data: [13, 33]
+        position: [150, 20]
+        width: 120
+        height: 80
+        color: "#9b59b6"
+      
+      rare_event_connector:
+        type: relationship_connector
+        from: [-60, 70]
+        to: [-80, 100]
+        relationship_type: "transformation"
+        strength: 0.3
+        color: "#e74c3c"
+        animated: true
+        bidirectional: false
+        label: "Small contribution"
+      
+      common_event_connector:
+        type: relationship_connector
+        from: [60, 70]
+        to: [80, 100]
+        relationship_type: "transformation"
+        strength: 0.7
+        color: "#2ecc71"
+        animated: true
+        bidirectional: false
+        label: "Large contribution"
+      
+      total_entropy:
+        type: text
+        text: "Total H = 0.47 bits"
+        position: [0, 160]
+        size: 16
+        color: "#9b59b6"
+        glow: true
+        font: "Arial"
+      
+      insight_text:
+        type: text
+        text: "Rare events contribute more information than common ones"
+        position: [0, 180]
+        size: 14
+        color: "#95a5a6"
+        glow: true
+        font: "Arial"
+
+  scene_4:
+    duration: 8
+    description: "Common outcomes carry little information, rare events carry much more"
+    elements:
+      title_text:
+        type: text
+        text: "Information vs Probability 📉"
+        position: [0, -220]
+        size: 20
+        color: "#ffffff"
+        glow: true
+        font: "Arial"
+      
+      probability_info_graph:
+        type: xy_graph
+        position: [0, 20]
+        size: 250
+        function: "-log(x)/log(2)"
+        data_points: [[0.9, 0.15], [0.5, 1.0], [0.1, 3.32], [0.001, 9.97]]
+        x_range: [0, 1]
+        y_range: [0, 12]
+        color: "#e74c3c"
+        line_width: 3
+        show_grid: true
+        show_axes: true
+        show_labels: true
+        show_points: true
+        smooth_curve: true
+        animate_draw: true
+        title: "I(p) = -log₂(p)"
+        resolution: 200
+      
+      sun_point:
+        type: point
+        position: [-30, -50]
+        radius: 8
+        color: "#f1c40f"
+        glow: true
+        label: "Sun rises: p=0.9"
+      
+      sahara_point:
+        type: point
+        position: [80, 80]
+        radius: 10
+        color: "#3498db"
+        glow: true
+        label: "Sahara snow: p=0.001"
+      
+      sun_info:
+        type: text
+        text: "I = 0.15 bits"
+        position: [-100, -80]
+        size: 14
+        color: "#f1c40f"
+        glow: true
+        font: "Arial"
+      
+      sahara_info:
+        type: text
+        text: "I = 10.0 bits"
+        position: [150, 50]
+        size: 14
+        color: "#3498db"
+        glow: true
+        font: "Arial"
+      
+      probability_axis:
+        type: text
+        text: "Probability"
+        position: [100, 130]
+        size: 12
+        color: "#95a5a6"
+        glow: false
+        font: "Arial"
+      
+      information_axis:
+        type: text
+        text: "Information (bits)"
+        position: [-150, 20]
+        size: 12
+        color: "#95a5a6"
+        glow: false
+        font: "Arial"
+      
+      inverse_relation:
+        type: text
+        text: "Inverse relationship: rare events = high information"
+        position: [0, 160]
+        size: 16
+        color: "#e74c3c"
+        glow: true
+        font: "Arial"
+
+  scene_5:
+    duration: 6
+    description: "Key insight about surprise equaling information"
+    elements:
+      main_title:
+        type: text
+        text: "Surprise = Information 💥"
+        position: [0, -180]
+        size: 24
+        color: "#ffffff"
+        glow: true
+        font: "Arial"
+      
+      target_emoji:
+        type: animated_emoji
+        emoji: "🎯"
+        position: [-120, 0]
+        size: 75
+        movement: "floating-pen"
+        glowing: "pulsing-glow"
+        rotation: "none"
+        reveal: "zoom-reveal"
+        speed: "slow"
+        delay: "none"
+        color: "#e74c3c"
+      
+      lightning_emoji:
+        type: animated_emoji
+        emoji: "⚡"
+        position: [0, 0]
+        size: 80
+        movement: "bounce"
+        glowing: "flicker"
+        rotation: "gentle-rotate"
+        reveal: "slide-reveal"
+        speed: "fast"
+        delay: "delay-1"
+        color: "#f1c40f"
+      
+      books_emoji:
+        type: animated_emoji
+        emoji: "📚"
+        position: [120, 0]
+        size: 75
+        movement: "wobble"
+        glowing: "matrix-code"
+        rotation: "spin-clockwise"
+        reveal: "spiral-reveal"
+        speed: "normal"
+        delay: "delay-2"
+        color: "#3498db"
+      
+      unexpected_text:
+        type: text
+        text: "The more unexpected"
+        position: [-220, 120]
+        size: 18
+        color: "#e74c3c"
+        glow: true
+        font: "Arial"
+      
+      informative_text:
+        type: text
+        text: "The more informative"
+        position: [0, 120]
+        size: 18
+        color: "#f1c40f"
+        glow: true
+        font: "Arial"
+      
+      entropy_text:
+        type: text
+        text: "The higher the entropy"
+        position: [200, 120]
+        size: 18
+        color: "#3498db"
+        glow: true
+        font: "Arial"
+
+  scene_6:
+    duration: 7
+    description: "Surprise meter analogy with detective character"
+    elements:
+      title_text:
+        type: text
+        text: "The Surprise Meter 🐙"
+        position: [0, -220]
+        size: 20
+        color: "#ffffff"
+        glow: true
+        font: "Arial"
+      
+      detective_guide:
+        type: wisdom_character
+        character_type: detective_octopus
+        position: [0, 0]
+        size: 160
+        mood: "surprised"
+        expression: "normal"
+        talking: true
+        breathing: true
+        color_scheme: "cosmic"
+        personality: "energetic"
+        speech_bubble: true
+        speech_text: "Entropy measures surprise. Routine: low. Chaos: high."
+        background_aura: "glow"
+
+  scene_7:
+    duration: 8
+    description: "Entropy in machine learning and decision trees"
+    elements:
+      title_text:
+        type: text
+        text: "Entropy in Machine Learning 🤖"
+        position: [0, -220]
+        size: 20
+        color: "#ffffff"
+        glow: true
+        font: "Arial"
+      
+      mixed_data:
+        type: mathematical_entity
+        position: [-120, 20]
+        form: "cloud"
+        personality: "mysterious"
+        size: 80
+        color: "#e74c3c"
+        glow: true
+        energy: 0.8
+        animation_pattern: "wave"
+        label: "Mixed Dataset"
+      
+      decision_node:
+        type: algorithm_node
+        position: [0, 50]
+        value: "Split"
+        visited: true
+        radius: 25
+        color: "#9b59b6"
+        glow: true
+        label: "Decision Tree"
+      
+      left_subset:
+        type: mathematical_entity
+        position: [120, 0]
+        form: "cloud"
+        personality: "elegant"
+        size: 50
+        color: "#2ecc71"
+        glow: true
+        energy: 0.4
+        animation_pattern: "breathe"
+        label: "Pure Subset"
+      
+      right_subset:
+        type: mathematical_entity
+        position: [120, 100]
+        form: "cloud"
+        personality: "elegant"
+        size: 60
+        color: "#3498db"
+        glow: true
+        energy: 0.5
+        animation_pattern: "pulse"
+        label: "Purer Subset"
+      
+      parent_entropy:
+        type: water_bar_chart
+        data: [120]
+        position: [-120, 120]
+        width: 60
+        height: 40
+        water_color: #e74c3c
+        wave_intensity: 1.5
+      
+      left_entropy:
+        type: water_bar_chart
+        data: [30]
+        position: [90, 120]
+        width: 40
+        height: 30
+        water_color: #2ecc71
+        wave_intensity: 0.5
+      
+      right_entropy:
+        type: water_bar_chart
+        data: [50]
+        position: [150, 120]
+        width: 40
+        height: 30
+        water_color: #3498db
+        wave_intensity: 0.8
+      
+      parent_label:
+        type: text
+        text: "H = 1.2 bits"
+        position: [-120, 160]
+        size: 14
+        color: "#e74c3c"
+        glow: true
+        font: "Arial"
+      
+      split_labels:
+        type: text
+        text: "Left: H=0.3  Right: H=0.5"
+        position: [120, 160]
+        size: 14
+        color: "#2ecc71"
+        glow: true
+        font: "Arial"
+      
+      information_gain:
+        type: text
+        text: "Information Gain: 0.7 bits"
+        position: [0, 220]
+        size: 16
+        color: "#f39c12"
+        glow: true
+        font: "Arial"
+
+  scene_8:
+    duration: 6
+    description: "Universal measure of uncertainty in applications"
+    elements:
+      main_title:
+        type: text
+        text: "The Universal Measure of Uncertainty 🌐"
+        position: [0, -180]
+        size: 24
+        color: "#ffffff"
+        glow: true
+        font: "Arial"
+      
+      phone_emoji:
+        type: animated_emoji
+        emoji: "📱"
+        position: [-120, 0]
+        size: 75
+        movement: "floating-pen"
+        glowing: "pulsing-glow"
+        rotation: "none"
+        reveal: "zoom-reveal"
+        speed: "slow"
+        delay: "none"
+        color: "#3498db"
+      
+      music_emoji:
+        type: animated_emoji
+        emoji: "🎵"
+        position: [0, 0]
+        size: 70
+        movement: "bounce"
+        glowing: "flicker"
+        rotation: "gentle-rotate"
+        reveal: "slide-reveal"
+        speed: "normal"
+        delay: "delay-1"
+        color: "#9b59b6"
+      
+      cycle_emoji:
+        type: animated_emoji
+        emoji: "🔄"
+        position: [120, 0]
+        size: 75
+        movement: "orbit"
+        glowing: "matrix-code"
+        rotation: "spin-clockwise"
+        reveal: "spiral-reveal"
+        speed: "fast"
+        delay: "delay-2"
+        color: "#e74c3c"
+      
+      compression_text:
+        type: text
+        text: "It compresses your photos"
+        position: [-220, 120]
+        size: 18
+        color: "#3498db"
+        glow: true
+        font: "Arial"
+      
+      streaming_text:
+        type: text
+        text: "It streams your music"
+        position: [0, 120]
+        size: 18
+        color: "#9b59b6"
+        glow: true
+        font: "Arial"
+      
+      autocorrect_text:
+        type: text
+        text: "It powers your autocorrect"
+        position: [220, 120]
+        size: 18
+        color: "#e74c3c"
+        glow: true
+        font: "Arial"

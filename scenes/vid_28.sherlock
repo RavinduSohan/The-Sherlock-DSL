@@ -1,0 +1,851 @@
+concept: "Data Structures: Self-Balancing Trees"
+emoji: "🌳"
+total_duration: 96
+background: "#0a0a0a"
+
+subtitles:
+  - ""
+  - ""
+  - ""
+  - ""
+  - ""
+  - ""
+  - ""
+  - ""
+  - ""
+
+phases:
+  scene_1:
+    duration: 9
+    description: "Binary search rule on coordinate space showing degenerate chain"
+    elements:
+      guideline_function:
+        type: line
+        from: [-150, -150]
+        to: [150, 150]
+        thickness: 2
+        dashed: true
+        color: "#95a5a6"
+        opacity: 0.5
+        label: "f(x)=x"
+        
+      point_1:
+        type: mathematical_entity
+        position: [-140, -140]
+        form: "point"
+        personality: "sharp"
+        size: 20
+        color: "#3498db"
+        glow: true
+        energy: 0.7
+        animation_pattern: "pulse"
+        label: "1"
+        
+      point_2:
+        type: mathematical_entity
+        position: [-110, -110]
+        form: "point"
+        personality: "sharp"
+        size: 20
+        color: "#3498db"
+        glow: true
+        energy: 0.7
+        animation_pattern: "pulse"
+        label: "2"
+        
+      point_3:
+        type: mathematical_entity
+        position: [-80, -80]
+        form: "point"
+        personality: "sharp"
+        size: 20
+        color: "#3498db"
+        glow: true
+        energy: 0.7
+        animation_pattern: "pulse"
+        label: "3"
+        
+      point_4:
+        type: mathematical_entity
+        position: [-50, -50]
+        form: "point"
+        personality: "sharp"
+        size: 20
+        color: "#3498db"
+        glow: true
+        energy: 0.7
+        animation_pattern: "pulse"
+        label: "4"
+        
+      point_5:
+        type: mathematical_entity
+        position: [-20, -20]
+        form: "point"
+        personality: "sharp"
+        size: 20
+        color: "#3498db"
+        glow: true
+        energy: 0.7
+        animation_pattern: "pulse"
+        label: "5"
+        
+      point_6:
+        type: mathematical_entity
+        position: [10, 10]
+        form: "point"
+        personality: "sharp"
+        size: 20
+        color: "#3498db"
+        glow: true
+        energy: 0.7
+        animation_pattern: "pulse"
+        label: "6"
+        
+      point_7:
+        type: mathematical_entity
+        position: [40, 40]
+        form: "point"
+        personality: "sharp"
+        size: 20
+        color: "#3498db"
+        glow: true
+        energy: 0.7
+        animation_pattern: "pulse"
+        label: "7"
+        
+      point_8:
+        type: mathematical_entity
+        position: [70, 70]
+        form: "point"
+        personality: "sharp"
+        size: 20
+        color: "#3498db"
+        glow: true
+        energy: 0.7
+        animation_pattern: "pulse"
+        label: "8"
+        
+      point_9:
+        type: mathematical_entity
+        position: [100, 100]
+        form: "point"
+        personality: "sharp"
+        size: 20
+        color: "#3498db"
+        glow: true
+        energy: 0.7
+        animation_pattern: "pulse"
+        label: "9"
+        
+      point_10:
+        type: mathematical_entity
+        position: [130, 130]
+        form: "point"
+        personality: "sharp"
+        size: 20
+        color: "#3498db"
+        glow: true
+        energy: 0.7
+        animation_pattern: "pulse"
+        label: "10"
+        
+      title_text:
+        type: text
+        text: "Binary insertions 1→10 follow f(x)=x, producing degenerate chain"
+        position: [0, -220]
+        size: 16
+        color: "#ffffff"
+        glow: true
+        font: "Arial"
+        
+      insert_label:
+        type: text
+        text: "Insert 1 → 10"
+        position: [200, 100]
+        size: 14
+        color: "#f39c12"
+        glow: true
+        font: "Arial"
+        
+  scene_2:
+    duration: 7
+    description: "Right-slant degeneration showing chain structure"
+    elements:
+      chain_array:
+        type: algorithm_array
+        position: [40, 40]
+        items: ["1", "2", "3", "4", "5", "6", "7", "8", "9", "10"]
+        highlights: ["1"]
+        cellSize: 35
+        showIndices: false
+        color: "#e74c3c"
+
+      balance_chart:
+        type: water_bar_chart
+        data: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+        position: [-180, 100]
+        width: 300
+        height: 140
+        water_color: "#3498db"
+        wave_intensity: 1.2
+
+      depth_indicator:
+        type: line
+        from: [-180, 80]
+        to: [-180, 145]
+        thickness: 3
+        dashed: true
+        color: "#f39c12"
+        opacity: 0.8
+        label: "Depth=10"
+        
+      comparison_text:
+        type: text
+        text: "Depth = 10. Height difference = 9. Equivalent to sorted array."
+        position: [0, -180]
+        size: 16
+        color: "#ffffff"
+        glow: true
+        font: "Arial"
+        
+      warning_text:
+        type: text
+        text: "This is not a tree. This is a sorted list."
+        position: [0, -200]
+        size: 18
+        color: "#e74c3c"
+        glow: true
+        font: "Arial"
+        
+  scene_3:
+    duration: 7
+    description: "The librarian cheats - questioning gravity"
+    elements:
+      thinking_emoji:
+        type: animated_emoji
+        emoji: "🤔"
+        position: [-100, 30]
+        size: 90
+        movement: "bounce"
+        glowing: "pulsing-glow"
+        rotation: "none"
+        reveal: "zoom-reveal"
+        speed: "normal"
+        delay: "none"
+        color: "#3498db"
+        
+      plant_emoji:
+        type: animated_emoji
+        emoji: "🌿"
+        position: [100, 30]
+        size: 80
+        movement: "wobble"
+        glowing: "pulsing-glow"
+        rotation: "gentle-rotate"
+        reveal: "slide-reveal"
+        speed: "slow"
+        delay: "delay-1"
+        color: "#2ecc71"
+        
+      balance_equation:
+        type: animated_emoji
+        emoji: "hₗ-hᵣ>1?"
+        position: [0, -60]
+        size: 35
+        movement: "orbit"
+        glowing: "matrix-code"
+        rotation: "none"
+        reveal: "slide-reveal"
+        speed: "normal"
+        delay: "delay-2"
+        color: "#f39c12"
+        
+      detective_text:
+        type: text
+        text: "A tree breaks only when one side grows too tall."
+        position: [0, 200]
+        size: 16
+        color: "#ffffff"
+        glow: true
+        font: "Arial"
+        
+  scene_4:
+    duration: 8
+    description: "Balance factor as mathematical entity distribution"
+    elements:
+      balance_distribution:
+        type: mathematical_entity
+        position: [0, 0]
+        form: "distribution"
+        personality: "sharp"
+        size: 120
+        color: "#3498db"
+        glow: true
+        energy: 0.7
+        animation_pattern: "breathe"
+        label: "Balance Distribution"
+        
+      left_height_point:
+        type: mathematical_entity
+        position: [-80, 50]
+        form: "point"
+        personality: "sharp"
+        size: 25
+        color: "#e74c3c"
+        glow: true
+        energy: 0.8
+        animation_pattern: "pulse"
+        label: "Left: 3"
+        
+      right_height_point:
+        type: mathematical_entity
+        position: [80, 50]
+        form: "point"
+        personality: "sharp"
+        size: 25
+        color: "#2ecc71"
+        glow: true
+        energy: 0.8
+        animation_pattern: "pulse"
+        label: "Right: 1"
+        
+      difference_connector:
+        type: relationship_connector
+        from: [-80, 50]
+        to: [80, 50]
+        relationship_type: "dependency"
+        strength: 0.9
+        color: "#f39c12"
+        animated: true
+        bidirectional: false
+        label: "3-1=+2"
+        
+      critical_text:
+        type: text
+        text: "Balance Factor = +2 (Critical) → Rotation Required"
+        position: [0, -180]
+        size: 16
+        color: "#f39c12"
+        glow: true
+        font: "Arial"
+        
+  scene_5:
+    duration: 7
+    description: "Detective octopus explains local rules"
+    elements:
+      detective_local:
+        type: wisdom_character
+        character_type: detective_octopus
+        position: [0, 0]
+        size: 140
+        mood: "thinking"
+        expression: "normal"
+        talking: true
+        breathing: true
+        color_scheme: "ocean"
+        personality: "calm"
+        speech_bubble: true
+        speech_text: "A node doesn't see the tree—only its two children."
+        background_aura: "glow"
+        
+  scene_6:
+    duration: 9
+    description: "The pivot node emerges with vector calculation"
+    elements:
+      left_vector:
+        type: mathematical_entity
+        position: [-100, 0]
+        form: "vector"
+        personality: "energetic"
+        size: 60
+        color: "#e74c3c"
+        glow: true
+        energy: 0.8
+        animation_pattern: "pulse"
+        label: "vₗ = 3"
+        vector_components: [0, 3]
+        show_components: true
+        show_magnitude: true
+        vector_style: "force"
+        component_style: "elegant"
+        
+      right_vector:
+        type: mathematical_entity
+        position: [100, 0]
+        form: "vector"
+        personality: "energetic"
+        size: 60
+        color: "#2ecc71"
+        glow: true
+        energy: 0.8
+        animation_pattern: "pulse"
+        label: "vᵣ = 1"
+        vector_components: [0, 1]
+        show_components: true
+        show_magnitude: true
+        vector_style: "force"
+        component_style: "elegant"
+        
+      imbalance_connector:
+        type: relationship_connector
+        from: [-100, 0]
+        to: [100, 0]
+        relationship_type: "transformation"
+        strength: 0.9
+        color: "#f39c12"
+        animated: true
+        bidirectional: false
+        label: "vₗ-vᵣ→(2)"
+        
+      pivot_point:
+        type: mathematical_entity
+        position: [0, -80]
+        form: "point"
+        personality: "sharp"
+        size: 30
+        color: "#f1c40f"
+        glow: true
+        energy: 1.0
+        animation_pattern: "pulse"
+        label: "Pivot"
+        
+      pivot_text:
+        type: text
+        text: "Pivot detected when |3-1| = 2 → Rotation on this node"
+        position: [0, -180]
+        size: 16
+        color: "#f1c40f"
+        glow: true
+        font: "Arial"
+        
+  scene_7:
+    duration: 8
+    description: "See-saw as vector moment model showing balance"
+    elements:
+      left_moment:
+        type: mathematical_entity
+        position: [-100, 40]
+        form: "vector"
+        personality: "sharp"
+        size: 70
+        color: "#e74c3c"
+        glow: true
+        energy: 0.8
+        animation_pattern: "wave"
+        label: "(-1,2)"
+        vector_components: [-1, 2]
+        show_components: true
+        show_magnitude: true
+        vector_style: "force"
+        component_style: "detailed"
+        
+      right_moment:
+        type: mathematical_entity
+        position: [100, -40]
+        form: "vector"
+        personality: "sharp"
+        size: 70
+        color: "#2ecc71"
+        glow: true
+        energy: 0.8
+        animation_pattern: "wave"
+        label: "(1,-2)"
+        vector_components: [1, -2]
+        show_components: true
+        show_magnitude: true
+        vector_style: "force"
+        component_style: "detailed"
+        
+      balance_connector:
+        type: relationship_connector
+        from: [-100, 40]
+        to: [100, -40]
+        relationship_type: "transformation"
+        strength: 1.0
+        color: "#f39c12"
+        animated: true
+        bidirectional: true
+        label: "Sum=(0,0)"
+        
+      seesaw_line:
+        type: line
+        from: [-120, 0]
+        to: [120, 0]
+        thickness: 4
+        dashed: false
+        color: "#95a5a6"
+        opacity: 0.8
+        label: "Fulcrum"
+        
+      balance_text:
+        type: text
+        text: "Imbalance = Torque. Rotation restores center-of-mass to (0,0)"
+        position: [0, -180]
+        size: 16
+        color: "#ffffff"
+        glow: true
+        font: "Arial"
+        
+  scene_8:
+    duration: 8
+    description: "Updating balance factors upward with water chart"
+    elements:
+      balance_chart:
+        type: water_bar_chart
+        data: [2, 1, 0, 1]
+        position: [0, 50]
+        width: 300
+        height: 140
+        water_color: "#3498db"
+        wave_intensity: 1.2
+        
+      balance_matrix:
+        type: matrix
+        position: [-280, 100]
+        values: [["C:2","0"],["A:1","0"],["B:0","1"],["M:1","0"]]
+        highlightCells: [[0,0]]
+        cellSize: 45
+        textSize: 12
+        color: "#9b59b6"
+        label: "Heights"
+        
+      propagation_text:
+        type: text
+        text: "Balance factors propagate upward: BF(C)=2, BF(A)=1, BF(B)=0, BF(M)=1"
+        position: [0, -200]
+        size: 14
+        color: "#ffffff"
+        glow: true
+        font: "Arial"
+        
+      healing_text:
+        type: text
+        text: "Self-healing wave updates balance factors going upward"
+        position: [0, -180]
+        size: 16
+        color: "#3498db"
+        glow: true
+        font: "Arial"
+        
+  scene_9:
+    duration: 9
+    description: "Left-Right double rotation as pure algorithm"
+    elements:
+      node_a:
+        type: algorithm_node
+        position: [-100, -50]
+        value: "A"
+        visited: false
+        radius: 25
+        color: "#3498db"
+        glow: true
+        label: "Node A"
+        
+      node_b:
+        type: algorithm_node
+        position: [0, 50]
+        value: "B"
+        visited: false
+        radius: 25
+        color: "#3498db"
+        glow: true
+        label: "Node B"
+        
+      node_c:
+        type: algorithm_node
+        position: [100, -50]
+        value: "C"
+        visited: false
+        radius: 25
+        color: "#3498db"
+        glow: true
+        label: "Node C"
+        
+      rotation_step1:
+        type: line
+        from: [-100, -50]
+        to: [0, 50]
+        thickness: 2
+        dashed: true
+        color: "#f39c12"
+        opacity: 0.7
+        label: "Step 1"
+        
+      rotation_step2:
+        type: line
+        from: [0, 50]
+        to: [100, -50]
+        thickness: 2
+        dashed: true
+        color: "#e74c3c"
+        opacity: 0.7
+        label: "Step 2"
+        
+      transition_matrix:
+        type: matrix
+        position: [200, 100]
+        values: [["Pre:C"],["Mid:B"],["Final:A"]]
+        highlightCells: [[1,0]]
+        cellSize: 50
+        textSize: 12
+        color: "#2ecc71"
+        label: "Transitions"
+        
+      lr_text:
+        type: text
+        text: "Local 2-step rotation transforms subtree into stable form"
+        position: [0, -180]
+        size: 16
+        color: "#ffffff"
+        glow: true
+        font: "Arial"
+        
+  scene_10:
+    duration: 7
+    description: "Rotations minimize height showing optimal structure"
+    elements:
+      subtree_cloud:
+        type: mathematical_entity
+        position: [0, 0]
+        form: "cloud"
+        personality: "elegant"
+        size: 120
+        color: "#9b59b6"
+        glow: true
+        energy: 0.7
+        animation_pattern: "breathe"
+        label: "Subtree Shapes"
+        
+      optimal_shape:
+        type: mathematical_entity
+        position: [0, -140]
+        form: "triangle"
+        personality: "elegant"
+        size: 60
+        color: "#2ecc71"
+        glow: true
+        energy: 0.9
+        animation_pattern: "pulse"
+        label: "H=2 Optimal"
+        
+      height_formula:
+        type: text
+        text: "H = ⌊log₂(N+1)⌋"
+        position: [0, 120]
+        size: 18
+        color: "#f39c12"
+        glow: true
+        font: "Arial"
+        
+      optimal_text:
+        type: text
+        text: "Three nodes, two swings, subtree perfect again"
+        position: [0, -200]
+        size: 16
+        color: "#ffffff"
+        glow: true
+        font: "Arial"
+        
+      minimal_text:
+        type: text
+        text: "Rebalanced subtree height = 2 (optimal for size = 3)"
+        position: [0, -180]
+        size: 14
+        color: "#2ecc71"
+        glow: true
+        font: "Arial"
+        
+  scene_11:
+    duration: 7
+    description: "Global stability from local rules"
+    elements:
+      puzzle_emoji:
+        type: animated_emoji
+        emoji: "🧩"
+        position: [-100, 30]
+        size: 90
+        movement: "orbit"
+        glowing: "pulsing-glow"
+        rotation: "none"
+        reveal: "zoom-reveal"
+        speed: "normal"
+        delay: "none"
+        color: "#9b59b6"
+        
+      wrench_emoji:
+        type: animated_emoji
+        emoji: "🔧"
+        position: [100, 30]
+        size: 70
+        movement: "bounce"
+        glowing: "pulsing-glow"
+        rotation: "none"
+        reveal: "slide-reveal"
+        speed: "normal"
+        delay: "delay-1"
+        color: "#95a5a6"
+        
+      balance_constraint:
+        type: animated_emoji
+        emoji: "BF∈{-1,0,+1}"
+        position: [0, -60]
+        size: 35
+        movement: "floating-pen"
+        glowing: "pulsing-glow"
+        rotation: "none"
+        reveal: "slide-reveal"
+        speed: "normal"
+        delay: "delay-2"
+        color: "#2ecc71"
+        
+      stability_text:
+        type: text
+        text: "Stability emerges from each node fixing itself."
+        position: [0, 200]
+        size: 16
+        color: "#ffffff"
+        glow: true
+        font: "Arial"
+        
+  scene_12:
+    duration: 10
+    description: "Final perfect height after all insertions 1-10"
+    elements:
+      root_node:
+        type: algorithm_node
+        position: [0, -80]
+        value: "5"
+        visited: true
+        radius: 20
+        color: "#2ecc71"
+        glow: true
+        label: "Root"
+        
+      left_child_1:
+        type: algorithm_node
+        position: [-80, -20]
+        value: "3"
+        visited: true
+        radius: 18
+        color: "#3498db"
+        glow: true
+        label: "3"
+        
+      right_child_1:
+        type: algorithm_node
+        position: [80, -20]
+        value: "8"
+        visited: true
+        radius: 18
+        color: "#3498db"
+        glow: true
+        label: "8"
+        
+      left_child_2a:
+        type: algorithm_node
+        position: [-120, 40]
+        value: "2"
+        visited: true
+        radius: 16
+        color: "#3498db"
+        glow: true
+        label: "2"
+        
+      left_child_2b:
+        type: algorithm_node
+        position: [-40, 40]
+        value: "4"
+        visited: true
+        radius: 16
+        color: "#3498db"
+        glow: true
+        label: "4"
+        
+      right_child_2a:
+        type: algorithm_node
+        position: [40, 40]
+        value: "7"
+        visited: true
+        radius: 16
+        color: "#3498db"
+        glow: true
+        label: "7"
+        
+      right_child_2b:
+        type: algorithm_node
+        position: [120, 40]
+        value: "9"
+        visited: true
+        radius: 16
+        color: "#3498db"
+        glow: true
+        label: "9"
+        
+      leaf_1:
+        type: algorithm_node
+        position: [-140, 100]
+        value: "1"
+        visited: true
+        radius: 14
+        color: "#3498db"
+        glow: true
+        label: "1"
+        
+      leaf_6:
+        type: algorithm_node
+        position: [-20, 100]
+        value: "6"
+        visited: true
+        radius: 14
+        color: "#3498db"
+        glow: true
+        label: "6"
+        
+      leaf_10:
+        type: algorithm_node
+        position: [140, 100]
+        value: "10"
+        visited: true
+        radius: 14
+        color: "#3498db"
+        glow: true
+        label: "10"
+        
+      edge_root_left:
+        type: algorithm_edge
+        from: "root_node"
+        to: "left_child_1"
+        color: "#95a5a6"
+        
+      edge_root_right:
+        type: algorithm_edge
+        from: "root_node"
+        to: "right_child_1"
+        color: "#95a5a6"
+        
+      height_limit:
+        type: text
+        text: "h ≤ ⌊log₂(10)⌋ = 3"
+        position: [200, -100]
+        size: 14
+        color: "#f39c12"
+        glow: true
+        font: "Arial"
+        
+      final_text:
+        type: text
+        text: "Every insertion → at most 1-2 rotations → height ≈ 3 (near optimal)"
+        position: [0, -220]
+        size: 16
+        color: "#2ecc71"
+        glow: true
+        font: "Arial"
+        
+      balance_maintained:
+        type: text
+        text: "Perfect Height After All Insertions: Tree Stays Balanced"
+        position: [0, -200]
+        size: 18
+        color: "#ffffff"
+        glow: true
+        font: "Arial"

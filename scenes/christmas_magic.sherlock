@@ -1,0 +1,92 @@
+concept: "Christmas Magic"
+emoji: "🎄"
+total_duration: 15
+background: "#0a0a2e"
+
+phases:
+  winter_scene:
+    duration: 4
+    description: "Setting the winter scene"
+    elements:
+      gentle_snow:
+        type: snow
+        density: 0.8
+      
+      stars:
+        type: star_field
+        density: 1.2
+        
+  tree_appears:
+    duration: 3
+    description: "Christmas tree grows"
+    elements:
+      growing_tree:
+        type: christmas_tree
+        position: [0, 80]
+        size: 150
+      
+      more_snow:
+        type: snow
+        density: 1
+        
+  celebration:
+    duration: 4
+    description: "Christmas celebration"
+    elements:
+      full_tree:
+        type: christmas_tree
+        position: [0, 80]
+        size: 150
+      
+      celebration_fireworks:
+        type: fireworks
+        position: [0, -150]
+        intensity: 1.2
+        colors: ["#ff6b6b", "#4ecdc4", "#d4af37", "#ffffff"]
+      
+      heavy_snow:
+        type: snow
+        density: 1.5
+        
+  magical_finale:
+    duration: 4
+    description: "Magical winter finale"
+    elements:
+      magic_tree:
+        type: christmas_tree
+        position: [0, 80]
+        size: 150
+      
+      sparkle_magic:
+        type: sparkles
+        count: 15
+      
+      soft_snow:
+        type: snow
+        density: 0.6
+      
+      night_stars:
+        type: star_field
+        density: 2
+
+equations:
+  - id: "christmas_greeting"
+    latex: "\\text{Merry Christmas!}"
+    position: "top"
+    phase: "tree_appears"
+    animation: "fade-in"
+    delay: 2
+
+  - id: "joy_formula"
+    latex: "\\text{Joy} = \\text{Love} + \\text{Family} + \\text{Giving}"
+    position: "bottom"
+    phase: "celebration"
+    animation: "slide-in"
+    delay: 1
+
+  - id: "magic_equation"
+    latex: "\\text{Magic} = \\lim_{\\text{wonder} \\to \\infty} \\text{Belief}"
+    position: "center"
+    phase: "magical_finale"
+    animation: "bounce"
+    delay: 2

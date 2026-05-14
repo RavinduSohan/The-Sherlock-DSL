@@ -1,0 +1,15 @@
+concept: "Function Graph"
+emoji: "📈"
+total_duration: 5
+background: "#0a0e1a"
+
+subtitles:
+  - ""
+
+phases:
+  intro:
+    duration: 5
+    elements:
+      curve:
+        type: primitive
+        shape: functionGraph[fn:"x*x" xStart:-3 xEnd:3 segments:50 stroke:#00ffff strokeWidth:2 at:(0,0)] -> fadeIn(2s)

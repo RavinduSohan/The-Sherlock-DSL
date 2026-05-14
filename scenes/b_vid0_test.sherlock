@@ -1,0 +1,43 @@
+concept: "just test"
+emoji: "🧭"
+total_duration: 65
+background: "#0a0a0a"
+
+subtitles:
+  - ""
+  - ""
+  - ""
+  - ""
+  - ""
+  - ""
+  - ""
+  - ""
+  - ""
+
+phases:
+  scene_1:
+    duration: 8
+    description: "hello test"
+    elements:
+      active_network:
+        type: neural_net
+        position: [150, 100]
+        layers: [3, 5, 3, 1]
+        colors: ["#ff6b6b", "#4ecdc4", "#d4af37"]
+        animation_speed: 1.5
+
+        # Data flow particles
+      data_flow:
+        type: sparkles
+        count: 10
+        position: [-150, 0]            # INNER_LEFT
+        color: "#4ecdc4"
+        speed: 0.4
+
+      data_packets:
+        type: sparkles
+        count: 8
+        position: [150, 0]             # INNER_RIGHT
+        color: "#ff6b6b"
+        speed: 0.5
+

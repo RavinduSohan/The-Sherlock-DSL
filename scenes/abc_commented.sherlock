@@ -1,0 +1,925 @@
+# ULTIMATE SHERLOCK COMPONENT REFERENCE GUIDE
+# This file contains all working Sherlock components with their properties
+# Use as a reference when building new visualizations
+
+concept: "Sherlock Component Reference"
+emoji: "🔍"
+total_duration: 60  # Total duration of the animation in seconds
+background: "#0a0e1a"  # Dark background color for better visibility
+
+# ------------------------------------------------------------------------------
+# SCENE METADATA - These subtitles appear at the bottom of the visualization
+# ------------------------------------------------------------------------------
+subtitles:
+  - "🔍 Sherlock Component Reference Guide"
+  - "📊 Collection of working components and configurations"
+  - "✨ Use as a template for your own visualizations"
+  - "🧩 Copy and paste components as needed"
+
+phases:
+  # ----------------------------------------------------------------------------
+  # TEXT COMPONENTS - Basic text display with various styling options
+  # ----------------------------------------------------------------------------
+  text_components:
+    duration: 3
+    description: "Demonstration of text components with different styling"
+    elements:
+      # Standard text component - basic text display
+      standard_text:
+        type: text
+        text: "Standard Text Component"
+        position: [0, -250]
+        color: "#58a6ff"  # Blue color
+        size: 28  # Font size in pixels
+        glow: true  # Optional glow effect
+        font: "Arial"  # Font family
+      
+      # Styled text with special formatting
+      styled_text:
+        type: text
+        text: "Styled with Glow Effect"
+        position: [0, -150]
+        color: "#f39c12"  # Orange color
+        size: 24  # Font size
+        glow: true  # Adds a glowing effect
+        font: "Arial"  # Font family
+      
+      # Informational text with smaller size
+      info_text:
+        type: text
+        text: "Informational text with smaller size"
+        position: [0, -100]
+        color: "#95a5a6"  # Gray color
+        size: 16
+        font: "Arial"
+
+  # ----------------------------------------------------------------------------
+  # ALGORITHM ARRAY - For displaying arrays and sequences
+  # ----------------------------------------------------------------------------
+  algorithm_arrays:
+    duration: 4
+    description: "Demonstration of algorithm array components"
+    elements:
+      # Basic algorithm array with indices
+      basic_array:
+        type: algorithm_array
+        position: [0, -50]
+        items: [2, 7, 11, 15]  # Array values
+        color: "#3498db"  # Blue color
+        cellSize: 60  # Size of each cell
+        showIndices: true  # Show array indices
+        label: "Basic Array"  # Array label
+      
+      # Array with highlighted elements
+      highlighted_array:
+        type: algorithm_array
+        position: [0, 50]
+        items: [2, 7, 11, 15]
+        highlights: [0, 2]  # Highlight indices 0 and 2
+        color: "#3498db"
+        cellSize: 60
+        showIndices: true
+        label: "Array with Highlights"
+      
+      # Array with string elements
+      string_array:
+        type: algorithm_array
+        position: [0, 150]
+        items: ["a", "b", "c", "d"]  # String items
+        color: "#9b59b6"  # Purple color
+        cellSize: 60
+        showIndices: true
+        label: "String Array"
+
+  # ----------------------------------------------------------------------------
+  # ALGORITHM GRID - For displaying grids, maps, and 2D matrices
+  # ----------------------------------------------------------------------------
+  algorithm_grids:
+    duration: 4
+    description: "Demonstration of algorithm grid components"
+    elements:
+      # Basic grid with header row
+      hash_map:
+        type: algorithm_grid
+        position: [0, 0]
+        rows: 2  # Number of rows
+        cols: 4  # Number of columns
+        cellSize: 50  # Size of each cell
+        spacing: 2  # Spacing between cells
+        color: "#2c3e50"  # Cell color
+        border_color: "#34495e"  # Border color
+        cells: [["val", "idx"], ["", ""], ["", ""]]  # Cell values
+        label: "Hash Map Grid"  # Grid label
+      
+      # Grid with highlighted cells
+      highlighted_grid:
+        type: algorithm_grid
+        position: [0, 100]
+        rows: 2
+        cols: 4
+        cellSize: 50
+        spacing: 2
+        color: "#2c3e50"
+        border_color: "#34495e"
+        cells: [["val", "idx"], [2, 0], ["", ""], ["", ""]]
+        highlights: [2]  # Highlight cell index 2
+        label: "Grid with Highlights"
+
+  # ----------------------------------------------------------------------------
+  # SHAPES - Basic geometric shapes for visualizations
+  # ----------------------------------------------------------------------------
+  shapes_showcase:
+    duration: 6
+    description: "Show all available shapes and styling options"
+    elements:
+      # Circle with glow effect
+      circle1:
+        type: circle
+        center: [100, 100]  # X, Y coordinates
+        radius: 30  # Radius in pixels
+        color: "#1976d2"  # Color
+        glow: true  # Add glow effect
+        label: "Circle with Glow"
+      
+      # Filled circle
+      circle2:
+        type: circle
+        center: [100, 0]
+        radius: 20
+        color: "#43a047"  # Green color
+        fill: true  # Fill the circle
+        label: "Filled Circle"
+      
+      # Line with glow effect
+      line1:
+        type: line
+        from: [0, -100]  # Start point [x, y]
+        to: [200, -100]  # End point [x, y]
+        color: "#ffd600"  # Yellow color
+        thickness: 3  # Line thickness
+        glow: true  # Add glow effect
+        label: "Line with Glow"
+      
+      # Dashed line
+      line2:
+        type: line
+        from: [-100, -50]
+        to: [300, 50]
+        color: "#ff6b6b"  # Red color
+        thickness: 2
+        dashed: true  # Make line dashed
+        label: "Dashed Line"
+      
+      # Rectangle with glow
+      rect1:
+        type: rectangle
+        position: [-100, 100]  # Center position
+        width: 60  # Width in pixels
+        height: 40  # Height in pixels
+        color: "#9c27b0"  # Purple color
+        glow: true
+        label: "Rectangle"
+      
+      # Square (equal width and height)
+      rect2:
+        type: rectangle
+        position: [-100, 0]
+        width: 50
+        height: 50
+        color: "#ff9800"  # Orange color
+        fill: true  # Fill the rectangle
+        label: "Square"
+      
+      # Point with glow
+      point1:
+        type: point
+        position: [0, 100]
+        radius: 8  # Point radius
+        color: "#e91e63"  # Pink color
+        glow: true
+        label: "Point"
+      
+      # Smaller point
+      point2:
+        type: point
+        position: [200, 100]
+        radius: 5
+        color: "#00bcd4"  # Teal color
+        label: "Dot"
+      
+      # Vector (arrow) connector
+      connector1:
+        type: vector
+        from: [100, 100]  # Start point
+        to: [-100, 100]  # End point (arrow head)
+        color: "#666666"  # Gray color
+        width: 2  # Line width
+        label: "Vector Connector"
+      
+      # Another vector connector
+      connector2:
+        type: vector
+        from: [0, 100]
+        to: [100, 0]
+        color: "#666666"
+        width: 2
+        label: "Vector Connector 2"
+
+  # ----------------------------------------------------------------------------
+  # PATH FOLLOWERS - ORBITAL SYSTEM - Objects following orbital paths
+  # ----------------------------------------------------------------------------
+  inner_planets:
+    duration: 8
+    description: "Path followers demonstrating orbital motion like planets"
+    elements:
+      # Mercury - Fast moving orbital path follower
+      mercury:
+        type: path_follower
+        position: [50, 0]  # Starting position
+        pathId: "orbit"  # Path type - circular orbit
+        orbitCenter: [0, 0]  # Center of orbit
+        orbitRadius: 50  # Radius of orbit
+        pathSpeed: 8.0  # Speed of movement (higher = faster)
+        pathOffset: 0  # Starting offset in the path
+        startAngle: 0  # Starting angle in radians
+        radius: 3  # Size of the object
+        color: "#8C7853"  # Brown color
+        clockwise: true  # Direction of movement
+        glow: false
+        label: "Mercury"
+      
+      # Venus - Medium speed orbit with glow
+      venus:
+        type: path_follower
+        position: [70, 0]
+        pathId: "orbit"
+        orbitCenter: [0, 0]
+        orbitRadius: 70
+        pathSpeed: 6.2
+        pathOffset: 0
+        startAngle: 1.8
+        radius: 4
+        color: "#FFC649"  # Yellow color
+        clockwise: true
+        glow: true
+        label: "Venus"
+      
+      # Earth - Our home planet orbit
+      earth:
+        type: path_follower
+        position: [100, 0]
+        pathId: "orbit"
+        orbitCenter: [0, 0]
+        orbitRadius: 100
+        pathSpeed: 5.0
+        pathOffset: 0
+        startAngle: 3.14  # Pi radians = 180 degrees
+        radius: 5
+        color: "#6B93D6"  # Blue color
+        clockwise: true
+        glow: true
+        label: "Earth"
+      
+      # Mars - The red planet
+      mars:
+        type: path_follower
+        position: [130, 0]
+        pathId: "orbit"
+        orbitCenter: [0, 0]
+        orbitRadius: 130
+        pathSpeed: 3.8
+        pathOffset: 0
+        startAngle: 0.5
+        radius: 4
+        color: "#CD5C5C"  # Red color
+        clockwise: true
+        glow: false
+        label: "Mars"
+
+  # ----------------------------------------------------------------------------
+  # COMPLETE SOLAR SYSTEM - More complex orbital system with information
+  # ----------------------------------------------------------------------------
+  complete_solar_system:
+    duration: 4
+    description: "Complete solar system visualization with informational text"
+    elements:
+      # Informational text about the solar system
+      planet_count:
+        type: text
+        text: "🪐 8 Planets • 🌙 1 Moon • ☀️ 1 Star • 🪨 Asteroid Belt"
+        position: [0, 340]
+        color: "#FDB813"  # Gold color
+        size: 16
+        glow: true
+      
+      # Additional planet orbits and objects would be defined here
+      # (These are in other phases in this file)
+
+  # ----------------------------------------------------------------------------
+  # GRID BACKGROUND - For creating coordinate systems and graph paper effect
+  # ----------------------------------------------------------------------------
+  grid_background:
+    duration: 0.5
+    description: "Setup grid background for a coordinate system"
+    elements:
+      # Background grid with fine lines
+      background_grid:
+        type: grid
+        position: [0, 0]  # Center position
+        width: 800  # Total width
+        height: 600  # Total height
+        spacing: 25  # Space between grid lines
+        color: "#2c3e50"  # Dark blue color
+        thickness: 1  # Line thickness
+        opacity: 0.3  # Transparency
+        label: "Physics Grid"
+      
+      # Major grid lines (thicker)
+      major_grid:
+        type: grid
+        position: [0, 0]
+        width: 800
+        height: 600
+        spacing: 100  # Wider spacing
+        color: "#34495e"  # Darker blue
+        thickness: 2  # Thicker lines
+        opacity: 0.5
+        label: "Major Grid"
+      
+      # X-axis line
+      x_axis:
+        type: line
+        from: [-400, 0]  # Left edge
+        to: [400, 0]  # Right edge
+        color: "#5d6d7e"  # Medium blue
+        thickness: 2
+        opacity: 0.6
+        label: "X-axis"
+      
+      # Y-axis line
+      y_axis:
+        type: line
+        from: [0, -350]  # Top edge
+        to: [0, 350]  # Bottom edge
+        color: "#5d6d7e"
+        thickness: 2
+        opacity: 0.6
+        label: "Y-axis"
+      
+      # Origin label
+      origin_label:
+        type: text
+        text: "(0,0)"
+        position: [15, 15]  # Slightly offset from origin
+        color: "#7f8c8d"  # Gray
+        size: 10  # Small text
+
+  # ----------------------------------------------------------------------------
+  # PENDULUM PHYSICS - Objects following pendulum motion paths
+  # ----------------------------------------------------------------------------
+  pendulum_physics:
+    duration: 4
+    description: "Physics simulation of pendulum motion"
+    elements:
+      # Series of pendulums with slightly different periods
+      # creating wave patterns (only showing p1 for brevity)
+      p1:
+        type: path_follower
+        position: [-200, -170]
+        pathId: "pendulum"  # Pendulum path type
+        orbitCenter: [-200, -274]  # Pivot point
+        orbitRadius: 110  # Length of pendulum
+        maxAngle: 0.524  # Maximum swing angle (radians)
+        damping: 0.995  # Damping factor (energy loss)
+        pathSpeed: 1.8  # Speed of swing
+        pathOffset: 0  # Starting offset
+        radius: 5  # Size of pendulum bob
+        color: "#e74c3c"  # Red color
+        glow: true
+        label: "P1"
+      
+      # More pendulums would be defined here with varying parameters
+      # to create wave patterns
+      
+      # Explanation text
+      wave_explanation:
+        type: text
+        text: "Pendulums with slightly different periods create mesmerizing wave patterns"
+        position: [0, 180]
+        color: "#95a5a6"  # Gray
+        size: 12
+
+  # ----------------------------------------------------------------------------
+  # LINEAR PATHS - Objects following straight line paths
+  # ----------------------------------------------------------------------------
+  linear_paths:
+    duration: 2
+    description: "Objects following linear paths"
+    elements:
+      # Diagonal linear path
+      linear_particle_1:
+        type: path_follower
+        position: [0, 0]
+        radius: 8
+        color: "#9b59b6"  # Purple
+        glow: true
+        pathId: "linear"  # Linear path type
+        startX: -300  # Starting X coordinate
+        startY: -50   # Starting Y coordinate
+        endX: 300     # Ending X coordinate
+        endY: 50      # Ending Y coordinate
+        pathSpeed: 1  # Movement speed
+        pathOffset: 0 # Starting position in the path (0-1)
+        label: "Linear Diagonal"
+      
+      # Horizontal linear path
+      linear_particle_2:
+        type: path_follower
+        position: [0, 0]
+        radius: 6
+        color: "#1abc9c"  # Teal
+        glow: true
+        pathId: "linear"
+        startX: -250
+        startY: 100
+        endX: 250
+        endY: 100  # Same Y = horizontal line
+        pathSpeed: 1
+        pathOffset: 0.3  # Start 30% into the path
+        label: "Linear Horizontal"
+      
+      # Title for the section
+      linear_title:
+        type: text
+        text: "➡️ Linear Paths"
+        position: [0, -100]
+        color: "#9b59b6"
+        size: 18
+        glow: true
+
+  # ----------------------------------------------------------------------------
+  # FIGURE-8 PATHS - Objects following figure-8 (lemniscate) paths
+  # ----------------------------------------------------------------------------
+  figure8_paths:
+    duration: 2
+    description: "Objects following figure-8 paths (lemniscates)"
+    elements:
+      # Figure-8 path follower
+      figure8_particle:
+        type: path_follower
+        position: [0, 0]
+        radius: 7
+        color: "#e67e22"  # Orange
+        glow: true
+        pathId: "figure8"  # Figure-8 path type
+        orbitCenter: [0, 50]  # Center point
+        scale: 150  # Size of the figure-8
+        pathSpeed: 1
+        pathOffset: 0
+        label: "Figure-8"
+      
+      # Title for the section
+      figure8_title:
+        type: text
+        text: "♾️ Figure-8 Path (Lemniscate)"
+        position: [0, -100]
+        color: "#e67e22"
+        size: 18
+        glow: true
+
+  # ----------------------------------------------------------------------------
+  # SPIRAL PATHS - Objects following spiral paths
+  # ----------------------------------------------------------------------------
+  spiral_paths:
+    duration: 2
+    description: "Objects following spiral paths"
+    elements:
+      # Spiral path follower
+      spiral_particle:
+        type: path_follower
+        position: [0, 0]
+        radius: 8
+        color: "#8e44ad"  # Purple
+        glow: true
+        pathId: "spiral"  # Spiral path type
+        orbitCenter: [0, 50]  # Center of spiral
+        maxRadius: 200  # Maximum radius
+        pathSpeed: 1
+        pathOffset: 0
+        label: "Spiral"
+      
+      # Title for the section
+      spiral_title:
+        type: text
+        text: "🌀 Spiral Path"
+        position: [0, -200]
+        color: "#8e44ad"
+        size: 18
+        glow: true
+
+  # ----------------------------------------------------------------------------
+  # MATRIX COMPONENTS - For displaying and manipulating matrices
+  # ----------------------------------------------------------------------------
+  pacific_matrix:
+    duration: 2
+    description: "Matrix component demonstration with a 5x5 matrix"
+    elements:
+      # Basic matrix component
+      pacific_matrix:
+        type: matrix
+        position: [-100, 150]
+        values: [[1, 2, 2, 3, 5], [3, 2, 3, 4, 4], [2, 4, 5, 3, 1], [6, 7, 1, 4, 5], [5, 1, 1, 2, 4]]
+        color: "#4ecdc4"  # Teal
+        cellSize: 20  # Individual cell size
+        textSize: 14  # Text size within cells
+        label: "🌊 Pacific Ocean"  # Matrix label
+
+  # ----------------------------------------------------------------------------
+  # MATRIX HIGHLIGHTING - For highlighting specific rows/columns in matrices
+  # ----------------------------------------------------------------------------
+  pacific_matrix_highlight:
+    duration: 2
+    description: "Matrix with row and column highlighting"
+    elements:
+      # Matrix with highlighted row and column
+      pacific_matrix:
+        type: matrix
+        position: [-100, 150]
+        values: [[1, 2, 2, 3, 5], [3, 2, 3, 4, 4], [2, 4, 5, 3, 1], [6, 7, 1, 4, 5], [5, 1, 1, 2, 4]]
+        color: "#4ecdc4"
+        cellSize: 20
+        textSize: 14
+        label: "🌊 Pacific Ocean"
+        highlightRow: 4  # Highlight row index 4
+        highlightCol: 0  # Highlight column index 0
+      
+      # Neural network background effect
+      neural_background:
+        type: neural_net
+        position: [0, 0]
+        width: 600
+        height: 400
+        nodeColor: "#3498db"  # Blue
+        edgeColor: "#2ecc71"  # Green
+        opacity: 0.2
+        animated: true
+
+  # ----------------------------------------------------------------------------
+  # ALGORITHM GRID RESULTS - For boolean/highlighted grid visualization
+  # ----------------------------------------------------------------------------
+  final_result:
+    duration: 5
+    description: "Grid with boolean values and highlights"
+    elements:
+      # Grid with boolean values and highlights
+      result_grid:
+        type: algorithm_grid
+        position: [0, 0]
+        rows: 5
+        cols: 5
+        cellSize: 60
+        spacing: 6
+        color: "#f39c12"  # Orange
+        border_color: "#e67e22"  # Darker orange
+        border_width: 4
+        cells: [[false, false, false, false, true], [false, false, false, true, true], [false, false, true, false, false], [true, true, false, false, false], [true, false, false, false, false]]
+        showValues: true
+        highlightCells: [[0, 4], [1, 3], [1, 4], [2, 2], [3, 0], [3, 1], [4, 0]]  # Coordinates to highlight
+        label: "Both Oceans Reachable"
+        glow: true
+      
+      # Celebration fireworks
+      fireworks:
+        type: fireworks
+        position: [0, 0]
+        count: 5  # Number of fireworks
+        colors: ["#f1c40f", "#2ecc71", "#3498db", "#9b59b6", "#e74c3c"]  # Multiple colors
+        animated: true
+      
+      # Star field background effect
+      star_field:
+        type: star_field
+        position: [0, 0]
+        width: 800
+        height: 600
+        count: 100  # Number of stars
+        color: "#ffffff"  # White
+        opacity: 0.5
+        animated: true
+
+  # ----------------------------------------------------------------------------
+  # BASIC MATRIX - Simple matrix display without highlighting
+  # ----------------------------------------------------------------------------
+  basic_matrix:
+    duration: 3
+    description: "Basic 5x5 matrix visualization"
+    elements:
+      # Basic matrix with sequential values
+      my_matrix:
+        type: matrix
+        position: [0, 0]
+        values: [[1, 2, 3, 4, 5], [6, 7, 8, 9, 10], [11, 12, 13, 14, 15], [16, 17, 18, 19, 20], [21, 22, 23, 24, 25]]
+        color: "#4ecdc4"  # Teal
+        label: "Matrix A"
+      
+      # Title text
+      title:
+        type: text
+        text: "Basic 5x5 Matrix"
+        position: [0, -150]
+        color: "#ffffff"  # White
+        size: 18
+
+  # ----------------------------------------------------------------------------
+  # HIGHLIGHT ROW - Matrix with row highlighting
+  # ----------------------------------------------------------------------------
+  highlight_row:
+    duration: 3
+    description: "Matrix with row highlighting"
+    elements:
+      # Matrix with highlighted row
+      my_matrix:
+        type: matrix
+        position: [0, 0]
+        values: [[1, 2, 3, 4, 5], [6, 7, 8, 9, 10], [11, 12, 13, 14, 15], [16, 17, 18, 19, 20], [21, 22, 23, 24, 25]]
+        color: "#4ecdc4"
+        label: "Matrix A"
+        highlight_mode: "row"  # Highlight entire row
+
+  # ----------------------------------------------------------------------------
+  # SIMPLE NEURAL NETWORK - Neural network visualization with nodes and arrows
+  # ----------------------------------------------------------------------------
+  setup_simple_neural:
+    duration: 5
+    description: "Simple neural network with nodes and connections"
+    elements:
+      # Input node
+      node1:
+        type: circle
+        center: [150, 200]
+        radius: 24
+        color: "#1976d2"  # Blue
+        glow: true
+        label: "A"
+      
+      # Output node 1
+      node2:
+        type: circle
+        center: [350, 120]
+        radius: 24
+        color: "#43a047"  # Green
+        glow: true
+        label: "B"
+      
+      # Output node 2
+      node3:
+        type: circle
+        center: [350, 280]
+        radius: 24
+        color: "#ffd600"  # Yellow
+        glow: true
+        label: "C"
+      
+      # Connection from input to output 1
+      arrow1:
+        type: vector
+        from: [150, 200]
+        to: [350, 120]
+        color: "#fff"  # White
+        width: 4
+        glow: true
+        label: ""
+      
+      # Connection from input to output 2
+      arrow2:
+        type: vector
+        from: [150, 200]
+        to: [350, 280]
+        color: "#fff"
+        width: 4
+        glow: true
+        label: ""
+
+  # ----------------------------------------------------------------------------
+  # GRID TRANSFORMATIONS - For showing coordinate transformations
+  # ----------------------------------------------------------------------------
+  setup_grids:
+    duration: 3
+    description: "Initial grid space with vectors"
+    elements:
+      # Base grid in 3D style
+      base_grid:
+        type: grid
+        style: "3d"  # 3D grid style
+        spacing: 50
+        density: 1.2
+        color: "#333"  # Dark gray
+        opacity: 0.8
+        glow: false
+      
+      # Vector A
+      vector_a:
+        type: vector
+        from: [0, 0]
+        to: [150, 100]
+        color: "#ff6b6b"  # Red
+        width: 3
+        glow: true
+        label: "Vector A"
+      
+      # Vector B
+      vector_b:
+        type: vector
+        from: [0, 0]
+        to: [80, 180]
+        color: "#4ecdc4"  # Teal
+        width: 3
+        glow: true
+        label: "Vector B"
+
+  # ----------------------------------------------------------------------------
+  # TRANSFORM - Showing coordinate transformation effects
+  # ----------------------------------------------------------------------------
+  transform:
+    duration: 4
+    description: "Apply transformation to the coordinate space"
+    elements:
+      # Transformed grid (after transformation)
+      transformed_grid:
+        type: grid
+        style: "3d"
+        spacing: 50
+        density: 1.2
+        color: "#666"  # Medium gray
+        opacity: 0.9
+        glow: true
+      
+      # Transformed vector A
+      transformed_vector_a:
+        type: vector
+        from: [0, 0]
+        to: [220, 160]  # New endpoint after transformation
+        color: "#ff6b6b"
+        width: 4
+        glow: true
+
+  # ----------------------------------------------------------------------------
+  # REALISTIC SOLAR SYSTEM - Complete solar system with orbital paths
+  # ----------------------------------------------------------------------------
+  realistic_solar_system:
+    duration: 8
+    description: "Full solar system visualization with orbital paths"
+    elements:
+      # Sun at center
+      sun:
+        type: circle
+        position: [0, 0]
+        radius: 25
+        color: "#ffd700"  # Gold
+        glow: true
+        fill: true
+        label: "Sun"
+      
+      # Orbital paths for planets (shown as circles)
+      mercury_path:
+        type: circle
+        position: [0, 0]
+        radius: 60
+        color: "#333333"  # Dark gray
+        fill: false
+        thickness: 1
+        opacity: 0.3
+        label: "Mercury Path"
+      
+      # More orbital paths would be defined here
+      
+      # Planet objects with orbital motion
+      mercury:
+        type: path_follower
+        position: [60, 0]
+        pathId: "orbit"
+        orbitCenter: [0, 0]
+        orbitRadius: 60
+        pathSpeed: 4.0
+        pathOffset: 0
+        startAngle: 0
+        radius: 4
+        color: "#95a5a6"  # Gray
+        clockwise: true
+        label: "Mercury"
+      
+      # More planets would be defined here
+
+  # ----------------------------------------------------------------------------
+  # ALGORITHM TREE - Binary search tree visualization
+  # ----------------------------------------------------------------------------
+  binary_search_tree:
+    duration: 5
+    description: "Binary search tree visualization"
+    elements:
+      # Root node
+      root:
+        type: algorithm_tree
+        position: [0, -100]
+        color: "#3498db"  # Blue
+        value: 50  # Node value
+        label: "Root (50)"
+      
+      # Left child
+      left_child:
+        type: algorithm_tree
+        position: [-150, 50]
+        color: "#3498db"
+        value: 30
+        label: "Left (30)"
+      
+      # Right child
+      right_child:
+        type: algorithm_tree
+        position: [150, 50]
+        color: "#3498db"
+        value: 70
+        label: "Right (70)"
+      
+      # More tree nodes would be defined here
+      
+      # Search target display
+      search_target:
+        type: text
+        text: "🎯 Searching for: 60"
+        position: [0, -250]
+        color: "#f39c12"  # Orange
+        size: 20
+        glow: true
+      
+      # Title for the visualization
+      title:
+        type: text
+        text: "BST Search Algorithm"
+        position: [0, -300]
+        color: "#f0f6fc"  # White
+        size: 24
+        glow: true
+
+  # ----------------------------------------------------------------------------
+  # SPECIAL EFFECTS - Various special effect components
+  # ----------------------------------------------------------------------------
+  fireworks_demo:
+    duration: 4
+    description: "Fireworks celebration effect"
+    elements:
+      # Fireworks special effect
+      celebration:
+        type: fireworks
+        position: [0, -100]
+        intensity: 1.5
+        colors: ["#ff6b6b", "#4ecdc4", "#d4af37", "#9b59b6", "#ffffff"]
+      
+      # Background sparkles
+      sparkle_bg:
+        type: sparkles
+        count: 8
+  
+  # Snow effect
+  snow_scene:
+    duration: 4
+    description: "Winter wonderland with snow"
+    elements:
+      # Snowfall effect
+      snowfall:
+        type: snow
+        density: 1.2  # Snow density
+      
+      # Christmas tree
+      christmas_tree:
+        type: christmas_tree
+        position: [0, 50]
+        size: 120
+  
+  # Neural network visualization
+  neural_demo:
+    duration: 4
+    description: "Neural network visualization"
+    elements:
+      # Full neural network component
+      brain_network:
+        type: neural_net
+        position: [0, 0]
+        layers: [4, 6, 4, 2]  # Neurons per layer
+        colors: ["#4ecdc4", "#d4af37"]  # Color scheme
+  
+  # Fire effect
+  fire_waves:
+    duration: 4
+    description: "Fire effect demonstration"
+    elements:
+      # Fire animation
+      flame:
+        type: fire
+        position: [0, 100]
+
+# ------------------------------------------------------------------------------
+# END OF REFERENCE GUIDE
+# Use this file as a template when creating new Sherlock visualizations
+# Copy and paste components as needed for your specific use case
+# ------------------------------------------------------------------------------

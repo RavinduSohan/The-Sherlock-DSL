@@ -1,0 +1,666 @@
+concept: "Vector - The Language of Movement"
+emoji: "➡️"
+total_duration: 72
+background: "#0a0a0a"
+
+subtitles:
+  - ""
+  - ""
+  - ""
+  - ""
+  - ""
+  - ""
+  - ""
+  - ""
+  - ""
+
+phases:
+  essence_of_movement:
+    duration: 8
+    description: "Hook - The cinematic opening showing vectors as movement"
+    elements:
+      title_label:
+        type: text
+        text: "👣 The Essence of Movement"
+        position: [0, 240]
+        color: "#f1c40f"
+        size: 28
+        font: "Georgia"
+        glow: true
+
+      explanation_text:
+        type: text
+        text: "Take a single step. That movement can be captured by two numbers:\nhow far forward, and how far sideways.\nWith just those two, I know exactly where your foot will land.\nThis is the essence of a Vector — the simplest possible way\nto encode both distance and direction at once."
+        position: [0, -200]
+        color: "#d4af37"
+        size: 18
+        font: "Cinzel Decorative"
+
+      # Dazzling perspective grid
+      perspective_grid:
+        type: grid
+        style: "perspective"
+        spacing: 30
+        density: 1.2
+        color: "#d4af37"
+        opacity: 0.8
+        glow: true
+        perspective_depth: 0.9
+
+      # Main golden vector (3,4)
+      main_vector:
+        type: vector
+        from: [0, 0]
+        to: [120, 160]
+        color: "#f1c40f"
+        thickness: 3
+        arrowhead: true
+        glow: true
+        label: ""
+
+      vector_2:
+        type: vector
+        from: [0, 0]
+        to: [-80, 120]
+        color: "#e74c3c"
+        thickness: 2
+        glow: true
+        label: ""
+
+      vector_3:
+        type: vector
+        from: [0, 0]
+        to: [160, 80]
+        color: "#3498db"
+        thickness: 2
+        arrowhead: true
+        glow: true
+        label: ""
+
+      vector_4:
+        type: vector
+        from: [0, 0]
+        to: [40, 200]
+        color: "#9b59b6"
+        thickness: 2
+        arrowhead: true
+        glow: true
+        label: ""
+
+      vector_5:
+        type: vector
+        from: [0, 0]
+        to: [200, 40]
+        color: "#27ae60"
+        thickness: 2
+        arrowhead: true
+        glow: true
+        label: ""
+
+      # Sparkles for visual effects
+      sparkle_effects:
+        type: sparkles
+        count: 15
+        density: 20
+        color: "#f1c40f"
+
+      # Star field background
+      star_background:
+        type: star_field
+        density: 0.3
+    
+    static_hold_time: 3
+
+  wrong_lens_static_points:
+    duration: 8
+    description: "Problem - The naive way of thinking about vectors"
+    elements:
+      title_label:
+        type: text
+        text: "❌ The Wrong Lens: Static Points"
+        position: [0, 240]
+        color: "#e74c3c"
+        size: 28
+        font: "Georgia"
+        glow: true
+
+      explanation_text:
+        type: text
+        text: "When most people first see (3, 4), they think: coordinates.\nA dot on a map. That's true in one sense — but it's also misleading.\nBecause a vector is not really about where you are.\nIt's about how you move."
+        position: [0, -180]
+        color: "#d4af37"
+        size: 18
+        font: "Cinzel Decorative"
+
+      # Static point at (3,4)
+      static_point:
+        type: point
+        position: [120, 160]
+        radius: 12
+        color: "#e74c3c"
+        glow: true
+        label: "(3,4)"
+
+      # Fading grid to show limitation
+      basic_grid:
+        type: grid
+        style: "flat"
+        spacing: 40
+        density: 0.5
+        color: "#34495e"
+        opacity: 0.4
+
+      # Coordinate labels
+      x_label:
+        type: text
+        text: "3"
+        position: [120, -20]
+        color: "#7f8c8d"
+        size: 16
+
+      y_label:
+        type: text
+        text: "4"
+        position: [20, 160]
+        color: "#7f8c8d"
+        size: 16
+
+  aha_moment_arrows:
+    duration: 8
+    description: "Insight - The perspective shift from points to arrows"
+    elements:
+      title_label:
+        type: text
+        text: "💡 The Aha! Moment: From Points to Arrows"
+        position: [0, 240]
+        color: "#2ecc71"
+        size: 28
+        font: "Georgia"
+        glow: true
+
+      explanation_text:
+        type: text
+        text: "The aha comes when you stop thinking of vectors as locations,\nand start thinking of them as arrows.\nThey carry two pieces of information:\ntheir length (magnitude) and their tilt (direction).\nThat shift in thinking is what turns vectors from mere points\ninto a language of motion and force."
+        position: [0, -180]
+        color: "#d4af37"
+        size: 16
+        font: "Cinzel Decorative"
+
+      # Main vector arrow
+      transformation_vector:
+        type: vector
+        from: [0, 0]
+        to: [120, 160]
+        color: "#2ecc71"
+        thickness: 3
+        arrowhead: true
+        glow: true
+        label: ""
+
+      # Angle annotation
+      angle_label:
+        type: text
+        text: "θ = 53.13°"
+        position: [60, 40]
+        color: "#f1c40f"
+        size: 18
+        glow: true
+
+      # Magnitude annotation
+      magnitude_label:
+        type: text
+        text: "|v| = 5"
+        position: [80, 120]
+        color: "#f39c12"
+        size: 18
+        glow: true
+
+      # Transformation sparkles
+      transformation_sparkles:
+        type: sparkles
+        count: 20
+        density: 15
+        color: "#2ecc71"
+
+  step1_definition:
+    duration: 8
+    description: "Breakdown Step 1 - Definition with direction and magnitude"
+    elements:
+      title_label:
+        type: text
+        text: "📐 Step 1: Definition - Direction and Magnitude"
+        position: [0, 240]
+        color: "#58a6ff"
+        size: 26
+        font: "Georgia"
+        glow: true
+
+      explanation_text:
+        type: text
+        text: "A vector is an object defined by a direction and a magnitude."
+        position: [0, -200]
+        color: "#d4af37"
+        size: 20
+        font: "Cinzel Decorative"
+
+      # Main definition vector
+      definition_vector:
+        type: vector
+        from: [0, 0]
+        to: [120, 160]
+        color: "#58a6ff"
+        thickness: 3
+        arrowhead: true
+        glow: true
+        label: "Vector v"
+
+      # Grid for reference
+      reference_grid:
+        type: grid
+        style: "flat"
+        spacing: 40
+        density: 0.8
+        color: "#2c3e50"
+        opacity: 0.5
+
+      # Direction annotation
+      direction_label:
+        type: text
+        text: "Direction →"
+        position: [140, 120]
+        color: "#f39c12"
+        size: 16
+        glow: true
+
+      # Magnitude annotation
+      magnitude_annotation:
+        type: text
+        text: "Magnitude |v|"
+        position: [-120, 80]
+        color: "#e74c3c"
+        size: 16
+        glow: true
+
+  step2_magnitude_pythagoras:
+    duration: 8
+    description: "Breakdown Step 2 - Magnitude calculation using Pythagoras"
+    elements:
+      title_label:
+        type: text
+        text: "📏 Step 2: Magnitude - Pythagoras Revealed"
+        position: [0, 240]
+        color: "#58a6ff"
+        size: 26
+        font: "Georgia"
+        glow: true
+
+      explanation_text:
+        type: text
+        text: "The size comes from Pythagoras.\nFor (3, 4), the length is √(3² + 4²) = 5."
+        position: [0, -200]
+        color: "#d4af37"
+        size: 20
+        font: "Cinzel Decorative"
+
+      # Right triangle showing Pythagorean relationship
+      horizontal_side:
+        type: line
+        from: [0, 0]
+        to: [120, 0]
+        color: "#3498db"
+        thickness: 4
+        glow: true
+        label: "3"
+
+      vertical_side:
+        type: line
+        from: [120, 0]
+        to: [120, 160]
+        color: "#3498db"
+        thickness: 4
+        glow: true
+        label: "4"
+
+      # Hypotenuse (the vector)
+      hypotenuse_vector:
+        type: vector
+        from: [0, 0]
+        to: [120, 160]
+        color: "#f1c40f"
+        thickness: 3
+        arrowhead: true
+        glow: true
+        label: "5"
+
+      # Side labels
+      side_3_label:
+        type: text
+        text: "3"
+        position: [60, -20]
+        color: "#3498db"
+        size: 20
+        glow: true
+
+      side_4_label:
+        type: text
+        text: "4"
+        position: [140, 80]
+        color: "#3498db"
+        size: 20
+        glow: true
+
+      side_5_label:
+        type: text
+        text: "5"
+        position: [40, 100]
+        color: "#f1c40f"
+        size: 24
+        glow: true
+
+  step3_operations:
+    duration: 8
+    description: "Breakdown Step 3 - Vector operations"
+    elements:
+      title_label:
+        type: text
+        text: "➕ Step 3: Operations - The Algebra of Arrows"
+        position: [0, 240]
+        color: "#58a6ff"
+        size: 26
+        font: "Georgia"
+        glow: true
+
+      explanation_text:
+        type: text
+        text: "Adding vectors is like stacking arrows head-to-tail.\nSubtracting gives the gap between motions.\nScaling stretches or shrinks the arrow."
+        position: [0, -180]
+        color: "#d4af37"
+        size: 18
+        font: "Cinzel Decorative"
+
+      # Vector u
+      vector_u:
+        type: vector
+        from: [-100, 50]
+        to: [-20, 90]
+        color: "#3498db"
+        thickness: 2
+        arrowhead: true
+        glow: true
+        label: "u"
+
+      # Vector v (head-to-tail)
+      vector_v:
+        type: vector
+        from: [-20, 90]
+        to: [60, 210]
+        color: "#e74c3c"
+        thickness: 2
+        arrowhead: true
+        glow: true
+        label: "v"
+
+      # Result vector u+v
+      vector_sum:
+        type: vector
+        from: [-100, 50]
+        to: [60, 210]
+        color: "#27ae60"
+        thickness: 3
+        arrowhead: true
+        glow: true
+        label: "u+v"
+
+      # Scaled vectors
+      vector_2u:
+        type: vector
+        from: [100, -50]
+        to: [260, 30]
+        color: "#f39c12"
+        thickness: 2
+        arrowhead: true
+        glow: true
+        label: "2u"
+
+      vector_half_u:
+        type: vector
+        from: [100, -120]
+        to: [140, -100]
+        color: "#9b59b6"
+        thickness: 1
+        arrowhead: true
+        glow: true
+        label: "0.5u"
+
+  step4_generalization:
+    duration: 8
+    description: "Breakdown Step 4 - Beyond 2D to high dimensions"
+    elements:
+      title_label:
+        type: text
+        text: "🌌 Step 4: Generalization - Beyond 2D"
+        position: [0, 240]
+        color: "#58a6ff"
+        size: 26
+        font: "Georgia"
+        glow: true
+
+      explanation_text:
+        type: text
+        text: "And this isn't limited to two numbers.\nVectors extend into 3D… 100D… even 10,000D.\nOnce you stop thinking of them as arrows,\nand instead as containers of values, the same rules apply."
+        position: [0, -180]
+        color: "#d4af37"
+        size: 16
+        font: "Cinzel Decorative"
+
+      # Star field representing high-dimensional space
+      star_field_hd:
+        type: star_field
+        density: 0.8
+
+      # Neural network representing high-dimensional vectors
+      neural_visualization:
+        type: neural_net
+        position: [150, 0]
+        layers: [3, 5, 3, 1]
+        colors: ["#ff6b6b", "#4ecdc4", "#d4af37"]
+        animation_speed: 1.0
+
+      # 2D to 3D transition effect
+      basic_2d_vector:
+        type: vector
+        from: [-200, -50]
+        to: [-120, 50]
+        color: "#3498db"
+        thickness: 2
+        arrowhead: true
+        glow: true
+        label: "2D"
+
+      # Data flow sparkles
+      dimension_sparkles:
+        type: sparkles
+        count: 25
+        density: 30
+        color: "#9b59b6"
+
+  vectors_run_world:
+    duration: 8
+    description: "Zoom out - Applications of vectors everywhere"
+    elements:
+      title_label:
+        type: text
+        text: "🌍 Zoom Out: Vectors Run the World"
+        position: [0, 240]
+        color: "#58a6ff"
+        size: 26
+        font: "Georgia"
+        glow: true
+
+      explanation_text:
+        type: text
+        text: "Vectors quietly run the world.\nIn physics, every force is a vector.\nIn graphics, every pixel shift is a vector.\nIn machine learning, every word, every image, every piece of data…\nbecomes a vector in some high-dimensional space.\nWhat started as simple arrows becomes the backbone\nof modern science and AI."
+        position: [0, -160]
+        color: "#d4af37"
+        size: 14
+        font: "Cinzel Decorative"
+
+      # Dynamic waves representing omnipresence
+      omnipresent_waves:
+        type: waves
+        amplitude: 60
+        frequency: 0.03
+        layers: 3
+        colors: ["#4ecdc4", "#ff6b6b", "#d4af37"]
+        position: [0, 0]
+        opacity: 0.6
+        animated: true
+
+      # Physics force vector
+      physics_vector:
+        type: vector
+        from: [-250, 100]
+        to: [-150, 150]
+        color: "#e74c3c"
+        thickness: 2
+        arrowhead: true
+        glow: true
+        label: "Force"
+
+      # Graphics pixel vector
+      graphics_vector:
+        type: vector
+        from: [0, 100]
+        to: [50, 120]
+        color: "#3498db"
+        thickness: 2
+        arrowhead: true
+        glow: true
+        label: "Pixel"
+
+      # ML embedding space
+      ml_network:
+        type: neural_net
+        position: [200, 50]
+        layers: [4, 6, 4]
+        colors: ["#27ae60", "#f39c12"]
+        animation_speed: 0.8
+
+  the_reveal:
+    duration: 8
+    description: "Closure - Tying everything together"
+    elements:
+      title_label:
+        type: text
+        text: "🎭 The Reveal: More Than Numbers"
+        position: [0, 240]
+        color: "#f1c40f"
+        size: 28
+        font: "Georgia"
+        glow: true
+
+      explanation_text:
+        type: text
+        text: "So next time you see two numbers, don't just see a point.\nSee a step. A push. An arrow pointing somewhere.\nThat's a vector — the simplest idea that unlocks\nthe geometry of movement, force, and information itself."
+        position: [0, -180]
+        color: "#d4af37"
+        size: 18
+        font: "Cinzel Decorative"
+
+      # The elegant final vector
+      final_vector:
+        type: vector
+        from: [0, 0]
+        to: [120, 160]
+        color: "#f1c40f"
+        thickness: 4
+        arrowhead: true
+        glow: true
+        label: "Vector"
+
+      # Celebration sparkles
+      celebration_sparkles:
+        type: sparkles
+        count: 30
+        density: 25
+        color: "#f1c40f"
+
+      # Gentle fireworks
+      celebration_fireworks:
+        type: fireworks
+        position: [0, 100]
+        count: 3
+        colors: ["#f1c40f", "#2ecc71", "#3498db"]
+
+equations:
+  - id: vector_definition
+    latex: "\\vec{v} = \\begin{pmatrix} \\text{forward} \\\\ \\text{sideways} \\end{pmatrix} = \\begin{pmatrix} 3 \\\\ 4 \\end{pmatrix}"
+    position: [400, 150]
+    phase: essence_of_movement
+    animation: fade-in
+    glow: true
+    size: 16
+
+  - id: misleading_vs_reality
+    latex: "\\text{Misleading: } (3,4) = \\text{just a location} \\quad \\text{Reality: } \\vec{v} = \\text{movement + direction}"
+    position: [400, 300]
+    phase: wrong_lens_static_points
+    animation: slide-in
+    glow: true
+    size: 12
+
+  - id: vector_polar_form
+    latex: "\\vec{v} = |v| \\cdot \\begin{pmatrix} \\cos\\theta \\\\ \\sin\\theta \\end{pmatrix} = 5 \\cdot \\begin{pmatrix} \\cos(53.13°) \\\\ \\sin(53.13°) \\end{pmatrix}"
+    position: [400, 450]
+    phase: aha_moment_arrows
+    animation: fade-in
+    glow: true
+    size: 12
+
+  - id: magnitude_direction
+    latex: "\\vec{v} = \\text{magnitude} \\times \\text{direction} = |\\vec{v}| \\hat{v}"
+    position: [400, 200]
+    phase: step1_definition
+    animation: slide-in
+    glow: true
+    size: 14
+
+  - id: pythagoras
+    latex: "|\\vec{v}| = \\sqrt{3^2 + 4^2} = \\sqrt{9 + 16} = \\sqrt{25} = 5"
+    position: [400, 300]
+    phase: step2_magnitude_pythagoras
+    animation: fade-in
+    glow: true
+    size: 16
+
+  - id: vector_operations
+    latex: "\\vec{u} + \\vec{v} = \\begin{pmatrix} u_x + v_x \\\\ u_y + v_y \\end{pmatrix}, \\quad c\\vec{v} = \\begin{pmatrix} cv_x \\\\ cv_y \\end{pmatrix}"
+    position: [400, 450]
+    phase: step3_operations
+    animation: slide-in
+    glow: true
+    size: 12
+
+  - id: high_dimensional
+    latex: "\\vec{v} \\in \\mathbb{R}^n: \\vec{v} = \\begin{pmatrix} v_1 \\\\ v_2 \\\\ \\vdots \\\\ v_n \\end{pmatrix}"
+    position: [400, 300]
+    phase: step4_generalization
+    animation: fade-in
+    glow: true
+    size: 14
+
+  - id: applications
+    latex: "\\text{Applications} = \\{\\text{Physics}, \\text{Graphics}, \\text{ML}, \\text{AI}, \\ldots\\}"
+    position: [400, 200]
+    phase: vectors_run_world
+    animation: slide-in
+    glow: true
+    size: 14
+
+  - id: final_reveal
+    latex: "\\vec{v} = \\text{movement} + \\text{force} + \\text{information} = \\text{the language of reality}"
+    position: [400, 400]
+    phase: the_reveal
+    animation: fade-in
+    glow: true
+    size: 12

@@ -1,0 +1,109 @@
+concept: "Point Density Impact"
+emoji: "🎯"
+total_duration: 10
+background: "#1a1a2e"
+
+subtitles:
+  - "Same Curve, Different Densities"
+  - "Interpolation Accuracy"
+
+phases:
+  density_comparison:
+    duration: 10
+    static_hold_time: 4
+    description: "Same mathematical curve with different point densities"
+    elements:
+      title:
+        type: text
+        text: "🎯 Point Density Impact on Smoothness"
+        position: [0, 300]
+        color: "#ffffff"
+        size: 24
+        font: "Georgia"
+
+      subtitle:
+        type: text
+        text: "Same parabola y = x² with different sampling rates"
+        position: [0, 260]
+        color: "#bdc3c7"
+        size: 16
+        font: "Arial"
+
+      # 3 points - minimal
+      minimal_parabola:
+        type: xy_graph
+        position: [-240, 0]
+        size: 120
+        data_points: [[-2, 4], [0, 0], [2, 4]]
+        color: "#e74c3c"
+        line_width: 4
+        show_grid: true
+        show_axes: true
+        show_points: true
+        smooth_curve: true
+        title: "3 pts"
+
+      # 5 points - basic
+      basic_parabola:
+        type: xy_graph
+        position: [-120, 0]
+        size: 120
+        data_points: [[-2, 4], [-1, 1], [0, 0], [1, 1], [2, 4]]
+        color: "#f39c12"
+        line_width: 4
+        show_grid: true
+        show_axes: true
+        show_points: true
+        smooth_curve: true
+        title: "5 pts"
+
+      # 9 points - good
+      good_parabola:
+        type: xy_graph
+        position: [0, 0]
+        size: 120
+        data_points: [[-2, 4], [-1.5, 2.25], [-1, 1], [-0.5, 0.25], [0, 0], [0.5, 0.25], [1, 1], [1.5, 2.25], [2, 4]]
+        color: "#3498db"
+        line_width: 4
+        show_grid: true
+        show_axes: true
+        show_points: true
+        smooth_curve: true
+        title: "9 pts"
+
+      # 17 points - excellent
+      excellent_parabola:
+        type: xy_graph
+        position: [120, 0]
+        size: 120
+        data_points: [[-2, 4], [-1.75, 3.06], [-1.5, 2.25], [-1.25, 1.56], [-1, 1], [-0.75, 0.56], [-0.5, 0.25], [-0.25, 0.06], [0, 0], [0.25, 0.06], [0.5, 0.25], [0.75, 0.56], [1, 1], [1.25, 1.56], [1.5, 2.25], [1.75, 3.06], [2, 4]]
+        color: "#2ecc71"
+        line_width: 4
+        show_grid: true
+        show_axes: true
+        show_points: true
+        smooth_curve: true
+        title: "17 pts"
+
+      # Ultra dense - 33 points
+      ultra_parabola:
+        type: xy_graph
+        position: [240, 0]
+        size: 120
+        data_points: [[-2, 4], [-1.875, 3.52], [-1.75, 3.06], [-1.625, 2.64], [-1.5, 2.25], [-1.375, 1.89], [-1.25, 1.56], [-1.125, 1.27], [-1, 1], [-0.875, 0.77], [-0.75, 0.56], [-0.625, 0.39], [-0.5, 0.25], [-0.375, 0.14], [-0.25, 0.06], [-0.125, 0.02], [0, 0], [0.125, 0.02], [0.25, 0.06], [0.375, 0.14], [0.5, 0.25], [0.625, 0.39], [0.75, 0.56], [0.875, 0.77], [1, 1], [1.125, 1.27], [1.25, 1.56], [1.375, 1.89], [1.5, 2.25], [1.625, 2.64], [1.75, 3.06], [1.875, 3.52], [2, 4]]
+        color: "#9b59b6"
+        line_width: 4
+        show_grid: true
+        show_axes: true
+        show_points: true
+        smooth_curve: true
+        title: "33 pts"
+
+      explanation:
+        type: text
+        text: "More points = smoother curves & better interpolation accuracy"
+        position: [0, -280]
+        color: "#27ae60"
+        size: 18
+        font: "Arial"
+        glow: true

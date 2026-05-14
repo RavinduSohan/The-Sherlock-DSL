@@ -1,0 +1,158 @@
+concept: "Polygon Gallery - All New Shapes"
+emoji: "🔺"
+total_duration: 12
+background: "#0a0a0a"
+
+subtitles:
+  - "Triangle - Basic 3-sided polygon"
+  - "Square - Perfect 4-sided symmetry"
+  - "Pentagon - 5-sided golden ratio"
+  - "Hexagon - Nature's 6-sided perfection"
+  - "Octagon - 8-sided stop sign"
+  - "Star - Multi-pointed twinkling"
+  - "Möbius Strip - Mind-bending topology"
+
+phases:
+  basic_shapes:
+    duration: 4
+    static_hold_time: 1
+    description: "Basic polygon shapes"
+    elements:
+      title:
+        type: text
+        text: "🔺 Basic Polygons"
+        position: [0, 280]
+        color: "#f1c40f"
+        size: 32
+        font: "Georgia"
+        glow: true
+
+      # Triangle - energetic and playful
+      triangle:
+        type: mathematical_entity
+        position: [-300, 0]
+        form: triangle
+        personality: playful
+        size: 90
+        color: "#e74c3c"
+        energy: 0.9
+        label: "Triangle"
+
+      # Square - sharp and precise
+      square:
+        type: mathematical_entity
+        position: [-100, 0]
+        form: square
+        personality: sharp
+        size: 90
+        color: "#3498db"
+        energy: 0.8
+        label: "Square"
+
+      # Pentagon - elegant with golden ratio
+      pentagon:
+        type: mathematical_entity
+        position: [100, 0]
+        form: pentagon
+        personality: elegant
+        size: 90
+        color: "#9b59b6"
+        energy: 0.7
+        label: "Pentagon"
+
+      # Hexagon - wise and natural
+      hexagon:
+        type: mathematical_entity
+        position: [300, 0]
+        form: hexagon
+        personality: wise
+        size: 90
+        color: "#2ecc71"
+        energy: 0.6
+        label: "Hexagon"
+
+  complex_shapes:
+    duration: 4
+    static_hold_time: 1
+    description: "Complex and star shapes"
+    elements:
+      title:
+        type: text
+        text: "⭐ Complex Shapes"
+        position: [0, 280]
+        color: "#e67e22"
+        size: 32
+        font: "Georgia"
+        glow: true
+
+      # Octagon - sharp with internal patterns
+      octagon:
+        type: mathematical_entity
+        position: [-200, 0]
+        form: octagon
+        personality: sharp
+        size: 100
+        color: "#e74c3c"
+        energy: 1.0
+        label: "Octagon"
+
+      # 5-pointed star - mysterious and twinkling
+      star5:
+        type: mathematical_entity
+        position: [0, 0]
+        form: star
+        personality: mysterious
+        size: 100
+        color: "#f1c40f"
+        energy: 0.9
+        data: [5]
+        label: "Star-5"
+
+      # 7-pointed star - playful
+      star7:
+        type: mathematical_entity
+        position: [200, 0]
+        form: star
+        personality: playful
+        size: 100
+        color: "#9b59b6"
+        energy: 0.8
+        data: [7]
+        label: "Star-7"
+
+  topology_wonders:
+    duration: 4
+    static_hold_time: 2
+    description: "Topological marvels"
+    elements:
+      title:
+        type: text
+        text: "🌀 Topology Wonders"
+        position: [0, 280]
+        color: "#1abc9c"
+        size: 32
+        font: "Georgia"
+        glow: true
+
+      # Möbius strip - mind-bending topology
+      mobius:
+        type: mathematical_entity
+        position: [-150, 0]
+        form: mobius_strip
+        personality: mysterious
+        size: 120
+        color: "#e67e22"
+        energy: 0.7
+        label: "Möbius Strip"
+
+      # Generic polygon with many sides
+      dodecagon:
+        type: mathematical_entity
+        position: [150, 0]
+        form: polygon
+        personality: wise
+        size: 110
+        color: "#3498db"
+        energy: 0.5
+        data: [12]
+        label: "12-gon"

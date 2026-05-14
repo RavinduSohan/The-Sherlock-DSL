@@ -1,0 +1,104 @@
+# Advanced Primitive Language Test
+# Testing transformations, animations, and new shapes
+
+concept: "Advanced Primitive Features"
+emoji: "🎨"
+total_duration: 12
+background: "#0a0e1a"
+
+subtitles:
+  - "🎨 Advanced Primitive Language"
+  - "⭐ Stars, Arcs, Triangles, Ellipses"
+  - "🔄 Transforms & Animations"
+  - "✨ Full Manim-Level Flexibility"
+
+phases:
+  test_new_shapes:
+    duration: 4
+    description: "Test new primitive shapes: star, arc, triangle, ellipse"
+    elements:
+      # Star
+      yellow_star:
+        type: primitive
+        shape: star[points:5 outerRadius:1 innerRadius:0.5 fill:#f1c40f at:(-3,2)]
+      
+      # Arc
+      blue_arc:
+        type: primitive
+        shape: arc[r:1 startAngle:0 endAngle:3.14 stroke:#3498db strokeWidth:3 at:(0,2)]
+      
+      # Triangle
+      green_triangle:
+        type: primitive
+        shape: triangle[size:1.5 fill:#2ecc71 at:(3,2)]
+      
+      # Ellipse
+      purple_ellipse:
+        type: primitive
+        shape: ellipse[w:1.5 h:1 fill:#9b59b6/0.6 at:(-3,-1)]
+      
+      # Small decorative stars
+      star1:
+        type: primitive
+        shape: star[points:4 outerRadius:0.3 fill:#e74c3c at:(-1,0)]
+      
+      star2:
+        type: primitive
+        shape: star[points:6 outerRadius:0.4 fill:#1abc9c at:(1,0)]
+      
+      star3:
+        type: primitive
+        shape: star[points:8 outerRadius:0.35 fill:#e67e22 at:(3,-1)]
+  
+  test_transforms:
+    duration: 4
+    description: "Test transformations: scale, rotate, translate"
+    elements:
+      # Scaled circle
+      scaled_circle:
+        type: primitive
+        shape: circle[r:0.5 fill:#e74c3c/0.7 at:(-3,2)] -> scale(1.5)
+      
+      # Rotated square
+      rotated_square:
+        type: primitive
+        shape: square[w:1 fill:#3498db at:(0,2)] -> rotate(45deg)
+      
+      # Translated triangle
+      moving_triangle:
+        type: primitive
+        shape: triangle[size:1 fill:#2ecc71 at:(2,2)] -> translate(1, 0)
+      
+      # Multiple transforms
+      combo_star:
+        type: primitive
+        shape: star[points:5 outerRadius:0.8 fill:#f39c12 at:(-2,-1)] -> scale(1.2) -> rotate(30deg)
+  
+  test_animations:
+    duration: 4
+    description: "Test animations: fadeIn, scale, rotate"
+    elements:
+      # Fade in circle
+      fade_circle:
+        type: primitive
+        shape: circle[r:1 fill:#9b59b6 at:(-3,1)] -> fadeIn(1s)
+      
+      # Growing square
+      grow_square:
+        type: primitive
+        shape: square[w:1.5 fill:#1abc9c at:(0,1)] -> grow(1.5s)
+      
+      # Rotating star
+      spin_star:
+        type: primitive
+        shape: star[points:5 outerRadius:1 fill:#e67e22 at:(3,1)] -> rotate(360deg, 2s)
+      
+      # Scaling ellipse
+      scale_ellipse:
+        type: primitive
+        shape: ellipse[w:1 h:0.6 fill:#f39c12/0.8 at:(0,-1)] -> scale(1.8, 1.5s)
+      
+      # Info text
+      info:
+        type: primitive
+        shape: text[text:"Primitives = Flexibility!" fontSize:20 fill:#ffffff at:(0,-2.5)]

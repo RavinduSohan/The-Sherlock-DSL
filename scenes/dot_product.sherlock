@@ -1,0 +1,537 @@
+scene: "Dot Product - Measuring Alignment"
+description: "Understanding the dot product through hiking and alignment concepts"
+
+phases:
+  phase_1:
+    title: "The Uphill Hike Question 🥾"
+    duration: 4000
+    
+    elements:
+      # Hill slope
+      hill_slope:
+        type: line
+        from: [0, 0]
+        to: [200, 100]
+        color: "#8b7355"
+        thickness: 8
+        label: "Hill"
+
+      # Hiker's step (horizontal)
+      hiker_step:
+        type: vector
+        from: [50, 25]
+        to: [150, 25]
+        color: "#2ecc71"
+        thickness: 4
+        glow: true
+        label: "Step Forward"
+
+      # Elevation gain (vertical projection)
+      elevation_gain:
+        type: vector
+        from: [150, 25]
+        to: [150, 75]
+        color: "#f39c12"
+        thickness: 3
+        glow: true
+        label: "Height Gained"
+        
+      # Projection line (dashed)
+      projection_line:
+        type: line
+        from: [150, 25]
+        to: [150, 75]
+        color: "#f39c12"
+        thickness: 2
+        dashed: true
+
+      # Background grid
+      background_grid:
+        type: grid
+        position: [0, 0]
+        width: 800
+        height: 600
+        spacing: 25
+        color: "#2c3e50"
+        thickness: 1
+        opacity: 0.3
+
+      # Hill direction vector
+      hill_direction:
+        type: vector
+        from: [0, 0]
+        to: [100, 50]
+        color: "#27ae60"
+        thickness: 2
+        label: "Hill Direction"
+
+      # Question text
+      question_text:
+        type: text
+        text: "Picture yourself hiking uphill. You take a step forward — but how much of that step actually gets you higher? That's not just distance. It's alignment."
+        position: [0, -180]
+        color: "#ffffff"
+        size: 16
+        glow: true
+
+      # Initial equation
+      initial_eq:
+        type: equation
+        latex: "\\text{Step} \\cdot \\text{Hill Direction} = \\text{Height Gained}"
+        position: [400, 150]
+        size: 18
+        glow: true
+
+  phase_2:
+    title: "The Multiplication Confusion ❓"
+    duration: 3000
+    
+    elements:
+      # Confused multiplication text
+      confusion_text:
+        type: text
+        text: "Arrow × Arrow = ???"
+        position: [0, 0]
+        color: "#e74c3c"
+        size: 24
+        glow: true
+
+      # Wrong approaches
+      wrong_1:
+        type: text
+        text: "Length × Length = ?"
+        position: [-100, 50]
+        color: "#e74c3c"
+        size: 16
+
+      wrong_2:
+        type: text
+        text: "Direction × Direction = ?"
+        position: [0, 50]
+        color: "#e74c3c"
+        size: 16
+
+      wrong_3:
+        type: text
+        text: "Arrow × Arrow = Nonsense"
+        position: [100, 50]
+        color: "#e74c3c"
+        size: 16
+
+      # Frustration indicators
+      question_mark_1:
+        type: text
+        text: "❓"
+        position: [-150, -50]
+        color: "#f39c12"
+        size: 30
+
+      x_mark:
+        type: text
+        text: "❌"
+        position: [0, -50]
+        color: "#e74c3c"
+        size: 30
+
+      thinking_face:
+        type: text
+        text: "🤔"
+        position: [150, -50]
+        color: "#f39c12"
+        size: 30
+
+      # Explanation text
+      confusion_explanation:
+        type: text
+        text: "At first, multiplying two vectors sounds absurd. You can't multiply arrows like numbers. That's the wrong lens. Because what matters isn't just their size — it's how much they point the same way."
+        position: [0, -150]
+        color: "#ffffff"
+        size: 14
+
+      # Wrong equation
+      wrong_eq:
+        type: equation
+        latex: "\\text{Traditional multiplication doesn't work: } \\vec{a} \\times \\vec{b} \\neq \\text{number}"
+        position: [400, 300]
+        size: 16
+
+  phase_3:
+    title: "The Alignment Revelation 💡"
+    duration: 5000
+    
+    elements:
+      # First vector (horizontal)
+      vector_a:
+        type: vector
+        from: [0, 0]
+        to: [100, 0]
+        color: "#3498db"
+        thickness: 4
+        glow: true
+        label: "Vector A"
+
+      # Second vector (angled)
+      vector_b:
+        type: vector
+        from: [0, 0]
+        to: [70, 70]
+        color: "#e74c3c"
+        thickness: 4
+        glow: true
+        label: "Vector B"
+
+      # Angle arc
+      angle_arc:
+        type: circle
+        center: [0, 0]
+        radius: 30
+        color: "#f39c12"
+        fill: false
+        glow: true
+
+      # Projection line
+      projection_line:
+        type: line
+        from: [70, 70]
+        to: [70, 0]
+        color: "#9b59b6"
+        thickness: 2
+        dashed: true
+        label: "Projection"
+
+      # Sparkles for eureka moment
+      eureka_sparkles:
+        type: sparkles
+        position: [50, 35]
+        density: 20
+        color: "#f1c40f"
+        speed: 0.3
+
+      # Angle label
+      angle_label:
+        type: text
+        text: "θ = 45°"
+        position: [35, 20]
+        color: "#f39c12"
+        size: 14
+
+      # Alignment explanation
+      alignment_text:
+        type: text
+        text: "The dot product is precisely that measure. If two arrows line up perfectly, their overlap is maximized. If they're perpendicular, there's no overlap at all."
+        position: [0, -180]
+        color: "#ffffff"
+        size: 16
+        glow: true
+
+      # Alignment equation
+      alignment_eq:
+        type: equation
+        latex: "\\text{Alignment} = \\text{how much they point the same way}"
+        position: [400, 150]
+        size: 18
+        glow: true
+
+  phase_4:
+    title: "The Mathematical Truth 📐"
+    duration: 4000
+    
+    elements:
+      # Vector A
+      math_vector_a:
+        type: vector
+        from: [0, 0]
+        to: [100, 0]
+        color: "#3498db"
+        thickness: 3
+        label: "a"
+
+      # Vector B
+      math_vector_b:
+        type: vector
+        from: [0, 0]
+        to: [70, 70]
+        color: "#e74c3c"
+        thickness: 3
+        label: "b"
+
+      # Magnitude labels
+      magnitude_a:
+        type: text
+        text: "|a|"
+        position: [50, -15]
+        color: "#3498db"
+        size: 16
+
+      magnitude_b:
+        type: text
+        text: "|b|"
+        position: [25, 45]
+        color: "#e74c3c"
+        size: 16
+
+      # Angle label
+      angle_theta:
+        type: text
+        text: "θ = 45°"
+        position: [30, 15]
+        color: "#f39c12"
+        size: 14
+
+      # Cosine values reference
+      cos_values:
+        type: text
+        text: "cos(0°) = 1    cos(90°) = 0    cos(180°) = -1"
+        position: [0, 120]
+        color: "#ffffff"
+        size: 12
+
+      # Mathematical explanation
+      math_explanation:
+        type: text
+        text: "Mathematically, it's written: a⋅b = |a||b|cos θ where θ is the angle between them. The cosine captures the alignment: 1 if perfectly aligned, 0 if orthogonal, negative if pointing opposite."
+        position: [0, -150]
+        color: "#ffffff"
+        size: 14
+
+      # Dot product formula
+      dot_formula:
+        type: equation
+        latex: "\\vec{a} \\cdot \\vec{b} = |\\vec{a}||\\vec{b}|\\cos\\theta"
+        position: [400, 300]
+        size: 20
+        glow: true
+
+  phase_5:
+    title: "Projection Perspective 📏"
+    duration: 4000
+    
+    elements:
+      # Base vector
+      base_vector:
+        type: vector
+        from: [0, 0]
+        to: [120, 0]
+        color: "#3498db"
+        thickness: 4
+        label: "Base Vector"
+
+      # Vector to project
+      project_vector:
+        type: vector
+        from: [0, 0]
+        to: [80, 100]
+        color: "#e74c3c"
+        thickness: 4
+        label: "Vector to Project"
+
+      # Projection result
+      projection_result:
+        type: vector
+        from: [0, 0]
+        to: [64, 0]
+        color: "#27ae60"
+        thickness: 3
+        label: "Projection"
+
+      # Projection lines
+      proj_line:
+        type: line
+        from: [80, 100]
+        to: [64, 0]
+        color: "#9b59b6"
+        thickness: 2
+        dashed: true
+
+      # Labels
+      original_label:
+        type: text
+        text: "Original Length"
+        position: [40, 70]
+        color: "#e74c3c"
+        size: 12
+
+      projected_label:
+        type: text
+        text: "Projected Length"
+        position: [32, -20]
+        color: "#27ae60"
+        size: 12
+
+      alignment_factor:
+        type: text
+        text: "Alignment Factor = cos θ"
+        position: [0, 150]
+        color: "#f39c12"
+        size: 14
+
+      # Projection explanation
+      projection_text:
+        type: text
+        text: "Another way to see it: project one arrow onto the other, then measure how much of it remains."
+        position: [0, -150]
+        color: "#ffffff"
+        size: 16
+
+      # Projection formula
+      proj_eq:
+        type: equation
+        latex: "\\text{proj}_{\\vec{b}}\\vec{a} = \\frac{\\vec{a} \\cdot \\vec{b}}{|\\vec{b}|^2}\\vec{b}"
+        position: [400, 450]
+        size: 16
+
+  phase_6:
+    title: "Universal Alignment Test 🌍"
+    duration: 5000
+    
+    elements:
+      # Neural network showing applications
+      application_network:
+        type: neural_net
+        position: [0, 0]
+        layers: [3, 5, 3]
+        colors: ["#3498db", "#e74c3c", "#f39c12"]
+        animation_speed: 1.0
+
+      # Physics example
+      physics_example:
+        type: text
+        text: "Physics: Work = Force · Displacement"
+        position: [-200, 150]
+        color: "#3498db"
+        size: 14
+        glow: true
+
+      # ML example  
+      ml_example:
+        type: text
+        text: "ML: Similarity = Word₁ · Word₂"
+        position: [0, 150]
+        color: "#e74c3c"
+        size: 14
+        glow: true
+
+      # Graphics example
+      graphics_example:
+        type: text
+        text: "Graphics: Lighting = Normal · Light"
+        position: [200, 150]
+        color: "#f39c12"
+        size: 14
+        glow: true
+
+      # Force and displacement vectors (physics)
+      force_vector:
+        type: vector
+        from: [-250, 100]
+        to: [-200, 120]
+        color: "#3498db"
+        thickness: 2
+        label: "Force"
+
+      displacement_vector:
+        type: vector
+        from: [-250, 100]
+        to: [-230, 130]
+        color: "#27ae60"
+        thickness: 2
+        label: "Displacement"
+
+      # Word embeddings (ML)
+      word1_vector:
+        type: vector
+        from: [-50, 100]
+        to: [0, 120]
+        color: "#e74c3c"
+        thickness: 2
+        label: "Word₁"
+
+      word2_vector:
+        type: vector
+        from: [-50, 100]
+        to: [-20, 130]
+        color: "#9b59b6"
+        thickness: 2
+        label: "Word₂"
+
+      # Surface normal and light (graphics)
+      normal_vector:
+        type: vector
+        from: [150, 100]
+        to: [200, 120]
+        color: "#f39c12"
+        thickness: 2
+        label: "Normal"
+
+      light_vector:
+        type: vector
+        from: [150, 100]
+        to: [170, 130]
+        color: "#ffffff"
+        thickness: 2
+        label: "Light"
+
+      # Universal truth text
+      universal_text:
+        type: text
+        text: "This idea underlies both the physical and the digital world. In physics, the dot product tells you the work a force does moving an object. In machine learning, it measures similarity between word embeddings or image features."
+        position: [0, -200]
+        color: "#ffffff"
+        size: 14
+        glow: true
+
+      # Universal equation
+      universal_eq:
+        type: equation
+        latex: "\\text{Physics + ML + Graphics} = \\text{Dot Product Everywhere}"
+        position: [400, 450]
+        size: 18
+        glow: true
+
+      # Celebration sparkles
+      universal_sparkles:
+        type: sparkles
+        position: [0, 0]
+        density: 12
+        color: "#f1c40f"
+        speed: 0.2
+      projection:
+        type: vector
+        from: [0, 0]
+        to: [96, 32]
+        color: "#ffd93d"
+        width: 3
+        label: "proj_u(v)"
+      drop_line:
+        type: vector
+        from: [80, 100]
+        to: [96, 32]
+        color: "#ffffff"
+        width: 1
+        opacity: 0.5
+        style: "dashed"
+
+  result:
+    duration: 3
+    description: "Dot product value"
+    elements:
+      vector_u:
+        type: vector
+        from: [0, 0]
+        to: [120, 40]
+        color: "#ff6b6b"
+        width: 3
+        label: "u"
+      vector_v:
+        type: vector
+        from: [0, 0]
+        to: [80, 100]
+        color: "#4ecdc4"
+        width: 3
+        label: "v"
+      dot_result:
+        type: text
+        position: [140, 80]
+        content: "u·v = |u||v|cos(θ)"
+        color: "#ffd93d"
+        size: 20

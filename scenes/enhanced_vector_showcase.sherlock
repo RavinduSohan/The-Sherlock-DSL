@@ -1,0 +1,257 @@
+concept: "Enhanced Vector Showcase"
+emoji: "🔢"
+total_duration: 20
+background: "#0a0f1c"
+
+subtitles:
+  - "Dynamic Vector Mathematics"
+  - "Beautiful Value Displays" 
+  - "Multiple Vector Styles"
+  - "Real-time Calculations"
+
+phases:
+  basic_vectors:
+    duration: 5
+    static_hold_time: 2
+    description: "Basic vectors with dynamic calculations"
+    elements:
+      title:
+        type: text
+        text: "🔢 Enhanced Vector System"
+        position: [0, 320]
+        color: "#f39c12"
+        size: 28
+        font: "Georgia"
+        glow: true
+
+      # Standard vector with elegant display
+      elegant_vector:
+        type: mathematical_entity
+        form: vector
+        position: [-200, 50]
+        vector_components: [3, 2]
+        color: "#3498db"
+        size: 60
+        personality: "elegant"
+        show_components: true
+        show_magnitude: true
+        component_style: "elegant"
+        dynamic_values: true
+        vibrate_intensity: 0.12
+        animation_pattern: "wave"
+
+      # Technical readout vector
+      technical_vector:
+        type: mathematical_entity
+        form: vector
+        position: [0, 50]
+        vector_components: [2, -3]
+        color: "#00ffff"
+        size: 60
+        personality: "sharp"
+        show_components: true
+        show_magnitude: true
+        show_angle: true
+        component_style: "technical"
+        dynamic_values: true
+        vibrate_intensity: 0.08
+        animation_pattern: "pulse"
+
+      # Detailed mathematical vector
+      detailed_vector:
+        type: mathematical_entity
+        form: vector
+        position: [200, 50]
+        vector_components: [-1, 2.5]
+        color: "#e74c3c"
+        size: 60
+        personality: "wise"
+        show_components: true
+        show_magnitude: true
+        show_angle: true
+        show_coordinates: true
+        component_style: "detailed"
+        dynamic_values: true
+        vibrate_intensity: 0.1
+        animation_pattern: "breathe"
+
+  vector_styles:
+    duration: 5
+    static_hold_time: 2
+    description: "Different vector styles and personalities"
+    elements:
+      title:
+        type: text
+        text: "🎨 Vector Styles & Animations"
+        position: [0, 320]
+        color: "#9b59b6"
+        size: 28
+        font: "Georgia"
+        glow: true
+
+      # Force vector
+      force_vector:
+        type: mathematical_entity
+        form: vector
+        position: [-250, 0]
+        vector_components: [4, 1]
+        color: "#ff6b6b"
+        size: 70
+        personality: "sharp"
+        vector_style: "force"
+        show_components: true
+        component_style: "elegant"
+        dynamic_values: true
+        animation_pattern: "bounce"
+        energy: 0.8
+
+      # Velocity vector
+      velocity_vector:
+        type: mathematical_entity
+        form: vector
+        position: [-80, 0]
+        vector_components: [2, 3]
+        color: "#4ecdc4"
+        size: 70
+        personality: "playful"
+        vector_style: "velocity"
+        show_components: true
+        component_style: "technical"
+        dynamic_values: true
+        animation_pattern: "spin"
+        energy: 0.6
+
+      # Displacement vector
+      displacement_vector:
+        type: mathematical_entity
+        form: vector
+        position: [80, 0]
+        vector_components: [3, -2]
+        color: "#ffe66d"
+        size: 70
+        personality: "elegant"
+        vector_style: "displacement"
+        show_components: true
+        component_style: "minimal"
+        dynamic_values: true
+        animation_pattern: "wave"
+        energy: 0.5
+
+      # Gradient vector
+      gradient_vector:
+        type: mathematical_entity
+        form: vector
+        position: [250, 0]
+        vector_components: [-2, 2]
+        color: "#ff8b94"
+        size: 70
+        personality: "mysterious"
+        vector_style: "gradient"
+        show_components: true
+        component_style: "detailed"
+        dynamic_values: true
+        animation_pattern: "pulse"
+        energy: 0.7
+
+  vector_combinations:
+    duration: 5
+    static_hold_time: 2
+    description: "Vector operations and combinations"
+    elements:
+      title:
+        type: text
+        text: "⚡ Vector Operations & Vibrations"
+        position: [0, 320]
+        color: "#1abc9c"
+        size: 28
+        font: "Georgia"
+        glow: true
+
+      # High vibration vector
+      vibrating_vector:
+        type: mathematical_entity
+        form: vector
+        position: [-150, 0]
+        vector_components: [2, 1.5]
+        color: "#ff6b6b"
+        size: 80
+        personality: "playful"
+        show_components: true
+        show_magnitude: true
+        component_style: "elegant"
+        dynamic_values: true
+        vibrate_intensity: 0.4
+        animation_pattern: "bounce"
+        energy: 1.0
+
+      # Precise vector with coordinates
+      precise_vector:
+        type: mathematical_entity
+        form: vector
+        position: [150, 0]
+        vector_components: [1.732, 1.414]
+        color: "#2ecc71"
+        size: 80
+        personality: "wise"
+        show_components: true
+        show_magnitude: true
+        show_angle: true
+        show_coordinates: true
+        component_style: "detailed"
+        dynamic_values: false
+        vibrate_intensity: 0.05
+        animation_pattern: "breathe"
+        value_precision: 3
+        energy: 0.3
+
+  extreme_vectors:
+    duration: 5
+    static_hold_time: 3
+    description: "Extreme vector demonstrations"
+    elements:
+      title:
+        type: text
+        text: "🚀 Extreme Vector Demonstrations"
+        position: [0, 320]
+        color: "#e67e22"
+        size: 28
+        font: "Georgia"
+        glow: true
+
+      # Mega vector with all features
+      mega_vector:
+        type: mathematical_entity
+        form: vector
+        position: [-100, 50]
+        vector_components: [5, -3]
+        color: "#8e44ad"
+        size: 100
+        personality: "mysterious"
+        vector_style: "force"
+        show_components: true
+        show_magnitude: true
+        show_angle: true
+        show_coordinates: true
+        component_style: "detailed"
+        dynamic_values: true
+        vibrate_intensity: 0.3
+        animation_pattern: "spin"
+        energy: 0.9
+        glow: true
+
+      # Minimal clean vector
+      clean_vector:
+        type: mathematical_entity
+        form: vector
+        position: [100, 50]
+        vector_components: [2, 2]
+        color: "#f1c40f"
+        size: 80
+        personality: "elegant"
+        vector_style: "standard"
+        show_components: true
+        component_style: "minimal"
+        dynamic_values: false
+        vibrate_intensity: 0.0
+        animation_pattern: "wave"
+        energy: 0.2

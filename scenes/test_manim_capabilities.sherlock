@@ -1,0 +1,321 @@
+# COMPREHENSIVE TEST: All Manim-like Capabilities
+# This file demonstrates that our primitive system can do anything Manim can do
+
+concept: "Manim Capabilities Test"
+emoji: "🎨"
+total_duration: 66
+background: "#0a0e1a"
+
+subtitles:
+  - "🎨 Manim-Level Capabilities"
+  - "Basic Shapes"
+  - "Regular Polygons"
+  - "Function Graphs"
+  - "Parametric Curves"
+  - "Smooth Morphing"
+  - "Physics Animations"
+  - "Complex Compositions"
+  - "Morphing Chains"
+  - "Advanced Functions"
+  - "Text Transformations"
+  - "Grand Finale"
+
+phases:
+  basic_shapes:
+    duration: 4
+    description: "Basic Shapes (like Manim's VMobject)"
+    elements:
+      title:
+        type: primitive
+        shape: text[text:"Basic Shapes" fontSize:28 fill:#58a6ff at:(0,3.5)]
+
+      shape1:
+        type: primitive
+        shape: circle[r:0.5 fill:#ff0000 at:(-5,2)] -> fadeIn(0.5s)
+
+      shape2:
+        type: primitive
+        shape: square[w:1 fill:#00ff00 at:(-3,2)] -> fadeIn(0.5s, 0.5s)
+
+      shape3:
+        type: primitive
+        shape: rectangle[w:1.5 h:0.8 fill:#0000ff at:(-1,2)] -> fadeIn(0.5s, 1s)
+
+      shape4:
+        type: primitive
+        shape: triangle[size:1 fill:#ffff00 at:(1,2)] -> fadeIn(0.5s, 1.5s)
+
+      shape5:
+        type: primitive
+        shape: star[points:5 outerRadius:0.6 innerRadius:0.3 fill:#ff00ff at:(3,2)] -> fadeIn(0.5s, 2s)
+
+      shape6:
+        type: primitive
+        shape: ellipse[w:1.2 h:0.6 fill:#00ffff at:(5,2)] -> fadeIn(0.5s, 2.5s)
+
+  regular_polygons:
+    duration: 4
+    description: "Regular Polygons (Manim's RegularPolygon)"
+    elements:
+      title:
+        type: primitive
+        shape: text[text:"Regular Polygons" fontSize:28 fill:#58a6ff at:(0,3.5)]
+
+      polygon1:
+        type: primitive
+        shape: regularPolygon[sides:5 r:0.5 fill:#ff6666 at:(-5,0)] -> fadeIn(0.5s)
+
+      polygon2:
+        type: primitive
+        shape: regularPolygon[sides:6 r:0.5 fill:#66ff66 at:(-3,0)] -> fadeIn(0.5s, 0.5s)
+
+      polygon3:
+        type: primitive
+        shape: regularPolygon[sides:7 r:0.5 fill:#6666ff at:(-1,0)] -> fadeIn(0.5s, 1s)
+
+      polygon4:
+        type: primitive
+        shape: regularPolygon[sides:8 r:0.5 fill:#ffff66 at:(1,0)] -> fadeIn(0.5s, 1.5s)
+
+      polygon5:
+        type: primitive
+        shape: regularPolygon[sides:9 r:0.5 fill:#ff66ff at:(3,0)] -> fadeIn(0.5s, 2s)
+
+      polygon6:
+        type: primitive
+        shape: regularPolygon[sides:10 r:0.5 fill:#66ffff at:(5,0)] -> fadeIn(0.5s, 2.5s)
+
+  function_graphs:
+    duration: 4
+    description: "Function Graphs (Manim's FunctionGraph)"
+    elements:
+      title:
+        type: primitive
+        shape: text[text:"Function Graphs" fontSize:28 fill:#58a6ff at:(0,3.5)]
+
+      graph1:
+        type: primitive
+        shape: functionGraph[fn:"sin(x)" xStart:-3 xEnd:3 segments:100 stroke:#ff0000 strokeWidth:2 at:(0,-2)] -> fadeIn(0.5s)
+
+      graph2:
+        type: primitive
+        shape: functionGraph[fn:"cos(x)" xStart:-3 xEnd:3 segments:100 stroke:#00ff00 strokeWidth:2 at:(0,-2.5)] -> fadeIn(0.5s, 0.5s)
+
+      graph3:
+        type: primitive
+        shape: functionGraph[fn:"0.2*x*x" xStart:-3 xEnd:3 segments:50 stroke:#0000ff strokeWidth:2 at:(0,-3)] -> fadeIn(0.5s, 1s)
+
+      graph4:
+        type: primitive
+        shape: functionGraph[fn:"0.05*x*x*x" xStart:-3 xEnd:3 segments:50 stroke:#ffff00 strokeWidth:2 at:(0,-3.5)] -> fadeIn(0.5s, 1.5s)
+
+  parametric_curves:
+    duration: 4
+    description: "Parametric Curves (Manim's ParametricFunction)"
+    elements:
+      title:
+        type: primitive
+        shape: text[text:"Parametric Curves" fontSize:28 fill:#58a6ff at:(0,3.5)]
+
+      param1:
+        type: primitive
+        shape: parametric[paramX:"cos(t)" paramY:"sin(t)" tStart:0 tEnd:6.28 segments:100 stroke:#ff0000 strokeWidth:2 at:(-4,0)] -> fadeIn(0.5s)
+
+      param2:
+        type: primitive
+        shape: parametric[paramX:"sin(2*t)" paramY:"sin(3*t)" tStart:0 tEnd:6.28 segments:200 stroke:#00ff00 strokeWidth:2 at:(-2,0)] -> fadeIn(0.5s, 0.5s)
+
+      param3:
+        type: primitive
+        shape: parametric[paramX:"0.2*t*cos(t)" paramY:"0.2*t*sin(t)" tStart:0 tEnd:12.56 segments:200 stroke:#0000ff strokeWidth:2 at:(0,0)] -> fadeIn(0.5s, 1s)
+
+      param4:
+        type: primitive
+        shape: parametric[paramX:"cos(3*t)*cos(t)" paramY:"cos(3*t)*sin(t)" tStart:0 tEnd:6.28 segments:200 stroke:#ff00ff strokeWidth:2 at:(2,0)] -> fadeIn(0.5s, 1.5s)
+
+      param5:
+        type: primitive
+        shape: parametric[paramX:"sin(t)*(exp(cos(t))-2*cos(4*t)-pow(sin(t/12),5))*0.3" paramY:"cos(t)*(exp(cos(t))-2*cos(4*t)-pow(sin(t/12),5))*0.3" tStart:0 tEnd:25.12 segments:500 stroke:#ffff00 strokeWidth:2 at:(4,0)] -> fadeIn(0.5s, 2s)
+
+  morphing:
+    duration: 6
+    description: "Smooth Morphing (Manim's Transform)"
+    elements:
+      title:
+        type: primitive
+        shape: text[text:"Smooth Morphing" fontSize:28 fill:#58a6ff at:(0,3.5)]
+
+      morph1:
+        type: morph
+        shape: circle[r:0.8 fill:#ff0000 at:(-4,2)] ~> square[w:1.5 fill:#00ff00 at:(-4,2)] (2s, ease.inOut)
+
+      morph2:
+        type: morph
+        shape: triangle[size:1.2 fill:#0000ff at:(-2,2)] ~> star[points:5 outerRadius:0.8 innerRadius:0.4 fill:#ffff00 at:(-2,2)] (2s, ease.inOut)
+
+      morph3:
+        type: morph
+        shape: regularPolygon[sides:5 r:0.8 fill:#ff00ff at:(0,2)] ~> regularPolygon[sides:8 r:0.8 fill:#00ffff at:(0,2)] (2s, ease.inOut)
+
+      morph4:
+        type: morph
+        shape: square[w:1.5 fill:#66ff66 at:(2,2)] ~> circle[r:0.8 fill:#ff6666 at:(2,2)] (2s, ease.inOut)
+
+      morph5:
+        type: morph
+        shape: star[points:5 outerRadius:0.8 innerRadius:0.4 fill:#6666ff at:(4,2)] ~> triangle[size:1.2 fill:#ffff66 at:(4,2)] (2s, ease.inOut)
+
+  physics_animations:
+    duration: 6
+    description: "Physics Animations (Advanced Easing)"
+    elements:
+      title:
+        type: primitive
+        shape: text[text:"Physics Animations" fontSize:28 fill:#58a6ff at:(0,3.5)]
+
+      spring:
+        type: primitive
+        shape: circle[r:0.5 fill:#ff0000 at:(-5,-2)] -> moveTo((5,-2), 2s, spring) -> moveTo((-5,-2), 2s, spring, 2s)
+
+      bounce:
+        type: primitive
+        shape: circle[r:0.5 fill:#00ff00 at:(-4,2)] -> moveTo((-4,-2), 1s) -> moveTo((-4,2), 1s, bounce, 1s)
+
+      elastic:
+        type: primitive
+        shape: square[w:1 fill:#0000ff at:(0,-2)] -> scale(2, 1.5s, elastic) -> scale(1, 1.5s, elastic, 1.5s)
+
+  compositions:
+    duration: 6
+    description: "Complex Compositions (Manim's VGroup)"
+    elements:
+      title:
+        type: primitive
+        shape: text[text:"Compositions" fontSize:28 fill:#58a6ff at:(0,3.5)]
+
+      group1:
+        type: primitive_group
+        shape: group[at:(0,0)] { circle[r:0.3 fill:#ff0000 at:(0,0.5)] square[w:0.5 fill:#00ff00 at:(-0.5,-0.5)] triangle[size:0.6 fill:#0000ff at:(0.5,-0.5)] } -> fadeIn(1s) -> rotate(360, 2s) -> scale(1.5, 1s, 3s)
+
+      pattern1:
+        type: primitive
+        shape: circle[r:0.2 fill:#ff00ff at:(-3,0)] -> fadeIn(0.2s)
+
+      pattern2:
+        type: primitive
+        shape: circle[r:0.2 fill:#ff00ff at:(-2,0)] -> fadeIn(0.2s, 0.2s)
+
+      pattern3:
+        type: primitive
+        shape: circle[r:0.2 fill:#ff00ff at:(-1,0)] -> fadeIn(0.2s, 0.4s)
+
+      pattern4:
+        type: primitive
+        shape: circle[r:0.2 fill:#ff00ff at:(0,0)] -> fadeIn(0.2s, 0.6s)
+
+      pattern5:
+        type: primitive
+        shape: circle[r:0.2 fill:#ff00ff at:(1,0)] -> fadeIn(0.2s, 0.8s)
+
+      pattern6:
+        type: primitive
+        shape: circle[r:0.2 fill:#ff00ff at:(2,0)] -> fadeIn(0.2s, 1s)
+
+      pattern7:
+        type: primitive
+        shape: circle[r:0.2 fill:#ff00ff at:(3,0)] -> fadeIn(0.2s, 1.2s)
+
+  morph_chain:
+    duration: 10
+    description: "Complex Morphing Chain"
+    elements:
+      title:
+        type: primitive
+        shape: text[text:"Morphing Chain" fontSize:28 fill:#58a6ff at:(0,3.5)]
+
+      chain:
+        type: morph
+        shape: circle[r:1 fill:#ff0000 at:(0,0)] ~> square[w:2 fill:#ff8800 at:(0,0)] (1.5s, ease.inOut) ~> triangle[size:2.5 fill:#ffff00 at:(0,0)] (1.5s, ease.inOut, 1.5s) ~> star[points:5 outerRadius:1.2 innerRadius:0.6 fill:#00ff00 at:(0,0)] (1.5s, ease.inOut, 3s) ~> regularPolygon[sides:6 r:1.2 fill:#0000ff at:(0,0)] (1.5s, ease.inOut, 4.5s) ~> circle[r:1 fill:#ff00ff at:(0,0)] (1.5s, ease.inOut, 6s)
+
+  advanced_functions:
+    duration: 6
+    description: "Advanced Function Graphs"
+    elements:
+      title:
+        type: primitive
+        shape: text[text:"Advanced Functions" fontSize:28 fill:#58a6ff at:(0,3.5)]
+
+      func1:
+        type: primitive
+        shape: functionGraph[fn:"0.5*tan(x)" xStart:-1.4 xEnd:1.4 segments:100 stroke:#ff0000 strokeWidth:2 at:(0,0)] -> fadeIn(0.5s)
+
+      func2:
+        type: primitive
+        shape: functionGraph[fn:"sqrt(x+3)" xStart:-3 xEnd:3 segments:100 stroke:#00ff00 strokeWidth:2 at:(0,-1)] -> fadeIn(0.5s, 0.5s)
+
+      func3:
+        type: primitive
+        shape: functionGraph[fn:"exp(-x*x)" xStart:-3 xEnd:3 segments:100 stroke:#0000ff strokeWidth:2 at:(0,-2)] -> fadeIn(0.5s, 1s)
+
+      func4:
+        type: primitive
+        shape: functionGraph[fn:"log(x+3.1)" xStart:-3 xEnd:3 segments:100 stroke:#ffff00 strokeWidth:2 at:(0,-3)] -> fadeIn(0.5s, 1.5s)
+
+  text_transformations:
+    duration: 10
+    description: "Text Transformations (Manim-style)"
+    elements:
+      title:
+        type: primitive
+        shape: text[text:"Text Transformations" fontSize:28 fill:#58a6ff at:(0,3.5)]
+
+      # Mathematical equation transformation with smooth timing
+      math_text:
+        type: morph
+        shape: text[text:"E = mc²" fontSize:40 fill:#00ff88 at:(0,1.8)] ~> text[text:"E = mc³" fontSize:40 fill:#ff6b6b at:(0,1.8)] (2s, ease.out) ~> text[text:"E = mc²" fontSize:40 fill:#00ff88 at:(0,1.8)] (2s, ease.out, 2s)
+
+      # Word transformation with beautiful fade
+      word_transform:
+        type: morph
+        shape: text[text:"Smooth" fontSize:36 fill:#ffffff at:(0,0.2)] ~> text[text:"Beautiful" fontSize:36 fill:#ffd93d at:(0,0.2)] (2.5s, ease.out, 4s)
+
+      # Number calculation with elegant transition
+      calculation:
+        type: morph
+        shape: text[text:"2 + 3 = 5" fontSize:32 fill:#6bcbff at:(0,-1.5)] ~> text[text:"5 × 2 = 10" fontSize:32 fill:#c77aff at:(0,-1.5)] (2.5s, ease.out, 6.5s)
+
+  grand_finale:
+    duration: 6
+    description: "Grand Finale - Everything at Once"
+    elements:
+      title:
+        type: primitive
+        shape: text[text:"Grand Finale!" fontSize:32 fill:#58a6ff at:(0,3.5)]
+
+      center_morph:
+        type: morph
+        shape: circle[r:1.5 fill:#ff00ff at:(0,0)] ~> star[points:8 outerRadius:2 innerRadius:1 fill:#ffff00 at:(0,0)] (2s, ease.inOut) ~> circle[r:1.5 fill:#00ffff at:(0,0)] (2s, ease.inOut, 2s)
+
+      orbit1:
+        type: primitive
+        shape: circle[r:0.3 fill:#ff0000 at:(3,0)] -> rotate(720, 4s)
+
+      orbit2:
+        type: primitive
+        shape: square[w:0.5 fill:#00ff00 at:(0,3)] -> rotate(720, 4s)
+
+      orbit3:
+        type: primitive
+        shape: triangle[size:0.6 fill:#0000ff at:(-3,0)] -> rotate(720, 4s)
+
+      orbit4:
+        type: primitive
+        shape: star[points:5 outerRadius:0.4 innerRadius:0.2 fill:#ffff00 at:(0,-3)] -> rotate(720, 4s)
+
+      wave1:
+        type: primitive
+        shape: functionGraph[fn:"sin(x)*2" xStart:-3 xEnd:3 segments:100 stroke:#ffffff strokeWidth:1 at:(0,0)] -> fadeIn(0.5s) -> fadeOut(0.5s, 3.5s)
+
+      wave2:
+        type: primitive
+        shape: functionGraph[fn:"cos(x)*2" xStart:-3 xEnd:3 segments:100 stroke:#ffffff strokeWidth:1 at:(0,0)] -> fadeIn(0.5s, 0.5s) -> fadeOut(0.5s, 3.5s)

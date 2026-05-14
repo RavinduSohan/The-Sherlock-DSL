@@ -1,0 +1,115 @@
+concept: "The Magic Adventure"
+emoji: "✨"
+total_duration: 12
+background: "#1e1b4b"
+
+phases:
+  chapter_1:
+    duration: 4
+    description: "A wizard appears"
+    elements:
+      wizard:
+        type: animated_emoji
+        emoji: "🧙‍♂️"
+        position: [-200, 0]
+        size: 80
+        reveal: "spiral-reveal"
+        glowing: "pulsing-glow"
+        color: "#8b5cf6"
+        speed: "slow"
+      
+      magic_wand:
+        type: animated_emoji
+        emoji: "🪄"
+        position: [-100, -50]
+        size: 50
+        movement: "floating-pen"
+        glowing: "flicker"
+        color: "#fbbf24"
+        delay: "delay-2"
+        speed: "ultra-slow"
+      
+      sparkles:
+        type: animated_emoji
+        emoji: "X₂=y²"
+        position: [-50, 0]
+        size: 40
+        movement: "orbit"
+        glowing: "pulsing-glow"
+        color: "#ffffff"
+        delay: "delay-3"
+        speed: "fast"
+
+  chapter_2:
+    duration: 4
+    description: "Dragon appears and battle begins"
+    elements:
+      dragon:
+        type: animated_emoji
+        emoji: "🐉"
+        position: [100, 50]
+        size: 90
+        reveal: "zoom-reveal"
+        movement: "wobble"
+        glowing: "flicker"
+        color: "#ef4444"
+        speed: "normal"
+      
+      fire:
+        type: animated_emoji
+        emoji: "🔥"
+        position: [50, 0]
+        size: 45
+        movement: "bounce"
+        glowing: "pulsing-glow"
+        color: "#f97316"
+        delay: "delay-1"
+        speed: "fast"
+      
+      shield:
+        type: animated_emoji
+        emoji: "🛡️"
+        position: [-50, 20]
+        size: 55
+        movement: "floating-pen"
+        glowing: "matrix-code"
+        delay: "delay-2"
+        speed: "slow"
+
+  chapter_3:
+    duration: 4
+    description: "Victory and treasure"
+    elements:
+      treasure:
+        type: animated_emoji
+        emoji: "💎"
+        position: [0, -100]
+        size: 70
+        reveal: "zoom-reveal"
+        rotation: "spin-clockwise"
+        glowing: "pulsing-glow"
+        color: "#06d6a0"
+        speed: "slow"
+      
+      crown:
+        type: animated_emoji
+        emoji: "👑"
+        position: [-80, -50]
+        size: 60
+        reveal: "slide-reveal"
+        movement: "floating-pen"
+        glowing: "pulsing-glow"
+        color: "#fbbf24"
+        delay: "delay-1"
+        speed: "ultra-slow"
+      
+      celebration:
+        type: animated_emoji
+        emoji: "🎉"
+        position: [80, -50]
+        size: 55
+        movement: "bounce"
+        glowing: "flicker"
+        color: "#ec4899"
+        delay: "delay-2"
+        speed: "fast"

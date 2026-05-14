@@ -1,0 +1,836 @@
+concept: "Neural Emergence: The Weighted Mystery"
+emoji: "🧠"
+total_duration: 81
+background: "#0a0a0a"
+
+subtitles:
+  - ""
+  - ""
+  - ""
+  - ""
+  - ""
+  - ""
+  - ""
+  - ""
+  - ""
+
+phases:
+  scene_1:
+    duration: 8
+    description: "The primordial brain—a single connection in the void"
+    elements:
+      brain_center:
+        type: animated_emoji
+        emoji: "🧠"
+        position: [0, 30]
+        size: 100
+        movement: "floating-pen"
+        glowing: "pulsing-glow"
+        rotation: "none"
+        reveal: "zoom-reveal"
+        speed: "ultra-slow"
+        delay: "none"
+        color: "#9b59b6"
+      
+      input_point_1:
+        type: mathematical_entity
+        position: [-60, -50]
+        form: "point"
+        personality: "playful"
+        size: 20
+        color: "#3498db"
+        glow: true
+        energy: 0.6
+        animation_pattern: "pulse"
+        label: "x₁"
+      
+      input_point_2:
+        type: mathematical_entity
+        position: [60, -50]
+        form: "point"
+        personality: "playful"
+        size: 20
+        color: "#3498db"
+        glow: true
+        energy: 0.6
+        animation_pattern: "pulse"
+        label: "x₂"
+      
+      connection_line:
+        type: relationship_connector
+        from: [-60, -50]
+        to: [0, 20]
+        relationship_type: "transformation"
+        strength: 0.3
+        color: "#e74c3c"
+        animated: true
+        bidirectional: false
+        label: "w = ?"
+      
+      story_text:
+        type: text
+        text: "In the beginning, there was a neuron. And a connection. And a number hiding in the shadows."
+        position: [0, -200]
+        size: 15
+        color: "#ffffff"
+        glow: true
+        font: "Arial"
+      
+      title_text:
+        type: text
+        text: "The First Spark • 🧠"
+        position: [0, 220]
+        size: 20
+        color: "#9b59b6"
+        glow: true
+        font: "Arial"
+
+  scene_2:
+    duration: 7
+    description: "The haunting question—how does simplicity become intelligence?"
+    elements:
+      brain_emoji:
+        type: animated_emoji
+        emoji: "🧠"
+        position: [-100, 20]
+        size: 90
+        movement: "floating-pen"
+        glowing: "pulsing-glow"
+        rotation: "gentle-rotate"
+        reveal: "zoom-reveal"
+        speed: "slow"
+        delay: "none"
+        color: "#3498db"
+      
+      eye_emoji:
+        type: animated_emoji
+        emoji: "👁️"
+        position: [100, 20]
+        size: 85
+        movement: "bounce"
+        glowing: "flicker"
+        rotation: "none"
+        reveal: "slide-reveal"
+        speed: "normal"
+        delay: "delay-1"
+        color: "#f39c12"
+      
+      scale_emoji:
+        type: animated_emoji
+        emoji: "⚖️"
+        position: [0, -60]
+        size: 70
+        movement: "wobble"
+        glowing: "pulsing-glow"
+        rotation: "none"
+        reveal: "zoom-reveal"
+        speed: "slow"
+        delay: "delay-2"
+        color: "#95a5a6"
+      
+      equation_emoji:
+        type: animated_emoji
+        emoji: "∑w·x>θ"
+        position: [0, 100]
+        size: 60
+        movement: "floating-pen"
+        glowing: "matrix-code"
+        rotation: "gentle-rotate"
+        reveal: "spiral-reveal"
+        speed: "normal"
+        delay: "delay-1"
+        color: "#e74c3c"
+      
+      story_text:
+        type: text
+        text: "How does weighted addition become recognition? How does arithmetic become understanding?"
+        position: [0, -200]
+        size: 15
+        color: "#ffffff"
+        glow: true
+        font: "Arial"
+      
+      title_text:
+        type: text
+        text: "The Alchemy Question ❓"
+        position: [0, 220]
+        size: 20
+        color: "#e74c3c"
+        glow: true
+        font: "Arial"
+
+  scene_3:
+    duration: 9
+    description: "The detective examines the evidence—weights as clues"
+    elements:
+      magnifier_emoji:
+        type: animated_emoji
+        emoji: "🔍"
+        position: [0, 140]
+        size: 110
+        movement: "floating-pen"
+        glowing: "pulsing-glow"
+        rotation: "gentle-rotate"
+        reveal: "zoom-reveal"
+        speed: "slow"
+        delay: "none"
+        color: "#f39c12"
+      
+      evidence_grid:
+        type: algorithm_grid
+        position: [-180, 50]
+        rows: 3
+        cols: 2
+        cellSize: 50
+        spacing: 5
+        cells: [["Vibrate","1"],["Screen","1"],["Bored","1"]]
+        highlights: [[2,1]]
+        showValues: true
+        color: "#3498db"
+        border_color: "#2980b9"
+        border_width: 3
+        label: "Inputs"
+      
+      weights_chart:
+        type: water_bar_chart
+        data: [2, 1, 5]
+        position: [180, 20]
+        width: 150
+        height: 120
+        water_color: "#e74c3c"
+        wave_intensity: 1.2
+      
+      weight_text_1:
+        type: text
+        text: "w₁ = 2"
+        position: [-120, 80]
+        size: 14
+        color: "#e74c3c"
+        glow: true
+        font: "Arial"
+      
+      weight_text_2:
+        type: text
+        text: "w₂ = 1"
+        position: [-120, 30]
+        size: 14
+        color: "#e74c3c"
+        glow: true
+        font: "Arial"
+      
+      weight_text_3:
+        type: text
+        text: "w₃ = 5"
+        position: [-120, -20]
+        size: 14
+        color: "#f39c12"
+        glow: true
+        font: "Arial"
+      
+      calculation_text:
+        type: text
+        text: "1×2 + 1×1 + 1×5 = 8"
+        position: [0, -150]
+        size: 16
+        color: "#2ecc71"
+        glow: true
+        font: "Arial"
+      
+      story_text:
+        type: text
+        text: "The weights tell the story. Boredom: weight 5. Some inputs whisper. Others shout."
+        position: [0, -200]
+        size: 14
+        color: "#ffffff"
+        glow: true
+        font: "Arial"
+      
+      title_text:
+        type: text
+        text: "The Weighted Evidence 🔍"
+        position: [0, 220]
+        size: 20
+        color: "#f39c12"
+        glow: true
+        font: "Arial"
+
+  scene_4:
+    duration: 8
+    description: "The tipping point—where math becomes decision"
+    elements:
+      scale_emoji:
+        type: animated_emoji
+        emoji: "⚖️"
+        position: [0, 40]
+        size: 105
+        movement: "wobble"
+        glowing: "pulsing-glow"
+        rotation: "none"
+        reveal: "zoom-reveal"
+        speed: "slow"
+        delay: "none"
+        color: "#9b59b6"
+      
+      left_force:
+        type: mathematical_entity
+        position: [-120, 40]
+        form: "vector"
+        personality: "mysterious"
+        size: 40
+        color: "#3498db"
+        glow: true
+        energy: 0.8
+        animation_pattern: "pulse"
+        label: "Σ=8"
+        vector_components: [0, -3]
+        show_magnitude: true
+        vector_style: "force"
+      
+      threshold_line:
+        type: line
+        from: [100, 20]
+        to: [100, -100]
+        thickness: 4
+        dashed: false
+        color: "#e74c3c"
+        opacity: 1.0
+        label: "θ=6"
+      
+      threshold_graph:
+        type: xy_graph
+        position: [200, -20]
+        size: 150
+        data_points: [[0, 0], [1, 2], [2, 3], [3, 8]]
+        x_range: [0, 3]
+        y_range: [0, 10]
+        color: "#2ecc71"
+        line_width: 3
+        show_grid: true
+        show_axes: true
+        show_labels: false
+        show_points: true
+        smooth_curve: true
+        animate_draw: false
+        title: ""
+        resolution: 100
+      
+      fire_emoji:
+        type: animated_emoji
+        emoji: "💥"
+        position: [120, -80]
+        size: 50
+        movement: "bounce"
+        glowing: "flicker"
+        rotation: "spin-clockwise"
+        reveal: "zoom-reveal"
+        speed: "fast"
+        delay: "delay-2"
+        color: "#e74c3c"
+      
+      story_text:
+        type: text
+        text: "It's not addition. It's a verdict. When the weighted evidence crosses the threshold... the neuron speaks."
+        position: [0, -200]
+        size: 14
+        color: "#ffffff"
+        glow: true
+        font: "Arial"
+      
+      title_text:
+        type: text
+        text: "The Threshold Point ⚖️"
+        position: [0, 220]
+        size: 20
+        color: "#9b59b6"
+        glow: true
+        font: "Arial"
+
+  scene_5:
+    duration: 7
+    description: "The emergence of concept from connection"
+    elements:
+      l_shape_emoji:
+        type: animated_emoji
+        emoji: "🔤"
+        position: [-100, 20]
+        size: 80
+        movement: "none"
+        glowing: "pulsing-glow"
+        rotation: "none"
+        reveal: "zoom-reveal"
+        speed: "normal"
+        delay: "none"
+        color: "#3498db"
+      
+      neuron_emoji:
+        type: animated_emoji
+        emoji: "🧠"
+        position: [0, 20]
+        size: 85
+        movement: "floating-pen"
+        glowing: "matrix-code"
+        rotation: "gentle-rotate"
+        reveal: "spiral-reveal"
+        speed: "slow"
+        delay: "delay-1"
+        color: "#9b59b6"
+      
+      target_emoji:
+        type: animated_emoji
+        emoji: "🎯"
+        position: [100, 20]
+        size: 75
+        movement: "none"
+        glowing: "flicker"
+        rotation: "none"
+        reveal: "zoom-reveal"
+        speed: "normal"
+        delay: "delay-2"
+        color: "#e74c3c"
+      
+      equation_emoji:
+        type: animated_emoji
+        emoji: "w·L>w·T"
+        position: [0, -70]
+        size: 55
+        movement: "floating-pen"
+        glowing: "matrix-code"
+        rotation: "gentle-rotate"
+        reveal: "spiral-reveal"
+        speed: "normal"
+        delay: "delay-1"
+        color: "#f39c12"
+      
+      story_text:
+        type: text
+        text: "Nine numbers. A preference. A concept born from connection weights. The neuron now knows what an 'L' looks like."
+        position: [0, -200]
+        size: 14
+        color: "#ffffff"
+        glow: true
+        font: "Arial"
+      
+      title_text:
+        type: text
+        text: "Pattern Recognition 🎯"
+        position: [0, 220]
+        size: 20
+        color: "#e74c3c"
+        glow: true
+        font: "Arial"
+
+  scene_6:
+    duration: 9
+    description: "Scaling up—from one connection to a web of intelligence"
+    elements:
+      web_emoji:
+        type: animated_emoji
+        emoji: "🕸️"
+        position: [0, 20]
+        size: 95
+        movement: "none"
+        glowing: "pulsing-glow"
+        rotation: "gentle-rotate"
+        reveal: "spiral-reveal"
+        speed: "ultra-slow"
+        delay: "none"
+        color: "#9b59b6"
+      
+      node_1:
+        type: algorithm_node
+        position: [-100, 80]
+        value: "1"
+        visited: true
+        radius: 18
+        color: "#3498db"
+        glow: true
+        label: ""
+      
+      node_2:
+        type: algorithm_node
+        position: [0, 80]
+        value: "2"
+        visited: true
+        radius: 18
+        color: "#3498db"
+        glow: true
+        label: ""
+      
+      node_3:
+        type: algorithm_node
+        position: [100, 80]
+        value: "3"
+        visited: true
+        radius: 18
+        color: "#3498db"
+        glow: true
+        label: ""
+      
+      node_4:
+        type: algorithm_node
+        position: [-100, -20]
+        value: "4"
+        visited: true
+        radius: 18
+        color: "#2ecc71"
+        glow: true
+        label: ""
+      
+      node_5:
+        type: algorithm_node
+        position: [0, -20]
+        value: "5"
+        visited: true
+        radius: 18
+        color: "#2ecc71"
+        glow: true
+        label: ""
+      
+      node_6:
+        type: algorithm_node
+        position: [100, -20]
+        value: "6"
+        visited: true
+        radius: 18
+        color: "#2ecc71"
+        glow: true
+        label: ""
+      
+      output_node:
+        type: algorithm_node
+        position: [0, -100]
+        value: "👁️"
+        visited: true
+        radius: 25
+        color: "#e74c3c"
+        glow: true
+        label: ""
+      
+      story_text:
+        type: text
+        text: "One connection knows an edge. A web of connections knows a face. Scale transforms arithmetic into intelligence."
+        position: [0, -200]
+        size: 14
+        color: "#ffffff"
+        glow: true
+        font: "Arial"
+      
+      title_text:
+        type: text
+        text: "The Web of Meaning 🕸️"
+        position: [0, 220]
+        size: 20
+        color: "#9b59b6"
+        glow: true
+        font: "Arial"
+
+  scene_7:
+    duration: 6
+    description: "The detective reveals the universal law"
+    elements:
+      detective_octopus:
+        type: wisdom_character
+        character_type: detective_octopus
+        position: [80, 0]
+        size: 155
+        mood: "thinking"
+        expression: "normal"
+        talking: true
+        breathing: true
+        color_scheme: "cosmic"
+        personality: "wise"
+        speech_bubble: true
+        speech_text: "Intelligence isn't in the parts. It's in the connections between them."
+        background_aura: "glow"
+      
+      flow_background:
+        type: flow_field
+        position: [-150, 0]
+        flow_type: "data_stream"
+        density: 0.4
+        intensity: 0.5
+        color: "#4ecdc4"
+        animated: true
+        direction: "outward"
+        size: 250
+      
+      title_text:
+        type: text
+        text: "The Octopus's Law 🐙"
+        position: [0, 220]
+        size: 20
+        color: "#4ecdc4"
+        glow: true
+        font: "Arial"
+
+  scene_8:
+    duration: 10
+    description: "The principle manifested everywhere"
+    elements:
+      globe_emoji:
+        type: animated_emoji
+        emoji: "🌐"
+        position: [0, 20]
+        size: 90
+        movement: "orbit"
+        glowing: "pulsing-glow"
+        rotation: "gentle-rotate"
+        reveal: "zoom-reveal"
+        speed: "slow"
+        delay: "none"
+        color: "#3498db"
+      
+      vision_entity:
+        type: mathematical_entity
+        position: [-120, -60]
+        form: "triangle"
+        personality: "sharp"
+        size: 45
+        color: "#e74c3c"
+        glow: true
+        energy: 0.8
+        animation_pattern: "pulse"
+        label: "👁️ Vision"
+      
+      language_entity:
+        type: mathematical_entity
+        position: [120, -60]
+        form: "pentagon"
+        personality: "elegant"
+        size: 45
+        color: "#f39c12"
+        glow: true
+        energy: 0.7
+        animation_pattern: "breathe"
+        label: "🗣️ Language"
+      
+      learning_entity:
+        type: mathematical_entity
+        position: [0, -120]
+        form: "hexagon"
+        personality: "wise"
+        size: 45
+        color: "#2ecc71"
+        glow: true
+        energy: 0.6
+        animation_pattern: "wave"
+        label: "🧠 Learning"
+      
+      connector_1:
+        type: relationship_connector
+        from: [-120, -60]
+        to: [0, 10]
+        relationship_type: "correlation"
+        strength: 0.9
+        color: "#e74c3c"
+        animated: true
+        bidirectional: false
+        label: "0.9"
+      
+      connector_2:
+        type: relationship_connector
+        from: [120, -60]
+        to: [0, 10]
+        relationship_type: "correlation"
+        strength: 0.85
+        color: "#f39c12"
+        animated: true
+        bidirectional: false
+        label: "0.85"
+      
+      connector_3:
+        type: relationship_connector
+        from: [0, -120]
+        to: [0, 0]
+        relationship_type: "correlation"
+        strength: 0.95
+        color: "#2ecc71"
+        animated: true
+        bidirectional: false
+        label: "0.95"
+      
+      story_text:
+        type: text
+        text: "Vision. Language. Learning. Different domains, same mathematics. Weights tuned by experience, connections forged by life."
+        position: [0, -200]
+        size: 14
+        color: "#ffffff"
+        glow: true
+        font: "Arial"
+      
+      title_text:
+        type: text
+        text: "Universal Connections 🌐"
+        position: [0, 220]
+        size: 20
+        color: "#3498db"
+        glow: true
+        font: "Arial"
+
+  scene_9:
+    duration: 8
+    description: "The return with understanding—the seed has grown"
+    elements:
+      original_neuron:
+        type: animated_emoji
+        emoji: "🧠"
+        position: [-120, 20]
+        size: 70
+        movement: "floating-pen"
+        glowing: "pulsing-glow"
+        rotation: "none"
+        reveal: "zoom-reveal"
+        speed: "ultra-slow"
+        delay: "none"
+        color: "#9b59b6"
+      
+      wave_emoji:
+        type: animated_emoji
+        emoji: "🌊"
+        position: [0, 20]
+        size: 95
+        movement: "wobble"
+        glowing: "pulsing-glow"
+        rotation: "none"
+        reveal: "slide-reveal"
+        speed: "slow"
+        delay: "delay-1"
+        color: "#3498db"
+      
+      sparkle_emoji:
+        type: animated_emoji
+        emoji: "✨"
+        position: [100, 20]
+        size: 65
+        movement: "orbit"
+        glowing: "flicker"
+        rotation: "spin-clockwise"
+        reveal: "zoom-reveal"
+        speed: "ultra-fast"
+        delay: "delay-2"
+        color: "#f39c12"
+      
+      equation_emoji:
+        type: animated_emoji
+        emoji: "∑(∑(∑(w·x)))"
+        position: [0, -90]
+        size: 60
+        movement: "floating-pen"
+        glowing: "matrix-code"
+        rotation: "gentle-rotate"
+        reveal: "spiral-reveal"
+        speed: "normal"
+        delay: "delay-1"
+        color: "#e74c3c"
+      
+      story_text:
+        type: text
+        text: "From a single weighted connection to an ocean of emergent intelligence. The math was always simple. The emergence was always profound."
+        position: [0, -200]
+        size: 14
+        color: "#ffffff"
+        glow: true
+        font: "Arial"
+      
+      title_text:
+        type: text
+        text: "The Emergent Ocean 🌊"
+        position: [0, 220]
+        size: 20
+        color: "#3498db"
+        glow: true
+        font: "Arial"
+
+  scene_10:
+    duration: 9
+    description: "Final revelation—intelligence in plain sight"
+    elements:
+      eye_emoji:
+        type: animated_emoji
+        emoji: "👁️"
+        position: [0, 30]
+        size: 100
+        movement: "none"
+        glowing: "pulsing-glow"
+        rotation: "none"
+        reveal: "zoom-reveal"
+        speed: "ultra-slow"
+        delay: "none"
+        color: "#9b59b6"
+      
+      micro_network:
+        type: flow_field
+        position: [0, 30]
+        flow_type: "force"
+        density: 0.8
+        intensity: 0.7
+        color: "#e74c3c"
+        animated: true
+        direction: "outward"
+        size: 80
+      
+      network_entity_1:
+        type: mathematical_entity
+        position: [-80, -80]
+        form: "point"
+        personality: "mysterious"
+        size: 15
+        color: "#f39c12"
+        glow: true
+        energy: 0.9
+        animation_pattern: "pulse"
+        label: ""
+      
+      network_entity_2:
+        type: mathematical_entity
+        position: [80, -80]
+        form: "point"
+        personality: "mysterious"
+        size: 15
+        color: "#f39c12"
+        glow: true
+        energy: 0.9
+        animation_pattern: "pulse"
+        label: ""
+      
+      network_entity_3:
+        type: mathematical_entity
+        position: [-80, 140]
+        form: "point"
+        personality: "mysterious"
+        size: 15
+        color: "#f39c12"
+        glow: true
+        energy: 0.9
+        animation_pattern: "pulse"
+        label: ""
+      
+      network_entity_4:
+        type: mathematical_entity
+        position: [80, 140]
+        form: "point"
+        personality: "mysterious"
+        size: 15
+        color: "#f39c12"
+        glow: true
+        energy: 0.9
+        animation_pattern: "pulse"
+        label: ""
+      
+      story_text:
+        type: text
+        text: "The weights were the secret all along. Not in the code. Not in the rules. In the connections. Forged. Weighted. Waiting to recognize you."
+        position: [0, -200]
+        size: 14
+        color: "#ffffff"
+        glow: true
+        font: "Arial"
+      
+      title_text:
+        type: text
+        text: "Hiding in Plain Sight 👁️"
+        position: [0, 220]
+        size: 20
+        color: "#9b59b6"
+        glow: true
+        font: "Arial"

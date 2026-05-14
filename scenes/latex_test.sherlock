@@ -1,0 +1,165 @@
+concept: "LaTeX Equation Test"
+emoji: "📊"
+total_duration: 8
+background: "#1a1a2e"
+autoplay: true
+loop: false
+
+subtitles:
+  - ""
+  - "∑ Complex Formulas"
+  - "∫ Advanced Mathematics"
+
+equations:
+  - id: "quadratic_formula"
+    latex: "x = \\frac{-b \\pm \\sqrt{b^2 - 4ac}}{2a}"
+    position: "center"
+    size: 40
+    phase: "intro"
+  - id: "euler_identity"
+    latex: "e^{i\\pi} + 1 = 0"
+    position: [400, 120]
+    phase: "euler"
+  - id: "integral_example"
+    latex: "\\int_{-\\infty}^{\\infty} e^{-x^2} dx = \\sqrt{\\pi}"
+    position: [150, 200]
+    size: 40
+    phase: "integral"
+  - id: "matrix_determinant"
+    latex: "\\det(A) = \\sum_{\\sigma \\in S_n} \\text{sgn}(\\sigma) \\prod_{i=1}^{n} a_{i,\\sigma(i)}"
+    position: "center"
+    phase: "advanced"
+  - id: "fourier_transform"
+    latex: "\\mathcal{F}[f](\\omega) = \\int_{-\\infty}^{\\infty} f(t) e^{-i\\omega t} dt"
+    position: [250, 400]    
+    phase: "fourier"
+
+phases:
+  intro:
+    duration: 6
+    description: "Basic quadratic formula"
+    elements:
+
+      jupiter:
+        type: path_follower
+        position: [180, 0]
+        pathId: "orbit"
+        orbitCenter: [0, 0]
+        orbitRadius: 180
+        pathSpeed: 2.2
+        pathOffset: 0
+        startAngle: 4.5
+        radius: 12
+        color: "#D8CA9D"
+        clockwise: true
+        glow: true
+        label: "Jupiter"
+      
+      # Saturn - Ringed planet
+      saturn:
+        type: path_follower
+        position: [220, 0]
+        pathId: "orbit"
+        orbitCenter: [0, 0]
+        orbitRadius: 220
+        pathSpeed: 1.8
+        pathOffset: 0
+        startAngle: 2.1
+        radius: 10
+        color: "#FAD5A5"
+        clockwise: true
+        glow: true
+        label: "Saturn"
+      
+      # Saturn's rings (simplified)
+      saturn_rings:
+        type: path_follower
+        position: [220, 0]
+        pathId: "orbit"
+        orbitCenter: [0, 0]
+        orbitRadius: 220
+        pathSpeed: 1.8
+        pathOffset: 0
+        startAngle: 2.1
+        radius: 15
+        color: "#FAD5A5"
+        opacity: 0.3
+        clockwise: true
+        fill: false
+        label: "Saturn Rings"
+      
+      # Uranus - Ice giant, tilted
+      uranus:
+        type: path_follower
+        position: [260, 0]
+        pathId: "orbit"
+        orbitCenter: [0, 0]
+        orbitRadius: 260
+        pathSpeed: 1.4
+        pathOffset: 0
+        startAngle: 5.8
+        radius: 7
+        color: "#4FD0E4"
+        clockwise: true
+        glow: true
+        label: "Uranus"
+      
+      # Neptune - Farthest planet, deep blue
+      neptune:
+        type: path_follower
+        position: [300, 0]
+        pathId: "orbit"
+        orbitCenter: [0, 0]
+        orbitRadius: 300
+        pathSpeed: 1.0
+        pathOffset: 0
+        startAngle: 1.2
+        radius: 7
+        color: "#4169E1"
+        clockwise: true
+        glow: true
+        label: "Neptune"
+
+  euler:
+    duration: 1.5
+    description: "Euler's identity"
+    elements:
+      euler_text:
+        type: text
+        position: [400, 180]
+        content: "Euler's Beautiful Identity"
+        color: "#ff6b6b"
+        size: 16
+
+  integral:
+    duration: 1.5
+    description: "Gaussian integral"
+    elements:
+      integral_text:
+        type: text
+        position: [150, 260]
+        content: "Gaussian Integral"
+        color: "#4ecdc4"
+        size: 16
+
+  advanced:
+    duration: 1.5
+    description: "Matrix determinant"
+    elements:
+      det_text:
+        type: text
+        position: [200, 360]
+        content: "Determinant Formula"
+        color: "#ffd93d"
+        size: 16
+
+  fourier:
+    duration: 1.5
+    description: "Fourier transform"
+    elements:
+      fourier_text:
+        type: text
+        position: [250, 460]
+        content: "Fourier Transform"
+        color: "#ff9f43"
+        size: 16

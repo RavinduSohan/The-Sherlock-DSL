@@ -1,0 +1,516 @@
+concept: "Matrix Transformations: Reshaping Reality with Math"
+emoji: "🔄"
+total_duration: 72
+background: "#0a0a0a"
+
+subtitles:
+  - ""
+  - ""
+  - ""
+  - ""
+  - ""
+  - ""
+  - ""
+  - ""
+  - ""
+
+phases:
+  scene_1:
+    duration: 7
+    description: "Introduction to matrix applications"
+    elements:
+      main_title:
+        type: text
+        text: "🎥 The Math Behind Your Screen"
+        position: [0, -80]
+        size: 22
+        color: "#f39c12"
+        glow: true
+
+      point_1:
+        type: text
+        text: "🖥️ Every 3D Game = Math"
+        position: [0, -20]
+        size: 16
+        color: "#ffffff"
+
+      point_2:
+        type: text
+        text: "📸 Every Filter = Transformation"
+        position: [0, 20]
+        size: 16
+        color: "#ffffff"
+
+      point_3:
+        type: text
+        text: "🛰️ Every Satellite Image = Numbers"
+        position: [0, 60]
+        size: 16
+        color: "#ffffff"
+
+  scene_2:
+    duration: 8
+    description: "2x2 matrix definition and transformation"
+    elements:
+      matrix_m:
+        type: matrix
+        position: [-100, 50]
+        values: [[2, 0], [0, 3]]
+        highlightCells: [[0,0], [1,1]]
+        cellSize: 50
+        textSize: 16
+        color: "#9b59b6"
+        glow: true
+        label: "Matrix M"
+
+      transformation_text:
+        type: text
+        text: "Transforms point (x,y) to (2x, 3y)"
+        position: [0, -180]
+        size: 14
+        color: "#95a5a6"
+
+      title_text:
+        type: text
+        text: "Matrix Definition"
+        position: [0, -220]
+        size: 20
+        color: "#ffffff"
+
+  scene_3:
+    duration: 10
+    description: "Point transformation using matrix"
+    elements:
+      input_point:
+        type: point
+        position: [-120, 80]
+        radius: 8
+        color: "#e74c3c"
+        glow: true
+        label: "(3,2)"
+
+      output_point:
+        type: point
+        position: [120, 120]
+        radius: 8
+        color: "#2ecc71"
+        glow: true
+        label: "(6,6)"
+
+      transform_matrix:
+        type: matrix
+        position: [0, 50]
+        values: [[2, 0], [0, 3]]
+        cellSize: 40
+        textSize: 14
+        color: "#3498db"
+        label: "[2,0; 0,3]"
+
+      arrow_line:
+        type: line
+        from: [-80, 80]
+        to: [80, 120]
+        thickness: 3
+        dashed: true
+        color: "#f39c12"
+
+      process_text:
+        type: text
+        text: "Input: (3,2) → Matrix [2,0; 0,3] → Output: (6,6)"
+        position: [0, -180]
+        size: 14
+        color: "#95a5a6"
+
+      title_text:
+        type: text
+        text: "Point Transformation"
+        position: [0, -220]
+        size: 20
+        color: "#ffffff"
+
+  scene_4:
+    duration: 9
+    description: "Matrix multiplication visualization"
+    elements:
+      matrix_a:
+        type: matrix
+        position: [-120, 50]
+        values: [[2, 0], [0, 3]]
+        cellSize: 40
+        textSize: 14
+        color: "#3498db"
+        label: "Matrix"
+
+      vector_b:
+        type: matrix
+        position: [-20, 50]
+        values: [[3], [2]]
+        cellSize: 40
+        textSize: 14
+        color: "#e74c3c"
+        label: "Vector"
+
+      result_vector:
+        type: matrix
+        position: [120, 50]
+        values: [[6], [6]]
+        cellSize: 40
+        textSize: 14
+        color: "#2ecc71"
+        glow: true
+        label: "Result"
+
+      multiplication_line_1:
+        type: line
+        from: [-80, 30]
+        to: [80, 30]
+        thickness: 2
+        dashed: true
+        color: "#f39c12"
+
+      multiplication_line_2:
+        type: line
+        from: [-80, 70]
+        to: [80, 70]
+        thickness: 2
+        dashed: true
+        color: "#f39c12"
+
+      calculation_text:
+        type: text
+        text: "[2,0; 0,3] × [3; 2] = [2×3+0×2; 0×3+3×2] = [6; 6]"
+        position: [0, -180]
+        size: 14
+        color: "#95a5a6"
+
+      title_text:
+        type: text
+        text: "Matrix Multiplication"
+        position: [0, -220]
+        size: 20
+        color: "#ffffff"
+
+  scene_5:
+    duration: 6
+    description: "Detective Octopus matrix wisdom"
+    elements:
+      detective_octopus:
+        type: character
+        position: [0, 0]
+        character: "octopus"
+        size: 60
+        color: "#9b59b6"
+
+      wisdom_text:
+        type: text
+        text: "Think of a matrix like a cookie cutter - it takes your dough and reshapes it into something completely new, but following precise mathematical rules!"
+        position: [0, 100]
+        size: 14
+        color: "#ffffff"
+
+      title_text:
+        type: text
+        text: "Space Reshaping Machine 🐙"
+        position: [0, -220]
+        size: 20
+        color: "#ffffff"
+
+  scene_6:
+    duration: 8
+    description: "Multiple point transformations"
+    elements:
+      point_1_input:
+        type: point
+        position: [-160, -80]
+        radius: 6
+        color: "#e74c3c"
+        label: "(1,1)"
+
+      point_1_output:
+        type: point
+        position: [-80, -40]
+        radius: 6
+        color: "#2ecc71"
+        label: "(2,3)"
+
+      point_2_input:
+        type: point
+        position: [-80, -80]
+        radius: 6
+        color: "#e74c3c"
+        label: "(2,1)"
+
+      point_2_output:
+        type: point
+        position: [0, -40]
+        radius: 6
+        color: "#2ecc71"
+        label: "(4,3)"
+
+      point_3_input:
+        type: point
+        position: [-160, 0]
+        radius: 6
+        color: "#e74c3c"
+        label: "(1,2)"
+
+      point_3_output:
+        type: point
+        position: [-80, 40]
+        radius: 6
+        color: "#2ecc71"
+        label: "(2,6)"
+
+      point_4_input:
+        type: point
+        position: [-80, 0]
+        radius: 6
+        color: "#e74c3c"
+        label: "(2,2)"
+
+      point_4_output:
+        type: point
+        position: [0, 40]
+        radius: 6
+        color: "#2ecc71"
+        label: "(4,6)"
+
+      transform_matrix:
+        type: matrix
+        position: [120, 0]
+        values: [[2, 0], [0, 3]]
+        cellSize: 35
+        textSize: 12
+        color: "#3498db"
+        glow: true
+
+      transformation_text:
+        type: text
+        text: "(1,1)→(2,3), (2,1)→(4,3), (1,2)→(2,6), (2,2)→(4,6)"
+        position: [0, -180]
+        size: 14
+        color: "#95a5a6"
+
+      title_text:
+        type: text
+        text: "Global Transformation"
+        position: [0, -220]
+        size: 20
+        color: "#ffffff"
+
+  scene_7:
+    duration: 9
+    description: "Real-world matrix applications"
+    elements:
+      graphics_matrix:
+        type: matrix
+        position: [-180, 50]
+        values: [[0, -1], [1, 0]]
+        cellSize: 35
+        textSize: 12
+        color: "#e74c3c"
+        label: "Rotation"
+
+      ml_matrix:
+        type: matrix
+        position: [0, 50]
+        values: [[1, 2], [3, 4], [5, 6]]
+        cellSize: 30
+        textSize: 10
+        color: "#3498db"
+        label: "Data Matrix"
+
+      physics_matrix:
+        type: matrix
+        position: [180, 50]
+        values: [[0, 1], [1, 0]]
+        cellSize: 35
+        textSize: 12
+        color: "#9b59b6"
+        label: "Quantum"
+
+      graphics_label:
+        type: text
+        text: "Graphics"
+        position: [-180, 0]
+        size: 12
+        color: "#e74c3c"
+
+      ml_label:
+        type: text
+        text: "Machine Learning"
+        position: [0, 0]
+        size: 12
+        color: "#3498db"
+
+      physics_label:
+        type: text
+        text: "Physics"
+        position: [180, 0]
+        size: 12
+        color: "#9b59b6"
+
+      applications_text:
+        type: text
+        text: "Graphics: Rotation Matrix | ML: Data Matrix [1,2; 3,4; 5,6] | Physics: Quantum Operator"
+        position: [0, -180]
+        size: 14
+        color: "#95a5a6"
+
+      title_text:
+        type: text
+        text: "Real-World Applications"
+        position: [0, -220]
+        size: 20
+        color: "#ffffff"
+
+  scene_8:
+    duration: 7
+    description: "Matrix applications summary"
+    elements:
+      main_title:
+        type: text
+        text: "💡 Matrices Reshape Reality"
+        position: [0, -80]
+        size: 22
+        color: "#f39c12"
+        glow: true
+
+      point_1:
+        type: text
+        text: "🎮 Graphics: Transform Space"
+        position: [0, -20]
+        size: 16
+        color: "#ffffff"
+
+      point_2:
+        type: text
+        text: "🤖 ML: Process Data"
+        position: [0, 20]
+        size: 16
+        color: "#ffffff"
+
+      point_3:
+        type: text
+        text: "⚛️ Physics: Describe Particles"
+        position: [0, 60]
+        size: 16
+        color: "#ffffff"
+
+  scene_9:
+    duration: 8
+    description: "Triangle transformation using matrix"
+    elements:
+      triangle_point_a:
+        type: point
+        position: [-160, -80]
+        radius: 6
+        color: "#e74c3c"
+        label: "(1,1)"
+
+      triangle_point_b:
+        type: point
+        position: [-80, -80]
+        radius: 6
+        color: "#e74c3c"
+        label: "(2,1)"
+
+      triangle_point_c:
+        type: point
+        position: [-160, 0]
+        radius: 6
+        color: "#e74c3c"
+        label: "(1,2)"
+
+      transformed_point_a:
+        type: point
+        position: [-80, -40]
+        radius: 6
+        color: "#2ecc71"
+        label: "(2,2)"
+
+      transformed_point_b:
+        type: point
+        position: [0, -40]
+        radius: 6
+        color: "#2ecc71"
+        label: "(4,2)"
+
+      transformed_point_c:
+        type: point
+        position: [-80, 40]
+        radius: 6
+        color: "#2ecc71"
+        label: "(2,4)"
+
+      triangle_line_ab:
+        type: line
+        from: [-160, -80]
+        to: [-80, -80]
+        thickness: 2
+        color: "#e74c3c"
+        dashed: true
+
+      triangle_line_bc:
+        type: line
+        from: [-80, -80]
+        to: [-160, 0]
+        thickness: 2
+        color: "#e74c3c"
+        dashed: true
+
+      triangle_line_ca:
+        type: line
+        from: [-160, 0]
+        to: [-160, -80]
+        thickness: 2
+        color: "#e74c3c"
+        dashed: true
+
+      transformed_line_ab:
+        type: line
+        from: [-80, -40]
+        to: [0, -40]
+        thickness: 2
+        color: "#2ecc71"
+        dashed: true
+
+      transformed_line_bc:
+        type: line
+        from: [0, -40]
+        to: [-80, 40]
+        thickness: 2
+        color: "#2ecc71"
+        dashed: true
+
+      transformed_line_ca:
+        type: line
+        from: [-80, 40]
+        to: [-80, -40]
+        thickness: 2
+        color: "#2ecc71"
+        dashed: true
+
+      scale_matrix:
+        type: matrix
+        position: [120, 0]
+        values: [[2, 0], [0, 2]]
+        cellSize: 40
+        textSize: 14
+        color: "#3498db"
+        glow: true
+        label: "Scale ×2"
+
+      transformation_text:
+        type: text
+        text: "Triangle: (1,1),(2,1),(1,2) → Matrix [2,0; 0,2] → (2,2),(4,2),(2,4)"
+        position: [0, -180]
+        size: 14
+        color: "#95a5a6"
+
+      title_text:
+        type: text
+        text: "Matrix Power"
+        position: [0, -220]
+        size: 20
+        color: "#ffffff"

@@ -1,0 +1,1200 @@
+concept: "XY Graph Function Catalog"
+emoji: "📈"
+total_duration: 96
+background: "#0a0a0a"
+
+subtitles:
+  - ""
+  - ""
+  - ""
+  - ""
+  - ""
+  - ""
+  - ""
+  - ""
+  - ""
+
+phases:
+  scene_1:
+    duration: 8
+    description: "Linear functions showcase"
+    elements:
+      linear_positive:
+        type: xy_graph
+        position: [-200, -50]
+        size: 200
+        function: "x"
+        x_range: [-3, 3]
+        y_range: [-3, 3]
+        color: "#e74c3c"
+        line_width: 3
+        show_grid: true
+        show_axes: true
+        show_labels: true
+        smooth_curve: true
+        animate_draw: true
+        title: "f(x) = x"
+        resolution: 100
+      
+      linear_slope:
+        type: xy_graph
+        position: [200, -50]
+        size: 200
+        function: "2*x"
+        x_range: [-3, 3]
+        y_range: [-6, 6]
+        color: "#3498db"
+        line_width: 3
+        show_grid: true
+        show_axes: true
+        show_labels: true
+        smooth_curve: true
+        animate_draw: true
+        title: "f(x) = 2x"
+        resolution: 100
+      
+      linear_negative:
+        type: xy_graph
+        position: [-200, 130]
+        size: 200
+        function: "-x"
+        x_range: [-3, 3]
+        y_range: [-3, 3]
+        color: "#2ecc71"
+        line_width: 3
+        show_grid: true
+        show_axes: true
+        show_labels: true
+        smooth_curve: true
+        animate_draw: true
+        title: "f(x) = -x"
+        resolution: 100
+      
+      linear_offset:
+        type: xy_graph
+        position: [200, 130]
+        size: 200
+        function: "x + 2"
+        x_range: [-3, 3]
+        y_range: [-1, 5]
+        color: "#f39c12"
+        line_width: 3
+        show_grid: true
+        show_axes: true
+        show_labels: true
+        smooth_curve: true
+        animate_draw: true
+        title: "f(x) = x + 2"
+        resolution: 100
+      
+      title_text:
+        type: text
+        text: "Linear Functions"
+        position: [0, -220]
+        size: 18
+        color: "#ffffff"
+        glow: true
+        font: "Arial"
+  
+  scene_2:
+    duration: 8
+    description: "Polynomial functions - quadratic and cubic"
+    elements:
+      quadratic_positive:
+        type: xy_graph
+        position: [-200, -50]
+        size: 200
+        function: "x^2"
+        x_range: [-3, 3]
+        y_range: [0, 9]
+        color: "#9b59b6"
+        line_width: 3
+        show_grid: true
+        show_axes: true
+        show_labels: true
+        smooth_curve: true
+        animate_draw: true
+        title: "f(x) = x²"
+        resolution: 150
+      
+      quadratic_negative:
+        type: xy_graph
+        position: [200, -50]
+        size: 200
+        function: "-x^2"
+        x_range: [-3, 3]
+        y_range: [-9, 0]
+        color: "#1abc9c"
+        line_width: 3
+        show_grid: true
+        show_axes: true
+        show_labels: true
+        smooth_curve: true
+        animate_draw: true
+        title: "f(x) = -x²"
+        resolution: 150
+      
+      cubic:
+        type: xy_graph
+        position: [-200, 130]
+        size: 200
+        function: "x^3"
+        x_range: [-2, 2]
+        y_range: [-8, 8]
+        color: "#e67e22"
+        line_width: 3
+        show_grid: true
+        show_axes: true
+        show_labels: true
+        smooth_curve: true
+        animate_draw: true
+        title: "f(x) = x³"
+        resolution: 150
+      
+      quartic:
+        type: xy_graph
+        position: [200, 130]
+        size: 200
+        function: "x^4"
+        x_range: [-2, 2]
+        y_range: [0, 16]
+        color: "#34495e"
+        line_width: 3
+        show_grid: true
+        show_axes: true
+        show_labels: true
+        smooth_curve: true
+        animate_draw: true
+        title: "f(x) = x⁴"
+        resolution: 150
+      
+      title_text:
+        type: text
+        text: "Polynomial Functions"
+        position: [0, -220]
+        size: 18
+        color: "#ffffff"
+        glow: true
+        font: "Arial"
+  
+  scene_3:
+    duration: 8
+    description: "Trigonometric functions"
+    elements:
+      sine:
+        type: xy_graph
+        position: [-200, -50]
+        size: 200
+        function: "sin(x)"
+        x_range: [-6.28, 6.28]
+        y_range: [-1.5, 1.5]
+        color: "#e74c3c"
+        line_width: 3
+        show_grid: true
+        show_axes: true
+        show_labels: true
+        smooth_curve: true
+        animate_draw: true
+        title: "f(x) = sin(x)"
+        resolution: 200
+      
+      cosine:
+        type: xy_graph
+        position: [200, -50]
+        size: 200
+        function: "cos(x)"
+        x_range: [-6.28, 6.28]
+        y_range: [-1.5, 1.5]
+        color: "#3498db"
+        line_width: 3
+        show_grid: true
+        show_axes: true
+        show_labels: true
+        smooth_curve: true
+        animate_draw: true
+        title: "f(x) = cos(x)"
+        resolution: 200
+      
+      tangent:
+        type: xy_graph
+        position: [-200, 130]
+        size: 200
+        function: "tan(x)"
+        x_range: [-1.5, 1.5]
+        y_range: [-3, 3]
+        color: "#2ecc71"
+        line_width: 3
+        show_grid: true
+        show_axes: true
+        show_labels: true
+        smooth_curve: true
+        animate_draw: true
+        title: "f(x) = tan(x)"
+        resolution: 150
+      
+      sine_scaled:
+        type: xy_graph
+        position: [200, 130]
+        size: 200
+        function: "2*sin(x)"
+        x_range: [-6.28, 6.28]
+        y_range: [-2.5, 2.5]
+        color: "#f39c12"
+        line_width: 3
+        show_grid: true
+        show_axes: true
+        show_labels: true
+        smooth_curve: true
+        animate_draw: true
+        title: "f(x) = 2sin(x)"
+        resolution: 200
+      
+      title_text:
+        type: text
+        text: "Trigonometric Functions"
+        position: [0, -220]
+        size: 18
+        color: "#ffffff"
+        glow: true
+        font: "Arial"
+  
+  scene_4:
+    duration: 8
+    description: "Exponential and logarithmic functions"
+    elements:
+      exponential:
+        type: xy_graph
+        position: [-200, -50]
+        size: 200
+        function: "exp(x)"
+        x_range: [-2, 2]
+        y_range: [0, 8]
+        color: "#9b59b6"
+        line_width: 3
+        show_grid: true
+        show_axes: true
+        show_labels: true
+        smooth_curve: true
+        animate_draw: true
+        title: "f(x) = eˣ"
+        resolution: 150
+      
+      exponential_2:
+        type: xy_graph
+        position: [200, -50]
+        size: 200
+        function: "2^x"
+        x_range: [-3, 3]
+        y_range: [0, 8]
+        color: "#1abc9c"
+        line_width: 3
+        show_grid: true
+        show_axes: true
+        show_labels: true
+        smooth_curve: true
+        animate_draw: true
+        title: "f(x) = 2ˣ"
+        resolution: 150
+      
+      logarithm:
+        type: xy_graph
+        position: [-200, 130]
+        size: 200
+        function: "log(x)"
+        x_range: [0.1, 10]
+        y_range: [-3, 3]
+        color: "#e67e22"
+        line_width: 3
+        show_grid: true
+        show_axes: true
+        show_labels: true
+        smooth_curve: true
+        animate_draw: true
+        title: "f(x) = ln(x)"
+        resolution: 150
+      
+      exponential_decay:
+        type: xy_graph
+        position: [200, 130]
+        size: 200
+        function: "exp(-x)"
+        x_range: [-2, 2]
+        y_range: [0, 8]
+        color: "#34495e"
+        line_width: 3
+        show_grid: true
+        show_axes: true
+        show_labels: true
+        smooth_curve: true
+        animate_draw: true
+        title: "f(x) = e⁻ˣ"
+        resolution: 150
+      
+      title_text:
+        type: text
+        text: "Exponential & Logarithmic Functions"
+        position: [0, -220]
+        size: 18
+        color: "#ffffff"
+        glow: true
+        font: "Arial"
+  
+  scene_5:
+    duration: 8
+    description: "Special functions - absolute, square root, rational"
+    elements:
+      absolute:
+        type: xy_graph
+        position: [-200, -50]
+        size: 200
+        function: "abs(x)"
+        x_range: [-3, 3]
+        y_range: [0, 3]
+        color: "#e74c3c"
+        line_width: 3
+        show_grid: true
+        show_axes: true
+        show_labels: true
+        smooth_curve: true
+        animate_draw: true
+        title: "f(x) = |x|"
+        resolution: 150
+      
+      square_root:
+        type: xy_graph
+        position: [200, -50]
+        size: 200
+        function: "sqrt(x)"
+        x_range: [0, 9]
+        y_range: [0, 3]
+        color: "#3498db"
+        line_width: 3
+        show_grid: true
+        show_axes: true
+        show_labels: true
+        smooth_curve: true
+        animate_draw: true
+        title: "f(x) = √x"
+        resolution: 150
+      
+      reciprocal:
+        type: xy_graph
+        position: [-200, 130]
+        size: 200
+        function: "1/x"
+        x_range: [-3, 3]
+        y_range: [-3, 3]
+        color: "#2ecc71"
+        line_width: 3
+        show_grid: true
+        show_axes: true
+        show_labels: true
+        smooth_curve: true
+        animate_draw: true
+        title: "f(x) = 1/x"
+        resolution: 150
+      
+      absolute_quadratic:
+        type: xy_graph
+        position: [200, 130]
+        size: 200
+        function: "abs(x^2 - 4)"
+        x_range: [-3, 3]
+        y_range: [0, 6]
+        color: "#f39c12"
+        line_width: 3
+        show_grid: true
+        show_axes: true
+        show_labels: true
+        smooth_curve: true
+        animate_draw: true
+        title: "f(x) = |x² - 4|"
+        resolution: 150
+      
+      title_text:
+        type: text
+        text: "Special Functions"
+        position: [0, -220]
+        size: 18
+        color: "#ffffff"
+        glow: true
+        font: "Arial"
+  
+  scene_6:
+    duration: 8
+    description: "Data points representation and custom combinations"
+    elements:
+      data_points_only:
+        type: xy_graph
+        position: [-200, -50]
+        size: 200
+        data_points: [[0, 0], [1, 1], [2, 4], [3, 9], [-1, 1], [-2, 4], [-3, 9]]
+        x_range: [-4, 4]
+        y_range: [0, 10]
+        color: "#9b59b6"
+        line_width: 2
+        show_grid: true
+        show_axes: true
+        show_labels: true
+        show_points: true
+        smooth_curve: true
+        animate_draw: true
+        title: "Data Points: y = x²"
+        resolution: 100
+      
+      mixed_points:
+        type: xy_graph
+        position: [200, -50]
+        size: 200
+        data_points: [[-3, -2], [-2, 0], [-1, 1], [0, 0], [1, -1], [2, 0], [3, 2]]
+        x_range: [-4, 4]
+        y_range: [-3, 3]
+        color: "#1abc9c"
+        line_width: 2
+        show_grid: true
+        show_axes: true
+        show_labels: true
+        show_points: true
+        smooth_curve: true
+        animate_draw: true
+        title: "Custom Data Points"
+        resolution: 100
+      
+      combined_function:
+        type: xy_graph
+        position: [-200, 130]
+        size: 200
+        function: "sin(x) * x"
+        x_range: [-6.28, 6.28]
+        y_range: [-7, 7]
+        color: "#e67e22"
+        line_width: 3
+        show_grid: true
+        show_axes: true
+        show_labels: true
+        smooth_curve: true
+        animate_draw: true
+        title: "f(x) = x·sin(x)"
+        resolution: 200
+      
+      polynomial_complex:
+        type: xy_graph
+        position: [200, 130]
+        size: 200
+        function: "x^3 - 3*x"
+        x_range: [-2.5, 2.5]
+        y_range: [-5, 5]
+        color: "#34495e"
+        line_width: 3
+        show_grid: true
+        show_axes: true
+        show_labels: true
+        smooth_curve: true
+        animate_draw: true
+        title: "f(x) = x³ - 3x"
+        resolution: 150
+      
+      title_text:
+        type: text
+        text: "Data Points & Complex Functions"
+        position: [0, -220]
+        size: 18
+        color: "#ffffff"
+        glow: true
+        font: "Arial"
+  
+  scene_7:
+    duration: 8
+    description: "Hyperbolic and inverse trigonometric functions"
+    elements:
+      hyperbolic_sinh:
+        type: xy_graph
+        position: [-260, -80]
+        size: 170
+        function: "sinh(x)"
+        x_range: [-2, 2]
+        y_range: [-4, 4]
+        color: "#e74c3c"
+        line_width: 3
+        show_grid: true
+        show_axes: true
+        show_labels: true
+        smooth_curve: true
+        animate_draw: true
+        title: "f(x) = sinh(x)"
+        resolution: 150
+      
+      hyperbolic_cosh:
+        type: xy_graph
+        position: [0, -80]
+        size: 170
+        function: "cosh(x)"
+        x_range: [-2, 2]
+        y_range: [0, 4]
+        color: "#3498db"
+        line_width: 3
+        show_grid: true
+        show_axes: true
+        show_labels: true
+        smooth_curve: true
+        animate_draw: true
+        title: "f(x) = cosh(x)"
+        resolution: 150
+      
+      hyperbolic_tanh:
+        type: xy_graph
+        position: [260, -80]
+        size: 170
+        function: "tanh(x)"
+        x_range: [-3, 3]
+        y_range: [-1.5, 1.5]
+        color: "#2ecc71"
+        line_width: 3
+        show_grid: true
+        show_axes: true
+        show_labels: true
+        smooth_curve: true
+        animate_draw: true
+        title: "f(x) = tanh(x)"
+        resolution: 150
+      
+      inverse_sin:
+        type: xy_graph
+        position: [-260, 120]
+        size: 170
+        function: "asin(x)"
+        x_range: [-1, 1]
+        y_range: [-2, 2]
+        color: "#f39c12"
+        line_width: 3
+        show_grid: true
+        show_axes: true
+        show_labels: true
+        smooth_curve: true
+        animate_draw: true
+        title: "f(x) = arcsin(x)"
+        resolution: 150
+      
+      inverse_cos:
+        type: xy_graph
+        position: [0, 120]
+        size: 170
+        function: "acos(x)"
+        x_range: [-1, 1]
+        y_range: [0, 3.5]
+        color: "#9b59b6"
+        line_width: 3
+        show_grid: true
+        show_axes: true
+        show_labels: true
+        smooth_curve: true
+        animate_draw: true
+        title: "f(x) = arccos(x)"
+        resolution: 150
+      
+      inverse_tan:
+        type: xy_graph
+        position: [260, 120]
+        size: 170
+        function: "atan(x)"
+        x_range: [-5, 5]
+        y_range: [-2, 2]
+        color: "#1abc9c"
+        line_width: 3
+        show_grid: true
+        show_axes: true
+        show_labels: true
+        smooth_curve: true
+        animate_draw: true
+        title: "f(x) = arctan(x)"
+        resolution: 150
+      
+      title_text:
+        type: text
+        text: "Hyperbolic & Inverse Trigonometric Functions"
+        position: [0, -220]
+        size: 18
+        color: "#ffffff"
+        glow: true
+        font: "Arial"
+  
+  scene_8:
+    duration: 8
+    description: "Combined and composite functions"
+    elements:
+      sin_cos_sum:
+        type: xy_graph
+        position: [-260, -80]
+        size: 170
+        function: "sin(x) + cos(x)"
+        x_range: [-6.28, 6.28]
+        y_range: [-2, 2]
+        color: "#e74c3c"
+        line_width: 3
+        show_grid: true
+        show_axes: true
+        show_labels: true
+        smooth_curve: true
+        animate_draw: true
+        title: "f(x) = sin(x) + cos(x)"
+        resolution: 200
+      
+      sin_cos_product:
+        type: xy_graph
+        position: [0, -80]
+        size: 170
+        function: "sin(x) * cos(x)"
+        x_range: [-6.28, 6.28]
+        y_range: [-1, 1]
+        color: "#3498db"
+        line_width: 3
+        show_grid: true
+        show_axes: true
+        show_labels: true
+        smooth_curve: true
+        animate_draw: true
+        title: "f(x) = sin(x)·cos(x)"
+        resolution: 200
+      
+      exp_sin:
+        type: xy_graph
+        position: [260, -80]
+        size: 170
+        function: "exp(x) * sin(x)"
+        x_range: [-3, 3]
+        y_range: [-20, 20]
+        color: "#2ecc71"
+        line_width: 3
+        show_grid: true
+        show_axes: true
+        show_labels: true
+        smooth_curve: true
+        animate_draw: true
+        title: "f(x) = eˣ·sin(x)"
+        resolution: 200
+      
+      damped_sin:
+        type: xy_graph
+        position: [-260, 120]
+        size: 170
+        function: "exp(-x) * sin(5*x)"
+        x_range: [0, 5]
+        y_range: [-1, 1]
+        color: "#f39c12"
+        line_width: 3
+        show_grid: true
+        show_axes: true
+        show_labels: true
+        smooth_curve: true
+        animate_draw: true
+        title: "f(x) = e⁻ˣ·sin(5x)"
+        resolution: 200
+      
+      sqrt_sin:
+        type: xy_graph
+        position: [0, 120]
+        size: 170
+        function: "sqrt(abs(x)) * sin(x)"
+        x_range: [-6.28, 6.28]
+        y_range: [-3, 3]
+        color: "#9b59b6"
+        line_width: 3
+        show_grid: true
+        show_axes: true
+        show_labels: true
+        smooth_curve: true
+        animate_draw: true
+        title: "f(x) = √|x|·sin(x)"
+        resolution: 200
+      
+      log_abs:
+        type: xy_graph
+        position: [260, 120]
+        size: 170
+        function: "log(abs(x))"
+        x_range: [-10, 10]
+        y_range: [-3, 3]
+        color: "#1abc9c"
+        line_width: 3
+        show_grid: true
+        show_axes: true
+        show_labels: true
+        smooth_curve: true
+        animate_draw: true
+        title: "f(x) = ln(|x|)"
+        resolution: 200
+      
+      title_text:
+        type: text
+        text: "Combined & Composite Functions"
+        position: [0, -220]
+        size: 18
+        color: "#ffffff"
+        glow: true
+        font: "Arial"
+  
+  scene_9:
+    duration: 8
+    description: "Higher degree polynomials and rational functions"
+    elements:
+      quintic:
+        type: xy_graph
+        position: [-260, -80]
+        size: 170
+        function: "x^5"
+        x_range: [-1.5, 1.5]
+        y_range: [-4, 4]
+        color: "#e74c3c"
+        line_width: 3
+        show_grid: true
+        show_axes: true
+        show_labels: true
+        smooth_curve: true
+        animate_draw: true
+        title: "f(x) = x⁵"
+        resolution: 150
+      
+      poly_complex1:
+        type: xy_graph
+        position: [0, -80]
+        size: 170
+        function: "x^4 - 2*x^2 + 1"
+        x_range: [-2, 2]
+        y_range: [0, 5]
+        color: "#3498db"
+        line_width: 3
+        show_grid: true
+        show_axes: true
+        show_labels: true
+        smooth_curve: true
+        animate_draw: true
+        title: "f(x) = x⁴ - 2x² + 1"
+        resolution: 150
+      
+      poly_complex2:
+        type: xy_graph
+        position: [260, -80]
+        size: 170
+        function: "x^3 - 4*x"
+        x_range: [-3, 3]
+        y_range: [-6, 6]
+        color: "#2ecc71"
+        line_width: 3
+        show_grid: true
+        show_axes: true
+        show_labels: true
+        smooth_curve: true
+        animate_draw: true
+        title: "f(x) = x³ - 4x"
+        resolution: 150
+      
+      rational1:
+        type: xy_graph
+        position: [-260, 120]
+        size: 170
+        function: "x / (x^2 + 1)"
+        x_range: [-5, 5]
+        y_range: [-1, 1]
+        color: "#f39c12"
+        line_width: 3
+        show_grid: true
+        show_axes: true
+        show_labels: true
+        smooth_curve: true
+        animate_draw: true
+        title: "f(x) = x/(x² + 1)"
+        resolution: 150
+      
+      rational2:
+        type: xy_graph
+        position: [0, 120]
+        size: 170
+        function: "(x^2 - 1) / (x^2 + 1)"
+        x_range: [-4, 4]
+        y_range: [-2, 2]
+        color: "#9b59b6"
+        line_width: 3
+        show_grid: true
+        show_axes: true
+        show_labels: true
+        smooth_curve: true
+        animate_draw: true
+        title: "f(x) = (x² - 1)/(x² + 1)"
+        resolution: 150
+      
+      rational3:
+        type: xy_graph
+        position: [260, 120]
+        size: 170
+        function: "1 / (x^2 + 1)"
+        x_range: [-4, 4]
+        y_range: [0, 1.2]
+        color: "#1abc9c"
+        line_width: 3
+        show_grid: true
+        show_axes: true
+        show_labels: true
+        smooth_curve: true
+        animate_draw: true
+        title: "f(x) = 1/(x² + 1)"
+        resolution: 150
+      
+      title_text:
+        type: text
+        text: "Higher Polynomials & Rational Functions"
+        position: [0, -220]
+        size: 18
+        color: "#ffffff"
+        glow: true
+        font: "Arial"
+  
+  scene_10:
+    duration: 8
+    description: "Oscillating and wave functions"
+    elements:
+      double_freq:
+        type: xy_graph
+        position: [-260, -80]
+        size: 170
+        function: "sin(2*x)"
+        x_range: [-6.28, 6.28]
+        y_range: [-1.5, 1.5]
+        color: "#e74c3c"
+        line_width: 3
+        show_grid: true
+        show_axes: true
+        show_labels: true
+        smooth_curve: true
+        animate_draw: true
+        title: "f(x) = sin(2x)"
+        resolution: 200
+      
+      triple_freq:
+        type: xy_graph
+        position: [0, -80]
+        size: 170
+        function: "sin(3*x)"
+        x_range: [-6.28, 6.28]
+        y_range: [-1.5, 1.5]
+        color: "#3498db"
+        line_width: 3
+        show_grid: true
+        show_axes: true
+        show_labels: true
+        smooth_curve: true
+        animate_draw: true
+        title: "f(x) = sin(3x)"
+        resolution: 200
+      
+      phase_shift:
+        type: xy_graph
+        position: [260, -80]
+        size: 170
+        function: "sin(x - 1.57)"
+        x_range: [-6.28, 6.28]
+        y_range: [-1.5, 1.5]
+        color: "#2ecc71"
+        line_width: 3
+        show_grid: true
+        show_axes: true
+        show_labels: true
+        smooth_curve: true
+        animate_draw: true
+        title: "f(x) = sin(x - π/2)"
+        resolution: 200
+      
+      amplitude_mod:
+        type: xy_graph
+        position: [-260, 120]
+        size: 170
+        function: "3 * cos(x)"
+        x_range: [-6.28, 6.28]
+        y_range: [-4, 4]
+        color: "#f39c12"
+        line_width: 3
+        show_grid: true
+        show_axes: true
+        show_labels: true
+        smooth_curve: true
+        animate_draw: true
+        title: "f(x) = 3cos(x)"
+        resolution: 200
+      
+      sin_over_x:
+        type: xy_graph
+        position: [0, 120]
+        size: 170
+        function: "sin(x) / x"
+        x_range: [-10, 10]
+        y_range: [-0.5, 1.2]
+        color: "#9b59b6"
+        line_width: 3
+        show_grid: true
+        show_axes: true
+        show_labels: true
+        smooth_curve: true
+        animate_draw: true
+        title: "f(x) = sin(x)/x"
+        resolution: 200
+      
+      cos_squared:
+        type: xy_graph
+        position: [260, 120]
+        size: 170
+        function: "cos(x)^2"
+        x_range: [-6.28, 6.28]
+        y_range: [0, 1.2]
+        color: "#1abc9c"
+        line_width: 3
+        show_grid: true
+        show_axes: true
+        show_labels: true
+        smooth_curve: true
+        animate_draw: true
+        title: "f(x) = cos²(x)"
+        resolution: 200
+      
+      title_text:
+        type: text
+        text: "Oscillating & Wave Functions"
+        position: [0, -220]
+        size: 18
+        color: "#ffffff"
+        glow: true
+        font: "Arial"
+  
+  scene_11:
+    duration: 8
+    description: "Exponential variations and growth functions"
+    elements:
+      exp_negative_x:
+        type: xy_graph
+        position: [-260, -80]
+        size: 170
+        function: "exp(-0.5*x)"
+        x_range: [-3, 5]
+        y_range: [0, 6]
+        color: "#e74c3c"
+        line_width: 3
+        show_grid: true
+        show_axes: true
+        show_labels: true
+        smooth_curve: true
+        animate_draw: true
+        title: "f(x) = e⁻⁰·⁵ˣ"
+        resolution: 150
+      
+      exp_squared:
+        type: xy_graph
+        position: [0, -80]
+        size: 170
+        function: "exp(-x^2)"
+        x_range: [-3, 3]
+        y_range: [0, 1.2]
+        color: "#3498db"
+        line_width: 3
+        show_grid: true
+        show_axes: true
+        show_labels: true
+        smooth_curve: true
+        animate_draw: true
+        title: "f(x) = e⁻ˣ²"
+        resolution: 150
+      
+      exp_abs:
+        type: xy_graph
+        position: [260, -80]
+        size: 170
+        function: "exp(-abs(x))"
+        x_range: [-4, 4]
+        y_range: [0, 1.2]
+        color: "#2ecc71"
+        line_width: 3
+        show_grid: true
+        show_axes: true
+        show_labels: true
+        smooth_curve: true
+        animate_draw: true
+        title: "f(x) = e⁻|ˣ|"
+        resolution: 150
+      
+      logistic:
+        type: xy_graph
+        position: [-260, 120]
+        size: 170
+        function: "1 / (1 + exp(-x))"
+        x_range: [-6, 6]
+        y_range: [0, 1.2]
+        color: "#f39c12"
+        line_width: 3
+        show_grid: true
+        show_axes: true
+        show_labels: true
+        smooth_curve: true
+        animate_draw: true
+        title: "f(x) = 1/(1 + e⁻ˣ)"
+        resolution: 150
+      
+      exp_half:
+        type: xy_graph
+        position: [0, 120]
+        size: 170
+        function: "0.5^x"
+        x_range: [-3, 5]
+        y_range: [0, 8]
+        color: "#9b59b6"
+        line_width: 3
+        show_grid: true
+        show_axes: true
+        show_labels: true
+        smooth_curve: true
+        animate_draw: true
+        title: "f(x) = 0.5ˣ"
+        resolution: 150
+      
+      exp_three:
+        type: xy_graph
+        position: [260, 120]
+        size: 170
+        function: "3^x"
+        x_range: [-2, 3]
+        y_range: [0, 10]
+        color: "#1abc9c"
+        line_width: 3
+        show_grid: true
+        show_axes: true
+        show_labels: true
+        smooth_curve: true
+        animate_draw: true
+        title: "f(x) = 3ˣ"
+        resolution: 150
+      
+      title_text:
+        type: text
+        text: "Exponential Variations & Growth Functions"
+        position: [0, -220]
+        size: 18
+        color: "#ffffff"
+        glow: true
+        font: "Arial"
+  
+  scene_12:
+    duration: 8
+    description: "More data point patterns and special cases"
+    elements:
+      linear_data:
+        type: xy_graph
+        position: [-260, -80]
+        size: 170
+        data_points: [[-3, -6], [-2, -4], [-1, -2], [0, 0], [1, 2], [2, 4], [3, 6]]
+        x_range: [-4, 4]
+        y_range: [-7, 7]
+        color: "#e74c3c"
+        line_width: 2
+        show_grid: true
+        show_axes: true
+        show_labels: true
+        show_points: true
+        smooth_curve: true
+        animate_draw: true
+        title: "Linear Data: y = 2x"
+        resolution: 100
+      
+      exponential_data:
+        type: xy_graph
+        position: [0, -80]
+        size: 170
+        data_points: [[-2, 0.25], [-1, 0.5], [0, 1], [1, 2], [2, 4], [3, 8]]
+        x_range: [-3, 4]
+        y_range: [0, 9]
+        color: "#3498db"
+        line_width: 2
+        show_grid: true
+        show_axes: true
+        show_labels: true
+        show_points: true
+        smooth_curve: true
+        animate_draw: true
+        title: "Exponential Data: y = 2ˣ"
+        resolution: 100
+      
+      sine_data:
+        type: xy_graph
+        position: [260, -80]
+        size: 170
+        data_points: [[0, 0], [1.57, 1], [3.14, 0], [4.71, -1], [6.28, 0]]
+        x_range: [0, 7]
+        y_range: [-1.5, 1.5]
+        color: "#2ecc71"
+        line_width: 2
+        show_grid: true
+        show_axes: true
+        show_labels: true
+        show_points: true
+        smooth_curve: true
+        animate_draw: true
+        title: "Sine Data Points"
+        resolution: 100
+      
+      parabola_data:
+        type: xy_graph
+        position: [-260, 120]
+        size: 170
+        data_points: [[-3, 9], [-2, 4], [-1, 1], [0, 0], [1, 1], [2, 4], [3, 9]]
+        x_range: [-4, 4]
+        y_range: [0, 10]
+        color: "#f39c12"
+        line_width: 2
+        show_grid: true
+        show_axes: true
+        show_labels: true
+        show_points: true
+        smooth_curve: true
+        animate_draw: true
+        title: "Parabola Data: y = x²"
+        resolution: 100
+      
+      cubic_data:
+        type: xy_graph
+        position: [0, 120]
+        size: 170
+        data_points: [[-2, -8], [-1, -1], [0, 0], [1, 1], [2, 8]]
+        x_range: [-2.5, 2.5]
+        y_range: [-9, 9]
+        color: "#9b59b6"
+        line_width: 2
+        show_grid: true
+        show_axes: true
+        show_labels: true
+        show_points: true
+        smooth_curve: true
+        animate_draw: true
+        title: "Cubic Data: y = x³"
+        resolution: 100
+      
+      random_data:
+        type: xy_graph
+        position: [260, 120]
+        size: 170
+        data_points: [[-3, 2], [-2, -1], [-1, 3], [0, 1], [1, -2], [2, 2], [3, 0]]
+        x_range: [-4, 4]
+        y_range: [-3, 4]
+        color: "#1abc9c"
+        line_width: 2
+        show_grid: true
+        show_axes: true
+        show_labels: true
+        show_points: true
+        smooth_curve: true
+        animate_draw: true
+        title: "Scattered Data Points"
+        resolution: 100
+      
+      title_text:
+        type: text
+        text: "Data Point Patterns & Special Cases"
+        position: [0, -220]
+        size: 18
+        color: "#ffffff"
+        glow: true
+        font: "Arial"

@@ -1,0 +1,541 @@
+concept: "The Great Water Container Mystery"
+emoji: "�️‍♂️�💧"
+total_duration: 60
+background: "#0a0a0a"
+
+subtitles:
+  - ""
+  - ""
+  - ""
+  - ""
+  - ""
+  - ""
+  - ""
+  - ""
+
+phases:
+  detective_opening_scene:
+    duration: 8
+    description: "Detective Octopus investigates the container mystery"
+    elements:
+      title_label:
+        type: text
+        text: "🕵️‍♂️ The Great Water Container Mystery 💧"
+        position: [0, 250]
+        color: "#f1c40f"
+        size: 24
+        font: "Georgia"
+        glow: true
+
+      # Detective Octopus character
+      detective_octopus:
+        type: text
+        text: "🐙"
+        position: [-220, 180]
+        color: "#e74c3c"
+        size: 60
+        font: "Georgia"
+        glow: true
+
+      octopus_speech:
+        type: text
+        text: "Hmm... suspicious containers everywhere!\nWhich pair holds the MAXIMUM water? 🤔"
+        position: [-220, 120]
+        color: "#3498db"
+        size: 16
+        font: "Georgia"
+        glow: true
+
+      # Glowing dashed connection line
+      connection_line_1:
+        type: line
+        start: [-160, 150]
+        end: [-80, 150]
+        color: "#f39c12"
+        thickness: 3
+        style: "dashed"
+        glow: true
+
+      # Sergeant Dino character  
+      sergeant_dino:
+        type: text
+        text: "🦖"
+        position: [-20, 180]
+        color: "#27ae60"
+        size: 60
+        font: "Georgia"
+        glow: true
+
+      dino_speech:
+        type: text
+        text: "Sir! We need TWO POINTERS strategy!\nStart wide, then optimize! 🎯"
+        position: [-20, 120]
+        color: "#2ecc71"
+        size: 16
+        font: "Georgia"
+        glow: true
+
+      # The crime scene - container array
+      container_evidence:
+        type: algorithm_array
+        position: [-120, 60]
+        items: [1, 8, 6, 2, 5, 4, 8, 3, 7]
+        cellSize: 25
+        color: "#9b59b6"
+        glow: true
+
+      # Mystical investigation background
+      investigation_grid:
+        type: grid
+        style: "flat"
+        spacing: 30
+        density: 0.4
+        color: "#34495e"
+        opacity: 0.3
+
+      mystery_sparkles:
+        type: sparkles
+        position: [-120, 80]
+        count: 12
+        density: 20
+        color: "#f1c40f"
+
+      evidence_waves:
+        type: waves
+        amplitude: 25
+        frequency: 0.03
+        layers: 3
+        colors: ["#8e44ad", "#3498db", "#e67e22"]
+        opacity: 0.3
+
+
+  officer_owl_investigation:
+    duration: 8
+    description: "Officer Owl analyzes the water physics"
+    elements:
+      title_label:
+        type: text
+        text: "🦉 The Physics of Water Containers 🌊"
+        position: [0, 250]
+        color: "#58a6ff"
+        size: 24
+        font: "Georgia"
+        glow: true
+
+      # Officer Owl character
+      officer_owl:
+        type: text
+        text: "🦉"
+        position: [-180, 180]
+        color: "#e67e22"
+        size: 60
+        font: "Georgia"
+        glow: true
+
+      owl_wisdom:
+        type: text
+        text: "Observe carefully! Water level = MINIMUM height\nContainer width = pointer distance! 🧠"
+        position: [-180, 120]
+        color: "#f39c12"
+        size: 16
+        font: "Georgia"
+        glow: true
+
+      # Glowing connection to evidence
+      wisdom_line:
+        type: line
+        start: [-120, 150]
+        end: [20, 150]
+        color: "#e67e22"
+        thickness: 3
+        dashed: true
+        glow: true
+
+      # Mathematical evidence display
+      height_analysis:
+        type: algorithm_array
+        position: [80, 60]
+        values: [1, 8, 6, 2, 5, 4, 8, 3, 7]
+        cellSize: 22
+        orientation: "vertical"
+        color: "#3498db"
+        highlightedCells: [0, 8]
+
+      # Water level demonstration
+      water_level_rect:
+        type: rectangle
+        position: [80, 40]
+        width: 180
+        height: 25
+        color: "#2980b9"
+        opacity: 0.5
+        glow: true
+
+      water_formula:
+        type: text
+        text: "Area = min(height[left], height[right]) × width"
+        position: [80, 15]
+        color: "#3498db"
+        size: 14
+        font: "Courier New"
+        glow: true
+
+      # Cosmic investigation background
+      cosmic_grid:
+        type: grid
+        style: "perspective"
+        spacing: 40
+        density: 0.4
+        color: "#8e44ad"
+        opacity: 0.3
+
+      investigation_sparkles:
+        type: sparkles
+        position: [80, 80]
+        count: 10
+        density: 15
+        color: "#f39c12"
+
+  agent_duck_strategy:
+    duration: 8
+    description: "Agent Duck reveals the strategic movement"
+    elements:
+      title_label:
+        type: text
+        text: "🦆 Strategic Pointer Movement Protocol 🎯"
+        position: [0, 250]
+        color: "#2ecc71"
+        size: 24
+        font: "Georgia"
+        glow: true
+
+      # Agent Duck character
+      agent_duck:
+        type: text
+        text: "🦆"
+        position: [-200, 180]
+        color: "#3498db"
+        size: 60
+        font: "Georgia"
+        glow: true
+
+      duck_strategy:
+        type: text
+        text: "Mission protocol: Always move the SHORTER wall!\nThis maximizes our search efficiency! 🚀"
+        position: [-200, 120]
+        color: "#16a085"
+        size: 16
+        font: "Georgia"
+        glow: true
+
+      # Strategic connection line
+      strategy_line:
+        type: line
+        start: [-140, 150]
+        end: [40, 150]
+        color: "#3498db"
+        thickness: 3
+        style: "dashed"
+        glow: true
+
+      # Movement demonstration
+      strategic_array:
+        type: algorithm_array
+        position: [100, 60]
+        values: [1, 8, 6, 2, 5, 4, 8, 3, 7]
+        cellSize: 20
+        color: "#27ae60"
+
+      # Pointer movement indicators
+      left_move_indicator:
+        type: vector
+        start: [25, 45]
+        end: [50, 45]
+        color: "#e74c3c"
+        thickness: 4
+        glow: true
+
+      right_move_indicator:
+        type: vector
+        start: [275, 45]
+        end: [250, 45]
+        color: "#27ae60"
+        thickness: 4
+        glow: true
+
+      strategy_text:
+        type: text
+        text: "if height[left] < height[right]: left += 1\nelse: right -= 1"
+        position: [100, 15]
+        color: "#2ecc71"
+        size: 14
+        font: "Courier New"
+        glow: true
+
+      # Energy flow background
+      energy_waves:
+        type: waves
+        layers: 3
+        colors: ["#27ae60", "#3498db", "#2ecc71"]
+        opacity: 0.3
+
+      tactical_sparkles:
+        type: sparkles
+        position: [100, 80]
+        count: 8
+        density: 18
+        color: "#2ecc71"
+
+  detective_rio_conclusion:
+    duration: 8
+    description: "Detective Rio Parrot solves the case"
+    elements:
+      title_label:
+        type: text
+        text: "🦜 Case Solved: Linear Time Mastery! ⚡"
+        position: [0, 250]
+        color: "#9b59b6"
+        size: 24
+        font: "Georgia"
+        glow: true
+
+      # Detective Rio Parrot
+      detective_rio:
+        type: text
+        text: "🦜"
+        position: [-220, 180]
+        color: "#e91e63"
+        size: 60
+        font: "Georgia"
+        glow: true
+
+      rio_conclusion:
+        type: text
+        text: "Elementary! O(n) time complexity achieved!\nOne pass through the evidence! 🎉"
+        position: [-220, 120]
+        color: "#8e44ad"
+        size: 16
+        font: "Georgia"
+        glow: true
+
+      # Connection to final solution
+      solution_line:
+        type: line
+        start: [-160, 150]
+        end: [60, 150]
+        color: "#e91e63"
+        thickness: 3
+        style: "dashed"
+        glow: true
+
+      # Final algorithm display
+      solved_array:
+        type: algorithm_array
+        position: [120, 60]
+        values: [1, 8, 6, 2, 5, 4, 8, 3, 7]
+        cellSize: 24
+        color: "#9b59b6"
+        glow: true
+
+      # Multiple container solutions
+      solution_1:
+        type: rectangle
+        position: [50, 40]
+        width: 40
+        height: 20
+        color: "#3498db"
+        opacity: 0.4
+
+      solution_2:
+        type: rectangle
+        position: [120, 40]
+        width: 70
+        height: 35
+        color: "#2ecc71"
+        opacity: 0.6
+
+      solution_3:
+        type: rectangle
+        position: [220, 40]
+        width: 55
+        height: 28
+        color: "#e74c3c"
+        opacity: 0.5
+
+      complexity_badge:
+        type: text
+        text: "✨ O(n) LINEAR TIME ✨"
+        position: [120, 15]
+        color: "#f1c40f"
+        size: 16
+        font: "Georgia"
+        glow: true
+
+      # Celebration background
+      celebration_grid:
+        type: grid
+        style: "flat"
+        spacing: 35
+        density: 0.5
+        color: "#d4af37"
+        opacity: 0.3
+
+      victory_sparkles:
+        type: sparkles
+        position: [120, 80]
+        count: 15
+        density: 25
+        color: "#f39c12"
+
+      celebration_fireworks:
+        type: fireworks
+        position: [120, 100]
+        count: 5
+        colors: ["#f1c40f", "#2ecc71", "#3498db", "#e74c3c", "#9b59b6"]
+
+  team_celebration_finale:
+    duration: 8
+    description: "The detective team celebrates the solved case"
+    elements:
+      title_label:
+        type: text
+        text: "🎉 CASE CLOSED: The Detective Algorithm Team! 🕵️‍♂️"
+        position: [0, 250]
+        color: "#f39c12"
+        size: 24
+        font: "Georgia"
+        glow: true
+
+      # All characters in formation
+      octopus_final:
+        type: text
+        text: "🐙"
+        position: [-240, 150]
+        color: "#e74c3c"
+        size: 50
+        font: "Georgia"
+        glow: true
+
+      dino_final:
+        type: text
+        text: "🦖"
+        position: [-120, 150]
+        color: "#27ae60"
+        size: 50
+        font: "Georgia"
+        glow: true
+
+      owl_final:
+        type: text
+        text: "🦉"
+        position: [0, 150]
+        color: "#e67e22"
+        size: 50
+        font: "Georgia"
+        glow: true
+
+      duck_final:
+        type: text
+        text: "🦆"
+        position: [120, 150]
+        color: "#3498db"
+        size: 50
+        font: "Georgia"
+        glow: true
+
+      rio_final:
+        type: text
+        text: "🦜"
+        position: [240, 150]
+        color: "#e91e63"
+        size: 50
+        font: "Georgia"
+        glow: true
+
+      # Connecting team lines
+      team_line_1:
+        type: line
+        start: [-215, 130]
+        end: [-145, 130]
+        color: "#f39c12"
+        thickness: 3
+        style: "dashed"
+        glow: true
+
+      team_line_2:
+        type: line
+        start: [-95, 130]
+        end: [-25, 130]
+        color: "#f39c12"
+        thickness: 3
+        style: "dashed"
+        glow: true
+
+      team_line_3:
+        type: line
+        start: [25, 130]
+        end: [95, 130]
+        color: "#f39c12"
+        thickness: 3
+        style: "dashed"
+        glow: true
+
+      team_line_4:
+        type: line
+        start: [145, 130]
+        end: [215, 130]
+        color: "#f39c12"
+        thickness: 3
+        style: "dashed"
+        glow: true
+
+      # Team success message
+      team_message:
+        type: text
+        text: "🔍 Two Pointers  💧 Water Physics  🎯 Smart Strategy  ⚡ O(n) Time  🎉 Case Solved!"
+        position: [0, 100]
+        color: "#2ecc71"
+        size: 16
+        font: "Georgia"
+        glow: true
+
+      # Final algorithm showcase
+      final_algorithm:
+        type: text
+        text: "def maxArea(height):\n    left, right = 0, len(height) - 1\n    max_area = 0\n    \n    while left < right:\n        area = min(height[left], height[right]) * (right - left)\n        max_area = max(max_area, area)\n        \n        if height[left] < height[right]:\n            left += 1\n        else:\n            right -= 1\n    \n    return max_area"
+        position: [0, 30]
+        color: "#27ae60"
+        size: 14
+        font: "Courier New"
+        glow: true
+
+      # Cosmic celebration background
+      cosmic_celebration:
+        type: star_field
+        count: 80
+        twinkle: true
+        colors: ["#f1c40f", "#e67e22", "#9b59b6", "#2ecc71"]
+
+      # Neural network showing teamwork
+      teamwork_network:
+        type: neural_net
+        position: [0, 50]
+        nodeCount: 15
+        connectionStrength: 0.8
+        color: "#8e44ad"
+        opacity: 0.4
+
+      # Grand finale sparkles
+      finale_sparkles:
+        type: sparkles
+        count: 25
+        density: 30
+        color: "#f1c40f"
+
+      # Victory fireworks
+      grand_fireworks:
+        type: fireworks
+        position: [0, 180]
+        count: 8
+        colors: ["#f1c40f", "#2ecc71", "#3498db", "#e74c3c", "#9b59b6", "#e67e22"]
+

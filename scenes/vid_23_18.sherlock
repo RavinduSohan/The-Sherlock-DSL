@@ -1,0 +1,497 @@
+concept: "Computer Science Fundamentals — OS, Threads, Memory"
+emoji: "⚙️"
+total_duration: 114
+background: "#080c14"
+
+subtitles:
+  - ""
+
+phases:
+
+  scene_04_os_processes:
+    duration: 38
+    description: "The OS mediates every app-hardware request; processes are isolated — one crash cannot kill another."
+    elements:
+
+      scene_tag:
+        type: primitive
+        shape: text[text:"④ OS & PROCESSES" fontSize:15 fill:#ffffff/0.3 at:(-5.2,4.85)] -> fadeIn(0.6s, 0.2s)
+
+      divider:
+        type: primitive
+        shape: line[from:(0,3.2) to:(0,-3.2) stroke:#ffffff/0.15 strokeWidth:1] -> fadeIn(0.3s, 0s)
+
+      left_title:
+        type: primitive
+        shape: text[text:"FACT 07 — THE OS" fontSize:22 fill:#ffffff/0.8 at:(-3.2,3.8)] -> fadeIn(0.5s, 0.5s)
+
+      layer_app:
+        type: morph
+        shape: rectangle[w:3.0 h:0.7 fill:#c77aff/0.3 stroke:#c77aff/0.5 strokeWidth:1.5 at:(-3.2,1.6)] -> fadeIn(0.5s, 0.3s) ~> rectangle[w:3.0 h:0.7 fill:#4fc3f7/0.4 stroke:#4fc3f7/0.65 strokeWidth:1.5 at:(-3.2,1.6)] (0.4s, ease.out, 4.8s) ~> rectangle[w:3.0 h:0.7 fill:#4fc3f7/0.25 stroke:#4fc3f7/0.45 strokeWidth:1.2 at:(-3.2,1.6)] (0.5s, ease.out, 5.5s)
+
+      lbl_app_layer:
+        type: primitive
+        shape: text[text:"App" fontSize:14 fill:#ffffff/0.88 at:(-3.2,1.6)] -> fadeIn(0.4s, 0.5s)
+
+      layer_os:
+        type: morph
+        shape: rectangle[w:3.4 h:0.9 fill:#c77aff/0.3 stroke:#c77aff/0.5 strokeWidth:1.5 at:(-3.2,0.3)] -> fadeIn(0.5s, 0.3s) ~> rectangle[w:3.4 h:0.9 fill:#4fc3f7/0.45 stroke:#4fc3f7/0.75 strokeWidth:2 at:(-3.2,0.3)] (0.4s, ease.out, 2.8s) ~> rectangle[w:3.4 h:0.9 fill:#6bffb8/0.35 stroke:#6bffb8/0.6 strokeWidth:2 at:(-3.2,0.3)] (0.5s, ease.out, 5.2s)
+
+      lbl_os_layer:
+        type: primitive
+        shape: text[text:"OS Kernel" fontSize:14 fill:#ffffff/0.88 at:(-3.2,0.3)] -> fadeIn(0.4s, 0.5s)
+
+      layer_hw:
+        type: morph
+        shape: rectangle[w:3.0 h:0.7 fill:#c77aff/0.3 stroke:#c77aff/0.5 strokeWidth:1.5 at:(-3.2,-1.0)] -> fadeIn(0.5s, 0.3s) ~> rectangle[w:3.0 h:0.7 fill:#4fc3f7/0.4 stroke:#4fc3f7/0.65 strokeWidth:1.5 at:(-3.2,-1.0)] (0.4s, ease.out, 3.5s) ~> rectangle[w:3.0 h:0.7 fill:#4fc3f7/0.25 stroke:#4fc3f7/0.45 strokeWidth:1.2 at:(-3.2,-1.0)] (0.5s, ease.out, 4.2s)
+
+      lbl_hw_layer:
+        type: primitive
+        shape: text[text:"CPU / RAM / Disk" fontSize:13 fill:#ffffff/0.88 at:(-3.2,-1.0)] -> fadeIn(0.4s, 0.5s)
+
+      conn_app_os:
+        type: morph
+        shape: line[from:(-3.2,1.25) to:(-3.2,1.25) stroke:#ff6b9d/0.7 strokeWidth:2] ~> line[from:(-3.2,1.25) to:(-3.2,0.75) stroke:#ff6b9d/0.7 strokeWidth:2] (0.4s, ease.out, 0.8s) ~> line[from:(-3.2,1.25) to:(-3.2,0.75) stroke:#4fc3f7/0.6 strokeWidth:2] (0.4s, ease.out, 2.5s)
+
+      conn_os_hw:
+        type: morph
+        shape: line[from:(-3.2,-0.15) to:(-3.2,-0.15) stroke:#4fc3f7/0 strokeWidth:1] ~> line[from:(-3.2,-0.15) to:(-3.2,-0.65) stroke:#4fc3f7/0.6 strokeWidth:2] (0.5s, ease.out, 3.2s)
+
+      packet_req:
+        type: morph
+        shape: rectangle[w:0.22 h:0.22 fill:#4fc3f7/0.9 stroke:#4fc3f7/1.0 strokeWidth:1.5 at:(-3.2,1.6)] ~> rectangle[w:0.22 h:0.22 fill:#ff6b9d/0.9 stroke:#ff6b9d/1.0 strokeWidth:1.5 at:(-3.2,1.05)] (0.35s, ease.out, 0.8s) ~> rectangle[w:0.22 h:0.22 fill:#4fc3f7/0.9 stroke:#4fc3f7/1.0 strokeWidth:1.5 at:(-3.2,1.05)] (0.3s, ease.out, 1.4s) ~> rectangle[w:0.22 h:0.22 fill:#4fc3f7/0.9 stroke:#4fc3f7/1.0 strokeWidth:1.5 at:(-3.2,0.3)] (0.4s, ease.inOut, 2.5s)
+
+      packet_hw:
+        type: morph
+        shape: rectangle[w:0.22 h:0.22 fill:#6bffb8/0 stroke:#6bffb8/0 strokeWidth:1 at:(-3.2,0.3)] ~> rectangle[w:0.22 h:0.22 fill:#6bffb8/0.9 stroke:#6bffb8/1.0 strokeWidth:1.5 at:(-3.2,0.3)] (0.25s, ease.out, 3.1s) ~> rectangle[w:0.22 h:0.22 fill:#6bffb8/0.9 stroke:#6bffb8/1.0 strokeWidth:1.5 at:(-3.2,-1.0)] (0.45s, ease.inOut, 3.3s) ~> rectangle[w:0.22 h:0.22 fill:#6bffb8/0.9 stroke:#6bffb8/1.0 strokeWidth:1.5 at:(-3.2,0.3)] (0.45s, ease.inOut, 4.2s) ~> rectangle[w:0.22 h:0.22 fill:#6bffb8/0.9 stroke:#6bffb8/1.0 strokeWidth:1.5 at:(-3.2,1.6)] (0.5s, ease.inOut, 5.0s)
+
+
+      left_pt1:
+        type: primitive
+        shape: text[text:"os = app ↔ hardware" fontSize:16 fill:#ffffff/0.82 at:(-4.1,-2.1)] -> fadeIn(0.4s, 1.5s)
+
+      left_pt2:
+        type: primitive
+        shape: text[text:"syscall: app → os" fontSize:16 fill:#ffffff/0.82 at:(-4.1,-2.65)] -> fadeIn(0.4s, 2.8s)
+
+      left_pt3:
+        type: primitive
+        shape: text[text:"direct hardware = blocked" fontSize:16 fill:#ffffff/0.82 at:(-4.1,-3.2)] -> fadeIn(0.4s, 4.5s)
+
+      right_title:
+        type: morph
+        shape: text[text:"FACT 08 — PROCESSES" fontSize:22 fill:#ffffff/0 at:(3.8,3.8)] ~> text[text:"FACT 08 — PROCESSES" fontSize:22 fill:#ffffff/0.8 at:(3.8,3.8)] (0.5s, ease.out, 10.3s)
+
+      proc_a_box:
+        type: morph
+        shape: rectangle[w:1.8 h:2.0 fill:#c77aff/0 stroke:#c77aff/0 strokeWidth:2 at:(1.8,0.8)] ~> rectangle[w:1.8 h:2.0 fill:#c77aff/0.25 stroke:#ffffff/0.5 strokeWidth:2.5 at:(1.8,0.8)] (0.6s, ease.out, 10.5s) ~> rectangle[w:1.8 h:2.0 fill:#ff6b9d/0.4 stroke:#ff6b9d/0.7 strokeWidth:2.5 at:(1.8,0.8)] (0.5s, ease.out, 14.0s)
+
+      lbl_proc_a:
+        type: morph
+        shape: text[text:"PID 100" fontSize:13 fill:#ffffff/0 at:(1.8,1.65)] ~> text[text:"PID 100" fontSize:13 fill:#ffffff/0.88 at:(1.8,1.65)] (0.5s, ease.out, 10.8s)
+
+      proc_a_cell1:
+        type: morph
+        shape: rectangle[w:0.28 h:0.22 fill:#4fc3f7/0 stroke:#4fc3f7/0 strokeWidth:1 at:(1.55,1.2)] ~> rectangle[w:0.28 h:0.22 fill:#4fc3f7/0.5 stroke:#4fc3f7/0.7 strokeWidth:1 at:(1.55,1.2)] (0.4s, ease.out, 11.0s) ~> rectangle[w:0.28 h:0.22 fill:#ff6b9d/0.5 stroke:#ff6b9d/0.7 strokeWidth:1 at:(1.55,1.2)] (0.4s, ease.out, 14.0s)
+
+      proc_a_cell2:
+        type: morph
+        shape: rectangle[w:0.28 h:0.22 fill:#c77aff/0 stroke:#c77aff/0 strokeWidth:1 at:(1.9,1.2)] ~> rectangle[w:0.28 h:0.22 fill:#c77aff/0.4 stroke:#c77aff/0.6 strokeWidth:1 at:(1.9,1.2)] (0.4s, ease.out, 11.1s) ~> rectangle[w:0.28 h:0.22 fill:#ff6b9d/0.5 stroke:#ff6b9d/0.7 strokeWidth:1 at:(1.9,1.2)] (0.4s, ease.out, 14.1s)
+
+      proc_a_cell3:
+        type: morph
+        shape: rectangle[w:0.28 h:0.22 fill:#4fc3f7/0 stroke:#4fc3f7/0 strokeWidth:1 at:(1.55,0.85)] ~> rectangle[w:0.28 h:0.22 fill:#4fc3f7/0.5 stroke:#4fc3f7/0.7 strokeWidth:1 at:(1.55,0.85)] (0.4s, ease.out, 11.2s) ~> rectangle[w:0.28 h:0.22 fill:#000000/0.85 stroke:#ff6b9d/0.3 strokeWidth:1 at:(1.55,0.85)] (0.6s, ease.out, 14.5s)
+
+      proc_a_cell4:
+        type: morph
+        shape: rectangle[w:0.28 h:0.22 fill:#4fc3f7/0 stroke:#4fc3f7/0 strokeWidth:1 at:(1.9,0.85)] ~> rectangle[w:0.28 h:0.22 fill:#4fc3f7/0.5 stroke:#4fc3f7/0.7 strokeWidth:1 at:(1.9,0.85)] (0.4s, ease.out, 11.3s) ~> rectangle[w:0.28 h:0.22 fill:#000000/0.85 stroke:#ff6b9d/0.3 strokeWidth:1 at:(1.9,0.85)] (0.6s, ease.out, 14.6s)
+
+      lbl_crashed:
+        type: morph
+        shape: text[text:"CRASHED" fontSize:13 fill:#ff6b9d/0 at:(1.8,0.3)] ~> text[text:"CRASHED" fontSize:13 fill:#ff6b9d/0.9 at:(1.8,0.3)] (0.4s, ease.out, 14.8s)
+
+      proc_b_box:
+        type: morph
+        shape: rectangle[w:1.8 h:2.0 fill:#c77aff/0 stroke:#c77aff/0 strokeWidth:2 at:(4.2,0.8)] ~> rectangle[w:1.8 h:2.0 fill:#c77aff/0.25 stroke:#ffffff/0.5 strokeWidth:2.5 at:(4.2,0.8)] (0.6s, ease.out, 10.7s)
+
+      lbl_proc_b:
+        type: morph
+        shape: text[text:"PID 200" fontSize:13 fill:#ffffff/0 at:(4.2,1.65)] ~> text[text:"PID 200" fontSize:13 fill:#ffffff/0.88 at:(4.2,1.65)] (0.5s, ease.out, 11.0s)
+
+      proc_b_cell1:
+        type: morph
+        shape: rectangle[w:0.28 h:0.22 fill:#4fc3f7/0 stroke:#4fc3f7/0 strokeWidth:1 at:(3.95,1.2)] ~> rectangle[w:0.28 h:0.22 fill:#4fc3f7/0.5 stroke:#4fc3f7/0.7 strokeWidth:1 at:(3.95,1.2)] (0.4s, ease.out, 11.2s) ~> rectangle[w:0.28 h:0.22 fill:#4fc3f7/0.65 stroke:#4fc3f7/0.85 strokeWidth:1.2 at:(3.95,1.2)] (0.4s, ease.out, 15.0s)
+
+      proc_b_cell2:
+        type: morph
+        shape: rectangle[w:0.28 h:0.22 fill:#c77aff/0 stroke:#c77aff/0 strokeWidth:1 at:(4.3,1.2)] ~> rectangle[w:0.28 h:0.22 fill:#c77aff/0.4 stroke:#c77aff/0.6 strokeWidth:1 at:(4.3,1.2)] (0.4s, ease.out, 11.3s) ~> rectangle[w:0.28 h:0.22 fill:#4fc3f7/0.5 stroke:#4fc3f7/0.7 strokeWidth:1 at:(4.3,1.2)] (0.4s, ease.out, 15.2s)
+
+      proc_b_cell3:
+        type: morph
+        shape: rectangle[w:0.28 h:0.22 fill:#4fc3f7/0 stroke:#4fc3f7/0 strokeWidth:1 at:(3.95,0.85)] ~> rectangle[w:0.28 h:0.22 fill:#4fc3f7/0.5 stroke:#4fc3f7/0.7 strokeWidth:1 at:(3.95,0.85)] (0.4s, ease.out, 11.4s)
+
+      proc_b_cell4:
+        type: morph
+        shape: rectangle[w:0.28 h:0.22 fill:#4fc3f7/0 stroke:#4fc3f7/0 strokeWidth:1 at:(4.3,0.85)] ~> rectangle[w:0.28 h:0.22 fill:#4fc3f7/0.5 stroke:#4fc3f7/0.7 strokeWidth:1 at:(4.3,0.85)] (0.4s, ease.out, 11.5s)
+
+      illegal_arrow:
+        type: morph
+        shape: line[from:(2.7,1.0) to:(2.7,1.0) stroke:#ff6b9d/0 strokeWidth:2] ~> line[from:(2.7,1.0) to:(3.1,1.0) stroke:#ff6b9d/0.8 strokeWidth:2] (0.4s, ease.out, 12.3s) ~> line[from:(2.7,1.0) to:(2.7,1.0) stroke:#ff6b9d/0 strokeWidth:2] (0.3s, ease.out, 12.9s)
+
+      boundary_pulse:
+        type: morph
+        shape: line[from:(3.3,-0.2) to:(3.3,1.8) stroke:#ffffff/0.4 strokeWidth:3] ~> line[from:(3.3,-0.2) to:(3.3,1.8) stroke:#6bffb8/0.9 strokeWidth:3.5] (0.3s, ease.out, 12.7s) ~> line[from:(3.3,-0.2) to:(3.3,1.8) stroke:#ffffff/0.4 strokeWidth:3] (0.5s, ease.out, 13.1s)
+
+      lbl_isolated:
+        type: morph
+        shape: text[text:"ISOLATED" fontSize:14 fill:#6bffb8/0 at:(3.0,-0.35)] ~> text[text:"ISOLATED" fontSize:14 fill:#6bffb8/0.9 at:(3.0,-0.35)] (0.5s, ease.out, 15.8s)
+
+      right_pt1:
+        type: morph
+        shape: text[text:"process = running program" fontSize:16 fill:#ffffff/0 at:(3.3,-2.1)] ~> text[text:"process = running program" fontSize:16 fill:#ffffff/0.82 at:(3.3,-2.1)] (0.4s, ease.out, 11.5s)
+
+      right_pt2:
+        type: morph
+        shape: text[text:"private mem space" fontSize:16 fill:#ffffff/0 at:(3.3,-2.65)] ~> text[text:"private mem space" fontSize:16 fill:#ffffff/0.82 at:(3.3,-2.65)] (0.4s, ease.out, 13.0s)
+
+      right_pt3:
+        type: morph
+        shape: text[text:"1 crash ≠ all crash" fontSize:16 fill:#ffffff/0 at:(3.3,-3.2)] ~> text[text:"1 crash ≠ all crash" fontSize:16 fill:#ffffff/0.82 at:(3.3,-3.2)] (0.4s, ease.out, 15.0s)
+
+      cinematic:
+        type: morph
+        shape: text[text:"KERNEL" fontSize:64 fill:#ffd54f/0 at:(-3.2,0.5)] ~> text[text:"KERNEL" fontSize:64 fill:#ffd54f/0.9 at:(-3.2,0.5)] (1.2s, ease.out, 30.0s) ~> text[text:"KERNEL" fontSize:64 fill:#ffd54f/0.9 at:(-3.2,0.5)] (2.5s, ease.inOut, 31.2s) ~> text[text:"KERNEL" fontSize:18 fill:#ffd54f/0.3 at:(-3.2,0.5)] (1.5s, ease.inOut, 33.8s)
+
+      lbl_1:
+        type: primitive
+        shape: text[text:"System Call" fontSize:13 fill:#ffffff/0.3 at:(-4.5,-3.2)] -> fadeIn(0.6s, 35.2s)
+
+      lbl_2:
+        type: primitive
+        shape: text[text:"Privilege Ring" fontSize:13 fill:#ffffff/0.3 at:(0,-3.2)] -> fadeIn(0.6s, 35.6s)
+
+      lbl_3:
+        type: primitive
+        shape: text[text:"Page Table" fontSize:13 fill:#ffffff/0.3 at:(4.5,-3.2)] -> fadeIn(0.6s, 36.0s)
+
+  scene_05_threads_abstraction:
+    duration: 38
+    description: "Shared memory makes threads fast but enables race corruption; every abstraction layer adds measurable latency."
+    elements:
+
+      scene_tag:
+        type: primitive
+        shape: text[text:"⑤ THREADS & ABSTRACTION COST" fontSize:15 fill:#ffffff/0.3 at:(-5.2,4.85)] -> fadeIn(0.6s, 0.2s)
+
+      divider:
+        type: primitive
+        shape: line[from:(0,3.2) to:(0,-3.2) stroke:#ffffff/0.15 strokeWidth:1] -> fadeIn(0.3s, 0s)
+
+      left_title:
+        type: primitive
+        shape: text[text:"FACT 09 — THREADS" fontSize:22 fill:#ffffff/0.8 at:(-3.2,3.8)] -> fadeIn(0.5s, 0.5s)
+
+      process_box:
+        type: morph
+        shape: rectangle[w:3.5 h:2.8 fill:#c77aff/0.15 stroke:#c77aff/0.4 strokeWidth:1.5 at:(-3.2,0.6)] -> fadeIn(0.5s, 0.3s) ~> rectangle[w:3.5 h:2.8 fill:#ff6b9d/0.2 stroke:#ff6b9d/0.5 strokeWidth:1.5 at:(-3.2,0.6)] (0.5s, ease.out, 5.5s)
+
+      lbl_process:
+        type: primitive
+        shape: text[text:"Process" fontSize:14 fill:#ffffff/0.88 at:(-3.2,1.85)] -> fadeIn(0.4s, 0.5s)
+
+      thread_t1:
+        type: morph
+        shape: circle[r:0.28 fill:#4fc3f7/0.35 stroke:#4fc3f7/0.6 strokeWidth:1.5 at:(-4.2,1.4)] -> fadeIn(0.5s, 0.4s) ~> circle[r:0.28 fill:#4fc3f7/0.65 stroke:#4fc3f7/0.9 strokeWidth:2 at:(-4.2,1.4)] (0.35s, ease.out, 0.8s) ~> circle[r:0.28 fill:#4fc3f7/0.35 stroke:#4fc3f7/0.6 strokeWidth:1.5 at:(-4.2,1.4)] (0.5s, ease.out, 1.2s)
+
+      lbl_t1:
+        type: primitive
+        shape: text[text:"T1" fontSize:11 fill:#ffffff/0.88 at:(-4.2,1.4)] -> fadeIn(0.4s, 0.5s)
+
+      thread_t2:
+        type: morph
+        shape: circle[r:0.28 fill:#4fc3f7/0.35 stroke:#4fc3f7/0.6 strokeWidth:1.5 at:(-3.2,1.4)] -> fadeIn(0.5s, 0.4s) ~> circle[r:0.28 fill:#4fc3f7/0.65 stroke:#4fc3f7/0.9 strokeWidth:2 at:(-3.2,1.4)] (0.35s, ease.out, 1.0s) ~> circle[r:0.28 fill:#ff6b9d/0.65 stroke:#ff6b9d/0.9 strokeWidth:2 at:(-3.2,1.4)] (0.3s, ease.out, 5.2s)
+
+      lbl_t2:
+        type: primitive
+        shape: text[text:"T2" fontSize:11 fill:#ffffff/0.88 at:(-3.2,1.4)] -> fadeIn(0.4s, 0.5s)
+
+      thread_t3:
+        type: morph
+        shape: circle[r:0.28 fill:#4fc3f7/0.35 stroke:#4fc3f7/0.6 strokeWidth:1.5 at:(-2.2,1.4)] -> fadeIn(0.5s, 0.4s) ~> circle[r:0.28 fill:#4fc3f7/0.65 stroke:#4fc3f7/0.9 strokeWidth:2 at:(-2.2,1.4)] (0.35s, ease.out, 1.2s) ~> circle[r:0.28 fill:#4fc3f7/0.35 stroke:#4fc3f7/0.6 strokeWidth:1.5 at:(-2.2,1.4)] (0.5s, ease.out, 1.6s)
+
+      lbl_t3:
+        type: primitive
+        shape: text[text:"T3" fontSize:11 fill:#ffffff/0.88 at:(-2.2,1.4)] -> fadeIn(0.4s, 0.5s)
+
+      shared_mem_cell1:
+        type: morph
+        shape: rectangle[w:0.38 h:0.28 fill:#4fc3f7/0.3 stroke:#4fc3f7/0.5 strokeWidth:1 at:(-4.1,0.6)] -> fadeIn(0.5s, 0.6s) ~> rectangle[w:0.38 h:0.28 fill:#4fc3f7/0.6 stroke:#4fc3f7/0.85 strokeWidth:1.5 at:(-4.1,0.6)] (0.25s, ease.out, 2.2s) ~> rectangle[w:0.38 h:0.28 fill:#4fc3f7/0.3 stroke:#4fc3f7/0.5 strokeWidth:1 at:(-4.1,0.6)] (0.4s, ease.out, 2.5s)
+
+      shared_mem_cell2:
+        type: morph
+        shape: rectangle[w:0.38 h:0.28 fill:#4fc3f7/0.3 stroke:#4fc3f7/0.5 strokeWidth:1 at:(-3.6,0.6)] -> fadeIn(0.5s, 0.7s) ~> rectangle[w:0.38 h:0.28 fill:#4fc3f7/0.6 stroke:#4fc3f7/0.85 strokeWidth:1.5 at:(-3.6,0.6)] (0.25s, ease.out, 2.5s) ~> rectangle[w:0.38 h:0.28 fill:#ff6b9d/0.7 stroke:#ff6b9d/0.9 strokeWidth:1.5 at:(-3.6,0.6)] (0.3s, ease.out, 5.3s)
+
+      shared_mem_cell3:
+        type: morph
+        shape: rectangle[w:0.38 h:0.28 fill:#4fc3f7/0.3 stroke:#4fc3f7/0.5 strokeWidth:1 at:(-3.1,0.6)] -> fadeIn(0.5s, 0.8s) ~> rectangle[w:0.38 h:0.28 fill:#4fc3f7/0.6 stroke:#4fc3f7/0.85 strokeWidth:1.5 at:(-3.1,0.6)] (0.25s, ease.out, 2.8s) ~> rectangle[w:0.38 h:0.28 fill:#4fc3f7/0.3 stroke:#4fc3f7/0.5 strokeWidth:1 at:(-3.1,0.6)] (0.4s, ease.out, 3.1s)
+
+      shared_mem_cell4:
+        type: morph
+        shape: rectangle[w:0.38 h:0.28 fill:#4fc3f7/0.3 stroke:#4fc3f7/0.5 strokeWidth:1 at:(-2.6,0.6)] -> fadeIn(0.5s, 0.9s) ~> rectangle[w:0.38 h:0.28 fill:#ff6b9d/0.7 stroke:#ff6b9d/0.9 strokeWidth:1.5 at:(-2.6,0.6)] (0.3s, ease.out, 5.1s)
+
+      counter_display:
+        type: morph
+        shape: text[text:"Counter: 0" fontSize:14 fill:#4fc3f7/0 at:(-3.2,0.1)] ~> text[text:"Counter: 0" fontSize:14 fill:#4fc3f7/0.8 at:(-3.2,0.1)] (0.4s, ease.out, 0.9s) ~> text[text:"Counter: 3" fontSize:14 fill:#4fc3f7/0.8 at:(-3.2,0.1)] (0.5s, ease.out, 1.5s) ~> text[text:"Counter: 100" fontSize:14 fill:#4fc3f7/0.8 at:(-3.2,0.1)] (0.4s, ease.out, 3.2s) ~> text[text:"Counter: 999" fontSize:14 fill:#ff6b9d/0.9 at:(-3.2,0.1)] (0.3s, ease.out, 5.2s) ~> text[text:"Counter: -50" fontSize:14 fill:#ff6b9d/0.9 at:(-3.2,0.1)] (0.25s, ease.out, 5.55s) ~> text[text:"Counter: 0" fontSize:14 fill:#ff6b9d/0.9 at:(-3.2,0.1)] (0.25s, ease.out, 5.85s)
+
+      race_exclaim:
+        type: morph
+        shape: text[text:"!" fontSize:22 fill:#ff6b9d/0 at:(-3.6,0.7)] ~> text[text:"!" fontSize:22 fill:#ff6b9d/0.9 at:(-3.6,0.7)] (0.2s, ease.out, 5.4s) ~> text[text:"!" fontSize:22 fill:#ff6b9d/0 at:(-3.6,0.7)] (0.5s, ease.out, 6.5s)
+
+      left_pt1:
+        type: primitive
+        shape: text[text:"thread = cpu worker" fontSize:16 fill:#ffffff/0.82 at:(-4.1,-2.1)] -> fadeIn(0.4s, 1.5s)
+
+      left_pt2:
+        type: primitive
+        shape: text[text:"threads → shared mem" fontSize:16 fill:#ffffff/0.82 at:(-4.1,-2.65)] -> fadeIn(0.4s, 3.0s)
+
+      left_pt3:
+        type: primitive
+        shape: text[text:"shared state + timing = race" fontSize:16 fill:#ffffff/0.82 at:(-4.1,-3.2)] -> fadeIn(0.4s, 5.2s)
+
+      right_title:
+        type: morph
+        shape: text[text:"FACT 10 — ABSTRACTION COST" fontSize:22 fill:#ffffff/0 at:(3.8,3.8)] ~> text[text:"FACT 10 — ABSTRACTION COST" fontSize:22 fill:#ffffff/0.8 at:(3.8,3.8)] (0.5s, ease.out, 10.3s)
+
+      bar_app:
+        type: morph
+        shape: rectangle[w:0.1 h:0.38 fill:#c77aff/0 stroke:#c77aff/0 strokeWidth:1 at:(1.3,1.6)] ~> rectangle[w:1.0 h:0.38 fill:#c77aff/0.3 stroke:#c77aff/0.5 strokeWidth:1.5 at:(1.8,1.6)] (0.5s, ease.out, 10.6s) ~> rectangle[w:1.0 h:0.38 fill:#4fc3f7/0.45 stroke:#4fc3f7/0.7 strokeWidth:1.5 at:(1.8,1.6)] (0.4s, ease.out, 11.2s)
+
+      lbl_bar_app:
+        type: morph
+        shape: text[text:"App Code" fontSize:12 fill:#ffffff/0 at:(1.8,1.6)] ~> text[text:"App Code" fontSize:12 fill:#ffffff/0.88 at:(1.8,1.6)] (0.4s, ease.out, 11.0s)
+
+      bar_lib:
+        type: morph
+        shape: rectangle[w:0.1 h:0.38 fill:#c77aff/0 stroke:#c77aff/0 strokeWidth:1 at:(1.3,1.05)] ~> rectangle[w:1.5 h:0.38 fill:#c77aff/0.3 stroke:#c77aff/0.5 strokeWidth:1.5 at:(2.05,1.05)] (0.5s, ease.out, 10.8s) ~> rectangle[w:1.5 h:0.38 fill:#4fc3f7/0.4 stroke:#4fc3f7/0.65 strokeWidth:1.5 at:(2.05,1.05)] (0.4s, ease.out, 11.5s)
+
+      lbl_bar_lib:
+        type: morph
+        shape: text[text:"Library" fontSize:12 fill:#ffffff/0 at:(2.05,1.05)] ~> text[text:"Library" fontSize:12 fill:#ffffff/0.88 at:(2.05,1.05)] (0.4s, ease.out, 11.2s)
+
+      bar_syscall:
+        type: morph
+        shape: rectangle[w:0.1 h:0.38 fill:#c77aff/0 stroke:#c77aff/0 strokeWidth:1 at:(1.3,0.5)] ~> rectangle[w:3.0 h:0.38 fill:#c77aff/0.3 stroke:#c77aff/0.5 strokeWidth:1.5 at:(2.8,0.5)] (0.5s, ease.out, 11.0s) ~> rectangle[w:3.0 h:0.38 fill:#4fc3f7/0.35 stroke:#4fc3f7/0.6 strokeWidth:1.5 at:(2.8,0.5)] (0.4s, ease.out, 11.8s) ~> rectangle[w:3.0 h:0.38 fill:#ff6b9d/0.4 stroke:#ff6b9d/0.65 strokeWidth:2 at:(2.8,0.5)] (0.4s, ease.out, 14.0s)
+
+      lbl_bar_syscall:
+        type: morph
+        shape: text[text:"System Call" fontSize:12 fill:#ffffff/0 at:(2.8,0.5)] ~> text[text:"System Call" fontSize:12 fill:#ffffff/0.88 at:(2.8,0.5)] (0.4s, ease.out, 11.4s)
+
+      bar_hw:
+        type: morph
+        shape: rectangle[w:0.1 h:0.38 fill:#c77aff/0 stroke:#c77aff/0 strokeWidth:1 at:(1.3,-0.05)] ~> rectangle[w:0.5 h:0.38 fill:#6bffb8/0.4 stroke:#6bffb8/0.6 strokeWidth:1.5 at:(1.55,-0.05)] (0.5s, ease.out, 11.2s)
+
+      lbl_bar_hw:
+        type: morph
+        shape: text[text:"Hardware" fontSize:12 fill:#ffffff/0 at:(1.55,-0.05)] ~> text[text:"Hardware" fontSize:12 fill:#ffffff/0.88 at:(1.55,-0.05)] (0.4s, ease.out, 11.6s)
+
+      req_dot:
+        type: morph
+        shape: circle[r:0.16 fill:#4fc3f7/0 stroke:#4fc3f7/0 strokeWidth:1 at:(1.3,1.6)] ~> circle[r:0.16 fill:#4fc3f7/0.9 stroke:#4fc3f7/1.0 strokeWidth:1.5 at:(1.3,1.6)] (0.25s, ease.out, 11.2s) ~> circle[r:0.16 fill:#4fc3f7/0.9 stroke:#4fc3f7/1.0 strokeWidth:1.5 at:(1.3,1.05)] (0.25s, ease.inOut, 11.6s) ~> circle[r:0.16 fill:#4fc3f7/0.9 stroke:#4fc3f7/1.0 strokeWidth:1.5 at:(1.3,0.5)] (0.6s, ease.inOut, 11.95s) ~> circle[r:0.16 fill:#ff6b9d/0.9 stroke:#ff6b9d/1.0 strokeWidth:1.5 at:(1.3,0.5)] (0.3s, ease.out, 14.2s) ~> circle[r:0.16 fill:#4fc3f7/0.9 stroke:#4fc3f7/1.0 strokeWidth:1.5 at:(1.3,-0.05)] (0.3s, ease.inOut, 12.75s)
+
+      latency_display:
+        type: morph
+        shape: text[text:"Latency: 0 ns" fontSize:14 fill:#ffffff/0 at:(4.2,1.6)] ~> text[text:"Latency: 0 ns" fontSize:14 fill:#ffffff/0.6 at:(4.2,1.6)] (0.4s, ease.out, 11.0s) ~> text[text:"Latency: 557 ns" fontSize:14 fill:#4fc3f7/0.85 at:(4.2,1.6)] (0.4s, ease.out, 13.0s) ~> text[text:"Latency: 5000 ns" fontSize:14 fill:#ff6b9d/0.9 at:(4.2,1.6)] (0.4s, ease.out, 14.3s)
+
+      lbl_io_wait:
+        type: morph
+        shape: text[text:"I/O wait" fontSize:13 fill:#ff6b9d/0 at:(4.2,0.5)] ~> text[text:"I/O wait" fontSize:13 fill:#ff6b9d/0.85 at:(4.2,0.5)] (0.4s, ease.out, 14.8s)
+
+      right_pt1:
+        type: morph
+        shape: text[text:"abstraction = hide mess" fontSize:16 fill:#ffffff/0 at:(3.3,-2.1)] ~> text[text:"abstraction = hide mess" fontSize:16 fill:#ffffff/0.82 at:(3.3,-2.1)] (0.4s, ease.out, 11.8s)
+
+      right_pt2:
+        type: morph
+        shape: text[text:"ease ↑ cost ↑" fontSize:16 fill:#ffffff/0 at:(3.3,-2.65)] ~> text[text:"ease ↑ cost ↑" fontSize:16 fill:#ffffff/0.82 at:(3.3,-2.65)] (0.4s, ease.out, 12.8s)
+
+      right_pt3:
+        type: morph
+        shape: text[text:"leaks → surprises" fontSize:16 fill:#ffffff/0 at:(3.3,-3.2)] ~> text[text:"leaks → surprises" fontSize:16 fill:#ffffff/0.82 at:(3.3,-3.2)] (0.4s, ease.out, 14.5s)
+
+      cinematic:
+        type: morph
+        shape: text[text:"RACE" fontSize:64 fill:#ffd54f/0 at:(-3.2,0.5)] ~> text[text:"RACE" fontSize:64 fill:#ffd54f/0.9 at:(-3.2,0.5)] (1.2s, ease.out, 30.0s) ~> text[text:"RACE" fontSize:64 fill:#ffd54f/0.9 at:(-3.2,0.5)] (2.5s, ease.inOut, 31.2s) ~> text[text:"RACE" fontSize:18 fill:#ffd54f/0.3 at:(-3.2,0.5)] (1.5s, ease.inOut, 33.8s)
+
+      lbl_1:
+        type: primitive
+        shape: text[text:"Mutex" fontSize:13 fill:#ffffff/0.3 at:(-4.5,-3.2)] -> fadeIn(0.6s, 35.2s)
+
+      lbl_2:
+        type: primitive
+        shape: text[text:"Context Switch" fontSize:13 fill:#ffffff/0.3 at:(0,-3.2)] -> fadeIn(0.6s, 35.6s)
+
+      lbl_3:
+        type: primitive
+        shape: text[text:"Indirection" fontSize:13 fill:#ffffff/0.3 at:(4.5,-3.2)] -> fadeIn(0.6s, 36.0s)
+
+  scene_06_memory_stack:
+    duration: 38
+    description: "Memory hierarchy spans 9 orders of magnitude in latency; heap memory leaks when not explicitly freed."
+    elements:
+
+      scene_tag:
+        type: primitive
+        shape: text[text:"⑥ MEMORY HIERARCHY & STACK" fontSize:15 fill:#ffffff/0.3 at:(-5.2,4.85)] -> fadeIn(0.6s, 0.2s)
+
+      divider:
+        type: primitive
+        shape: line[from:(0,3.2) to:(0,-3.2) stroke:#ffffff/0.15 strokeWidth:1] -> fadeIn(0.3s, 0s)
+
+      left_title:
+        type: primitive
+        shape: text[text:"FACT 11 — MEMORY HIERARCHY" fontSize:16 fill:#ffffff/0.8 at:(-3.2,3.8)] -> fadeIn(0.5s, 0.5s)
+
+      tier_reg:
+        type: morph
+        shape: rectangle[w:1.0 h:0.45 fill:#4fc3f7/0.7 stroke:#4fc3f7/0.9 strokeWidth:2 at:(-3.2,1.9)] -> fadeIn(0.5s, 0.3s) ~> rectangle[w:1.0 h:0.45 fill:#ffd54f/0.8 stroke:#ffd54f/0.95 strokeWidth:2 at:(-3.2,1.9)] (0.4s, ease.out, 0.8s) ~> rectangle[w:1.0 h:0.45 fill:#4fc3f7/0.7 stroke:#4fc3f7/0.9 strokeWidth:2 at:(-3.2,1.9)] (0.5s, ease.out, 1.3s)
+
+      lbl_reg:
+        type: primitive
+        shape: text[text:"Reg" fontSize:12 fill:#ffffff/0.9 at:(-3.2,1.9)] -> fadeIn(0.4s, 0.4s)
+
+      tier_cache:
+        type: morph
+        shape: rectangle[w:1.8 h:0.45 fill:#4fc3f7/0.5 stroke:#4fc3f7/0.75 strokeWidth:1.5 at:(-3.2,1.35)] -> fadeIn(0.5s, 0.4s) ~> rectangle[w:1.8 h:0.45 fill:#ffd54f/0.6 stroke:#ffd54f/0.8 strokeWidth:1.5 at:(-3.2,1.35)] (0.4s, ease.out, 2.5s) ~> rectangle[w:1.8 h:0.45 fill:#4fc3f7/0.5 stroke:#4fc3f7/0.75 strokeWidth:1.5 at:(-3.2,1.35)] (0.5s, ease.out, 3.0s)
+
+      lbl_cache:
+        type: primitive
+        shape: text[text:"L1/L2/L3" fontSize:12 fill:#ffffff/0.9 at:(-3.2,1.35)] -> fadeIn(0.4s, 0.5s)
+
+      tier_ram:
+        type: morph
+        shape: rectangle[w:2.6 h:0.45 fill:#4fc3f7/0.3 stroke:#4fc3f7/0.55 strokeWidth:1.5 at:(-3.2,0.8)] -> fadeIn(0.5s, 0.5s) ~> rectangle[w:2.6 h:0.45 fill:#ffd54f/0.45 stroke:#ffd54f/0.65 strokeWidth:1.5 at:(-3.2,0.8)] (0.4s, ease.out, 3.2s) ~> rectangle[w:2.6 h:0.45 fill:#4fc3f7/0.3 stroke:#4fc3f7/0.55 strokeWidth:1.5 at:(-3.2,0.8)] (0.5s, ease.out, 3.7s)
+
+      lbl_ram_tier:
+        type: primitive
+        shape: text[text:"Main Memory" fontSize:12 fill:#ffffff/0.88 at:(-3.2,0.8)] -> fadeIn(0.4s, 0.6s)
+
+      tier_disk:
+        type: morph
+        shape: rectangle[w:3.4 h:0.45 fill:#c77aff/0.35 stroke:#c77aff/0.55 strokeWidth:1.5 at:(-3.2,0.25)] -> fadeIn(0.5s, 0.6s) ~> rectangle[w:3.4 h:0.45 fill:#ffd54f/0.5 stroke:#ffd54f/0.7 strokeWidth:2 at:(-3.2,0.25)] (0.4s, ease.out, 4.7s) ~> rectangle[w:3.4 h:0.45 fill:#c77aff/0.35 stroke:#c77aff/0.55 strokeWidth:1.5 at:(-3.2,0.25)] (0.5s, ease.out, 5.3s)
+
+      lbl_disk_tier:
+        type: primitive
+        shape: text[text:"SSD / HDD" fontSize:12 fill:#ffffff/0.88 at:(-3.2,0.25)] -> fadeIn(0.4s, 0.7s)
+
+      tier_net:
+        type: morph
+        shape: rectangle[w:4.2 h:0.45 fill:#c77aff/0.2 stroke:#c77aff/0.4 strokeWidth:1.2 at:(-3.2,-0.3)] -> fadeIn(0.5s, 0.7s) ~> rectangle[w:4.2 h:0.45 fill:#ffd54f/0.4 stroke:#ffd54f/0.6 strokeWidth:2 at:(-3.2,-0.3)] (0.4s, ease.out, 5.8s) ~> rectangle[w:4.2 h:0.45 fill:#c77aff/0.2 stroke:#c77aff/0.4 strokeWidth:1.2 at:(-3.2,-0.3)] (0.5s, ease.out, 6.4s)
+
+      lbl_net_tier:
+        type: primitive
+        shape: text[text:"Remote" fontSize:12 fill:#ffffff/0.88 at:(-3.2,-0.3)] -> fadeIn(0.4s, 0.8s)
+
+      data_dot:
+        type: morph
+        shape: circle[r:0.18 fill:#4fc3f7/0.9 stroke:#4fc3f7/1.0 strokeWidth:1.5 at:(-3.2,1.9)] -> fadeIn(0.5s, 0.6s) ~> circle[r:0.18 fill:#ffd54f/0.9 stroke:#ffd54f/1.0 strokeWidth:1.5 at:(-3.2,1.9)] (0.3s, ease.out, 0.9s) ~> circle[r:0.18 fill:#4fc3f7/0.9 stroke:#4fc3f7/1.0 strokeWidth:1.5 at:(-3.2,1.35)] (0.5s, ease.inOut, 2.8s) ~> circle[r:0.18 fill:#4fc3f7/0.9 stroke:#4fc3f7/1.0 strokeWidth:1.5 at:(-3.2,0.8)] (0.5s, ease.inOut, 3.5s) ~> circle[r:0.18 fill:#ffd54f/0.9 stroke:#ffd54f/1.0 strokeWidth:1.5 at:(-3.2,0.25)] (1.2s, ease.inOut, 4.5s) ~> circle[r:0.18 fill:#ffd54f/0.9 stroke:#ffd54f/1.0 strokeWidth:1.5 at:(-3.2,-0.3)] (2.0s, ease.inOut, 5.9s)
+
+      latency_label:
+        type: morph
+        shape: text[text:"0.3 ns" fontSize:14 fill:#4fc3f7/0 at:(-1.65,1.9)] ~> text[text:"0.3 ns" fontSize:14 fill:#4fc3f7/0.85 at:(-1.65,1.9)] (0.3s, ease.out, 1.0s) ~> text[text:"1 ns" fontSize:14 fill:#4fc3f7/0.85 at:(-1.65,1.35)] (0.4s, ease.out, 2.9s) ~> text[text:"50 ns" fontSize:14 fill:#4fc3f7/0.85 at:(-1.65,0.8)] (0.4s, ease.out, 3.6s) ~> text[text:"10,000,000 ns" fontSize:13 fill:#ffd54f/0.9 at:(-1.65,0.25)] (0.4s, ease.out, 5.2s) ~> text[text:"150,000,000 ns" fontSize:13 fill:#ffd54f/0.9 at:(-1.65,-0.3)] (0.4s, ease.out, 6.2s)
+
+      left_pt1:
+        type: primitive
+        shape: text[text:"speed ↑ capacity ↓" fontSize:16 fill:#ffffff/0.82 at:(-4.1,-2.1)] -> fadeIn(0.4s, 1.2s)
+
+      left_pt2:
+        type: primitive
+        shape: text[text:"lower tier = slower" fontSize:16 fill:#ffffff/0.82 at:(-4.1,-2.65)] -> fadeIn(0.4s, 3.2s)
+
+      left_pt3:
+        type: primitive
+        shape: text[text:"fast data = fast app" fontSize:16 fill:#ffffff/0.82 at:(-4.1,-3.2)] -> fadeIn(0.4s, 5.0s)
+
+      right_title:
+        type: morph
+        shape: text[text:"FACT 12 — STACK & HEAP" fontSize:22 fill:#ffffff/0 at:(3.8,3.8)] ~> text[text:"FACT 12 — STACK & HEAP" fontSize:22 fill:#ffffff/0.8 at:(3.8,3.8)] (0.5s, ease.out, 10.3s)
+
+      stack_box:
+        type: morph
+        shape: rectangle[w:1.5 h:2.5 fill:#4fc3f7/0 stroke:#4fc3f7/0 strokeWidth:1.5 at:(2.0,0.5)] ~> rectangle[w:1.5 h:2.5 fill:#4fc3f7/0.2 stroke:#4fc3f7/0.55 strokeWidth:1.5 at:(2.0,0.5)] (0.5s, ease.out, 10.5s)
+
+      lbl_stack:
+        type: morph
+        shape: text[text:"Stack" fontSize:14 fill:#ffffff/0 at:(2.0,1.6)] ~> text[text:"Stack" fontSize:14 fill:#ffffff/0.88 at:(2.0,1.6)] (0.4s, ease.out, 10.8s)
+
+      stack_frame1:
+        type: morph
+        shape: rectangle[w:1.2 h:0.35 fill:#4fc3f7/0 stroke:#4fc3f7/0 strokeWidth:1 at:(2.0,1.2)] ~> rectangle[w:1.2 h:0.35 fill:#4fc3f7/0.45 stroke:#4fc3f7/0.7 strokeWidth:1.2 at:(2.0,1.2)] (0.35s, ease.out, 11.0s) ~> rectangle[w:1.2 h:0.35 fill:#4fc3f7/0 stroke:#4fc3f7/0 strokeWidth:1 at:(2.0,1.2)] (0.4s, ease.out, 12.2s)
+
+      stack_frame2:
+        type: morph
+        shape: rectangle[w:1.2 h:0.35 fill:#4fc3f7/0 stroke:#4fc3f7/0 strokeWidth:1 at:(2.0,0.75)] ~> rectangle[w:1.2 h:0.35 fill:#4fc3f7/0.45 stroke:#4fc3f7/0.7 strokeWidth:1.2 at:(2.0,0.75)] (0.35s, ease.out, 11.3s) ~> rectangle[w:1.2 h:0.35 fill:#4fc3f7/0 stroke:#4fc3f7/0 strokeWidth:1 at:(2.0,0.75)] (0.4s, ease.out, 12.5s)
+
+      stack_frame3:
+        type: morph
+        shape: rectangle[w:1.2 h:0.35 fill:#4fc3f7/0 stroke:#4fc3f7/0 strokeWidth:1 at:(2.0,0.3)] ~> rectangle[w:1.2 h:0.35 fill:#4fc3f7/0.45 stroke:#4fc3f7/0.7 strokeWidth:1.2 at:(2.0,0.3)] (0.35s, ease.out, 13.0s) ~> rectangle[w:1.2 h:0.35 fill:#4fc3f7/0 stroke:#4fc3f7/0 strokeWidth:1 at:(2.0,0.3)] (0.4s, ease.out, 14.5s)
+
+      heap_box:
+        type: morph
+        shape: rectangle[w:2.2 h:2.5 fill:#c77aff/0 stroke:#c77aff/0 strokeWidth:1.5 at:(4.5,0.5)] ~> rectangle[w:2.2 h:2.5 fill:#c77aff/0.2 stroke:#c77aff/0.5 strokeWidth:1.5 at:(4.5,0.5)] (0.5s, ease.out, 10.7s)
+
+      lbl_heap:
+        type: morph
+        shape: text[text:"Heap" fontSize:14 fill:#ffffff/0 at:(4.5,1.6)] ~> text[text:"Heap" fontSize:14 fill:#ffffff/0.88 at:(4.5,1.6)] (0.4s, ease.out, 11.0s)
+
+      heap_alloc1:
+        type: morph
+        shape: rectangle[w:0.4 h:0.35 fill:#4fc3f7/0 stroke:#4fc3f7/0 strokeWidth:1 at:(4.2,1.2)] ~> rectangle[w:0.4 h:0.35 fill:#4fc3f7/0.5 stroke:#4fc3f7/0.75 strokeWidth:1.2 at:(4.2,1.2)] (0.35s, ease.out, 12.1s) ~> rectangle[w:0.4 h:0.35 fill:#ff6b9d/0.5 stroke:#ff6b9d/0.75 strokeWidth:1.2 at:(4.2,1.2)] (0.4s, ease.out, 13.8s)
+
+      heap_alloc2:
+        type: morph
+        shape: rectangle[w:0.4 h:0.35 fill:#4fc3f7/0 stroke:#4fc3f7/0 strokeWidth:1 at:(4.7,1.2)] ~> rectangle[w:0.4 h:0.35 fill:#4fc3f7/0.5 stroke:#4fc3f7/0.75 strokeWidth:1.2 at:(4.7,1.2)] (0.35s, ease.out, 12.4s) ~> rectangle[w:0.4 h:0.35 fill:#ff6b9d/0.5 stroke:#ff6b9d/0.75 strokeWidth:1.2 at:(4.7,1.2)] (0.4s, ease.out, 14.1s)
+
+      heap_alloc3:
+        type: morph
+        shape: rectangle[w:0.4 h:0.35 fill:#4fc3f7/0 stroke:#4fc3f7/0 strokeWidth:1 at:(4.2,0.75)] ~> rectangle[w:0.4 h:0.35 fill:#ff6b9d/0.5 stroke:#ff6b9d/0.75 strokeWidth:1.2 at:(4.2,0.75)] (0.4s, ease.out, 14.5s)
+
+      heap_alloc4:
+        type: morph
+        shape: rectangle[w:0.4 h:0.35 fill:#4fc3f7/0 stroke:#4fc3f7/0 strokeWidth:1 at:(4.7,0.75)] ~> rectangle[w:0.4 h:0.35 fill:#ff6b9d/0.5 stroke:#ff6b9d/0.75 strokeWidth:1.2 at:(4.7,0.75)] (0.4s, ease.out, 14.8s)
+
+      pointer_arrow:
+        type: morph
+        shape: line[from:(2.0,0.3) to:(2.0,0.3) stroke:#4fc3f7/0 strokeWidth:1.5] ~> line[from:(2.0,0.3) to:(4.2,1.2) stroke:#4fc3f7/0.6 strokeWidth:1.5] (0.4s, ease.out, 12.2s) ~> line[from:(2.0,0.3) to:(4.2,1.2) stroke:#4fc3f7/0 strokeWidth:1] (0.4s, ease.out, 13.5s)
+
+      lbl_leak:
+        type: morph
+        shape: text[text:"LEAK" fontSize:22 fill:#ff6b9d/0 at:(4.5,0.1)] ~> text[text:"LEAK" fontSize:22 fill:#ff6b9d/0.9 at:(4.5,0.1)] (0.5s, ease.out, 15.5s)
+
+      right_pt1:
+        type: morph
+        shape: text[text:"stack = auto lifo" fontSize:16 fill:#ffffff/0 at:(3.3,-2.1)] ~> text[text:"stack = auto lifo" fontSize:16 fill:#ffffff/0.82 at:(3.3,-2.1)] (0.4s, ease.out, 11.5s)
+
+      right_pt2:
+        type: morph
+        shape: text[text:"heap = dynamic alloc" fontSize:16 fill:#ffffff/0 at:(3.3,-2.65)] ~> text[text:"heap = dynamic alloc" fontSize:16 fill:#ffffff/0.82 at:(3.3,-2.65)] (0.4s, ease.out, 12.5s)
+
+      right_pt3:
+        type: morph
+        shape: text[text:"alloc - free = leak" fontSize:16 fill:#ffffff/0 at:(3.3,-3.2)] ~> text[text:"alloc - free = leak" fontSize:16 fill:#ffffff/0.82 at:(3.3,-3.2)] (0.4s, ease.out, 14.2s)
+
+      cinematic:
+        type: morph
+        shape: text[text:"LATENCY" fontSize:64 fill:#ffd54f/0 at:(-3.2,0.5)] ~> text[text:"LATENCY" fontSize:64 fill:#ffd54f/0.9 at:(-3.2,0.5)] (1.2s, ease.out, 30.0s) ~> text[text:"LATENCY" fontSize:64 fill:#ffd54f/0.9 at:(-3.2,0.5)] (2.5s, ease.inOut, 31.2s) ~> text[text:"LATENCY" fontSize:18 fill:#ffd54f/0.3 at:(-3.2,0.5)] (1.5s, ease.inOut, 33.8s)
+
+      lbl_1:
+        type: primitive
+        shape: text[text:"SRAM" fontSize:13 fill:#ffffff/0.3 at:(-4.5,-3.2)] -> fadeIn(0.6s, 35.2s)
+
+      lbl_2:
+        type: primitive
+        shape: text[text:"malloc/free" fontSize:13 fill:#ffffff/0.3 at:(0,-3.2)] -> fadeIn(0.6s, 35.6s)
+
+      lbl_3:
+        type: primitive
+        shape: text[text:"Dangling Pointer" fontSize:13 fill:#ffffff/0.3 at:(4.5,-3.2)] -> fadeIn(0.6s, 36.0s)

@@ -1,0 +1,689 @@
+concept: "Generative AI: Diffusion Models"
+emoji: "🌌"
+total_duration: 98
+background: "#0a0a0a"
+
+subtitles:
+  - ""
+  - ""
+  - ""
+  - ""
+  - ""
+  - ""
+  - ""
+  - ""
+  - ""
+
+phases:
+  scene_1:
+    duration: 9
+    description: "Chaos vs coherence - astronaut image vs total noise"
+    elements:
+      coherent_image:
+        type: matrix
+        position: [-180, 120]
+        values: [["█","█","░"],["█","░","█"],["░","█","█"]]
+        highlightCells: []
+        cellSize: 35
+        textSize: 16
+        color: "#3498db"
+        label: "Coherent"
+        
+      noise_matrix:
+        type: matrix
+        position: [130, 120]
+        values: [["·","█","·"],["·","·","█"],["█","·","·"]]
+        highlightCells: []
+        cellSize: 35
+        textSize: 16
+        color: "#95a5a6"
+        label: "Noise"
+        
+      mapping_connector:
+        type: relationship_connector
+        from: [-100, 0]
+        to: [145, 0]
+        relationship_type: "transformation"
+        strength: 0.7
+        color: "#f39c12"
+        animated: true
+        bidirectional: false
+        label: "Corruption"
+        
+      title_text:
+        type: text
+        text: "Left: Coherent → Right: Pure Noise"
+        position: [0, -100]
+        size: 16
+        color: "#ffffff"
+        glow: true
+        font: "Arial"
+        
+      content_text:
+        type: text
+        text: "Matrix: 256x256 grayscale values → Bernoulli(0.5) random pixels"
+        position: [0, -180]
+        size: 14
+        color: "#95a5a6"
+        glow: false
+        font: "Arial"
+        
+  scene_2:
+    duration: 7
+    description: "AI starts with noise, removes instead of adds"
+    elements:
+      brain_emoji:
+        type: animated_emoji
+        emoji: "🧠"
+        position: [-100, 20]
+        size: 90
+        movement: "wobble"
+        glowing: "pulsing-glow"
+        rotation: "gentle-rotate"
+        reveal: "zoom-reveal"
+        speed: "slow"
+        delay: "none"
+        color: "#e74c3c"
+        
+      equation_emoji:
+        type: animated_emoji
+        emoji: "xₜ=xₜ₋₁+ε?"
+        position: [0, -50]
+        size: 35
+        movement: "orbit"
+        glowing: "matrix-code"
+        rotation: "none"
+        speed: "normal"
+        delay: "delay-1"
+        color: "#f39c12"
+        
+      sparkle_emoji:
+        type: animated_emoji
+        emoji: "✨"
+        position: [100, 20]
+        size: 70
+        movement: "floating-pen"
+        glowing: "pulsing-glow"
+        rotation: "none"
+        reveal: "slide-reveal"
+        speed: "normal"
+        delay: "delay-2"
+        color: "#f1c40f"
+        
+      detective_text:
+        type: text
+        text: "Creation begins by knowing what to remove"
+        position: [0, 200]
+        size: 16
+        color: "#ffffff"
+        glow: true
+        font: "Arial"
+        
+  scene_3:
+    duration: 8
+    description: "AI learns corruption of images through noise addition"
+    elements:
+      corruption_function:
+        type: mathematical_entity
+        position: [0, -60]
+        form: "function"
+        personality: "sharp"
+        size: 80
+        color: "#e74c3c"
+        glow: true
+        energy: 0.8
+        animation_pattern: "pulse"
+        label: "f(x)=x+ε"
+        
+      original_point:
+        type: mathematical_entity
+        position: [-100, 50]
+        form: "point"
+        personality: "elegant"
+        size: 25
+        color: "#3498db"
+        glow: true
+        energy: 0.7
+        animation_pattern: "pulse"
+        label: "x"
+        
+      noise_point:
+        type: mathematical_entity
+        position: [0, 80]
+        form: "point"
+        personality: "playful"
+        size: 20
+        color: "#95a5a6"
+        glow: true
+        energy: 0.6
+        animation_pattern: "bounce"
+        label: "ε~N(0,σ²)"
+        
+      corrupted_point:
+        type: mathematical_entity
+        position: [100, 50]
+        form: "point"
+        personality: "sharp"
+        size: 25
+        color: "#f39c12"
+        glow: true
+        energy: 0.8
+        animation_pattern: "pulse"
+        label: "x+ε"
+        
+      increment_connector:
+        type: relationship_connector
+        from: [-100, 50]
+        to: [100, 50]
+        relationship_type: "transformation"
+        strength: 0.9
+        color: "#f39c12"
+        animated: true
+        bidirectional: false
+        label: "x→x+ε"
+        
+      process_text:
+        type: text
+        text: "Step-by-step corruption teaches the model"
+        position: [0, -200]
+        size: 16
+        color: "#ffffff"
+        glow: true
+        font: "Arial"
+        
+      formula_text:
+        type: text
+        text: "f₀(x)=original → f₁(x)=f₀+ε₁ → ... → fₙ(x)=pure noise"
+        position: [0, 180]
+        size: 14
+        color: "#95a5a6"
+        glow: false
+        font: "Arial"
+        
+  scene_4:
+    duration: 9
+    description: "Predicting noise for erasure - the invisible variable"
+    elements:
+      uncertainty_cloud:
+        type: mathematical_entity
+        position: [0, -30]
+        form: "cloud"
+        personality: "mysterious"
+        size: 80
+        color: "#9b59b6"
+        glow: true
+        energy: 0.8
+        animation_pattern: "breathe"
+        label: "Pixel Uncertainty"
+        
+      noise_vector:
+        type: mathematical_entity
+        position: [0, 80]
+        form: "vector"
+        personality: "sharp"
+        size: 70
+        color: "#e74c3c"
+        glow: true
+        energy: 0.9
+        animation_pattern: "pulse"
+        label: "v=[ε₁,ε₂,...,εₙ]"
+        vector_components: [3, 2]
+        show_components: true
+        show_magnitude: true
+        vector_style: "force"
+        component_style: "elegant"
+        
+      prediction_connector:
+        type: relationship_connector
+        from: [0, -30]
+        to: [0, 80]
+        relationship_type: "dependency"
+        strength: 0.95
+        color: "#f39c12"
+        animated: true
+        bidirectional: false
+        label: "AI Predicts εₜ"
+        
+      learning_text:
+        type: text
+        text: "Learn which pixel change was added last"
+        position: [0, -200]
+        size: 16
+        color: "#ffffff"
+        glow: true
+        font: "Arial"
+        
+      formula_text:
+        type: text
+        text: "v_pred = argmin ||xₜ - xₜ₋₁ - ε_pred||²"
+        position: [0, 180]
+        size: 14
+        color: "#f39c12"
+        glow: true
+        font: "Arial"
+        
+  scene_5:
+    duration: 7
+    description: "Detective octopus explains subtractive creation wisdom"
+    elements:
+      detective_wisdom:
+        type: wisdom_character
+        character_type: detective_octopus
+        position: [0, 0]
+        size: 140
+        mood: "thinking"
+        expression: "normal"
+        talking: true
+        breathing: true
+        color_scheme: "ocean"
+        personality: "calm"
+        speech_bubble: true
+        speech_text: "True creation is knowing what to leave out, not what to put in."
+        background_aura: "glow"
+        
+  scene_6:
+    duration: 8
+    description: "Temporal inversion in diffusion - reversing time's arrow"
+    elements:
+      corruption_wave:
+        type: mathematical_entity
+        position: [0, 0]
+        form: "wave"
+        personality: "elegant"
+        size: 120
+        color: "#3498db"
+        glow: true
+        energy: 0.8
+        animation_pattern: "wave"
+        label: "Corruption over t"
+        
+      time_axis:
+        type: line
+        from: [-150, 140]
+        to: [150, 140]
+        thickness: 3
+        dashed: false
+        color: "#95a5a6"
+        opacity: 0.8
+        label: "t: 0(noise)→T(image)"
+        
+      denoising_connector:
+        type: relationship_connector
+        from: [150, 100]
+        to: [-150, 100]
+        relationship_type: "transformation"
+        strength: 0.9
+        color: "#2ecc71"
+        animated: true
+        bidirectional: false
+        label: "xₜ₋₁=xₜ-ε_pred"
+        
+      backward_text:
+        type: text
+        text: "Stepwise denoising = backward simulation"
+        position: [0, -200]
+        size: 16
+        color: "#ffffff"
+        glow: true
+        font: "Arial"
+        
+      formula_text:
+        type: text
+        text: "xₜ₋₁ = xₜ - ε_predₜ"
+        position: [0, 180]
+        size: 16
+        color: "#2ecc71"
+        glow: true
+        font: "Arial"
+        
+  scene_7:
+    duration: 8
+    description: "Waterfall of pixel noise removal with water bar chart"
+    elements:
+      pixel_chart:
+        type: water_bar_chart
+        data: [255, 180, 220, 200, 165, 140, 190, 210, 175, 155, 145, 195, 185, 160, 150, 170]
+        position: [0, 30]
+        width: 450
+        height: 140
+        water_color: "#3498db"
+        wave_intensity: 1.3
+        
+      residual_noise_1:
+        type: mathematical_entity
+        position: [-140, -50]
+        form: "point"
+        personality: "playful"
+        size: 15
+        color: "#f39c12"
+        glow: true
+        energy: 0.7
+        animation_pattern: "bounce"
+        label: "ε₁"
+        
+      residual_noise_2:
+        type: mathematical_entity
+        position: [-60, -40]
+        form: "point"
+        personality: "playful"
+        size: 15
+        color: "#f39c12"
+        glow: true
+        energy: 0.7
+        animation_pattern: "bounce"
+        label: "ε₂"
+        
+      residual_noise_3:
+        type: mathematical_entity
+        position: [20, -45]
+        form: "point"
+        personality: "playful"
+        size: 15
+        color: "#f39c12"
+        glow: true
+        energy: 0.7
+        animation_pattern: "bounce"
+        label: "ε₃"
+        
+      removal_text:
+        type: text
+        text: "Subtracting noise, one pixel at a time"
+        position: [0, -200]
+        size: 16
+        color: "#ffffff"
+        glow: true
+        font: "Arial"
+        
+      intensity_text:
+        type: text
+        text: "Pixel intensity array: [255,180,60,200...] → decremented per step"
+        position: [0, 180]
+        size: 13
+        color: "#3498db"
+        glow: false
+        font: "Arial"
+        
+  scene_8:
+    duration: 8
+    description: "Emergence through denoising - vertical line from random matrix"
+    elements:
+      initial_matrix:
+        type: matrix
+        position: [-180, 100]
+        values: [["1","0","1","0"],["0","1","0","1"],["1","0","1","0"],["0","1","0","1"]]
+        highlightCells: []
+        cellSize: 30
+        textSize: 11
+        color: "#95a5a6"
+        label: "Step 1: Random"
+        
+      target_matrix:
+        type: matrix
+        position: [100, 100]
+        values: [["0","1","0","0"],["0","1","0","0"],["0","1","0","0"],["0","1","0","0"]]
+        highlightCells: [[0,1],[1,1],[2,1],[3,1]]
+        cellSize: 30
+        textSize: 11
+        color: "#2ecc71"
+        label: "Step 10: Line"
+        
+      evolution_connector:
+        type: relationship_connector
+        from: [-90, 0]
+        to: [90, 0]
+        relationship_type: "transformation"
+        strength: 1.0
+        color: "#f39c12"
+        animated: true
+        bidirectional: false
+        label: "Predicted Removal"
+        
+      emergence_text:
+        type: text
+        text: "Perfect shape emerges from subtraction only"
+        position: [0, -200]
+        size: 16
+        color: "#ffffff"
+        glow: true
+        font: "Arial"
+        
+      evolution_text:
+        type: text
+        text: "Matrix evolution: step₁ → step₁₀ → vertical line"
+        position: [0, 220]
+        size: 14
+        color: "#2ecc71"
+        glow: false
+        font: "Arial"
+        
+  scene_9:
+    duration: 7
+    description: "AI masters erasure, not recognition"
+    elements:
+      broom_emoji:
+        type: animated_emoji
+        emoji: "🧹"
+        position: [-80, 30]
+        size: 80
+        movement: "slide-horizontal"
+        glowing: "pulsing-glow"
+        rotation: "none"
+        reveal: "slide-reveal"
+        speed: "normal"
+        delay: "none"
+        color: "#9b59b6"
+        
+      subtraction_equation:
+        type: animated_emoji
+        emoji: "x_clean=x_noisy−ε_pred"
+        position: [70, -30]
+        size: 35
+        movement: "floating-pen"
+        glowing: "matrix-code"
+        rotation: "none"
+        reveal: "slide-reveal"
+        speed: "normal"
+        delay: "delay-1"
+        color: "#2ecc71"
+        
+      detective_text:
+        type: text
+        text: "The model never memorizes the horse—just removes the impossible"
+        position: [0, 200]
+        size: 15
+        color: "#ffffff"
+        glow: true
+        font: "Arial"
+        
+  scene_10:
+    duration: 9
+    description: "Diffusion principle mathematically - clarity from chaos"
+    elements:
+      noise_matrix_left:
+        type: matrix
+        position: [-140, 0]
+        values: [["·","█","·"],["█","·","█"],["·","█","·"]]
+        highlightCells: []
+        cellSize: 35
+        textSize: 14
+        color: "#95a5a6"
+        label: "Noise"
+        
+      denoised_matrix_right:
+        type: matrix
+        position: [140, 0]
+        values: [["█","█","█"],["█","█","█"],["█","█","█"]]
+        highlightCells: []
+        cellSize: 35
+        textSize: 14
+        color: "#2ecc71"
+        label: "Denoised"
+        
+      inverse_function:
+        type: mathematical_entity
+        position: [0, -80]
+        form: "function"
+        personality: "wise"
+        size: 70
+        color: "#9b59b6"
+        glow: true
+        energy: 0.9
+        animation_pattern: "pulse"
+        label: "f⁻¹(x)=x-ε_pred"
+        
+      difference_connector:
+        type: relationship_connector
+        from: [-105, 0]
+        to: [105, 0]
+        relationship_type: "transformation"
+        strength: 1.0
+        color: "#f39c12"
+        animated: true
+        bidirectional: false
+        label: "|x-f⁻¹(x)|"
+        
+      principle_text:
+        type: text
+        text: "Order emerges through iterative subtraction"
+        position: [0, -200]
+        size: 16
+        color: "#ffffff"
+        glow: true
+        font: "Arial"
+        
+      formula_text:
+        type: text
+        text: "x_final = x_noise - Σ(ε_pred)"
+        position: [0, 180]
+        size: 16
+        color: "#2ecc71"
+        glow: true
+        font: "Arial"
+        
+  scene_11:
+    duration: 8
+    description: "Subtraction across systems - broader impact"
+    elements:
+      system_distribution:
+        type: mathematical_entity
+        position: [0, -40]
+        form: "distribution"
+        personality: "sharp"
+        size: 110
+        color: "#9b59b6"
+        glow: true
+        energy: 0.8
+        animation_pattern: "breathe"
+        label: "System Noise"
+        
+      signal_vector:
+        type: mathematical_entity
+        position: [-100, 60]
+        form: "vector"
+        personality: "sharp"
+        size: 60
+        color: "#3498db"
+        glow: true
+        energy: 0.8
+        animation_pattern: "pulse"
+        label: "Signal"
+        vector_components: [2, 3]
+        show_components: true
+        show_magnitude: true
+        vector_style: "standard"
+        component_style: "elegant"
+        
+      correction_connector:
+        type: relationship_connector
+        from: [-100, 60]
+        to: [100, 60]
+        relationship_type: "transformation"
+        strength: 0.9
+        color: "#f39c12"
+        animated: true
+        bidirectional: false
+        label: "Error Subtraction"
+        
+      universal_text:
+        type: text
+        text: "Clarity emerges everywhere by removing what doesn't belong"
+        position: [0, -200]
+        size: 16
+        color: "#ffffff"
+        glow: true
+        font: "Arial"
+        
+      function_text:
+        type: text
+        text: "f_system⁻¹(signal) = signal - noise_pred"
+        position: [0, 180]
+        size: 14
+        color: "#9b59b6"
+        glow: false
+        font: "Arial"
+        
+  scene_12:
+    duration: 10
+    description: "Final denoised image - from noise to astronaut on horse"
+    elements:
+      noise_start:
+        type: matrix
+        position: [-200, 50]
+        values: [["·","█","·","█"],["█","·","█","·"],["·","█","·","█"],["█","·","█","·"]]
+        highlightCells: []
+        cellSize: 28
+        textSize: 12
+        color: "#95a5a6"
+        label: "Noise Matrix"
+        
+      final_image:
+        type: matrix
+        position: [100, 50]
+        values: [["█","█","█","█"],["█","░","░","█"],["█","░","░","█"],["█","█","█","█"]]
+        highlightCells: []
+        cellSize: 28
+        textSize: 12
+        color: "#2ecc71"
+        label: "Astronaut"
+        glow: true
+        
+      uncertainty_cloud:
+        type: mathematical_entity
+        position: [0, -90]
+        form: "cloud"
+        personality: "mysterious"
+        size: 90
+        color: "#9b59b6"
+        glow: true
+        energy: 0.3
+        animation_pattern: "breathe"
+        label: "Uncertainty→0"
+        
+      subtraction_flow:
+        type: relationship_connector
+        from: [-120, 0]
+        to: [120, 0]
+        relationship_type: "transformation"
+        strength: 1.0
+        color: "#f39c12"
+        animated: true
+        bidirectional: false
+        label: "Σ Subtractions"
+        
+      closure_text:
+        type: text
+        text: "From infinite possibilities to a single, inevitable result"
+        position: [0, -210]
+        size: 17
+        color: "#ffffff"
+        glow: true
+        font: "Arial"
+        
+      final_formula:
+        type: text
+        text: "Final output = pristine image; sequence of subtractions explains emergence"
+        position: [0, 190]
+        size: 13
+        color: "#2ecc71"
+        glow: false
+        font: "Arial"

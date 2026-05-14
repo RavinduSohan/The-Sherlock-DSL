@@ -1,0 +1,66 @@
+# Morphing Test - Shape Transformations
+concept: "Morphing Primitives"
+emoji: "🔄"
+total_duration: 12
+background: "#0a0e1a"
+
+subtitles:
+  - "🔄 Morphing System"
+  - "Watch shapes transform"
+
+phases:
+  morph_basic:
+    duration: 4
+    description: "Basic morphing"
+    elements:
+      title:
+        type: primitive
+        shape: text[text:"Circle → Square" fontSize:24 fill:#58a6ff at:(0,3)]
+
+      morph1:
+        type: morph
+        shape: circle[r:1 fill:#ff6b6b at:(-3,0)] ~> square[w:2 fill:#4ecdc4 at:(-3,0)] (3s, ease.inOut)
+
+      morph2:
+        type: morph
+        shape: square[w:1.5 fill:#95e1d3 at:(0,0)] ~> circle[r:1.2 fill:#f38181 at:(0,0)] (3s, ease.inOut)
+
+      morph3:
+        type: morph
+        shape: triangle[size:1.5 fill:#aa96da at:(3,0)] ~> star[points:5 outerRadius:1 fill:#f1c40f at:(3,0)] (3s, ease.inOut)
+
+  morph_multiple:
+    duration: 4
+    description: "Multiple morphs"
+    elements:
+      title:
+        type: primitive
+        shape: text[text:"Complex Morphs" fontSize:24 fill:#58a6ff at:(0,3)]
+
+      morph_chain1:
+        type: morph
+        shape: circle[r:0.8 fill:#e74c3c at:(-4,1)] ~> square[w:1.6 fill:#3498db at:(-2,1)] (2s)
+
+      morph_chain2:
+        type: morph
+        shape: star[points:5 outerRadius:0.8 fill:#2ecc71 at:(-4,-1)] ~> ellipse[w:1.6 h:1 fill:#9b59b6 at:(-2,-1)] (2s)
+
+      morph_chain3:
+        type: morph
+        shape: triangle[size:1 fill:#f39c12 at:(2,1)] ~> circle[r:0.8 fill:#1abc9c at:(4,1)] (2s)
+
+  morph_with_movement:
+    duration: 4
+    description: "Morph + position change"
+    elements:
+      title:
+        type: primitive
+        shape: text[text:"Morph + Move" fontSize:24 fill:#58a6ff at:(0,3)]
+
+      moving_morph1:
+        type: morph
+        shape: circle[r:0.6 fill:#e67e22/0.8 at:(-4,0)] ~> square[w:1.2 fill:#16a085/0.8 at:(4,0)] (3s, ease.inOut)
+
+      moving_morph2:
+        type: morph
+        shape: star[points:6 outerRadius:0.7 fill:#d35400 at:(4,-2)] ~> triangle[size:1.4 fill:#27ae60 at:(-4,-2)] (3s, ease.inOut)

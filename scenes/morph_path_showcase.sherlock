@@ -1,0 +1,112 @@
+concept: "🎨 MorphEntity Path Showcase"
+emoji: "🌊"
+total_duration: 35
+background: "#0a0a1a"
+
+subtitles:
+  - "Arc Path"
+  - "Pendulum Swing"
+  - "Spring Oscillation"
+  - "Waypoints"
+
+phases:
+  arc_demo:
+    duration: 7
+    description: "Arc Path Demo"
+    elements:
+      arc_circle:
+        type: morph_entity
+        form: circle
+        position: [-200, -100]
+        size: 40
+        color: "#FF6B9D"
+        glow: true
+        energy: 0.8
+        motion_profile: fluid_organic
+        label: "Arc"
+        move_to: [200, -100]
+        move_path: arc
+        move_duration: 6
+        move_style: ease_in_out
+
+  pendulum_demo:
+    duration: 7
+    description: "Pendulum Path Demo"
+    elements:
+      pendulum_square:
+        type: morph_entity
+        form: square
+        position: [-200, 0]
+        size: 40
+        color: "#4ECDC4"
+        glow: true
+        energy: 0.7
+        motion_profile: kinetic_dynamic
+        label: "Pendulum"
+        move_to: [200, 0]
+        move_path: pendulum
+        move_duration: 6
+        move_style: ease_in_out
+
+  spring_demo:
+    duration: 7
+    description: "Spring Path Demo"
+    elements:
+      spring_triangle:
+        type: morph_entity
+        form: triangle
+        position: [-200, 100]
+        size: 40
+        color: "#FFE66D"
+        glow: true
+        energy: 0.9
+        motion_profile: high_energy
+        label: "Spring"
+        move_to: [200, 100]
+        move_path: spring
+        move_duration: 6
+        move_style: ease_in_out
+
+  waypoints_demo:
+    duration: 14
+    description: "Waypoints - Multiple Stops"
+    elements:
+      waypoint_star:
+        type: morph_entity
+        form: star
+        position: [-250, -150]
+        size: 50
+        color: "#A8E6CF"
+        glow: true
+        energy: 0.85
+        motion_profile: fluid_organic
+        label: "Waypoints"
+        waypoints:
+          - [0, -150]
+          - [250, -150]
+          - [250, 150]
+          - [-250, 150]
+        move_duration: 12
+        move_style: ease_in_out
+        rotate_to: 720
+        rotate_duration: 12
+        rotate_style: ease_in_out
+      
+      arc_morph_hex:
+        type: morph_entity
+        form: hexagon
+        position: [-200, 0]
+        size: 45
+        color: "#FF6B9D"
+        glow: true
+        energy: 0.75
+        motion_profile: kinetic_dynamic
+        label: "Arc+Morph"
+        move_to: [200, 0]
+        move_path: arc
+        move_duration: 10
+        move_style: elastic_bounce
+        morph_to: circle
+        morph_at: 5
+        morph_duration: 2
+        morph_style: fluid_transition

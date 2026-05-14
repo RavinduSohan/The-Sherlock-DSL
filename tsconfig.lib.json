@@ -1,0 +1,29 @@
+{
+  "extends": "./tsconfig.json",
+  "compilerOptions": {
+    "module": "commonjs",
+    "target": "ES2020",
+    "lib": ["ES2020", "DOM", "DOM.Iterable"],
+    "outDir": "./lib/core",
+    "rootDir": "./lib/core",
+    "declaration": true,
+    "declarationMap": true,
+    "sourceMap": true,
+    "esModuleInterop": true,
+    "allowSyntheticDefaultImports": true,
+    "skipLibCheck": true,
+    "strict": false,
+    "moduleResolution": "node",
+    "resolveJsonModule": true,
+    "jsx": "preserve"
+  },
+  "include": [
+    "lib/core/**/*.ts"
+  ],
+  "exclude": [
+    "node_modules",
+    "lib/core/**/*.d.ts",
+    "app",
+    "components"
+  ]
+}

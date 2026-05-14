@@ -1,0 +1,1185 @@
+concept: "Matrix Multiplication - The Hidden Meaning"
+emoji: "📐"
+total_duration: 180
+background: "#0a0e1a"
+
+subtitles:
+  - ""
+  - ""
+  - ""
+  - ""
+  - ""
+  - ""
+  - ""
+
+phases:
+  paper_riddle:
+    duration: 8
+    description: "The Paper Transform Riddle - Hook with mystery"
+    elements:
+      title_text:
+        type: text
+        text: "📄 The Paper Transform Riddle"
+        position: [0, 220]
+        color: "#f1c40f"
+        size: 28
+        font: "Georgia"
+        glow: true
+
+      mystery_paper:
+        type: rectangle
+        position: [0, 0]
+        width: 100
+        height: 80
+        color: "#f8f9fa"
+        fill: true
+        strokeColor: "#2c3e50"
+        strokeWidth: 3
+        glow: true
+        label: "Paper"
+
+      perspective_grid:
+        type: grid
+        style: "perspective"
+        spacing: 20
+        density: 1.2
+        color: "#3498db"
+        opacity: 0.3
+        glow: true
+        perspective_depth: 0.8
+
+      explanation_text:
+        type: text
+        text: "First rotate it... Then stretch it...\nBut can you describe BOTH moves\nwith just ONE operation?"
+        position: [0, -180]
+        color: "#d4af37"
+        size: 18
+        font: "Cinzel Decorative"
+
+      mystery_sparkles:
+        type: sparkles
+        count: 15
+        intensity: 1.0
+        color: "#f1c40f"
+
+      celebration_fireworks:
+        type: fireworks
+        intensity: 0.8
+        colors: ["#e74c3c", "#9b59b6", "#f39c12"]
+
+      star_background:
+        type: star_field
+        density: 0.4
+
+  matrix_machine:
+    duration: 10
+    description: "Matrix as a Space Machine - Industrial transformation"
+    elements:
+      title_text:
+        type: text
+        text: "🏭 Matrix as a Space Machine"
+        position: [0, 220]
+        color: "#e74c3c"
+        size: 26
+        font: "Georgia"
+        glow: true
+
+      transformation_network:
+        type: neural_net
+        layers: [2, 4, 2]
+        colors: ["#3498db", "#e74c3c", "#f39c12"]
+        animation_speed: 0.8
+
+      machine_grid:
+        type: grid
+        spacing: 25
+        density: 1.0
+        color: "#95a5a6"
+        opacity: 0.4
+
+      explanation_text:
+        type: text
+        text: "A matrix is really a MACHINE.\nYou feed in a vector → it spits out a new one.\nThink of it like a function, but for space itself."
+        position: [0, -180]
+        color: "#d4af37"
+        size: 18
+        font: "Cinzel Decorative"
+
+      input_vector:
+        type: vector
+        from: [-200, 0]
+        to: [-150, 50]
+        color: "#27ae60"
+        width: 4
+        glow: true
+        label: "Input"
+
+      output_vector:
+        type: vector
+        from: [150, 0]
+        to: [200, 80]
+        color: "#e74c3c"
+        width: 4
+        glow: true
+        label: "Output"
+
+      flowing_waves:
+        type: waves
+        layers: 2
+        opacity: 0.2
+        speed: 0.3
+
+  matrix_a_horizontal:
+    duration: 12
+    description: "Matrix A: The Horizontal Stretcher"
+    elements:
+      title_text:
+        type: text
+        text: "📐 Matrix A: The Horizontal Stretcher"
+        position: [0, 220]
+        color: "#f39c12"
+        size: 24
+        font: "Georgia"
+        glow: true
+
+      matrix_a_display:
+        type: matrix
+        position: [-200, 100]
+        values: [[2, 0], [0, 1]]
+        color: "#f39c12"
+        cellSize: 40
+        textSize: 18
+        label: "Matrix A"
+        highlightRow: 0
+        highlightCol: 0
+
+      transformation_grid:
+        type: grid
+        spacing: 30
+        density: 1.0
+        color: "#f39c12"
+        opacity: 0.6
+        glow: true
+
+      original_vector:
+        type: vector
+        from: [0, 0]
+        to: [50, 50]
+        color: "#95a5a6"
+        width: 3
+        dashed: true
+        label: "(1,1)"
+
+      stretched_vector:
+        type: vector
+        from: [0, 0]
+        to: [100, 50]
+        color: "#f39c12"
+        width: 5
+        glow: true
+        label: "(2,1)"
+
+      explanation_text:
+        type: text
+        text: "Matrix A = [2 0; 0 1]\nDoubles the x-coordinate: (1,1) → (2,1)\nThe whole grid stretches sideways!"
+        position: [0, -180]
+        color: "#d4af37"
+        size: 18
+        font: "Cinzel Decorative"
+
+      golden_sparkles:
+        type: sparkles
+        count: 8
+        intensity: 0.5
+        color: "#f1c40f"
+
+  vector_transformation:
+    duration: 8
+    description: "Vector Transformation in Action"
+    elements:
+      title_text:
+        type: text
+        text: "➡️ Vector Transformation in Action"
+        position: [0, 220]
+        color: "#3498db"
+        size: 24
+        font: "Georgia"
+        glow: true
+
+      transforming_vector:
+        type: path_follower
+        position: [50, 50]
+        pathId: "linear"
+        startPosition: [50, 50]
+        endPosition: [100, 50]
+        pathSpeed: 2.0
+        radius: 8
+        color: "#3498db"
+        glow: true
+        label: "Transforming Vector"
+
+      transformation_grid:
+        type: grid
+        spacing: 25
+        density: 1.0
+        color: "#3498db"
+        opacity: 0.5
+        glow: true
+
+      explanation_text:
+        type: text
+        text: "Watch the vector (1,1) stretch horizontally!\nX-component doubles, Y stays the same.\nThis is Matrix A doing its job."
+        position: [0, -180]
+        color: "#d4af37"
+        size: 18
+        font: "Cinzel Decorative"
+
+      trail_sparkles:
+        type: sparkles
+        count: 6
+        intensity: 0.7
+        color: "#3498db"
+
+  matrix_b_vertical:
+    duration: 12
+    description: "Matrix B: The Vertical Stretcher"
+    elements:
+      title_text:
+        type: text
+        text: "📏 Matrix B: The Vertical Stretcher"
+        position: [0, 220]
+        color: "#3498db"
+        size: 24
+        font: "Georgia"
+        glow: true
+
+      matrix_b_display:
+        type: matrix
+        position: [-200, 100]
+        values: [[1, 0], [0, 3]]
+        color: "#3498db"
+        cellSize: 40
+        textSize: 18
+        label: "Matrix B"
+        highlightRow: 1
+        highlightCol: 1
+
+      vertical_grid:
+        type: grid
+        spacing: 30
+        density: 1.0
+        color: "#3498db"
+        opacity: 0.6
+        glow: true
+
+      original_vector_b:
+        type: vector
+        from: [0, 0]
+        to: [50, 50]
+        color: "#95a5a6"
+        width: 3
+        dashed: true
+        label: "(1,1)"
+
+      stretched_vector_b:
+        type: vector
+        from: [0, 0]
+        to: [50, 150]
+        color: "#3498db"
+        width: 5
+        glow: true
+        label: "(1,3)"
+
+      explanation_text:
+        type: text
+        text: "Matrix B = [1 0; 0 3]\nTriples the y-coordinate: (1,1) → (1,3)\nThe grid is pulled upwards!"
+        position: [0, -180]
+        color: "#d4af37"
+        size: 18
+        font: "Cinzel Decorative"
+
+      blue_sparkles:
+        type: sparkles
+        count: 8
+        intensity: 0.5
+        color: "#3498db"
+
+  grid_deformation:
+    duration: 10
+    description: "Grid Deformation Visualization"
+    elements:
+      title_text:
+        type: text
+        text: "🌐 Grid Deformation Visualization"
+        position: [0, 220]
+        color: "#e74c3c"
+        size: 24
+        font: "Georgia"
+        glow: true
+
+      deforming_grid:
+        type: grid
+        style: "perspective"
+        spacing: 25
+        density: 1.2
+        color: "#e74c3c"
+        opacity: 0.7
+        glow: true
+        perspective_depth: 0.8
+
+      explanation_text:
+        type: text
+        text: "See how Matrix B stretches the entire coordinate system!\nEvery square becomes a rectangle.\nEvery circle would become an ellipse.\nThis is the power of linear transformation."
+        position: [0, -180]
+        color: "#d4af37"
+        size: 18
+        font: "Cinzel Decorative"
+
+      rippling_waves:
+        type: waves
+        layers: 3
+        opacity: 0.3
+        speed: 0.2
+
+  chaining_challenge:
+    duration: 10
+    description: "The Chaining Challenge"
+    elements:
+      title_text:
+        type: text
+        text: "🔗 The Chaining Challenge"
+        position: [0, 220]
+        color: "#9b59b6"
+        size: 24
+        font: "Georgia"
+        glow: true
+
+      transformation_chain:
+        type: algorithm_edge
+        from: "vector_node"
+        to: "matrix_a_node"
+        color: "#f39c12"
+        label: "First Transform"
+
+      vector_node:
+        type: algorithm_node
+        position: [-200, 0]
+        color: "#27ae60"
+        value: "v"
+        glow: true
+        label: "Vector"
+
+      matrix_a_node:
+        type: algorithm_node
+        position: [-50, 0]
+        color: "#f39c12"
+        value: "A"
+        glow: true
+        label: "Matrix A"
+
+      matrix_b_node:
+        type: algorithm_node
+        position: [100, 0]
+        color: "#3498db"
+        value: "B"
+        glow: true
+        label: "Matrix B"
+
+      result_node:
+        type: algorithm_node
+        position: [250, 0]
+        color: "#e74c3c"
+        value: "?"
+        glow: true
+        label: "Result"
+
+      chain_edge_1:
+        type: algorithm_edge
+        from: "vector_node"
+        to: "matrix_a_node"
+        color: "#f39c12"
+        label: "A"
+
+      chain_edge_2:
+        type: algorithm_edge
+        from: "matrix_a_node"
+        to: "matrix_b_node"
+        color: "#3498db"
+        label: "B"
+
+      chain_edge_3:
+        type: algorithm_edge
+        from: "matrix_b_node"
+        to: "result_node"
+        color: "#e74c3c"
+        label: "BA"
+
+      challenge_grid:
+        type: grid
+        spacing: 35
+        density: 1.0
+        color: "#95a5a6"
+        opacity: 0.4
+
+      explanation_text:
+        type: text
+        text: "But what if you do BOTH?\nFirst stretch sideways with A, then upwards with B.\nCan we combine them into ONE machine?"
+        position: [0, -180]
+        color: "#d4af37"
+        size: 18
+        font: "Cinzel Decorative"
+
+      mystery_sparkles:
+        type: sparkles
+        count: 10
+        intensity: 0.6
+        color: "#f39c12"
+
+  sequential_steps:
+    duration: 12
+    description: "Sequential Transformation Steps"
+    elements:
+      title_text:
+        type: text
+        text: "🎯 Sequential Transformation Steps"
+        position: [0, 220]
+        color: "#27ae60"
+        size: 24
+        font: "Georgia"
+        glow: true
+
+      step_array:
+        type: algorithm_array
+        position: [-250, 50]
+        items: ["(1,1)", "→A→", "(2,1)", "→B→", "(2,3)"]
+        highlights: [0, 2, 4]
+        color: "#27ae60"
+        cellSize: 60
+        showIndices: false
+
+      step_grid:
+        type: grid
+        spacing: 25
+        density: 1.0
+        color: "#27ae60"
+        opacity: 0.5
+        glow: true
+
+      explanation_text:
+        type: text
+        text: "Follow the vector's journey:\n(1,1) → A → (2,1) → B → (2,3)\nTwo steps, two matrices, one final result.\nBut there must be a shortcut..."
+        position: [0, -180]
+        color: "#d4af37"
+        size: 18
+        font: "Cinzel Decorative"
+
+      journey_sparkles:
+        type: sparkles
+        count: 8
+        intensity: 0.7
+        color: "#27ae60"
+
+  row_column_dance:
+    duration: 10
+    description: "The Row-Column Dance"
+    elements:
+      title_text:
+        type: text
+        text: "💃 The Row-Column Dance"
+        position: [0, 220]
+        color: "#9b59b6"
+        size: 24
+        font: "Georgia"
+        glow: true
+
+      multiplication_array:
+        type: algorithm_array
+        position: [-200, 50]
+        items: ["B", "×", "A"]
+        highlights: [0, 2]
+        color: "#9b59b6"
+        cellSize: 80
+        showIndices: false
+
+      row_array:
+        type: algorithm_array
+        position: [-100, -50]
+        items: ["[1,0]", "×", "[2,0]"]
+        highlights: [0, 2]
+        color: "#e74c3c"
+        cellSize: 60
+        showIndices: false
+
+      col_array:
+        type: algorithm_array
+        position: [-100, -120]
+        items: ["[0,3]", "×", "[0,1]"]
+        highlights: [0, 2]
+        color: "#3498db"
+        cellSize: 60
+        showIndices: false
+
+      dance_grid:
+        type: grid
+        spacing: 30
+        density: 1.0
+        color: "#9b59b6"
+        opacity: 0.3
+
+      explanation_text:
+        type: text
+        text: "This is where multiplication comes in!\nTo combine the machines, we multiply matrices.\nRow by column - it looks mechanical,\nbut it's the ONLY rule that makes sense!"
+        position: [0, -180]
+        color: "#d4af37"
+        size: 18
+        font: "Cinzel Decorative"
+
+      dancing_waves:
+        type: waves
+        layers: 2
+        opacity: 0.25
+        speed: 0.4
+
+  multiplication_revealed:
+    duration: 14
+    description: "Matrix Multiplication Revealed"
+    elements:
+      title_text:
+        type: text
+        text: "🎯 Matrix Multiplication Revealed"
+        position: [0, 220]
+        color: "#f39c12"
+        size: 24
+        font: "Georgia"
+        glow: true
+
+      calculation_matrix:
+        type: matrix
+        position: [-150, 80]
+        values: [["1×2+0×0", "1×0+0×1"], ["0×2+3×0", "0×0+3×1"]]
+        color: "#f39c12"
+        cellSize: 50
+        textSize: 12
+        label: "Step by Step"
+        highlightRow: 0
+        highlightCol: 0
+
+      result_matrix:
+        type: matrix
+        position: [100, 80]
+        values: [[2, 0], [0, 3]]
+        color: "#e74c3c"
+        cellSize: 40
+        textSize: 18
+        label: "Result: BA"
+
+      calculation_grid:
+        type: grid
+        spacing: 25
+        density: 1.0
+        color: "#f39c12"
+        opacity: 0.4
+        glow: true
+
+      explanation_text:
+        type: text
+        text: "Each element calculated:\n1×2+0×0=2, 1×0+0×1=0\n0×2+3×0=0, 0×0+3×1=3\nThe result is a single matrix that does BOTH!"
+        position: [0, -180]
+        color: "#d4af37"
+        size: 18
+        font: "Cinzel Decorative"
+
+      calculation_sparkles:
+        type: sparkles
+        count: 12
+        intensity: 0.8
+        color: "#f1c40f"
+
+  ultimate_transformation:
+    duration: 10
+    description: "The Ultimate Transformation"
+    elements:
+      title_text:
+        type: text
+        text: "✨ The Ultimate Transformation"
+        position: [0, 220]
+        color: "#e74c3c"
+        size: 26
+        font: "Georgia"
+        glow: true
+
+      celebration_waves:
+        type: waves
+        layers: 3
+        opacity: 0.8
+        speed: 0.4
+        direction: "radial"
+
+      ultimate_grid:
+        type: grid
+        spacing: 20
+        density: 1.2
+        color: "#f1c40f"
+        opacity: 0.6
+        glow: true
+
+      explanation_text:
+        type: text
+        text: "The result is simple:\nA single matrix that stretches X by 2 and Y by 3.\nExactly the combination of both transformations,\ncaptured in ONE machine!"
+        position: [0, -180]
+        color: "#d4af37"
+        size: 18
+        font: "Cinzel Decorative"
+
+      celebration_fireworks:
+        type: fireworks
+        intensity: 0.7
+        colors: ["#e74c3c", "#3498db", "#f39c12"]
+
+  single_operation_magic:
+    duration: 8
+    description: "Single Operation Magic"
+    elements:
+      title_text:
+        type: text
+        text: "🎩 Single Operation Magic"
+        position: [0, 220]
+        color: "#f1c40f"
+        size: 24
+        font: "Georgia"
+        glow: true
+
+      magic_vector:
+        type: vector
+        from: [0, 0]
+        to: [80, 120]
+        color: "#f1c40f"
+        width: 6
+        glow: true
+        label: "(1,1) → (2,3)"
+
+      magic_grid:
+        type: grid
+        spacing: 25
+        density: 1.0
+        color: "#f1c40f"
+        opacity: 0.5
+        glow: true
+
+      explanation_text:
+        type: text
+        text: "Watch the MAGIC:\nVector (1,1) directly becomes (2,3) in ONE step!\nTwo transformations, now unified into\na single, elegant operation."
+        position: [0, -180]
+        color: "#d4af37"
+        size: 18
+        font: "Cinzel Decorative"
+
+      magic_sparkles:
+        type: sparkles
+        count: 15
+        intensity: 1.0
+        color: "#f1c40f"
+
+  function_composition:
+    duration: 12
+    description: "Function Composition Revealed"
+    elements:
+      title_text:
+        type: text
+        text: "🔗 Function Composition Revealed"
+        position: [0, 220]
+        color: "#9b59b6"
+        size: 24
+        font: "Georgia"
+        glow: true
+
+      composition_network:
+        type: neural_net
+        layers: [1, 3, 1]
+        colors: ["#27ae60", "#f39c12", "#e74c3c"]
+        animation_speed: 1.0
+
+      f_node:
+        type: algorithm_node
+        position: [-150, 0]
+        color: "#f39c12"
+        value: "f"
+        visited: true
+        glow: true
+        label: "Function f"
+
+      g_node:
+        type: algorithm_node
+        position: [0, 0]
+        color: "#3498db"
+        value: "g"
+        visited: true
+        glow: true
+        label: "Function g"
+
+      composed_node:
+        type: algorithm_node
+        position: [150, 0]
+        color: "#e74c3c"
+        value: "g∘f"
+        visited: true
+        glow: true
+        label: "Composition"
+
+      composition_grid:
+        type: grid
+        spacing: 30
+        density: 1.0
+        color: "#95a5a6"
+        opacity: 0.4
+
+      explanation_text:
+        type: text
+        text: "Matrix multiplication isn't random arithmetic.\nIt's COMPOSITION!\nOne transformation after another.\nThe product is the machine that does both at once."
+        position: [0, -180]
+        color: "#d4af37"
+        size: 18
+        font: "Cinzel Decorative"
+
+      composition_waves:
+        type: waves
+        layers: 2
+        opacity: 0.3
+        speed: 0.2
+
+  mathematical_truth:
+    duration: 8
+    description: "The Mathematical Truth"
+    elements:
+      title_text:
+        type: text
+        text: "📚 The Mathematical Truth"
+        position: [0, 220]
+        color: "#3498db"
+        size: 24
+        font: "Georgia"
+        glow: true
+
+      equation_array:
+        type: algorithm_array
+        position: [-200, 50]
+        items: ["(g∘f)(x)", "=", "g(f(x))"]
+        highlights: [0, 2]
+        color: "#3498db"
+        cellSize: 80
+        showIndices: false
+
+      matrix_equation_array:
+        type: algorithm_array
+        position: [-150, -50]
+        items: ["BA⃗v", "=", "B(A⃗v)"]
+        highlights: [0, 2]
+        color: "#e74c3c"
+        cellSize: 80
+        showIndices: false
+
+      truth_grid:
+        type: grid
+        spacing: 35
+        density: 1.0
+        color: "#3498db"
+        opacity: 0.3
+
+      explanation_text:
+        type: text
+        text: "In mathematics, we call this function composition.\nWhen you see BA, think:\n'first do A, then do B'\nMatrix multiplication captures this perfectly!"
+        position: [0, -180]
+        color: "#d4af37"
+        size: 18
+        font: "Cinzel Decorative"
+
+      truth_sparkles:
+        type: sparkles
+        count: 6
+        intensity: 0.4
+        color: "#9b59b6"
+
+  computer_graphics:
+    duration: 10
+    description: "Computer Graphics: 3D Magic"
+    elements:
+      title_text:
+        type: text
+        text: "🎬 Computer Graphics: 3D Magic"
+        position: [0, 220]
+        color: "#e74c3c"
+        size: 24
+        font: "Georgia"
+        glow: true
+
+      rotating_planet:
+        type: path_follower
+        position: [80, 0]
+        pathId: "orbit"
+        orbitCenter: [0, 0]
+        orbitRadius: 80
+        pathSpeed: 0.6
+        radius: 12
+        color: "#e74c3c"
+        clockwise: true
+        glow: true
+        label: "3D Object"
+
+      graphics_grid:
+        type: grid
+        style: "perspective"
+        spacing: 20
+        density: 1.2
+        color: "#e74c3c"
+        opacity: 0.5
+        glow: true
+        perspective_depth: 0.8
+
+      explanation_text:
+        type: text
+        text: "Computer graphics chains rotations,\nscalings, and projections into ONE matrix\nthat tells your screen where every pixel goes.\nEvery 3D game, every movie effect—\nit's ALL matrix multiplication!"
+        position: [0, -180]
+        color: "#d4af37"
+        size: 18
+        font: "Cinzel Decorative"
+
+      graphics_sparkles:
+        type: sparkles
+        count: 10
+        intensity: 0.6
+        color: "#f39c12"
+
+  physics_simulations:
+    duration: 10
+    description: "Physics Simulations: Motion Matrices"
+    elements:
+      title_text:
+        type: text
+        text: "🌌 Physics Simulations: Motion Matrices"
+        position: [0, 220]
+        color: "#3498db"
+        size: 24
+        font: "Georgia"
+        glow: true
+
+      physics_sine:
+        type: sine_curve
+        amplitude: 60
+        frequency: 0.08
+        color: "#3498db"
+        animated: true
+
+      bouncing_ball:
+        type: path_follower
+        position: [-100, 60]
+        pathId: "sine"
+        amplitude: 60
+        frequency: 0.08
+        pathSpeed: 2.0
+        radius: 8
+        color: "#f39c12"
+        glow: true
+        label: "Physics Ball"
+
+      physics_grid:
+        type: grid
+        spacing: 25
+        density: 1.0
+        color: "#3498db"
+        opacity: 0.4
+        glow: true
+
+      explanation_text:
+        type: text
+        text: "Physics simulations combine\nsteps of motion into ONE operator.\nGravity, friction, collision—\neach force becomes a matrix,\nand their combination predicts the future!"
+        position: [0, -180]
+        color: "#d4af37"
+        size: 18
+        font: "Cinzel Decorative"
+
+      physics_waves:
+        type: waves
+        layers: 3
+        opacity: 0.3
+        speed: 0.25
+
+  neural_networks:
+    duration: 10
+    description: "Neural Networks: Learning Matrices"
+    elements:
+      title_text:
+        type: text
+        text: "🧠 Neural Networks: Learning Matrices"
+        position: [0, 220]
+        color: "#9b59b6"
+        size: 24
+        font: "Georgia"
+        glow: true
+
+      learning_network:
+        type: neural_net
+        layers: [3, 6, 4, 2]
+        colors: ["#9b59b6", "#f39c12", "#27ae60", "#e74c3c"]
+        animation_speed: 1.0
+
+      ai_grid:
+        type: grid
+        spacing: 30
+        density: 1.0
+        color: "#9b59b6"
+        opacity: 0.3
+        glow: true
+
+      explanation_text:
+        type: text
+        text: "Machine learning layers are just\nstacks of transformations—\ncollapsed into products of matrices.\nEvery word embedding, every image recognition—\nit's matrices all the way down!"
+        position: [0, -180]
+        color: "#d4af37"
+        size: 18
+        font: "Cinzel Decorative"
+
+      ai_sparkles:
+        type: sparkles
+        count: 8
+        intensity: 0.5
+        color: "#27ae60"
+
+  poetry_of_transformation:
+    duration: 8
+    description: "The Poetry of Transformation"
+    elements:
+      title_text:
+        type: text
+        text: "🎭 The Poetry of Transformation"
+        position: [0, 220]
+        color: "#f1c40f"
+        size: 26
+        font: "Georgia"
+        glow: true
+
+      cosmic_stars:
+        type: star_field
+        density: 0.7
+
+      transforming_constellations:
+        type: star_field
+        density: 0.8
+        twinkle: true
+        parallax: true
+
+      poetry_grid:
+        type: grid
+        spacing: 40
+        density: 1.0
+        color: "#f1c40f"
+        opacity: 0.2
+        glow: true
+
+      explanation_text:
+        type: text
+        text: "The beauty of matrix multiplication\nisn't in the numbers, it's in the IDEA.\nIt's how we turn many steps into one.\nHow complexity becomes simplicity.\nHow chaos becomes order."
+        position: [0, -180]
+        color: "#d4af37"
+        size: 18
+        font: "Cinzel Decorative"
+
+  grand_finale:
+    duration: 12
+    description: "Matrix Multiplication = Chaining Transformations"
+    elements:
+      title_text:
+        type: text
+        text: "✨ Matrix Multiplication = Chaining Transformations"
+        position: [0, 180]
+        color: "#f1c40f"
+        size: 22
+        font: "Georgia"
+        glow: true
+
+      finale_fireworks:
+        type: fireworks
+        intensity: 1.0
+        colors: ["#f1c40f", "#e74c3c", "#3498db", "#27ae60"]
+
+      explanation_text:
+        type: text
+        text: "So the next time you see rows and columns multiplying,\ndon't just see arithmetic.\nSee the composition of moves—\nspace itself, transformed in sequence,\ncaptured in a single machine."
+        position: [0, -180]
+        color: "#d4af37"
+        size: 18
+        font: "Cinzel Decorative"
+
+      finale_grid:
+        type: grid
+        style: "perspective"
+        spacing: 30
+        density: 1.2
+        color: "#f1c40f"
+        opacity: 0.5
+        glow: true
+        perspective_depth: 0.8
+
+      cascade_sparkles:
+        type: sparkles
+        count: 20
+        intensity: 1.0
+        color: "#f1c40f"
+
+      gentle_waves:
+        type: waves
+        layers: 2
+        opacity: 0.4
+        speed: 0.15
+
+equations:
+  - id: riddle_equation
+    latex: "\\text{Rotation} + \\text{Stretch} = \\text{Single Operation?}"
+    position: [400, 500]
+    phase: paper_riddle
+    animation: fade-in
+    glow: true
+    size: 16
+
+  - id: matrix_machine_equation
+    latex: "\\text{Matrix Machine: } \\vec{v}_{in} \\rightarrow [\\text{Transform}] \\rightarrow \\vec{v}_{out}"
+    position: [400, 150]
+    phase: matrix_machine
+    animation: slide-in
+    glow: true
+    size: 14
+
+  - id: matrix_a_equation
+    latex: "A = \\begin{bmatrix} 2 & 0 \\\\ 0 & 1 \\end{bmatrix}, \\quad A\\begin{pmatrix} 1 \\\\ 1 \\end{pmatrix} = \\begin{pmatrix} 2 \\\\ 1 \\end{pmatrix}"
+    position: [400, 450]
+    phase: matrix_a_horizontal
+    animation: fade-in
+    glow: true
+    size: 16
+
+  - id: vector_transform_equation
+    latex: "\\vec{v} = \\begin{pmatrix} 1 \\\\ 1 \\end{pmatrix} \\xrightarrow{A} \\begin{pmatrix} 2 \\\\ 1 \\end{pmatrix}"
+    position: [400, 300]
+    phase: vector_transformation
+    animation: slide-in
+    glow: true
+    size: 14
+
+  - id: matrix_b_equation
+    latex: "B = \\begin{bmatrix} 1 & 0 \\\\ 0 & 3 \\end{bmatrix}, \\quad B\\begin{pmatrix} 1 \\\\ 1 \\end{pmatrix} = \\begin{pmatrix} 1 \\\\ 3 \\end{pmatrix}"
+    position: [400, 450]
+    phase: matrix_b_vertical
+    animation: fade-in
+    glow: true
+    size: 16
+
+  - id: grid_deformation_equation
+    latex: "\\text{Grid Transformation: } \\text{Square} \\rightarrow \\text{Rectangle}"
+    position: [400, 200]
+    phase: grid_deformation
+    animation: slide-in
+    glow: true
+    size: 14
+
+  - id: chaining_equation
+    latex: "B(A\\vec{v}) = (BA)\\vec{v} = \\text{?}"
+    position: [400, 350]
+    phase: chaining_challenge
+    animation: fade-in
+    glow: true
+    size: 16
+
+  - id: sequential_equation
+    latex: "\\vec{v} \\xrightarrow{A} A\\vec{v} \\xrightarrow{B} B(A\\vec{v})"
+    position: [400, 300]
+    phase: sequential_steps
+    animation: slide-in
+    glow: true
+    size: 14
+
+  - id: row_column_equation
+    latex: "\\text{Row } \\times \\text{ Column} = \\text{Element of Result}"
+    position: [400, 200]
+    phase: row_column_dance
+    animation: fade-in
+    glow: true
+    size: 14
+
+  - id: multiplication_equation
+    latex: "BA = \\begin{bmatrix} 1 & 0 \\\\ 0 & 3 \\end{bmatrix}\\begin{bmatrix} 2 & 0 \\\\ 0 & 1 \\end{bmatrix} = \\begin{bmatrix} 2 & 0 \\\\ 0 & 3 \\end{bmatrix}"
+    position: [400, 500]
+    phase: multiplication_revealed
+    animation: slide-in
+    glow: true
+    size: 12
+
+  - id: ultimate_equation
+    latex: "\\text{Combined Matrix} = \\begin{bmatrix} 2 & 0 \\\\ 0 & 3 \\end{bmatrix}"
+    position: [400, 150]
+    phase: ultimate_transformation
+    animation: fade-in
+    glow: true
+    size: 16
+
+  - id: magic_equation
+    latex: "\\begin{bmatrix} 2 & 0 \\\\ 0 & 3 \\end{bmatrix}\\begin{pmatrix} 1 \\\\ 1 \\end{pmatrix} = \\begin{pmatrix} 2 \\\\ 3 \\end{pmatrix}"
+    position: [400, 300]
+    phase: single_operation_magic
+    animation: slide-in
+    glow: true
+    size: 14
+
+  - id: composition_equation
+    latex: "\\text{Matrix Multiplication} = \\text{Function Composition}"
+    position: [400, 200]
+    phase: function_composition
+    animation: fade-in
+    glow: true
+    size: 16
+
+  - id: mathematical_truth_equation
+    latex: "(B \\circ A)(\\vec{v}) = B(A(\\vec{v}))"
+    position: [400, 350]
+    phase: mathematical_truth
+    animation: slide-in
+    glow: true
+    size: 14
+
+  - id: graphics_equation
+    latex: "\\text{3D Transform} = \\text{Rotation} \\times \\text{Scale} \\times \\text{Translation}"
+    position: [400, 450]
+    phase: computer_graphics
+    animation: fade-in
+    glow: true
+    size: 12
+
+  - id: physics_equation
+    latex: "\\text{Next State} = \\text{Physics Matrix} \\times \\text{Current State}"
+    position: [400, 450]
+    phase: physics_simulations
+    animation: slide-in
+    glow: true
+    size: 12
+
+  - id: ai_equation
+    latex: "\\text{AI Output} = W_n \\times W_{n-1} \\times \\cdots \\times W_1 \\times \\text{Input}"
+    position: [400, 500]
+    phase: neural_networks
+    animation: fade-in
+    glow: true
+    size: 10
+
+  - id: poetry_equation
+    latex: "\\text{Many Steps} \\rightarrow \\text{One Elegant Operation}"
+    position: [400, 200]
+    phase: poetry_of_transformation
+    animation: slide-in
+    glow: true
+    size: 16
+
+  - id: finale_equation
+    latex: "\\boxed{\\text{Matrix Multiplication} = \\text{Chaining Transformations}}"
+    position: [400, 350]
+    phase: grand_finale
+    animation: fade-in
+    glow: true
+    size: 18

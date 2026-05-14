@@ -1,0 +1,693 @@
+concept: "Neurons & Weighted Connections"
+emoji: "🧠"
+total_duration: 92
+background: "#0a0a0a"
+
+subtitles:
+  - ""
+  - ""
+  - ""
+  - ""
+  - ""
+  - ""
+  - ""
+  - ""
+  - ""
+
+phases:
+  scene_1:
+    duration: 8
+    description: "The simplest neuron appears with two points connected"
+    elements:
+      point_a:
+        type: point
+        position: [-100, -100]
+        radius: 10
+        color: "#3498db"
+        glow: true
+        label: "Input"
+        
+      point_b:
+        type: point
+        position: [100, -100]
+        radius: 10
+        color: "#3498db"
+        glow: true
+        label: "Neuron"
+        
+      connection_line:
+        type: line
+        from: [-100, -100]
+        to: [100, -100]
+        thickness: 2
+        dashed: false
+        color: "#95a5a6"
+        opacity: 0.8
+        
+      title_text:
+        type: text
+        text: "Neuron = Input → Threshold → Fire"
+        position: [0, -180]
+        size: 16
+        color: "#ffffff"
+        glow: true
+        font: "Arial"
+        
+      active_network:
+        type: neural_net
+        position: [50, 100]
+        layers: [3, 5, 3, 1]
+        colors: ["#ff6b6b", "#4ecdc4", "#d4af37"]
+        animation_speed: 1.5
+
+
+  scene_2:
+    duration: 8
+    description: "How does this become human-like behavior"
+    elements:
+      brain_emoji:
+        type: animated_emoji
+        emoji: "👤"
+        position: [-100, 30]
+        size: 90
+        movement: "orbit"
+        glowing: "pulsing-glow"
+        rotation: "none"
+        reveal: "zoom-reveal"
+        speed: "slow"
+        delay: "none"
+        color: "#3498db"
+        
+      target_emoji:
+        type: animated_emoji
+        emoji: "🎯"
+        position: [100, 30]
+        size: 80
+        movement: "bounce"
+        glowing: "pulsing-glow"
+        rotation: "none"
+        reveal: "slide-reveal"
+        speed: "slow"
+        delay: "delay-1"
+        color: "#f39c12"
+        
+      equation_emoji:
+        type: animated_emoji
+        emoji: "Σw·x"
+        position: [0, -50]
+        size: 60
+        movement: "floating-pen"
+        glowing: "matrix-code"
+        rotation: "none"
+        reveal: "slide-reveal"
+        speed: "normal"
+        delay: "delay-2"
+        color: "#e74c3c"
+        
+      narrative_text:
+        type: text
+        text: "How does adding weighted numbers lead to intelligence?"
+        position: [0, 200]
+        size: 16
+        color: "#ffffff"
+        glow: true
+        font: "Arial"
+        
+  scene_3:
+    duration: 7
+    description: "The hidden variable - weights on connections"
+    elements:
+      input_1:
+        type: point
+        position: [-150, -80]
+        radius: 8
+        color: "#e74c3c"
+        glow: true
+        label: "x₁"
+        
+      input_2:
+        type: point
+        position: [-150, 0]
+        radius: 8
+        color: "#e74c3c"
+        glow: true
+        label: "x₂"
+        
+      input_3:
+        type: point
+        position: [-150, 80]
+        radius: 8
+        color: "#e74c3c"
+        glow: true
+        label: "x₃"
+        
+      neuron_point:
+        type: point
+        position: [100, 0]
+        radius: 12
+        color: "#3498db"
+        glow: true
+        label: "Neuron"
+        
+      weight_line_1:
+        type: line
+        from: [-150, -80]
+        to: [100, 0]
+        thickness: 2
+        dashed: false
+        color: "#95a5a6"
+        opacity: 0.7
+        label: "w₁"
+        
+      weight_line_2:
+        type: line
+        from: [-150, 0]
+        to: [100, 0]
+        thickness: 2
+        dashed: false
+        color: "#95a5a6"
+        opacity: 0.7
+        label: "w₂"
+        
+      weight_line_3:
+        type: line
+        from: [-150, 80]
+        to: [100, 0]
+        thickness: 2
+        dashed: false
+        color: "#95a5a6"
+        opacity: 0.7
+        label: "w₃"
+        
+      info_text:
+        type: text
+        text: "Weights = Numerical Strengths on Each Connection"
+        position: [0, -180]
+        size: 16
+        color: "#ffffff"
+        glow: true
+        font: "Arial"
+        
+  scene_4:
+    duration: 7
+    description: "Detective octopus wonders about intelligence"
+    elements:
+      detective_guide:
+        type: wisdom_character
+        character_type: detective_octopus
+        position: [0, 0]
+        size: 140
+        mood: "thinking"
+        expression: "normal"
+        talking: false
+        breathing: true
+        color_scheme: "ocean"
+        personality: "calm"
+        speech_bubble: true
+        speech_text: "Sometimes the smallest numbers carry the biggest influence."
+        background_aura: "glow"
+        
+  scene_5:
+    duration: 8
+    description: "Three binary inputs weighted and summarized"
+    elements:
+      input_array:
+        type: algorithm_array
+        position: [-200, 80]
+        items: ["1", "1", "1"]
+        highlights: []
+        cellSize: 50
+        showIndices: true
+        color: "#3498db"
+        
+      weight_array:
+        type: algorithm_array
+        position: [-200, 140]
+        items: ["2", "1", "5"]
+        highlights: [2]
+        cellSize: 50
+        showIndices: false
+        color: "#e74c3c"
+        
+      neuron_node:
+        type: point
+        position: [100, 100]
+        radius: 15
+        color: "#2ecc71"
+        glow: true
+        label: "Σ"
+        
+      label_text:
+        type: text
+        text: "Inputs: [Vibration, Screen, Bored] × Weights: [2, 1, 5]"
+        position: [0, -180]
+        size: 14
+        color: "#ffffff"
+        glow: true
+        font: "Arial"
+        
+  scene_6:
+    duration: 7
+    description: "The scale analogy - Bored weight heavier"
+    elements:
+      balance_triangle:
+        type: mathematical_entity
+        position: [0, 50]
+        form: "triangle"
+        personality: "wise"
+        size: 60
+        color: "#f39c12"
+        glow: true
+        energy: 0.5
+        animation_pattern: "breathe"
+        label: "Balance"
+        
+      left_vector:
+        type: vector
+        from: [-80, 50]
+        to: [-120, 100]
+        color: "#3498db"
+        thickness: 3
+        glow: true
+        label: "Vibration+Screen"
+        
+      right_vector:
+        type: vector
+        from: [80, 50]
+        to: [140, 120]
+        color: "#e74c3c"
+        thickness: 5
+        glow: true
+        label: "Bored (5)"
+        
+      comparison_text:
+        type: text
+        text: "Bored (Weight 5) Dominates the Sum"
+        position: [0, -180]
+        size: 16
+        color: "#ffffff"
+        glow: true
+        font: "Arial"
+        
+  scene_7:
+    duration: 7
+    description: "Compute the math - weighted sum threshold check"
+    elements:
+      calculation_matrix:
+        type: matrix
+        position: [-160, 100]
+        values: [["1×5"], ["1×2"], ["1×1"]]
+        highlightCells: [[0, 0]]
+        cellSize: 50
+        textSize: 14
+        color: "#3498db"
+        label: "Operations"
+        
+      result_matrix:
+        type: matrix
+        position: [80, 100]
+        values: [["5"], ["2"], ["1"]]
+        highlightCells: []
+        cellSize: 50
+        textSize: 14
+        color: "#2ecc71"
+        label: "Results"
+        
+      sum_text:
+        type: text
+        text: "Sum = 8 > Threshold (6) → Neuron Fires!"
+        position: [0, -180]
+        size: 16
+        color: "#2ecc71"
+        glow: true
+        font: "Arial"
+        
+      threshold_indicator:
+        type: text
+        text: "τ = 6"
+        position: [200, 100]
+        size: 14
+        color: "#f39c12"
+        glow: true
+        font: "Arial"
+        
+  scene_8:
+    duration: 7
+    description: "Neuron as a tiny decision-maker"
+    elements:
+      detective_teacher:
+        type: wisdom_character
+        character_type: detective_octopus
+        position: [0, 0]
+        size: 140
+        mood: "mysterious"
+        expression: "normal"
+        talking: true
+        breathing: true
+        color_scheme: "detective"
+        personality: "calm"
+        speech_bubble: true
+        speech_text: "Change the weights... and you change the neuron's personality."
+        background_aura: "glow"
+        
+  scene_9:
+    duration: 9
+    description: "Teaching a neuron to detect L pattern"
+    elements:
+      input_grid:
+        type: algorithm_grid
+        position: [-180, -100]
+        rows: 3
+        cols: 3
+        cellSize: 45
+        spacing: 4
+        cells: [["1","0","0"],["1","0","0"],["1","1","1"]]
+        highlights: [[0,0], [1,0], [2,0], [2,1], [2,2]]
+        showValues: true
+        color: "#3498db"
+        border_color: "#34495e"
+        border_width: 2
+        label: "Input"
+        
+      weight_grid:
+        type: algorithm_grid
+        position: [60, -100]
+        rows: 3
+        cols: 3
+        cellSize: 45
+        spacing: 4
+        cells: [["3","0","-1"],["2","0","-1"],["3","2","3"]]
+        highlights: [[0,0], [1,0], [2,0], [2,1], [2,2]]
+        showValues: true
+        color: "#e74c3c"
+        border_color: "#34495e"
+        border_width: 2
+        label: "Weights"
+        
+      output_point:
+        type: point
+        position: [220, 100]
+        radius: 12
+        color: "#2ecc71"
+        glow: true
+        label: "L-Detector"
+        
+      concept_text:
+        type: text
+        text: "Weighted Sum on L-Pattern Crosses Threshold → Fires"
+        position: [0, -80]
+        size: 14
+        color: "#ffffff"
+        glow: true
+        font: "Arial"
+
+      active_network:
+        type: neural_net
+        position: [0, 150]
+        layers: [3, 5, 1]
+        colors: ["#ff6b6b", "#4ecdc4", "#d4af37"]
+        animation_speed: 1.5
+
+
+  scene_10:
+    duration: 7
+    description: "The birth of a concept"
+    elements:
+      puzzle_emoji:
+        type: animated_emoji
+        emoji: "🧩"
+        position: [-80, 30]
+        size: 85
+        movement: "orbit"
+        glowing: "pulsing-glow"
+        rotation: "none"
+        reveal: "zoom-reveal"
+        speed: "normal"
+        delay: "none"
+        color: "#9b59b6"
+        
+      lightbulb_emoji:
+        type: animated_emoji
+        emoji: "💡"
+        position: [80, 30]
+        size: 90
+        movement: "bounce"
+        glowing: "pulsing-glow"
+        rotation: "gentle-rotate"
+        reveal: "slide-reveal"
+        speed: "slow"
+        delay: "delay-1"
+        color: "#f1c40f"
+        
+      threshold_equation:
+        type: animated_emoji
+        emoji: "Σw·x>τ"
+        position: [0, -60]
+        size: 60
+        movement: "floating-pen"
+        glowing: "matrix-code"
+        rotation: "none"
+        reveal: "slide-reveal"
+        speed: "normal"
+        delay: "delay-2"
+        color: "#e74c3c"
+        
+      concept_text:
+        type: text
+        text: "Nine numbers became an L-detector"
+        position: [0, 200]
+        size: 16
+        color: "#ffffff"
+        glow: true
+        font: "Arial"
+        
+  scene_11:
+    duration: 8
+    description: "Universal principle - behavior lives in weights"
+    elements:
+      vision_vector:
+        type: mathematical_entity
+        position: [-120, -50]
+        form: "vector"
+        personality: "elegant"
+        size: 50
+        color: "#3498db"
+        glow: true
+        energy: 0.7
+        animation_pattern: "pulse"
+        label: "Vision"
+        vector_components: [3, 4]
+        show_components: false
+        show_magnitude: false
+        vector_style: "standard"
+        
+      language_matrix:
+        type: mathematical_entity
+        position: [0, -80]
+        form: "matrix"
+        personality: "wise"
+        size: 50
+        color: "#9b59b6"
+        glow: true
+        energy: 0.6
+        animation_pattern: "breathe"
+        label: "Language"
+        
+      concept_cloud:
+        type: mathematical_entity
+        position: [120, -50]
+        form: "cloud"
+        personality: "mysterious"
+        size: 50
+        color: "#e74c3c"
+        glow: true
+        energy: 0.8
+        animation_pattern: "wave"
+        label: "Concepts"
+        
+      central_function:
+        type: circle
+        center: [0, 80]
+        radius: 60
+        fill: false
+        color: "#2ecc71"
+        glow: true
+        label: "Behavior"
+        
+      connector_1:
+        type: line
+        from: [-120, -30]
+        to: [0, 30]
+        thickness: 2
+        dashed: true
+        color: "#95a5a6"
+        opacity: 0.8
+        
+      connector_2:
+        type: line
+        from: [0, -30]
+        to: [0, 30]
+        thickness: 2
+        dashed: true
+        color: "#95a5a6"
+        opacity: 0.8
+        
+      connector_3:
+        type: line
+        from: [120, -30]
+        to: [0, 30]
+        thickness: 2
+        dashed: true
+        color: "#95a5a6"
+        opacity: 0.8
+        
+      principle_text:
+        type: text
+        text: "Intelligence Emerges from Strengths of Connections"
+        position: [0, -200]
+        size: 16
+        color: "#ffffff"
+        glow: true
+        font: "Arial"
+        
+  scene_12:
+    duration: 9
+    description: "From one neuron to a network"
+    elements:
+      origin_point_a:
+        type: point
+        position: [-100, 0]
+        radius: 8
+        color: "#3498db"
+        glow: true
+        label: "Start"
+        
+      origin_point_b:
+        type: point
+        position: [100, 0]
+        radius: 8
+        color: "#3498db"
+        glow: true
+        label: "End"
+        
+      network_point_1:
+        type: point
+        position: [-80, -60]
+        radius: 5
+        color: "#3498db"
+        glow: true
+        
+      network_point_2:
+        type: point
+        position: [-40, -80]
+        radius: 5
+        color: "#3498db"
+        glow: true
+        
+      network_point_3:
+        type: point
+        position: [0, -70]
+        radius: 5
+        color: "#3498db"
+        glow: true
+        
+      network_point_4:
+        type: point
+        position: [40, -80]
+        radius: 5
+        color: "#3498db"
+        glow: true
+        
+      network_point_5:
+        type: point
+        position: [80, -60]
+        radius: 5
+        color: "#3498db"
+        glow: true
+        
+      network_point_6:
+        type: point
+        position: [-80, 60]
+        radius: 5
+        color: "#3498db"
+        glow: true
+        
+      network_point_7:
+        type: point
+        position: [-40, 80]
+        radius: 5
+        color: "#3498db"
+        glow: true
+        
+      network_point_8:
+        type: point
+        position: [0, 70]
+        radius: 5
+        color: "#3498db"
+        glow: true
+        
+      network_point_9:
+        type: point
+        position: [40, 80]
+        radius: 5
+        color: "#3498db"
+        glow: true
+        
+      network_point_10:
+        type: point
+        position: [80, 60]
+        radius: 5
+        color: "#3498db"
+        glow: true
+        
+      mesh_line_1:
+        type: line
+        from: [-100, 0]
+        to: [-80, -60]
+        thickness: 1
+        dashed: false
+        color: "#95a5a6"
+        opacity: 0.4
+        
+      mesh_line_2:
+        type: line
+        from: [-80, -60]
+        to: [0, -70]
+        thickness: 1
+        dashed: false
+        color: "#95a5a6"
+        opacity: 0.4
+        
+      mesh_line_3:
+        type: line
+        from: [0, -70]
+        to: [80, -60]
+        thickness: 1
+        dashed: false
+        color: "#95a5a6"
+        opacity: 0.4
+        
+      mesh_line_4:
+        type: line
+        from: [80, -60]
+        to: [100, 0]
+        thickness: 1
+        dashed: false
+        color: "#95a5a6"
+        opacity: 0.4
+        
+      final_text:
+        type: text
+        text: "Meaning Surfaces from Billions of Weighted Connections"
+        position: [0, -200]
+        size: 16
+        color: "#ffffff"
+        glow: true
+        font: "Arial"
+
+      # Data flow particles
+      data_flow:
+        type: sparkles
+        count: 10
+        position: [-150, 0]            # INNER_LEFT
+        color: "#4ecdc

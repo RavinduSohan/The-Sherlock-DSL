@@ -1,0 +1,450 @@
+concept: "Vector Addition - Forces & Motion"
+emoji: "➕"
+total_duration: 30
+background: "#0a0a0a"
+autoplay: true
+loop: false
+
+subtitles:
+  - ""
+  - "" 
+  - ""
+  - ""
+  - ""
+  - ""
+
+phases:
+  box_push_problem:
+    duration: 5
+    description: "Hook - Two forces on a box"
+    elements:
+      title_label:
+        type: text
+        text: "📦 The Box Push Problem"
+        position: [0, 250]
+        color: "#e74c3c"
+        size: 24
+        font: "Georgia"
+        glow: true
+
+      explanation_text:
+        type: text
+        text: "Imagine two people pushing a heavy box. One shoves north, the other east.\nNeither wins on their own — so where does the box actually go?"
+        position: [0, -200]
+        color: "#d4af37"
+        size: 18
+        font: "Cinzel Decorative"
+
+      heavy_box:
+        type: rectangle
+        position: [0, 0]
+        width: 60
+        height: 40
+        color: "#8b4513"
+        fill: true
+        glow: true
+        label: "Heavy Box"
+
+      force_north:
+        type: vector
+        from: [-30, 0]
+        to: [-30, 100]
+        color: "#e74c3c"
+        thickness: 4
+        arrowhead: true
+        glow: true
+        label: "Person 1"
+
+      force_east:
+        type: vector
+        from: [0, -20]
+        to: [120, -20]
+        color: "#3498db"
+        thickness: 4
+        arrowhead: true
+        glow: true
+        label: "Person 2"
+
+      background_grid:
+        type: grid
+        style: "flat"
+        spacing: 20
+        density: 0.8
+        color: "#2c3e50"
+        opacity: 0.3
+
+
+  naive_addition_trap:
+    duration: 5
+    description: "Problem - Wrong way to add vectors"
+    elements:
+      title_label:
+        type: text
+        text: "❌ The Naive Addition Trap"
+        position: [0, 240]
+        color: "#e74c3c"
+        size: 28
+        font: "Georgia"
+        glow: true
+
+      explanation_text:
+        type: text
+        text: "At first glance, you might think: just add the numbers. Three steps north, four steps east, done.\nBut that treats them as separate, disconnected."
+        position: [0, -180]
+        color: "#d4af37"
+        size: 18
+        font: "Cinzel Decorative"
+
+      naive_array_1:
+        type: algorithm_array
+        position: [-100, 100]
+        items: [3, 0]
+        highlights: [0, 1]
+        color: "#e74c3c"
+        cellSize: 40
+        showIndices: true
+
+      naive_array_2:
+        type: algorithm_array
+        position: [-100, 50]
+        items: [0, 4]
+        highlights: [0, 1]
+        color: "#e74c3c"
+        cellSize: 40
+        showIndices: true
+
+      calc_text_1:
+        type: text
+        text: "3 + 0 = 3"
+        position: [100, 100]
+        color: "#f39c12"
+        size: 14
+
+      calc_text_2:
+        type: text
+        text: "0 + 4 = 4"
+        position: [100, 50]
+        color: "#f39c12"
+        size: 14
+
+      confusion_text:
+        type: text
+        text: "❓ Where does the box go?"
+        position: [0, -50]
+        color: "#e74c3c"
+        size: 18
+        glow: true
+
+
+  stack_arrows_aha:
+    duration: 5
+    description: "Insight - Head-to-tail vector addition"
+    elements:
+      title_label:
+        type: text
+        text: "💡 The Aha! Stack the Arrows"
+        position: [0, 240]
+        color: "#2ecc71"
+        size: 28
+        font: "Georgia"
+        glow: true
+
+      explanation_text:
+        type: text
+        text: "The real trick is to picture each push as an arrow. And then… stack them.\nHead to tail. That final arrow is the sum of the vectors."
+        position: [0, -180]
+        color: "#d4af37"
+        size: 16
+        font: "Cinzel Decorative"
+
+      first_vector:
+        type: vector
+        from: [0, 0]
+        to: [120, 0]
+        color: "#3498db"
+        width: 4
+        arrowhead: true
+        glow: true
+        label: "First Push"
+
+      second_vector:
+        type: vector
+        from: [120, 0]
+        to: [120, 160]
+        color: "#e74c3c"
+        width: 4
+        arrowhead: true
+        glow: true
+        label: "Second Push"
+
+      resultant_vector:
+        type: vector
+        from: [0, 0]
+        to: [120, 160]
+        color: "#f1c40f"
+        width: 6
+        arrowhead: true
+        glow: true
+        label: "Combined Force"
+
+      celebration_sparkles:
+        type: sparkles
+        count: 15
+        density: 20
+        color: "#f1c40f"
+
+
+  right_triangle_emerges:
+    duration: 5
+    description: "Breakdown - Geometric relationship"
+    elements:
+      title_label:
+        type: text
+        text: "📐 The Right Triangle Emerges"
+        position: [0, 240]
+        color: "#58a6ff"
+        size: 26
+        font: "Georgia"
+        glow: true
+
+      explanation_text:
+        type: text
+        text: "On a grid, this looks like a right triangle: three steps forward, four to the side,\nthe box drifting diagonally."
+        position: [0, -200]
+        color: "#d4af37"
+        size: 18
+        font: "Cinzel Decorative"
+
+      horizontal_side:
+        type: line
+        from: [0, 0]
+        to: [120, 0]
+        color: "#3498db"
+        width: 3
+        label: "3 units"
+
+      vertical_side:
+        type: line
+        from: [120, 0]
+        to: [120, 160]
+        color: "#e74c3c"
+        width: 3
+        label: "4 units"
+
+      hypotenuse:
+        type: line
+        from: [0, 0]
+        to: [120, 160]
+        color: "#f1c40f"
+        width: 5
+        label: "5 units"
+
+      reference_grid:
+        type: grid
+        style: "flat"
+        spacing: 20
+        density: 0.8
+        color: "#34495e"
+        opacity: 0.4
+
+      label_3:
+        type: text
+        text: "3"
+        position: [60, -15]
+        color: "#3498db"
+        size: 16
+
+      label_4:
+        type: text
+        text: "4"
+        position: [135, 80]
+        color: "#e74c3c"
+        size: 16
+
+      label_5:
+        type: text
+        text: "5"
+        position: [40, 60]
+        color: "#f1c40f"
+        size: 16
+
+
+  general_formula:
+    duration: 5
+    description: "Generalization - Component-wise addition"
+    elements:
+      title_label:
+        type: text
+        text: "📝 The General Formula"
+        position: [0, 240]
+        color: "#58a6ff"
+        size: 26
+        font: "Georgia"
+        glow: true
+
+      explanation_text:
+        type: text
+        text: "You can do it with any arrows: (a, b) + (c, d) = (a+c, b+d).\nThe arrows don't fight. They cooperate into one."
+        position: [0, -180]
+        color: "#d4af37"
+        size: 16
+        font: "Cinzel Decorative"
+
+      formula_array:
+        type: algorithm_array
+        position: [-150, 50]
+        items: ["(a,b)", "+", "(c,d)", "=", "(a+c,b+d)"]
+        highlights: [0, 2, 4]
+        color: "#27ae60"
+        cellSize: 60
+        showIndices: false
+
+      example_1:
+        type: text
+        text: "Wind + Current = Boat's Path"
+        position: [-100, -50]
+        color: "#3498db"
+        size: 14
+
+      example_2:
+        type: text
+        text: "Velocity + Acceleration = New Velocity"
+        position: [-100, -70]
+        color: "#e74c3c"
+        size: 14
+
+      example_3:
+        type: text
+        text: "Force 1 + Force 2 = Net Force"
+        position: [-100, -90]
+        color: "#f39c12"
+        size: 14
+
+      harmony_vectors:
+        type: vector
+        from: [100, 0]
+        to: [200, 50]
+        color: "#9b59b6"
+        width: 3
+        arrowhead: true
+        glow: true
+        label: "Cooperation"
+
+
+  universal_forces:
+    duration: 5
+    description: "Connection - Applications everywhere"
+    elements:
+      title_label:
+        type: text
+        text: "🌌 Universal Forces"
+        position: [0, 240]
+        color: "#58a6ff"
+        size: 26
+        font: "Georgia"
+        glow: true
+
+      explanation_text:
+        type: text
+        text: "This principle governs everything: currents in water, wind resistance on planes,\nthe pull of planets. Forces add by stacking arrows."
+        position: [0, -200]
+        color: "#d4af37"
+        size: 16
+        font: "Cinzel Decorative"
+
+      universal_waves:
+        type: waves
+        amplitude: 30
+        frequency: 0.03
+        layers: 3
+        colors: ["#3498db", "#e74c3c", "#f39c12"]
+        position: [0, 0]
+        opacity: 0.6
+        animated: true
+
+      physics_vector:
+        type: vector
+        from: [-200, 100]
+        to: [-100, 150]
+        color: "#3498db"
+        width: 3
+        arrowhead: true
+        glow: true
+        label: "Physics Forces"
+
+      robotics_vector:
+        type: vector
+        from: [0, 100]
+        to: [100, 150]
+        color: "#e74c3c"
+        width: 3
+        arrowhead: true
+        glow: true
+        label: "Robot Motion"
+
+      gps_vector:
+        type: vector
+        from: [200, 100]
+        to: [300, 150]
+        color: "#27ae60"
+        width: 3
+        arrowhead: true
+        glow: true
+        label: "GPS Navigation"
+
+      connection_network:
+        type: neural_net
+        position: [0, -100]
+        layers: [3, 5, 3]
+        colors: ["#3498db", "#e74c3c", "#f39c12"]
+        animation_speed: 1.0
+
+
+equations:
+  - id: question_formula
+    latex: "\\vec{F_1} + \\vec{F_2} = \\text{?}"
+    position: [400, 150]
+    phase: box_push_problem
+    animation: fade-in
+    glow: true
+    size: 18
+
+  - id: wrong_approach
+    latex: "\\text{Wrong: } 3 \\text{ north} + 4 \\text{ east} = \\text{two separate movements}"
+    position: [400, 300]
+    phase: naive_addition_trap
+    animation: slide-in
+    glow: true
+    size: 16
+
+  - id: head_to_tail
+    latex: "\\vec{u} + \\vec{v} = \\text{head-to-tail connection}"
+    position: [400, 450]
+    phase: stack_arrows_aha
+    animation: fade-in
+    glow: true
+    size: 18
+
+  - id: pythagorean_result
+    latex: "(3, 0) + (0, 4) = (3, 4) \\text{ and } |\\text{result}| = \\sqrt{3^2 + 4^2} = 5"
+    position: [400, 450]
+    phase: right_triangle_emerges
+    animation: fade-in
+    glow: true
+    size: 16
+
+  - id: general_addition
+    latex: "\\vec{a} + \\vec{b} = \\begin{pmatrix} a_x + b_x \\\\ a_y + b_y \\end{pmatrix}"
+    position: [400, 300]
+    phase: general_formula
+    animation: slide-in
+    glow: true
+    size: 18
+
+  - id: universal_equation
+    latex: "\\text{Physics + Robotics + Navigation} = \\text{Vector Addition Everywhere}"
+    position: [400, 450]
+    phase: universal_forces
+    animation: fade-in
+    glow: true
+    size: 16

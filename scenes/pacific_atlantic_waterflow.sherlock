@@ -1,0 +1,307 @@
+# Pacific Atlantic Water Flow Algorithm
+# A beautiful visualization of the classic LeetCode problem
+# Water flows from higher to lower (or equal) elevation
+# Find cells from which water can reach both Pacific and Atlantic oceans
+
+# 🎨 MATRIX HIGHLIGHTING OPTIONS:
+# 1. Single Row:           highlightRow: 2
+# 2. Single Column:        highlightCol: 1  
+# 3. Row + Column:         highlightRow: 2, highlightCol: 1
+# 4. Single Cell:          highlight_mode: "cell", highlight_cell: [2,1]
+# 5. Multiple Cells:       highlightCells: [[0,0], [1,1], [2,2]]
+# 6. Everything Combined:  highlightRow: 1, highlightCol: 1, highlightCells: [[0,0], [2,2]]
+
+concept: "Pacific Atlantic Water Flow"
+emoji: "🌊"
+total_duration: 45
+background: "#0a0e1a"
+
+subtitles:
+  - "🌊 Pacific Atlantic Water Flow Problem"
+  - "🏔️ Water flows from high to low elevation"
+  - "🌊 Pacific Ocean borders the top and left"
+  - "🌊 Atlantic Ocean borders the bottom and right"
+  - "🎯 Find cells that can reach BOTH oceans"
+  - "🔄 Use reverse DFS: start from ocean edges"
+  - "✨ Elegant solution with dual exploration"
+
+phases:
+  setup:
+    duration: 5
+    description: "Initialize the elevation grid and ocean boundaries"
+    elements:
+      main_sine_curve:
+        type: sine_curve
+        position: [0, 0]
+        amplitude: 80
+        frequency: 0.015
+        phaseShift: 0
+        startX: -400
+        endX: 400
+        color: "#3498db"
+        thickness: 3
+        glow: true
+        label: "Primary Sine Wave"
+      
+      # Secondary sine curve with different properties
+      secondary_sine_curve:
+        type: sine_curve
+        position: [0, 50]
+        amplitude: 50
+        frequency: 0.025
+        phaseShift: 1.57
+        startX: -400
+        endX: 400
+        color: "#2ecc71"
+        thickness: 2
+        glow: true
+        label: "Secondary Sine Wave"
+
+      beautiful_waves:
+        type: waves
+        amplitude: 40
+        frequency: 0.04
+        layers: 4
+        colors: ["#4ecdc4", "#ff6b6b", "#d4af37", "#9b59b6"]
+        position: [0, 0]
+        opacity: 0.5
+         animated: true
+      elevation_grid:
+        type: algorithm_grid
+        position: [-100, 150]
+        rows: 5
+        cols: 5
+        cellSize: 60
+        spacing: 6
+        color: "#2c3e50"
+        border_color: "#34495e"
+        border_width: 3
+        cells: [[1, 2, 2, 3, 5], [3, 2, 3, 4, 4], [2, 4, 5, 3, 1], [6, 7, 1, 4, 5], [5, 1, 1, 2, 4]]
+        showValues: true
+        label: "Elevation Grid"
+        
+      pacific_label:
+        type: text
+        text: "🌊 Pacific Ocean"
+        position: [-180, -200]
+        color: "#3498db"
+        size: 24
+        font: "Arial"
+      
+      atlantic_label:
+        type: text
+        text: "🌊 Atlantic Ocean"
+        position: [180, 200]
+        color: "#e74c3c"
+        size: 24
+        font: "Arial"
+      
+      problem_title:
+        type: text
+        text: "Water Flow Visualization"
+        position: [0, -280]
+        color: "#f39c12"
+        size: 24
+        font: "Arial"
+        glow: true
+
+  pacific_borders:
+    duration: 4
+    description: "Highlight Pacific Ocean borders (top and left edges)"
+    elements:
+      pacific_top_border:
+        type: line
+        from: [-150, -150]
+        to: [150, -150]
+        color: "#3498db"
+        thickness: 4
+        glow: true
+        label: "Pacific Top Border"
+      
+      pacific_left_border:
+        type: line
+        from: [-150, -150]
+        to: [-150, 150]
+        color: "#3498db"
+        thickness: 4
+        glow: true
+        label: "Pacific Left Border"
+      
+      pacific_flow_text:
+        type: text
+        text: "🌊 Water can flow to Pacific from these edges"
+        position: [0, -220]
+        color: "#3498db"
+        size: 16
+
+  atlantic_borders:
+    duration: 4
+    description: "Highlight Atlantic Ocean borders (bottom and right edges)"
+    elements:
+      atlantic_bottom_border:
+        type: line
+        from: [-150, 150]
+        to: [150, 150]
+        color: "#e74c3c"
+        thickness: 4
+        glow: true
+        label: "Atlantic Bottom Border"
+      
+      atlantic_right_border:
+        type: line
+        from: [150, -150]
+        to: [150, 150]
+        color: "#e74c3c"
+        thickness: 4
+        glow: true
+        label: "Atlantic Right Border"
+      
+      atlantic_flow_text:
+        type: text
+        text: "🌊 Water can flow to Atlantic from these edges"
+        position: [0, 220]
+        color: "#e74c3c"
+        size: 16
+  
+  pacific_matrix_show:
+    duration:2
+    description:
+    elements:
+      pacific_matrix:
+        type: matrix
+        position: [-100, 150]
+        values: [[1, 2, 2, 3, 5], [3, 2, 3, 4, 4], [2, 4, 5, 3, 1], [6, 7, 1, 4, 5], [5, 1, 1, 2, 4]]
+        color: "#4ecdc4"
+        cellSize: 20                   # Individual cell size
+        textSize: 14 
+        label: "🌊 Pacific Ocean"
+
+      pacific_label:
+        type: text
+        text: "🌊 Pacific Ocean"
+        position: [-180, -200]
+        color: "#3498db"
+        size: 24
+        font: "Arial"
+
+  pacific_matrix_highlight:
+    duration:2
+    description:
+    elements:
+      pacific_matrix:
+        type: matrix
+        position: [-100, 150]
+        values: [[1, 2, 2, 3, 5], [3, 2, 3, 4, 4], [2, 4, 5, 3, 1], [6, 7, 1, 4, 5], [5, 1, 1, 2, 4]]
+        color: "#4ecdc4"
+        cellSize: 20                   # Individual cell size
+        textSize: 14 
+        label: "🌊 Pacific Ocean"
+        highlightRow: 4
+        highlightCol: 0
+      pacific_label:
+        type: text
+        text: "🌊 Pacific Ocean"
+        position: [-180, -200]
+        color: "#3498db"
+        size: 24
+        font: "Arial"
+
+  atlantic_matrix_highlight:
+    duration:2
+    description:
+    elements:
+       pacific_matrix_1:
+        type: matrix
+        position: [-100, 150]
+        values: [[1, 2, 2, 3, 5], [3, 2, 3, 4, 4], [2, 4, 5, 3, 1], [6, 7, 1, 4, 5], [5, 1, 1, 2, 4]]
+        color: "#e74c3c"
+        cellSize: 20                   # Individual cell size
+        textSize: 14 
+        label: "🌊 Atlantic Ocean"
+        highlightRow: 0
+        highlightCol: 4
+
+       atlantic_label:
+        type: text
+        text: "🌊 Atlantic Ocean"
+        position: [180, 200]
+        color: "#e74c3c"
+        size: 24
+        font: "Arial"
+        
+  pacific_water_flow:
+    duration:2
+    description: "Show multiple cell highlighting for Pacific water flow"
+    elements:
+      pacific_matrix:
+        type: matrix
+        position: [-100, 150]
+        values: [[1, 2, 2, 3, 5], [3, 2, 3, 4, 4], [2, 4, 5, 3, 1], [6, 7, 1, 4, 5], [5, 1, 1, 2, 4]]
+        color: "#4ecdc4"
+        cellSize: 20                   # Individual cell size
+        textSize: 14 
+        label: "🌊 Pacific Ocean"
+        highlightCells: [[0, 0], [1, 1], [2, 2], [3, 3], [4, 4], [0, 4], [1, 3], [3, 1], [4, 0]]
+          # Pacific reachable cells
+      
+      pacific_flow_text:
+        type: text
+        text: "✨ Cells that can flow to Pacific Ocean"
+        position: [0, -220]
+        color: "#4ecdc4"
+        size: 16
+
+      pacific_top_border:
+        type: line
+        from: [-150, -150]
+        to: [150, -150]
+        color: "#3498db"
+        thickness: 4
+        glow: true
+        label: "Pacific Top Border"
+      
+      pacific_left_border:
+        type: line
+        from: [-150, -150]
+        to: [-150, 150]
+        color: "#3498db"
+        thickness: 4
+        glow: true
+        label: "Pacific Left Border"
+ 
+
+    
+
+
+
+
+equations:
+  - id: water_flow_rule
+    latex: "\\text{Result} = \\text{Pacific} \\cap \\text{Atlantic}"
+    position: "bottom"
+    phase: setup
+    animation: fade-in
+
+  - id: pacific_condition
+    latex: "\\text{Pacific: } (i,j) \\in \\{(0,*), (*,0)\\}"
+    position: [-300, 200]
+    phase: pacific_borders
+    animation: slide-in
+
+  - id: atlantic_condition
+    latex: "\\text{Atlantic: } (i,j) \\in \\{(m-1,*), (*,n-1)\\}"
+    position: [300, -200]
+    phase: atlantic_borders
+    animation: slide-in
+
+  - id: pacific_flow_comparison
+    latex: "\\text{height}[3][0]=6 > \\text{height}[2][0]=2"
+    position: [0, 250]
+    phase: pacific_flow
+    animation: slide-in
+
+  - id: intersection_formula
+    latex: "\\text{Result} = \\text{Pacific} \\cap \\text{Atlantic}"
+    position: [0, 300]
+    phase: intersection_calculation
+    animation: bounce

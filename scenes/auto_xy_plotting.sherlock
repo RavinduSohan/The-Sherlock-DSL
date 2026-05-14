@@ -1,0 +1,151 @@
+concept: "Automatic XY Coordinate Plotting"
+emoji: "🎯"
+total_duration: 12
+background: "#0a0a0a"
+
+subtitles:
+  - "Smart Auto-Range Detection"
+  - "Automatic Smooth Interpolation"
+  - "One-Line Coordinate Plotting"
+
+phases:
+  auto_range_test:
+    duration: 4
+    static_hold_time: 1
+    description: "Auto-range detection from coordinates"
+    elements:
+      title:
+        type: text
+        text: "🎯 Auto-Range Detection"
+        position: [0, 320]
+        color: "#f1c40f"
+        size: 28
+        font: "Georgia"
+        glow: true
+
+      # Sparse parabola points - should auto-detect range and interpolate
+      auto_parabola:
+        type: xy_graph
+        position: [-200, 0]
+        size: 180
+        data_points: [[0, 0], [1, 1], [2, 4], [3, 9], [4, 16]]
+        color: "#e74c3c"
+        line_width: 4
+        show_grid: true
+        show_axes: true
+        show_labels: true
+        show_points: true
+        smooth_curve: true
+        title: "Auto Parabola"
+
+      # Linear points - should detect and draw smooth line
+      auto_linear:
+        type: xy_graph
+        position: [200, 0]
+        size: 180
+        data_points: [[-2, -4], [0, 0], [2, 4], [4, 8]]
+        color: "#3498db"
+        line_width: 4
+        show_grid: true
+        show_axes: true
+        show_labels: true
+        show_points: true
+        smooth_curve: true
+        title: "Auto Linear"
+
+  sparse_interpolation:
+    duration: 4
+    static_hold_time: 1
+    description: "Smart interpolation of sparse data"
+    elements:
+      title:
+        type: text
+        text: "🔀 Smart Interpolation"
+        position: [0, 320]
+        color: "#e67e22"
+        size: 28
+        font: "Georgia"
+        glow: true
+
+      # Very sparse cubic data - should interpolate beautifully
+      sparse_cubic:
+        type: xy_graph
+        position: [-150, 0]
+        size: 160
+        data_points: [[-2, -8], [0, 0], [1, 1], [2, 8]]
+        color: "#9b59b6"
+        line_width: 4
+        show_grid: true
+        show_axes: true
+        show_labels: true
+        show_points: true
+        smooth_curve: true
+        title: "Sparse Cubic"
+
+      # Sine-like sparse points
+      sparse_wave:
+        type: xy_graph
+        position: [150, 0]
+        size: 160
+        data_points: [[0, 0], [1.57, 1], [3.14, 0], [4.71, -1], [6.28, 0]]
+        color: "#2ecc71"
+        line_width: 4
+        show_grid: true
+        show_axes: true
+        show_labels: true
+        show_points: true
+        smooth_curve: true
+        title: "Sparse Wave"
+
+  one_line_plotting:
+    duration: 4
+    static_hold_time: 2
+    description: "Ultra-simple one-line plotting"
+    elements:
+      title:
+        type: text
+        text: "⚡ One-Line Plotting"
+        position: [0, 320]
+        color: "#1abc9c"
+        size: 28
+        font: "Georgia"
+        glow: true
+
+      # Heart shape with minimal specification
+      simple_heart:
+        type: xy_graph
+        position: [-120, 0]
+        size: 140
+        data_points: [[-3, 0], [0, 3], [3, 0], [0, -4]]
+        color: "#e74c3c"
+        line_width: 5
+        show_points: true
+        smooth_curve: true
+        animate_draw: true
+        title: "❤️"
+
+      # Star pattern automatic
+      simple_star:
+        type: xy_graph
+        position: [0, 0]
+        size: 140
+        data_points: [[0, 2], [1, 0], [2, 1], [0, -1], [-2, 1], [-1, 0]]
+        color: "#f1c40f"
+        line_width: 5
+        show_points: true
+        smooth_curve: true
+        animate_draw: true
+        title: "⭐"
+
+      # Spiral automatic
+      simple_spiral:
+        type: xy_graph
+        position: [120, 0]
+        size: 140
+        data_points: [[0, 0], [1, 1], [0, 2], [-2, 1], [-1, -1], [1, -2], [3, 0]]
+        color: "#9b59b6"
+        line_width: 5
+        show_points: true
+        smooth_curve: true
+        animate_draw: true
+        title: "🌀"

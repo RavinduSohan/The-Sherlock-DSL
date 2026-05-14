@@ -1,0 +1,90 @@
+concept: "The Balancing Act — Solving for X"
+emoji: "⚖️"
+total_duration: 25
+background: "#080c14"
+
+subtitles:
+  - ""
+
+phases:
+
+  scene_10_balancing_act:
+    duration: 25
+    description: "Stickman kicks 3 off the left pan — scale crashes — shoves 8 off right — beam levels — X reveals as 5"
+    elements:
+
+      scene_tag:
+        type: primitive
+        shape: text[text:"⑩ THE BALANCING ACT" fontSize:15 fill:#ffffff/0.3 at:(-5.2,3.1)] -> fadeIn(0.6s, 0.2s)
+
+      floor:
+        type: primitive
+        shape: line[from:(-6.5,-1.2) to:(6.5,-1.2) stroke:#ffffff/0.25 strokeWidth:1] -> fadeIn(0.6s, 0.3s)
+
+      fulcrum:
+        type: primitive
+        shape: triangle[size:0.5 fill:#ffffff/0.2 stroke:#ffffff/0.4 strokeWidth:1.2 at:(0.0,-0.95)] -> fadeIn(0.7s, 0.3s)
+
+      stand:
+        type: primitive
+        shape: line[from:(0.0,-0.7) to:(0.0,0.2) stroke:#ffffff/0.35 strokeWidth:1.5] -> fadeIn(0.6s, 0.4s)
+
+      beam:
+        type: morph
+        shape: line[from:(-3.5,0.2) to:(3.5,0.2) stroke:#4fc3f7/0.7 strokeWidth:2] -> fadeIn(0.7s, 0.4s) ~> line[from:(-3.5,1.4) to:(3.5,-1.0) stroke:#4fc3f7/0.7 strokeWidth:2] (0.5s, ease.in, 5.7s) ~> line[from:(-3.5,1.4) to:(3.5,-1.0) stroke:#4fc3f7/0.7 strokeWidth:2] (4.5s, ease.inOut, 6.4s) ~> line[from:(-3.5,0.3) to:(3.5,0.3) stroke:#4fc3f7/0.7 strokeWidth:2] (0.6s, ease.spring, 13.5s) ~> line[from:(-3.5,0.2) to:(3.5,0.2) stroke:#4fc3f7/0.7 strokeWidth:2] (0.4s, ease.inOut, 14.2s)
+
+      pan_left:
+        type: morph
+        shape: line[from:(-4.2,0.2) to:(-2.8,0.2) stroke:#4fc3f7/0.55 strokeWidth:1.8] -> fadeIn(0.7s, 0.5s) ~> line[from:(-4.2,1.4) to:(-2.8,1.4) stroke:#4fc3f7/0.55 strokeWidth:1.8] (0.5s, ease.in, 5.7s) ~> line[from:(-4.2,1.4) to:(-2.8,1.4) stroke:#4fc3f7/0.55 strokeWidth:1.8] (4.5s, ease.inOut, 6.4s) ~> line[from:(-4.2,0.3) to:(-2.8,0.3) stroke:#4fc3f7/0.55 strokeWidth:1.8] (0.6s, ease.spring, 13.5s) ~> line[from:(-4.2,0.2) to:(-2.8,0.2) stroke:#4fc3f7/0.55 strokeWidth:1.8] (0.4s, ease.inOut, 14.2s)
+
+      pan_right:
+        type: morph
+        shape: line[from:(2.8,0.2) to:(4.2,0.2) stroke:#4fc3f7/0.55 strokeWidth:1.8] -> fadeIn(0.7s, 0.5s) ~> line[from:(2.8,-1.0) to:(4.2,-1.0) stroke:#4fc3f7/0.55 strokeWidth:1.8] (0.5s, ease.in, 5.7s) ~> line[from:(2.8,-1.0) to:(4.2,-1.0) stroke:#4fc3f7/0.55 strokeWidth:1.8] (4.5s, ease.inOut, 6.4s) ~> line[from:(2.8,0.3) to:(4.2,0.3) stroke:#4fc3f7/0.55 strokeWidth:1.8] (0.6s, ease.spring, 13.5s) ~> line[from:(2.8,0.2) to:(4.2,0.2) stroke:#4fc3f7/0.55 strokeWidth:1.8] (0.4s, ease.inOut, 14.2s)
+
+      equals_sign:
+        type: morph
+        shape: text[text:"=" fontSize:28 fill:#4fc3f7/0.7 at:(0.0,0.5)] -> fadeIn(0.7s, 0.5s) ~> text[text:"=" fontSize:28 fill:#ff6b9d/0.95 at:(0.0,0.5)] (0.15s, ease.out, 5.7s) ~> text[text:"=" fontSize:28 fill:#4fc3f7/0.7 at:(0.0,0.5)] (0.4s, ease.out, 6.1s) ~> text[text:"=" fontSize:28 fill:#ffd54f/0.95 at:(0.0,0.5)] (0.5s, ease.out, 13.6s) ~> text[text:"=" fontSize:28 fill:#ffd54f/0.8 at:(0.0,0.5)] (0.8s, ease.inOut, 14.3s)
+
+      block_x:
+        type: morph
+        shape: rectangle[w:1.0 h:0.8 fill:#4fc3f7/0.18 stroke:#4fc3f7/0.6 strokeWidth:1.5 at:(-3.8,0.6)] -> fadeIn(0.8s, 0.4s) ~> rectangle[w:1.0 h:0.8 fill:#4fc3f7/0.18 stroke:#4fc3f7/0.6 strokeWidth:1.5 at:(-3.8,1.8)] (0.5s, ease.in, 5.7s) ~> rectangle[w:1.0 h:0.8 fill:#4fc3f7/0.18 stroke:#4fc3f7/0.6 strokeWidth:1.5 at:(-3.8,1.8)] (4.5s, ease.inOut, 6.4s) ~> rectangle[w:1.0 h:0.8 fill:#ffd54f/0.3 stroke:#ffd54f/0.85 strokeWidth:2.2 at:(-3.8,0.7)] (0.6s, ease.spring, 13.5s)
+
+      label_x:
+        type: morph
+        shape: text[text:"X" fontSize:28 fill:#4fc3f7/0.85 at:(-3.8,0.65)] -> fadeIn(0.7s, 0.5s) ~> text[text:"X" fontSize:28 fill:#4fc3f7/0.85 at:(-3.8,1.85)] (0.5s, ease.in, 5.7s) ~> text[text:"X" fontSize:28 fill:#4fc3f7/0.85 at:(-3.8,1.85)] (4.5s, ease.inOut, 6.4s) ~> text[text:"5" fontSize:28 fill:#ffd54f/0.95 at:(-3.8,0.75)] (0.6s, ease.spring, 13.5s)
+
+      block_3:
+        type: morph
+        shape: rectangle[w:1.0 h:0.8 fill:#4fc3f7/0.2 stroke:#4fc3f7/0.65 strokeWidth:1.5 at:(-3.0,0.6)] -> fadeIn(0.8s, 0.4s) ~> rectangle[w:1.0 h:0.8 fill:#4fc3f7/0.2 stroke:#4fc3f7/0.65 strokeWidth:1.5 at:(-3.0,0.6)] (3.0s, ease.inOut, 0.5s) ~> rectangle[w:1.0 h:0.8 fill:#4fc3f7/0.2 stroke:#4fc3f7/0.65 strokeWidth:1.5 at:(-2.0,-1.2)] (0.35s, ease.in, 4.9s) -> fadeOut(0.3s, 5.3s)
+
+      label_3:
+        type: morph
+        shape: text[text:"3" fontSize:28 fill:#4fc3f7/0.85 at:(-3.0,0.65)] -> fadeIn(0.7s, 0.5s) ~> text[text:"3" fontSize:28 fill:#4fc3f7/0.85 at:(-3.0,0.65)] (3.0s, ease.inOut, 0.5s) ~> text[text:"3" fontSize:28 fill:#4fc3f7/0.85 at:(-2.0,-1.15)] (0.35s, ease.in, 4.9s) -> fadeOut(0.25s, 5.25s)
+
+      block_8:
+        type: morph
+        shape: rectangle[w:1.0 h:0.8 fill:#4fc3f7/0.2 stroke:#4fc3f7/0.65 strokeWidth:1.5 at:(3.5,0.6)] -> fadeIn(0.8s, 0.4s) ~> rectangle[w:1.0 h:0.8 fill:#4fc3f7/0.2 stroke:#4fc3f7/0.65 strokeWidth:1.5 at:(3.5,-0.2)] (0.5s, ease.in, 5.7s) ~> rectangle[w:1.0 h:0.8 fill:#4fc3f7/0.2 stroke:#4fc3f7/0.65 strokeWidth:1.5 at:(3.5,-0.2)] (4.5s, ease.inOut, 6.4s) ~> rectangle[w:1.0 h:0.8 fill:#4fc3f7/0.2 stroke:#4fc3f7/0.65 strokeWidth:1.5 at:(4.8,-1.2)] (0.35s, ease.in, 11.8s) -> fadeOut(0.3s, 12.2s)
+
+      label_8:
+        type: morph
+        shape: text[text:"8" fontSize:28 fill:#4fc3f7/0.85 at:(3.5,0.65)] -> fadeIn(0.7s, 0.5s) ~> text[text:"8" fontSize:28 fill:#4fc3f7/0.85 at:(3.5,-0.15)] (0.5s, ease.in, 5.7s) ~> text[text:"8" fontSize:28 fill:#4fc3f7/0.85 at:(3.5,-0.15)] (4.5s, ease.inOut, 6.4s) ~> text[text:"8" fontSize:28 fill:#4fc3f7/0.85 at:(4.8,-1.15)] (0.35s, ease.in, 11.8s) -> fadeOut(0.25s, 12.15s)
+
+      figure:
+        type: morph
+        shape: stickman[at:(-6.5,-0.8) size:2.8 facing:right stroke:#4fc3f7 strokeWidth:3.5 pose:walk_contact_a motionStyle:walk_edu motionIntensity:1 motionSpeed:1 motionSharpness:0.15 actionStyle:idle_alive actionStrength:0.2] (0.45s, ease.inOut, 0.5s) ~> stickman[at:(-4.8,-0.8) size:2.8 facing:right stroke:#4fc3f7 strokeWidth:3.5 pose:walk_pass_a motionStyle:walk_edu motionIntensity:0.8 motionSpeed:0.9 motionSharpness:0.15 actionStyle:idle_alive actionStrength:0.2] (0.45s, ease.inOut, 1.0s) ~> stickman[at:(-4.8,-0.8) size:2.8 facing:right stroke:#4fc3f7 strokeWidth:3.5 pose:ready motionStyle:stop motionIntensity:0.3 actionStyle:none actionStrength:0] (0.4s, ease.out, 1.5s) ~> stickman[at:(-4.8,-0.8) size:2.8 facing:right stroke:#4fc3f7 strokeWidth:3.5 pose:point_front motionStyle:freeze motionIntensity:0 actionStyle:point actionStrength:0.9 headTilt:0.06] (0.45s, ease.out, 2.0s) ~> stickman[at:(-4.8,-0.8) size:2.8 facing:right stroke:#4fc3f7 strokeWidth:3.5 pose:look_right motionStyle:freeze motionIntensity:0 actionStyle:look actionStrength:0.8 headTilt:0.14] (0.5s, ease.inOut, 3.2s) ~> stickman[at:(-4.8,-0.8) size:2.8 facing:right stroke:#4fc3f7 strokeWidth:3.5 pose:kick_a motionStyle:freeze motionIntensity:0 actionStyle:none actionStrength:0] (0.3s, ease.out, 4.5s) ~> stickman[at:(-4.8,-0.8) size:2.8 facing:right stroke:#4fc3f7 strokeWidth:3.5 pose:kick_b motionStyle:freeze motionIntensity:0 actionStyle:hit actionStrength:1] (0.25s, ease.out, 4.85s) ~> stickman[at:(-4.8,-0.8) size:2.8 facing:right stroke:#4fc3f7 strokeWidth:3.5 pose:ready motionStyle:stop motionIntensity:0.3 actionStyle:none actionStrength:0] (0.4s, ease.out, 5.3s) ~> stickman[at:(-4.8,-0.8) size:2.8 facing:right stroke:#4fc3f7 strokeWidth:3.5 pose:arms_spread motionStyle:freeze motionIntensity:0 actionStyle:panic actionStrength:0.9 headTilt:0.2] (0.35s, ease.out, 5.8s) ~> stickman[at:(3.5,-0.4) size:2.8 facing:left stroke:#4fc3f7 strokeWidth:3.5 pose:guard motionStyle:freeze motionIntensity:0 actionStyle:block actionStrength:0.8 headTilt:0.16] (0.45s, ease.in, 7.0s) ~> stickman[at:(3.5,-0.4) size:2.8 facing:left stroke:#4fc3f7 strokeWidth:3.5 pose:look_left motionStyle:freeze motionIntensity:0 actionStyle:look actionStrength:0.8 headTilt:-0.18] (0.5s, ease.inOut, 8.5s) ~> stickman[at:(3.5,-0.4) size:2.8 facing:left stroke:#4fc3f7 strokeWidth:3.5 pose:point_front motionStyle:freeze motionIntensity:0 actionStyle:point actionStrength:1 headTilt:-0.06] (0.4s, ease.out, 9.5s) ~> stickman[at:(3.5,-0.4) size:2.8 facing:left stroke:#4fc3f7 strokeWidth:3.5 pose:kick_a motionStyle:freeze motionIntensity:0 actionStyle:none actionStrength:0] (0.3s, ease.out, 11.4s) ~> stickman[at:(3.5,-0.4) size:2.8 facing:left stroke:#4fc3f7 strokeWidth:3.5 pose:kick_b motionStyle:freeze motionIntensity:0 actionStyle:hit actionStrength:1] (0.25s, ease.out, 11.75s) ~> stickman[at:(3.5,0.2) size:2.8 facing:left stroke:#4fc3f7 strokeWidth:3.5 pose:arms_spread motionStyle:freeze motionIntensity:0 actionStyle:none actionStrength:0 headTilt:0.16] (0.5s, ease.spring, 13.6s) ~> stickman[at:(-4.5,-0.8) size:2.8 facing:right stroke:#4fc3f7 strokeWidth:3.5 pose:walk_contact_a motionStyle:walk_edu motionIntensity:0.7 motionSpeed:0.8 actionStyle:idle_alive actionStrength:0.2] (0.8s, ease.inOut, 14.8s) ~> stickman[at:(-4.5,-0.8) size:2.8 facing:right stroke:#4fc3f7 strokeWidth:3.5 pose:ready motionStyle:stop motionIntensity:0.3 actionStyle:none actionStrength:0] (0.35s, ease.out, 15.7s) ~> stickman[at:(-4.5,-0.8) size:2.8 facing:right stroke:#4fc3f7 strokeWidth:3.5 pose:point_front motionStyle:freeze motionIntensity:0 actionStyle:point actionStrength:1 headTilt:0.06] (0.4s, ease.out, 16.2s) ~> stickman[at:(-4.5,-0.8) size:2.8 facing:right stroke:#4fc3f7 strokeWidth:3.5 pose:arms_spread motionStyle:freeze motionIntensity:0 actionStyle:panic actionStrength:0.8 headTilt:0.22] (0.35s, ease.out, 17.0s) ~> stickman[at:(-4.5,-0.8) size:2.65 facing:right stroke:#4fc3f7 strokeWidth:3.5 pose:idle motionStyle:idle_alive motionIntensity:0.3 actionStyle:idle_alive actionStrength:0.3 headStroke:#ffd54f headTilt:0] (0.8s, ease.inOut, 18.8s) ~> stickman[at:(-6.5,-0.8) size:2.8 facing:left stroke:#4fc3f7 strokeWidth:3.5 pose:walk_contact_a motionStyle:walk_edu motionIntensity:1 motionSpeed:1 motionSharpness:0.15 actionStyle:idle_alive actionStrength:0.2 headStroke:#ffd54f] (1.3s, ease.inOut, 21.5s)
+
+      cinematic:
+        type: morph
+        shape: text[text:"X = 5" fontSize:64 fill:#ffd54f/0 at:(0,-1.5)] ~> text[text:"X = 5" fontSize:64 fill:#ffd54f/0.9 at:(0,-1.5)] (1.2s, ease.out, 18.5s) ~> text[text:"X = 5" fontSize:64 fill:#ffd54f/0.9 at:(0,-1.5)] (2.5s, ease.inOut, 19.8s) ~> text[text:"X = 5" fontSize:18 fill:#ffd54f/0.3 at:(0,-1.5)] (1.5s, ease.inOut, 22.5s)
+
+      lbl_1:
+        type: primitive
+        shape: text[text:"equation" fontSize:16 fill:#ffffff/0.32 at:(-5,-3.0)] -> fadeIn(0.6s, 21.0s)
+
+      lbl_2:
+        type: primitive
+        shape: text[text:"isolate variable" fontSize:16 fill:#ffffff/0.3 at:(0,-3.0)] -> fadeIn(0.6s, 21.5s)
+
+      lbl_3:
+        type: primitive
+        shape: text[text:"inverse operation" fontSize:16 fill:#ffffff/0.3 at:(5,-3.0)] -> fadeIn(0.6s, 22.0s)

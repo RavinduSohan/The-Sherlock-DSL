@@ -1,0 +1,93 @@
+concept: "Neural Network Learning"
+emoji: "🧠"
+total_duration: 12
+background: "#0f0f23"
+
+phases:
+  setup:
+    duration: 3
+    description: "Initialize neural network"
+    elements:
+      network:
+        type: neural_net
+        position: [0, 0]
+        layers: [3, 5, 3, 1]
+        colors: ["#4ecdc4", "#d4af37"]
+      
+      input_sparkles:
+        type: sparkles
+        count: 3
+        
+  training:
+    duration: 4
+    description: "Training process"
+    elements:
+      active_network:
+        type: neural_net
+        position: [0, 0]
+        layers: [3, 5, 3, 1]
+        colors: ["#ff6b6b", "#4ecdc4", "#d4af37"]
+        animation_speed: 1.5
+      
+      data_flow:
+        type: sparkles
+        count: 10
+        
+  convergence:
+    duration: 3
+    description: "Model convergence"
+    elements:
+      trained_network:
+        type: neural_net
+        position: [0, 0]
+        layers: [3, 5, 3, 1]
+        colors: ["#d4af37", "#ffffff"]
+      
+      success_fireworks:
+        type: fireworks
+        position: [150, -100]
+        intensity: 1
+        colors: ["#4ecdc4", "#d4af37"]
+        
+  celebration:
+    duration: 2
+    description: "Training complete"
+    elements:
+      final_network:
+        type: neural_net
+        position: [0, 0]
+        layers: [3, 5, 3, 1]
+        colors: ["#d4af37"]
+      
+      star_celebration:
+        type: star_field
+        density: 1.5
+
+equations:
+  - id: "forward_pass"
+    latex: "\\hat{y} = f(W \\cdot x + b)"
+    position: "top-right"
+    phase: "setup"
+    animation: "fade-in"
+    delay: 1
+
+  - id: "loss_function"
+    latex: "L = \\frac{1}{2}(y - \\hat{y})^2"
+    position: "bottom-left"
+    phase: "training"
+    animation: "slide-in"
+    delay: 1
+
+  - id: "backprop"
+    latex: "\\frac{\\partial L}{\\partial W} = \\frac{\\partial L}{\\partial \\hat{y}} \\cdot \\frac{\\partial \\hat{y}}{\\partial W}"
+    position: "bottom-right"
+    phase: "training"
+    animation: "fade-in"
+    delay: 2
+
+  - id: "convergence"
+    latex: "\\lim_{n \\to \\infty} L_n = 0"
+    position: "center"
+    phase: "convergence"
+    animation: "bounce"
+    delay: 1

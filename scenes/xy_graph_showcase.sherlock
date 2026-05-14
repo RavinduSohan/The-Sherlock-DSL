@@ -1,0 +1,223 @@
+concept: "Advanced Mathematical XY Graphs"
+emoji: "📊"
+total_duration: 20
+background: "#0a0a0a"
+
+subtitles:
+  - "Mathematical Functions - Smooth curves and precise plotting"
+  - "Coordinate Data - Points connected with elegant curves"
+  - "Analysis Features - Derivatives, extrema, and statistics"
+  - "Interactive Visualizations - Better than Manim"
+
+phases:
+  basic_functions:
+    duration: 5
+    static_hold_time: 1
+    description: "Basic mathematical functions"
+    elements:
+      title:
+        type: text
+        text: "📊 Mathematical Functions"
+        position: [0, 320]
+        color: "#f1c40f"
+        size: 32
+        font: "Georgia"
+        glow: true
+
+      # Quadratic function
+      parabola:
+        type: mathematical_entity
+        position: [-300, 0]
+        form: xy_graph
+        personality: elegant
+        size: 150
+        color: "#e74c3c"
+        energy: 0.8
+        data: ["x**2"]
+        label: "f(x) = x²"
+
+      # Sine wave
+      sine_wave:
+        type: mathematical_entity
+        position: [0, 0]
+        form: xy_graph
+        personality: playful
+        size: 150
+        color: "#3498db"
+        energy: 0.9
+        data: ["Math.sin(x)"]
+        label: "f(x) = sin(x)"
+
+      # Cubic function
+      cubic:
+        type: mathematical_entity
+        position: [300, 0]
+        form: xy_graph
+        personality: mysterious
+        size: 150
+        color: "#9b59b6"
+        energy: 0.7
+        data: ["x**3 - 2*x"]
+        label: "f(x) = x³ - 2x"
+
+  coordinate_data:
+    duration: 5
+    static_hold_time: 1
+    description: "Coordinate point plotting"
+    elements:
+      title:
+        type: text
+        text: "📈 Coordinate Data Plots"
+        position: [0, 320]
+        color: "#e67e22"
+        size: 32
+        font: "Georgia"
+        glow: true
+
+      # Heart curve using parametric equations
+      heart_curve:
+        type: mathematical_entity
+        position: [-200, 0]
+        form: xy_graph
+        personality: elegant
+        size: 160
+        color: "#e74c3c"
+        energy: 0.8
+        data: [[-3, 0], [-2.8, 0.8], [-2.5, 1.4], [-2, 1.8], [-1.5, 2.1], [-1, 2.2], [-0.5, 2.1], [0, 2], [0.5, 2.1], [1, 2.2], [1.5, 2.1], [2, 1.8], [2.5, 1.4], [2.8, 0.8], [3, 0], [2.5, -1], [2, -1.8], [1.5, -2.3], [1, -2.6], [0.5, -2.8], [0, -3], [-0.5, -2.8], [-1, -2.6], [-1.5, -2.3], [-2, -1.8], [-2.5, -1], [-3, 0]]
+        label: "Heart Curve"
+
+      # Spiral data
+      spiral:
+        type: mathematical_entity
+        position: [200, 0]
+        form: xy_graph
+        personality: mysterious
+        size: 160
+        color: "#2ecc71"
+        energy: 0.9
+        data: [[-4, 0], [-3.8, 0.5], [-3.5, 0.9], [-3, 1.2], [-2.5, 1.4], [-2, 1.5], [-1.5, 1.4], [-1, 1.2], [-0.5, 0.8], [0, 0], [0.5, -0.8], [1, -1.2], [1.5, -1.4], [2, -1.5], [2.5, -1.4], [3, -1.2], [3.5, -0.9], [3.8, -0.5], [4, 0]]
+        label: "Spiral Pattern"
+
+  advanced_functions:
+    duration: 5
+    static_hold_time: 1
+    description: "Advanced mathematical functions"
+    elements:
+      title:
+        type: text
+        text: "🔬 Advanced Functions"
+        position: [0, 320]
+        color: "#1abc9c"
+        size: 32
+        font: "Georgia"
+        glow: true
+
+      # Exponential function
+      exponential:
+        type: mathematical_entity
+        position: [-300, 0]
+        form: xy_graph
+        personality: wise
+        size: 150
+        color: "#f39c12"
+        energy: 0.6
+        data: ["Math.exp(x/2)"]
+        label: "f(x) = e^(x/2)"
+
+      # Logarithmic function
+      logarithm:
+        type: mathematical_entity
+        position: [0, 0]
+        form: xy_graph
+        personality: elegant
+        size: 150
+        color: "#8e44ad"
+        energy: 0.7
+        data: ["Math.log(Math.abs(x) + 0.1)"]
+        label: "f(x) = ln|x|"
+
+      # Complex polynomial
+      polynomial:
+        type: mathematical_entity
+        position: [300, 0]
+        form: xy_graph
+        personality: wise
+        size: 150
+        color: "#e67e22"
+        energy: 0.8
+        data: ["x**4 - 4*x**2 + x + 1"]
+        label: "f(x) = x⁴ - 4x² + x + 1"
+
+  mathematical_showcase:
+    duration: 5
+    static_hold_time: 2
+    description: "Complete mathematical showcase"
+    elements:
+      title:
+        type: text
+        text: "🎆 Mathematical Universe"
+        position: [0, 350]
+        color: "#fff"
+        size: 36
+        font: "Georgia"
+        glow: true
+
+      # Trigonometric functions showcase
+      trig_combo:
+        type: mathematical_entity
+        position: [-250, 100]
+        form: xy_graph
+        personality: playful
+        size: 120
+        color: "#e74c3c"
+        energy: 1.0
+        data: ["Math.sin(x) + 0.5*Math.cos(2*x)"]
+        label: "sin(x) + ½cos(2x)"
+
+      # Rational function
+      rational:
+        type: mathematical_entity
+        position: [0, 100]
+        form: xy_graph
+        personality: mysterious
+        size: 120
+        color: "#3498db"
+        energy: 0.9
+        data: ["x/(x**2 + 1)"]
+        label: "x/(x²+1)"
+
+      # Absolute value function
+      absolute:
+        type: mathematical_entity
+        position: [250, 100]
+        form: xy_graph
+        personality: sharp
+        size: 120
+        color: "#2ecc71"
+        energy: 0.8
+        data: ["Math.abs(x**2 - 4)"]
+        label: "|x² - 4|"
+
+      # Custom data points forming a flower
+      flower_pattern:
+        type: mathematical_entity
+        position: [-125, -100]
+        form: xy_graph
+        personality: elegant
+        size: 100
+        color: "#f1c40f"
+        energy: 0.7
+        data: [[-2, 0], [-1.8, 1.2], [-1.2, 1.8], [0, 2], [1.2, 1.8], [1.8, 1.2], [2, 0], [1.8, -1.2], [1.2, -1.8], [0, -2], [-1.2, -1.8], [-1.8, -1.2], [-2, 0]]
+        label: "Flower"
+
+      # Piecewise function simulation
+      piecewise:
+        type: mathematical_entity
+        position: [125, -100]
+        form: xy_graph
+        personality: wise
+        size: 100
+        color: "#9b59b6"
+        energy: 0.6
+        data: [[-3, -1], [-2, -1], [-1, 0], [0, 1], [1, 2], [2, 2], [3, 2]]
+        label: "Piecewise"

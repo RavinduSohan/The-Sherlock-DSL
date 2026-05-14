@@ -1,0 +1,50 @@
+# 🖼️ Quick Image Card Test
+# Testing the enhanced IMAGE_CARD features
+
+title: "Image Card Quick Test"
+width: 1920
+height: 1080
+fps: 60
+
+phases:
+  test:
+    duration: 8
+    elements:
+      
+      title:
+        type: text
+        text: "Enhanced Image Card Test"
+        position: [0, 380]
+        size: 48
+        color: "#FFFFFF"
+        glow: true
+      
+      # Simple image with Ken Burns
+      test_image:
+        type: image_card
+        source: "images/icons/spider.jpg"
+        position: [0, -30]
+        size: 400
+        ken_burns: "zoom_in"
+        kb_duration: 7
+        kb_start_scale: 1.0
+        kb_end_scale: 1.5
+        glow: true
+        glow_color: "#4a90e2"
+        glow_intensity: 30
+        border_width: 5
+        border_color: "#ffffff"
+        border_radius: 20
+        drop_shadow: true
+        delay: 0.5
+        fade_in: 1.5
+        credit: "All Effects Active!"
+        credit_position: "bottom-right"
+      
+      # Feature list
+      feature_list:
+        type: text
+        text: "✓ Ken Burns  ✓ Glow  ✓ Border  ✓ Shadow  ✓ Fade  ✓ Credit"
+        position: [0, 260]
+        size: 20
+        color: "#4ECDC4"

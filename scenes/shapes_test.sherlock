@@ -1,0 +1,123 @@
+concept: "Basic Shapes Test"
+emoji: "🔷"
+total_duration: 6
+background: "#222222"
+
+phases:
+  setup:
+    duration: 6
+    description: "Show all available shapes"
+    elements:
+      circle1:
+        type: circle
+        center: [100, 100]
+        radius: 80
+        color: "#1976d2"
+        glow: true
+        label: ""
+
+      circle2:
+        type: circle
+        center: [100, 0]
+        radius: 20
+        color: "#43a047"
+        fill: true
+        label: "Filled"
+
+      line1:
+        type: line
+        from: [0, -100]
+        to: [200, -100]
+        color: "#ffd600"
+        thickness: 3
+        glow: true
+        label: "Line"
+
+      line2:
+        type: line
+        from: [-100, -50]
+        to: [300, 50]
+        color: "#ff6b6b"
+        thickness: 2
+        dashed: true
+        label: "Dashed"
+
+      rect1:
+        type: rectangle
+        position: [0, 0]
+        width: 20
+        height: 100
+        color: "#9c27b0"
+        fill: true
+        glow: true
+        label: ""
+        
+      rectbhbiu:
+        type: rectangle
+        position: [90, 0]
+        width: 30
+        height: 120
+        color: "#9c27b0"
+        fill: true
+        glow: true
+        label: "bb"
+                
+      rect3:
+        type: rectangle
+        position: [-90, 0]
+        width: 20
+        height: 120
+        color: "#9c27b0"
+        fill: true
+        glow: true
+        label: "cc"
+                        
+
+      rect2:
+        type: rectangle
+        position: [-100, 0]
+        width: 50
+        height: 50
+        color: "#ff9800"
+        glow: true
+        label: "Square"
+
+      point1:
+        type: point
+        position: [0, 100]
+        radius: 8
+        color: "#e91e63"
+        glow: true
+        label: "Point"
+
+      point2:
+        type: point
+        position: [200, 100]
+        radius: 5
+        color: "#00bcd4"
+        label: "Dot"
+
+      # Connect some shapes
+      connector1:
+        type: vector
+        from: [100, 100]
+        to: [-100, 100]
+        color: "#666666"
+        width: 2
+        label: ""
+
+      connector2:
+        type: vector
+        from: [0, 100]
+        to: [100, 0]
+        color: "#666666"
+        width: 2
+        label: ""
+
+subtitles:
+  - "🔷 Testing all basic shapes"
+  - "⭕ Circles with glow and fill options"
+  - "📏 Lines with thickness and dashing"
+  - "▭ Rectangles and squares"
+  - "• Points and dots"
+  - "🔗 Connected with vectors"

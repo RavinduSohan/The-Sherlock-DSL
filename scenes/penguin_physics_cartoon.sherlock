@@ -1,0 +1,263 @@
+concept: "Penguin's Physics Discovery"
+emoji: "🐧"
+total_duration: 40
+background: "#0a0a0a"
+
+subtitles:
+  - ""
+  - ""
+  - ""
+  - ""
+  - ""
+  - ""
+  - ""
+  - ""
+  - ""
+
+phases:
+  scene_1:
+    duration: 8
+    description: "Penguin begins journey to mountain"
+    elements:
+      penguin_hero:
+        type: animated_emoji
+        emoji: "🐧"
+        position: [-150, 20]
+        size: 140
+        movement: "slide-horizontal"
+        glowing: "none"
+        rotation: "none"
+        reveal: "slide-reveal"
+        speed: "slow"
+        delay: "none"
+        color: "#ffffff"
+      
+      mountain_destination:
+        type: animated_emoji
+        emoji: "⛰️"
+        position: [180, 10]
+        size: 130
+        movement: "none"
+        glowing: "pulsing-glow"
+        rotation: "none"
+        reveal: "zoom-reveal"
+        speed: "normal"
+        delay: "delay-1"
+        color: "#8B7355"
+      
+      noir_subtitle:
+        type: text
+        text: "The curious penguin waddles toward mysteries unknown"
+        position: [0, -220]
+        size: 18
+        color: "#d4a373"
+        glow: false
+        font: "Courier New"
+  
+  scene_2:
+    duration: 8
+    description: "Penguin climbs mountain and observes nature"
+    elements:
+      climbing_penguin:
+        type: animated_emoji
+        emoji: "🐧"
+        position: [-80, -30]
+        size: 130
+        movement: "bounce"
+        glowing: "none"
+        rotation: "gentle-rotate"
+        reveal: "slide-reveal"
+        speed: "normal"
+        delay: "none"
+        color: "#ffffff"
+      
+      mountain_peak:
+        type: animated_emoji
+        emoji: "🏔️"
+        position: [0, 40]
+        size: 180
+        movement: "none"
+        glowing: "none"
+        rotation: "none"
+        reveal: "zoom-reveal"
+        speed: "normal"
+        delay: "none"
+        color: "#e0e0e0"
+      
+      apple_tree:
+        type: animated_emoji
+        emoji: "🌳"
+        position: [160, -10]
+        size: 110
+        movement: "wobble"
+        glowing: "none"
+        rotation: "none"
+        reveal: "slide-reveal"
+        speed: "slow"
+        delay: "delay-1"
+        color: "#228B22"
+      
+      noir_subtitle:
+        type: text
+        text: "At the summit, nature whispers ancient secrets"
+        position: [0, -220]
+        size: 18
+        color: "#d4a373"
+        glow: false
+        font: "Courier New"
+  
+  scene_3:
+    duration: 8
+    description: "Apple falls - the eureka moment"
+    elements:
+      thinking_penguin:
+        type: animated_emoji
+        emoji: "🐧"
+        position: [-140, 30]
+        size: 135
+        movement: "none"
+        glowing: "pulsing-glow"
+        rotation: "none"
+        reveal: "zoom-reveal"
+        speed: "normal"
+        delay: "none"
+        color: "#ffffff"
+      
+      falling_apple:
+        type: animated_emoji
+        emoji: "🍎"
+        position: [60, -80]
+        size: 90
+        movement: "bounce"
+        glowing: "flicker"
+        rotation: "spin-clockwise"
+        reveal: "slide-reveal"
+        speed: "fast"
+        delay: "delay-1"
+        color: "#DC143C"
+      
+      thought_spark:
+        type: animated_emoji
+        emoji: "💡"
+        position: [100, 50]
+        size: 100
+        movement: "floating-pen"
+        glowing: "pulsing-glow"
+        rotation: "none"
+        reveal: "zoom-reveal"
+        speed: "fast"
+        delay: "delay-2"
+        color: "#FFD700"
+      
+      noir_subtitle:
+        type: text
+        text: "A falling apple reveals the invisible hand of gravity"
+        position: [0, -220]
+        size: 18
+        color: "#d4a373"
+        glow: false
+        font: "Courier New"
+  
+  scene_4:
+    duration: 8
+    description: "Penguin does the math - Newton's equation"
+    elements:
+      scientist_penguin:
+        type: animated_emoji
+        emoji: "🐧"
+        position: [-180, 40]
+        size: 130
+        movement: "wobble"
+        glowing: "none"
+        rotation: "none"
+        reveal: "slide-reveal"
+        speed: "slow"
+        delay: "none"
+        color: "#ffffff"
+      
+      math_book:
+        type: animated_emoji
+        emoji: "📐"
+        position: [-50, 60]
+        size: 90
+        movement: "floating-pen"
+        glowing: "none"
+        rotation: "none"
+        reveal: "slide-reveal"
+        speed: "normal"
+        delay: "delay-1"
+        color: "#4169E1"
+      
+      gravity_equation:
+        type: animated_emoji
+        emoji: "F=Gm₁m₂/r²"
+        position: [120, 20]
+        size: 70
+        movement: "floating-pen"
+        glowing: "matrix-code"
+        rotation: "none"
+        reveal: "slide-reveal"
+        speed: "normal"
+        delay: "delay-2"
+        color: "#e74c3c"
+      
+      noir_subtitle:
+        type: text
+        text: "Mathematics unveils the cosmic dance of attraction"
+        position: [0, -220]
+        size: 18
+        color: "#d4a373"
+        glow: false
+        font: "Courier New"
+  
+  scene_5:
+    duration: 8
+    description: "Understanding gravity - Earth and Moon"
+    elements:
+      wise_penguin:
+        type: animated_emoji
+        emoji: "🐧"
+        position: [-200, 50]
+        size: 120
+        movement: "none"
+        glowing: "pulsing-glow"
+        rotation: "none"
+        reveal: "zoom-reveal"
+        speed: "normal"
+        delay: "none"
+        color: "#ffffff"
+      
+      earth_globe:
+        type: animated_emoji
+        emoji: "🌍"
+        position: [0, -20]
+        size: 140
+        movement: "gentle-rotate"
+        glowing: "pulsing-glow"
+        rotation: "gentle-rotate"
+        reveal: "zoom-reveal"
+        speed: "ultra-slow"
+        delay: "delay-1"
+        color: "#4169E1"
+      
+      moon_satellite:
+        type: animated_emoji
+        emoji: "🌙"
+        position: [180, -40]
+        size: 100
+        movement: "orbit"
+        glowing: "flicker"
+        rotation: "none"
+        reveal: "spiral-reveal"
+        speed: "slow"
+        delay: "delay-2"
+        color: "#F0E68C"
+      
+      noir_subtitle:
+        type: text
+        text: "Every mass pulls every other mass - the universe's eternal embrace"
+        position: [0, -220]
+        size: 18
+        color: "#d4a373"
+        glow: false
+        font: "Courier New"

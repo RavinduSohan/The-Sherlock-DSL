@@ -1,0 +1,514 @@
+concept: "MorphEntity Premium Showcase - All Features"
+emoji: "✨"
+total_duration: 40
+background: "#0a0a1a"
+
+subtitles:
+  - "MorphEntity Showcase"
+  - "Movement Styles"
+  - "Shape Morphing"
+  - "Split Patterns"
+  - "Timeline Magic"
+  - "Grand Finale"
+
+phases:
+  intro:
+    duration: 3
+    description: "Title Card"
+    elements:
+      title_star:
+        type: morph_entity
+        position: [0, 80]
+        form: star
+        size: 120
+        color: "#ff6b9d"
+        motion_profile: high_energy
+        glow: true
+        energy: 1.0
+        label: "MorphEntity"
+      
+      hex_left:
+        type: morph_entity
+        position: [-150, -50]
+        form: hexagon
+        size: 60
+        color: "#00ff88"
+        motion_profile: fluid_organic
+        glow: true
+        energy: 0.9
+        rotate_to: 360
+        rotate_style: ease_in_out
+        rotate_duration: 3
+      
+      hex_right:
+        type: morph_entity
+        position: [150, -50]
+        form: hexagon
+        size: 60
+        color: "#00d4ff"
+        motion_profile: fluid_organic
+        glow: true
+        energy: 0.9
+        rotate_to: -360
+        rotate_style: ease_in_out
+        rotate_duration: 3
+
+  
+  movement_styles:
+    duration: 5
+    description: "Movement Demonstrations"
+    elements:
+      move_const:
+        type: morph_entity
+        position: [-400, 150]
+        move_to: [400, 150]
+        move_duration: 5
+        move_style: constant_velocity
+        form: circle
+        size: 50
+        color: "#a29bfe"
+        motion_profile: precision_linear
+        glow: true
+        energy: 0.8
+        label: "Constant Velocity"
+      
+      move_ease:
+        type: morph_entity
+        position: [-400, 50]
+        move_to: [400, 50]
+        move_duration: 5
+        move_style: ease_in_out
+        form: square
+        size: 50
+        color: "#fd79a8"
+        motion_profile: fluid_organic
+        glow: true
+        energy: 0.85
+        label: "Ease In/Out"
+      
+      move_bounce:
+        type: morph_entity
+        position: [-400, -50]
+        move_to: [400, -50]
+        move_duration: 5
+        move_style: elastic_bounce
+        form: triangle
+        size: 50
+        color: "#ffeaa7"
+        motion_profile: high_energy
+        glow: true
+        energy: 1.0
+        label: "Elastic Bounce"
+      
+      move_spring:
+        type: morph_entity
+        position: [-400, -150]
+        move_to: [400, -150]
+        move_duration: 5
+        move_style: spring_physics
+        form: pentagon
+        size: 50
+        color: "#55efc4"
+        motion_profile: kinetic_dynamic
+        glow: true
+        energy: 0.9
+        label: "Spring Physics"
+  
+  morphing_styles:
+    duration: 6
+    description: "Shape Morphing Demonstrations"
+    elements:
+      morph_vertex:
+        type: morph_entity
+        position: [-250, 120]
+        form: circle
+        size: 70
+        color: "#6c5ce7"
+        motion_profile: stable_balanced
+        glow: true
+        energy: 0.8
+        morph_to: star
+        morph_at: 1
+        morph_duration: 3
+        morph_style: vertex_interpolation
+        rotate_to: 360
+        rotate_style: ease_in_out
+        rotate_duration: 6
+        label: "Vertex Morph"
+      
+      morph_elastic:
+        type: morph_entity
+        position: [0, 120]
+        form: square
+        size: 70
+        color: "#00cec9"
+        motion_profile: high_energy
+        glow: true
+        energy: 1.0
+        morph_to: hexagon
+        morph_at: 1
+        morph_duration: 3
+        morph_style: elastic_deform
+        label: "Elastic Deform"
+      
+      morph_fluid:
+        type: morph_entity
+        position: [250, 120]
+        form: triangle
+        size: 70
+        color: "#ff7675"
+        motion_profile: fluid_organic
+        glow: true
+        energy: 0.85
+        morph_to: octagon
+        morph_at: 1
+        morph_duration: 3
+        morph_style: fluid_transition
+        label: "Fluid Transition"
+      
+      morph_helical:
+        type: morph_entity
+        position: [-250, -100]
+        form: pentagon
+        size: 70
+        color: "#fdcb6e"
+        motion_profile: kinetic_dynamic
+        glow: true
+        energy: 0.9
+        morph_to: circle
+        morph_at: 1
+        morph_duration: 3
+        morph_style: helical_twist
+        rotate_to: 720
+        rotate_style: ease_in_out
+        rotate_duration: 6
+        label: "Helical Twist"
+      
+      morph_particle:
+        type: morph_entity
+        position: [0, -100]
+        form: hexagon
+        size: 70
+        color: "#fab1a0"
+        motion_profile: high_energy
+        glow: true
+        energy: 1.0
+        morph_to: square
+        morph_at: 1
+        morph_duration: 3
+        morph_style: particle_dispersion
+        label: "Particle"
+      
+      morph_fade:
+        type: morph_entity
+        position: [250, -100]
+        form: star
+        size: 70
+        color: "#74b9ff"
+        motion_profile: stable_balanced
+        glow: true
+        energy: 0.75
+        morph_to: pentagon
+        morph_at: 1
+        morph_duration: 3
+        morph_style: alpha_fade
+        label: "Alpha Fade"
+  
+  split_patterns:
+    duration: 6
+    description: "Split Pattern Demonstrations"
+    elements:
+      split_radial:
+        type: morph_entity
+        position: [-250, 120]
+        form: circle
+        size: 60
+        color: "#e17055"
+        motion_profile: high_energy
+        glow: true
+        energy: 1.0
+        split_at: 1.5
+        split_into: 8
+        split_pattern: radial_burst
+        split_spacing: 180
+        rotate_to: 360
+        rotate_style: ease_in_out
+        rotate_duration: 6
+        label: "Radial Burst"
+      
+      split_circular:
+        type: morph_entity
+        position: [250, 120]
+        form: square
+        size: 60
+        color: "#00b894"
+        motion_profile: fluid_organic
+        glow: true
+        energy: 0.85
+        split_at: 1.5
+        split_into: 6
+        split_pattern: circular_formation
+        split_spacing: 150
+        label: "Circular"
+      
+      split_grid:
+        type: morph_entity
+        position: [0, 0]
+        form: hexagon
+        size: 55
+        color: "#fdcb6e"
+        motion_profile: stable_balanced
+        glow: true
+        energy: 0.8
+        split_at: 1.5
+        split_into: 9
+        split_pattern: grid_matrix
+        split_spacing: 100
+        label: "Grid Matrix"
+      
+      split_horiz:
+        type: morph_entity
+        position: [-250, -120]
+        form: star
+        size: 50
+        color: "#a29bfe"
+        motion_profile: precision_linear
+        glow: true
+        energy: 0.75
+        split_at: 1.5
+        split_into: 5
+        split_pattern: horizontal_split
+        split_spacing: 120
+        label: "Horizontal"
+      
+      split_vert:
+        type: morph_entity
+        position: [250, -120]
+        form: pentagon
+        size: 50
+        color: "#55efc4"
+        motion_profile: kinetic_dynamic
+        glow: true
+        energy: 0.8
+        split_at: 1.5
+        split_into: 5
+        split_pattern: vertical_split
+        split_spacing: 120
+        label: "Vertical"
+  
+  timeline_demo:
+    duration: 8
+    description: "Timeline Choreography"
+    elements:
+      timeline_main:
+        type: morph_entity
+        position: [0, 0]
+        form: circle
+        size: 80
+        color: "#ff6b9d"
+        motion_profile: kinetic_dynamic
+        glow: true
+        energy: 0.95
+        label: "Timeline"
+        timeline:
+          - at: 1
+            action: move
+            duration: 2
+            to_position: [-250, 150]
+            easing: elastic_bounce
+          - at: 2
+            action: morph
+            duration: 1.5
+            to_shape: star
+            style: elastic_deform
+          - at: 3
+            action: rotate
+            duration: 2
+            rotation: 720
+            mode: ease_in_out
+          - at: 4
+            action: move
+            duration: 2
+            to_position: [250, 150]
+            easing: spring_physics
+          - at: 5
+            action: morph
+            duration: 1.5
+            to_shape: hexagon
+            style: fluid_transition
+          - at: 6
+            action: move
+            duration: 1.5
+            to_position: [0, -150]
+            easing: ease_in_out
+          - at: 6.5
+            action: split
+            duration: 1
+            count: 6
+            pattern: radial_burst
+            spacing: 120
+      
+      orbit_1:
+        type: morph_entity
+        position: [0, 0]
+        form: circle
+        size: 40
+        color: "#00d4ff"
+        motion_profile: fluid_organic
+        glow: true
+        energy: 0.8
+        timeline:
+          - at: 0
+            action: orbit
+            duration: 8
+            center: [0, 0]
+            radius: 200
+            speed: 2
+      
+      orbit_2:
+        type: morph_entity
+        position: [0, 0]
+        form: triangle
+        size: 35
+        color: "#00ff88"
+        motion_profile: high_energy
+        glow: true
+        energy: 0.85
+        timeline:
+          - at: 0
+            action: orbit
+            duration: 8
+            center: [0, 0]
+            radius: 200
+            speed: -2.5
+      
+      orbit_3:
+        type: morph_entity
+        position: [0, 0]
+        form: square
+        size: 30
+        color: "#ffeaa7"
+        motion_profile: kinetic_dynamic
+        glow: true
+        energy: 0.9
+        timeline:
+          - at: 0
+            action: orbit
+            duration: 8
+            center: [0, 0]
+            radius: 200
+            speed: 1.5
+  
+  grand_finale:
+    duration: 12
+    description: "Grand Finale"
+    elements:
+      finale_center:
+        type: morph_entity
+        position: [0, 0]
+        form: star
+        size: 100
+        color: "#ff6b9d"
+        motion_profile: high_energy
+        glow: true
+        energy: 1.0
+        rotate_to: 1440
+        rotate_style: ease_in_out
+        rotate_duration: 12
+        morph_to: circle
+        morph_at: 4
+        morph_duration: 3
+        morph_style: helical_twist
+        split_at: 8
+        split_into: 12
+        split_pattern: radial_burst
+        split_spacing: 220
+        label: "Grand Finale"
+      
+      finale_sat_1:
+        type: morph_entity
+        position: [0, 0]
+        form: hexagon
+        size: 50
+        color: "#00ff88"
+        motion_profile: fluid_organic
+        glow: true
+        energy: 0.9
+        timeline:
+          - at: 0
+            action: orbit
+            duration: 12
+            center: [0, 0]
+            radius: 250
+            speed: 1.5
+          - at: 2
+            action: morph
+            duration: 2
+            to_shape: star
+            style: elastic_deform
+      
+      finale_sat_2:
+        type: morph_entity
+        position: [0, 0]
+        form: pentagon
+        size: 50
+        color: "#00d4ff"
+        motion_profile: kinetic_dynamic
+        glow: true
+        energy: 0.9
+        timeline:
+          - at: 0
+            action: orbit
+            duration: 12
+            center: [0, 0]
+            radius: 250
+            speed: -1.8
+          - at: 3
+            action: morph
+            duration: 2
+            to_shape: octagon
+            style: fluid_transition
+      
+      finale_sat_3:
+        type: morph_entity
+        position: [0, 0]
+        form: square
+        size: 50
+        color: "#ffeaa7"
+        motion_profile: high_energy
+        glow: true
+        energy: 0.95
+        timeline:
+          - at: 0
+            action: orbit
+            duration: 12
+            center: [0, 0]
+            radius: 250
+            speed: 1.2
+          - at: 4
+            action: morph
+            duration: 2
+            to_shape: circle
+            style: vertex_interpolation
+      
+      finale_sat_4:
+        type: morph_entity
+        position: [0, 0]
+        form: triangle
+        size: 50
+        color: "#a29bfe"
+        motion_profile: fluid_organic
+        glow: true
+        energy: 0.85
+        timeline:
+          - at: 0
+            action: orbit
+            duration: 12
+            center: [0, 0]
+            radius: 250
+            speed: -1.5
+          - at: 5
+            action: morph
+            duration: 2
+            to_shape: hexagon
+            style: particle_dispersion

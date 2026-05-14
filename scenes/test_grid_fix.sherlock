@@ -1,0 +1,56 @@
+concept: "Grid Width/Height Test"
+emoji: "📊"
+total_duration: 10
+background: "#0a0a0a"
+
+subtitles:
+  - ""
+  - ""
+  - ""
+  - ""
+  - ""
+  - ""
+  - ""
+  - ""
+  - ""
+
+phases:
+  test_grid:
+    duration: 10
+    description: "Testing grid with width/height properties"
+    elements:
+      # Test grid with small spacing but full width/height
+      test_grid:
+        type: grid
+        position: [0, 0]
+        width: 800
+        height: 600
+        spacing: 20
+        color: "#3498db"
+        thickness: 1
+        opacity: 0.5
+        label: "Full Coverage Grid"
+      
+      # Reference axes to show coverage
+      x_axis:
+        type: line
+        from: [-400, 0]
+        to: [400, 0]
+        color: "#e74c3c"
+        thickness: 2
+        label: "X-axis"
+      
+      y_axis:
+        type: line
+        from: [0, -300]
+        to: [0, 300]
+        color: "#e74c3c"
+        thickness: 2
+        label: "Y-axis"
+      
+      title:
+        type: text
+        text: "Grid Should Cover Full Canvas"
+        position: [0, -280]
+        color: "#ffffff"
+        size: 18

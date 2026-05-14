@@ -1,0 +1,85 @@
+concept: "Component Animation Test"
+total_duration: 2
+background: "#1a1a2e"
+
+phases:
+  test_phase:
+    duration: 2
+    elements:
+      # Test mathematical_entity with breathe animation
+      entity1:
+        type: mathematical_entity
+        position: [-200, 100]
+        form: polygon
+        data: [6]
+        size: 50
+        color: "#4ecdc4"
+        animation_pattern: breathe
+        energy: 0.8
+        
+      # Test mathematical_entity with pulse animation
+      entity2:
+        type: mathematical_entity
+        position: [-200, -100]
+        form: point
+        size: 30
+        color: "#ff6b6b"
+        animation_pattern: pulse
+        energy: 0.9
+        
+      # Test relationship_connector with animation
+      connector1:
+        type: relationship_connector
+        from: [-200, 100]
+        to: [0, 50]
+        relationship_type: mapping
+        animated: true
+        color: "#f39c12"
+        strength: 0.7
+        
+      # Test xy_graph
+      graph1:
+        type: xy_graph
+        position: [200, 0]
+        size: 150
+        data_points: [[0, 0], [1, 1], [2, 0.5], [3, 1.5]]
+        x_range: [0, 3]
+        y_range: [0, 2]
+        color: "#9b59b6"
+        show_grid: true
+        show_axes: true
+        
+      # Test blinking_emoji
+      emoji1:
+        type: blinking_emoji
+        position: [0, 150]
+        emoji: "🌟"
+        size: 40
+        blink_speed: 2
+        
+      # Test fireworks animation
+      fireworks1:
+        type: fireworks
+        position: [-100, -150]
+        intensity: 1
+        colors: ["#ff6b6b", "#4ecdc4", "#f39c12"]
+        
+      # Test snow animation  
+      snow1:
+        type: snow
+        density: 0.5
+        
+      # Test sparkles animation
+      sparkles1:
+        type: sparkles
+        position: [100, 150]
+        count: 8
+        
+      # Test sine_curve
+      curve1:
+        type: sine_curve
+        position: [0, -50]
+        amplitude: 40
+        frequency: 0.03
+        width: 300
+        color: "#2ecc71"

@@ -1,0 +1,176 @@
+concept: "Polygon Mathematical Entities Showcase"
+emoji: "🔷"
+total_duration: 8
+background: "#1a1a2e"
+
+subtitles:
+  - "Testing polygon mathematical entities"
+  - "Different polygon shapes with various personalities"
+
+phases:
+  create_polygons:
+    duration: 4
+    static_hold_time: 1
+    description: "Display various polygon shapes"
+    elements:
+      title_label:
+        type: text
+        text: "🔷 Polygon Showcase"
+        position: [0, 280]
+        color: "#f39c12"
+        size: 24
+        font: "Georgia"
+        glow: true
+
+      # Triangle
+      triangle:
+        type: mathematical_entity
+        position: [-200, 100]
+        form: polygon
+        data: [3]
+        label: "Triangle"
+        personality: playful
+        size: 60
+        color: "#ff6b6b"
+        energy: 0.8
+
+      # Square  
+      square:
+        type: mathematical_entity
+        position: [0, 100]
+        form: polygon
+        data: [4]
+        label: "Square"
+        personality: sharp
+        size: 60
+        color: "#4ecdc4"
+        energy: 0.6
+
+      # Pentagon
+      pentagon:
+        type: mathematical_entity
+        position: [200, 100]
+        form: polygon
+        data: [5]
+        label: "Pentagon"
+        personality: elegant
+        size: 60
+        color: "#45b7d1"
+        energy: 0.7
+
+      # Hexagon
+      hexagon:
+        type: mathematical_entity
+        position: [-200, -100]
+        form: polygon
+        data: [6]
+        label: "Hexagon"
+        personality: wise
+        size: 60
+        color: "#96ceb4"
+        energy: 0.5
+
+      # Octagon
+      octagon:
+        type: mathematical_entity
+        position: [0, -100]
+        form: polygon
+        data: [8]
+        label: "Octagon"
+        personality: mysterious
+        size: 60
+        color: "#ffeaa7"
+        energy: 0.9
+
+      # Dodecagon (12 sides)
+      dodecagon:
+        type: mathematical_entity
+        position: [200, -100]
+        form: polygon
+        data: [12]
+        label: "Dodecagon"
+        personality: wise
+        size: 60
+        color: "#dda0dd"
+        energy: 0.4
+
+  animate_polygons:
+    duration: 4
+    static_hold_time: 1
+    description: "Animate the polygons with higher energy"
+    elements:
+      title_label:
+        type: text
+        text: "🔷 Animated Polygons"
+        position: [0, 280]
+        color: "#f39c12"
+        size: 24
+        font: "Georgia"
+        glow: true
+
+      # Animated versions with higher energy
+      triangle_animated:
+        type: mathematical_entity
+        position: [-200, 100]
+        form: polygon
+        data: [3]
+        label: "Triangle"
+        personality: playful
+        size: 60
+        color: "#ff6b6b"
+        energy: 1.0
+
+      square_animated:
+        type: mathematical_entity
+        position: [0, 100]
+        form: polygon
+        data: [4]
+        label: "Square"
+        personality: sharp
+        size: 60
+        color: "#4ecdc4"
+        energy: 0.8
+
+      pentagon_animated:
+        type: mathematical_entity
+        position: [200, 100]
+        form: polygon
+        data: [5]
+        label: "Pentagon"
+        personality: elegant
+        size: 60
+        color: "#45b7d1"
+        energy: 0.9
+
+      hexagon_animated:
+        type: mathematical_entity
+        position: [-200, -100]
+        form: polygon
+        data: [6]
+        label: "Hexagon"
+        personality: wise
+        size: 60
+        color: "#96ceb4"
+        energy: 0.7
+
+      octagon_animated:
+        type: mathematical_entity
+        position: [0, -100]
+        form: polygon
+        data: [8]
+        label: "Octagon"
+        personality: mysterious
+        size: 60
+        color: "#ffeaa7"
+        energy: 1.0
+
+      dodecagon_animated:
+        type: mathematical_entity
+        position: [200, -100]
+        form: polygon
+        data: [12]
+        label: "Dodecagon"
+        personality: wise
+        size: 60
+        color: "#dda0dd"
+        energy: 0.6

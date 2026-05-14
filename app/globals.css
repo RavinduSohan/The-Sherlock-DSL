@@ -1,0 +1,220 @@
+:root {
+  --background: #0d1117;
+  --foreground: #f0f6fc;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0d1117;
+    --foreground: #f0f6fc;
+  }
+}
+
+/* Full-screen layout reset */
+html,
+body {
+  max-width: 100vw;
+  max-height: 100vh;
+  overflow: hidden;
+  margin: 0;
+  padding: 0;
+  background: var(--background);
+  color: var(--foreground);
+  font-family: Arial, Helvetica, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Remove default margins and padding */
+* {
+  box-sizing: border-box;
+}
+
+/* Sherlock Player Styles */
+.sherlock-fullscreen-player {
+  width: 100vw !important;
+  height: 100vh !important;
+}
+
+/* Smooth animations */
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slideInFromRight {
+  from {
+    opacity: 0;
+    transform: translateX(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* Blur backdrop effect */
+.backdrop-blur {
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+}
+
+/* KaTeX equation overlay animations */
+@keyframes sherlock-fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes sherlock-slide-in {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes sherlock-bounce {
+  0% {
+    opacity: 0;
+    transform: scale(0.3);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1.05);
+  }
+  70% {
+    transform: scale(0.9);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes sherlock-typewriter {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+/* Sherlock equation overlay styling */
+.sherlock-equation-overlay {
+  font-family: 'Latin Modern Math', 'Computer Modern', serif;
+  user-select: none;
+  pointer-events: none;
+  /* No background, border, or padding - just clean LaTeX text */
+}
+
+.sherlock-equation-overlay .katex {
+  font-size: inherit !important;
+}
+
+.sherlock-equation-overlay .katex-display {
+  margin: 0 !important;
+}
+
+/* KaTeX highlighting animations */
+.katex-highlight {
+  animation: katex-highlight-pulse 0.8s ease-in-out;
+  background-color: rgba(212, 175, 55, 0.3) !important;
+  border-radius: 3px !important;
+  padding: 2px !important;
+  transition: all 0.3s ease !important;
+}
+
+@keyframes katex-highlight-pulse {
+  0% {
+    background-color: rgba(212, 175, 55, 0);
+    transform: scale(1);
+  }
+  50% {
+    background-color: rgba(212, 175, 55, 0.5);
+    transform: scale(1.05);
+  }
+  100% {
+    background-color: rgba(212, 175, 55, 0.3);
+    transform: scale(1);
+  }
+}
+
+/* Matrix calculation specific animations */
+.sherlock-matrix-calculation-overlay {
+  font-family: 'Latin Modern Math', 'Computer Modern', serif;
+  user-select: none;
+  pointer-events: none;
+}
+
+.sherlock-animated-equation-overlay {
+  font-family: 'Latin Modern Math', 'Computer Modern', serif;
+  user-select: none;
+  pointer-events: none;
+}
+
+/* Enhanced glow effects for KaTeX */
+.katex-glow {
+  filter: drop-shadow(0 0 10px rgba(212, 175, 55, 0.8));
+  text-shadow: 0 0 20px rgba(212, 175, 55, 0.6);
+}
+
+/* Matrix element highlighting */
+.matrix-element-highlight {
+  background-color: rgba(255, 107, 107, 0.3) !important;
+  border: 2px solid #ff6b6b !important;
+  border-radius: 4px !important;
+  animation: matrix-element-pulse 1s ease-in-out infinite;
+}
+
+@keyframes matrix-element-pulse {
+  0%, 100% {
+    background-color: rgba(255, 107, 107, 0.3);
+    border-color: #ff6b6b;
+  }
+  50% {
+    background-color: rgba(255, 107, 107, 0.6);
+    border-color: #ff8e8e;
+  }
+}
+
+/* Custom scrollbar for settings panel */
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: #30363d;
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #58a6ff;
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #1f6feb;
+}

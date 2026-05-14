@@ -1,0 +1,355 @@
+concept: "Pacific Atlantic Water Flow"
+emoji: "🌊"
+total_duration: 55
+background: "#0a0e1a"
+
+subtitles:
+  - ""
+  - ""
+  - ""
+  - ""
+  - ""
+
+phases:
+  setup:
+    duration: 4
+    description: "Tranquil oceanic background, title and subtitle fade in"
+    elements:
+      main_sine_curve:
+        type: sine_curve
+        position: [0, 0]
+        amplitude: 80
+        frequency: 0.015
+        phaseShift: 0
+        startX: -400
+        endX: 400
+        color: "#3498db"
+        thickness: 3
+        glow: true
+        label: "Primary Sine Wave"
+      
+      secondary_sine_curve:
+        type: sine_curve
+        position: [0, 50]
+        amplitude: 50
+        frequency: 0.025
+        phaseShift: 1.57
+        startX: -400
+        endX: 400
+        color: "#2ecc71"
+        thickness: 2
+        glow: true
+        label: "Secondary Sine Wave"
+
+      beautiful_waves:
+        type: waves
+        amplitude: 40
+        frequency: 0.04
+        layers: 4
+        colors: ["#4ecdc4", "#ff6b6b", "#d4af37", "#9b59b6"]
+        position: [0, 0]
+        opacity: 0.5
+        animated: true
+      elevation_grid:
+        type: algorithm_grid
+        position: [-150, 180]
+        rows: 5
+        cols: 5
+        cellSize: 60
+        spacing: 6
+        color: "#2c3e50"
+        border_color: "#34495e"
+        border_width: 3
+        cells: [[1, 2, 2, 3, 5], [3, 2, 3, 4, 4], [2, 4, 5, 3, 1], [6, 7, 1, 4, 5], [5, 1, 1, 2, 4]]
+        showValues: true
+        label: "Elevation Grid"
+        
+      pacific_label:
+        type: text
+        text: "🌊 Pacific Ocean"
+        position: [-180, -180]
+        color: "#3498db"
+        size: 24
+        font: "Arial"
+      
+      atlantic_label:
+        type: text
+        text: "🌊 Atlantic Ocean"
+        position: [180, 200]
+        color: "#e74c3c"
+        size: 24
+        font: "Arial"
+      
+      pacific_not_label:
+        type: text
+        text: "Water flows from a cell to any neighbor of lower or equal height. Our goal...\n find all mountains where rain can drain to both oceans."
+        position: [0, -230]
+        color: "#d4af37"
+        size: 20
+        font: "Cinzel Decorative"    
+
+  scene2_phase_1:
+    duration: 5
+    description: "what ever"
+    elements: 
+      elevation_grid:
+        type: algorithm_grid
+        position: [-150, 180]
+        rows: 15
+        cols: 15
+        cellSize: 20
+        spacing: 6
+        color: "#2c3e50"
+        border_color: "#34495e"
+        border_width: 3
+        cells: [[1, 2, 2, 3, 5], [3, 2, 3, 4, 4], [2, 4, 5, 3, 1], [6, 7, 1, 4, 5], [5, 1, 1, 2, 4]]
+        showValues: false
+        label: "Elevation Grid"
+
+      problem_title:
+        type: text
+        text: "Too Slow ❌🗺️"         
+        position: [0, 220]                 
+        color: "#58a6ff"                    
+        size: 28                            
+        glow: true                          
+        font: "Georgia"                      
+
+      beautiful_waves:
+        type: waves
+        amplitude: 40
+        frequency: 0.04
+        layers: 4
+        colors: ["#4ecdc4", "#ff6b6b", "#d4af37", "#9b59b6"]
+        position: [0, 0]
+        opacity: 0.5
+        animated: true            
+
+      pacific_not_label:
+        type: text
+        text: "we can Simulate a raindrop from every… single… mountain. For a big map,\nthis is a computational nightmare. Way too slow."
+        position: [0, -230]
+        color: "#d4af37"
+        size: 20
+        font: "Cinzel Decorative"   
+
+  scene3_phase_1:
+    duration: 5
+    description: "what ever"
+    elements:    
+      pacific_top_border:
+        type: line
+        from: [-150, -150]
+        to: [150, -150]
+        color: "#3498db"
+        thickness: 4
+        glow: true
+        label: "Pacific Top Border"
+      
+      pacific_left_border:
+        type: line
+        from: [-150, -150]
+        to: [-150, 150]
+        color: "#3498db"
+        thickness: 4
+        glow: true
+        label: "Pacific Left Border"
+
+      vector_b:
+        type: vector
+        from: [-150, -150]                       
+        to: [0, 0]                       
+        color: "#4ecdc4"                    
+        width: 3                            
+        glow: true                          
+        label: "Vector B"  
+
+      atlantic_bottom_border:
+        type: line
+        from: [-150, 150]
+        to: [150, 150]
+        color: "#e74c3c"
+        thickness: 4
+        glow: true
+        label: "Atlantic Bottom Border"
+      
+      atlantic_right_border:
+        type: line
+        from: [150, -150]
+        to: [150, 150]
+        color: "#e74c3c"
+        thickness: 4
+        glow: true
+        label: "Atlantic Right Border"
+
+      vector_c:
+        type: vector
+        from: [150, 150]                       
+        to: [0, 0]                       
+        color: "#e74c3c"                    
+        width: 3                            
+        glow: true                          
+        label: "Vector B"    
+
+      pacific_not_label:
+        type: text
+        text: "we REVERSE the problem. Don't follow water down. . We start from the oceans \nthemselves. We ask: 'What land can this ocean's water climb to?'"
+        position: [0, -230]
+        color: "#d4af37"
+        size: 20
+        font: "Cinzel Decorative"           
+
+  scene4_phase_1:
+    duration: 5
+    description: "what ever"
+    elements:     
+      pacific_matrix:
+        type: matrix
+        position: [-150, 180]
+        values: [[1, 2, 2, 3, 5], [3, 2, 3, 4, 4], [2, 4, 5, 3, 1], [6, 7, 1, 4, 5], [5, 1, 1, 2, 4]]
+        color: "#4ecdc4"
+        cellSize: 20                   # Individual cell size
+        textSize: 14 
+        label: "🌊 Pacific Ocean"
+        highlightRow: 4
+        highlightCol: 0
+
+      pacific_label:
+        type: text
+        text: "🌊 Pacific Ocean"
+        position: [-230, -200]
+        color: "#3498db"
+        size: 24
+        font: "Arial"       
+
+      pacific_not_label:
+        type: text
+        text: "Step 1: Start from every Pacific border cell. track any neighbor \nthat's taller or equal. Mark that entire reachable region."
+        position: [0, -230]
+        color: "#d4af37"
+        size: 20
+        font: "Cinzel Decorative"    
+
+  scene4_phase_3:
+    duration: 5
+    description: "what everd"
+    elements:     
+      array_step1:
+        type: algorithm_array
+        position: [-190, 170]
+        items: [9, 7]
+        highlights: [0]
+        color: "#3498db"
+        cellSize: 40
+        showIndices: true
+
+      problem_title:
+        type: text
+        text: "matrix[x][y] > matrix[i][j]"         
+        position: [0, -150]                 
+        color: "#64dd64ff"                    
+        size: 24                           
+        glow: true                          
+        font: "Consolas"  
+
+      problem_title_1:
+        type: text
+        text: "Water Flows ✔️"         
+        position: [-150, 100]                 
+        color: "#64a3ddff"                    
+        size: 24                           
+        glow: true                          
+        font: "Consolas"  
+
+      array_step2:
+        type: algorithm_array
+        position: [150, 170]
+        items: [2, 7]
+        highlights: [1]
+        color: "#3498db"
+        cellSize: 40
+        showIndices: true
+
+      problem_title_3:
+        type: text
+        text: "Water Doesn't Flows ❌"         
+        position: [150, 100]                 
+        color: "#64a3ddff"                    
+        size: 24                           
+        glow: true                          
+        font: "Consolas"  
+
+      base_grid:
+        type: grid
+        style: "3d"                         # 3D grid style
+        spacing: 50                         # Grid spacing
+        density: 1.2                        # Grid density
+        color: "#333"                       # Dark gray
+        opacity: 0.8                       # Semi-transparent
+        glow: false                         # No glow
+
+
+      pacific_not_label:
+        type: text
+        text: "Step 2: Do the exact same thing from the Atlantic border."
+        position: [0, -230]
+        color: "#d4af37"
+        size: 20
+        font: "Cinzel Decorative"  
+
+  scene5_phase_1:
+    duration: 10
+    description: "Find intersection of Pacific and Atlantic reachable cells"
+    elements:
+      result_grid:
+        type: algorithm_grid
+        position: [-100, 150]
+        rows: 5
+        cols: 5
+        cellSize: 60
+        spacing: 6
+        color: "#f39c12"
+        border_color: "#e67e22"
+        border_width: 4
+        cells: [[false, false, false, false, true], [false, false, false, true, true], [true, false, true, false, false], [true, true, false, false, false], [true, false, false, false, false]]
+        showValues: true
+        highlights: [8]
+        label: "Both Oceans Reachable"
+        glow: true
+
+      efficiency_stars:
+        type: sparkles
+        position: [0, 0]
+        density: 25
+        color: "#ffd700"
+        speed: 0.2
+      
+      background_waves:
+        type: waves
+        position: [0, 100]
+        amplitude: 15
+        frequency: 1.5
+        color: "#58a6ff"
+        opacity: 0.3
+
+      celebration:
+        type: fireworks
+        position: [0, 150]                 
+        count: 5                            
+        colors: ["#2ecc71", "#f39c12", "#58a6ff", "#e74c3c"]         
+
+      complexity_title:
+        type: text
+        text: "📊 Output: [[0,4], [1,3], [1,4], [2,2], [3,0], [3,1], [4,0]]"
+        position: [0, 220]
+        color: "#f39c12"
+        size: 24
+        glow: true
+
+      pacific_not_label:
+        type: text
+        text: "Any peak marked by BOTH traversals is our answer. A complex search, \nsolved by two efficient floods from the source."
+        position: [0, -230]
+        color: "#d4af37"
+        size: 20
+        font: "Cinzel Decorative"  

@@ -1,0 +1,288 @@
+# 🎭 MorphEntity Primitive Transformation Test
+# Testing all 4 primitive types: arrow_vector, point, line, text_symbol
+
+concept: "MorphEntity Primitive Transformations"
+emoji: "🎭"
+total_duration: 30
+background: "#0a0a0a"
+
+subtitles:
+  - ""
+  - ""
+  - ""
+  - ""
+  - ""
+  - ""
+  - ""
+
+phases:
+  # ============================================================================
+  # TEST 1: Circle → Arrow Vector
+  # ============================================================================
+  
+  circle_to_arrow:
+    duration: 3
+    static_hold_time: 0
+    description: "Circle morphs into arrow vector"
+    
+    elements:
+      test_arrow:
+        type: morph_entity
+        form: circle
+        position: [-250, 100]
+        size: 40
+        color: "#FF6B6B"
+        motion_profile: kinetic_dynamic
+        glow: true
+        energy: 0.8
+        label: "Arrow"
+        
+        # Morph to arrow
+        morph_to: arrow_vector
+        morph_at: 1.0
+        morph_duration: 1.5
+        arrow_direction: [120, 30]
+        arrow_head_size: 15
+        arrow_head_angle: 35
+
+  # ============================================================================
+  # TEST 2: Hexagon → Point
+  # ============================================================================
+  
+  hexagon_to_point:
+    duration: 3
+    static_hold_time: 0
+    description: "Hexagon collapses into point"
+    
+    elements:
+      test_point:
+        type: morph_entity
+        form: hexagon
+        position: [-80, 100]
+        size: 45
+        color: "#4ECDC4"
+        motion_profile: fluid_organic
+        glow: true
+        energy: 0.7
+        label: "Point"
+        
+        # Morph to point
+        morph_to: point
+        morph_at: 1.0
+        morph_duration: 1.2
+        point_size: 12
+        point_style: filled_circle
+
+  # ============================================================================
+  # TEST 3: Square → Line
+  # ============================================================================
+  
+  square_to_line:
+    duration: 3
+    static_hold_time: 0
+    description: "Square flattens into line"
+    
+    elements:
+      test_line:
+        type: morph_entity
+        form: square
+        position: [80, 100]
+        size: 40
+        color: "#FFD93D"
+        motion_profile: precision_linear
+        glow: true
+        energy: 0.6
+        label: "Line"
+        
+        # Morph to line
+        morph_to: line
+        morph_at: 1.0
+        morph_duration: 1.3
+        line_length: 100
+        line_angle: 0.5
+        line_thickness: 4
+
+  # ============================================================================
+  # TEST 4: Triangle → Text Symbol
+  # ============================================================================
+  
+  triangle_to_symbol:
+    duration: 3
+    static_hold_time: 0
+    description: "Triangle becomes mathematical symbol"
+    
+    elements:
+      test_symbol:
+        type: morph_entity
+        form: triangle
+        position: [250, 100]
+        size: 40
+        color: "#9B59B6"
+        motion_profile: stable_balanced
+        glow: true
+        energy: 0.75
+        label: "Symbol"
+        
+        # Morph to text symbol
+        morph_to: text_symbol
+        morph_at: 1.0
+        morph_duration: 1.5
+        symbol_text: "∇"
+        symbol_size: 52
+        symbol_font: "serif"
+        symbol_weight: "bold"
+        fill: true
+        stroke: true
+        stroke_width: 2
+
+  # ============================================================================
+  # TEST 5: Combined - Movement + Primitive Morph
+  # ============================================================================
+  
+  movement_with_morph:
+    duration: 5
+    static_hold_time: 0
+    description: "Circle moves while morphing to arrow"
+    
+    elements:
+      moving_morph:
+        type: morph_entity
+        form: circle
+        position: [-200, -80]
+        size: 35
+        color: "#E74C3C"
+        motion_profile: high_energy
+        glow: true
+        energy: 0.9
+        label: "Move+Morph"
+        
+        # Movement
+        move_to: [200, -80]
+        move_duration: 5
+        move_style: ease_in_out
+        
+        # Morph during movement
+        morph_to: arrow_vector
+        morph_at: 1.5
+        morph_duration: 1.5
+        arrow_direction: [100, 0]
+
+  # ============================================================================
+  # TEST 6: Split + Primitive Morph
+  # ============================================================================
+  
+  split_to_points:
+    duration: 6
+    static_hold_time: 0
+    description: "Hexagon splits then each becomes a point"
+    
+    elements:
+      split_morph:
+        type: morph_entity
+        form: hexagon
+        position: [0, -150]
+        size: 40
+        color: "#3498DB"
+        motion_profile: kinetic_dynamic
+        glow: true
+        energy: 0.8
+        
+        # Split first
+        split_at: 1.0
+        split_into: 4
+        split_pattern: radial_burst
+        split_spacing: 80
+        
+        # Then morph to points
+        morph_to: point
+        morph_at: 3.5
+        morph_duration: 1.0
+        point_size: 10
+
+  # ============================================================================
+  # TEST 7: Reverse - Arrow → Circle
+  # ============================================================================
+  
+  arrow_to_circle:
+    duration: 4
+    static_hold_time: 0
+    description: "Start as arrow, morph back to circle"
+    
+    elements:
+      reverse_morph:
+        type: morph_entity
+        form: arrow_vector
+        position: [-150, -250]
+        size: 35
+        color: "#2ECC71"
+        glow: true
+        arrow_direction: [80, 20]
+        arrow_head_size: 12
+        label: "Reverse"
+        
+        # Morph back to circle
+        morph_to: circle
+        morph_at: 1.0
+        morph_duration: 1.5
+        
+  # ============================================================================
+  # TEST 8: All primitives at once
+  # ============================================================================
+  
+  all_primitives:
+    duration: 3
+    static_hold_time: 0
+    description: "Show all four primitive types simultaneously"
+    
+    elements:
+      # Arrow
+      arrow_demo:
+        type: morph_entity
+        form: arrow_vector
+        position: [-200, 0]
+        size: 40
+        color: "#FF6B6B"
+        glow: true
+        arrow_direction: [80, 30]
+        arrow_head_size: 12
+        label: "Arrow"
+        
+      # Point
+      point_demo:
+        type: morph_entity
+        form: point
+        position: [-70, 0]
+        size: 40
+        color: "#4ECDC4"
+        glow: true
+        point_size: 15
+        point_style: filled_circle
+        label: "Point"
+        
+      # Line
+      line_demo:
+        type: morph_entity
+        form: line
+        position: [70, 0]
+        size: 40
+        color: "#FFD93D"
+        glow: true
+        line_length: 80
+        line_angle: 0.785
+        line_thickness: 4
+        label: "Line"
+        
+      # Symbol
+      symbol_demo:
+        type: morph_entity
+        form: text_symbol
+        position: [200, 0]
+        size: 40
+        color: "#9B59B6"
+        glow: true
+        symbol_text: "∇"
+        symbol_size: 48
+        symbol_font: "serif"
+        fill: true
+        stroke: true
+        label: "Symbol"

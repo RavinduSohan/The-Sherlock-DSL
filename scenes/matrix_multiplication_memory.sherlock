@@ -1,0 +1,716 @@
+concept: "Matrix Multiplication: The Operation That Remembers"
+emoji: "🔄"
+total_duration: 64
+background: "#0a0a0a"
+
+subtitles:
+  - ""
+  - ""
+  - ""
+  - ""
+  - ""
+  - ""
+  - ""
+  - ""
+  - ""
+
+phases:
+  scene_1:
+    duration: 7
+    description: "Rotate then scale - two distinct transformations"
+    elements:
+      main_square:
+        type: morph_entity
+        position: [-200, 50]
+        form: hexagon
+        size: 60
+        color: "#ffffff"
+        glow: true
+        energy: 0.85
+        motion_profile: fluid_organic
+        rotate_to: 90
+        rotate_duration: 1
+        rotate_style: ease_in_out
+        morph_to: square
+        morph_at: 1.5
+        morph_duration: 1
+        morph_style: elastic_deform
+        label: "Transform Space"
+      
+      rotation_icon:
+        type: mathematical_entity
+        position: [-350, -80]
+        form: triangle
+        personality: elegant
+        animation_pattern: spin
+        size: 25
+        color: "#3498db"
+        glow: true
+        energy: 0.4
+        label: "Rotation"
+      
+      zoom_icon:
+        type: mathematical_entity
+        position: [-350, 100]
+        form: circle
+        personality: sharp
+        animation_pattern: pulse
+        size: 30
+        color: "#f39c12"
+        glow: true
+        energy: 0.4
+        label: "Scale"
+      
+      background_field:
+        type: flow_field
+        position: [0, 0]
+        flow_type: gradient
+        density: 0.5
+        intensity: 0.3
+        color: "#9b59b6"
+        animated: true
+        size: 350
+      
+      rotation_matrix:
+        type: matrix
+        position: [-150, -100]
+        values: [["0", "-1"], ["1", "0"]]
+        highlightCells: [[0, 0], [1, 1]]
+        cellSize: 40
+        textSize: 12
+        color: "#4A90E2"
+        label: "R(90°)"
+
+      hook_primary:
+        type: text
+        text: "Rotate then scale in sequence"
+        position: [0, 180]
+        size: 14
+        color: "#ffffff"
+        glow: true
+        font: "Arial"
+      
+      hook_secondary:
+        type: text
+        text: "See two distinct transformations as separate operations"
+        position: [0, 220]
+        size: 13
+        color: "#95a5a6"
+        font: "Arial"
+      
+      evidence_1:
+        type: text
+        text: "Rotation: 90° clockwise"
+        position: [220, 50]
+        size: 16
+        color: "#9AA0A6"
+        font: "Courier Prime"
+      
+      evidence_2:
+        type: text
+        text: "Scale: Uniform ×1.5"
+        position: [220, -50]
+        size: 16
+        color: "#9AA0A6"
+        font: "Courier Prime"
+      
+      evidence_3:
+        type: text
+        text: "Matrix for rotation shown"
+        position: [220, 0]
+        size: 16
+        color: "#C06A6A"
+        font: "Courier Prime"
+  
+  scene_2:
+    duration: 8
+    description: "Addition fails for ordered transformations"
+    elements:
+      origin_square:
+        type: morph_entity
+        position: [-280, 50]
+        form: square
+        size: 45
+        color: "#e74c3c"
+        glow: true
+        energy: 0.8
+        motion_profile: stable_balanced
+        split_at: 1
+        split_into: 2
+        split_pattern: vertical_split
+        split_spacing: 140
+      
+      rotation_matrix_left:
+        type: matrix
+        position: [-280, -120]
+        values: [["0", "-1"], ["1", "0"]]
+        highlightCells: [[0, 0], [1, 1]]
+        cellSize: 30
+        textSize: 10
+        color: "#3498db"
+        label: "R"
+        highlightRow: 0
+      
+      scale_matrix_right:
+        type: matrix
+        position: [-120, -120]
+        values: [["1.5", "0"], ["0", "1.5"]]
+        highlightCells: [[0, 0], [1, 1]]
+        cellSize: 30
+        textSize: 10
+        color: "#f39c12"
+        label: "S"
+        highlightCol: 0
+      
+      error_grid:
+        type: algorithm_grid
+        position: [-240, 120]
+        rows: 2
+        cols: 6
+        cellSize: 28
+        spacing: 4
+        cells: [["R=", "0", "-1", "S=", "1.5", "0"], ["", "1", "0", "", "0", "1.5"]]
+        color: "#FF6B6B"
+        border_color: "#FF6B6B"
+        border_width: 2
+        showValues: true
+        label: "R+S"
+      
+      hook_primary:
+        type: text
+        text: "Addition fails for ordered transformations"
+        position: [0, 180]
+        size: 14
+        color: "#ffffff"
+        glow: true
+        font: "Arial"
+      
+      hook_secondary:
+        type: text
+        text: "Compare correct vs. added results side-by-side"
+        position: [0, 220]
+        size: 13
+        color: "#95a5a6"
+        font: "Arial"
+      
+      evidence_1:
+        type: text
+        text: "Correct: Rotate(90°) then Scale(1.5)"
+        position: [220, 80]
+        size: 16
+        color: "#9AA0A6"
+        font: "Courier Prime"
+      
+      evidence_2:
+        type: text
+        text: "Incorrect: (R + S) applied"
+        position: [220, -80]
+        size: 16
+        color: "#9AA0A6"
+        font: "Courier Prime"
+      
+      evidence_3:
+        type: text
+        text: "Matrix addition yields wrong result"
+        position: [220, 0]
+        size: 16
+        color: "#C06A6A"
+        font: "Courier Prime"
+  
+  scene_3:
+    duration: 10
+    description: "Compare R×S vs. S×R multiplication orders"
+    elements:
+      top_grid_r:
+        type: algorithm_grid
+        position: [-230, 80]
+        rows: 2
+        cols: 2
+        cellSize: 45
+        spacing: 5
+        cells: [["0", "-1"], ["1", "0"]]
+        highlights: [[0, 0]]
+        showValues: true
+        color: "#3498db"
+        border_color: "#2980b9"
+        border_width: 3
+        label: "R"
+      
+      top_grid_s:
+        type: algorithm_grid
+        position: [-130, 80]
+        rows: 2
+        cols: 2
+        cellSize: 45
+        spacing: 5
+        cells: [["2", "0"], ["0", "1"]]
+        showValues: true
+        color: "#f39c12"
+        border_color: "#e67e22"
+        border_width: 3
+        label: "S"
+      
+      top_result:
+        type: algorithm_grid
+        position: [-30, 80]
+        rows: 2
+        cols: 2
+        cellSize: 45
+        spacing: 5
+        cells: [["0", "-1"], ["2", "0"]]
+        highlights: [[0, 0], [0, 1], [1, 0], [1, 1]]
+        showValues: true
+        color: "#2ecc71"
+        border_color: "#27ae60"
+        border_width: 3
+        label: "R×S"
+      
+      bottom_grid_s:
+        type: algorithm_grid
+        position: [-230, -80]
+        rows: 2
+        cols: 2
+        cellSize: 45
+        spacing: 5
+        cells: [["2", "0"], ["0", "1"]]
+        showValues: true
+        color: "#f39c12"
+        border_color: "#e67e22"
+        border_width: 3
+        label: "S"
+      
+      bottom_grid_r:
+        type: algorithm_grid
+        position: [-130, -80]
+        rows: 2
+        cols: 2
+        cellSize: 45
+        spacing: 5
+        cells: [["0", "-1"], ["1", "0"]]
+        highlights: [[1, 0]]
+        showValues: true
+        color: "#3498db"
+        border_color: "#2980b9"
+        border_width: 3
+        label: "R"
+      
+      bottom_result:
+        type: algorithm_grid
+        position: [-30, -80]
+        rows: 2
+        cols: 2
+        cellSize: 45
+        spacing: 5
+        cells: [["0", "-2"], ["1", "0"]]
+        highlights: [[0, 0], [0, 1], [1, 0], [1, 1]]
+        showValues: true
+        color: "#9b59b6"
+        border_color: "#8e44ad"
+        border_width: 3
+        label: "S×R"
+      
+      visual_top:
+        type: morph_entity
+        position: [-280, 80]
+        form: square
+        size: 30
+        color: "#2ecc71"
+        energy: 0.5
+        motion_profile: stable_balanced
+        opacity: 0.6
+      
+      visual_bottom:
+        type: morph_entity
+        position: [-280, -80]
+        form: square
+        size: 30
+        color: "#9b59b6"
+        energy: 0.5
+        motion_profile: stable_balanced
+        opacity: 0.6
+      
+      hook_primary:
+        type: text
+        text: "Compare R×S vs. S×R multiplication orders"
+        position: [0, 180]
+        size: 14
+        color: "#ffffff"
+        glow: true
+        font: "Arial"
+      
+      hook_secondary:
+        type: text
+        text: "Watch row-column dot products differ by sequence"
+        position: [0, 220]
+        size: 13
+        color: "#95a5a6"
+        font: "Arial"
+      
+      evidence_1:
+        type: text
+        text: "R×S = [0 -1; 2 0]"
+        position: [220, 100]
+        size: 16
+        color: "#C06A6A"
+        font: "Courier Prime"
+      
+      evidence_2:
+        type: text
+        text: "S×R = [0 -2; 1 0]"
+        position: [220, 33]
+        size: 16
+        color: "#C06A6A"
+        font: "Courier Prime"
+      
+      evidence_3:
+        type: text
+        text: "Different results!"
+        position: [220, -33]
+        size: 16
+        color: "#9AA0A6"
+        font: "Courier Prime"
+      
+      evidence_4:
+        type: text
+        text: "Row-column dot products differ"
+        position: [220, -100]
+        size: 16
+        color: "#C06A6A"
+        font: "Courier Prime"
+  
+  scene_4:
+    duration: 6
+    description: "Order matters - character wisdom"
+    elements:
+      detective_guide:
+        type: wisdom_character
+        character_type: detective_octopus
+        position: [0, 0]
+        size: 140
+        mood: thinking
+        expression: normal
+        talking: true
+        breathing: true
+        color_scheme: detective
+        personality: calm
+        speech_bubble: true
+        speech_text: "Regular numbers are polite—they switch seats and get the same answer. But these matrices are stubborn. They remember exactly who went first."
+        background_aura: glow
+      
+      simple_equation:
+        type: text
+        text: "3 × 5 = 15 ↔ 5 × 3 = 15 ✓"
+        position: [-180, -150]
+        size: 16
+        color: "#2ecc71"
+        font: "Courier Prime"
+      
+      matrix_equation:
+        type: text
+        text: "R×S ≠ S×R ✗"
+        position: [180, -150]
+        size: 16
+        color: "#e74c3c"
+        font: "Courier Prime"
+      
+      ghost_matrix_left:
+        type: matrix
+        position: [-200, 100]
+        values: [["a", "b"], ["c", "d"]]
+        cellSize: 30
+        highlightCells: [[0, 0]]
+        textSize: 11
+        color: "#95a5a6"
+        opacity: 0.2
+      
+      ghost_matrix_right:
+        type: matrix
+        position: [200, 100]
+        values: [["e", "f"], ["g", "h"]]
+        cellSize: 30
+        highlightCells: [[0, 1], [1, 0]]
+        textSize: 11
+        color: "#95a5a6"
+        opacity: 0.2
+      
+      question_mark:
+        type: text
+        text: "?"
+        position: [0, 100]
+        size: 30
+        color: "#f39c12"
+        glow: true
+        font: "Arial"
+  
+  scene_5:
+    duration: 13
+    description: "Row-column dot products form product matrix"
+    elements:
+      matrix_a:
+        type: algorithm_grid
+        position: [-250, 100]
+        rows: 2
+        cols: 2
+        cellSize: 50
+        spacing: 5
+        cells: [["0", "-1"], ["1", "0"]]
+        highlights: [[0, 0], [0, 1]]
+        showValues: true
+        color: "#3498db"
+        border_color: "#2980b9"
+        border_width: 3
+        label: "R"
+      
+      matrix_b:
+        type: algorithm_grid
+        position: [-250, -100]
+        rows: 2
+        cols: 2
+        cellSize: 50
+        spacing: 5
+        cells: [["2", "0"], ["0", "1"]]
+        highlights: [[0, 0], [1, 0]]
+        showValues: true
+        color: "#f39c12"
+        border_color: "#e67e22"
+        border_width: 3
+        label: "S"
+      
+      product_matrix:
+        type: algorithm_grid
+        position: [-100, 0]
+        rows: 2
+        cols: 2
+        cellSize: 60
+        spacing: 6
+        cells: [["0", "-1"], ["2", "0"]]
+        highlights: [[0, 0], [0, 1], [1, 0], [1, 1]]
+        showValues: true
+        color: "#2ecc71"
+        border_color: "#27ae60"
+        border_width: 4
+        label: "R×S"
+      
+      memory_entity:
+        type: mathematical_entity
+        position: [-150, 0]
+        form: mobius_strip
+        personality: wise
+        animation_pattern: breathe
+        size: 40
+        color: "#9B59B6"
+        glow: true
+        energy: 0.7
+        opacity: 0.7
+      
+      hook_primary:
+        type: text
+        text: "Row-column dot products form product matrix"
+        position: [0, 180]
+        size: 14
+        color: "#ffffff"
+        glow: true
+        font: "Arial"
+      
+      hook_secondary:
+        type: text
+        text: "Each cell remembers which row and column created it"
+        position: [0, 220]
+        size: 13
+        color: "#95a5a6"
+        font: "Arial"
+      
+      evidence_1:
+        type: text
+        text: "Cell[0,0] = row0•col0 = (0×2)+(-1×0)=0"
+        position: [220, 100]
+        size: 15
+        color: "#C06A6A"
+        font: "Courier Prime"
+      
+      evidence_2:
+        type: text
+        text: "Cell[0,1] = row0•col1 = (0×0)+(-1×1)=-1"
+        position: [220, 33]
+        size: 15
+        color: "#C06A6A"
+        font: "Courier Prime"
+      
+      evidence_3:
+        type: text
+        text: "Cell[1,0] = row1•col0 = (1×2)+(0×0)=2"
+        position: [220, -33]
+        size: 15
+        color: "#C06A6A"
+        font: "Courier Prime"
+      
+      evidence_4:
+        type: text
+        text: "Cell[1,1] = row1•col1 = (1×0)+(0×1)=0"
+        position: [220, -100]
+        size: 15
+        color: "#C06A6A"
+        font: "Courier Prime"
+  
+  scene_6:
+    duration: 12
+    description: "Matrix multiplication chains through network layers"
+    elements:
+      neural_network:
+        type: neural_net
+        position: [-150, 0]
+        layers: [4, 8, 8, 4, 2]
+        colors: ["#3498db", "#5dade2", "#7f8c8d", "#9b59b6", "#e74c3c"]
+        animation_speed: 0.7
+      
+      layer_matrix_1:
+        type: algorithm_grid
+        position: [-280, 80]
+        rows: 2
+        cols: 2
+        cellSize: 20
+        spacing: 2
+        cells: [["W1", ""], ["", "W1"]]
+        showValues: true
+        color: "#5dade2"
+        opacity: 0.5
+      
+      layer_matrix_2:
+        type: algorithm_grid
+        position: [-180, 80]
+        rows: 2
+        cols: 2
+        cellSize: 20
+        spacing: 2
+        cells: [["W2", ""], ["", "W2"]]
+        showValues: true
+        color: "#7f8c8d"
+        opacity: 0.5
+      
+      layer_matrix_3:
+        type: algorithm_grid
+        position: [-80, 80]
+        rows: 2
+        cols: 2
+        cellSize: 20
+        spacing: 2
+        cells: [["W3", ""], ["", "W3"]]
+        showValues: true
+        color: "#9b59b6"
+        opacity: 0.5
+      
+      data_flow:
+        type: flow_field
+        position: [-150, 0]
+        flow_type: data_stream
+        density: 0.6
+        intensity: 0.6
+        color: "#4ecdc4"
+        animated: true
+        direction: outward
+        size: 300
+      
+      hook_primary:
+        type: text
+        text: "Matrix multiplication chains through network layers"
+        position: [0, 180]
+        size: 14
+        color: "#ffffff"
+        glow: true
+        font: "Arial"
+      
+      hook_secondary:
+        type: text
+        text: "Dozens of ordered steps transform input to output"
+        position: [0, 220]
+        size: 13
+        color: "#95a5a6"
+        font: "Arial"
+      
+      evidence_1:
+        type: text
+        text: "Layer 1 → Layer 2: W₁×input"
+        position: [220, 80]
+        size: 16
+        color: "#9AA0A6"
+        font: "Courier Prime"
+      
+      evidence_2:
+        type: text
+        text: "Layer n → Output: Wₙ×(...W₂×W₁×input)"
+        position: [220, 0]
+        size: 15
+        color: "#C06A6A"
+        font: "Courier Prime"
+      
+      evidence_3:
+        type: text
+        text: "Dozen+ ordered matrix multiplications"
+        position: [220, -80]
+        size: 16
+        color: "#C06A6A"
+        font: "Courier Prime"
+  
+  scene_7:
+    duration: 8
+    description: "The operation that remembers - emoji finale"
+    elements:
+      main_equation:
+        type: animated_emoji
+        emoji: "A×B ≠ B×A"
+        position: [0, 50]
+        size: 80
+        movement: floating-pen
+        glowing: pulsing-glow
+        rotation: none
+        reveal: spiral-reveal
+        speed: normal
+        delay: none
+        color: "#F1C40F"
+      
+      matrix_emoji:
+        type: animated_emoji
+        emoji: "🧮"
+        position: [-120, -30]
+        size: 40
+        movement: orbit
+        glowing: flicker
+        rotation: gentle-rotate
+        reveal: slide-reveal
+        speed: slow
+        delay: delay-1
+        color: "#3498db"
+      
+      brain_emoji:
+        type: animated_emoji
+        emoji: "🧠"
+        position: [120, -30]
+        size: 40
+        movement: orbit
+        glowing: flicker
+        rotation: gentle-rotate
+        reveal: slide-reveal
+        speed: slow
+        delay: delay-1
+        color: "#e74c3c"
+      
+      lightbulb_emoji:
+        type: animated_emoji
+        emoji: "💡"
+        position: [0, -120]
+        size: 35
+        movement: bounce
+        glowing: pulsing-glow
+        rotation: none
+        reveal: zoom-reveal
+        speed: normal
+        delay: delay-2
+        color: "#f39c12"
+      
+      noir_subtitle:
+        type: text
+        text: "The operation that remembers."
+        position: [0, -220]
+        size: 18
+        color: "#d4a373"
+        font: "Courier New"

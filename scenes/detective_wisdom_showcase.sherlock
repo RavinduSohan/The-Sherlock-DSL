@@ -1,0 +1,73 @@
+concept: "Detective Octopus - Ultimate Cinematic Character"
+emoji: "🕵️‍♂️"
+total_duration: 20
+background: "#0a0e1a"
+
+phases:
+  mysterious_entrance:
+    duration: 5
+    description: "Detective emerges from the shadows"
+    elements:
+      detective_sherlock:
+        type: wisdom_character
+        character_type: detective_octopus
+        position: [-100, 0]
+        size: 130
+        mood: mysterious
+        expression: normal
+        personality: mysterious
+        color_scheme: detective
+        background_aura: glow
+        speech_bubble: true
+        speech_text: "The game is afoot..."
+  
+  deep_investigation:
+    duration: 5
+    description: "Analyzing clues with magnifying glass"
+    elements:
+      detective_sherlock:
+        type: wisdom_character
+        character_type: detective_octopus
+        position: [0, 0]
+        size: 140
+        mood: thinking
+        expression: normal
+        personality: calm
+        color_scheme: detective
+        background_aura: glow
+        speech_bubble: true
+        speech_text: "The evidence reveals a pattern..."
+  
+  startling_discovery:
+    duration: 5
+    description: "Moment of realization with sparkle effects"
+    elements:
+      detective_sherlock:
+        type: wisdom_character
+        character_type: detective_octopus
+        position: [50, -20]
+        size: 155
+        mood: surprised
+        expression: normal
+        personality: energetic
+        color_scheme: cosmic
+        background_aura: glow
+        speech_bubble: true
+        speech_text: "Extraordinary! The solution is..."
+  
+  confident_conclusion:
+    duration: 5
+    description: "Final deduction with authority"
+    elements:
+      detective_sherlock:
+        type: wisdom_character
+        character_type: detective_octopus
+        position: [0, 0]
+        size: 150
+        mood: mysterious
+        expression: winking
+        personality: wise
+        color_scheme: detective
+        background_aura: glow
+        speech_bubble: true
+        speech_text: "Elementary, my dear Watson!"

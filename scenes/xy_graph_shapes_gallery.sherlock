@@ -1,0 +1,1166 @@
+concept: "XY Graph Shape Gallery - All Visual Possibilities"
+emoji: "🎨"
+total_duration: 80
+background: "#0a0a0a"
+
+subtitles:
+  - ""
+  - ""
+  - ""
+  - ""
+  - ""
+  - ""
+  - ""
+  - ""
+  - ""
+
+phases:
+  scene_1:
+    duration: 8
+    description: "Circular and elliptical shapes"
+    elements:
+      perfect_circle:
+        type: xy_graph
+        position: [-260, -80]
+        size: 170
+        data_points: [[0, 3], [0.93, 2.85], [1.76, 2.43], [2.43, 1.76], [2.85, 0.93], [3, 0], [2.85, -0.93], [2.43, -1.76], [1.76, -2.43], [0.93, -2.85], [0, -3], [-0.93, -2.85], [-1.76, -2.43], [-2.43, -1.76], [-2.85, -0.93], [-3, 0], [-2.85, 0.93], [-2.43, 1.76], [-1.76, 2.43], [-0.93, 2.85], [0, 3]]
+        x_range: [-4, 4]
+        y_range: [-4, 4]
+        color: "#e74c3c"
+        line_width: 3
+        show_grid: true
+        show_axes: true
+        show_labels: true
+        smooth_curve: true
+        animate_draw: true
+        title: "Circle"
+        resolution: 100
+      
+      horizontal_ellipse:
+        type: xy_graph
+        position: [0, -80]
+        size: 170
+        data_points: [[0, 2], [1.37, 1.85], [2.6, 1.41], [3.53, 0.76], [4.24, 0], [4.6, -0.76], [4.53, -1.41], [4.12, -1.85], [3.46, -2], [2.6, -1.85], [1.73, -1.41], [0.92, -0.76], [0, 0], [-0.92, 0.76], [-1.73, 1.41], [-2.6, 1.85], [-3.46, 2], [-4.12, 1.85], [-4.53, 1.41], [-4.6, 0.76], [-4.24, 0], [-3.53, -0.76], [-2.6, -1.41], [-1.37, -1.85], [0, -2]]
+        x_range: [-5, 5]
+        y_range: [-3, 3]
+        color: "#3498db"
+        line_width: 3
+        show_grid: true
+        show_axes: true
+        show_labels: true
+        smooth_curve: true
+        animate_draw: true
+        title: "Horizontal Ellipse"
+        resolution: 100
+      
+      vertical_ellipse:
+        type: xy_graph
+        position: [260, -80]
+        size: 170
+        data_points: [[0, 4], [0.76, 3.92], [1.41, 3.46], [1.85, 2.6], [2, 1.73], [1.85, 0.92], [1.41, 0], [0.76, -0.92], [0, -1.73], [-0.76, -2.6], [-1.41, -3.46], [-1.85, -3.92], [-2, -4], [-1.85, -3.92], [-1.41, -3.46], [-0.76, -2.6], [0, -1.73], [0.76, -0.92], [1.41, 0], [1.85, 0.92], [2, 1.73], [1.85, 2.6], [1.41, 3.46], [0.76, 3.92], [0, 4]]
+        x_range: [-3, 3]
+        y_range: [-5, 5]
+        color: "#2ecc71"
+        line_width: 3
+        show_grid: true
+        show_axes: true
+        show_labels: true
+        smooth_curve: true
+        animate_draw: true
+        title: "Vertical Ellipse"
+        resolution: 100
+      
+      tilted_ellipse:
+        type: xy_graph
+        position: [-260, 120]
+        size: 170
+        function: "sqrt(9 - x^2/4)"
+        x_range: [-6, 6]
+        y_range: [-4, 4]
+        color: "#f39c12"
+        line_width: 3
+        show_grid: true
+        show_axes: true
+        show_labels: true
+        smooth_curve: true
+        animate_draw: true
+        title: "Wide Ellipse"
+        resolution: 150
+      
+      semicircle_top:
+        type: xy_graph
+        position: [0, 120]
+        size: 170
+        function: "sqrt(9 - x^2)"
+        x_range: [-3, 3]
+        y_range: [0, 4]
+        color: "#9b59b6"
+        line_width: 3
+        show_grid: true
+        show_axes: true
+        show_labels: true
+        smooth_curve: true
+        animate_draw: true
+        title: "Semicircle (Top)"
+        resolution: 150
+      
+      semicircle_bottom:
+        type: xy_graph
+        position: [260, 120]
+        size: 170
+        function: "-sqrt(9 - x^2)"
+        x_range: [-3, 3]
+        y_range: [-4, 0]
+        color: "#1abc9c"
+        line_width: 3
+        show_grid: true
+        show_axes: true
+        show_labels: true
+        smooth_curve: true
+        animate_draw: true
+        title: "Semicircle (Bottom)"
+        resolution: 150
+      
+      title_text:
+        type: text
+        text: "Circular & Elliptical Shapes"
+        position: [0, -220]
+        size: 18
+        color: "#ffffff"
+        glow: true
+        font: "Arial"
+  
+  scene_2:
+    duration: 8
+    description: "Heart and flower shapes"
+    elements:
+      heart_shape:
+        type: xy_graph
+        position: [-260, -80]
+        size: 170
+        data_points: [[0, -3], [0.5, -2.5], [1, -2], [1.5, -1.3], [2, -0.5], [2.3, 0.5], [2.5, 1.5], [2.3, 2.3], [1.8, 2.8], [1, 3], [0, 2.5], [-1, 3], [-1.8, 2.8], [-2.3, 2.3], [-2.5, 1.5], [-2.3, 0.5], [-2, -0.5], [-1.5, -1.3], [-1, -2], [-0.5, -2.5], [0, -3]]
+        x_range: [-3.5, 3.5]
+        y_range: [-4, 4]
+        color: "#e74c3c"
+        line_width: 3
+        show_grid: true
+        show_axes: true
+        show_labels: true
+        smooth_curve: true
+        animate_draw: true
+        title: "Heart Shape"
+        resolution: 100
+      
+      cardioid:
+        type: xy_graph
+        position: [0, -80]
+        size: 170
+        function: "x^(2/3) + (1 - x^2)^(1/2)"
+        x_range: [-1, 1]
+        y_range: [-0.5, 2]
+        color: "#3498db"
+        line_width: 3
+        show_grid: true
+        show_axes: true
+        show_labels: true
+        smooth_curve: true
+        animate_draw: true
+        title: "Cardioid Top"
+        resolution: 150
+      
+      three_petal:
+        type: xy_graph
+        position: [260, -80]
+        size: 170
+        data_points: [[0, 0], [1, 0.5], [1.7, 1.5], [1.5, 2.5], [0.5, 2.8], [0, 3], [-0.5, 2.8], [-1.5, 2.5], [-1.7, 1.5], [-1, 0.5], [0, 0], [0.5, -1], [1.5, -1.7], [2.5, -1.5], [2.8, -0.5], [3, 0], [2.8, 0.5], [2.5, 1.5], [1.7, 1.7], [0.5, 1], [0, 0]]
+        x_range: [-3.5, 3.5]
+        y_range: [-3, 3.5]
+        color: "#2ecc71"
+        line_width: 3
+        show_grid: true
+        show_axes: true
+        show_labels: true
+        smooth_curve: true
+        animate_draw: true
+        title: "Three Petal"
+        resolution: 100
+      
+      four_petal:
+        type: xy_graph
+        position: [-260, 120]
+        size: 170
+        data_points: [[0, 3], [1, 2.5], [2, 1.5], [2.5, 1], [3, 0], [2.5, -1], [2, -1.5], [1, -2.5], [0, -3], [-1, -2.5], [-2, -1.5], [-2.5, -1], [-3, 0], [-2.5, 1], [-2, 1.5], [-1, 2.5], [0, 3]]
+        x_range: [-3.5, 3.5]
+        y_range: [-3.5, 3.5]
+        color: "#f39c12"
+        line_width: 3
+        show_grid: true
+        show_axes: true
+        show_labels: true
+        smooth_curve: true
+        animate_draw: true
+        title: "Four Petal Rose"
+        resolution: 100
+      
+      five_petal:
+        type: xy_graph
+        position: [0, 120]
+        size: 170
+        data_points: [[0, 3], [1.17, 2.76], [2.13, 2.13], [2.76, 1.17], [3, 0], [2.76, -1.17], [2.13, -2.13], [1.17, -2.76], [0, -3], [-1.17, -2.76], [-2.13, -2.13], [-2.76, -1.17], [-3, 0], [-2.76, 1.17], [-2.13, 2.13], [-1.17, 2.76], [0, 3]]
+        x_range: [-3.5, 3.5]
+        y_range: [-3.5, 3.5]
+        color: "#9b59b6"
+        line_width: 3
+        show_grid: true
+        show_axes: true
+        show_labels: true
+        smooth_curve: true
+        animate_draw: true
+        title: "Five Petal Flower"
+        resolution: 100
+      
+      clover:
+        type: xy_graph
+        position: [260, 120]
+        size: 170
+        function: "abs(sin(2*x)) * 2"
+        x_range: [-3.14, 3.14]
+        y_range: [0, 3]
+        color: "#1abc9c"
+        line_width: 3
+        show_grid: true
+        show_axes: true
+        show_labels: true
+        smooth_curve: true
+        animate_draw: true
+        title: "Clover Pattern"
+        resolution: 150
+      
+      title_text:
+        type: text
+        text: "Heart & Flower Shapes"
+        position: [0, -220]
+        size: 18
+        color: "#ffffff"
+        glow: true
+        font: "Arial"
+  
+  scene_3:
+    duration: 8
+    description: "Star and polygon shapes"
+    elements:
+      five_star:
+        type: xy_graph
+        position: [-260, -80]
+        size: 170
+        data_points: [[0, 3], [0.88, 0.93], [2.85, 0.93], [1.15, -0.36], [1.76, -2.43], [0, -1.17], [-1.76, -2.43], [-1.15, -0.36], [-2.85, 0.93], [-0.88, 0.93], [0, 3]]
+        x_range: [-3.5, 3.5]
+        y_range: [-3, 3.5]
+        color: "#e74c3c"
+        line_width: 3
+        show_grid: true
+        show_axes: true
+        show_labels: true
+        smooth_curve: true
+        animate_draw: true
+        title: "Five-Point Star"
+        resolution: 100
+      
+      six_star:
+        type: xy_graph
+        position: [0, -80]
+        size: 170
+        data_points: [[0, 3], [1.3, 1.5], [2.6, 1.5], [1.5, 0], [2.6, -1.5], [1.3, -1.5], [0, -3], [-1.3, -1.5], [-2.6, -1.5], [-1.5, 0], [-2.6, 1.5], [-1.3, 1.5], [0, 3]]
+        x_range: [-3.5, 3.5]
+        y_range: [-3.5, 3.5]
+        color: "#3498db"
+        line_width: 3
+        show_grid: true
+        show_axes: true
+        show_labels: true
+        smooth_curve: true
+        animate_draw: true
+        title: "Six-Point Star"
+        resolution: 100
+      
+      triangle:
+        type: xy_graph
+        position: [260, -80]
+        size: 170
+        data_points: [[0, 2.6], [2.25, -1.3], [-2.25, -1.3], [0, 2.6]]
+        x_range: [-3, 3]
+        y_range: [-2, 3]
+        color: "#2ecc71"
+        line_width: 3
+        show_grid: true
+        show_axes: true
+        show_labels: true
+        smooth_curve: false
+        animate_draw: true
+        title: "Triangle"
+        resolution: 50
+      
+      square:
+        type: xy_graph
+        position: [-260, 120]
+        size: 170
+        data_points: [[-2, 2], [2, 2], [2, -2], [-2, -2], [-2, 2]]
+        x_range: [-3, 3]
+        y_range: [-3, 3]
+        color: "#f39c12"
+        line_width: 3
+        show_grid: true
+        show_axes: true
+        show_labels: true
+        smooth_curve: false
+        animate_draw: true
+        title: "Square"
+        resolution: 50
+      
+      hexagon:
+        type: xy_graph
+        position: [0, 120]
+        size: 170
+        data_points: [[2, 0], [1, 1.73], [-1, 1.73], [-2, 0], [-1, -1.73], [1, -1.73], [2, 0]]
+        x_range: [-3, 3]
+        y_range: [-2.5, 2.5]
+        color: "#9b59b6"
+        line_width: 3
+        show_grid: true
+        show_axes: true
+        show_labels: true
+        smooth_curve: false
+        animate_draw: true
+        title: "Hexagon"
+        resolution: 50
+      
+      octagon:
+        type: xy_graph
+        position: [260, 120]
+        size: 170
+        data_points: [[2, 0], [1.41, 1.41], [0, 2], [-1.41, 1.41], [-2, 0], [-1.41, -1.41], [0, -2], [1.41, -1.41], [2, 0]]
+        x_range: [-3, 3]
+        y_range: [-3, 3]
+        color: "#1abc9c"
+        line_width: 3
+        show_grid: true
+        show_axes: true
+        show_labels: true
+        smooth_curve: false
+        animate_draw: true
+        title: "Octagon"
+        resolution: 50
+      
+      title_text:
+        type: text
+        text: "Star & Polygon Shapes"
+        position: [0, -220]
+        size: 18
+        color: "#ffffff"
+        glow: true
+        font: "Arial"
+  
+  scene_4:
+    duration: 8
+    description: "Spiral and curve patterns"
+    elements:
+      archimedean_spiral:
+        type: xy_graph
+        position: [-260, -80]
+        size: 170
+        data_points: [[0, 0], [0.1, 0.1], [0.28, 0.28], [0.52, 0.42], [0.78, 0.45], [1, 0.35], [1.17, 0.17], [1.27, -0.1], [1.28, -0.4], [1.2, -0.7], [1, -0.95], [0.7, -1.15], [0.35, -1.28], [0, -1.35], [-0.4, -1.35], [-0.8, -1.25], [-1.15, -1.05], [-1.45, -0.75], [-1.65, -0.4], [-1.75, 0], [-1.75, 0.45], [-1.6, 0.9], [-1.35, 1.3], [-1, 1.6], [-0.6, 1.85], [-0.15, 2], [0.3, 2.05], [0.75, 2], [1.2, 1.85], [1.6, 1.6], [1.95, 1.25], [2.2, 0.85], [2.4, 0.4], [2.5, 0]]
+        x_range: [-3, 3]
+        y_range: [-3, 3]
+        color: "#e74c3c"
+        line_width: 3
+        show_grid: true
+        show_axes: true
+        show_labels: true
+        smooth_curve: true
+        animate_draw: true
+        title: "Archimedean Spiral"
+        resolution: 100
+      
+      logarithmic_spiral:
+        type: xy_graph
+        position: [0, -80]
+        size: 170
+        function: "exp(0.2*x)"
+        x_range: [-3, 3]
+        y_range: [0, 3]
+        color: "#3498db"
+        line_width: 3
+        show_grid: true
+        show_axes: true
+        show_labels: true
+        smooth_curve: true
+        animate_draw: true
+        title: "Logarithmic Spiral"
+        resolution: 150
+      
+      infinity_shape:
+        type: xy_graph
+        position: [260, -80]
+        size: 170
+        data_points: [[0, 0], [1, 1], [2, 1.41], [2.8, 1], [3, 0], [2.8, -1], [2, -1.41], [1, -1], [0, 0], [-1, 1], [-2, 1.41], [-2.8, 1], [-3, 0], [-2.8, -1], [-2, -1.41], [-1, -1], [0, 0]]
+        x_range: [-3.5, 3.5]
+        y_range: [-2, 2]
+        color: "#2ecc71"
+        line_width: 3
+        show_grid: true
+        show_axes: true
+        show_labels: true
+        smooth_curve: true
+        animate_draw: true
+        title: "Infinity (Lemniscate)"
+        resolution: 100
+      
+      wave_spiral:
+        type: xy_graph
+        position: [-260, 120]
+        size: 170
+        function: "x * sin(x)"
+        x_range: [-6, 6]
+        y_range: [-6, 6]
+        color: "#f39c12"
+        line_width: 3
+        show_grid: true
+        show_axes: true
+        show_labels: true
+        smooth_curve: true
+        animate_draw: true
+        title: "Wave Spiral"
+        resolution: 200
+      
+      butterfly:
+        type: xy_graph
+        position: [0, 120]
+        size: 170
+        function: "exp(sin(x)) - 2*cos(4*x)"
+        x_range: [-3.14, 3.14]
+        y_range: [-3, 3]
+        color: "#9b59b6"
+        line_width: 3
+        show_grid: true
+        show_axes: true
+        show_labels: true
+        smooth_curve: true
+        animate_draw: true
+        title: "Butterfly Curve"
+        resolution: 200
+      
+      cycloid:
+        type: xy_graph
+        position: [260, 120]
+        size: 170
+        data_points: [[0, 0], [0.52, 0.48], [1.14, 0.86], [1.86, 1.14], [2.62, 1.24], [3.14, 1.14], [3.66, 0.86], [4.38, 0.48], [5, 0], [5.52, -0.48], [6.14, -0.86]]
+        x_range: [-1, 7]
+        y_range: [-1.5, 1.5]
+        color: "#1abc9c"
+        line_width: 3
+        show_grid: true
+        show_axes: true
+        show_labels: true
+        smooth_curve: true
+        animate_draw: true
+        title: "Cycloid"
+        resolution: 100
+      
+      title_text:
+        type: text
+        text: "Spiral & Curve Patterns"
+        position: [0, -220]
+        size: 18
+        color: "#ffffff"
+        glow: true
+        font: "Arial"
+  
+  scene_5:
+    duration: 8
+    description: "Wave and oscillation patterns"
+    elements:
+      sawtooth:
+        type: xy_graph
+        position: [-260, -80]
+        size: 170
+        data_points: [[-3, -1], [-2, 1], [-2, -1], [-1, 1], [-1, -1], [0, 1], [0, -1], [1, 1], [1, -1], [2, 1], [2, -1], [3, 1]]
+        x_range: [-3.5, 3.5]
+        y_range: [-1.5, 1.5]
+        color: "#e74c3c"
+        line_width: 3
+        show_grid: true
+        show_axes: true
+        show_labels: true
+        smooth_curve: false
+        animate_draw: true
+        title: "Sawtooth Wave"
+        resolution: 50
+      
+      square_wave:
+        type: xy_graph
+        position: [0, -80]
+        size: 170
+        data_points: [[-3, 1], [-2, 1], [-2, -1], [-1, -1], [-1, 1], [0, 1], [0, -1], [1, -1], [1, 1], [2, 1], [2, -1], [3, -1]]
+        x_range: [-3.5, 3.5]
+        y_range: [-1.5, 1.5]
+        color: "#3498db"
+        line_width: 3
+        show_grid: true
+        show_axes: true
+        show_labels: true
+        smooth_curve: false
+        animate_draw: true
+        title: "Square Wave"
+        resolution: 50
+      
+      triangle_wave:
+        type: xy_graph
+        position: [260, -80]
+        size: 170
+        data_points: [[-3, 0], [-2.5, 1], [-2, 0], [-1.5, -1], [-1, 0], [-0.5, 1], [0, 0], [0.5, -1], [1, 0], [1.5, 1], [2, 0], [2.5, -1], [3, 0]]
+        x_range: [-3.5, 3.5]
+        y_range: [-1.5, 1.5]
+        color: "#2ecc71"
+        line_width: 3
+        show_grid: true
+        show_axes: true
+        show_labels: true
+        smooth_curve: true
+        animate_draw: true
+        title: "Triangle Wave"
+        resolution: 100
+      
+      pulse_train:
+        type: xy_graph
+        position: [-260, 120]
+        size: 170
+        data_points: [[-3, 0], [-2.8, 0], [-2.8, 1], [-2.2, 1], [-2.2, 0], [-1.8, 0], [-1.8, 1], [-1.2, 1], [-1.2, 0], [-0.8, 0], [-0.8, 1], [-0.2, 1], [-0.2, 0], [0.2, 0], [0.2, 1], [0.8, 1], [0.8, 0], [1.2, 0], [1.2, 1], [1.8, 1], [1.8, 0], [2.2, 0], [2.2, 1], [2.8, 1], [2.8, 0], [3, 0]]
+        x_range: [-3.5, 3.5]
+        y_range: [-0.5, 1.5]
+        color: "#f39c12"
+        line_width: 3
+        show_grid: true
+        show_axes: true
+        show_labels: true
+        smooth_curve: false
+        animate_draw: true
+        title: "Pulse Train"
+        resolution: 50
+      
+      step_function:
+        type: xy_graph
+        position: [0, 120]
+        size: 170
+        data_points: [[-3, -2], [-2, -2], [-2, -1], [-1, -1], [-1, 0], [0, 0], [0, 1], [1, 1], [1, 2], [2, 2], [2, 3], [3, 3]]
+        x_range: [-3.5, 3.5]
+        y_range: [-2.5, 3.5]
+        color: "#9b59b6"
+        line_width: 3
+        show_grid: true
+        show_axes: true
+        show_labels: true
+        smooth_curve: false
+        animate_draw: true
+        title: "Step Function"
+        resolution: 50
+      
+      zigzag:
+        type: xy_graph
+        position: [260, 120]
+        size: 170
+        data_points: [[-3, 0], [-2.5, 1.5], [-2, 0], [-1.5, -1.5], [-1, 0], [-0.5, 1.5], [0, 0], [0.5, -1.5], [1, 0], [1.5, 1.5], [2, 0], [2.5, -1.5], [3, 0]]
+        x_range: [-3.5, 3.5]
+        y_range: [-2, 2]
+        color: "#1abc9c"
+        line_width: 3
+        show_grid: true
+        show_axes: true
+        show_labels: true
+        smooth_curve: false
+        animate_draw: true
+        title: "Zigzag Pattern"
+        resolution: 100
+      
+      title_text:
+        type: text
+        text: "Wave & Oscillation Patterns"
+        position: [0, -220]
+        size: 18
+        color: "#ffffff"
+        glow: true
+        font: "Arial"
+  
+  scene_6:
+    duration: 8
+    description: "Complex and artistic shapes"
+    elements:
+      drop_shape:
+        type: xy_graph
+        position: [-260, -80]
+        size: 170
+        data_points: [[0, -3], [0.5, -2.5], [1, -1.5], [1.3, -0.5], [1.5, 0.5], [1.5, 1.5], [1.3, 2.3], [0.9, 2.8], [0, 3], [-0.9, 2.8], [-1.3, 2.3], [-1.5, 1.5], [-1.5, 0.5], [-1.3, -0.5], [-1, -1.5], [-0.5, -2.5], [0, -3]]
+        x_range: [-2.5, 2.5]
+        y_range: [-3.5, 3.5]
+        color: "#e74c3c"
+        line_width: 3
+        show_grid: true
+        show_axes: true
+        show_labels: true
+        smooth_curve: true
+        animate_draw: true
+        title: "Water Drop"
+        resolution: 100
+      
+      egg_shape:
+        type: xy_graph
+        position: [0, -80]
+        size: 170
+        function: "sqrt(4 - x^2) + 0.5*x"
+        x_range: [-2, 2]
+        y_range: [-0.5, 3]
+        color: "#3498db"
+        line_width: 3
+        show_grid: true
+        show_axes: true
+        show_labels: true
+        smooth_curve: true
+        animate_draw: true
+        title: "Egg Shape"
+        resolution: 150
+      
+      bean_shape:
+        type: xy_graph
+        position: [260, -80]
+        size: 170
+        data_points: [[0, 2.5], [1, 2], [1.8, 1.2], [2.2, 0], [2, -1], [1.3, -1.8], [0.5, -2.2], [0, -2.5], [-0.5, -2.2], [-1.3, -1.8], [-2, -1], [-2.2, 0], [-1.8, 1.2], [-1, 2], [0, 2.5]]
+        x_range: [-2.5, 2.5]
+        y_range: [-3, 3]
+        color: "#2ecc71"
+        line_width: 3
+        show_grid: true
+        show_axes: true
+        show_labels: true
+        smooth_curve: true
+        animate_draw: true
+        title: "Bean Shape"
+        resolution: 100
+      
+      crescent:
+        type: xy_graph
+        position: [-260, 120]
+        size: 170
+        data_points: [[0, 3], [0.8, 2.8], [1.5, 2.3], [2, 1.5], [2.3, 0.8], [2.5, 0], [2.3, -0.8], [2, -1.5], [1.5, -2.3], [0.8, -2.8], [0, -3], [0.5, -2.5], [1, -1.8], [1.3, -1], [1.5, 0], [1.3, 1], [1, 1.8], [0.5, 2.5], [0, 3]]
+        x_range: [-1, 3]
+        y_range: [-3.5, 3.5]
+        color: "#f39c12"
+        line_width: 3
+        show_grid: true
+        show_axes: true
+        show_labels: true
+        smooth_curve: true
+        animate_draw: true
+        title: "Crescent Moon"
+        resolution: 100
+      
+      leaf_shape:
+        type: xy_graph
+        position: [0, 120]
+        size: 170
+        data_points: [[0, -2.5], [0.8, -1.5], [1.5, -0.5], [2, 0.5], [2.2, 1.5], [2, 2.3], [1.5, 2.8], [0.8, 3.2], [0, 3.5], [-0.8, 3.2], [-1.5, 2.8], [-2, 2.3], [-2.2, 1.5], [-2, 0.5], [-1.5, -0.5], [-0.8, -1.5], [0, -2.5]]
+        x_range: [-2.5, 2.5]
+        y_range: [-3, 4]
+        color: "#9b59b6"
+        line_width: 3
+        show_grid: true
+        show_axes: true
+        show_labels: true
+        smooth_curve: true
+        animate_draw: true
+        title: "Leaf Shape"
+        resolution: 100
+      
+      cloud_shape:
+        type: xy_graph
+        position: [260, 120]
+        size: 170
+        data_points: [[-2, 0], [-1.7, 0.8], [-1, 1.3], [-0.3, 1.5], [0.5, 1.4], [1.2, 1.1], [1.8, 0.6], [2.2, 0], [2, -0.5], [1.5, -0.9], [0.8, -1.2], [0, -1.3], [-0.8, -1.2], [-1.5, -0.9], [-2, -0.5], [-2, 0]]
+        x_range: [-2.5, 2.5]
+        y_range: [-1.5, 2]
+        color: "#1abc9c"
+        line_width: 3
+        show_grid: true
+        show_axes: true
+        show_labels: true
+        smooth_curve: true
+        animate_draw: true
+        title: "Cloud Shape"
+        resolution: 100
+      
+      title_text:
+        type: text
+        text: "Complex & Artistic Shapes"
+        position: [0, -220]
+        size: 18
+        color: "#ffffff"
+        glow: true
+        font: "Arial"
+  
+  scene_7:
+    duration: 8
+    description: "Mathematical special curves"
+    elements:
+      astroid:
+        type: xy_graph
+        position: [-260, -80]
+        size: 170
+        data_points: [[3, 0], [2.6, 1.5], [1.5, 2.6], [0, 3], [-1.5, 2.6], [-2.6, 1.5], [-3, 0], [-2.6, -1.5], [-1.5, -2.6], [0, -3], [1.5, -2.6], [2.6, -1.5], [3, 0]]
+        x_range: [-3.5, 3.5]
+        y_range: [-3.5, 3.5]
+        color: "#e74c3c"
+        line_width: 3
+        show_grid: true
+        show_axes: true
+        show_labels: true
+        smooth_curve: true
+        animate_draw: true
+        title: "Astroid"
+        resolution: 100
+      
+      deltoid:
+        type: xy_graph
+        position: [0, -80]
+        size: 170
+        data_points: [[2, 0], [1, 1.73], [-1, 1.73], [-2, 0], [-1, -1.73], [1, -1.73], [2, 0]]
+        x_range: [-2.5, 2.5]
+        y_range: [-2.5, 2.5]
+        color: "#3498db"
+        line_width: 3
+        show_grid: true
+        show_axes: true
+        show_labels: true
+        smooth_curve: true
+        animate_draw: true
+        title: "Deltoid"
+        resolution: 100
+      
+      nephroid:
+        type: xy_graph
+        position: [260, -80]
+        size: 170
+        data_points: [[0, 3], [1.2, 2.5], [2.2, 1.3], [2.8, 0], [2.8, -0.8], [2.2, -1.6], [1.2, -2.3], [0, -2.7], [-1.2, -2.3], [-2.2, -1.6], [-2.8, -0.8], [-2.8, 0], [-2.2, 1.3], [-1.2, 2.5], [0, 3]]
+        x_range: [-3.5, 3.5]
+        y_range: [-3, 3.5]
+        color: "#2ecc71"
+        line_width: 3
+        show_grid: true
+        show_axes: true
+        show_labels: true
+        smooth_curve: true
+        animate_draw: true
+        title: "Nephroid"
+        resolution: 100
+      
+      limacon:
+        type: xy_graph
+        position: [-260, 120]
+        size: 170
+        data_points: [[4, 0], [3.5, 1], [2.6, 1.8], [1.5, 2.3], [0.3, 2.5], [-0.8, 2.3], [-1.8, 1.8], [-2.5, 1], [-3, 0], [-2.5, -1], [-1.8, -1.8], [-0.8, -2.3], [0.3, -2.5], [1.5, -2.3], [2.6, -1.8], [3.5, -1], [4, 0]]
+        x_range: [-3.5, 4.5]
+        y_range: [-3, 3]
+        color: "#f39c12"
+        line_width: 3
+        show_grid: true
+        show_axes: true
+        show_labels: true
+        smooth_curve: true
+        animate_draw: true
+        title: "Limaçon"
+        resolution: 100
+      
+      hyperbola_branch:
+        type: xy_graph
+        position: [0, 120]
+        size: 170
+        function: "sqrt(x^2 - 1)"
+        x_range: [1, 4]
+        y_range: [0, 4]
+        color: "#9b59b6"
+        line_width: 3
+        show_grid: true
+        show_axes: true
+        show_labels: true
+        smooth_curve: true
+        animate_draw: true
+        title: "Hyperbola Branch"
+        resolution: 150
+      
+      parabola_opening:
+        type: xy_graph
+        position: [260, 120]
+        size: 170
+        function: "0.5 * x^2"
+        x_range: [-3, 3]
+        y_range: [0, 5]
+        color: "#1abc9c"
+        line_width: 3
+        show_grid: true
+        show_axes: true
+        show_labels: true
+        smooth_curve: true
+        animate_draw: true
+        title: "Parabola Opening"
+        resolution: 150
+      
+      title_text:
+        type: text
+        text: "Mathematical Special Curves"
+        position: [0, -220]
+        size: 18
+        color: "#ffffff"
+        glow: true
+        font: "Arial"
+  
+  scene_8:
+    duration: 8
+    description: "Symmetrical and decorative patterns"
+    elements:
+      diamond:
+        type: xy_graph
+        position: [-260, -80]
+        size: 170
+        data_points: [[0, 2.5], [2.5, 0], [0, -2.5], [-2.5, 0], [0, 2.5]]
+        x_range: [-3, 3]
+        y_range: [-3, 3]
+        color: "#e74c3c"
+        line_width: 3
+        show_grid: true
+        show_axes: true
+        show_labels: true
+        smooth_curve: false
+        animate_draw: true
+        title: "Diamond"
+        resolution: 50
+      
+      cross_shape:
+        type: xy_graph
+        position: [0, -80]
+        size: 170
+        data_points: [[-0.8, 2.5], [-0.8, 0.8], [-2.5, 0.8], [-2.5, -0.8], [-0.8, -0.8], [-0.8, -2.5], [0.8, -2.5], [0.8, -0.8], [2.5, -0.8], [2.5, 0.8], [0.8, 0.8], [0.8, 2.5], [-0.8, 2.5]]
+        x_range: [-3, 3]
+        y_range: [-3, 3]
+        color: "#3498db"
+        line_width: 3
+        show_grid: true
+        show_axes: true
+        show_labels: true
+        smooth_curve: false
+        animate_draw: true
+        title: "Cross Shape"
+        resolution: 50
+      
+      plus_thick:
+        type: xy_graph
+        position: [260, -80]
+        size: 170
+        data_points: [[-1, 3], [-1, 1], [-3, 1], [-3, -1], [-1, -1], [-1, -3], [1, -3], [1, -1], [3, -1], [3, 1], [1, 1], [1, 3], [-1, 3]]
+        x_range: [-3.5, 3.5]
+        y_range: [-3.5, 3.5]
+        color: "#2ecc71"
+        line_width: 3
+        show_grid: true
+        show_axes: true
+        show_labels: true
+        smooth_curve: false
+        animate_draw: true
+        title: "Thick Plus"
+        resolution: 50
+      
+      gear_teeth:
+        type: xy_graph
+        position: [-260, 120]
+        size: 170
+        data_points: [[2.8, 0], [2.5, 0.5], [2.8, 1], [2.5, 1.5], [2, 1.8], [1.5, 2], [1, 2.3], [0.5, 2.5], [0, 2.8], [-0.5, 2.5], [-1, 2.3], [-1.5, 2], [-2, 1.8], [-2.5, 1.5], [-2.8, 1], [-2.5, 0.5], [-2.8, 0], [-2.5, -0.5], [-2.8, -1], [-2.5, -1.5], [-2, -1.8], [-1.5, -2], [-1, -2.3], [-0.5, -2.5], [0, -2.8], [0.5, -2.5], [1, -2.3], [1.5, -2], [2, -1.8], [2.5, -1.5], [2.8, -1], [2.5, -0.5], [2.8, 0]]
+        x_range: [-3.5, 3.5]
+        y_range: [-3.5, 3.5]
+        color: "#f39c12"
+        line_width: 3
+        show_grid: true
+        show_axes: true
+        show_labels: true
+        smooth_curve: false
+        animate_draw: true
+        title: "Gear Teeth"
+        resolution: 100
+      
+      snowflake:
+        type: xy_graph
+        position: [0, 120]
+        size: 170
+        data_points: [[0, 3], [0.5, 2], [0, 1.5], [0.8, 0.8], [1.5, 0], [2, 0.5], [3, 0], [2, -0.5], [1.5, 0], [0.8, -0.8], [0, -1.5], [0.5, -2], [0, -3], [-0.5, -2], [0, -1.5], [-0.8, -0.8], [-1.5, 0], [-2, -0.5], [-3, 0], [-2, 0.5], [-1.5, 0], [-0.8, 0.8], [0, 1.5], [-0.5, 2], [0, 3]]
+        x_range: [-3.5, 3.5]
+        y_range: [-3.5, 3.5]
+        color: "#9b59b6"
+        line_width: 3
+        show_grid: true
+        show_axes: true
+        show_labels: true
+        smooth_curve: false
+        animate_draw: true
+        title: "Snowflake"
+        resolution: 100
+      
+      mandala_base:
+        type: xy_graph
+        position: [260, 120]
+        size: 170
+        data_points: [[0, 2.5], [0.88, 2.3], [1.6, 1.8], [2.1, 1.1], [2.4, 0.3], [2.5, 0], [2.4, -0.3], [2.1, -1.1], [1.6, -1.8], [0.88, -2.3], [0, -2.5], [-0.88, -2.3], [-1.6, -1.8], [-2.1, -1.1], [-2.4, -0.3], [-2.5, 0], [-2.4, 0.3], [-2.1, 1.1], [-1.6, 1.8], [-0.88, 2.3], [0, 2.5]]
+        x_range: [-3, 3]
+        y_range: [-3, 3]
+        color: "#1abc9c"
+        line_width: 3
+        show_grid: true
+        show_axes: true
+        show_labels: true
+        smooth_curve: true
+        animate_draw: true
+        title: "Mandala Base"
+        resolution: 100
+      
+      title_text:
+        type: text
+        text: "Symmetrical & Decorative Patterns"
+        position: [0, -220]
+        size: 18
+        color: "#ffffff"
+        glow: true
+        font: "Arial"
+  
+  scene_9:
+    duration: 8
+    description: "Organic and natural shapes"
+    elements:
+      fish_outline:
+        type: xy_graph
+        position: [-260, -80]
+        size: 170
+        data_points: [[-2.5, 0], [-2, 0.8], [-1.2, 1.3], [-0.3, 1.5], [0.5, 1.4], [1.2, 1], [1.8, 0.5], [2.3, 0], [1.8, -0.5], [1.2, -1], [0.5, -1.4], [-0.3, -1.5], [-1.2, -1.3], [-2, -0.8], [-2.5, 0]]
+        x_range: [-3, 3]
+        y_range: [-2, 2]
+        color: "#e74c3c"
+        line_width: 3
+        show_grid: true
+        show_axes: true
+        show_labels: true
+        smooth_curve: true
+        animate_draw: true
+        title: "Fish Outline"
+        resolution: 100
+      
+      shell_spiral:
+        type: xy_graph
+        position: [0, -80]
+        size: 170
+        data_points: [[0, 0], [0.2, 0.3], [0.5, 0.6], [0.9, 0.8], [1.3, 0.9], [1.7, 0.8], [2, 0.5], [2.2, 0], [2.2, -0.6], [2, -1.1], [1.6, -1.5], [1.1, -1.7], [0.5, -1.8], [0, -1.7], [-0.4, -1.4], [-0.7, -0.9], [-0.8, -0.3], [-0.7, 0.3], [-0.4, 0.8], [0, 1.2], [0.5, 1.5], [1, 1.6], [1.5, 1.5], [2, 1.2], [2.4, 0.7], [2.6, 0]]
+        x_range: [-1.5, 3]
+        y_range: [-2, 2]
+        color: "#3498db"
+        line_width: 3
+        show_grid: true
+        show_axes: true
+        show_labels: true
+        smooth_curve: true
+        animate_draw: true
+        title: "Shell Spiral"
+        resolution: 100
+      
+      butterfly_wing:
+        type: xy_graph
+        position: [260, -80]
+        size: 170
+        data_points: [[0, 0], [0.5, 1], [1, 1.8], [1.5, 2.3], [2, 2.5], [2.5, 2.3], [2.8, 1.8], [3, 1], [2.8, 0.3], [2.3, -0.2], [1.8, -0.5], [1.2, -0.6], [0.6, -0.5], [0, 0]]
+        x_range: [-0.5, 3.5]
+        y_range: [-1, 3]
+        color: "#2ecc71"
+        line_width: 3
+        show_grid: true
+        show_axes: true
+        show_labels: true
+        smooth_curve: true
+        animate_draw: true
+        title: "Butterfly Wing"
+        resolution: 100
+      
+      flower_petal:
+        type: xy_graph
+        position: [-260, 120]
+        size: 170
+        data_points: [[0, 0], [0.3, 0.8], [0.5, 1.5], [0.6, 2.2], [0.5, 2.8], [0.3, 3.2], [0, 3.4], [-0.3, 3.2], [-0.5, 2.8], [-0.6, 2.2], [-0.5, 1.5], [-0.3, 0.8], [0, 0]]
+        x_range: [-1, 1]
+        y_range: [-0.5, 3.5]
+        color: "#f39c12"
+        line_width: 3
+        show_grid: true
+        show_axes: true
+        show_labels: true
+        smooth_curve: true
+        animate_draw: true
+        title: "Flower Petal"
+        resolution: 100
+      
+      apple_shape:
+        type: xy_graph
+        position: [0, 120]
+        size: 170
+        data_points: [[0, 2.5], [0.8, 2.3], [1.5, 1.8], [2, 1], [2.3, 0], [2.3, -0.8], [2, -1.5], [1.5, -2], [0.8, -2.3], [0, -2.5], [-0.8, -2.3], [-1.5, -2], [-2, -1.5], [-2.3, -0.8], [-2.3, 0], [-2, 1], [-1.5, 1.8], [-0.8, 2.3], [0, 2.5]]
+        x_range: [-2.5, 2.5]
+        y_range: [-3, 3]
+        color: "#9b59b6"
+        line_width: 3
+        show_grid: true
+        show_axes: true
+        show_labels: true
+        smooth_curve: true
+        animate_draw: true
+        title: "Apple Shape"
+        resolution: 100
+      
+      tulip_outline:
+        type: xy_graph
+        position: [260, 120]
+        size: 170
+        data_points: [[0, -2], [0.5, -1], [1, 0], [1.3, 1], [1.5, 2], [1.3, 2.8], [0.8, 3.2], [0, 3.5], [-0.8, 3.2], [-1.3, 2.8], [-1.5, 2], [-1.3, 1], [-1, 0], [-0.5, -1], [0, -2]]
+        x_range: [-2, 2]
+        y_range: [-2.5, 4]
+        color: "#1abc9c"
+        line_width: 3
+        show_grid: true
+        show_axes: true
+        show_labels: true
+        smooth_curve: true
+        animate_draw: true
+        title: "Tulip Outline"
+        resolution: 100
+      
+      title_text:
+        type: text
+        text: "Organic & Natural Shapes"
+        position: [0, -220]
+        size: 18
+        color: "#ffffff"
+        glow: true
+        font: "Arial"
+  
+  scene_10:
+    duration: 8
+    description: "Abstract and modern patterns"
+    elements:
+      double_wave:
+        type: xy_graph
+        position: [-260, -80]
+        size: 170
+        function: "sin(x) + 0.5*sin(2*x)"
+        x_range: [-6.28, 6.28]
+        y_range: [-2, 2]
+        color: "#e74c3c"
+        line_width: 3
+        show_grid: true
+        show_axes: true
+        show_labels: true
+        smooth_curve: true
+        animate_draw: true
+        title: "Double Wave"
+        resolution: 200
+      
+      modulated_sin:
+        type: xy_graph
+        position: [0, -80]
+        size: 170
+        function: "sin(x) * cos(x/2)"
+        x_range: [-6.28, 6.28]
+        y_range: [-1.5, 1.5]
+        color: "#3498db"
+        line_width: 3
+        show_grid: true
+        show_axes: true
+        show_labels: true
+        smooth_curve: true
+        animate_draw: true
+        title: "Modulated Sin"
+        resolution: 200
+      
+      beat_pattern:
+        type: xy_graph
+        position: [260, -80]
+        size: 170
+        function: "sin(5*x) * sin(x)"
+        x_range: [-6.28, 6.28]
+        y_range: [-1.5, 1.5]
+        color: "#2ecc71"
+        line_width: 3
+        show_grid: true
+        show_axes: true
+        show_labels: true
+        smooth_curve: true
+        animate_draw: true
+        title: "Beat Pattern"
+        resolution: 200
+      
+      interference:
+        type: xy_graph
+        position: [-260, 120]
+        size: 170
+        function: "sin(3*x) + sin(5*x)"
+        x_range: [-6.28, 6.28]
+        y_range: [-2.5, 2.5]
+        color: "#f39c12"
+        line_width: 3
+        show_grid: true
+        show_axes: true
+        show_labels: true
+        smooth_curve: true
+        animate_draw: true
+        title: "Interference"
+        resolution: 200
+      
+      chirp_signal:
+        type: xy_graph
+        position: [0, 120]
+        size: 170
+        function: "sin(x^2)"
+        x_range: [-4, 4]
+        y_range: [-1.5, 1.5]
+        color: "#9b59b6"
+        line_width: 3
+        show_grid: true
+        show_axes: true
+        show_labels: true
+        smooth_curve: true
+        animate_draw: true
+        title: "Chirp Signal"
+        resolution: 200
+      
+      amplitude_envelope:
+        type: xy_graph
+        position: [260, 120]
+        size: 170
+        function: "exp(-x^2/4) * sin(5*x)"
+        x_range: [-4, 4]
+        y_range: [-1.5, 1.5]
+        color: "#1abc9c"
+        line_width: 3
+        show_grid: true
+        show_axes: true
+        show_labels: true
+        smooth_curve: true
+        animate_draw: true
+        title: "Amplitude Envelope"
+        resolution: 200
+      
+      title_text:
+        type: text
+        text: "Abstract & Modern Patterns"
+        position: [0, -220]
+        size: 18
+        color: "#ffffff"
+        glow: true
+        font: "Arial"

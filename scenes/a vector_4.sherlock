@@ -1,0 +1,660 @@
+concept: "Vector - The Language of Movement"
+emoji: "➡️"
+total_duration: 72
+background: "#0a0a0a"
+
+subtitles:
+  - ""
+  - ""
+  - ""
+  - ""
+  - ""
+  - ""
+  - ""
+  - ""
+  - ""
+
+phases:
+  # ========================================
+  # SCENE 1: MAIN_ANIMATION_SCENE
+  # ========================================
+  main_animation_scene:
+    duration: 8
+    description: "Main animation scene with centered components"
+    static_hold_time: 3    
+    elements:
+      title_label:
+        type: text
+        text: "🚶‍♂️ Walking Two Directions at Once 🧭"
+        position: [0, 240]
+        color: "#f1c40f"
+        size: 28
+        font: "Georgia"
+        glow: true
+
+      explanation_text:
+        type: text
+        text: "Imagine you're walking north, but also east at /nthe same time. Where do you actually end up? /nThat's the idea of a vector."
+        position: [0, -200]
+        color: "#d4af37"
+        size: 18
+        font: "Cinzel Decorative"
+
+      # Grid positioned to center properly with algorithm components
+      main_grid:
+        type: algorithm_grid
+        position: [-150, 180]  # Adjusted left-up to center the 5x5 grid
+        rows: 5
+        cols: 5
+        cellSize: 50
+        spacing: 4
+        color: "#3498db"
+        border_color: "#34495e"
+        border_width: 2
+        cells: [[1, 2, 3, 4, 5], [6, 7, 8, 9, 10], [11, 12, 13, 14, 15], [16, 17, 18, 19, 20], [21, 22, 23, 24, 25]]
+        showValues: true
+        label: "Movement Grid"
+
+      # Path follower showing movement
+      movement_particle:
+        type: path_follower
+        position: [0, 0]
+        radius: 8
+        color: "#f1c40f"
+        glow: true
+        pathId: "figure8"
+        orbitCenter: [0, 50]
+        scale: 120
+        pathSpeed: 1
+        pathOffset: 0
+        label: "Movement"
+
+      # Background effects
+      background_star_field:
+        type: star_field
+        density: 0.4
+
+      # Visual sparkles
+      movement_sparkles:
+        type: sparkles
+        count: 15
+        density: 20
+        color: "#f1c40f"
+
+  # ========================================
+  # SCENE 2: TEXT_WITH_EMOJI_LATEX_SCENE
+  # ========================================
+  text_with_emoji_latex_scene:
+    duration: 6
+    description: "Text scene with proper Veritasium positioning"
+    elements:
+      title_label:
+        type: text
+        text: "📊 Numbers vs. Vectors: The Fundamental Difference ➡️"
+        position: [0, 240]
+        color: "#58a6ff"
+        size: 26
+        font: "Georgia"
+        glow: true
+
+      explanation_text:
+        type: text
+        text: "A vector isn't just a number — it has both magnitude and direction./n And that makes it different from the math we grew up with,/n where numbers just sit on a line."
+        position: [0, -200]
+        color: "#d4af37"
+        size: 18
+        font: "Cinzel Decorative"
+
+      # Grid background
+      scene2_grid:
+        type: grid
+        style: "flat"
+        spacing: 40
+        density: 0.8
+        color: "#2c3e50"
+        opacity: 0.3
+
+      # Text representation points - left side above x-axis
+      text_point_1:
+        type: text
+        text: "📊 Regular numbers: Just sit on a line"
+        position: [-200, 140]
+        color: "#3498db"
+        size: 18
+        glow: true
+
+      text_point_2:
+        type: text
+        text: "🧭 Vectors: Direction + Magnitude combined"
+        position: [-200, 50]
+        color: "#3498db"
+        size: 18
+        glow: true
+
+  # ========================================
+  # SCENE 3: MAIN_ANIMATION_WITH_LATEX_SCENE
+  # ========================================
+  main_animation_with_latex_scene:
+    duration: 8
+    description: "Main animation with space for LaTeX on bottom right"
+    elements:
+      title_label:
+        type: text
+        text: "🏹 The Arrow Trick: Length + Direction"
+        position: [0, 240]
+        color: "#2ecc71"
+        size: 28
+        font: "Georgia"
+        glow: true
+
+      explanation_text:
+        type: text
+        text: "Here's the simple trick: draw an arrow. The arrow's length tells/n you how much, its direction tells you which way."
+        position: [0, -200]
+        color: "#d4af37"
+        size: 18
+        font: "Cinzel Decorative"
+
+      # Main vector positioned left-above to leave space for LaTeX
+      main_vector:
+        type: vector
+        from: [-150, 100]
+        to: [-30, 200]
+        color: "#2ecc71"
+        thickness: 4
+        arrowhead: true
+        glow: true
+        label: "Vector v"
+
+      # Supporting grid
+      vector_grid:
+        type: grid
+        style: "flat"
+        spacing: 30
+        density: 0.7
+        color: "#34495e"
+        opacity: 0.4
+
+      # Magnitude indicator
+      magnitude_circle:
+        type: circle
+        center: [-90, 150]
+        radius: 15
+        color: "#f39c12"
+        glow: true
+        opacity: 0.6
+
+      # Direction indicator
+      direction_arc:
+        type: circle
+        center: [-150, 100]
+        radius: 25
+        color: "#e74c3c"
+        glow: true
+        opacity: 0.5
+
+      # Background waves
+      background_waves:
+        type: waves
+        amplitude: 30
+        frequency: 0.03
+        layers: 2
+        colors: ["#4ecdc4", "#ff6b6b"]
+        opacity: 0.3
+
+  # ========================================
+  # SCENE 4: TEXT_WITH_EMOJI_EQUATION_SCENE
+  # ========================================
+  text_with_emoji_equation_scene:
+    duration: 6
+    description: "Equation scene with left-right text positioning"
+    elements:
+      title_label:
+        type: text
+        text: "🔗 Vector Addition: Tip-to-Tail Magic"
+        position: [0, 240]
+        color: "#9b59b6"
+        size: 26
+        font: "Georgia"
+        glow: true
+
+      explanation_text:
+        type: text
+        text: "Add two vectors? Just place one arrow after/n the other. The final arrow shows where you really go. That's how physics combines/n forces, or how GPS navigation guides you."
+        position: [0, -200]
+        color: "#d4af37"
+        size: 18
+        font: "Cinzel Decorative"
+
+      # Grid background
+      equation_grid:
+        type: grid
+        style: "flat"
+        spacing: 35
+        density: 0.6
+        color: "#34495e"
+        opacity: 0.4
+
+      # Text points - left side above x-axis
+      left_text_1:
+        type: text
+        text: "🔗 Tip-to-tail connection"
+        position: [-280, 80]
+        color: "#9b59b6"
+        size: 18
+        glow: true
+
+      left_text_2:
+        type: text
+        text: "🧭 Final result vector"
+        position: [-280, 50]
+        color: "#9b59b6"
+        size: 18
+        glow: true
+
+      # Text points - right side above x-axis
+      right_text_1:
+        type: text
+        text: "⚡ Physics forces combine"
+        position: [200, 80]
+        color: "#9b59b6"
+        size: 18
+        glow: true
+
+      right_text_2:
+        type: text
+        text: "🗺️ GPS navigation math"
+        position: [200, 50]
+        color: "#9b59b6"
+        size: 18
+        glow: true
+
+  # ========================================
+  # SCENE 5: SMALL_ANIMATION_SCENE
+  # ========================================
+  small_animation_scene:
+    duration: 4
+    description: "Small animation in top-left with text on center-right"
+    elements:
+      title_label:
+        type: text
+        text: "📐 Arrow Properties Demo"
+        position: [0, 240]
+        color: "#27ae60"
+        size: 22
+        font: "Georgia"
+        glow: true
+
+      # Grid background
+      small_grid:
+        type: grid
+        style: "flat"
+        spacing: 40
+        density: 0.4
+        color: "#2c3e50"
+        opacity: 0.3
+
+      # Small animation in top-left above x-axis (not cornered, middle of left-above quarter)
+      small_vector:
+        type: vector
+        from: [-200, 120]
+        to: [-120, 180]
+        color: "#27ae60"
+        thickness: 3
+        arrowhead: true
+        glow: true
+        label: "Demo Vector"
+
+      # Path follower for animation
+      vector_tip:
+        type: path_follower
+        position: [-120, 180]
+        radius: 6
+        color: "#f1c40f"
+        glow: true
+        pathId: "linear"
+        startX: -120
+        startY: 180
+        endX: -100
+        endY: 200
+        pathSpeed: 1
+        label: "Vector Tip"
+
+      # Trail sparkles
+      trail_sparkles:
+        type: sparkles
+        count: 8
+        density: 12
+        color: "#27ae60"
+
+      # Text representation - center to right below
+      content_text:
+        type: text
+        text: "Arrow length = magnitude\nArrow direction = which way"
+        position: [120, -50]
+        color: "#d4af37"
+        size: 16
+        font: "Cinzel Decorative"
+
+  # ========================================
+  # SCENE 6: ANOTHER TEXT_WITH_EMOJI_EQUATION_SCENE
+  # ========================================
+  text_equation_2_scene:
+    duration: 6
+    description: "Second equation scene with left-right positioning"
+    elements:
+      title_label:
+        type: text
+        text: "📦 Vectors: Little Packages of Power ⚡"
+        position: [0, 240]
+        color: "#e67e22"
+        size: 26
+        font: "Georgia"
+        glow: true
+
+      explanation_text:
+        type: text
+        text: "So the next time you hear 'vector,' don't think of something abstract./n Think of arrows — little packages of direction and size — the building/n blocks of motion, forces, and even data in machine learning."
+        position: [0, -200]
+        color: "#d4af37"
+        size: 18
+        font: "Cinzel Decorative"
+
+      # Grid background
+      support_grid:
+        type: grid
+        style: "flat"
+        spacing: 35
+        density: 0.5
+        color: "#2c3e50"
+        opacity: 0.3
+
+      # Left side text points above x-axis
+      left_point_1:
+        type: text
+        text: "📦 Direction packages"
+        position: [-280, 80]
+        color: "#e67e22"
+        size: 18
+        glow: true
+
+      left_point_2:
+        type: text
+        text: "⚡ Motion building blocks"
+        position: [-280, 50]
+        color: "#e67e22"
+        size: 18
+        glow: true
+
+      # Right side text points above x-axis
+      right_point_1:
+        type: text
+        text: "🔬 Physics forces"
+        position: [200, 80]
+        color: "#e67e22"
+        size: 18
+        glow: true
+
+      right_point_2:
+        type: text
+        text: "🤖 Machine learning data"
+        position: [200, 50]
+        color: "#e67e22"
+        size: 18
+        glow: true
+
+  # ========================================
+  # SCENE 7: MIDDLE_SUMMARY_SCENE
+  # ========================================
+  middle_summary_scene:
+    duration: 6
+    description: "Middle summary with animation above and points below"
+    elements:
+      title_label:
+        type: text
+        text: "🔄 Key Points So Far"
+        position: [0, 240]
+        color: "#f39c12"
+        size: 26
+        font: "Georgia"
+        glow: true
+
+      explanation_text:
+        type: text
+        text: "Let's review what we've discovered about vectors so far."
+        position: [0, -200]
+        color: "#d4af37"
+        size: 18
+        font: "Cinzel Decorative"
+
+      # Animation in upper area
+      summary_neural_net:
+        type: neural_net
+        position: [0, 120]
+        layers: [3, 4, 3]
+        colors: ["#3498db", "#e74c3c", "#27ae60"]
+        animation_speed: 1.0
+
+      # Summary points - left side from y-axis down
+      summary_point_1:
+        type: text
+        text: "🚶‍♂️ Walk north + east = vector idea"
+        position: [-320, -20]
+        color: "#3498db"
+        size: 15
+        glow: true
+
+      summary_point_2:
+        type: text
+        text: "📊 Numbers vs arrows: different math"
+        position: [-320, -50]
+        color: "#3498db"
+        size: 15
+        glow: true
+
+      # Summary points - right side from y-axis down
+      summary_point_3:
+        type: text
+        text: "🏹 Arrow length + direction = vector"
+        position: [50, -20]
+        color: "#3498db"
+        size: 15
+        glow: true
+
+      summary_point_4:
+        type: text
+        text: "🔗 Add vectors tip-to-tail"
+        position: [50, -50]
+        color: "#3498db"
+        size: 15
+        glow: true
+
+      # Background sparkles
+      summary_sparkles:
+        type: sparkles
+        count: 12
+        density: 15
+        color: "#f39c12"
+
+  # ========================================
+  # SCENE 8: FINAL_SUMMARY_SCENE
+  # ========================================
+  final_summary_scene:
+    duration: 8
+    description: "Final summary with grand animation and comprehensive points"
+    elements:
+      title_label:
+        type: text
+        text: "✨ Complete Vector Overview"
+        position: [0, 240]
+        color: "#f1c40f"
+        size: 28
+        font: "Georgia"
+        glow: true
+
+      explanation_text:
+        type: text
+        text: "Vectors are the language of movement, direction,/n and force in our universe."
+        position: [0, -220]
+        color: "#d4af37"
+        size: 18
+        font: "Cinzel Decorative"
+
+      # Grand finale animation - upper area
+      finale_waves:
+        type: waves
+        amplitude: 50
+        frequency: 0.025
+        layers: 3
+        colors: ["#4ecdc4", "#ff6b6b", "#d4af37"]
+        opacity: 0.5
+        animated: true
+
+      finale_neural_net:
+        type: neural_net
+        position: [0, 130]
+        layers: [4, 6, 4, 2]
+        colors: ["#f1c40f", "#3498db", "#e74c3c"]
+        animation_speed: 1.2
+
+      # Final summary points - left side from y-axis down
+      final_point_1:
+        type: text
+        text: "🚶‍♂️ Walk north + east = vector idea"
+        position: [-320, -10]
+        color: "#3498db"
+        size: 15
+        glow: true
+
+      final_point_2:
+        type: text
+        text: "📊 Numbers vs arrows: different math"
+        position: [-320, -35]
+        color: "#3498db"
+        size: 15
+        glow: true
+
+      final_point_3:
+        type: text
+        text: "🏹 Arrow length + direction = vector"
+        position: [-320, -60]
+        color: "#3498db"
+        size: 15
+        glow: true
+
+      final_point_4:
+        type: text
+        text: "🔗 Add vectors tip-to-tail"
+        position: [-320, -85]
+        color: "#3498db"
+        size: 15
+        glow: true
+
+      # Final summary points - right side from y-axis down
+      final_point_5:
+        type: text
+        text: "📦 Arrows = packages of motion"
+        position: [50, -10]
+        color: "#3498db"
+        size: 15
+        glow: true
+
+      final_point_6:
+        type: text
+        text: "⚡ Physics forces use vectors"
+        position: [50, -35]
+        color: "#3498db"
+        size: 15
+        glow: true
+
+      final_point_7:
+        type: text
+        text: "🤖 ML data becomes vectors"
+        position: [50, -60]
+        color: "#3498db"
+        size: 15
+        glow: true
+
+      final_point_8:
+        type: text
+        text: "🌍 Language of reality"
+        position: [50, -85]
+        color: "#3498db"
+        size: 15
+        glow: true
+
+      # Celebration effects
+      celebration_fireworks:
+        type: fireworks
+        position: [0, 100]
+        count: 5
+        colors: ["#f1c40f", "#2ecc71", "#3498db", "#e74c3c"]
+
+      celebration_sparkles:
+        type: sparkles
+        count: 25
+        density: 30
+        color: "#f1c40f"
+
+      # Snow effect for beauty
+      celebration_snow:
+        type: snow
+        density: 0.8
+
+# ========================================
+# EQUATIONS SECTION
+# ========================================
+equations:
+  # EQUATION FOR TEXT_WITH_EMOJI_LATEX_SCENE
+  - id: number_vs_vector
+    latex: "\\text{Number: } 5 \\quad \\text{Vector: } \\vec{v} = \\begin{pmatrix} 3 \\\\ 4 \\end{pmatrix}"
+    position: [560, 320]
+    phase: text_with_emoji_latex_scene
+    animation: fade-in
+    glow: true
+    size: 18
+
+  # EQUATION FOR MAIN_ANIMATION_WITH_LATEX_SCENE
+  - id: vector_magnitude_direction
+    latex: "\\vec{v} = |\\vec{v}| \\cdot \\hat{v} = \\text{magnitude} \\times \\text{direction}"
+    position: [520, 320]
+    phase: main_animation_with_latex_scene
+    animation: slide-in
+    glow: true
+    size: 18
+
+  # EQUATION FOR FIRST TEXT_WITH_EMOJI_EQUATION_SCENE
+  - id: vector_addition
+    latex: "\\vec{a} + \\vec{b} = \\vec{c} \\quad \\text{(tip-to-tail connection)}"
+    position: [450, 350]
+    phase: text_with_emoji_equation_scene
+    animation: fade-in
+    glow: true
+    size: 18
+
+  # EQUATION FOR SMALL_ANIMATION_SCENE
+  - id: vector_properties
+    latex: "\\text{Arrow} = \\text{Length} + \\text{Direction}"
+    position: [450, 200]
+    phase: small_animation_scene
+    animation: slide-in
+    glow: true
+    size: 18
+
+  # EQUATION FOR SECOND TEXT_WITH_EMOJI_EQUATION_SCENE
+  - id: vector_building_blocks
+    latex: "\\text{Vector} = \\text{Direction} + \\text{Size} = \\text{Building Block of Reality}"
+    position: [450, 400]
+    phase: text_equation_2_scene
+    animation: fade-in
+    glow: true
+    size: 18
+
+  # EQUATION FOR FINAL_SUMMARY_SCENE
+  - id: vector_essence
+    latex: "\\vec{v} = \\text{movement} + \\text{force} + \\text{information} = \\text{language of reality}"
+    position: [400, 500]
+    phase: final_summary_scene
+    animation: fade-in
+    glow: true
+    size: 18

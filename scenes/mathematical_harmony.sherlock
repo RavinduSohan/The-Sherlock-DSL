@@ -1,0 +1,275 @@
+# Mathematical Harmony
+# A stunning visual journey through mathematics using primitive building blocks
+# Showcasing the elegance and power of the primitive system
+
+concept: "The Beauty of Mathematical Harmony"
+emoji: "∞"
+total_duration: 45
+background: "#0a0e27"
+
+subtitles:
+  - "∞ Mathematical Harmony"
+  - "Shapes Transform"
+  - "The Pythagorean Dance"
+  - "Golden Ratio Spiral"
+  - "Euler's Identity"
+  - "Unity in Mathematics"
+
+phases:
+  # ═══════════════════════════════════════════════════════════
+  # PHASE 1: OPENING - Mathematical Harmony
+  # ═══════════════════════════════════════════════════════════
+  opening:
+    duration: 10
+    description: "Opening Title"
+    elements:
+      title:
+        type: primitive
+        shape: text[text:"Mathematical Harmony" fontSize:52 fill:#4fc3f7 at:(0,1.5)] -> fadeIn(1s)
+      
+      subtitle:
+        type: primitive
+        shape: text[text:"Where form meets function" fontSize:26 fill:#ffffff/0.6 at:(0,0.3)] -> fadeIn(1s, 0.5s)
+      
+      # Decorative circles that pulse
+      circle_left:
+        type: morph
+        shape: circle[r:0.3 stroke:#ff6b9d/0.5 strokeWidth:2 at:(-5,1.5)] ~> circle[r:0.5 stroke:#ff6b9d/0.8 strokeWidth:3 at:(-5,1.5)] (2s, ease.inOut) ~> circle[r:0.3 stroke:#ff6b9d/0.5 strokeWidth:2 at:(-5,1.5)] (2s, ease.inOut, 2s)
+      
+      circle_right:
+        type: morph
+        shape: circle[r:0.3 stroke:#ffd93d/0.5 strokeWidth:2 at:(5,1.5)] ~> circle[r:0.5 stroke:#ffd93d/0.8 strokeWidth:3 at:(5,1.5)] (2s, ease.inOut, 1s) ~> circle[r:0.3 stroke:#ffd93d/0.5 strokeWidth:2 at:(5,1.5)] (2s, ease.inOut, 3s)
+      
+      # Intro equation that morphs
+      equation:
+        type: morph
+        shape: text[text:"∞" fontSize:64 fill:#c77aff at:(0,-1.5)] ~> text[text:"π" fontSize:64 fill:#6bffb8 at:(0,-1.5)] (2s, ease.out, 2s) ~> text[text:"e" fontSize:64 fill:#ff6b9d at:(0,-1.5)] (2s, ease.out, 4s)
+
+  # ═══════════════════════════════════════════════════════════
+  # PHASE 2: SHAPE METAMORPHOSIS - Building blocks in action
+  # ═══════════════════════════════════════════════════════════
+  shape_metamorphosis:
+    duration: 8
+    description: "Shapes Transform Through Geometry"
+    elements:
+      title:
+        type: primitive
+        shape: text[text:"Shapes Transform" fontSize:32 fill:#4fc3f7 at:(0,3.2)]
+      
+      # Center stage: Circle morphs through all basic shapes
+      center_morph:
+        type: morph
+        shape: circle[r:1.2 fill:#ff6b9d/0.2 stroke:#ff6b9d strokeWidth:3 at:(0,0)] ~> square[size:2 fill:#ffd93d/0.2 stroke:#ffd93d strokeWidth:3 at:(0,0)] (2s, ease.inOut) ~> triangle[size:2.5 fill:#6bffb8/0.2 stroke:#6bffb8 strokeWidth:3 at:(0,0)] (2s, ease.inOut, 2s) ~> star[points:5 outerRadius:1.5 innerRadius:0.7 fill:#c77aff/0.2 stroke:#c77aff strokeWidth:3 at:(0,0)] (2s, ease.inOut, 4s) ~> circle[r:1.2 fill:#4fc3f7/0.2 stroke:#4fc3f7 strokeWidth:3 at:(0,0)] (2s, ease.inOut, 6s)
+      
+      # Label that changes with the shape
+      shape_label:
+        type: morph
+        shape: text[text:"Circle" fontSize:28 fill:#ff6b9d at:(0,-2.5)] ~> text[text:"Square" fontSize:28 fill:#ffd93d at:(0,-2.5)] (1s, ease.out, 1.5s) ~> text[text:"Triangle" fontSize:28 fill:#6bffb8 at:(0,-2.5)] (1s, ease.out, 3.5s) ~> text[text:"Star" fontSize:28 fill:#c77aff at:(0,-2.5)] (1s, ease.out, 5.5s) ~> text[text:"Unity" fontSize:28 fill:#4fc3f7 at:(0,-2.5)] (1s, ease.out, 7s)
+      
+      # Orbiting small shapes showing the transformation
+      orbit1:
+        type: morph
+        shape: circle[r:0.2 fill:#ffffff at:(-3,2)] ~> circle[r:0.2 fill:#ffffff at:(3,2)] (4s, linear) ~> circle[r:0.2 fill:#ffffff at:(-3,2)] (4s, linear, 4s)
+      
+      orbit2:
+        type: morph
+        shape: circle[r:0.2 fill:#ffffff at:(3,2)] ~> circle[r:0.2 fill:#ffffff at:(-3,2)] (4s, linear) ~> circle[r:0.2 fill:#ffffff at:(3,2)] (4s, linear, 4s)
+
+  # ═══════════════════════════════════════════════════════════
+  # PHASE 3: PYTHAGOREAN THEOREM - Visual Proof
+  # ═══════════════════════════════════════════════════════════
+  pythagorean_dance:
+    duration: 10
+    description: "The Pythagorean Dance - A Visual Proof"
+    elements:
+      title:
+        type: primitive
+        shape: text[text:"The Pythagorean Dance" fontSize:32 fill:#4fc3f7 at:(0,3.2)]
+      
+      # The equation appears first
+      equation_intro:
+        type: morph
+        shape: text[text:"a²" fontSize:40 fill:#ff6b9d at:(-3,2)] ~> text[text:"a² + b²" fontSize:40 fill:#ff6b9d at:(-2,2)] (1.5s, ease.out, 1s) ~> text[text:"a² + b² = c²" fontSize:40 fill:#6bffb8 at:(0,2)] (1.5s, ease.out, 2.5s)
+      
+      # Square A (a²) - appears and positions
+      square_a:
+        type: morph
+        shape: square[size:1.5 fill:#ff6b9d/0.3 stroke:#ff6b9d strokeWidth:3 at:(-3.5,0)] -> fadeIn(0.5s, 4s) ~> square[size:1.5 fill:#ff6b9d/0.3 stroke:#ff6b9d strokeWidth:3 at:(-2.5,0.5)] (1s, ease.out, 5s)
+      
+      # Label a
+      label_a:
+        type: morph
+        shape: text[text:"a²" fontSize:28 fill:#ff6b9d at:(-3.5,-1.5)] -> fadeIn(0.5s, 4s) ~> text[text:"a²" fontSize:28 fill:#ff6b9d at:(-2.5,-0.8)] (1s, ease.out, 5s)
+      
+      # Square B (b²) - appears and positions
+      square_b:
+        type: morph
+        shape: square[size:1.5 fill:#ffd93d/0.3 stroke:#ffd93d strokeWidth:3 at:(3.5,0)] -> fadeIn(0.5s, 4.5s) ~> square[size:1.5 fill:#ffd93d/0.3 stroke:#ffd93d strokeWidth:3 at:(0.5,0.5)] (1s, ease.out, 5.5s)
+      
+      # Label b
+      label_b:
+        type: morph
+        shape: text[text:"b²" fontSize:28 fill:#ffd93d at:(3.5,-1.5)] -> fadeIn(0.5s, 4.5s) ~> text[text:"b²" fontSize:28 fill:#ffd93d at:(0.5,-0.8)] (1s, ease.out, 5.5s)
+      
+      # Equals sign
+      equals:
+        type: primitive
+        shape: text[text:"=" fontSize:36 fill:#ffffff at:(-0.8,0.2)] -> fadeIn(0.5s, 6.5s)
+      
+      # Square C (c²) - the result
+      square_c:
+        type: morph
+        shape: square[size:2.1 fill:#6bffb8/0.3 stroke:#6bffb8 strokeWidth:3 at:(3,0.3)] -> fadeIn(1s, 7s) ~> square[size:2.1 fill:#6bffb8/0.5 stroke:#6bffb8 strokeWidth:4 at:(3,0.3)] (1s, ease.inOut, 8s)
+      
+      # Label c
+      label_c:
+        type: primitive
+        shape: text[text:"c²" fontSize:32 fill:#6bffb8 at:(3,-1.5)] -> fadeIn(1s, 7s)
+      
+      # Animated line showing the relationship
+      connection:
+        type: morph
+        shape: circle[r:0.1 fill:#4fc3f7 at:(-0.8,0.2)] ~> circle[r:0.15 fill:#4fc3f7 at:(-0.8,0.2)] (1s, ease.inOut, 7s) ~> circle[r:0.1 fill:#4fc3f7 at:(-0.8,0.2)] (1s, ease.inOut, 8s)
+
+  # ═══════════════════════════════════════════════════════════
+  # PHASE 4: GOLDEN RATIO - Fibonacci Spiral
+  # ═══════════════════════════════════════════════════════════
+  golden_ratio:
+    duration: 9
+    description: "The Golden Ratio - Nature's Perfect Proportion"
+    elements:
+      title:
+        type: primitive
+        shape: text[text:"Golden Ratio Spiral" fontSize:32 fill:#4fc3f7 at:(0,3.2)]
+      
+      # The golden ratio number
+      phi_number:
+        type: morph
+        shape: text[text:"φ" fontSize:48 fill:#ffd93d at:(0,2)] -> fadeIn(1s) ~> text[text:"φ ≈ 1.618" fontSize:40 fill:#ffd93d at:(0,2)] (1.5s, ease.out, 1.5s)
+      
+      # Fibonacci sequence
+      fib_sequence:
+        type: morph
+        shape: text[text:"1" fontSize:28 fill:#ff6b9d at:(-4,0.8)] -> fadeIn(0.3s, 3s) ~> text[text:"1, 1" fontSize:28 fill:#ff6b9d at:(-4,0.8)] (0.5s, ease.out, 3.5s) ~> text[text:"1, 1, 2" fontSize:28 fill:#ff6b9d at:(-4,0.8)] (0.5s, ease.out, 4s) ~> text[text:"1, 1, 2, 3, 5" fontSize:28 fill:#ff6b9d at:(-3.8,0.8)] (0.8s, ease.out, 4.5s) ~> text[text:"1, 1, 2, 3, 5, 8, 13..." fontSize:26 fill:#ff6b9d at:(-3.5,0.8)] (1s, ease.out, 5.3s)
+      
+      # Golden rectangles growing
+      rect1:
+        type: morph
+        shape: square[size:0.4 fill:#ffd93d/0.3 stroke:#ffd93d strokeWidth:2 at:(-2,-0.5)] -> fadeIn(0.5s, 3s)
+      
+      rect2:
+        type: morph
+        shape: square[size:0.65 fill:#ff6b9d/0.3 stroke:#ff6b9d strokeWidth:2 at:(-1.3,-0.3)] -> fadeIn(0.5s, 3.5s)
+      
+      rect3:
+        type: morph
+        shape: rectangle[w:1 h:0.65 fill:#6bffb8/0.3 stroke:#6bffb8 strokeWidth:2 at:(-0.3,0)] -> fadeIn(0.5s, 4s)
+      
+      rect4:
+        type: morph
+        shape: rectangle[w:1.6 h:1 fill:#c77aff/0.3 stroke:#c77aff strokeWidth:2 at:(0.7,0.5)] -> fadeIn(0.5s, 4.5s)
+      
+      rect5:
+        type: morph
+        shape: rectangle[w:2.6 h:1.6 fill:#4fc3f7/0.3 stroke:#4fc3f7 strokeWidth:2 at:(2,1.3)] -> fadeIn(0.5s, 5s)
+      
+      # Spiral arc indicators (using circles to suggest spiral)
+      spiral1:
+        type: morph
+        shape: circle[r:0.15 fill:#ffd93d at:(-2,-0.5)] ~> circle[r:0.2 fill:#ffd93d at:(-2,-0.5)] (1s, ease.inOut, 5.5s) ~> circle[r:0.15 fill:#ffd93d at:(-2,-0.5)] (1s, ease.inOut, 6.5s)
+      
+      # Beauty in nature text
+      nature_text:
+        type: primitive
+        shape: text[text:"Found in nature, art, and architecture" fontSize:22 fill:#ffffff/0.7 at:(0,-2)] -> fadeIn(1s, 6.5s)
+
+  # ═══════════════════════════════════════════════════════════
+  # PHASE 5: EULER'S IDENTITY - The Most Beautiful Equation
+  # ═══════════════════════════════════════════════════════════
+  eulers_identity:
+    duration: 8
+    description: "Euler's Identity - Mathematical Beauty"
+    elements:
+      title:
+        type: primitive
+        shape: text[text:"Euler's Identity" fontSize:32 fill:#4fc3f7 at:(0,3.2)]
+      
+      subtitle:
+        type: primitive
+        shape: text[text:"The most beautiful equation in mathematics" fontSize:22 fill:#ffffff/0.6 at:(0,2.4)] -> fadeIn(1s, 0.5s)
+      
+      # Build the equation piece by piece
+      e_part:
+        type: morph
+        shape: text[text:"e" fontSize:48 fill:#ff6b9d at:(-4,0.5)] -> fadeIn(0.8s, 1s)
+      
+      exponent:
+        type: morph
+        shape: text[text:"i π" fontSize:32 fill:#ffd93d at:(-2.8,0.9)] -> fadeIn(0.8s, 1.8s)
+      
+      plus:
+        type: morph
+        shape: text[text:"+" fontSize:48 fill:#ffffff at:(-1.5,0.5)] -> fadeIn(0.5s, 2.6s)
+      
+      one:
+        type: morph
+        shape: text[text:"1" fontSize:48 fill:#6bffb8 at:(-0.5,0.5)] -> fadeIn(0.5s, 3.1s)
+      
+      equals_sign:
+        type: morph
+        shape: text[text:"=" fontSize:48 fill:#ffffff at:(0.7,0.5)] -> fadeIn(0.5s, 3.6s)
+      
+      zero:
+        type: morph
+        shape: text[text:"0" fontSize:48 fill:#c77aff at:(1.8,0.5)] -> fadeIn(0.8s, 4.1s) ~> text[text:"0" fontSize:56 fill:#c77aff at:(1.8,0.5)] (1s, ease.out, 5s)
+      
+      # Decorative elements highlighting the beauty
+      glow1:
+        type: morph
+        shape: circle[r:0.5 fill:#ff6b9d/0.1 at:(-4,0.5)] ~> circle[r:1.2 fill:#ff6b9d/0 at:(-4,0.5)] (2s, ease.out, 5s)
+      
+      glow2:
+        type: morph
+        shape: circle[r:0.5 fill:#c77aff/0.1 at:(1.8,0.5)] ~> circle[r:1.2 fill:#c77aff/0 at:(1.8,0.5)] (2s, ease.out, 5.5s)
+      
+      # Five fundamental constants
+      explanation:
+        type: primitive
+        shape: text[text:"Five fundamental constants" fontSize:20 fill:#ffffff/0.5 at:(0,-1.5)] -> fadeIn(1s, 5s)
+      
+      constants:
+        type: morph
+        shape: text[text:"e, i, π, 1, 0" fontSize:24 fill:#4fc3f7 at:(0,-2.2)] -> fadeIn(1s, 5.5s) ~> text[text:"e, i, π, 1, 0 → Unity" fontSize:24 fill:#6bffb8 at:(0,-2.2)] (1.5s, ease.out, 6.5s)
+
+  # ═══════════════════════════════════════════════════════════
+  # PHASE 6: GRAND FINALE - Unity in Mathematics
+  # ═══════════════════════════════════════════════════════════
+  unity:
+    duration: 4
+    description: "Unity in Mathematics"
+    elements:
+      # All shapes converge to the center
+      shape1:
+        type: morph
+        shape: circle[r:0.6 fill:#ff6b9d/0.3 stroke:#ff6b9d strokeWidth:2 at:(-4,2)] ~> circle[r:1.5 fill:#ff6b9d/0.2 stroke:#ff6b9d strokeWidth:3 at:(0,0)] (2s, ease.inOut)
+      
+      shape2:
+        type: morph
+        shape: square[size:1 fill:#ffd93d/0.3 stroke:#ffd93d strokeWidth:2 at:(4,2)] ~> square[size:3 fill:#ffd93d/0.2 stroke:#ffd93d strokeWidth:3 at:(0,0)] (2s, ease.inOut, 0.2s)
+      
+      shape3:
+        type: morph
+        shape: triangle[size:1 fill:#6bffb8/0.3 stroke:#6bffb8 strokeWidth:2 at:(-4,-2)] ~> triangle[size:3.5 fill:#6bffb8/0.2 stroke:#6bffb8 strokeWidth:3 at:(0,0)] (2s, ease.inOut, 0.4s)
+      
+      shape4:
+        type: morph
+        shape: star[points:5 outerRadius:0.7 innerRadius:0.3 fill:#c77aff/0.3 stroke:#c77aff strokeWidth:2 at:(4,-2)] ~> star[points:5 outerRadius:2 innerRadius:1 fill:#c77aff/0.2 stroke:#c77aff strokeWidth:3 at:(0,0)] (2s, ease.inOut, 0.6s)
+      
+      # Final message
+      message:
+        type: morph
+        shape: text[text:"Mathematical Harmony" fontSize:42 fill:#4fc3f7 at:(0,0)] -> fadeIn(1.5s, 2s) ~> text[text:"Mathematical Harmony" fontSize:48 fill:#ffffff at:(0,0)] (1s, ease.out, 3s)
+      
+      tagline:
+        type: primitive
+        shape: text[text:"Built from simple primitives" fontSize:24 fill:#ffffff/0.6 at:(0,-1.5)] -> fadeIn(1s, 2.5s)

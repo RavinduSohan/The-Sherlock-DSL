@@ -1,0 +1,59 @@
+# Source files (keep compiled only)
+**/*.ts
+!**/*.d.ts
+tsconfig*.json
+
+# Development files
+.git/
+.gitignore
+.github/
+.vscode/
+.idea/
+.editorconfig
+
+# Test files
+test/
+tests/
+**/*.test.js
+**/*.spec.js
+coverage/
+
+# Build scripts
+scripts/
+
+# Large files we don't need in package
+.next/
+node_modules/
+
+# Documentation (except main README)
+docs/
+CONTRIBUTING.md
+SHERLOCK_CLI_PACKAGING_PLAN.md
+stage3*.md
+
+# Logs and temp
+*.log
+npm-debug.log*
+*.swp
+*.swo
+*~
+
+# Output directories
+output/
+frames/
+tmp/
+temp/
+
+# OS files
+.DS_Store
+Thumbs.db
+Desktop.ini
+
+# Environment files
+.env*
+
+# Keep these important files
+!README.md
+!LICENSE
+!CHANGELOG.md
+!package.json

@@ -1,0 +1,490 @@
+concept: "The Invention of the Vector"
+emoji: "➡️"
+total_duration: 50
+background: "#0a0a0a"
+
+subtitles:
+  - ""
+  - ""
+  - ""
+  - ""
+  - ""
+  - ""
+  - ""
+  - ""
+  - ""
+
+phases:
+  scene_1:
+    duration: 9
+    description: "The limitation of the number line - perceiving the constraint"
+    elements:
+      hook_primary:
+        type: text
+        text: "The number line quantifies but can't point"
+        position: [0, 180]
+        size: 14
+        color: "#ffffff"
+        glow: true
+        font: "Arial"
+      
+      hook_secondary:
+        type: text
+        text: "Feeling the limitation of one-dimensional thought"
+        position: [0, 220]
+        size: 13
+        color: "#95a5a6"
+        glow: false
+        font: "Arial"
+      
+      number_line:
+        type: xy_graph
+        position: [-150, 0]
+        size: 200
+        x_range: [-5, 5]
+        y_range: [-0.5, 0.5]
+        color: "#3498db"
+        line_width: 2
+        show_grid: false
+        show_axes: true
+        show_labels: true
+        show_points: false
+      
+      quantity_bar:
+        type: animated_bar_chart
+        data: [0, 3]
+        position: [-200, 70]
+        width: 100
+        height: 120
+        color: "#4ECDC4"
+      
+      frustrated_point:
+        type: mathematical_entity
+        position: [-150, -60]
+        form: "point"
+        personality: "mysterious"
+        size: 20
+        color: "#f39c12"
+        glow: true
+        energy: 0.3
+        animation_pattern: "pulse"
+      
+      evidence_1:
+        type: text
+        text: "Number line: -5 to 5"
+        position: [220, 50]
+        size: 16
+        color: "#9AA0A6"
+        font: "Courier Prime"
+      
+      evidence_2:
+        type: text
+        text: "Value: 3 units"
+        position: [220, -50]
+        size: 16
+        color: "#9AA0A6"
+        font: "Courier Prime"
+      
+      evidence_3:
+        type: text
+        text: "No 'which way'"
+        position: [220, -100]
+        size: 16
+        color: "#C06A6A"
+        font: "Courier Prime"
+  
+  scene_2:
+    duration: 10
+    description: "Transformation - from number to directional quantity"
+    elements:
+      hook_primary:
+        type: text
+        text: "A number transforms into a pointing arrow"
+        position: [0, 180]
+        size: 14
+        color: "#ffffff"
+        glow: true
+        font: "Arial"
+      
+      hook_secondary:
+        type: text
+        text: "Witnessing the birth of a new mathematical object"
+        position: [0, 220]
+        size: 13
+        color: "#95a5a6"
+        glow: false
+        font: "Arial"
+      
+      transforming_vector:
+        type: morph_entity
+        position: [-200, 0]
+        form: circle
+        size: 40
+        color: "#e74c3c"
+        glow: true
+        energy: 0.85
+        motion_profile: fluid_organic
+        move_to: [-100, -80]
+        move_duration: 6
+        move_style: ease_in_out
+        move_path: arc
+        morph_to: triangle
+        morph_at: 2
+        morph_duration: 4
+        morph_style: elastic_deform
+      
+      spark_energy:
+        type: mathematical_entity
+        position: [-150, -40]
+        form: "cloud"
+        personality: "energetic"
+        size: 30
+        color: "#f39c12"
+        glow: true
+        energy: 0.9
+        animation_pattern: "wave"
+      
+      ghost_line:
+        type: line
+        from: [-200, 0]
+        to: [-100, 0]
+        thickness: 1
+        color: "#3498db"
+        opacity: 0.3
+        dashed: false
+      
+      evidence_1:
+        type: text
+        text: "Question: 'what if a number could point?'"
+        position: [220, 80]
+        size: 16
+        color: "#9AA0A6"
+        font: "Courier Prime"
+      
+      evidence_2:
+        type: text
+        text: "Length: 5 units"
+        position: [220, 0]
+        size: 16
+        color: "#9AA0A6"
+        font: "Courier Prime"
+      
+      evidence_3:
+        type: text
+        text: "Direction: 45° up-right"
+        position: [220, -33]
+        size: 16
+        color: "#9AA0A6"
+        font: "Courier Prime"
+      
+      evidence_4:
+        type: text
+        text: "Fused: magnitude + direction"
+        position: [220, -100]
+        size: 16
+        color: "#C06A6A"
+        font: "Courier Prime"
+  
+  scene_3:
+    duration: 6
+    description: "Character wisdom - the arrow IS the vector"
+    elements:
+      detective_guide:
+        type: wisdom_character
+        character_type: detective_octopus
+        position: [0, 0]
+        size: 140
+        mood: "thinking"
+        expression: "normal"
+        talking: true
+        breathing: true
+        color_scheme: "detective"
+        personality: "calm"
+        speech_bubble: true
+        speech_text: "Just like your finger pointing—this arrow isn't showing a direction, it IS the direction, made physical."
+        background_aura: "glow"
+  
+  scene_4:
+    duration: 11
+    description: "Geometric addition - tip-to-tail vector sum"
+    elements:
+      hook_primary:
+        type: text
+        text: "Geometric addition: tip-to-tail completion"
+        position: [0, 180]
+        size: 14
+        color: "#ffffff"
+        glow: true
+        font: "Arial"
+      
+      hook_secondary:
+        type: text
+        text: "The triangle's diagonal is the sum"
+        position: [0, 220]
+        size: 13
+        color: "#95a5a6"
+        glow: false
+        font: "Arial"
+      
+      resultant_vector:
+        type: vector
+        from: [-180, 60]
+        to: [-80, -40]
+        color: "#FF6B6B"
+        thickness: 8
+        glow: true
+      
+      first_vector:
+        type: vector
+        from: [-180, 60]
+        to: [-130, 10]
+        color: "#4ECDC4"
+        thickness: 6
+        glow: true
+      
+      second_vector:
+        type: vector
+        from: [-130, 10]
+        to: [-80, -40]
+        color: "#FFD166"
+        thickness: 6
+        glow: true
+      
+      moving_demonstration:
+        type: morph_entity
+        position: [-50, 60]
+        form: triangle
+        size: 25
+        color: "#FFD166"
+        energy: 0.8
+        motion_profile: precision_linear
+        move_to: [-130, 10]
+        move_duration: 4
+        move_style: ease_in_out
+        move_path: linear
+      
+      relationship_line:
+        type: relationship_connector
+        from: [-180, 60]
+        to: [-80, -40]
+        relationship_type: "transformation"
+        strength: 0.9
+        color: "#FF6B6B"
+        animated: true
+        label: "Resultant = v₁ + v₂"
+      
+      triangle_outline_1:
+        type: line
+        from: [-180, 60]
+        to: [-130, 10]
+        thickness: 1
+        color: "#95a5a6"
+        opacity: 0.3
+        dashed: true
+      
+      triangle_outline_2:
+        type: line
+        from: [-130, 10]
+        to: [-80, -40]
+        thickness: 1
+        color: "#95a5a6"
+        opacity: 0.3
+        dashed: true
+      
+      triangle_outline_3:
+        type: line
+        from: [-80, -40]
+        to: [-180, 60]
+        thickness: 1
+        color: "#95a5a6"
+        opacity: 0.3
+        dashed: true
+      
+      evidence_1:
+        type: text
+        text: "v₁ = [3, -2]"
+        position: [220, 100]
+        size: 16
+        color: "#9AA0A6"
+        font: "Courier Prime"
+      
+      evidence_2:
+        type: text
+        text: "v₂ = [2, -3]"
+        position: [220, 33]
+        size: 16
+        color: "#9AA0A6"
+        font: "Courier Prime"
+      
+      evidence_3:
+        type: text
+        text: "Place v₂'s tail at v₁'s tip"
+        position: [220, -33]
+        size: 16
+        color: "#9AA0A6"
+        font: "Courier Prime"
+      
+      evidence_4:
+        type: text
+        text: "Resultant: v₁ + v₂ = [5, -5]"
+        position: [220, -100]
+        size: 16
+        color: "#C06A6A"
+        font: "Courier Prime"
+  
+  scene_5:
+    duration: 14
+    description: "Synthesis - vectors as a new language for reality"
+    elements:
+      hook_primary:
+        type: text
+        text: "Vectors become words in a new language"
+        position: [0, 180]
+        size: 14
+        color: "#ffffff"
+        glow: true
+        font: "Arial"
+      
+      hook_secondary:
+        type: text
+        text: "Reality becomes a navigable space of meaning"
+        position: [0, 220]
+        size: 13
+        color: "#95a5a6"
+        glow: false
+        font: "Arial"
+      
+      meaning_field:
+        type: flow_field
+        position: [-150, 0]
+        flow_type: "optimization"
+        density: 0.7
+        intensity: 0.6
+        color: "#9b59b6"
+        animated: true
+        direction: "outward"
+        size: 280
+      
+      central_vector:
+        type: vector
+        from: [-150, -20]
+        to: [-100, -70]
+        color: "#ffffff"
+        thickness: 10
+        glow: true
+      
+      force_vector:
+        type: mathematical_entity
+        position: [-200, 30]
+        form: "vector"
+        personality: "sharp"
+        size: 40
+        color: "#e74c3c"
+        glow: true
+        energy: 0.8
+        animation_pattern: "wave"
+        vector_components: [2, -1]
+      
+      navigation_vector:
+        type: mathematical_entity
+        position: [-100, 50]
+        form: "vector"
+        personality: "wise"
+        size: 40
+        color: "#3498db"
+        glow: true
+        energy: 0.7
+        animation_pattern: "pulse"
+        vector_components: [1, 3]
+      
+      semantic_vector:
+        type: mathematical_entity
+        position: [-150, -80]
+        form: "vector"
+        personality: "mysterious"
+        size: 40
+        color: "#2ecc71"
+        glow: true
+        energy: 0.6
+        animation_pattern: "breathe"
+        vector_components: [2, 2]
+      
+      physics_diagram:
+        type: image_card
+        source: "images/physics_force.png"
+        position: [-180, -60]
+        size: 120
+        ken_burns: zoom_in
+        kb_duration: 3
+        kb_start_scale: 1.0
+        kb_end_scale: 1.3
+        glow: true
+        glow_color: "#e74c3c"
+        glow_intensity: 25
+        border_radius: 10
+        delay: 0.14
+        fade_in: 1
+      
+      navigation_map:
+        type: image_card
+        source: "images/navigation_map.png"
+        position: [-120, 40]
+        size: 120
+        ken_burns: pan_right
+        kb_duration: 3
+        kb_start_scale: 1.0
+        kb_end_scale: 1.3
+        glow: true
+        glow_color: "#3498db"
+        glow_intensity: 25
+        border_radius: 10
+        delay: 0.36
+        fade_in: 1
+      
+      neural_network:
+        type: image_card
+        source: "images/neural_network.png"
+        position: [-180, 40]
+        size: 120
+        ken_burns: diagonal
+        kb_duration: 3
+        kb_start_scale: 1.0
+        kb_end_scale: 1.3
+        glow: true
+        glow_color: "#2ecc71"
+        glow_intensity: 25
+        border_radius: 10
+        delay: 0.57
+        fade_in: 1
+      
+      evidence_1:
+        type: text
+        text: "Physics: F = m·a (vector equation)"
+        position: [220, 100]
+        size: 16
+        color: "#C06A6A"
+        font: "Courier Prime"
+      
+      evidence_2:
+        type: text
+        text: "Navigation: course = bearing + distance"
+        position: [220, 33]
+        size: 16
+        color: "#9AA0A6"
+        font: "Courier Prime"
+      
+      evidence_3:
+        type: text
+        text: "ML: word meaning = vector in high-D space"
+        position: [220, -33]
+        size: 16
+        color: "#9AA0A6"
+        font: "Courier Prime"
+      
+      evidence_4:
+        type: text
+        text: "New language for reality"
+        position: [220, -100]
+        size: 16
+        color: "#C06A6A"
+        font: "Courier Prime"

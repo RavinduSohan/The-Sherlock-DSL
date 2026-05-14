@@ -1,0 +1,102 @@
+# Test: Scatter, Curve, and Matrix Fixes
+
+concept: "Testing Fixed Features"
+total_duration: 12
+background: "#0a0e27"
+
+phases:
+  test_scatter:
+    duration: 3
+    static_hold_time: 0
+    description: "Test scatter dots rendering"
+    elements:
+      scatter_test:
+        type: parametric_field
+        geometry: uniform_grid
+        resolution: [20, 20]
+        bounds_x: [-3, 3]
+        bounds_y: [-3, 3]
+        transform: rotation
+        angle: 90
+        render_mode: scatter_dots
+        color: "#ff9ff3"
+        dot_size: 5
+        glow: true
+        duration: 3
+  
+  test_curve:
+    duration: 3
+    static_hold_time: 0
+    description: "Test parametric curve rendering"
+    elements:
+      curve_test:
+        type: parametric_field
+        geometry: parametric_curve
+        point_count: 100
+        t_bounds: [0, 10]
+        transform: wave
+        wave_amplitude: 1.2
+        wave_frequency: 2
+        render_mode: parametric_curve
+        color: "#54a0ff"
+        thickness: 4
+        glow: true
+        duration: 3
+  
+  test_matrix:
+    duration: 3
+    static_hold_time: 0
+    description: "Test matrix string parsing"
+    elements:
+      matrix_test:
+        type: parametric_field
+        geometry: uniform_grid
+        resolution: [12, 12]
+        bounds_x: [-3, 3]
+        bounds_y: [-3, 3]
+        transform: matrix_2d
+        matrix_start: "[[1, 0], [0, 1]]"
+        matrix_end: "[[2, 1], [0.5, 1.5]]"
+        render_mode: grid_lines
+        color: "#ff6b6b"
+        thickness: 2
+        glow: true
+        show_basis_vectors: true
+        show_unit_square: true
+        duration: 3
+  
+  test_combined:
+    duration: 3
+    static_hold_time: 0
+    description: "Test all three together"
+    elements:
+      scatter_layer:
+        type: parametric_field
+        geometry: uniform_grid
+        resolution: [15, 15]
+        bounds_x: [-2, 2]
+        bounds_y: [-2, 2]
+        transform: spiral
+        growth: 0.2
+        rotation: 90
+        render_mode: scatter_dots
+        color: "#a8e6cf"
+        dot_size: 3
+        opacity: 0.6
+        glow: true
+        duration: 3
+      
+      curve_layer:
+        type: parametric_field
+        geometry: parametric_curve
+        point_count: 80
+        t_bounds: [0, 8]
+        transform: wave
+        wave_amplitude: 0.8
+        wave_frequency: 3
+        render_mode: parametric_curve
+        color: "#ffd93d"
+        thickness: 3
+        opacity: 0.9
+        glow: true
+        duration: 3

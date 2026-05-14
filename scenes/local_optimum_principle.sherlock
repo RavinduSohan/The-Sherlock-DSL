@@ -1,0 +1,956 @@
+concept: "The Law of Local Certainty"
+emoji: "💡"
+total_duration: 93
+background: "#0a0a0a"
+
+subtitles:
+  - ""
+  - ""
+  - ""
+  - ""
+  - ""
+  - ""
+  - ""
+  - ""
+  - ""
+
+phases:
+  scene_1:
+    duration: 6
+    description: "Lightbulb emoji displaying optimization rule with neural net background"
+    elements:
+      optimization_rule:
+        type: animated_emoji
+        emoji: "💡"
+        position: [0, 0]
+        size: 90
+        movement: "gentle-rotate"
+        glowing: "pulsing-glow"
+        rotation: "gentle-rotate"
+        reveal: "zoom-reveal"
+        speed: "ultra-slow"
+        delay: "none"
+        color: "#FFD700"
+      
+      equation_text:
+        type: animated_emoji
+        emoji: "max ΔO/Δt"
+        position: [0, 20]
+        size: 35
+        movement: "none"
+        glowing: "none"
+        rotation: "none"
+        reveal: "slide-reveal"
+        speed: "normal"
+        delay: "delay-1"
+        color: "#FFFFFF"
+      
+      systems_network:
+        type: neural_net
+        position: [0, 0]
+        layers: [3, 5, 4, 2]
+        colors: ["#444477", "#444477", "#444477"]
+        animation_speed: 0.5
+      
+      noir_subtitle:
+        type: text
+        text: "The simple rule"
+        position: [0, -220]
+        size: 18
+        color: "#d4a373"
+        glow: false
+        font: "Courier New"
+  
+  scene_2:
+    duration: 7
+    description: "Triangle entity moves downhill, assesses, then moves uphill"
+    elements:
+      moving_optimizer:
+        type: morph_entity
+        position: [-220, 30]
+        form: triangle
+        size: 40
+        color: "#2ecc71"
+        glow: true
+        energy: 0.8
+        motion_profile: kinetic_dynamic
+        waypoints: [[-220, 30], [-150, 80], [-80, 20], [-20, -30]]
+        move_duration: 7
+        move_style: ease_in_out
+        label: "System"
+      
+      terrain_line:
+        type: line
+        from: [-230, 40]
+        to: [0, -40]
+        thickness: 2
+        dashed: false
+        color: "#666666"
+        opacity: 0.6
+      
+      decision_sparkles:
+        type: sparkles
+        count: 6
+        position: [-150, 85]
+        color: "#f39c12"
+        speed: 0.5
+      
+      hook_primary:
+        type: text
+        text: "Assess slope, then move"
+        position: [0, 180]
+        size: 14
+        color: "#ffffff"
+        glow: true
+        font: "Arial"
+      
+      hook_secondary:
+        type: text
+        text: "The basic directional logic"
+        position: [0, 220]
+        size: 13
+        color: "#95a5a6"
+        glow: false
+        font: "Arial"
+      
+      evidence_1:
+        type: text
+        text: "Downhill → worse"
+        position: [220, 50]
+        size: 16
+        color: "#9AA0A6"
+        font: "Courier Prime"
+      
+      evidence_2:
+        type: text
+        text: "Turn → uphill"
+        position: [220, -50]
+        size: 16
+        color: "#9AA0A6"
+        font: "Courier Prime"
+      
+      evidence_3:
+        type: text
+        text: "Follow positive gradient"
+        position: [220, -100]
+        size: 16
+        color: "#C06A6A"
+        font: "Courier Prime"
+  
+  scene_3:
+    duration: 6
+    description: "Detective octopus asking why systems get stuck"
+    elements:
+      detective_guide:
+        type: wisdom_character
+        character_type: detective_octopus
+        position: [0, 0]
+        size: 140
+        mood: "thinking"
+        expression: "normal"
+        talking: true
+        breathing: true
+        color_scheme: "detective"
+        personality: "calm"
+        speech_bubble: true
+        speech_text: "Why does perfect local logic lead to global dead ends?"
+        background_aura: "glow"
+  
+  scene_4:
+    duration: 7
+    description: "Algorithm array decomposing to core question with arrow pointer"
+    elements:
+      process_array:
+        type: algorithm_array
+        position: [-230, 70]
+        items: ["Measure", "Compare", "?", "Move", "Repeat"]
+        highlights: [2]
+        cellSize: 70
+        showIndices: false
+        color: "#4ecdc4"
+      
+      structural_grid:
+        type: grid
+        position: [0, 0]
+        width: 800
+        height: 600
+        spacing: 100
+        color: "#333333"
+        thickness: 1
+        opacity: 0.2
+      
+      attention_arrow:
+        type: morph_entity
+        position: [-280, 70]
+        form: triangle
+        size: 25
+        color: "#e74c3c"
+        glow: true
+        energy: 0.7
+        motion_profile: precision_linear
+        waypoints: [[-280, 70], [-95, 70]]
+        move_duration: 7
+        move_style: ease_in_out
+        label: "→"
+      
+      hook_primary:
+        type: text
+        text: "Decompose to the core question"
+        position: [0, 180]
+        size: 14
+        color: "#ffffff"
+        glow: true
+        font: "Arial"
+      
+      hook_secondary:
+        type: text
+        text: "The single driving query"
+        position: [0, 220]
+        size: 13
+        color: "#95a5a6"
+        glow: false
+        font: "Arial"
+      
+      evidence_1:
+        type: text
+        text: "Surface: do what's better"
+        position: [220, 80]
+        size: 16
+        color: "#9AA0A6"
+        font: "Courier Prime"
+      
+      evidence_2:
+        type: text
+        text: "Underneath: fastest improvement?"
+        position: [220, 0]
+        size: 16
+        color: "#C06A6A"
+        font: "Courier Prime"
+      
+      evidence_3:
+        type: text
+        text: "argmax_dir Δ Improvement"
+        position: [220, -80]
+        size: 16
+        color: "#C06A6A"
+        font: "Courier Prime"
+  
+  scene_5:
+    duration: 5
+    description: "Vector entity reveals the gradient with label"
+    elements:
+      gradient_vector:
+        type: mathematical_entity
+        position: [-150, 0]
+        form: "vector"
+        personality: "elegant"
+        size: 60
+        color: "#95a5a6"
+        glow: true
+        energy: 0.7
+        animation_pattern: "breathe"
+        vector_components: [4, 2]
+        show_components: true
+        show_magnitude: true
+        vector_style: "gradient"
+        label: "∇ gradient"
+      
+      atmospheric_wave:
+        type: mathematical_entity
+        position: [-180, -40]
+        form: "wave"
+        personality: "playful"
+        size: 30
+        color: "#666666"
+        glow: false
+        energy: 0.2
+        animation_pattern: "pulse"
+      
+      hook_primary:
+        type: text
+        text: "The gradient revealed"
+        position: [0, 180]
+        size: 14
+        color: "#ffffff"
+        glow: true
+        font: "Arial"
+      
+      hook_secondary:
+        type: text
+        text: "The name for direction of fastest improvement"
+        position: [0, 220]
+        size: 13
+        color: "#95a5a6"
+        glow: false
+        font: "Arial"
+      
+      evidence_1:
+        type: text
+        text: "∇ = gradient operator"
+        position: [220, 50]
+        size: 16
+        color: "#C06A6A"
+        font: "Courier Prime"
+      
+      evidence_2:
+        type: text
+        text: "Points uphill, fastest improvement"
+        position: [220, -50]
+        size: 16
+        color: "#9AA0A6"
+        font: "Courier Prime"
+  
+  scene_6:
+    duration: 8
+    description: "Two vectors comparing honest vs narrow properties with flow field"
+    elements:
+      honest_vector:
+        type: mathematical_entity
+        position: [-200, 40]
+        form: "vector"
+        personality: "sharp"
+        size: 55
+        color: "#00FF88"
+        glow: true
+        energy: 0.8
+        animation_pattern: "pulse"
+        vector_components: [5, 0]
+        show_components: true
+        show_magnitude: true
+        vector_style: "force"
+        label: "Honest"
+      
+      narrow_vector:
+        type: mathematical_entity
+        position: [-100, 40]
+        form: "vector"
+        personality: "mysterious"
+        size: 55
+        color: "#FFAA00"
+        glow: true
+        energy: 0.6
+        animation_pattern: "wave"
+        vector_components: [3, 1]
+        show_components: true
+        show_magnitude: false
+        vector_style: "gradient"
+        label: "Narrow"
+      
+      consequence_flow:
+        type: flow_field
+        position: [-150, -20]
+        flow_type: "data_stream"
+        density: 0.4
+        intensity: 0.9
+        color: "#4a90e2"
+        animated: true
+        direction: "outward"
+        size: 200
+      
+      follower_system:
+        type: morph_entity
+        position: [-50, -20]
+        form: circle
+        size: 25
+        color: "#3498db"
+        glow: true
+        energy: 0.5
+        motion_profile: stable_balanced
+        label: "System"
+      
+      hook_primary:
+        type: text
+        text: "Honest vs. Narrow"
+        position: [0, 180]
+        size: 14
+        color: "#ffffff"
+        glow: true
+        font: "Arial"
+      
+      hook_secondary:
+        type: text
+        text: "Local precision, global blindness"
+        position: [0, 220]
+        size: 13
+        color: "#95a5a6"
+        glow: false
+        font: "Arial"
+      
+      evidence_1:
+        type: text
+        text: "Honest: accurate local direction"
+        position: [220, 80]
+        size: 16
+        color: "#9AA0A6"
+        font: "Courier Prime"
+      
+      evidence_2:
+        type: text
+        text: "Narrow: sees only ∇f(x) at x"
+        position: [220, 0]
+        size: 16
+        color: "#C06A6A"
+        font: "Courier Prime"
+      
+      evidence_3:
+        type: text
+        text: "System follows → local path"
+        position: [220, -80]
+        size: 16
+        color: "#9AA0A6"
+        font: "Courier Prime"
+  
+  scene_7:
+    duration: 8
+    description: "Grid showing sequential path to stagnation with water chart"
+    elements:
+      accumulation_grid:
+        type: algorithm_grid
+        position: [-230, 50]
+        rows: 3
+        cols: 3
+        cellSize: 55
+        spacing: 6
+        cells: [["↑", "↑", "↑"], ["↑", "↑", "↑"], ["↑", "X", "↓"]]
+        highlights: [[0, 0], [0, 1], [1, 1], [2, 1], [2, 2]]
+        showValues: true
+        color: "#f39c12"
+        border_color: "#34495e"
+        border_width: 3
+      
+      stall_chart:
+        type: water_bar_chart
+        data: [2, 4, 6, 7, 7, 7, 7]
+        position: [-150, -50]
+        width: 180
+        height: 120
+        water_color: "#3498db"
+        wave_intensity: 1.2
+      
+      hook_primary:
+        type: text
+        text: "Steps accumulate to stagnation"
+        position: [0, 180]
+        size: 14
+        color: "#ffffff"
+        glow: true
+        font: "Arial"
+      
+      hook_secondary:
+        type: text
+        text: "Local correctness leads to global stop"
+        position: [0, 220]
+        size: 13
+        color: "#95a5a6"
+        glow: false
+        font: "Arial"
+      
+      evidence_1:
+        type: text
+        text: "Step t: error decreases"
+        position: [220, 80]
+        size: 16
+        color: "#9AA0A6"
+        font: "Courier Prime"
+      
+      evidence_2:
+        type: text
+        text: "Step t+1: error decreases"
+        position: [220, 0]
+        size: 16
+        color: "#9AA0A6"
+        font: "Courier Prime"
+      
+      evidence_3:
+        type: text
+        text: "Step t+n: Δerror → 0"
+        position: [220, -80]
+        size: 16
+        color: "#C06A6A"
+        font: "Courier Prime"
+  
+  scene_8:
+    duration: 7
+    description: "XY graph showing zero-slope convergence at peak"
+    elements:
+      convergence_graph:
+        type: xy_graph
+        position: [-150, 0]
+        size: 260
+        function: "-0.015*(x+30)^2 + 60"
+        data_points: [[-180, 0], [-30, 60], [-80, 0]]
+        x_range: [-180, 20]
+        y_range: [0, 70]
+        color: "#2ecc71"
+        line_width: 3
+        show_grid: true
+        show_axes: true
+        show_labels: true
+        show_points: true
+        smooth_curve: true
+        animate_draw: true
+        title: "f(x)"
+        resolution: 150
+      
+      zero_slope_line:
+        type: line
+        from: [-180, 60]
+        to: [-80, 60]
+        thickness: 3
+        dashed: false
+        color: "#e74c3c"
+        opacity: 0.9
+      
+      peak_point:
+        type: point
+        position: [-30, 60]
+        radius: 8
+        color: "#f39c12"
+        glow: true
+      
+      convergence_star:
+        type: mathematical_entity
+        position: [-30, 60]
+        form: "star"
+        personality: "wise"
+        size: 30
+        color: "#f1c40f"
+        glow: true
+        energy: 0.4
+        animation_pattern: "pulse"
+        data: [5]
+      
+      hook_primary:
+        type: text
+        text: "Slope = 0"
+        position: [0, 180]
+        size: 14
+        color: "#ffffff"
+        glow: true
+        font: "Arial"
+      
+      hook_secondary:
+        type: text
+        text: "Mathematical definition of convergence"
+        position: [0, 220]
+        size: 13
+        color: "#95a5a6"
+        glow: false
+        font: "Arial"
+      
+      evidence_1:
+        type: text
+        text: "At peak: f'(x) = 0"
+        position: [220, 80]
+        size: 16
+        color: "#C06A6A"
+        font: "Courier Prime"
+      
+      evidence_2:
+        type: text
+        text: "Definition: local optimum"
+        position: [220, 0]
+        size: 16
+        color: "#9AA0A6"
+        font: "Courier Prime"
+      
+      evidence_3:
+        type: text
+        text: "Convergence = following rules perfectly"
+        position: [220, -80]
+        size: 16
+        color: "#9AA0A6"
+        font: "Courier Prime"
+  
+  scene_9:
+    duration: 6
+    description: "Relationship connectors showing consequences of zero slope"
+    elements:
+      peak_marker:
+        type: point
+        position: [-150, 0]
+        radius: 10
+        color: "#f39c12"
+        glow: true
+      
+      left_arrow:
+        type: vector
+        from: [-220, 0]
+        to: [-220, 50]
+        color: "#e74c3c"
+        thickness: 4
+        glow: true
+        label: "worse if x-ε"
+      
+      right_arrow:
+        type: vector
+        from: [-80, 0]
+        to: [-80, 50]
+        color: "#e74c3c"
+        thickness: 4
+        glow: true
+        label: "worse if x+ε"
+      
+      checkmark_entity:
+        type: mathematical_entity
+        position: [-150, 80]
+        form: "square"
+        personality: "wise"
+        size: 35
+        color: "#2ecc71"
+        glow: true
+        energy: 0.6
+        animation_pattern: "pulse"
+        label: "✓ right"
+      
+      left_connector:
+        type: relationship_connector
+        from: [-150, 0]
+        to: [-220, 0]
+        relationship_type: "causation"
+        strength: 0.8
+        color: "#e74c3c"
+        animated: true
+        bidirectional: false
+      
+      right_connector:
+        type: relationship_connector
+        from: [-150, 0]
+        to: [-80, 0]
+        relationship_type: "causation"
+        strength: 0.8
+        color: "#e74c3c"
+        animated: true
+        bidirectional: false
+      
+      down_connector:
+        type: relationship_connector
+        from: [-150, 0]
+        to: [-150, 80]
+        relationship_type: "causation"
+        strength: 1.0
+        color: "#2ecc71"
+        animated: true
+        bidirectional: false
+      
+      hook_primary:
+        type: text
+        text: "Consequence of zero slope"
+        position: [0, 180]
+        size: 14
+        color: "#ffffff"
+        glow: true
+        font: "Arial"
+      
+      hook_secondary:
+        type: text
+        text: "Local perfection ≠ global success"
+        position: [0, 220]
+        size: 13
+        color: "#95a5a6"
+        glow: false
+        font: "Arial"
+      
+      evidence_1:
+        type: text
+        text: "∀ε > 0: f(x* ± ε) < f(x*)"
+        position: [220, 50]
+        size: 16
+        color: "#C06A6A"
+        font: "Courier Prime"
+      
+      evidence_2:
+        type: text
+        text: "Local perfection achieved"
+        position: [220, -50]
+        size: 16
+        color: "#9AA0A6"
+        font: "Courier Prime"
+      
+      evidence_3:
+        type: text
+        text: "No better neighbor exists"
+        position: [220, -100]
+        size: 16
+        color: "#9AA0A6"
+        font: "Courier Prime"
+  
+  scene_10:
+    duration: 9
+    description: "Flow field emanating from principle to multiple domains"
+    elements:
+      principle_field:
+        type: flow_field
+        position: [-150, 0]
+        flow_type: "gradient"
+        density: 0.6
+        intensity: 0.9
+        color: "#9b59b6"
+        animated: true
+        direction: "outward"
+        size: 350
+      
+      ml_icon:
+        type: mathematical_entity
+        position: [-150, 100]
+        form: "cloud"
+        personality: "mysterious"
+        size: 35
+        color: "#e74c3c"
+        glow: true
+        energy: 0.5
+        animation_pattern: "pulse"
+        label: "ML"
+      
+      physics_icon:
+        type: mathematical_entity
+        position: [0, 150]
+        form: "hexagon"
+        personality: "mysterious"
+        size: 35
+        color: "#3498db"
+        glow: true
+        energy: 0.5
+        animation_pattern: "pulse"
+        label: "Physics"
+      
+      search_icon:
+        type: mathematical_entity
+        position: [150, 50]
+        form: "triangle"
+        personality: "mysterious"
+        size: 35
+        color: "#f39c12"
+        glow: true
+        energy: 0.5
+        animation_pattern: "pulse"
+        label: "Search"
+      
+      feedback_icon:
+        type: mathematical_entity
+        position: [-150, -100]
+        form: "wave"
+        personality: "mysterious"
+        size: 35
+        color: "#2ecc71"
+        glow: true
+        energy: 0.5
+        animation_pattern: "pulse"
+        label: "Feedback"
+      
+      hook_primary:
+        type: text
+        text: "Extract the universal law"
+        position: [0, 180]
+        size: 14
+        color: "#ffffff"
+        glow: true
+        font: "Arial"
+      
+      hook_secondary:
+        type: text
+        text: "The principle governs many domains"
+        position: [0, 220]
+        size: 13
+        color: "#95a5a6"
+        glow: false
+        font: "Arial"
+      
+      evidence_1:
+        type: text
+        text: "Law: local certainty ≠ global truth"
+        position: [220, 100]
+        size: 16
+        color: "#C06A6A"
+        font: "Courier Prime"
+      
+      evidence_2:
+        type: text
+        text: "Governs: ML, physics, search"
+        position: [220, 33]
+        size: 16
+        color: "#9AA0A6"
+        font: "Courier Prime"
+      
+      evidence_3:
+        type: text
+        text: "Any feedback-driven process"
+        position: [220, -33]
+        size: 16
+        color: "#9AA0A6"
+        font: "Courier Prime"
+      
+      evidence_4:
+        type: text
+        text: "∇f(x) is certain, but only at x"
+        position: [220, -100]
+        size: 16
+        color: "#C06A6A"
+        font: "Courier Prime"
+  
+  scene_11:
+    duration: 8
+    description: "Gem emoji reveals in hidden probability landscape"
+    elements:
+      hidden_gem:
+        type: animated_emoji
+        emoji: "💎"
+        position: [0, -30]
+        size: 85
+        movement: "none"
+        glowing: "flicker"
+        rotation: "none"
+        reveal: "spiral-reveal"
+        speed: "slow"
+        delay: "delay-2"
+        color: "#00D4FF"
+      
+      rarely_text:
+        type: text
+        text: "rarely"
+        position: [0, 60]
+        size: 18
+        color: "#999999"
+        glow: false
+        font: "Arial"
+      
+      uncertain_landscape:
+        type: flow_field
+        position: [0, 0]
+        flow_type: "probability"
+        density: 0.25
+        intensity: 0.8
+        color: "#333388"
+        animated: true
+        direction: "outward"
+        size: 350
+      
+      mystery_cloud:
+        type: mathematical_entity
+        position: [40, -50]
+        form: "cloud"
+        personality: "mysterious"
+        size: 30
+        color: "#666666"
+        glow: false
+        energy: 0.2
+        animation_pattern: "pulse"
+      
+      noir_subtitle:
+        type: text
+        text: "The hidden minimum"
+        position: [0, -220]
+        size: 18
+        color: "#d4a373"
+        glow: false
+        font: "Courier New"
+  
+  scene_12:
+    duration: 10
+    description: "Morph entity escapes bell curve valley toward unknown terrain"
+    elements:
+      known_valley:
+        type: bell_curve
+        position: [-180, 0]
+        amplitude: 50
+        variance: 80
+        mean: 0
+        startX: -280
+        endX: -80
+        color: "#6644AA"
+        thickness: 3
+        glow: true
+      
+      escaping_penguin:
+        type: morph_entity
+        position: [-180, 0]
+        form: circle
+        size: 35
+        color: "#333333"
+        glow: true
+        energy: 0.7
+        motion_profile: fluid_organic
+        waypoints: [[-180, 0], [-120, -40], [-60, -80], [0, -120]]
+        move_duration: 10
+        move_style: ease_in_out
+        morph_style: alpha_fade
+        label: "🐧"
+      
+      unknown_terrain:
+        type: mathematical_entity
+        position: [0, -120]
+        form: "cloud"
+        personality: "wise"
+        size: 50
+        color: "#888888"
+        glow: true
+        energy: 0.3
+        animation_pattern: "wave"
+      
+      hook_primary:
+        type: text
+        text: "Escape the local optimum"
+        position: [0, 180]
+        size: 14
+        color: "#ffffff"
+        glow: true
+        font: "Arial"
+      
+      hook_secondary:
+        type: text
+        text: "Move uphill without signal"
+        position: [0, 220]
+        size: 13
+        color: "#95a5a6"
+        glow: false
+        font: "Arial"
+      
+      evidence_1:
+        type: text
+        text: "Leave known optimum x*"
+        position: [220, 80]
+        size: 16
+        color: "#C06A6A"
+        font: "Courier Prime"
+      
+      evidence_2:
+        type: text
+        text: "Move: x* → x* + Δ (uphill)"
+        position: [220, 0]
+        size: 16
+        color: "#9AA0A6"
+        font: "Courier Prime"
+      
+      evidence_3:
+        type: text
+        text: "Δ has no positive gradient signal"
+        position: [220, -80]
+        size: 16
+        color: "#C06A6A"
+        font: "Courier Prime"
+  
+  scene_13:
+    duration: 6
+    description: "Detective octopus contemplating the mystery with stars"
+    elements:
+      detective_guide:
+        type: wisdom_character
+        character_type: detective_octopus
+        position: [0, 0]
+        size: 140
+        mood: "mysterious"
+        expression: "normal"
+        talking: true
+        breathing: true
+        color_scheme: "cosmic"
+        personality: "calm"
+        speech_bubble: true
+        speech_text: "Why move upward when every local signal says 'stay'?"
+        background_aura: "glow"
+      
+      cosmic_stars:
+        type: star_field
+        density: 0.3
+        position: [0, 0]
+        color: "#c7d2fe"
+        opacity: 0.4
