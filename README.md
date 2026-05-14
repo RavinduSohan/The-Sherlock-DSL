@@ -87,6 +87,9 @@ phases:
 
 <img width="1920" height="1080" alt="photo-collage png (2)" src="https://github.com/user-attachments/assets/65609ffd-b2b3-438a-b81d-24a152735123" />
 
+<img width="1366" height="626" alt="fibbonacci corridor" src="https://github.com/user-attachments/assets/85f29650-fe46-4341-b2c3-d7a231a0674f" />
+
+<img width="628" height="628" alt="sherlock4" src="https://github.com/user-attachments/assets/1cff86f9-6888-4053-9580-958695b12228" />
 
 ---
 
